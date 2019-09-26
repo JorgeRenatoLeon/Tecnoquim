@@ -70,6 +70,7 @@ public class InstructivoMySQL implements InstructivoDAO{
             while(rs.next()){
                 Instructivo e = new Instructivo();
                 e.setId(rs.getInt("ID_INSTRUCTIVO"));
+                e.setActividades(rs.getString("ACTIVIDADES"));
 
                 
                 instructivos.add(e);

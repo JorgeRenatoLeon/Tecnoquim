@@ -7,11 +7,13 @@ package lp2tecnoquim.mysql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import lp2tecnoquim.config.DBManager;
 import lp2tecnoquim.dao.UsuarioDAO;
+
 import lp2tecnoquim.model.Usuario;
 
 /**
@@ -66,7 +68,25 @@ public class UsuarioMySQL implements UsuarioDAO {
 
     @Override
     public ArrayList<Usuario> listar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ArrayList<Usuario> usuarios = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.userMySQL, DBManager.passwordMySQL);
+            st = con.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM ROL");
+            while(rs.next()){
+                Usuario e = new Usuario();
+                e.setIdUsuario(rs.getInt("ID_USUARIO"));
+                e.setUsername(rs.getString("USERNAME"));
+                e.setPassword(rs.getString("CONTRASENA"));
+                usuarios.add(e);
+            }
+        }catch(ClassNotFoundException | SQLException ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(SQLException ex){System.out.println(ex.getMessage());}
+        }
+        return usuarios;
     }
     
     

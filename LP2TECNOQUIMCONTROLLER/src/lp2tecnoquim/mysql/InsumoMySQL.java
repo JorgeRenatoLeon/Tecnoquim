@@ -47,7 +47,7 @@ public class InsumoMySQL implements InsumoDAO{
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.userMySQL, DBManager.passwordMySQL);
             st = con.createStatement();
             st.executeUpdate("UPDATE INSUMO SET NOMBRE = '"+insumo.getNombre()+"', GRANULARIDAD = '"+insumo.getGranularidad()+"'   , COLOR =  '"+insumo.getColor()+"'  ,"
-                    + "CANTIDAD =  '"+insumo.getCantidad()+"'   , UNIDAD=  '"+insumo.getUnidad()+"' WHERE ID_ROL = '"+insumo.getId()+"'");
+                    + "CANTIDAD =  '"+insumo.getCantidad()+"'   , UNIDAD=  '"+insumo.getUnidad()+"' WHERE ID_INSUMO = '"+insumo.getId()+"'");
         }catch(ClassNotFoundException | SQLException ex){
             System.out.println(ex.getMessage());
         }finally{

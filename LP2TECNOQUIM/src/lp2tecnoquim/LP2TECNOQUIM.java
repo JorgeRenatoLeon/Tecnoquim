@@ -24,11 +24,12 @@ public class LP2TECNOQUIM {
         //Ingresar Usuario
         UsuarioDAO daoUsuario = new UsuarioMySQL();
         
-        Usuario e1 = new Usuario ("Gerente","123456");
+        Usuario e1 = new Usuario ("Jefe","123456");
 
         daoUsuario.insertar(e1);
- 
-      
+        
+        
+             
         
         
     }

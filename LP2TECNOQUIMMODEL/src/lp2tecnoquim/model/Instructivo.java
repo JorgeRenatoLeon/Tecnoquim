@@ -15,15 +15,17 @@ public class Instructivo {
 
     private int id;
     private ArrayList <LineaInsumo> insumos;
-    private ArrayList <String> actividades;
+    private String actividades;
     
     public Instructivo (){
         
     }
-    public Instructivo (ArrayList <LineaInsumo> i, ArrayList <String> a){
-        insumos=i;
-        actividades=a;
+
+    public Instructivo(ArrayList<LineaInsumo> insumos, String actividades) {
+        this.insumos = insumos;
+        this.actividades = actividades;
     }
+
     
     public int getId() {
         return id;
@@ -42,16 +44,16 @@ public class Instructivo {
         this.insumos = insumos;
     }
 
-    public ArrayList <String> getActividades() {
+
+    public String getActividades() {
         return actividades;
     }
 
-    public void setActividades(ArrayList <String> actividades) {
+    public void setActividades(String actividades) {
         this.actividades = actividades;
     }
-    
 
-    
+
     
 
     

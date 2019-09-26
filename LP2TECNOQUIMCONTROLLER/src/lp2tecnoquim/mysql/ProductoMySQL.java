@@ -13,7 +13,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import lp2tecnoquim.config.DBManager;
 import lp2tecnoquim.dao.ProductoDAO;
-import lp2tecnoquim.model.Instructivo;
+
 import lp2tecnoquim.model.Producto;
 
 
@@ -31,9 +31,9 @@ public class ProductoMySQL implements ProductoDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.userMySQL, DBManager.passwordMySQL);
             st = con.createStatement();
-            Instructivo instructivo = producto.getInstructivo();
+            
             st.executeUpdate("INSERT INTO PRODUCTO (NOMBRE ,GRANULARIDAD , PRESENTACION ,FK_ID_INSTRUCTIVO) VALUES("+producto.getNombre()+"',"
-                    + ""+producto.getGranularidad()+",'"+producto.getPresentacion()+"', '"+instructivo.getId()+"')");
+                    + ""+producto.getGranularidad()+",'"+producto.getPresentacion()+"', '"+producto.getInstructivo().getId()+"')");
             
             
         }catch(ClassNotFoundException | SQLException ex){
@@ -45,7 +45,17 @@ public class ProductoMySQL implements ProductoDAO{
 
     @Override
     public void actualizar(Producto producto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.userMySQL, DBManager.passwordMySQL);
+            st = con.createStatement();
+            st.executeUpdate("UPDATE PRODUCTO SET NOMBRE = '"+producto.getNombre()+"',GRANULARIDAD= '"+producto.getGranularidad()+"' , PRESENTACION= '"+producto.getPresentacion()+"'  ,"
+                    + "FK_ID_INSTRUCTIVO=  '"+producto.getInstructivo().getId()+"'   WHERE ID_PROD = '"+producto.getIdProducto()+"'");
+        }catch(ClassNotFoundException | SQLException ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(SQLException ex){System.out.println(ex.getMessage());}
+        }
     }
 
     @Override
