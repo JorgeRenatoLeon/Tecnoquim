@@ -1,6 +1,6 @@
 ﻿namespace LP2MARKETSOFTFRONT
 {
-    partial class Login
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -36,8 +36,8 @@
             this.lblLinea2 = new System.Windows.Forms.Label();
             this.lblLinea3 = new System.Windows.Forms.Label();
             this.lblLinea4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +51,8 @@
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.Tag = "";
             this.txtUsuario.Text = "Usuario";
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuarioEnter);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuarioLeave);
             // 
             // txtContrasena
             // 
@@ -60,8 +61,10 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(199, 20);
             this.txtContrasena.TabIndex = 1;
-            this.txtContrasena.Text = "Password";
+            this.txtContrasena.Text = "Contrasena";
             this.txtContrasena.UseSystemPasswordChar = true;
+            this.txtContrasena.Enter += new System.EventHandler(this.txtContrasenaEnter);
+            this.txtContrasena.Leave += new System.EventHandler(this.txtContrasenaLeave);
             // 
             // lblUsuario
             // 
@@ -123,26 +126,27 @@
             this.lblLinea4.TabIndex = 8;
             this.lblLinea4.Text = "-------------------";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LP2MARKETSOFTFRONT.Properties.Resources.Inicio;
-            this.pictureBox1.Location = new System.Drawing.Point(341, 94);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 80);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // button1
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(341, 319);
+            this.button1.Location = new System.Drawing.Point(338, 309);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(89, 33);
             this.button1.TabIndex = 9;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Login
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LP2MARKETSOFTFRONT.Properties.Resources.logo_web;
+            this.pictureBox1.Location = new System.Drawing.Point(299, 99);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 92);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -159,7 +163,7 @@
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.txtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

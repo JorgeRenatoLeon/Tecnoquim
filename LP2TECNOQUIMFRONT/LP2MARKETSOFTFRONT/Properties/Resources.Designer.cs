@@ -63,9 +63,29 @@ namespace LP2MARKETSOFTFRONT.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Inicio {
+        internal static System.Drawing.Bitmap LOGO_SMALL {
             get {
-                object obj = ResourceManager.GetObject("Inicio", resourceCulture);
+                object obj = ResourceManager.GetObject("LOGO_SMALL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_web {
+            get {
+                object obj = ResourceManager.GetObject("logo_web", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_web_big {
+            get {
+                object obj = ResourceManager.GetObject("logo_web_big", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
