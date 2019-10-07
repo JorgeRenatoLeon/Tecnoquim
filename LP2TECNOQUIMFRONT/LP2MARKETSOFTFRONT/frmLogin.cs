@@ -72,5 +72,18 @@ namespace LP2MARKETSOFTFRONT
                 this.txtContrasena.ForeColor = Color.Silver;
             }
         }
+
+        private void pbMinimize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void pbCerrar_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
