@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@
             this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.pbMaximize = new System.Windows.Forms.PictureBox();
             this.pbExit = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.barra = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -62,6 +63,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 550);
             this.panel1.TabIndex = 1;
+            // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(0, 446);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(163, 92);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Notificaciones";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -183,21 +200,13 @@
             this.pbExit.TabStop = false;
             this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
-            // button6
+            // barra
             // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(0, 446);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(163, 92);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Notificaciones";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button6.UseVisualStyleBackColor = true;
+            this.barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.barra.Location = new System.Drawing.Point(162, 0);
+            this.barra.Name = "barra";
+            this.barra.Size = new System.Drawing.Size(937, 35);
+            this.barra.TabIndex = 5;
             // 
             // frmHome
             // 
@@ -209,6 +218,7 @@
             this.Controls.Add(this.pbMaximize);
             this.Controls.Add(this.pbExit);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.barra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -236,5 +246,6 @@
         private System.Windows.Forms.PictureBox pbMaximize;
         private System.Windows.Forms.PictureBox pbMinimize;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel barra;
     }
 }
