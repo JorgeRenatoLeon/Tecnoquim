@@ -16,6 +16,7 @@ namespace LP2TECNOQUIMFRONT
         public frmHistorialPlan()
         {
             InitializeComponent();
+            dgvHistorialPlan.AutoGenerateColumns = false;;
         } 
 
         private void pbExit_Click_1(object sender, EventArgs e)
@@ -49,6 +50,11 @@ namespace LP2TECNOQUIMFRONT
             frmGerente formGerente = new frmGerente(1);
             formGerente.Visible = true;
             this.Close();
+        }
+
+        private void dgvHistorialPlan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
