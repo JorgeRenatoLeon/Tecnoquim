@@ -1,4 +1,4 @@
-﻿namespace LP2MARKETSOFTFRONT
+﻿namespace LP2TECNOQUIMFRONT
 {
     partial class frmSplash
     {
@@ -36,7 +36,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LP2MARKETSOFTFRONT.Properties.Resources.LOGO_SMALL;
+            this.pictureBox1.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.LOGO_SMALL;
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox1.Location = new System.Drawing.Point(81, 49);
             this.pictureBox1.Name = "pictureBox1";

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3C26A9ED-91C0-4DBF-9088-FF6BDE9D9F61}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>LP2MARKETSOFTFRONT</RootNamespace>
-    <AssemblyName>LP2MARKETSOFTFRONT</AssemblyName>
+    <RootNamespace>LP2TECNOQUIMFRONT</RootNamespace>
+    <AssemblyName>LP2TECNOQUIMFRONT</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

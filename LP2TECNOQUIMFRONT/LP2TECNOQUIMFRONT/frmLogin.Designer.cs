@@ -1,4 +1,6 @@
-﻿namespace LP2MARKETSOFTFRONT
+﻿using System;
+
+namespace LP2TECNOQUIMFRONT
 {
     partial class frmLogin
     {
@@ -149,7 +151,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::LP2MARKETSOFTFRONT.Properties.Resources.logo_web;
+            this.pictureBox1.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.logo_web;
             this.pictureBox1.Location = new System.Drawing.Point(299, 99);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(169, 92);
@@ -159,7 +161,7 @@
             // pbMinimize
             // 
             this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMinimize.Image = global::LP2MARKETSOFTFRONT.Properties.Resources.minimazar;
+            this.pbMinimize.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.minimazar;
             this.pbMinimize.Location = new System.Drawing.Point(758, 4);
             this.pbMinimize.Name = "pbMinimize";
             this.pbMinimize.Size = new System.Drawing.Size(12, 14);
@@ -171,7 +173,7 @@
             // pbCerrar
             // 
             this.pbCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbCerrar.Image = global::LP2MARKETSOFTFRONT.Properties.Resources.cerrar;
+            this.pbCerrar.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.cerrar;
             this.pbCerrar.Location = new System.Drawing.Point(776, 4);
             this.pbCerrar.Name = "pbCerrar";
             this.pbCerrar.Size = new System.Drawing.Size(12, 14);

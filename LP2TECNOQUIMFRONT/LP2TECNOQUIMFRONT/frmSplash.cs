@@ -9,11 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2MARKETSOFTFRONT
+namespace LP2TECNOQUIMFRONT
 {
     public partial class frmSplash : Form
     {
-        int cont = 0;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (

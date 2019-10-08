@@ -1,4 +1,4 @@
-﻿namespace LP2MARKETSOFTFRONT
+﻿namespace LP2TECNOQUIMFRONT
 {
     partial class frmHome
     {
@@ -137,7 +137,7 @@
             // 
             // pbLogo
             // 
-            this.pbLogo.Image = global::LP2MARKETSOFTFRONT.Properties.Resources.logo_web;
+            this.pbLogo.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.logo_web;
             this.pbLogo.Location = new System.Drawing.Point(0, 3);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(163, 92);
@@ -147,7 +147,7 @@
             // pbMinimize
             // 
             this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMinimize.Image = global::LP2MARKETSOFTFRONT.Properties.Resources.minimazar;
+            this.pbMinimize.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.minimazar;
             this.pbMinimize.Location = new System.Drawing.Point(999, 3);
             this.pbMinimize.Name = "pbMinimize";
             this.pbMinimize.Size = new System.Drawing.Size(26, 22);
@@ -160,7 +160,7 @@
             // 
             this.pbMaximize.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.pbMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMaximize.Image = global::LP2MARKETSOFTFRONT.Properties.Resources.maxi;
+            this.pbMaximize.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.res;
             this.pbMaximize.Location = new System.Drawing.Point(1031, 3);
             this.pbMaximize.Name = "pbMaximize";
             this.pbMaximize.Size = new System.Drawing.Size(26, 22);
@@ -172,7 +172,7 @@
             // pbExit
             // 
             this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbExit.Image = global::LP2MARKETSOFTFRONT.Properties.Resources.cerrar;
+            this.pbExit.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.cerrar;
             this.pbExit.Location = new System.Drawing.Point(1063, 3);
             this.pbExit.Name = "pbExit";
             this.pbExit.Size = new System.Drawing.Size(25, 22);

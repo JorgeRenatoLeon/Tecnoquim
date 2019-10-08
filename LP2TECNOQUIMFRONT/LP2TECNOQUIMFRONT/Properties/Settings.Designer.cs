@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LP2MARKETSOFTFRONT.Properties
+namespace LP2TECNOQUIMFRONT.Properties
 {
 
 
