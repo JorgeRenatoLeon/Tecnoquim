@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LP2TECNOQUIMFRONT
 {
-    public partial class Form1 : Form
+    public partial class frmGerente : Form
     {
-        public Form1()
+        public frmGerente()
         {
             InitializeComponent();
         }
