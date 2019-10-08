@@ -48,22 +48,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmJProduccion.cs">
+    <Compile Include="frmJproduccion\frmConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmJProduccion.Designer.cs">
-      <DependentUpon>frmJProduccion.cs</DependentUpon>
+    <Compile Include="frmJproduccion\frmConsultas.Designer.cs">
+      <DependentUpon>frmConsultas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGerente.cs">
+    <Compile Include="frmGerente\frmGerente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGerente.Designer.cs">
+    <Compile Include="frmGerente\frmGerente.Designer.cs">
       <DependentUpon>frmGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHistorialPlan.cs">
+    <Compile Include="frmGerente\frmHistorialPlan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHistorialPlan.Designer.cs">
+    <Compile Include="frmGerente\frmHistorialPlan.Designer.cs">
       <DependentUpon>frmHistorialPlan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHome.cs">
@@ -72,16 +72,58 @@
     <Compile Include="frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJproduccion\frmInsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJproduccion\frmInsumos.Designer.cs">
+      <DependentUpon>frmInsumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJproduccion\frmJProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJproduccion\frmJProduccion.Designer.cs">
+      <DependentUpon>frmJProduccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJproduccion\frmMaquinarias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJproduccion\frmMaquinarias.Designer.cs">
+      <DependentUpon>frmMaquinarias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJproduccion\frmPolitica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJproduccion\frmPolitica.Designer.cs">
+      <DependentUpon>frmPolitica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJproduccion\frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJproduccion\frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmValidarPlan.cs">
+    <Compile Include="frmJproduccion\frmOrden.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmValidarPlan.Designer.cs">
+    <Compile Include="frmJproduccion\frmOrden.Designer.cs">
+      <DependentUpon>frmOrden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJproduccion\frmPMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJproduccion\frmPMS.Designer.cs">
+      <DependentUpon>frmPMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGerente\frmValidarPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerente\frmValidarPlan.Designer.cs">
       <DependentUpon>frmValidarPlan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -92,22 +134,43 @@
     <Compile Include="frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmJProduccion.resx">
-      <DependentUpon>frmJProduccion.cs</DependentUpon>
+    <EmbeddedResource Include="frmJproduccion\frmConsultas.resx">
+      <DependentUpon>frmConsultas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGerente.resx">
+    <EmbeddedResource Include="frmGerente\frmGerente.resx">
       <DependentUpon>frmGerente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHistorialPlan.resx">
+    <EmbeddedResource Include="frmGerente\frmHistorialPlan.resx">
       <DependentUpon>frmHistorialPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmJproduccion\frmInsumos.resx">
+      <DependentUpon>frmInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJproduccion\frmJProduccion.resx">
+      <DependentUpon>frmJProduccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJproduccion\frmMaquinarias.resx">
+      <DependentUpon>frmMaquinarias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJproduccion\frmPolitica.resx">
+      <DependentUpon>frmPolitica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJproduccion\frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmValidarPlan.resx">
+    <EmbeddedResource Include="frmJproduccion\frmOrden.resx">
+      <DependentUpon>frmOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJproduccion\frmPMS.resx">
+      <DependentUpon>frmPMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGerente\frmValidarPlan.resx">
       <DependentUpon>frmValidarPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
