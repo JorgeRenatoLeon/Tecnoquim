@@ -32,8 +32,24 @@ namespace LP2TECNOQUIMFRONT
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmHome formHome = new frmHome();
-            formHome.Visible = true;
+            if (this.txtUsuario.Text == "admin")
+            {
+                if (this.txtContrasena.Text == "1234")
+                {
+                    frmGerente formGerente = new frmGerente();
+                    formGerente.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("Contraseña Incorrecta Prro");
+                    this.Visible = true;
+                }
+            }
+            else
+            {
+                frmHome formHome = new frmHome();
+                formHome.Visible = true;
+            }
         }
 
         private void txtUsuarioEnter(object sender, EventArgs e)
