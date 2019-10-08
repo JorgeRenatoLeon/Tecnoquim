@@ -173,6 +173,10 @@
             // 
             // btnHistorial
             // 
+            this.btnHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHistorial.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnHistorial.BackColor = System.Drawing.Color.White;
             this.btnHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHistorial.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,6 +191,10 @@
             // 
             // button5
             // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button5.BackColor = System.Drawing.Color.White;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 15.25F, System.Drawing.FontStyle.Bold);
@@ -200,7 +208,9 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(397, 102);
@@ -254,7 +264,7 @@
             this.barra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
-            this.barra.Location = new System.Drawing.Point(165, 0);
+            this.barra.Location = new System.Drawing.Point(166, 0);
             this.barra.Name = "barra";
             this.barra.Size = new System.Drawing.Size(937, 35);
             this.barra.TabIndex = 9;
@@ -284,7 +294,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

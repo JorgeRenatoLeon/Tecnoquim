@@ -29,26 +29,48 @@ namespace LP2TECNOQUIMFRONT
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
+        private void textBoxTest_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(this, new EventArgs());
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            if (this.txtUsuario.Text == "admin")
-            {
-                if (this.txtContrasena.Text == "1234")
+            if(this.txtUsuario.Text != "Usuario" && this.txtUsuario.Text != ""){
+                if (this.txtContrasena.Text != "Contrasena" && this.txtContrasena.Text != "")
                 {
-                    frmGerente formGerente = new frmGerente();
-                    formGerente.Visible = true;
+                    if (this.txtUsuario.Text == "admin")
+                    {
+                        if (this.txtContrasena.Text == "1234")
+                        {
+                            frmGerente formGerente = new frmGerente();
+                            formGerente.Visible = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Contraseña Incorrecta Prro");
+                            this.Visible = true;
+                        }
+                    }
+                    else
+                    {
+                        frmHome formHome = new frmHome();
+                        formHome.Visible = true;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Contraseña Incorrecta Prro");
+                    MessageBox.Show("Ingresa una contraseña apeligrao!!!");
                     this.Visible = true;
                 }
             }
-            else
-            {
-                frmHome formHome = new frmHome();
-                formHome.Visible = true;
+            else {
+                MessageBox.Show("Ingresa un nombre de usuario pe mascota!!!");
+                this.Visible = true;
             }
         }
 

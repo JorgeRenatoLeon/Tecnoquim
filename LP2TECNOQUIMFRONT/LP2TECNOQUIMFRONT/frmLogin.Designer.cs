@@ -61,6 +61,7 @@ namespace LP2TECNOQUIMFRONT
             this.txtUsuario.Tag = "";
             this.txtUsuario.Text = "Usuario";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuarioEnter);
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTest_KeyDown);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuarioLeave);
             // 
             // txtContrasena
@@ -73,6 +74,7 @@ namespace LP2TECNOQUIMFRONT
             this.txtContrasena.Text = "Contrasena";
             this.txtContrasena.UseSystemPasswordChar = true;
             this.txtContrasena.Enter += new System.EventHandler(this.txtContrasenaEnter);
+            this.txtContrasena.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTest_KeyDown);
             this.txtContrasena.Leave += new System.EventHandler(this.txtContrasenaLeave);
             // 
             // lblUsuario
@@ -205,6 +207,7 @@ namespace LP2TECNOQUIMFRONT
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTest_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();

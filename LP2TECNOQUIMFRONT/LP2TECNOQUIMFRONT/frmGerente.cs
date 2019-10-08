@@ -15,17 +15,24 @@ namespace LP2TECNOQUIMFRONT
     public partial class frmGerente : Form
     {
 
-        public frmGerente()
+        public frmGerente(int cont=0)
         {
-            Thread t = new Thread(new ThreadStart(SplashStart));
+            if (cont != 0)
+            {
+                InitializeComponent();
+            }
+            else
+            {
+                Thread t = new Thread(new ThreadStart(SplashStart));
 
-            t.Start();
+                t.Start();
 
-            Thread.Sleep(5000);
+                Thread.Sleep(5000);
 
-            InitializeComponent();
+                InitializeComponent();
 
-            t.Abort();
+                t.Abort();
+            }
         }
         public void SplashStart()
         {
@@ -62,6 +69,7 @@ namespace LP2TECNOQUIMFRONT
             this.Visible = false;
             frmHistorialPlan formHistorial = new frmHistorialPlan();
             formHistorial.Visible = true;
+            this.Close();
         }
     }
 }
