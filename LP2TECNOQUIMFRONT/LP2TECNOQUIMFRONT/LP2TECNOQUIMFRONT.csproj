@@ -229,8 +229,6 @@
   <ItemGroup>
     <None Include="Resources\minimazar.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="frmJControlCalidad\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
