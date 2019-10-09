@@ -56,5 +56,13 @@ namespace LP2TECNOQUIMFRONT
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmGerente formInicio = new frmGerente(1);
+            formInicio.Visible = true;
+            this.Close();
+        }
     }
 }

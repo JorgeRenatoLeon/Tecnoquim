@@ -71,5 +71,10 @@ namespace LP2TECNOQUIMFRONT
             formHistorial.Visible = true;
             this.Close();
         }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

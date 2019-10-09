@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2TECNOQUIMFRONT.frmJControlCalidad
+namespace LP2TECNOQUIMFRONT
 {
     public partial class frmJControlCalidad : Form
     {
