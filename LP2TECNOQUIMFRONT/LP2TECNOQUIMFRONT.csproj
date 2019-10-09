@@ -48,12 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmJControlCalidad\frmJControlCalidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmJControlCalidad\frmJControlCalidad.Designer.cs">
-      <DependentUpon>frmJControlCalidad.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmJproduccion\frmConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,9 +134,6 @@
     <Compile Include="frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmJControlCalidad\frmJControlCalidad.resx">
-      <DependentUpon>frmJControlCalidad.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmConsultas.resx">
       <DependentUpon>frmConsultas.cs</DependentUpon>
     </EmbeddedResource>
