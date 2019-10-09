@@ -43,6 +43,7 @@ namespace LP2TECNOQUIMFRONT
             if(this.txtUsuario.Text != "Usuario" && this.txtUsuario.Text != ""){
                 if (this.txtContrasena.Text != "Contrasena" && this.txtContrasena.Text != "")
                 {
+                    //GERENTE
                     if (this.txtUsuario.Text == "admin")
                     {
                         if (this.txtContrasena.Text == "1234")
@@ -53,6 +54,7 @@ namespace LP2TECNOQUIMFRONT
                         else
                         {
                             MessageBox.Show("Contraseña Incorrecta");
+<<<<<<< HEAD
                             this.Visible = true;
                         }
                     }
@@ -66,9 +68,40 @@ namespace LP2TECNOQUIMFRONT
                         else
                         {
                             MessageBox.Show("Contraseña Incorrecta");
+=======
+>>>>>>> b35b610c4da1b709520f45951abb6d2ea6e131ea
                             this.Visible = true;
                         }
                     }
+                    //JEFE DE PRODUCCION
+                    else if (this.txtUsuario.Text == "produccion")
+                    {
+                        if (this.txtContrasena.Text == "1234")
+                        {
+                            frmJProduccion formProduccion = new frmJProduccion();
+                            formProduccion.Visible = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Contraseña Incorrecta");
+                            this.Visible = true;
+                        }
+                    }
+                    //JEFE DE CONTROL DE CALIDAD
+                    else if (this.txtUsuario.Text == "controlCalidad")
+                    {
+                        if (this.txtContrasena.Text == "1234")
+                        {
+                            //frmJControlCalidad formControlCalidad = new frmJControlCalidad();
+                            //formControlCalidad.Visible = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Contraseña Incorrecta");
+                            this.Visible = true;
+                        }
+                    }
+                    //CUALQUIER OTRA COSA xdd
                     else
                     {
                         frmHome formHome = new frmHome();

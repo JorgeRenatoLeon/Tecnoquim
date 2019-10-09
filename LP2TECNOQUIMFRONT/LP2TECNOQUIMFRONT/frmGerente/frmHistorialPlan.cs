@@ -51,5 +51,21 @@ namespace LP2TECNOQUIMFRONT
             formGerente.Visible = true;
             this.Close();
         }
+<<<<<<< HEAD
+=======
+
+        private void dgvHistorialPlan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmGerente formInicio = new frmGerente(1);
+            formInicio.Visible = true;
+            this.Close();
+        }
+>>>>>>> b35b610c4da1b709520f45951abb6d2ea6e131ea
     }
 }

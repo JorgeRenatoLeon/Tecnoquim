@@ -48,10 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmJControlCalidad\frmJControlCalidad.cs">
+    <Compile Include="frmJControlCalidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmJControlCalidad\frmJControlCalidad.Designer.cs">
+    <Compile Include="frmJControlCalidad.Designer.cs">
       <DependentUpon>frmJControlCalidad.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJproduccion\frmConsultas.cs">
@@ -140,7 +140,7 @@
     <Compile Include="frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmJControlCalidad\frmJControlCalidad.resx">
+    <EmbeddedResource Include="frmJControlCalidad.resx">
       <DependentUpon>frmJControlCalidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmConsultas.resx">
@@ -229,5 +229,6 @@
   <ItemGroup>
     <None Include="Resources\minimazar.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -72,12 +72,18 @@ namespace LP2TECNOQUIMFRONT
             this.Close();
         }
 
+<<<<<<< HEAD
         private void btnValidar_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             frmValidarPlan formValidacion = new frmValidarPlan();
             formValidacion.Visible = true;
             this.Close();
+=======
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            
+>>>>>>> b35b610c4da1b709520f45951abb6d2ea6e131ea
         }
     }
 }

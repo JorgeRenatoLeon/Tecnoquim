@@ -35,7 +35,10 @@
             this.button6 = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.btnHome = new System.Windows.Forms.Button();
+=======
+>>>>>>> b35b610c4da1b709520f45951abb6d2ea6e131ea
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.barra = new System.Windows.Forms.Panel();
@@ -45,6 +48,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnOrden = new System.Windows.Forms.Button();
             this.btnPMS = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+=======
+            this.btnInicio = new System.Windows.Forms.Button();
+>>>>>>> b35b610c4da1b709520f45951abb6d2ea6e131ea
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -57,12 +64,16 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.btnInicio);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.btnConsultas);
             this.panel1.Controls.Add(this.button3);
+<<<<<<< HEAD
             this.panel1.Controls.Add(this.btnHome);
+=======
+>>>>>>> b35b610c4da1b709520f45951abb6d2ea6e131ea
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -156,6 +167,7 @@
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button3.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
             // btnHome
             // 
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -173,6 +185,8 @@
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnHome.UseVisualStyleBackColor = true;
             // 
+=======
+>>>>>>> b35b610c4da1b709520f45951abb6d2ea6e131ea
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(150)))), ((int)(((byte)(19)))));
@@ -216,7 +230,11 @@
             this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMinimize.TabIndex = 17;
             this.pbMinimize.TabStop = false;
+<<<<<<< HEAD
             this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
+=======
+            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click_1);
+>>>>>>> b35b610c4da1b709520f45951abb6d2ea6e131ea
             // 
             // pbExit
             // 
@@ -243,7 +261,11 @@
             this.pbMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMaximize.TabIndex = 16;
             this.pbMaximize.TabStop = false;
+<<<<<<< HEAD
             this.pbMaximize.Click += new System.EventHandler(this.pbMaximize_Click);
+=======
+            this.pbMaximize.Click += new System.EventHandler(this.pbMaximize_Click_1);
+>>>>>>> b35b610c4da1b709520f45951abb6d2ea6e131ea
             // 
             // label1
             // 
@@ -290,6 +312,27 @@
             this.btnPMS.Text = "Plan Maestro de Produccion";
             this.btnPMS.UseVisualStyleBackColor = false;
             this.btnPMS.Click += new System.EventHandler(this.btnPMS_Click);
+<<<<<<< HEAD
+=======
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.Color.White;
+            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
+            this.btnInicio.Location = new System.Drawing.Point(3, 101);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(163, 79);
+            this.btnInicio.TabIndex = 14;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+>>>>>>> b35b610c4da1b709520f45951abb6d2ea6e131ea
             // 
             // frmJProduccion
             // 
@@ -324,7 +367,10 @@
         private System.Windows.Forms.Button btnConsultas;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+<<<<<<< HEAD
         private System.Windows.Forms.Button btnHome;
+=======
+>>>>>>> b35b610c4da1b709520f45951abb6d2ea6e131ea
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Panel barra;
@@ -335,5 +381,6 @@
         private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.PictureBox pbMaximize;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnInicio;
     }
 }
