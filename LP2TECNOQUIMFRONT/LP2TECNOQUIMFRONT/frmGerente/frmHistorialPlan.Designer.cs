@@ -106,7 +106,6 @@
             this.dgvHistorialPlan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHistorialPlan.Size = new System.Drawing.Size(842, 398);
             this.dgvHistorialPlan.TabIndex = 9;
-            this.dgvHistorialPlan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorialPlan_CellContentClick);
             // 
             // Codigo
             // 
@@ -304,6 +303,7 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panel3
             // 
@@ -342,6 +342,7 @@
             this.Controls.Add(this.dgvHistorialPlan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHistorialPlan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();

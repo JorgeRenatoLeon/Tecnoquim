@@ -17,16 +17,55 @@ namespace LP2TECNOQUIMFRONT
             InitializeComponent();
         }
 
-        
+        private void pbCerrar_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void pbMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void pbMinimize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmJProduccion fromJProd = new frmJProduccion(1);
+            fromJProd.Visible = true;
+            this.Close();
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConsultas_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmConsultas formConsultas = new frmConsultas();
+            formConsultas.Visible = true;
+            this.Close();
         }
     }
 }

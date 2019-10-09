@@ -17,6 +17,37 @@ namespace LP2TECNOQUIMFRONT
             InitializeComponent();
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmGerente formGerente = new frmGerente(1);
+            formGerente.Visible = true;
+            this.Close();
+        }
+
+        private void pbMinimize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void pbMaxi_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void pbCerrar_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMaquinarias));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnConsultas = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.barra = new System.Windows.Forms.Panel();
             this.pbMinimize = new System.Windows.Forms.PictureBox();
@@ -67,25 +67,15 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnConsultas);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 550);
             this.panel1.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(150)))), ((int)(((byte)(19)))));
-            this.panel3.Controls.Add(this.pbLogo);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(166, 99);
-            this.panel3.TabIndex = 0;
             // 
             // button2
             // 
@@ -138,22 +128,23 @@
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnConsultas
             // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(3, 394);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(163, 79);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Consultas";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnConsultas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultas.FlatAppearance.BorderSize = 0;
+            this.btnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultas.ForeColor = System.Drawing.Color.White;
+            this.btnConsultas.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultas.Image")));
+            this.btnConsultas.Location = new System.Drawing.Point(3, 394);
+            this.btnConsultas.Name = "btnConsultas";
+            this.btnConsultas.Size = new System.Drawing.Size(163, 79);
+            this.btnConsultas.TabIndex = 1;
+            this.btnConsultas.Text = "Consultas";
+            this.btnConsultas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConsultas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnConsultas.UseVisualStyleBackColor = true;
+            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
             // button3
             // 
@@ -172,22 +163,33 @@
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnHome
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(3, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 79);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Inicio";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(3, 101);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(163, 79);
+            this.btnHome.TabIndex = 1;
+            this.btnHome.Text = "Inicio";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(150)))), ((int)(((byte)(19)))));
+            this.panel3.Controls.Add(this.pbLogo);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(166, 99);
+            this.panel3.TabIndex = 0;
             // 
             // pbLogo
             // 
@@ -222,6 +224,7 @@
             this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMinimize.TabIndex = 17;
             this.pbMinimize.TabStop = false;
+            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
             // 
             // pbExit
             // 
@@ -234,6 +237,7 @@
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbExit.TabIndex = 15;
             this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // pbMaximize
             // 
@@ -247,6 +251,7 @@
             this.pbMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMaximize.TabIndex = 16;
             this.pbMaximize.TabStop = false;
+            this.pbMaximize.Click += new System.EventHandler(this.pbMaximize_Click);
             // 
             // textBox1
             // 
@@ -334,7 +339,7 @@
             this.Tipo.ReadOnly = true;
             this.Tipo.Width = 200;
             // 
-            // frmMaquinaria
+            // frmMaquinarias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -348,9 +353,9 @@
             this.Controls.Add(this.barra);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmMaquinaria";
+            this.Name = "frmMaquinarias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMaquinaria";
-            this.Load += new System.EventHandler(this.frmMaquinaria_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
@@ -370,9 +375,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnConsultas;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Panel barra;

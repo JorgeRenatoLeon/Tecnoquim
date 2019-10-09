@@ -30,24 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPMS));
             this.barra = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pbMinimize = new System.Windows.Forms.PictureBox();
+            this.pbClose = new System.Windows.Forms.PictureBox();
+            this.pbMaximize = new System.Windows.Forms.PictureBox();
             this.btnCrear = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnConsultas = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pbHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.barra.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -58,50 +58,53 @@
             this.barra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
-            this.barra.Controls.Add(this.pictureBox1);
-            this.barra.Controls.Add(this.pictureBox2);
-            this.barra.Controls.Add(this.pictureBox3);
+            this.barra.Controls.Add(this.pbMinimize);
+            this.barra.Controls.Add(this.pbClose);
+            this.barra.Controls.Add(this.pbMaximize);
             this.barra.Location = new System.Drawing.Point(172, 3);
             this.barra.Name = "barra";
             this.barra.Size = new System.Drawing.Size(953, 35);
             this.barra.TabIndex = 18;
             // 
-            // pictureBox1
+            // pbMinimize
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.minimazar;
-            this.pictureBox1.Location = new System.Drawing.Point(839, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMinimize.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.minimazar;
+            this.pbMinimize.Location = new System.Drawing.Point(839, 9);
+            this.pbMinimize.Name = "pbMinimize";
+            this.pbMinimize.Size = new System.Drawing.Size(26, 22);
+            this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMinimize.TabIndex = 17;
+            this.pbMinimize.TabStop = false;
+            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
             // 
-            // pictureBox2
+            // pbClose
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.cerrar;
-            this.pictureBox2.Location = new System.Drawing.Point(903, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
+            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbClose.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.cerrar;
+            this.pbClose.Location = new System.Drawing.Point(903, 9);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(25, 22);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbClose.TabIndex = 15;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
-            // pictureBox3
+            // pbMaximize
             // 
-            this.pictureBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.res;
-            this.pictureBox3.Location = new System.Drawing.Point(871, 9);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 22);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
+            this.pbMaximize.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.pbMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMaximize.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.res;
+            this.pbMaximize.Location = new System.Drawing.Point(871, 9);
+            this.pbMaximize.Name = "pbMaximize";
+            this.pbMaximize.Size = new System.Drawing.Size(26, 22);
+            this.pbMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMaximize.TabIndex = 16;
+            this.pbMaximize.TabStop = false;
+            this.pbMaximize.Click += new System.EventHandler(this.pbMaximize_Click);
             // 
             // btnCrear
             // 
@@ -119,23 +122,25 @@
             this.btnCrear.TabIndex = 19;
             this.btnCrear.Text = "Crear Plan Maestro";
             this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
-            // button5
+            // btnModificar
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.button5.Location = new System.Drawing.Point(431, 253);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(365, 65);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Modificar Plan Maestro";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnModificar.BackColor = System.Drawing.Color.White;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnModificar.Location = new System.Drawing.Point(431, 253);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(365, 65);
+            this.btnModificar.TabIndex = 20;
+            this.btnModificar.Text = "Modificar Plan Maestro";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // button7
             // 
@@ -159,9 +164,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnConsultas);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.pbHome);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -203,22 +208,23 @@
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnConsultas
             // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(0, 361);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(163, 79);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Tareas";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnConsultas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultas.FlatAppearance.BorderSize = 0;
+            this.btnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultas.ForeColor = System.Drawing.Color.White;
+            this.btnConsultas.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultas.Image")));
+            this.btnConsultas.Location = new System.Drawing.Point(0, 361);
+            this.btnConsultas.Name = "btnConsultas";
+            this.btnConsultas.Size = new System.Drawing.Size(163, 79);
+            this.btnConsultas.TabIndex = 1;
+            this.btnConsultas.Text = "Consultas";
+            this.btnConsultas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConsultas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnConsultas.UseVisualStyleBackColor = true;
+            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
             // button3
             // 
@@ -237,22 +243,23 @@
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // pbHome
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(0, 119);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 79);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Inicio";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.pbHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbHome.FlatAppearance.BorderSize = 0;
+            this.pbHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pbHome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pbHome.ForeColor = System.Drawing.Color.White;
+            this.pbHome.Image = ((System.Drawing.Image)(resources.GetObject("pbHome.Image")));
+            this.pbHome.Location = new System.Drawing.Point(0, 119);
+            this.pbHome.Name = "pbHome";
+            this.pbHome.Size = new System.Drawing.Size(163, 79);
+            this.pbHome.TabIndex = 1;
+            this.pbHome.Text = "Inicio";
+            this.pbHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.pbHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.pbHome.UseVisualStyleBackColor = true;
+            this.pbHome.Click += new System.EventHandler(this.pbHome_Click);
             // 
             // panel3
             // 
@@ -281,16 +288,17 @@
             this.ClientSize = new System.Drawing.Size(1100, 550);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.barra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPMS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPMS";
             this.barra.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
@@ -300,18 +308,18 @@
 
         #endregion
         private System.Windows.Forms.Panel barra;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pbMinimize;
+        private System.Windows.Forms.PictureBox pbClose;
+        private System.Windows.Forms.PictureBox pbMaximize;
         private System.Windows.Forms.Button btnCrear;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnConsultas;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button pbHome;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
     }

@@ -44,17 +44,12 @@ namespace LP2TECNOQUIMFRONT
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             this.Visible = false;
             frmGerente formGerente = new frmGerente(1);
             formGerente.Visible = true;
             this.Close();
-        }
-
-        private void dgvHistorialPlan_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -52,7 +52,20 @@ namespace LP2TECNOQUIMFRONT
                         }
                         else
                         {
-                            MessageBox.Show("Contraseña Incorrecta Prro");
+                            MessageBox.Show("Contraseña Incorrecta");
+                            this.Visible = true;
+                        }
+                    }
+                    else if (this.txtUsuario.Text == "prod")
+                    {
+                        if (this.txtContrasena.Text == "1234")
+                        {
+                            frmJProduccion formJProduccion = new frmJProduccion();
+                            formJProduccion.Visible = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Contraseña Incorrecta");
                             this.Visible = true;
                         }
                     }
@@ -64,12 +77,12 @@ namespace LP2TECNOQUIMFRONT
                 }
                 else
                 {
-                    MessageBox.Show("Ingresa una contraseña apeligrao!!!");
+                    MessageBox.Show("Ingresa una contraseña");
                     this.Visible = true;
                 }
             }
             else {
-                MessageBox.Show("Ingresa un nombre de usuario pe mascota!!!");
+                MessageBox.Show("Ingresa tu usuario");
                 this.Visible = true;
             }
         }

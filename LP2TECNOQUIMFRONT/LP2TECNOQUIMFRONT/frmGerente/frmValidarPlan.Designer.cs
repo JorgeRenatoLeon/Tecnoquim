@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmValidarPlan));
             this.pbMaximize = new System.Windows.Forms.PictureBox();
             this.pbExit = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pbMinimize = new System.Windows.Forms.PictureBox();
+            this.pbMaxi = new System.Windows.Forms.PictureBox();
+            this.pbCerrar = new System.Windows.Forms.PictureBox();
             this.barra = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblPeriodo = new System.Windows.Forms.Label();
@@ -51,9 +51,9 @@
             this.pbLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaxi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             this.barra.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -85,51 +85,54 @@
             this.pbExit.TabIndex = 10;
             this.pbExit.TabStop = false;
             // 
-            // pictureBox1
+            // pbMinimize
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.minimazar;
-            this.pictureBox1.Location = new System.Drawing.Point(839, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMinimize.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.minimazar;
+            this.pbMinimize.Location = new System.Drawing.Point(839, 3);
+            this.pbMinimize.Name = "pbMinimize";
+            this.pbMinimize.Size = new System.Drawing.Size(26, 22);
+            this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMinimize.TabIndex = 15;
+            this.pbMinimize.TabStop = false;
+            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click);
             // 
-            // pictureBox2
+            // pbMaxi
             // 
-            this.pictureBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.res;
-            this.pictureBox2.Location = new System.Drawing.Point(871, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
+            this.pbMaxi.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.pbMaxi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMaxi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMaxi.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.res;
+            this.pbMaxi.Location = new System.Drawing.Point(871, 3);
+            this.pbMaxi.Name = "pbMaxi";
+            this.pbMaxi.Size = new System.Drawing.Size(26, 22);
+            this.pbMaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMaxi.TabIndex = 14;
+            this.pbMaxi.TabStop = false;
+            this.pbMaxi.Click += new System.EventHandler(this.pbMaxi_Click);
             // 
-            // pictureBox3
+            // pbCerrar
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.cerrar;
-            this.pictureBox3.Location = new System.Drawing.Point(903, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 22);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
+            this.pbCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbCerrar.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.cerrar;
+            this.pbCerrar.Location = new System.Drawing.Point(903, 3);
+            this.pbCerrar.Name = "pbCerrar";
+            this.pbCerrar.Size = new System.Drawing.Size(25, 22);
+            this.pbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCerrar.TabIndex = 13;
+            this.pbCerrar.TabStop = false;
+            this.pbCerrar.Click += new System.EventHandler(this.pbCerrar_Click);
             // 
             // barra
             // 
             this.barra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
-            this.barra.Controls.Add(this.pictureBox3);
-            this.barra.Controls.Add(this.pictureBox2);
-            this.barra.Controls.Add(this.pictureBox1);
+            this.barra.Controls.Add(this.pbCerrar);
+            this.barra.Controls.Add(this.pbMaxi);
+            this.barra.Controls.Add(this.pbMinimize);
             this.barra.Location = new System.Drawing.Point(169, 3);
             this.barra.Name = "barra";
             this.barra.Size = new System.Drawing.Size(953, 35);
@@ -303,6 +306,7 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -341,12 +345,13 @@
             this.Controls.Add(this.pbExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmValidarPlan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmValidarPlan";
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaxi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
             this.barra.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -359,10 +364,10 @@
         #endregion
         private System.Windows.Forms.PictureBox pbMaximize;
         private System.Windows.Forms.PictureBox pbExit;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbMinimize;
+        private System.Windows.Forms.PictureBox pbMaxi;
         private System.Windows.Forms.Panel barra;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pbCerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPeriodo;
         private System.Windows.Forms.CheckBox checkBox1;
