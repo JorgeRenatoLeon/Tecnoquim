@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2TECNOQUIMFRONT.frmJAlmacen;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -62,6 +63,19 @@ namespace LP2TECNOQUIMFRONT
                         {
                             frmJProduccion formJProduccion = new frmJProduccion();
                             formJProduccion.Visible = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Contraseña Incorrecta");
+                            this.Visible = true;
+                        }
+                    }
+                    else if (this.txtUsuario.Text == "almacen")
+                    {
+                        if (this.txtContrasena.Text == "1234")
+                        {
+                            frmAlmacen formAlmacen = new frmAlmacen();
+                            formAlmacen.Visible = true;
                         }
                         else
                         {
