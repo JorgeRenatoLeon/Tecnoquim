@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2TECNOQUIMFRONT.frmJproduccion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,15 +51,7 @@ namespace LP2TECNOQUIMFRONT
             this.Close();
         }
 
-        private void btnCrear_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnConsultas_Click(object sender, EventArgs e)
         {
@@ -66,6 +59,20 @@ namespace LP2TECNOQUIMFRONT
             frmConsultas formConsultas = new frmConsultas();
             formConsultas.Visible = true;
             this.Close();
+        }
+
+        private void btnGestionar_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmGestionarOrden formGestionarOrden = new frmGestionarOrden();
+            formGestionarOrden.Visible = true;
+            this.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmHistorialOrden form = new frmHistorialOrden();
+            form.Visible = true;
         }
     }
 }
