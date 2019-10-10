@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 {
-    public partial class frmProducto : Form
+    public partial class frmNotificaciones : Form
     {
-        public frmProducto()
+        public frmNotificaciones()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnInicio_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             frmControlCalidad formInicio = new frmControlCalidad();
@@ -30,14 +30,6 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             this.Visible = false;
             frmPerfil formPerfil = new frmPerfil();
             formPerfil.Visible = true;
-            this.Close();
-        }
-
-        private void btnNotificar_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmNotificaciones formNot = new frmNotificaciones();
-            formNot.Visible = true;
             this.Close();
         }
     }

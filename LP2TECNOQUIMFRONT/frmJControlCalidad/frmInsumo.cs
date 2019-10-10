@@ -20,8 +20,24 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         private void btnInicio_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmControlCalidad formInsumo = new frmControlCalidad();
-            formInsumo.Visible = true;
+            frmControlCalidad formInicio = new frmControlCalidad();
+            formInicio.Visible = true;
+            this.Close();
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmPerfil formPerfil = new frmPerfil();
+            formPerfil.Visible = true;
+            this.Close();
+        }
+
+        private void btnNotificar_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmNotificaciones formNot = new frmNotificaciones();
+            formNot.Visible = true;
             this.Close();
         }
     }

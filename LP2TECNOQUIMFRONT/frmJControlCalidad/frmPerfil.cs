@@ -10,26 +10,18 @@ using System.Windows.Forms;
 
 namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 {
-    public partial class frmProducto : Form
+    public partial class frmPerfil : Form
     {
-        public frmProducto()
+        public frmPerfil()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnInicio_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             frmControlCalidad formInicio = new frmControlCalidad();
             formInicio.Visible = true;
-            this.Close();
-        }
-
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmPerfil formPerfil = new frmPerfil();
-            formPerfil.Visible = true;
             this.Close();
         }
 
