@@ -57,5 +57,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         {
             Environment.Exit(0);
         }
+
+        private void frmMaquinarias_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

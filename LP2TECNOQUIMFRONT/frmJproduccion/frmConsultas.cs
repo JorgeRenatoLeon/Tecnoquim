@@ -53,34 +53,26 @@ namespace LP2TECNOQUIMFRONT
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
             frmProductos formProducto = new frmProductos();
             formProducto.Visible = true;
-            this.Close();
         }
 
         private void btnInsumos_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
             frmInsumos formInsumos = new frmInsumos();
             formInsumos.Visible = true;
-            this.Close();
         }
 
         private void btnMaquinaria_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
             frmMaquinarias formMaquinaria = new frmMaquinarias();
             formMaquinaria.Visible = true;
-            this.Close();
         }
 
         private void btnPolitica_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
             frmPolitica formPolitica = new frmPolitica();
             formPolitica.Visible = true;
-            this.Close();
         }
     }
 }
