@@ -48,17 +48,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmJControlCalidad\frmControlCalidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmJControlCalidad\frmControlCalidad.designer.cs">
-      <DependentUpon>frmControlCalidad.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmJAlmacen\frmAlmacen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmJAlmacen\frmAlmacen.Designer.cs">
       <DependentUpon>frmAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmInsumo.Designer.cs">
+      <DependentUpon>frmInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmNotificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmNotificaciones.Designer.cs">
+      <DependentUpon>frmNotificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmPerfil.Designer.cs">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmProducto.Designer.cs">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJControlCalidad\frmControlCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJControlCalidad\frmControlCalidad.designer.cs">
+      <DependentUpon>frmControlCalidad.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJControlCalidad\frmInsumo.cs">
       <SubType>Form</SubType>
@@ -176,6 +200,21 @@
     <Compile Include="frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmJAlmacen\frmAlmacen.resx">
+      <DependentUpon>frmAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJAlmacen\frmInsumo.resx">
+      <DependentUpon>frmInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJAlmacen\frmNotificaciones.resx">
+      <DependentUpon>frmNotificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJAlmacen\frmPerfil.resx">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJAlmacen\frmProducto.resx">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmJControlCalidad\frmControlCalidad.resx">
       <DependentUpon>frmControlCalidad.cs</DependentUpon>
     </EmbeddedResource>

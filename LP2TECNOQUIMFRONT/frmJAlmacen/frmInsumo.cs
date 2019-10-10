@@ -16,5 +16,29 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmAlmacen formInicio = new frmAlmacen();
+            formInicio.Visible = true;
+            this.Close();
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmPerfil formPerfil = new frmPerfil();
+            formPerfil.Visible = true;
+            this.Close();
+        }
+
+        private void btnNotificar_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmNotificaciones formNot = new frmNotificaciones();
+            formNot.Visible = true;
+            this.Close();
+        }
     }
 }
