@@ -108,6 +108,10 @@
     <Compile Include="frmJControlCalidad\frmProducto.Designer.cs">
       <DependentUpon>frmProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJMaquinaria\frmMaquinaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJMaquinaria\frmMaquinaria.Designer.cs" />
     <Compile Include="frmJproduccion\frmConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +270,7 @@
     <EmbeddedResource Include="frmJControlCalidad\frmProducto.resx">
       <DependentUpon>frmProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmJMaquinaria\frmMaquinaria.resx" />
     <EmbeddedResource Include="frmJproduccion\frmConsultas.resx">
       <DependentUpon>frmConsultas.cs</DependentUpon>
     </EmbeddedResource>
