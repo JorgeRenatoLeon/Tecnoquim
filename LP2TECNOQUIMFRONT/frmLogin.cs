@@ -1,4 +1,5 @@
 ﻿using LP2TECNOQUIMFRONT.frmJAlmacen;
+using LP2TECNOQUIMFRONT.frmJControlCalidad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,6 +76,19 @@ namespace LP2TECNOQUIMFRONT
                         if (this.txtContrasena.Text == "1234")
                         {
                             frmAlmacen formAlmacen = new frmAlmacen();
+                            formAlmacen.Visible = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Contraseña Incorrecta");
+                            this.Visible = true;
+                        }
+                    }
+                    else if (this.txtUsuario.Text == "calidad")
+                    {
+                        if (this.txtContrasena.Text == "1234")
+                        {
+                            frmControlCalidad formAlmacen = new frmControlCalidad();
                             formAlmacen.Visible = true;
                         }
                         else

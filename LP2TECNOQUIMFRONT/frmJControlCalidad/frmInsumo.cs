@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 {
-    public partial class frmControlCalidad : Form
+    public partial class frmInsumo : Form
     {
-        public frmControlCalidad()
+        public frmInsumo()
         {
             InitializeComponent();
-        }
-
-        private void btnProductos_Click(object sender, EventArgs e)
-        {
-            frmProducto formProducto = new frmProducto();
-            formProducto.Visible = true;
         }
     }
 }

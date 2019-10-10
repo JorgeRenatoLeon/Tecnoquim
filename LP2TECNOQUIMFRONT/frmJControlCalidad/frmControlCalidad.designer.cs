@@ -36,8 +36,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnValidar = new System.Windows.Forms.Button();
-            this.btnHistorial = new System.Windows.Forms.Button();
+            this.btnInsumos = new System.Windows.Forms.Button();
+            this.btnProductos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -138,36 +138,37 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Registro de Calidad";
             // 
-            // btnValidar
+            // btnInsumos
             // 
-            this.btnValidar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnInsumos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnValidar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnValidar.BackColor = System.Drawing.Color.White;
-            this.btnValidar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnValidar.Font = new System.Drawing.Font("Century Gothic", 15.25F, System.Drawing.FontStyle.Bold);
-            this.btnValidar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnValidar.Location = new System.Drawing.Point(431, 338);
-            this.btnValidar.Name = "btnValidar";
-            this.btnValidar.Size = new System.Drawing.Size(349, 56);
-            this.btnValidar.TabIndex = 11;
-            this.btnValidar.Text = "Insumos";
-            this.btnValidar.UseVisualStyleBackColor = false;
+            this.btnInsumos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnInsumos.BackColor = System.Drawing.Color.White;
+            this.btnInsumos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInsumos.Font = new System.Drawing.Font("Century Gothic", 15.25F, System.Drawing.FontStyle.Bold);
+            this.btnInsumos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnInsumos.Location = new System.Drawing.Point(431, 338);
+            this.btnInsumos.Name = "btnInsumos";
+            this.btnInsumos.Size = new System.Drawing.Size(349, 56);
+            this.btnInsumos.TabIndex = 11;
+            this.btnInsumos.Text = "Insumos";
+            this.btnInsumos.UseVisualStyleBackColor = false;
             // 
-            // btnHistorial
+            // btnProductos
             // 
-            this.btnHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHistorial.BackColor = System.Drawing.Color.White;
-            this.btnHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHistorial.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnHistorial.Location = new System.Drawing.Point(431, 246);
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(349, 56);
-            this.btnHistorial.TabIndex = 10;
-            this.btnHistorial.Text = "Productos";
-            this.btnHistorial.UseVisualStyleBackColor = false;
+            this.btnProductos.BackColor = System.Drawing.Color.White;
+            this.btnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnProductos.Location = new System.Drawing.Point(431, 246);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(349, 56);
+            this.btnProductos.TabIndex = 10;
+            this.btnProductos.Text = "Productos";
+            this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // frmControlCalidad
             // 
@@ -176,8 +177,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.ClientSize = new System.Drawing.Size(1084, 511);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnValidar);
-            this.Controls.Add(this.btnHistorial);
+            this.Controls.Add(this.btnInsumos);
+            this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.panel1);
             this.Name = "frmControlCalidad";
             this.Text = "frmControlCalidad";
@@ -197,7 +198,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnValidar;
-        private System.Windows.Forms.Button btnHistorial;
+        private System.Windows.Forms.Button btnInsumos;
+        private System.Windows.Forms.Button btnProductos;
     }
 }
