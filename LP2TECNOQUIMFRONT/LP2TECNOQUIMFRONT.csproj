@@ -96,6 +96,12 @@
     <Compile Include="frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJproduccion\frmGestionarOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJproduccion\frmGestionarOrden.Designer.cs">
+      <DependentUpon>frmGestionarOrden.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJproduccion\frmInsumos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJproduccion\frmGestionarOrden.resx">
+      <DependentUpon>frmGestionarOrden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmInsumos.resx">
       <DependentUpon>frmInsumos.cs</DependentUpon>
