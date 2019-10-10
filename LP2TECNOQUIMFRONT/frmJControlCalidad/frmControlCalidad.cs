@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,9 +13,28 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 {
     public partial class frmControlCalidad : Form
     {
-        public frmControlCalidad()
+        public frmControlCalidad(int cont =0)
         {
-            InitializeComponent();
+            if (cont != 0)
+            {
+                InitializeComponent();
+            }
+            else
+            {
+                Thread t = new Thread(new ThreadStart(SplashStart));
+
+                t.Start();
+
+                Thread.Sleep(2500);
+
+                InitializeComponent();
+
+                t.Abort();
+            }
+        }
+        public void SplashStart()
+        {
+            Application.Run(new frmSplash());
         }
 
         private void btnProductos_Click(object sender, EventArgs e)

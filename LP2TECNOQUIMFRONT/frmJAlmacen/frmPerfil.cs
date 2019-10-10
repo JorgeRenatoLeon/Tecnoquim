@@ -20,7 +20,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         private void btnInicio_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmAlmacen formInicio = new frmAlmacen();
+            frmAlmacen formInicio = new frmAlmacen(1);
             formInicio.Visible = true;
             this.Close();
         }

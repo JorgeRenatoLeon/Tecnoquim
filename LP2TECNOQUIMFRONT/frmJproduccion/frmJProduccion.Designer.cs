@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJProduccion));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnNotificaciones = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -57,35 +57,38 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.btnNotificaciones);
             this.panel1.Controls.Add(this.btnConsultas);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 550);
+            this.panel1.Size = new System.Drawing.Size(221, 677);
             this.panel1.TabIndex = 3;
             // 
-            // button2
+            // btnPerfil
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(3, 170);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 79);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Perfil";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.ForeColor = System.Drawing.Color.White;
+            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
+            this.btnPerfil.Location = new System.Drawing.Point(4, 209);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(217, 97);
+            this.btnPerfil.TabIndex = 1;
+            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // button5
             // 
@@ -95,31 +98,34 @@
             this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(3, 320);
+            this.button5.Location = new System.Drawing.Point(4, 394);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(163, 79);
+            this.button5.Size = new System.Drawing.Size(217, 97);
             this.button5.TabIndex = 6;
             this.button5.Text = "Empleados";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnNotificaciones
             // 
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(3, 458);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(163, 92);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Notificaciones";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnNotificaciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNotificaciones.FlatAppearance.BorderSize = 0;
+            this.btnNotificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotificaciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotificaciones.ForeColor = System.Drawing.Color.White;
+            this.btnNotificaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificaciones.Image")));
+            this.btnNotificaciones.Location = new System.Drawing.Point(4, 564);
+            this.btnNotificaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNotificaciones.Name = "btnNotificaciones";
+            this.btnNotificaciones.Size = new System.Drawing.Size(217, 113);
+            this.btnNotificaciones.TabIndex = 5;
+            this.btnNotificaciones.Text = "Notificaciones";
+            this.btnNotificaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNotificaciones.UseVisualStyleBackColor = true;
+            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
             // 
             // btnConsultas
             // 
@@ -129,9 +135,10 @@
             this.btnConsultas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultas.ForeColor = System.Drawing.Color.White;
             this.btnConsultas.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultas.Image")));
-            this.btnConsultas.Location = new System.Drawing.Point(3, 394);
+            this.btnConsultas.Location = new System.Drawing.Point(4, 485);
+            this.btnConsultas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConsultas.Name = "btnConsultas";
-            this.btnConsultas.Size = new System.Drawing.Size(163, 79);
+            this.btnConsultas.Size = new System.Drawing.Size(217, 97);
             this.btnConsultas.TabIndex = 1;
             this.btnConsultas.Text = "Consultas";
             this.btnConsultas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -147,9 +154,10 @@
             this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(3, 245);
+            this.button3.Location = new System.Drawing.Point(4, 302);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(163, 79);
+            this.button3.Size = new System.Drawing.Size(217, 97);
             this.button3.TabIndex = 1;
             this.button3.Text = "Calendario";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -164,9 +172,10 @@
             this.btnHome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(3, 101);
+            this.btnHome.Location = new System.Drawing.Point(4, 124);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(163, 79);
+            this.btnHome.Size = new System.Drawing.Size(217, 97);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Inicio";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -179,16 +188,18 @@
             this.panel3.Controls.Add(this.pbLogo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(166, 99);
+            this.panel3.Size = new System.Drawing.Size(221, 122);
             this.panel3.TabIndex = 0;
             // 
             // pbLogo
             // 
             this.pbLogo.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.logo_web;
-            this.pbLogo.Location = new System.Drawing.Point(0, 3);
+            this.pbLogo.Location = new System.Drawing.Point(0, 4);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(163, 92);
+            this.pbLogo.Size = new System.Drawing.Size(217, 113);
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
@@ -200,9 +211,10 @@
             this.barra.Controls.Add(this.pbMinimize);
             this.barra.Controls.Add(this.pbExit);
             this.barra.Controls.Add(this.pbMaximize);
-            this.barra.Location = new System.Drawing.Point(169, 3);
+            this.barra.Location = new System.Drawing.Point(225, 4);
+            this.barra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.barra.Name = "barra";
-            this.barra.Size = new System.Drawing.Size(953, 35);
+            this.barra.Size = new System.Drawing.Size(1271, 43);
             this.barra.TabIndex = 13;
             // 
             // pbMinimize
@@ -210,9 +222,10 @@
             this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMinimize.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.minimazar;
-            this.pbMinimize.Location = new System.Drawing.Point(839, 9);
+            this.pbMinimize.Location = new System.Drawing.Point(1119, 11);
+            this.pbMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbMinimize.Name = "pbMinimize";
-            this.pbMinimize.Size = new System.Drawing.Size(26, 22);
+            this.pbMinimize.Size = new System.Drawing.Size(35, 27);
             this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMinimize.TabIndex = 17;
             this.pbMinimize.TabStop = false;
@@ -223,9 +236,10 @@
             this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbExit.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.cerrar;
-            this.pbExit.Location = new System.Drawing.Point(903, 9);
+            this.pbExit.Location = new System.Drawing.Point(1204, 11);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(25, 22);
+            this.pbExit.Size = new System.Drawing.Size(33, 27);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbExit.TabIndex = 15;
             this.pbExit.TabStop = false;
@@ -237,9 +251,10 @@
             this.pbMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMaximize.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.res;
-            this.pbMaximize.Location = new System.Drawing.Point(871, 9);
+            this.pbMaximize.Location = new System.Drawing.Point(1161, 11);
+            this.pbMaximize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbMaximize.Name = "pbMaximize";
-            this.pbMaximize.Size = new System.Drawing.Size(26, 22);
+            this.pbMaximize.Size = new System.Drawing.Size(35, 27);
             this.pbMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMaximize.TabIndex = 16;
             this.pbMaximize.TabStop = false;
@@ -251,9 +266,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(433, 108);
+            this.label1.Location = new System.Drawing.Point(577, 133);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(398, 43);
+            this.label1.Size = new System.Drawing.Size(531, 53);
             this.label1.TabIndex = 12;
             this.label1.Text = "Proceso de Produccion";
             // 
@@ -266,9 +282,10 @@
             this.btnOrden.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOrden.Font = new System.Drawing.Font("Century Gothic", 15.25F, System.Drawing.FontStyle.Bold);
             this.btnOrden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnOrden.Location = new System.Drawing.Point(440, 324);
+            this.btnOrden.Location = new System.Drawing.Point(587, 399);
+            this.btnOrden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOrden.Name = "btnOrden";
-            this.btnOrden.Size = new System.Drawing.Size(365, 62);
+            this.btnOrden.Size = new System.Drawing.Size(487, 76);
             this.btnOrden.TabIndex = 11;
             this.btnOrden.Text = "Orden de Produccion";
             this.btnOrden.UseVisualStyleBackColor = false;
@@ -283,9 +300,10 @@
             this.btnPMS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPMS.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPMS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnPMS.Location = new System.Drawing.Point(440, 223);
+            this.btnPMS.Location = new System.Drawing.Point(587, 274);
+            this.btnPMS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPMS.Name = "btnPMS";
-            this.btnPMS.Size = new System.Drawing.Size(365, 65);
+            this.btnPMS.Size = new System.Drawing.Size(487, 80);
             this.btnPMS.TabIndex = 10;
             this.btnPMS.Text = "Plan Maestro de Produccion";
             this.btnPMS.UseVisualStyleBackColor = false;
@@ -293,16 +311,17 @@
             // 
             // frmJProduccion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(1100, 550);
+            this.ClientSize = new System.Drawing.Size(1467, 677);
             this.Controls.Add(this.barra);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOrden);
             this.Controls.Add(this.btnPMS);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmJProduccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmJProduccion";
@@ -320,10 +339,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnNotificaciones;
         private System.Windows.Forms.Button btnConsultas;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;

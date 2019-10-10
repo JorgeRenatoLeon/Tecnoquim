@@ -1,4 +1,5 @@
-﻿using LP2TECNOQUIMFRONT.frmJproduccion;
+﻿using LP2TECNOQUIMFRONT.frmJAlmacen;
+using LP2TECNOQUIMFRONT.frmJproduccion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,16 +64,30 @@ namespace LP2TECNOQUIMFRONT
 
         private void btnGestionar_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
             frmGestionarOrden formGestionarOrden = new frmGestionarOrden();
             formGestionarOrden.Visible = true;
-            this.Close();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             frmHistorialOrden form = new frmHistorialOrden();
             form.Visible = true;
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmPerfil formPerfil = new frmPerfil();
+            formPerfil.Visible = true;
+            this.Close();
+        }
+
+        private void btnNotificaciones_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmNotificaciones formNot = new frmNotificaciones();
+            formNot.Visible = true;
+            this.Close();
         }
     }
 }
