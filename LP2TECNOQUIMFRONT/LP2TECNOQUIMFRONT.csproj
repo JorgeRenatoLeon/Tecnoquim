@@ -48,6 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmGerente\frmNotificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerente\frmNotificaciones.Designer.cs">
+      <DependentUpon>frmNotificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGerente\frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerente\frmPerfil.Designer.cs">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJAlmacen\frmAlmacen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,10 +120,24 @@
     <Compile Include="frmJControlCalidad\frmProducto.Designer.cs">
       <DependentUpon>frmProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmJMaquinaria\frmMaquinaria.cs">
+    <Compile Include="frmJMaquinaria\frmJMaquinaria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmJMaquinaria\frmMaquinaria.Designer.cs" />
+    <Compile Include="frmJMaquinaria\frmJMaquinaria.Designer.cs">
+      <DependentUpon>frmJMaquinaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJMaquinaria\frmNotificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJMaquinaria\frmNotificaciones.Designer.cs">
+      <DependentUpon>frmNotificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJMaquinaria\frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJMaquinaria\frmPerfil.Designer.cs">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJproduccion\frmConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,11 +210,23 @@
     <Compile Include="frmJproduccion\frmMaquinarias.Designer.cs">
       <DependentUpon>frmMaquinarias.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJproduccion\frmNotificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJproduccion\frmNotificaciones.Designer.cs">
+      <DependentUpon>frmNotificaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJproduccion\frmOrdenes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmJproduccion\frmOrdenes.Designer.cs">
       <DependentUpon>frmOrdenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJproduccion\frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJproduccion\frmPerfil.Designer.cs">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJproduccion\frmPMP.cs">
       <SubType>Form</SubType>
@@ -213,6 +251,24 @@
     </Compile>
     <Compile Include="frmJproduccion\frmProductos.Designer.cs">
       <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJVenta\frmJVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJVenta\frmJVenta.Designer.cs">
+      <DependentUpon>frmJVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJVenta\frmNotificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJVenta\frmNotificaciones.Designer.cs">
+      <DependentUpon>frmNotificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJVenta\frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJVenta\frmPerfil.Designer.cs">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -240,6 +296,12 @@
     <Compile Include="frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmGerente\frmNotificaciones.resx">
+      <DependentUpon>frmNotificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGerente\frmPerfil.resx">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmJAlmacen\frmAlmacen.resx">
       <DependentUpon>frmAlmacen.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,7 +332,15 @@
     <EmbeddedResource Include="frmJControlCalidad\frmProducto.resx">
       <DependentUpon>frmProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmJMaquinaria\frmMaquinaria.resx" />
+    <EmbeddedResource Include="frmJMaquinaria\frmJMaquinaria.resx">
+      <DependentUpon>frmJMaquinaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJMaquinaria\frmNotificaciones.resx">
+      <DependentUpon>frmNotificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJMaquinaria\frmPerfil.resx">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmConsultas.resx">
       <DependentUpon>frmConsultas.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,8 +377,14 @@
     <EmbeddedResource Include="frmJproduccion\frmMaquinarias.resx">
       <DependentUpon>frmMaquinarias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmJproduccion\frmNotificaciones.resx">
+      <DependentUpon>frmNotificaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmOrdenes.resx">
       <DependentUpon>frmOrdenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJproduccion\frmPerfil.resx">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmPMP.resx">
       <DependentUpon>frmPMP.cs</DependentUpon>
@@ -321,6 +397,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJVenta\frmJVenta.resx">
+      <DependentUpon>frmJVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJVenta\frmNotificaciones.resx">
+      <DependentUpon>frmNotificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJVenta\frmPerfil.resx">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

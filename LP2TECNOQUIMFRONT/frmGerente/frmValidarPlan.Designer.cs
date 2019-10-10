@@ -1,4 +1,4 @@
-﻿namespace LP2TECNOQUIMFRONT
+﻿namespace LP2TECNOQUIMFRONT.frmGerente
 {
     partial class frmValidarPlan
     {
@@ -44,8 +44,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
@@ -67,7 +65,7 @@
             this.pbMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMaximize.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.res;
             this.pbMaximize.Location = new System.Drawing.Point(1467, 260);
-            this.pbMaximize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbMaximize.Margin = new System.Windows.Forms.Padding(4);
             this.pbMaximize.Name = "pbMaximize";
             this.pbMaximize.Size = new System.Drawing.Size(35, 27);
             this.pbMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -80,7 +78,7 @@
             this.pbExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbExit.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.cerrar;
             this.pbExit.Location = new System.Drawing.Point(1509, 260);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbExit.Margin = new System.Windows.Forms.Padding(4);
             this.pbExit.Name = "pbExit";
             this.pbExit.Size = new System.Drawing.Size(33, 27);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -93,7 +91,7 @@
             this.pbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMinimize.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.minimazar;
             this.pbMinimize.Location = new System.Drawing.Point(1119, 4);
-            this.pbMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.pbMinimize.Name = "pbMinimize";
             this.pbMinimize.Size = new System.Drawing.Size(35, 27);
             this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -108,7 +106,7 @@
             this.pbMaxi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMaxi.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.res;
             this.pbMaxi.Location = new System.Drawing.Point(1161, 4);
-            this.pbMaxi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbMaxi.Margin = new System.Windows.Forms.Padding(4);
             this.pbMaxi.Name = "pbMaxi";
             this.pbMaxi.Size = new System.Drawing.Size(35, 27);
             this.pbMaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +120,7 @@
             this.pbCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCerrar.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.cerrar;
             this.pbCerrar.Location = new System.Drawing.Point(1204, 4);
-            this.pbCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.pbCerrar.Name = "pbCerrar";
             this.pbCerrar.Size = new System.Drawing.Size(33, 27);
             this.pbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -139,7 +137,7 @@
             this.barra.Controls.Add(this.pbMaxi);
             this.barra.Controls.Add(this.pbMinimize);
             this.barra.Location = new System.Drawing.Point(225, 4);
-            this.barra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barra.Margin = new System.Windows.Forms.Padding(4);
             this.barra.Name = "barra";
             this.barra.Size = new System.Drawing.Size(1271, 43);
             this.barra.TabIndex = 16;
@@ -177,7 +175,7 @@
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.checkBox1.Location = new System.Drawing.Point(328, 246);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(120, 29);
             this.checkBox1.TabIndex = 20;
@@ -200,7 +198,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(328, 466);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(648, 121);
             this.textBox1.TabIndex = 22;
@@ -212,7 +210,7 @@
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.checkBox2.Location = new System.Drawing.Point(328, 311);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(152, 29);
             this.checkBox2.TabIndex = 23;
@@ -224,13 +222,11 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
             this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.btnNotificaciones);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 677);
             this.panel1.TabIndex = 24;
@@ -244,7 +240,7 @@
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
             this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
             this.btnPerfil.Location = new System.Drawing.Point(0, 241);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(217, 97);
             this.btnPerfil.TabIndex = 6;
@@ -262,8 +258,8 @@
             this.btnNotificaciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotificaciones.ForeColor = System.Drawing.Color.White;
             this.btnNotificaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificaciones.Image")));
-            this.btnNotificaciones.Location = new System.Drawing.Point(0, 549);
-            this.btnNotificaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNotificaciones.Location = new System.Drawing.Point(4, 332);
+            this.btnNotificaciones.Margin = new System.Windows.Forms.Padding(4);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Size = new System.Drawing.Size(217, 113);
             this.btnNotificaciones.TabIndex = 5;
@@ -272,42 +268,6 @@
             this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNotificaciones.UseVisualStyleBackColor = true;
             this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
-            // 
-            // button4
-            // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(0, 444);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(217, 97);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Tareas";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(3, 346);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(217, 97);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Calendario";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // btnHome
             // 
@@ -318,7 +278,7 @@
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.Location = new System.Drawing.Point(0, 146);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(217, 97);
             this.btnHome.TabIndex = 1;
@@ -334,7 +294,7 @@
             this.panel3.Controls.Add(this.pbLogo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(221, 122);
             this.panel3.TabIndex = 0;
@@ -343,7 +303,7 @@
             // 
             this.pbLogo.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.logo_web;
             this.pbLogo.Location = new System.Drawing.Point(0, 4);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(217, 113);
             this.pbLogo.TabIndex = 2;
@@ -366,7 +326,7 @@
             this.Controls.Add(this.pbMaximize);
             this.Controls.Add(this.pbExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmValidarPlan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmValidarPlan";
@@ -400,8 +360,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnNotificaciones;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;

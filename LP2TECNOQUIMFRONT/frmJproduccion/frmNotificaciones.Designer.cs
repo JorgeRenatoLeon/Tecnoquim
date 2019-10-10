@@ -1,6 +1,6 @@
 ﻿namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
-    partial class frmConsultas
+    partial class frmNotificaciones
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNotificaciones));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.btnPolitica = new System.Windows.Forms.Button();
-            this.btnInsumos = new System.Windows.Forms.Button();
-            this.btnProducto = new System.Windows.Forms.Button();
-            this.btnMaquinaria = new System.Windows.Forms.Button();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.dgvHistorialPlan = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Presentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,8 +59,19 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(221, 677);
-            this.panel1.TabIndex = 4;
+            this.panel1.Size = new System.Drawing.Size(221, 684);
+            this.panel1.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(150)))), ((int)(((byte)(19)))));
+            this.panel3.Controls.Add(this.pbLogo);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(221, 122);
+            this.panel3.TabIndex = 0;
             // 
             // btnPerfil
             // 
@@ -87,7 +100,7 @@
             this.btnNotificaciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotificaciones.ForeColor = System.Drawing.Color.White;
             this.btnNotificaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificaciones.Image")));
-            this.btnNotificaciones.Location = new System.Drawing.Point(4, 372);
+            this.btnNotificaciones.Location = new System.Drawing.Point(0, 370);
             this.btnNotificaciones.Margin = new System.Windows.Forms.Padding(4);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Size = new System.Drawing.Size(217, 113);
@@ -106,7 +119,7 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(4, 293);
+            this.button4.Location = new System.Drawing.Point(0, 291);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(217, 97);
@@ -115,6 +128,7 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnHome
             // 
@@ -135,17 +149,6 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(150)))), ((int)(((byte)(19)))));
-            this.panel3.Controls.Add(this.pbLogo);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(221, 122);
-            this.panel3.TabIndex = 0;
-            // 
             // pbLogo
             // 
             this.pbLogo.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.logo_web;
@@ -156,97 +159,75 @@
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
-            // btnPolitica
+            // lblNombre
             // 
-            this.btnPolitica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPolitica.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnPolitica.BackColor = System.Drawing.Color.White;
-            this.btnPolitica.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPolitica.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPolitica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnPolitica.Location = new System.Drawing.Point(557, 485);
-            this.btnPolitica.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPolitica.Name = "btnPolitica";
-            this.btnPolitica.Size = new System.Drawing.Size(487, 80);
-            this.btnPolitica.TabIndex = 24;
-            this.btnPolitica.Text = "Politica de Stock";
-            this.btnPolitica.UseVisualStyleBackColor = false;
-            this.btnPolitica.Click += new System.EventHandler(this.btnPolitica_Click);
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblNombre.Location = new System.Drawing.Point(267, 62);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(165, 29);
+            this.lblNombre.TabIndex = 33;
+            this.lblNombre.Text = "Notificaciones";
             // 
-            // btnInsumos
+            // dgvHistorialPlan
             // 
-            this.btnInsumos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInsumos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnInsumos.BackColor = System.Drawing.Color.White;
-            this.btnInsumos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInsumos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsumos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnInsumos.Location = new System.Drawing.Point(557, 226);
-            this.btnInsumos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnInsumos.Name = "btnInsumos";
-            this.btnInsumos.Size = new System.Drawing.Size(487, 80);
-            this.btnInsumos.TabIndex = 23;
-            this.btnInsumos.Text = "Insumos";
-            this.btnInsumos.UseVisualStyleBackColor = false;
-            this.btnInsumos.Click += new System.EventHandler(this.btnInsumos_Click);
+            this.dgvHistorialPlan.AllowUserToAddRows = false;
+            this.dgvHistorialPlan.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistorialPlan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHistorialPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistorialPlan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Presentacion});
+            this.dgvHistorialPlan.Location = new System.Drawing.Point(273, 124);
+            this.dgvHistorialPlan.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvHistorialPlan.Name = "dgvHistorialPlan";
+            this.dgvHistorialPlan.ReadOnly = true;
+            this.dgvHistorialPlan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHistorialPlan.Size = new System.Drawing.Size(1124, 490);
+            this.dgvHistorialPlan.TabIndex = 32;
             // 
-            // btnProducto
+            // Nombre
             // 
-            this.btnProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProducto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnProducto.BackColor = System.Drawing.Color.White;
-            this.btnProducto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProducto.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnProducto.Location = new System.Drawing.Point(557, 97);
-            this.btnProducto.Margin = new System.Windows.Forms.Padding(4);
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(487, 80);
-            this.btnProducto.TabIndex = 22;
-            this.btnProducto.Text = "Productos";
-            this.btnProducto.UseVisualStyleBackColor = false;
-            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
+            this.Nombre.HeaderText = "Fecha";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 200;
             // 
-            // btnMaquinaria
+            // Presentacion
             // 
-            this.btnMaquinaria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaquinaria.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnMaquinaria.BackColor = System.Drawing.Color.White;
-            this.btnMaquinaria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaquinaria.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaquinaria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnMaquinaria.Location = new System.Drawing.Point(557, 352);
-            this.btnMaquinaria.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMaquinaria.Name = "btnMaquinaria";
-            this.btnMaquinaria.Size = new System.Drawing.Size(487, 80);
-            this.btnMaquinaria.TabIndex = 25;
-            this.btnMaquinaria.Text = "Maquinaria";
-            this.btnMaquinaria.UseVisualStyleBackColor = false;
-            this.btnMaquinaria.Click += new System.EventHandler(this.btnMaquinaria_Click);
+            this.Presentacion.FillWeight = 150F;
+            this.Presentacion.HeaderText = "Descripcion";
+            this.Presentacion.Name = "Presentacion";
+            this.Presentacion.ReadOnly = true;
+            this.Presentacion.Width = 600;
             // 
-            // frmConsultas
+            // frmNotificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(1467, 677);
-            this.Controls.Add(this.btnMaquinaria);
-            this.Controls.Add(this.btnPolitica);
-            this.Controls.Add(this.btnInsumos);
-            this.Controls.Add(this.btnProducto);
+            this.ClientSize = new System.Drawing.Size(1445, 684);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmConsultas";
+            this.Controls.Add(this.dgvHistorialPlan);
+            this.Name = "frmNotificaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmConsultasJprod";
+            this.Text = "frmNotificaciones";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -259,9 +240,9 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.Button btnPolitica;
-        private System.Windows.Forms.Button btnInsumos;
-        private System.Windows.Forms.Button btnProducto;
-        private System.Windows.Forms.Button btnMaquinaria;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.DataGridView dgvHistorialPlan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Presentacion;
     }
 }

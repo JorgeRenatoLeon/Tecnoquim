@@ -1,16 +1,7 @@
-﻿using LP2TECNOQUIMFRONT.frmJAlmacen;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
-namespace LP2TECNOQUIMFRONT
+namespace LP2TECNOQUIMFRONT.frmGerente
 {
     public partial class frmHistorialPlan : Form
     {

@@ -1,16 +1,7 @@
-﻿using LP2TECNOQUIMFRONT.frmJAlmacen;
-using LP2TECNOQUIMFRONT.frmJproduccion;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
-namespace LP2TECNOQUIMFRONT
+namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
     public partial class frmOrden : Form
     {
