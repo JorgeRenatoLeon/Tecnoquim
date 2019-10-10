@@ -153,6 +153,7 @@
             this.btnInsumos.TabIndex = 11;
             this.btnInsumos.Text = "Insumos";
             this.btnInsumos.UseVisualStyleBackColor = false;
+            this.btnInsumos.Click += new System.EventHandler(this.btnInsumos_Click);
             // 
             // btnProductos
             // 
