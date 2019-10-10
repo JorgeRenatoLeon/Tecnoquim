@@ -48,5 +48,6 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             formNot.Visible = true;
             this.Close();
         }
+
     }
 }
