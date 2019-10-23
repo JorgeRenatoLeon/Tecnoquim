@@ -43,6 +43,7 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.panel1.SuspendLayout();
@@ -82,7 +83,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(205, 60);
+            this.label1.Location = new System.Drawing.Point(213, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(602, 39);
             this.label1.TabIndex = 17;
@@ -93,7 +94,7 @@
             this.lblPeriodo.AutoSize = true;
             this.lblPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeriodo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPeriodo.Location = new System.Drawing.Point(220, 136);
+            this.lblPeriodo.Location = new System.Drawing.Point(228, 123);
             this.lblPeriodo.Name = "lblPeriodo";
             this.lblPeriodo.Size = new System.Drawing.Size(90, 25);
             this.lblPeriodo.TabIndex = 19;
@@ -105,7 +106,7 @@
             this.checkBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkBox1.Location = new System.Drawing.Point(246, 200);
+            this.checkBox1.Location = new System.Drawing.Point(235, 171);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(98, 24);
             this.checkBox1.TabIndex = 20;
@@ -117,7 +118,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(220, 335);
+            this.label2.Location = new System.Drawing.Point(228, 233);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 25);
             this.label2.TabIndex = 21;
@@ -126,7 +127,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(246, 379);
+            this.textBox1.Location = new System.Drawing.Point(233, 289);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(487, 98);
             this.textBox1.TabIndex = 22;
@@ -137,7 +138,7 @@
             this.checkBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.checkBox2.Location = new System.Drawing.Point(246, 253);
+            this.checkBox2.Location = new System.Drawing.Point(384, 171);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(125, 24);
             this.checkBox2.TabIndex = 23;
@@ -230,12 +231,28 @@
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.White;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnGuardar.Location = new System.Drawing.Point(233, 441);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(211, 42);
+            this.btnGuardar.TabIndex = 61;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            // 
             // frmValidarPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.ClientSize = new System.Drawing.Size(1100, 550);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.textBox1);
@@ -273,5 +290,6 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

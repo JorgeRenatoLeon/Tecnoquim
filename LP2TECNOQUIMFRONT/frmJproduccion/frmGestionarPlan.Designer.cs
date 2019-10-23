@@ -30,17 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarPlan));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
+            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.btnModificar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.dgvOrden = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Orden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNOrden = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -48,13 +55,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Orden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
-            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnModificar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -76,6 +76,39 @@
             this.toolStrip1.TabIndex = 26;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(87, 29);
+            this.btnNuevo.Text = "&Nuevo";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(101, 29);
+            this.btnGuardar.Text = "&Guardar";
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(113, 29);
+            this.btnModificar.Text = "&Modificar";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(106, 29);
+            this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // dgvOrden
             // 
             this.dgvOrden.AllowUserToAddRows = false;
@@ -92,6 +125,29 @@
             this.dgvOrden.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrden.Size = new System.Drawing.Size(679, 162);
             this.dgvOrden.TabIndex = 33;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 150;
+            // 
+            // Orden
+            // 
+            this.Orden.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Orden.FillWeight = 150F;
+            this.Orden.HeaderText = "Orden";
+            this.Orden.Name = "Orden";
+            this.Orden.ReadOnly = true;
+            this.Orden.Width = 300;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 175;
             // 
             // groupBox1
             // 
@@ -141,6 +197,18 @@
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Maquinaria";
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(571, 37);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(73, 28);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "Agregar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -188,18 +256,6 @@
             this.lblNombre.Size = new System.Drawing.Size(220, 24);
             this.lblNombre.TabIndex = 19;
             this.lblNombre.Text = "Codigo de la Maquinaria:";
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(571, 37);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 28);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Agregar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -278,62 +334,6 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "Codigo de Orden:";
             // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 150;
-            // 
-            // Orden
-            // 
-            this.Orden.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Orden.FillWeight = 150F;
-            this.Orden.HeaderText = "Orden";
-            this.Orden.Name = "Orden";
-            this.Orden.ReadOnly = true;
-            this.Orden.Width = 300;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 175;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(87, 29);
-            this.btnNuevo.Text = "&Nuevo";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(101, 29);
-            this.btnGuardar.Text = "&Guardar";
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(113, 29);
-            this.btnModificar.Text = "&Modificar";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(106, 29);
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // frmGestionarPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,7 +346,7 @@
             this.Controls.Add(this.gbDatosGenerales);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmGestionarPlan";
-            this.Text = "frmGestionarPlan";
+            this.Text = "°";
             this.Load += new System.EventHandler(this.frmGestionarPlan_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

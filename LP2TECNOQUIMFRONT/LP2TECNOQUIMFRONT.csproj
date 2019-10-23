@@ -48,6 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmGerente\frmListarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerente\frmListarEmpleado.Designer.cs">
+      <DependentUpon>frmListarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGerente\frmGestionarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerente\frmGestionarEmpleado.Designer.cs">
+      <DependentUpon>frmGestionarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGerente\frmGestionarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerente\frmGestionarEmpleados.Designer.cs">
+      <DependentUpon>frmGestionarEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGerente\frmNotificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +314,15 @@
     <Compile Include="frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmGerente\frmGestionarEmpleado.resx">
+      <DependentUpon>frmGestionarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGerente\frmGestionarEmpleados.resx">
+      <DependentUpon>frmGestionarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGerente\frmListarEmpleado.resx">
+      <DependentUpon>frmListarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGerente\frmNotificaciones.resx">
       <DependentUpon>frmNotificaciones.cs</DependentUpon>
     </EmbeddedResource>
