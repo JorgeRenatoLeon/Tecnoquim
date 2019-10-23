@@ -57,5 +57,10 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             formNot.Visible = true;
             this.Close();
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Maquinaria Registrada Satisfactoriamente");
+        }
     }
 }
