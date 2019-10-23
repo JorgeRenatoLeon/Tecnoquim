@@ -37,10 +37,6 @@
             this.Periodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Reponsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pbMinimize = new System.Windows.Forms.PictureBox();
-            this.pbMaximize = new System.Windows.Forms.PictureBox();
-            this.pbExit = new System.Windows.Forms.PictureBox();
-            this.barra = new System.Windows.Forms.Panel();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -50,9 +46,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -63,10 +56,9 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblNombre.Location = new System.Drawing.Point(255, 86);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(198, 47);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(316, 29);
+            this.lblNombre.Size = new System.Drawing.Size(248, 24);
             this.lblNombre.TabIndex = 11;
             this.lblNombre.Text = "Plan Maestro de Produccion";
             // 
@@ -74,10 +66,9 @@
             // 
             this.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(1215, 81);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSeleccionar.Location = new System.Drawing.Point(918, 43);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(168, 41);
+            this.btnSeleccionar.Size = new System.Drawing.Size(126, 33);
             this.btnSeleccionar.TabIndex = 10;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -100,12 +91,11 @@
             this.Periodo,
             this.Reponsable,
             this.Estado});
-            this.dgvHistorialPlan.Location = new System.Drawing.Point(260, 146);
-            this.dgvHistorialPlan.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvHistorialPlan.Location = new System.Drawing.Point(202, 96);
             this.dgvHistorialPlan.Name = "dgvHistorialPlan";
             this.dgvHistorialPlan.ReadOnly = true;
             this.dgvHistorialPlan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorialPlan.Size = new System.Drawing.Size(1123, 490);
+            this.dgvHistorialPlan.Size = new System.Drawing.Size(842, 398);
             this.dgvHistorialPlan.TabIndex = 9;
             // 
             // Codigo
@@ -136,68 +126,13 @@
             this.Estado.ReadOnly = true;
             this.Estado.Width = 150;
             // 
-            // pbMinimize
-            // 
-            this.pbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMinimize.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.minimazar;
-            this.pbMinimize.Location = new System.Drawing.Point(1337, 2);
-            this.pbMinimize.Margin = new System.Windows.Forms.Padding(4);
-            this.pbMinimize.Name = "pbMinimize";
-            this.pbMinimize.Size = new System.Drawing.Size(35, 27);
-            this.pbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbMinimize.TabIndex = 14;
-            this.pbMinimize.TabStop = false;
-            this.pbMinimize.Click += new System.EventHandler(this.pbMinimize_Click_1);
-            // 
-            // pbMaximize
-            // 
-            this.pbMaximize.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.pbMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMaximize.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.res;
-            this.pbMaximize.Location = new System.Drawing.Point(1380, 2);
-            this.pbMaximize.Margin = new System.Windows.Forms.Padding(4);
-            this.pbMaximize.Name = "pbMaximize";
-            this.pbMaximize.Size = new System.Drawing.Size(35, 27);
-            this.pbMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbMaximize.TabIndex = 13;
-            this.pbMaximize.TabStop = false;
-            this.pbMaximize.Click += new System.EventHandler(this.pbMaximize_Click_1);
-            // 
-            // pbExit
-            // 
-            this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbExit.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.cerrar;
-            this.pbExit.Location = new System.Drawing.Point(1423, 2);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(4);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(33, 27);
-            this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbExit.TabIndex = 12;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click_1);
-            // 
-            // barra
-            // 
-            this.barra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
-            this.barra.Location = new System.Drawing.Point(221, -1);
-            this.barra.Margin = new System.Windows.Forms.Padding(4);
-            this.barra.Name = "barra";
-            this.barra.Size = new System.Drawing.Size(1249, 43);
-            this.barra.TabIndex = 15;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(983, 81);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(744, 43);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(168, 41);
+            this.btnBuscar.Size = new System.Drawing.Size(126, 33);
             this.btnBuscar.TabIndex = 16;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -205,10 +140,9 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(593, 81);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(452, 43);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(364, 36);
+            this.textBox1.Size = new System.Drawing.Size(274, 30);
             this.textBox1.TabIndex = 17;
             // 
             // panel1
@@ -220,9 +154,8 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(221, 677);
+            this.panel1.Size = new System.Drawing.Size(166, 550);
             this.panel1.TabIndex = 18;
             // 
             // btnPerfil
@@ -233,10 +166,9 @@
             this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
             this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(0, 241);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPerfil.Location = new System.Drawing.Point(0, 196);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(217, 97);
+            this.btnPerfil.Size = new System.Drawing.Size(163, 79);
             this.btnPerfil.TabIndex = 6;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -252,10 +184,9 @@
             this.btnNotificaciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotificaciones.ForeColor = System.Drawing.Color.White;
             this.btnNotificaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificaciones.Image")));
-            this.btnNotificaciones.Location = new System.Drawing.Point(0, 337);
-            this.btnNotificaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNotificaciones.Location = new System.Drawing.Point(0, 274);
             this.btnNotificaciones.Name = "btnNotificaciones";
-            this.btnNotificaciones.Size = new System.Drawing.Size(217, 113);
+            this.btnNotificaciones.Size = new System.Drawing.Size(163, 92);
             this.btnNotificaciones.TabIndex = 5;
             this.btnNotificaciones.Text = "Notificaciones";
             this.btnNotificaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -271,10 +202,9 @@
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(0, 146);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(0, 119);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 97);
+            this.button1.Size = new System.Drawing.Size(163, 79);
             this.button1.TabIndex = 1;
             this.button1.Text = "Inicio";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -288,46 +218,35 @@
             this.panel3.Controls.Add(this.pbLogo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(221, 122);
+            this.panel3.Size = new System.Drawing.Size(166, 99);
             this.panel3.TabIndex = 0;
             // 
             // pbLogo
             // 
             this.pbLogo.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.logo_web;
-            this.pbLogo.Location = new System.Drawing.Point(0, 4);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogo.Location = new System.Drawing.Point(0, 3);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(217, 113);
+            this.pbLogo.Size = new System.Drawing.Size(163, 92);
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
             // frmHistorialPlan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(1467, 677);
+            this.ClientSize = new System.Drawing.Size(1100, 550);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.pbMinimize);
-            this.Controls.Add(this.pbMaximize);
-            this.Controls.Add(this.pbExit);
-            this.Controls.Add(this.barra);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvHistorialPlan);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmHistorialPlan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
@@ -340,10 +259,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridView dgvHistorialPlan;
-        private System.Windows.Forms.PictureBox pbMinimize;
-        private System.Windows.Forms.PictureBox pbMaximize;
-        private System.Windows.Forms.PictureBox pbExit;
-        private System.Windows.Forms.Panel barra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Periodo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Reponsable;
