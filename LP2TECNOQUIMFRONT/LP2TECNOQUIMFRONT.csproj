@@ -138,6 +138,12 @@
     <Compile Include="frmJControlCalidad\frmProducto.Designer.cs">
       <DependentUpon>frmProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJMaquinaria\frmGestionarMaquinaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJMaquinaria\frmGestionarMaquinaria.Designer.cs">
+      <DependentUpon>frmGestionarMaquinaria.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJMaquinaria\frmJMaquinaria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJControlCalidad\frmProducto.resx">
       <DependentUpon>frmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJMaquinaria\frmGestionarMaquinaria.resx">
+      <DependentUpon>frmGestionarMaquinaria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJMaquinaria\frmJMaquinaria.resx">
       <DependentUpon>frmJMaquinaria.cs</DependentUpon>
