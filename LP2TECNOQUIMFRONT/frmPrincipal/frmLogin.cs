@@ -62,7 +62,7 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
                     {
                         if (this.txtContrasena.Text == "1234")
                         {
-                            frmJproduccion.frmJProduccion formJProduccion = new frmJproduccion.frmJProduccion();
+                            frmJproduccion.frmJProduccion formJProduccion = new frmJproduccion.frmJProduccion(0, this.txtUsuario.Text);
                             formJProduccion.Visible = true;
                         }
                         else
@@ -75,7 +75,7 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
                     {
                         if (this.txtContrasena.Text == "1234")
                         {
-                            frmAlmacen formAlmacen = new frmAlmacen();
+                            frmAlmacen formAlmacen = new frmAlmacen(0, this.txtUsuario.Text);
                             formAlmacen.Visible = true;
                         }
                         else
@@ -88,7 +88,7 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
                     {
                         if (this.txtContrasena.Text == "1234")
                         {
-                            frmControlCalidad formAlmacen = new frmControlCalidad();
+                            frmControlCalidad formAlmacen = new frmControlCalidad(0, this.txtUsuario.Text);
                             formAlmacen.Visible = true;
                         }
                         else
@@ -101,7 +101,7 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
                     {
                         if (this.txtContrasena.Text == "1234")
                         {
-                            frmJMaquinaria.frmJMaquinaria formMaq = new frmJMaquinaria.frmJMaquinaria();
+                            frmJMaquinaria.frmJMaquinaria formMaq = new frmJMaquinaria.frmJMaquinaria(0, this.txtUsuario.Text);
                             formMaq.Visible = true;
                         }
                         else
@@ -114,7 +114,7 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
                     {
                         if (this.txtContrasena.Text == "1234")
                         {
-                            frmJVenta.frmJVenta formVenta = new frmJVenta.frmJVenta();
+                            frmJVenta.frmJVenta formVenta = new frmJVenta.frmJVenta(0, this.txtUsuario.Text);
                             formVenta.Visible = true;
                         }
                         else

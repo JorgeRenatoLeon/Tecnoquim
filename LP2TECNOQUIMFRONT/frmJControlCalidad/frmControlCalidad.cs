@@ -15,7 +15,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
     public partial class frmControlCalidad : Form
     {
         int close = 0;
-        public frmControlCalidad(int cont =0)
+        public frmControlCalidad(int cont =0, string usuario = "")
         {
             if (cont != 0)
             {
@@ -30,6 +30,8 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
                 Thread.Sleep(2500);
 
                 InitializeComponent();
+
+                MessageBox.Show("Bienvenido " + usuario);
 
                 t.Abort();
             }

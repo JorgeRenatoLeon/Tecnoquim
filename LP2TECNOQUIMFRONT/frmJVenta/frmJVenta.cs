@@ -15,7 +15,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
     public partial class frmJVenta : Form
     {
         int close = 0;
-        public frmJVenta(int cont=0)
+        public frmJVenta(int cont=0, string usuario = "")
         {
             if (cont != 0)
             {
@@ -30,6 +30,8 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
                 Thread.Sleep(2500);
 
                 InitializeComponent();
+
+                MessageBox.Show("Bienvenido " + usuario);
 
                 t.Abort();
             }

@@ -7,7 +7,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
     public partial class frmJProduccion : Form
     {
-        public frmJProduccion(int cont = 0)
+        public frmJProduccion(int cont = 0, string usuario = "")
         {
             if (cont != 0)
             {
@@ -22,6 +22,8 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 Thread.Sleep(2500);
 
                 InitializeComponent();
+
+                MessageBox.Show("Bienvenido " + usuario);
 
                 t.Abort();
             }
