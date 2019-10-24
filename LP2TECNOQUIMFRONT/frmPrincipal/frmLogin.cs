@@ -15,6 +15,8 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
 {
     public partial class frmLogin : Form
     {
+        private Service.usuario usuario;
+        Service.ServicioClient DBController = new Service.ServicioClient();
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -45,6 +47,9 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             if(this.txtUsuario.Text != "Usuario" && this.txtUsuario.Text != ""){
                 if (this.txtContrasena.Text != "Contrasena" && this.txtContrasena.Text != "")
                 {
+                    usuario.idUsuario = Int32.Parse(this.txtUsuario.Text);
+                    usuario.password = this.txtContrasena.Text;
+                    DBController.verificarUsuario(usuario);
                     if (this.txtUsuario.Text == "admin")
                     {
                         if (this.txtContrasena.Text == "1234")
