@@ -80,5 +80,25 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             frmRegistrarProyeccionVenta formRegistro = new frmRegistrarProyeccionVenta();
             formRegistro.Visible = true;
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvHistorialPlan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

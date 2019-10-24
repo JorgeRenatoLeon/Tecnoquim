@@ -73,5 +73,22 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
         {
             if (close == 0) { Environment.Exit(0); }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmGestionarMaquinaria formRegistro = new frmGestionarMaquinaria();
+            formRegistro.Visible = true;
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            frmGestionarMaquinaria formRegistro = new frmGestionarMaquinaria();
+            formRegistro.Visible = true;
+        }
     }
 }
