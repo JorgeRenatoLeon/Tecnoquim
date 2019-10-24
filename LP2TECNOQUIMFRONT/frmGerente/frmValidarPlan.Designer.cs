@@ -265,6 +265,7 @@
             this.Name = "frmValidarPlan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmValidarPlan";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmValidarPlan_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.panel1.ResumeLayout(false);

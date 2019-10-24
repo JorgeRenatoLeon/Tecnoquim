@@ -400,6 +400,7 @@
             this.Name = "frmProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGuardar";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmProducto_FormClosed);
             this.Load += new System.EventHandler(this.frmProducto_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

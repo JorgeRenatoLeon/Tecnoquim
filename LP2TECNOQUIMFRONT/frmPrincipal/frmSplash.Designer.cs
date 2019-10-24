@@ -1,4 +1,4 @@
-﻿namespace LP2TECNOQUIMFRONT
+﻿namespace LP2TECNOQUIMFRONT.frmPrincipal
 {
     partial class frmSplash
     {

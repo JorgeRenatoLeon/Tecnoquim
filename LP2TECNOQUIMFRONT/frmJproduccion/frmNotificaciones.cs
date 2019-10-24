@@ -12,6 +12,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
     public partial class frmNotificaciones : Form
     {
+        int close = 0;
         public frmNotificaciones()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             this.Visible = false;
             frmJProduccion fromJProd = new frmJProduccion(1);
             fromJProd.Visible = true;
+            close = 1;
             this.Close();
         }
 
@@ -30,6 +32,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             this.Visible = false;
             frmPerfil formPerfil = new frmPerfil();
             formPerfil.Visible = true;
+            close = 1;
             this.Close();
         }
 
@@ -38,12 +41,18 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             this.Visible = false;
             frmConsultas formConsultas = new frmConsultas();
             formConsultas.Visible = true;
+            close = 1;
             this.Close();
         }
 
         private void btnNotificaciones_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmNotificaciones_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (close == 0) { Environment.Exit(0); }
         }
     }
 }

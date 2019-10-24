@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2TECNOQUIMFRONT
+namespace LP2TECNOQUIMFRONT.frmPrincipal
 {
     public partial class frmLogin : Form
     {
@@ -49,7 +49,7 @@ namespace LP2TECNOQUIMFRONT
                     {
                         if (this.txtContrasena.Text == "1234")
                         {
-                            frmGerente.frmGerente formGerente = new frmGerente.frmGerente();
+                            frmGerente.frmGerente formGerente = new frmGerente.frmGerente(0,this.txtUsuario.Text);
                             formGerente.Visible = true;
                         }
                         else
@@ -125,8 +125,8 @@ namespace LP2TECNOQUIMFRONT
                     }
                     else
                     {
-                        frmHome formHome = new frmHome();
-                        formHome.Visible = true;
+                        MessageBox.Show("Usuario Incorrecto");
+                        this.Visible = true;
                     }
                 }
                 else

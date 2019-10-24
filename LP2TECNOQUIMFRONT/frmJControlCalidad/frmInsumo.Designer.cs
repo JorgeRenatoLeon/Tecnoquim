@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsumo));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNotificar = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,7 +48,6 @@
             this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Restriccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lote = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNotificar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -66,6 +66,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 511);
             this.panel1.TabIndex = 9;
+            // 
+            // btnNotificar
+            // 
+            this.btnNotificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNotificar.FlatAppearance.BorderSize = 0;
+            this.btnNotificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotificar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotificar.ForeColor = System.Drawing.Color.White;
+            this.btnNotificar.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificar.Image")));
+            this.btnNotificar.Location = new System.Drawing.Point(0, 271);
+            this.btnNotificar.Name = "btnNotificar";
+            this.btnNotificar.Size = new System.Drawing.Size(163, 92);
+            this.btnNotificar.TabIndex = 8;
+            this.btnNotificar.Text = "Notificaciones";
+            this.btnNotificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNotificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNotificar.UseVisualStyleBackColor = true;
+            this.btnNotificar.Click += new System.EventHandler(this.btnNotificar_Click);
             // 
             // btnPerfil
             // 
@@ -236,24 +254,6 @@
             this.lote.Name = "lote";
             this.lote.ReadOnly = true;
             // 
-            // btnNotificar
-            // 
-            this.btnNotificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNotificar.FlatAppearance.BorderSize = 0;
-            this.btnNotificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotificar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotificar.ForeColor = System.Drawing.Color.White;
-            this.btnNotificar.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificar.Image")));
-            this.btnNotificar.Location = new System.Drawing.Point(0, 271);
-            this.btnNotificar.Name = "btnNotificar";
-            this.btnNotificar.Size = new System.Drawing.Size(163, 92);
-            this.btnNotificar.TabIndex = 8;
-            this.btnNotificar.Text = "Notificaciones";
-            this.btnNotificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNotificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnNotificar.UseVisualStyleBackColor = true;
-            this.btnNotificar.Click += new System.EventHandler(this.btnNotificar_Click);
-            // 
             // frmInsumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,6 +269,7 @@
             this.Name = "frmInsumo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInsumo";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmInsumo_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();

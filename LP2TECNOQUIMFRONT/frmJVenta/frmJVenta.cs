@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2TECNOQUIMFRONT.frmPrincipal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 {
     public partial class frmJVenta : Form
     {
+        int close = 0;
         public frmJVenta(int cont=0)
         {
             if (cont != 0)
@@ -45,8 +47,9 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmPerfil formNot = new frmPerfil();
-            formNot.Visible = true;
+            frmPerfil formPerfil = new frmPerfil();
+            formPerfil.Visible = true;
+            close = 1;
             this.Close();
         }
 
@@ -55,7 +58,25 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             this.Visible = false;
             frmNotificaciones formNot = new frmNotificaciones();
             formNot.Visible = true;
+            close = 1;
             this.Close();
+        }
+
+        private void frmJVenta_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (close == 0) { Environment.Exit(0); }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmRegistrarProyeccionVenta formRegistro = new frmRegistrarProyeccionVenta();
+            formRegistro.Visible = true;
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            frmRegistrarProyeccionVenta formRegistro = new frmRegistrarProyeccionVenta();
+            formRegistro.Visible = true;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2TECNOQUIMFRONT.frmPrincipal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
 {
     public partial class frmJMaquinaria : Form
     {
+        int close = 0;
         public frmJMaquinaria(int cont = 0)
         {
             if (cont != 0)
@@ -47,6 +49,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             this.Visible = false;
             frmPerfil formNot = new frmPerfil();
             formNot.Visible = true;
+            close = 1;
             this.Close();
         }
 
@@ -55,12 +58,18 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             this.Visible = false;
             frmNotificaciones formNot = new frmNotificaciones();
             formNot.Visible = true;
+            close = 1;
             this.Close();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Maquinaria Registrada Satisfactoriamente");
+        }
+
+        private void frmJMaquinaria_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (close == 0) { Environment.Exit(0); }
         }
     }
 }

@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProducto));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnNotificaciones = new System.Windows.Forms.Panel();
+            this.btnNotificar = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -45,18 +49,14 @@
             this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.pbMaximize = new System.Windows.Forms.PictureBox();
-            this.btnNotificar = new System.Windows.Forms.Button();
-            this.btnPerfil = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnNotificaciones.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).BeginInit();
             this.barra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNotificaciones
@@ -72,6 +72,60 @@
             this.btnNotificaciones.Size = new System.Drawing.Size(166, 511);
             this.btnNotificaciones.TabIndex = 8;
             // 
+            // btnNotificar
+            // 
+            this.btnNotificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNotificar.FlatAppearance.BorderSize = 0;
+            this.btnNotificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotificar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotificar.ForeColor = System.Drawing.Color.White;
+            this.btnNotificar.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificar.Image")));
+            this.btnNotificar.Location = new System.Drawing.Point(0, 271);
+            this.btnNotificar.Name = "btnNotificar";
+            this.btnNotificar.Size = new System.Drawing.Size(163, 92);
+            this.btnNotificar.TabIndex = 7;
+            this.btnNotificar.Text = "Notificaciones";
+            this.btnNotificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNotificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNotificar.UseVisualStyleBackColor = true;
+            this.btnNotificar.Click += new System.EventHandler(this.btnNotificar_Click);
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.ForeColor = System.Drawing.Color.White;
+            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
+            this.btnPerfil.Location = new System.Drawing.Point(0, 196);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(163, 79);
+            this.btnPerfil.TabIndex = 6;
+            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(0, 119);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 79);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Inicio";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(150)))), ((int)(((byte)(19)))));
@@ -81,6 +135,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(166, 99);
             this.panel3.TabIndex = 0;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.logo_web;
+            this.pbLogo.Location = new System.Drawing.Point(0, 3);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(163, 92);
+            this.pbLogo.TabIndex = 2;
+            this.pbLogo.TabStop = false;
             // 
             // textBox1
             // 
@@ -226,69 +289,6 @@
             this.pbMaximize.TabIndex = 16;
             this.pbMaximize.TabStop = false;
             // 
-            // btnNotificar
-            // 
-            this.btnNotificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNotificar.FlatAppearance.BorderSize = 0;
-            this.btnNotificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotificar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotificar.ForeColor = System.Drawing.Color.White;
-            this.btnNotificar.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificar.Image")));
-            this.btnNotificar.Location = new System.Drawing.Point(0, 271);
-            this.btnNotificar.Name = "btnNotificar";
-            this.btnNotificar.Size = new System.Drawing.Size(163, 92);
-            this.btnNotificar.TabIndex = 7;
-            this.btnNotificar.Text = "Notificaciones";
-            this.btnNotificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNotificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnNotificar.UseVisualStyleBackColor = true;
-            this.btnNotificar.Click += new System.EventHandler(this.btnNotificar_Click);
-            // 
-            // btnPerfil
-            // 
-            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPerfil.FlatAppearance.BorderSize = 0;
-            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.ForeColor = System.Drawing.Color.White;
-            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(0, 196);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(163, 79);
-            this.btnPerfil.TabIndex = 6;
-            this.btnPerfil.Text = "Perfil";
-            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPerfil.UseVisualStyleBackColor = true;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(0, 119);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 79);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Inicio";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pbLogo
-            // 
-            this.pbLogo.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.logo_web;
-            this.pbLogo.Location = new System.Drawing.Point(0, 3);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(163, 92);
-            this.pbLogo.TabIndex = 2;
-            this.pbLogo.TabStop = false;
-            // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,14 +305,15 @@
             this.Name = "frmProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProducto";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmProducto_FormClosed);
             this.btnNotificaciones.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).EndInit();
             this.barra.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

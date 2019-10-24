@@ -282,6 +282,7 @@
             this.Name = "frmInsumo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInsumo";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmInsumo_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();

@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2TECNOQUIMFRONT.frmGerente
+namespace LP2TECNOQUIMFRONT.frmJVenta
 {
-    public partial class frmGestionarEmpleados : Form
+    public partial class frmRegistrarProyeccionVenta : Form
     {
-        public frmGestionarEmpleados()
+        public frmRegistrarProyeccionVenta()
         {
             InitializeComponent();
-        }
-
-        private void frmGestionarEmpleados_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Environment.Exit(0);
         }
     }
 }

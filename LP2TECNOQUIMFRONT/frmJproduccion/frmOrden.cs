@@ -5,34 +5,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
     public partial class frmOrden : Form
     {
+        int close = 0;
         public frmOrden()
         {
             InitializeComponent();
-        }
-
-        private void pbCerrar_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
-        private void pbMaximize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                WindowState = FormWindowState.Normal;
-            }
-        }
-
-        private void pbMinimize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Minimized;
-            }
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -40,6 +16,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             this.Visible = false;
             frmJProduccion fromJProd = new frmJProduccion(1);
             fromJProd.Visible = true;
+            close = 1;
             this.Close();
         }
 
@@ -50,6 +27,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             this.Visible = false;
             frmConsultas formConsultas = new frmConsultas();
             formConsultas.Visible = true;
+            close = 1;
             this.Close();
         }
 
@@ -70,6 +48,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             this.Visible = false;
             frmPerfil formPerfil = new frmPerfil();
             formPerfil.Visible = true;
+            close = 1;
             this.Close();
         }
 
@@ -78,7 +57,13 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             this.Visible = false;
             frmNotificaciones formNot = new frmNotificaciones();
             formNot.Visible = true;
+            close = 1;
             this.Close();
+        }
+
+        private void frmOrden_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (close == 0) { Environment.Exit(0); }
         }
     }
 }

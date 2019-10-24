@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2TECNOQUIMFRONT
+namespace LP2TECNOQUIMFRONT.frmPrincipal
 {
     public partial class frmSplash : Form
     {

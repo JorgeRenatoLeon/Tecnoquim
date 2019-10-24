@@ -12,6 +12,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 {
     public partial class frmProducto : Form
     {
+        int close = 0;
         public frmProducto()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             this.Visible = false;
             frmControlCalidad formInicio = new frmControlCalidad(1);
             formInicio.Visible = true;
+            close = 1;
             this.Close();
         }
 
@@ -30,6 +32,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             this.Visible = false;
             frmPerfil formPerfil = new frmPerfil();
             formPerfil.Visible = true;
+            close = 1;
             this.Close();
         }
 
@@ -38,7 +41,13 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             this.Visible = false;
             frmNotificaciones formNot = new frmNotificaciones();
             formNot.Visible = true;
+            close = 1;
             this.Close();
+        }
+
+        private void frmProducto_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (close == 0) { Environment.Exit(0); }
         }
     }
 }

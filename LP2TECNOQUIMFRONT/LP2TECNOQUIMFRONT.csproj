@@ -174,11 +174,11 @@
     <Compile Include="frmGerente\frmHistorialPlan.Designer.cs">
       <DependentUpon>frmHistorialPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHome.cs">
+    <Compile Include="frmJVenta\frmRegistrarProyeccionVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHome.Designer.cs">
-      <DependentUpon>frmHome.cs</DependentUpon>
+    <Compile Include="frmJVenta\frmRegistrarProyeccionVenta.Designer.cs">
+      <DependentUpon>frmRegistrarProyeccionVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJproduccion\frmGestionarOrden.cs">
       <SubType>Form</SubType>
@@ -288,10 +288,10 @@
     <Compile Include="frmJVenta\frmPerfil.Designer.cs">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="frmPrincipal\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="frmPrincipal\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJproduccion\frmOrden.cs">
@@ -308,10 +308,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="frmSplash.cs">
+    <Compile Include="frmPrincipal\frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSplash.Designer.cs">
+    <Compile Include="frmPrincipal\frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmGerente\frmGestionarEmpleado.resx">
@@ -377,8 +377,8 @@
     <EmbeddedResource Include="frmGerente\frmHistorialPlan.resx">
       <DependentUpon>frmHistorialPlan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHome.resx">
-      <DependentUpon>frmHome.cs</DependentUpon>
+    <EmbeddedResource Include="frmJVenta\frmRegistrarProyeccionVenta.resx">
+      <DependentUpon>frmRegistrarProyeccionVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmGestionarOrden.resx">
       <DependentUpon>frmGestionarOrden.cs</DependentUpon>
@@ -434,7 +434,7 @@
     <EmbeddedResource Include="frmJVenta\frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="frmPrincipal\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmOrden.resx">
@@ -448,10 +448,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSplash.aa.resx">
+    <EmbeddedResource Include="frmPrincipal\frmSplash.aa.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSplash.resx">
+    <EmbeddedResource Include="frmPrincipal\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

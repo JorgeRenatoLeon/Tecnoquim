@@ -12,6 +12,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
 {
     public partial class frmNotificaciones : Form
     {
+        int close = 0;
         public frmNotificaciones()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             this.Visible = false;
             frmJMaquinaria formGerente = new frmJMaquinaria(1);
             formGerente.Visible = true;
+            close = 1;
             this.Close();
         }
 
@@ -30,7 +32,13 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             this.Visible = false;
             frmPerfil formNot = new frmPerfil();
             formNot.Visible = true;
+            close = 1;
             this.Close();
+        }
+
+        private void frmNotificaciones_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (close == 0) { Environment.Exit(0); }
         }
     }
 }

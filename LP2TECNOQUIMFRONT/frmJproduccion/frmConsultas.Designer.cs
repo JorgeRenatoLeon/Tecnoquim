@@ -55,9 +55,8 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(221, 677);
+            this.panel1.Size = new System.Drawing.Size(166, 550);
             this.panel1.TabIndex = 4;
             // 
             // btnPerfil
@@ -68,10 +67,9 @@
             this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
             this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(4, 209);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPerfil.Location = new System.Drawing.Point(3, 170);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(217, 97);
+            this.btnPerfil.Size = new System.Drawing.Size(163, 79);
             this.btnPerfil.TabIndex = 1;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -87,10 +85,9 @@
             this.btnNotificaciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotificaciones.ForeColor = System.Drawing.Color.White;
             this.btnNotificaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificaciones.Image")));
-            this.btnNotificaciones.Location = new System.Drawing.Point(4, 372);
-            this.btnNotificaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNotificaciones.Location = new System.Drawing.Point(3, 302);
             this.btnNotificaciones.Name = "btnNotificaciones";
-            this.btnNotificaciones.Size = new System.Drawing.Size(217, 113);
+            this.btnNotificaciones.Size = new System.Drawing.Size(163, 92);
             this.btnNotificaciones.TabIndex = 5;
             this.btnNotificaciones.Text = "Notificaciones";
             this.btnNotificaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -106,10 +103,9 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(4, 293);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(3, 238);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(217, 97);
+            this.button4.Size = new System.Drawing.Size(163, 79);
             this.button4.TabIndex = 1;
             this.button4.Text = "Consultas";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -124,10 +120,9 @@
             this.btnHome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(4, 124);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHome.Location = new System.Drawing.Point(3, 101);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(217, 97);
+            this.btnHome.Size = new System.Drawing.Size(163, 79);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Inicio";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -141,18 +136,16 @@
             this.panel3.Controls.Add(this.pbLogo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(221, 122);
+            this.panel3.Size = new System.Drawing.Size(166, 99);
             this.panel3.TabIndex = 0;
             // 
             // pbLogo
             // 
             this.pbLogo.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.logo_web;
-            this.pbLogo.Location = new System.Drawing.Point(0, 4);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogo.Location = new System.Drawing.Point(0, 3);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(217, 113);
+            this.pbLogo.Size = new System.Drawing.Size(163, 92);
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
@@ -165,10 +158,9 @@
             this.btnPolitica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPolitica.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPolitica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnPolitica.Location = new System.Drawing.Point(557, 485);
-            this.btnPolitica.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPolitica.Location = new System.Drawing.Point(418, 394);
             this.btnPolitica.Name = "btnPolitica";
-            this.btnPolitica.Size = new System.Drawing.Size(487, 80);
+            this.btnPolitica.Size = new System.Drawing.Size(365, 65);
             this.btnPolitica.TabIndex = 24;
             this.btnPolitica.Text = "Politica de Stock";
             this.btnPolitica.UseVisualStyleBackColor = false;
@@ -183,10 +175,9 @@
             this.btnInsumos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInsumos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsumos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnInsumos.Location = new System.Drawing.Point(557, 226);
-            this.btnInsumos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsumos.Location = new System.Drawing.Point(418, 184);
             this.btnInsumos.Name = "btnInsumos";
-            this.btnInsumos.Size = new System.Drawing.Size(487, 80);
+            this.btnInsumos.Size = new System.Drawing.Size(365, 65);
             this.btnInsumos.TabIndex = 23;
             this.btnInsumos.Text = "Insumos";
             this.btnInsumos.UseVisualStyleBackColor = false;
@@ -201,10 +192,9 @@
             this.btnProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProducto.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnProducto.Location = new System.Drawing.Point(557, 97);
-            this.btnProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.btnProducto.Location = new System.Drawing.Point(418, 79);
             this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(487, 80);
+            this.btnProducto.Size = new System.Drawing.Size(365, 65);
             this.btnProducto.TabIndex = 22;
             this.btnProducto.Text = "Productos";
             this.btnProducto.UseVisualStyleBackColor = false;
@@ -219,10 +209,9 @@
             this.btnMaquinaria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaquinaria.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaquinaria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnMaquinaria.Location = new System.Drawing.Point(557, 352);
-            this.btnMaquinaria.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMaquinaria.Location = new System.Drawing.Point(418, 286);
             this.btnMaquinaria.Name = "btnMaquinaria";
-            this.btnMaquinaria.Size = new System.Drawing.Size(487, 80);
+            this.btnMaquinaria.Size = new System.Drawing.Size(365, 65);
             this.btnMaquinaria.TabIndex = 25;
             this.btnMaquinaria.Text = "Maquinaria";
             this.btnMaquinaria.UseVisualStyleBackColor = false;
@@ -230,19 +219,19 @@
             // 
             // frmConsultas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(1467, 677);
+            this.ClientSize = new System.Drawing.Size(1100, 550);
             this.Controls.Add(this.btnMaquinaria);
             this.Controls.Add(this.btnPolitica);
             this.Controls.Add(this.btnInsumos);
             this.Controls.Add(this.btnProducto);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConsultas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsultasJprod";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmConsultas_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();

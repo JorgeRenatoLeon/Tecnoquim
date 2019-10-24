@@ -1,4 +1,5 @@
 ﻿using System;
+using LP2TECNOQUIMFRONT.frmPrincipal;
 using System.Threading;
 using System.Windows.Forms;
 

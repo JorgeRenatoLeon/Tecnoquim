@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGerente));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGestionarEmpleados = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnValidar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnGestionarEmpleados = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -57,6 +57,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 550);
             this.panel1.TabIndex = 2;
+            // 
+            // btnGestionarEmpleados
+            // 
+            this.btnGestionarEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGestionarEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnGestionarEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionarEmpleados.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionarEmpleados.ForeColor = System.Drawing.Color.White;
+            this.btnGestionarEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("btnGestionarEmpleados.Image")));
+            this.btnGestionarEmpleados.Location = new System.Drawing.Point(0, 351);
+            this.btnGestionarEmpleados.Name = "btnGestionarEmpleados";
+            this.btnGestionarEmpleados.Size = new System.Drawing.Size(163, 92);
+            this.btnGestionarEmpleados.TabIndex = 7;
+            this.btnGestionarEmpleados.Text = "Gestionar Empleados";
+            this.btnGestionarEmpleados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGestionarEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnGestionarEmpleados.UseVisualStyleBackColor = true;
             // 
             // btnPerfil
             // 
@@ -175,23 +192,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Plan Maestro de Produccion";
             // 
-            // btnGestionarEmpleados
-            // 
-            this.btnGestionarEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGestionarEmpleados.FlatAppearance.BorderSize = 0;
-            this.btnGestionarEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGestionarEmpleados.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionarEmpleados.ForeColor = System.Drawing.Color.White;
-            this.btnGestionarEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("btnGestionarEmpleados.Image")));
-            this.btnGestionarEmpleados.Location = new System.Drawing.Point(0, 351);
-            this.btnGestionarEmpleados.Name = "btnGestionarEmpleados";
-            this.btnGestionarEmpleados.Size = new System.Drawing.Size(163, 92);
-            this.btnGestionarEmpleados.TabIndex = 7;
-            this.btnGestionarEmpleados.Text = "Gestionar Empleados";
-            this.btnGestionarEmpleados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnGestionarEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnGestionarEmpleados.UseVisualStyleBackColor = true;
-            // 
             // frmGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,6 +205,7 @@
             this.Name = "frmGerente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "8";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmGerente_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();

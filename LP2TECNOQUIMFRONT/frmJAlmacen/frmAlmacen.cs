@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2TECNOQUIMFRONT.frmPrincipal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 {
     public partial class frmAlmacen : Form
     {
+        int close = 0;
         public frmAlmacen(int cont = 0)
         {
             if (cont != 0)
@@ -42,6 +44,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             this.Visible = false;
             frmPerfil formPerfil = new frmPerfil();
             formPerfil.Visible = true;
+            close = 1;
             this.Close();
         }
 
@@ -50,6 +53,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             this.Visible = false;
             frmNotificaciones formNot = new frmNotificaciones();
             formNot.Visible = true;
+            close = 1;
             this.Close();
         }
 
@@ -58,6 +62,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             this.Visible = false;
             frmProducto formProducto = new frmProducto();
             formProducto.Visible = true;
+            close = 1;
             this.Close();
         }
 
@@ -66,7 +71,13 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             this.Visible = false;
             frmInsumo formInsumo = new frmInsumo();
             formInsumo.Visible = true;
+            close = 1;
             this.Close();
+        }
+
+        private void frmAlmacen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (close == 0) { Environment.Exit(0); }
         }
     }
 }

@@ -17,47 +17,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             InitializeComponent();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmJProduccion fromJProd = new frmJProduccion(1);
-            fromJProd.Visible = true;
-            this.Close();
-        }
-
-        private void btnConsultas_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmConsultas formConsultas = new frmConsultas();
-            formConsultas.Visible = true;
-            this.Close();       
-        }
-
-        private void pbMinimize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Minimized;
-            }
-        }
-
-        private void pbMaximize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                WindowState = FormWindowState.Normal;
-            }
-        }
-
-        private void pbExit_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
         private void frmMaquinarias_Load(object sender, EventArgs e)
         {
 
