@@ -2,7 +2,7 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.lp2tecnoquim/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Servicio" targetNamespace="http://services.lp2tecnoquim/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://10.0.75.1:8080/LP2TECNOQUIMSERVICES/Servicio?xsd=1" namespace="http://services.lp2tecnoquim/" />
+      <xsd:import schemaLocation="http://localhost:8080/LP2TECNOQUIMSERVICES/Servicio?xsd=1" namespace="http://services.lp2tecnoquim/" />
     </xsd:schema>
   </types>
   <message name="hello">
@@ -11,11 +11,11 @@
   <message name="helloResponse">
     <part name="parameters" element="tns:helloResponse" />
   </message>
-  <message name="verificarUsuario">
-    <part name="parameters" element="tns:verificarUsuario" />
+  <message name="actualizarMaquinaria">
+    <part name="parameters" element="tns:actualizarMaquinaria" />
   </message>
-  <message name="verificarUsuarioResponse">
-    <part name="parameters" element="tns:verificarUsuarioResponse" />
+  <message name="actualizarMaquinariaResponse">
+    <part name="parameters" element="tns:actualizarMaquinariaResponse" />
   </message>
   <message name="enviarMensaje">
     <part name="parameters" element="tns:enviarMensaje" />
@@ -23,18 +23,38 @@
   <message name="enviarMensajeResponse">
     <part name="parameters" element="tns:enviarMensajeResponse" />
   </message>
+  <message name="insertarMaquinaria">
+    <part name="parameters" element="tns:insertarMaquinaria" />
+  </message>
+  <message name="insertarMaquinariaResponse">
+    <part name="parameters" element="tns:insertarMaquinariaResponse" />
+  </message>
+  <message name="listarMaquinaria">
+    <part name="parameters" element="tns:listarMaquinaria" />
+  </message>
+  <message name="listarMaquinariaResponse">
+    <part name="parameters" element="tns:listarMaquinariaResponse" />
+  </message>
   <portType name="Servicio">
     <operation name="hello">
       <input wsam:Action="http://services.lp2tecnoquim/Servicio/helloRequest" message="tns:hello" />
       <output wsam:Action="http://services.lp2tecnoquim/Servicio/helloResponse" message="tns:helloResponse" />
     </operation>
-    <operation name="verificarUsuario">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/verificarUsuarioRequest" message="tns:verificarUsuario" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/verificarUsuarioResponse" message="tns:verificarUsuarioResponse" />
+    <operation name="actualizarMaquinaria">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaRequest" message="tns:actualizarMaquinaria" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaResponse" message="tns:actualizarMaquinariaResponse" />
     </operation>
     <operation name="enviarMensaje">
       <input wsam:Action="http://services.lp2tecnoquim/Servicio/enviarMensajeRequest" message="tns:enviarMensaje" />
       <output wsam:Action="http://services.lp2tecnoquim/Servicio/enviarMensajeResponse" message="tns:enviarMensajeResponse" />
+    </operation>
+    <operation name="insertarMaquinaria">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest" message="tns:insertarMaquinaria" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse" message="tns:insertarMaquinariaResponse" />
+    </operation>
+    <operation name="listarMaquinaria">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarMaquinariaRequest" message="tns:listarMaquinaria" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarMaquinariaResponse" message="tns:listarMaquinariaResponse" />
     </operation>
   </portType>
   <binding name="ServicioPortBinding" type="tns:Servicio">
@@ -48,7 +68,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="verificarUsuario">
+    <operation name="actualizarMaquinaria">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -66,10 +86,28 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="insertarMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
   </binding>
   <service name="Servicio">
     <port name="ServicioPort" binding="tns:ServicioPortBinding">
-      <soap:address location="http://10.0.75.1:8080/LP2TECNOQUIMSERVICES/Servicio" />
+      <soap:address location="http://localhost:8080/LP2TECNOQUIMSERVICES/Servicio" />
     </port>
   </service>
 </definitions>

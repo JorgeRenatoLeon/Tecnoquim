@@ -24,14 +24,13 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/helloRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/helloResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.helloResponse> helloAsync(LP2TECNOQUIMFRONT.Service.helloRequest request);
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/verificarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/verificarUsuarioResponse")]
+        // CODEGEN: El parámetro 'maquinaria' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.verificarUsuarioResponse verificarUsuario(LP2TECNOQUIMFRONT.Service.verificarUsuarioRequest request);
+        LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse actualizarMaquinaria(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/verificarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/verificarUsuarioResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.verificarUsuarioResponse> verificarUsuarioAsync(LP2TECNOQUIMFRONT.Service.verificarUsuarioRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse> actualizarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request);
         
         // CODEGEN: El parámetro 'mensaje' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/enviarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/enviarMensajeResponse")]
@@ -40,6 +39,23 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/enviarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/enviarMensajeResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.enviarMensajeResponse> enviarMensajeAsync(LP2TECNOQUIMFRONT.Service.enviarMensajeRequest request);
+        
+        // CODEGEN: El parámetro 'maquinaria' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse insertarMaquinaria(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse> insertarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarMaquinariaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse listarMaquinaria(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarMaquinariaResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse> listarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -75,6 +91,80 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         public helloResponse(string @return) {
             this.@return = @return;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
+    public partial class maquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int activoField;
+        
+        private int idField;
+        
+        private string nombreField;
+        
+        private string tipoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string tipo {
+            get {
+                return this.tipoField;
+            }
+            set {
+                this.tipoField = value;
+                this.RaisePropertyChanged("tipo");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
@@ -405,36 +495,28 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarUsuario", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class verificarUsuarioRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarMaquinariaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.usuario usuario;
+        public LP2TECNOQUIMFRONT.Service.maquinaria maquinaria;
         
-        public verificarUsuarioRequest() {
+        public actualizarMaquinariaRequest() {
         }
         
-        public verificarUsuarioRequest(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            this.usuario = usuario;
+        public actualizarMaquinariaRequest(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+            this.maquinaria = maquinaria;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarUsuarioResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class verificarUsuarioResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarMaquinariaResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public verificarUsuarioResponse() {
-        }
-        
-        public verificarUsuarioResponse(bool @return) {
-            this.@return = @return;
+        public actualizarMaquinariaResponse() {
         }
     }
     
@@ -463,6 +545,62 @@ namespace LP2TECNOQUIMFRONT.Service {
     public partial class enviarMensajeResponse {
         
         public enviarMensajeResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarMaquinariaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.maquinaria maquinaria;
+        
+        public insertarMaquinariaRequest() {
+        }
+        
+        public insertarMaquinariaRequest(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+            this.maquinaria = maquinaria;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarMaquinariaResponse {
+        
+        public insertarMaquinariaResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarMaquinariaRequest {
+        
+        public listarMaquinariaRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarMaquinariaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.maquinaria[] @return;
+        
+        public listarMaquinariaResponse() {
+        }
+        
+        public listarMaquinariaResponse(LP2TECNOQUIMFRONT.Service.maquinaria[] @return) {
+            this.@return = @return;
         }
     }
     
@@ -517,26 +655,25 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.verificarUsuarioResponse LP2TECNOQUIMFRONT.Service.Servicio.verificarUsuario(LP2TECNOQUIMFRONT.Service.verificarUsuarioRequest request) {
-            return base.Channel.verificarUsuario(request);
+        LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarMaquinaria(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request) {
+            return base.Channel.actualizarMaquinaria(request);
         }
         
-        public bool verificarUsuario(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            LP2TECNOQUIMFRONT.Service.verificarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.verificarUsuarioRequest();
-            inValue.usuario = usuario;
-            LP2TECNOQUIMFRONT.Service.verificarUsuarioResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).verificarUsuario(inValue);
-            return retVal.@return;
+        public void actualizarMaquinaria(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+            LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarMaquinaria(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.verificarUsuarioResponse> LP2TECNOQUIMFRONT.Service.Servicio.verificarUsuarioAsync(LP2TECNOQUIMFRONT.Service.verificarUsuarioRequest request) {
-            return base.Channel.verificarUsuarioAsync(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request) {
+            return base.Channel.actualizarMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.verificarUsuarioResponse> verificarUsuarioAsync(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            LP2TECNOQUIMFRONT.Service.verificarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.verificarUsuarioRequest();
-            inValue.usuario = usuario;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).verificarUsuarioAsync(inValue);
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse> actualizarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+            LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarMaquinariaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -559,6 +696,49 @@ namespace LP2TECNOQUIMFRONT.Service {
             LP2TECNOQUIMFRONT.Service.enviarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.enviarMensajeRequest();
             inValue.mensaje = mensaje;
             return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).enviarMensajeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarMaquinaria(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request) {
+            return base.Channel.insertarMaquinaria(request);
+        }
+        
+        public void insertarMaquinaria(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+            LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMaquinaria(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request) {
+            return base.Channel.insertarMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse> insertarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+            LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.listarMaquinaria(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request) {
+            return base.Channel.listarMaquinaria(request);
+        }
+        
+        public LP2TECNOQUIMFRONT.Service.maquinaria[] listarMaquinaria() {
+            LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest();
+            LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarMaquinaria(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request) {
+            return base.Channel.listarMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse> listarMaquinariaAsync() {
+            LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest();
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarMaquinariaAsync(inValue);
         }
     }
 }

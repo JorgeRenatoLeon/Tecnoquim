@@ -14,7 +14,9 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
 {
     public partial class frmJMaquinaria : Form
     {
-        int close = 0;
+        Service.maquinaria maquinaria = new Service.maquinaria();
+        Service.ServicioClient DBController = new Service.ServicioClient();
+        int close;
         public frmJMaquinaria(int cont = 0, string usuario = "")
         {
             if (cont != 0)
@@ -24,17 +26,19 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             else
             {
                 Thread t = new Thread(new ThreadStart(SplashStart));
-
                 t.Start();
-
                 Thread.Sleep(2500);
-
                 InitializeComponent();
 
                 MessageBox.Show("Bienvenido " + usuario);
 
                 t.Abort();
             }
+            BindingList<Service.maquinaria> maquinarias =
+                new BindingList<Service.maquinaria>(DBController.listarMaquinaria());
+
+            dgvMaquinaria.DataSource = DBController.listarMaquinaria();
+            
         }
         public void SplashStart()
         {

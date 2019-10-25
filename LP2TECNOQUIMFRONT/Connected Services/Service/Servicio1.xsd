@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.lp2tecnoquim/" targetNamespace="http://services.lp2tecnoquim/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarMaquinaria" type="tns:actualizarMaquinaria" />
+  <xs:element name="actualizarMaquinariaResponse" type="tns:actualizarMaquinariaResponse" />
   <xs:element name="enviarMensaje" type="tns:enviarMensaje" />
   <xs:element name="enviarMensajeResponse" type="tns:enviarMensajeResponse" />
   <xs:element name="hello" type="tns:hello" />
   <xs:element name="helloResponse" type="tns:helloResponse" />
-  <xs:element name="verificarUsuario" type="tns:verificarUsuario" />
-  <xs:element name="verificarUsuarioResponse" type="tns:verificarUsuarioResponse" />
+  <xs:element name="insertarMaquinaria" type="tns:insertarMaquinaria" />
+  <xs:element name="insertarMaquinariaResponse" type="tns:insertarMaquinariaResponse" />
+  <xs:element name="listarMaquinaria" type="tns:listarMaquinaria" />
+  <xs:element name="listarMaquinariaResponse" type="tns:listarMaquinariaResponse" />
   <xs:complexType name="enviarMensaje">
     <xs:sequence>
       <xs:element minOccurs="0" name="mensaje" type="tns:mensaje" />
@@ -47,6 +51,30 @@
   <xs:complexType name="enviarMensajeResponse">
     <xs:sequence />
   </xs:complexType>
+  <xs:complexType name="actualizarMaquinaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="maquinaria" type="tns:maquinaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="maquinaria">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarMaquinariaResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="insertarMaquinaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="maquinaria" type="tns:maquinaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarMaquinariaResponse">
+    <xs:sequence />
+  </xs:complexType>
   <xs:complexType name="hello">
     <xs:sequence>
       <xs:element minOccurs="0" name="name" type="xs:string" />
@@ -57,14 +85,12 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="verificarUsuario">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
-    </xs:sequence>
+  <xs:complexType name="listarMaquinaria">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="verificarUsuarioResponse">
+  <xs:complexType name="listarMaquinariaResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:maquinaria" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
