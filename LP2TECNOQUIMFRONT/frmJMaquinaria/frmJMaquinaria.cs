@@ -16,6 +16,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
     {
         Service.maquinaria maquinaria = new Service.maquinaria();
         Service.ServicioClient DBController = new Service.ServicioClient();
+        Estado estadoObj;
         int close;
         public frmJMaquinaria(int cont = 0, string usuario = "")
         {
@@ -34,10 +35,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
 
                 t.Abort();
             }
-            BindingList<Service.maquinaria> maquinarias =
-                new BindingList<Service.maquinaria>(DBController.listarMaquinaria());
-
-            dgvMaquinaria.DataSource = DBController.listarMaquinaria();
+            
             
         }
         public void SplashStart()
@@ -70,19 +68,14 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Maquinaria Registrada Satisfactoriamente");
+           
         }
 
         private void frmJMaquinaria_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (close == 0) { Environment.Exit(0); }
         }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             frmGestionarMaquinaria formRegistro = new frmGestionarMaquinaria();
@@ -93,6 +86,140 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
         {
             frmGestionarMaquinaria formRegistro = new frmGestionarMaquinaria();
             formRegistro.Visible = true;
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            estadoObj = Estado.Modificar;
+            estadoComponentes(Estado.Modificar);
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            frmGestionarMaquinaria formGestion = new frmGestionarMaquinaria();
+            this.Visible = false;
+            formGestion.Visible = true;
+        }
+
+        private void guardarToolStripButton_Click(object sender, EventArgs e)
+        {
+            maquinaria.nombre = txtNombre.Text;
+            maquinaria.id = Int32.Parse(txtNOrden.Text);
+            maquinaria.tipo = txtTipo.Text;
+            if (rbActivo.Checked == true)
+            {
+                maquinaria.activo = 1;
+            }
+            else
+                maquinaria.activo = 0;
+            if (estadoObj==Estado.Nuevo)
+            {
+                DBController.insertarMaquinaria(maquinaria);
+                MessageBox.Show("Maquinaria Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (estadoObj == Estado.Modificar)
+            {
+                DBController.actualizarMaquinaria(maquinaria);
+                MessageBox.Show("Maquinaria Actualizada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            //estadoComponentes(Estado.Inicial);
+            
+        }
+
+        private void nuevoToolStripButton_Click(object sender, EventArgs e)
+        {
+            limpiarComponentes();
+
+            maquinaria = new Service.maquinaria();
+            estadoObj = Estado.Nuevo;
+            estadoComponentes(Estado.Nuevo);
+            
+        }
+        public void estadoComponentes(Estado estado)
+        {
+            switch (estado)
+            {
+                case Estado.Inicial:
+                    //Etiquetas
+                    lblCodigo.Enabled = false;
+                    lblNombre.Enabled = false;
+                    lblTipo.Enabled = false;
+                    lblEstado.Enabled = false;
+                    //Botones
+                    btnNuevo.Enabled = true;
+                    btnModificar.Enabled = false;
+                    btnGuardar.Enabled = false;
+                    btnCancelar.Enabled = false;
+                    btnBuscar.Enabled = true;
+                    //Campos de Texto
+                    txtNOrden.Enabled = false;
+                    txtNombre.Enabled = false;
+                    rbActivo.Enabled = false;
+                    rbInactivo.Enabled = false;
+                    txtTipo.Enabled = false;
+                    break;
+                case Estado.Nuevo:
+                    //Etiquetas
+                    lblCodigo.Enabled = true;
+                    lblNombre.Enabled = true;
+                    lblTipo.Enabled = true;
+                    lblEstado.Enabled = true;
+                    //Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = true;
+                    btnModificar.Enabled = false;
+                    btnCancelar.Enabled = true;
+                    btnBuscar.Enabled = false;
+                    //Campos de Texto
+                    txtNOrden.Enabled = true;
+                    txtNombre.Enabled = true;
+                    rbActivo.Enabled = true;
+                    rbInactivo.Enabled = true;
+                    txtTipo.Enabled = true;
+                    break;
+                case Estado.Buscar:
+                    //Botones
+                    btnNuevo.Enabled = false;
+                    btnModificar.Enabled = true;
+                    btnGuardar.Enabled = false;
+                    btnCancelar.Enabled = true;
+                    btnBuscar.Enabled = false;
+                    break;
+                case Estado.Modificar:
+                    //Etiquetas
+                    lblCodigo.Enabled = true;
+                    lblNombre.Enabled = true;
+                    lblTipo.Enabled = true;
+                    lblEstado.Enabled = true;
+                    //Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = true;
+                    btnModificar.Enabled = false;
+                    btnCancelar.Enabled = true;
+                    btnBuscar.Enabled = false;
+                    //Campos de Texto
+                    txtNOrden.Enabled = true;
+                    txtNombre.Enabled = true;
+                    rbActivo.Enabled = true;
+                    rbInactivo.Enabled = true;
+                    txtTipo.Enabled = true;
+                    break;
+            }
+        }
+
+        public void limpiarComponentes()
+        {
+            txtNOrden.Text = "";
+            txtNombre.Text = "";
+            rbActivo.Checked = false;
+            rbInactivo.Checked = false;
+            txtTipo.Text = "";
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarComponentes();
+            estadoComponentes(Estado.Inicial);
         }
     }
 }

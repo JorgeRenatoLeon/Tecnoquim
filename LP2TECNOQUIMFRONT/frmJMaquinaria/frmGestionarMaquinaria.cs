@@ -18,21 +18,13 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
         public frmGestionarMaquinaria()
         {
             InitializeComponent();
-        }
+            BindingList<Service.maquinaria> maquinarias =
+                new BindingList<Service.maquinaria>(DBController.listarMaquinaria());
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            maquinaria.nombre = txtNombre.Text;
-            maquinaria.tipo = txtTipo.Text;
-            if (rbActivo.Checked == true)
-            {
-                maquinaria.activo = 1;
-            }
-            else
-                maquinaria.activo = 0;
-
-            DBController.insertarMaquinaria(maquinaria);
+            dgvMaquinaria.DataSource = DBController.listarMaquinaria();
         }
-         
+        
+
+        
     }
 }
