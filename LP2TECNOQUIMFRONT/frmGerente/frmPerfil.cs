@@ -11,12 +11,17 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             InitializeComponent();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void frmPerfil_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (close == 0) { Environment.Exit(0); }
+        }
+
+
+        private void btnHome_Click_1(object sender, EventArgs e)
         {
             this.Visible = false;
             frmGerente formGerente = new frmGerente(1);
             formGerente.Visible = true;
-            close = 1;
             this.Close();
         }
 
@@ -25,13 +30,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             this.Visible = false;
             frmNotificaciones formNot = new frmNotificaciones();
             formNot.Visible = true;
-            close = 1;
             this.Close();
-        }
-
-        private void frmPerfil_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (close == 0) { Environment.Exit(0); }
         }
     }
 }

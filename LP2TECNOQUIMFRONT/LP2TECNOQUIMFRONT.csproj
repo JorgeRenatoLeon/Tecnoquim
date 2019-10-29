@@ -56,11 +56,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Estado.cs" />
-    <Compile Include="frmGerente\frmListarEmpleado.cs">
+    <Compile Include="frmGerente\frmBuscarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGerente\frmListarEmpleado.Designer.cs">
-      <DependentUpon>frmListarEmpleado.cs</DependentUpon>
+    <Compile Include="frmGerente\frmBuscarEmpleado.Designer.cs">
+      <DependentUpon>frmBuscarEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGerente\frmGestionarEmpleado.cs">
       <SubType>Form</SubType>
@@ -68,11 +68,11 @@
     <Compile Include="frmGerente\frmGestionarEmpleado.Designer.cs">
       <DependentUpon>frmGestionarEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGerente\frmGestionarEmpleados.cs">
+    <Compile Include="frmGerente\frmGestionarPlanMaestro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGerente\frmGestionarEmpleados.Designer.cs">
-      <DependentUpon>frmGestionarEmpleados.cs</DependentUpon>
+    <Compile Include="frmGerente\frmGestionarPlanMaestro.Designer.cs">
+      <DependentUpon>frmGestionarPlanMaestro.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGerente\frmNotificaciones.cs">
       <SubType>Form</SubType>
@@ -182,11 +182,11 @@
     <Compile Include="frmGerente\frmGerente.Designer.cs">
       <DependentUpon>frmGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGerente\frmHistorialPlan.cs">
+    <Compile Include="frmGerente\frmBuscarPlanMaestro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGerente\frmHistorialPlan.Designer.cs">
-      <DependentUpon>frmHistorialPlan.cs</DependentUpon>
+    <Compile Include="frmGerente\frmBuscarPlanMaestro.Designer.cs">
+      <DependentUpon>frmBuscarPlanMaestro.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJVenta\frmRegistrarProyeccionVenta.cs">
       <SubType>Form</SubType>
@@ -314,12 +314,6 @@
     <Compile Include="frmJproduccion\frmOrden.Designer.cs">
       <DependentUpon>frmOrden.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGerente\frmValidarPlan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGerente\frmValidarPlan.Designer.cs">
-      <DependentUpon>frmValidarPlan.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmPrincipal\frmSplash.cs">
@@ -331,11 +325,11 @@
     <EmbeddedResource Include="frmGerente\frmGestionarEmpleado.resx">
       <DependentUpon>frmGestionarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGerente\frmGestionarEmpleados.resx">
-      <DependentUpon>frmGestionarEmpleados.cs</DependentUpon>
+    <EmbeddedResource Include="frmGerente\frmBuscarEmpleado.resx">
+      <DependentUpon>frmBuscarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGerente\frmListarEmpleado.resx">
-      <DependentUpon>frmListarEmpleado.cs</DependentUpon>
+    <EmbeddedResource Include="frmGerente\frmGestionarPlanMaestro.resx">
+      <DependentUpon>frmGestionarPlanMaestro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGerente\frmNotificaciones.resx">
       <DependentUpon>frmNotificaciones.cs</DependentUpon>
@@ -391,8 +385,8 @@
     <EmbeddedResource Include="frmGerente\frmGerente.resx">
       <DependentUpon>frmGerente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGerente\frmHistorialPlan.resx">
-      <DependentUpon>frmHistorialPlan.cs</DependentUpon>
+    <EmbeddedResource Include="frmGerente\frmBuscarPlanMaestro.resx">
+      <DependentUpon>frmBuscarPlanMaestro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJVenta\frmRegistrarProyeccionVenta.resx">
       <DependentUpon>frmRegistrarProyeccionVenta.cs</DependentUpon>
@@ -456,9 +450,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmOrden.resx">
       <DependentUpon>frmOrden.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGerente\frmValidarPlan.resx">
-      <DependentUpon>frmValidarPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

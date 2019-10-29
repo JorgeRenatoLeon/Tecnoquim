@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace LP2TECNOQUIMFRONT.frmGerente
 {
-    public partial class frmGestionarEmpleados : Form
+    public partial class frmBuscarEmpleado : Form
     {
-        public frmGestionarEmpleados()
+        public frmBuscarEmpleado()
         {
             InitializeComponent();
-        }
-
-        private void frmGestionarEmpleados_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Environment.Exit(0);
         }
     }
 }

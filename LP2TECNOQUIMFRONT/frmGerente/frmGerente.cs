@@ -34,50 +34,12 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             Application.Run(new frmSplash());
         }
 
-        private void pbExit_Click(object sender, EventArgs e)
+        private void frmGerente_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Environment.Exit(0);
+            if (close == 0) { Environment.Exit(0); }
         }
 
-        private void pbMaximize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                WindowState = FormWindowState.Normal;
-            }
-        }
-
-        private void pbMinimize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Minimized;
-            }
-        }
-
-        private void btnHistorial_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmHistorialPlan formHistorial = new frmHistorialPlan();
-            formHistorial.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
-        private void btnValidar_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmValidarPlan formValidacion = new frmValidarPlan();
-            formValidacion.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
-        private void btnPerfil_Click(object sender, EventArgs e)
+        private void btnPerfil_Click_1(object sender, EventArgs e)
         {
             this.Visible = false;
             frmPerfil formPerfil = new frmPerfil();
@@ -95,9 +57,16 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             this.Close();
         }
 
-        private void frmGerente_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnPMS_Click(object sender, EventArgs e)
         {
-            if (close == 0) { Environment.Exit(0); }
+            frmGestionarPlanMaestro frmGestionarPlanM = new frmGestionarPlanMaestro();
+            frmGestionarPlanM.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmGestionarEmpleado frmGestionarEmpleado = new frmGestionarEmpleado();
+            frmGestionarEmpleado.Visible = true;
         }
     }
 }

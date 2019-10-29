@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace LP2TECNOQUIMFRONT.frmGerente
 {
-    public partial class frmListarEmpleado : Form
+    public partial class frmGestionarPlanMaestro : Form
     {
-        public frmListarEmpleado()
+        public frmGestionarPlanMaestro()
         {
             InitializeComponent();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscarPlanMaestro formBuscarPlanM = new frmBuscarPlanMaestro();
+            formBuscarPlanM.Visible = true;
         }
     }
 }
