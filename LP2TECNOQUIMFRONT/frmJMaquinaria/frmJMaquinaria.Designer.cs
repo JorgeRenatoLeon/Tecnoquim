@@ -36,11 +36,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.gbDatos = new System.Windows.Forms.GroupBox();
-            this.rbInactivo = new System.Windows.Forms.RadioButton();
-            this.rbActivo = new System.Windows.Forms.RadioButton();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblEstado = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNOrden = new System.Windows.Forms.TextBox();
@@ -147,50 +144,25 @@
             // 
             // gbDatos
             // 
-            this.gbDatos.Controls.Add(this.rbInactivo);
-            this.gbDatos.Controls.Add(this.rbActivo);
             this.gbDatos.Controls.Add(this.txtTipo);
             this.gbDatos.Controls.Add(this.txtNombre);
-            this.gbDatos.Controls.Add(this.lblEstado);
             this.gbDatos.Controls.Add(this.lblTipo);
             this.gbDatos.Controls.Add(this.lblNombre);
             this.gbDatos.Controls.Add(this.txtNOrden);
             this.gbDatos.Controls.Add(this.lblCodigo);
             this.gbDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gbDatos.Location = new System.Drawing.Point(187, 119);
+            this.gbDatos.Location = new System.Drawing.Point(187, 137);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(682, 263);
+            this.gbDatos.Size = new System.Drawing.Size(682, 218);
             this.gbDatos.TabIndex = 38;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos Generales";
             // 
-            // rbInactivo
-            // 
-            this.rbInactivo.AutoSize = true;
-            this.rbInactivo.Location = new System.Drawing.Point(466, 199);
-            this.rbInactivo.Name = "rbInactivo";
-            this.rbInactivo.Size = new System.Drawing.Size(104, 29);
-            this.rbInactivo.TabIndex = 34;
-            this.rbInactivo.TabStop = true;
-            this.rbInactivo.Text = "Inactivo";
-            this.rbInactivo.UseVisualStyleBackColor = true;
-            // 
-            // rbActivo
-            // 
-            this.rbActivo.AutoSize = true;
-            this.rbActivo.Location = new System.Drawing.Point(220, 199);
-            this.rbActivo.Name = "rbActivo";
-            this.rbActivo.Size = new System.Drawing.Size(89, 29);
-            this.rbActivo.TabIndex = 33;
-            this.rbActivo.TabStop = true;
-            this.rbActivo.Text = "Activo";
-            this.rbActivo.UseVisualStyleBackColor = true;
-            // 
             // txtTipo
             // 
             this.txtTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.Location = new System.Drawing.Point(220, 147);
+            this.txtTipo.Location = new System.Drawing.Point(220, 156);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(317, 29);
             this.txtTipo.TabIndex = 32;
@@ -203,21 +175,11 @@
             this.txtNombre.Size = new System.Drawing.Size(411, 29);
             this.txtNombre.TabIndex = 31;
             // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(35, 202);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(73, 24);
-            this.lblEstado.TabIndex = 27;
-            this.lblEstado.Text = "Estado:";
-            // 
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.Location = new System.Drawing.Point(35, 152);
+            this.lblTipo.Location = new System.Drawing.Point(35, 161);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(53, 24);
             this.lblTipo.TabIndex = 25;
@@ -362,11 +324,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.GroupBox gbDatos;
-        private System.Windows.Forms.RadioButton rbInactivo;
-        private System.Windows.Forms.RadioButton rbActivo;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNOrden;
