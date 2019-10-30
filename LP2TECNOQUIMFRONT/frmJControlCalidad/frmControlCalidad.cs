@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2TECNOQUIMFRONT.frmJproduccion;
 
 namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 {
@@ -53,7 +54,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         private void btnInsumos_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmInsumo formInsumo = new frmInsumo();
+            frmInsumos formInsumo = new frmInsumos();
             formInsumo.Visible = true;
             close = 1;
             this.Close();

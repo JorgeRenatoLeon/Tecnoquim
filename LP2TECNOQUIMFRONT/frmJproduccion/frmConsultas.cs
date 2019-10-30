@@ -47,7 +47,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
-            frmProductos formProducto = new frmProductos();
+            frmProducto formProducto = new frmProducto();
             formProducto.Visible = true;
         }
 
@@ -59,7 +59,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnMaquinaria_Click(object sender, EventArgs e)
         {
-            frmMaquinarias formMaquinaria = new frmMaquinarias();
+            frmMaquinaria formMaquinaria = new frmMaquinaria();
             formMaquinaria.Visible = true;
         }
 

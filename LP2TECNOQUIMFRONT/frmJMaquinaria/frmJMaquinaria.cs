@@ -1,4 +1,5 @@
-﻿using LP2TECNOQUIMFRONT.frmPrincipal;
+﻿using LP2TECNOQUIMFRONT.frmJproduccion;
+using LP2TECNOQUIMFRONT.frmPrincipal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,13 +80,13 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
         
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmGestionarMaquinaria formRegistro = new frmGestionarMaquinaria();
+            frmMaquinaria formRegistro = new frmMaquinaria();
             formRegistro.Visible = true;
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            frmGestionarMaquinaria formRegistro = new frmGestionarMaquinaria();
+            frmMaquinaria formRegistro = new frmMaquinaria();
             formRegistro.Visible = true;
         }
 
@@ -97,7 +98,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            frmGestionarMaquinaria formGestion = new frmGestionarMaquinaria();
+            frmMaquinaria formGestion = new frmMaquinaria();
             formGestion.Visible = true;
             this.Visible = false;
         }

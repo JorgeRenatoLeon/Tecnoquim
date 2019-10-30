@@ -122,12 +122,6 @@
     <Compile Include="frmJControlCalidad\frmControlCalidad.designer.cs">
       <DependentUpon>frmControlCalidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmJControlCalidad\frmInsumo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmJControlCalidad\frmInsumo.Designer.cs">
-      <DependentUpon>frmInsumo.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmJControlCalidad\frmNotificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,18 +133,6 @@
     </Compile>
     <Compile Include="frmJControlCalidad\frmPerfil.Designer.cs">
       <DependentUpon>frmPerfil.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmJControlCalidad\frmProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmJControlCalidad\frmProducto.Designer.cs">
-      <DependentUpon>frmProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmJMaquinaria\frmGestionarMaquinaria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmJMaquinaria\frmGestionarMaquinaria.Designer.cs">
-      <DependentUpon>frmGestionarMaquinaria.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJMaquinaria\frmJMaquinaria.cs">
       <SubType>Form</SubType>
@@ -218,10 +200,10 @@
     <Compile Include="frmJproduccion\frmHistorialPMP.Designer.cs">
       <DependentUpon>frmHistorialPMP.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListado\frmInsumos.cs">
+    <Compile Include="frmBuscar\frmInsumos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListado\frmInsumos.Designer.cs">
+    <Compile Include="frmBuscar\frmInsumos.Designer.cs">
       <DependentUpon>frmInsumos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJproduccion\frmJProduccion.cs">
@@ -230,17 +212,11 @@
     <Compile Include="frmJproduccion\frmJProduccion.Designer.cs">
       <DependentUpon>frmJProduccion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmJproduccion\frmMaquinaria.cs">
+    <Compile Include="frmBuscar\frmMaquinaria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmJproduccion\frmMaquinaria.Designer.cs">
+    <Compile Include="frmBuscar\frmMaquinaria.Designer.cs">
       <DependentUpon>frmMaquinaria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmJproduccion\frmMaquinarias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmJproduccion\frmMaquinarias.Designer.cs">
-      <DependentUpon>frmMaquinarias.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJproduccion\frmNotificaciones.cs">
       <SubType>Form</SubType>
@@ -248,10 +224,10 @@
     <Compile Include="frmJproduccion\frmNotificaciones.Designer.cs">
       <DependentUpon>frmNotificaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmJproduccion\frmOrdenes.cs">
+    <Compile Include="frmBuscar\frmOrdenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmJproduccion\frmOrdenes.Designer.cs">
+    <Compile Include="frmBuscar\frmOrdenes.Designer.cs">
       <DependentUpon>frmOrdenes.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJproduccion\frmPerfil.cs">
@@ -266,22 +242,16 @@
     <Compile Include="frmJproduccion\frmPMP.Designer.cs">
       <DependentUpon>frmPMP.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmJproduccion\frmPolitica.cs">
+    <Compile Include="frmBuscar\frmPolitica.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmJproduccion\frmPolitica.Designer.cs">
+    <Compile Include="frmBuscar\frmPolitica.Designer.cs">
       <DependentUpon>frmPolitica.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListado\frmProducto.cs">
+    <Compile Include="frmBuscar\frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListado\frmProducto.Designer.cs">
-      <DependentUpon>frmProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmJproduccion\frmProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmJproduccion\frmProductos.Designer.cs">
+    <Compile Include="frmBuscar\frmProductos.Designer.cs">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJVenta\frmJVenta.cs">
@@ -355,20 +325,11 @@
     <EmbeddedResource Include="frmJControlCalidad\frmControlCalidad.resx">
       <DependentUpon>frmControlCalidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmJControlCalidad\frmInsumo.resx">
-      <DependentUpon>frmInsumo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmJControlCalidad\frmNotificaciones.resx">
       <DependentUpon>frmNotificaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJControlCalidad\frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmJControlCalidad\frmProducto.resx">
-      <DependentUpon>frmProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmJMaquinaria\frmGestionarMaquinaria.resx">
-      <DependentUpon>frmGestionarMaquinaria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJMaquinaria\frmJMaquinaria.resx">
       <DependentUpon>frmJMaquinaria.cs</DependentUpon>
@@ -403,22 +364,19 @@
     <EmbeddedResource Include="frmJproduccion\frmHistorialPMP.resx">
       <DependentUpon>frmHistorialPMP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListado\frmInsumos.resx">
+    <EmbeddedResource Include="frmBuscar\frmInsumos.resx">
       <DependentUpon>frmInsumos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmJProduccion.resx">
       <DependentUpon>frmJProduccion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmJproduccion\frmMaquinaria.resx">
+    <EmbeddedResource Include="frmBuscar\frmMaquinaria.resx">
       <DependentUpon>frmMaquinaria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmJproduccion\frmMaquinarias.resx">
-      <DependentUpon>frmMaquinarias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmNotificaciones.resx">
       <DependentUpon>frmNotificaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmJproduccion\frmOrdenes.resx">
+    <EmbeddedResource Include="frmBuscar\frmOrdenes.resx">
       <DependentUpon>frmOrdenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmPerfil.resx">
@@ -427,13 +385,10 @@
     <EmbeddedResource Include="frmJproduccion\frmPMP.resx">
       <DependentUpon>frmPMP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmJproduccion\frmPolitica.resx">
+    <EmbeddedResource Include="frmBuscar\frmPolitica.resx">
       <DependentUpon>frmPolitica.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListado\frmProducto.resx">
-      <DependentUpon>frmProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmJproduccion\frmProductos.resx">
+    <EmbeddedResource Include="frmBuscar\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJVenta\frmJVenta.resx">

@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2TECNOQUIMFRONT.Service;
 
-namespace LP2TECNOQUIMFRONT.frmJMaquinaria
+namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
-    public partial class frmGestionarMaquinaria : Form
+    public partial class frmMaquinaria : Form
     {
         private Service.maquinaria maquinariaSeleccionada;
         Service.ServicioClient DBController = new Service.ServicioClient();
 
-        public frmGestionarMaquinaria()
+        public frmMaquinaria()
         {
             InitializeComponent();
             dgvMaquinaria.AutoGenerateColumns = false;
