@@ -36,10 +36,12 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             dgvMaquinaria.DataSource = DBController.listarMaquinaria();
         }
 
-        private void dgvMaquinaria_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvMaquinaria_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             Service.maquinaria maquinariaFila = (Service.maquinaria)dgvMaquinaria.Rows[e.RowIndex].DataBoundItem;
             dgvMaquinaria.Rows[e.RowIndex].Cells["Nombre"].Value = maquinariaFila.nombre;
+            dgvMaquinaria.Rows[e.RowIndex].Cells["Codigo"].Value = maquinariaFila.id;
+            dgvMaquinaria.Rows[e.RowIndex].Cells["Tipo"].Value = maquinariaFila.tipo;
         }
     }
 }
