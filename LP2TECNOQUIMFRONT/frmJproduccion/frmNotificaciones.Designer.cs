@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 556);
+            this.panel1.Size = new System.Drawing.Size(166, 502);
             this.panel1.TabIndex = 5;
             // 
             // btnPerfil
@@ -157,7 +157,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblNombre.Location = new System.Drawing.Point(200, 50);
+            this.lblNombre.Location = new System.Drawing.Point(199, 20);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(127, 24);
             this.lblNombre.TabIndex = 33;
@@ -179,7 +179,7 @@
             this.dgvHistorialPlan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Presentacion});
-            this.dgvHistorialPlan.Location = new System.Drawing.Point(205, 101);
+            this.dgvHistorialPlan.Location = new System.Drawing.Point(204, 71);
             this.dgvHistorialPlan.Name = "dgvHistorialPlan";
             this.dgvHistorialPlan.ReadOnly = true;
             this.dgvHistorialPlan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -206,11 +206,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(1084, 556);
+            this.ClientSize = new System.Drawing.Size(1084, 502);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvHistorialPlan);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmNotificaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNotificaciones";
