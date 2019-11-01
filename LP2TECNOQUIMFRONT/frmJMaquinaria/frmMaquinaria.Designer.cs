@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.dgvMaquinaria = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinaria)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(132, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 30);
-            this.textBox1.TabIndex = 31;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(132, 26);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(274, 30);
+            this.txtNombre.TabIndex = 31;
             // 
             // btnBuscar
             // 
@@ -58,6 +58,7 @@
             this.btnBuscar.TabIndex = 30;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblNombre
             // 
@@ -93,6 +94,7 @@
             this.dgvMaquinaria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMaquinaria.Size = new System.Drawing.Size(842, 398);
             this.dgvMaquinaria.TabIndex = 28;
+            this.dgvMaquinaria.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMaquinaria_CellFormatting);
             // 
             // Codigo
             // 
@@ -115,16 +117,17 @@
             this.Tipo.ReadOnly = true;
             this.Tipo.Width = 200;
             // 
-            // button1
+            // btnSeleccionar
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(743, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 33);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Seleccionar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.Location = new System.Drawing.Point(743, 26);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(126, 33);
+            this.btnSeleccionar.TabIndex = 32;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click_1);
             // 
             // frmMaquinaria
             // 
@@ -132,8 +135,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.ClientSize = new System.Drawing.Size(903, 508);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnSeleccionar);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dgvMaquinaria);
@@ -147,13 +150,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.DataGridView dgvMaquinaria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }

@@ -61,7 +61,7 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(740, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(771, 32);
             this.toolStrip1.TabIndex = 27;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -120,7 +120,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 63);
+            this.groupBox1.Location = new System.Drawing.Point(28, 63);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(716, 297);
             this.groupBox1.TabIndex = 32;
@@ -221,7 +221,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(740, 399);
+            this.ClientSize = new System.Drawing.Size(771, 399);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmGestionarEmpleado";

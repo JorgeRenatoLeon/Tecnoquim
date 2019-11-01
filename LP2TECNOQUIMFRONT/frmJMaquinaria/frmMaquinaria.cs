@@ -25,7 +25,17 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         public maquinaria MaquinariaSeleccionada { get => maquinariaSeleccionada; set => maquinariaSeleccionada = value; }
 
-        private void btnSeleccionar_Click(object sender, EventArgs e)
+        
+
+        private void dgvMaquinaria_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            Service.maquinaria maquinariaFila = (Service.maquinaria)dgvMaquinaria.Rows[e.RowIndex].DataBoundItem;
+            dgvMaquinaria.Rows[e.RowIndex].Cells["Nombre"].Value = maquinariaFila.nombre;
+            dgvMaquinaria.Rows[e.RowIndex].Cells["Codigo"].Value = maquinariaFila.id;
+            dgvMaquinaria.Rows[e.RowIndex].Cells["Tipo"].Value = maquinariaFila.tipo;
+        }
+
+        private void btnSeleccionar_Click_1(object sender, EventArgs e)
         {
             MaquinariaSeleccionada = (Service.maquinaria)dgvMaquinaria.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
@@ -34,14 +44,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             dgvMaquinaria.DataSource = DBController.listarMaquinaria();
-        }
-
-        private void dgvMaquinaria_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            Service.maquinaria maquinariaFila = (Service.maquinaria)dgvMaquinaria.Rows[e.RowIndex].DataBoundItem;
-            dgvMaquinaria.Rows[e.RowIndex].Cells["Nombre"].Value = maquinariaFila.nombre;
-            dgvMaquinaria.Rows[e.RowIndex].Cells["Codigo"].Value = maquinariaFila.id;
-            dgvMaquinaria.Rows[e.RowIndex].Cells["Tipo"].Value = maquinariaFila.tipo;
         }
     }
 }

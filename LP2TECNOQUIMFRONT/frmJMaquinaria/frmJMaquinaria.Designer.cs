@@ -47,8 +47,9 @@
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -220,7 +221,8 @@
             this.btnModificar,
             this.btnGuardar,
             this.btnBuscar,
-            this.btnCancelar});
+            this.btnEliminar,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(166, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(736, 35);
@@ -245,7 +247,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(116, 32);
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnGuardar
             // 
@@ -265,17 +267,17 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(88, 32);
             this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // btnCancelar
+            // btnEliminar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(106, 32);
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(102, 32);
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label1
             // 
@@ -287,6 +289,15 @@
             this.label1.Size = new System.Drawing.Size(293, 31);
             this.label1.TabIndex = 40;
             this.label1.Text = "Registro de Maquinaria";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(106, 32);
+            this.toolStripButton1.Text = "Cancelar";
             // 
             // frmJMaquinaria
             // 
@@ -336,6 +347,7 @@
         private System.Windows.Forms.ToolStripButton btnGuardar;
         private System.Windows.Forms.ToolStripButton btnBuscar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.ToolStripButton btnEliminar;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

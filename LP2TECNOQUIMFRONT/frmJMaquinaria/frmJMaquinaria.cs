@@ -90,24 +90,24 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             formRegistro.Visible = true;
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            estadoObj = Estado.Modificar;
-            estadoComponentes(Estado.Modificar);
-        }
+            frmMaquinaria formMaquinaria = new frmMaquinaria();
+            if (formMaquinaria.ShowDialog() == DialogResult.OK)
+            {
+                maquinaria = formMaquinaria.MaquinariaSeleccionada;
+                txtNOrden.Text = maquinaria.id.ToString();
+                txtNombre.Text= maquinaria.nombre;
+                txtTipo.Text=maquinaria.tipo;
+            }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            frmMaquinaria formGestion = new frmMaquinaria();
-            formGestion.Visible = true;
-            this.Visible = false;
         }
-
+        
         private void guardarToolStripButton_Click(object sender, EventArgs e)
         {
             maquinaria = new Service.maquinaria();
             maquinaria.nombre = txtNombre.Text;
-            maquinaria.id = Int32.Parse(txtNOrden.Text);
+            maquinaria.id = int.Parse(txtNOrden.Text);
             maquinaria.tipo = txtTipo.Text;
             if (estadoObj == Estado.Nuevo)
             {
@@ -121,6 +121,11 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             }
             estadoComponentes(Estado.Inicial);
             
+        }
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            estadoObj = Estado.Modificar;
+            estadoComponentes(Estado.Modificar);
         }
 
         private void nuevoToolStripButton_Click(object sender, EventArgs e)
@@ -144,7 +149,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
                     btnGuardar.Enabled = false;
-                    btnCancelar.Enabled = false;
+                    btnEliminar.Enabled = false;
                     btnBuscar.Enabled = true;
                     //Campos de Texto
                     txtNOrden.Enabled = false;
@@ -160,7 +165,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
-                    btnCancelar.Enabled = true;
+                    btnEliminar.Enabled = true;
                     btnBuscar.Enabled = false;
                     //Campos de Texto
                     txtNOrden.Enabled = true;
@@ -172,7 +177,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
                     btnNuevo.Enabled = false;
                     btnModificar.Enabled = true;
                     btnGuardar.Enabled = false;
-                    btnCancelar.Enabled = true;
+                    btnEliminar.Enabled = true;
                     btnBuscar.Enabled = false;
                     break;
                 case Estado.Modificar:
@@ -184,7 +189,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
-                    btnCancelar.Enabled = true;
+                    btnEliminar.Enabled = true;
                     btnBuscar.Enabled = false;
                     //Campos de Texto
                     txtNOrden.Enabled = true;
@@ -206,5 +211,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
         }
+
+       
     }
 }

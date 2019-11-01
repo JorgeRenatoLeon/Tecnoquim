@@ -32,7 +32,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.dgvHistorialPlan = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,17 +69,6 @@
             this.lblNombre.Size = new System.Drawing.Size(84, 24);
             this.lblNombre.TabIndex = 30;
             this.lblNombre.Text = "Ordenes";
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(742, 23);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(126, 33);
-            this.btnSeleccionar.TabIndex = 29;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
             // 
             // dgvHistorialPlan
             // 
@@ -144,7 +132,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvHistorialPlan);
             this.Name = "frmOrdenes";
             this.Text = "frmOrdenes";
@@ -159,7 +146,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridView dgvHistorialPlan;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;

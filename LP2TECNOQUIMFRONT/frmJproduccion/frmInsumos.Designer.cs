@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.dgvHistorialPlan = new System.Windows.Forms.DataGridView();
+            this.dgvInsumo = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Granulidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Granularidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Restriccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsumo)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -60,6 +60,7 @@
             this.btnBuscar.TabIndex = 26;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblNombre
             // 
@@ -72,32 +73,33 @@
             this.lblNombre.TabIndex = 25;
             this.lblNombre.Text = "Insumos";
             // 
-            // dgvHistorialPlan
+            // dgvInsumo
             // 
-            this.dgvHistorialPlan.AllowUserToAddRows = false;
-            this.dgvHistorialPlan.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistorialPlan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvHistorialPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorialPlan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvInsumo.AllowUserToAddRows = false;
+            this.dgvInsumo.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInsumo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvInsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInsumo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
-            this.Granulidad,
+            this.Granularidad,
             this.Color,
             this.Cantidad,
             this.Unidad,
             this.Restriccion});
-            this.dgvHistorialPlan.Location = new System.Drawing.Point(26, 74);
-            this.dgvHistorialPlan.Name = "dgvHistorialPlan";
-            this.dgvHistorialPlan.ReadOnly = true;
-            this.dgvHistorialPlan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorialPlan.Size = new System.Drawing.Size(842, 398);
-            this.dgvHistorialPlan.TabIndex = 23;
+            this.dgvInsumo.Location = new System.Drawing.Point(26, 74);
+            this.dgvInsumo.Name = "dgvInsumo";
+            this.dgvInsumo.ReadOnly = true;
+            this.dgvInsumo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInsumo.Size = new System.Drawing.Size(842, 398);
+            this.dgvInsumo.TabIndex = 23;
+            this.dgvInsumo.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvInsumo_CellFormatting);
             // 
             // Nombre
             // 
@@ -106,12 +108,12 @@
             this.Nombre.ReadOnly = true;
             this.Nombre.Width = 200;
             // 
-            // Granulidad
+            // Granularidad
             // 
-            this.Granulidad.HeaderText = "Granulidad";
-            this.Granulidad.Name = "Granulidad";
-            this.Granulidad.ReadOnly = true;
-            this.Granulidad.Width = 150;
+            this.Granularidad.HeaderText = "Granularidad";
+            this.Granularidad.Name = "Granularidad";
+            this.Granularidad.ReadOnly = true;
+            this.Granularidad.Width = 150;
             // 
             // Color
             // 
@@ -147,11 +149,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.dgvHistorialPlan);
+            this.Controls.Add(this.dgvInsumo);
             this.Name = "frmInsumos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInsumos";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsumo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,9 +163,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.DataGridView dgvHistorialPlan;
+        private System.Windows.Forms.DataGridView dgvInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Granulidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Granularidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Color;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
