@@ -1,5 +1,4 @@
-﻿using LP2TECNOQUIMFRONT.Service;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2TECNOQUIMFRONT.Service;
 
-namespace LP2TECNOQUIMFRONT.frmJAlmacen
+namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
-    public partial class frmProductos : Form
+
+    public partial class frmProducto : Form
     {
         private Service.producto productoSeleccionado;
         Service.ServicioClient DBController = new Service.ServicioClient();
-        public frmProductos()
+        public frmProducto()
         {
             InitializeComponent();
             dgvProductos.AutoGenerateColumns = false;
@@ -26,14 +27,9 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvProductos.DataSource = DBController.listarProductos("");
+            dgvProductos.DataSource = DBController.listarProductos(txtNombre.Text);
         }
-                
-        private void btnSeleccionar_Click_1(object sender, EventArgs e)
-        {
-            ProductoSeleccionado = (Service.producto)dgvProductos.CurrentRow.DataBoundItem;
-            this.DialogResult = DialogResult.OK;
-        }
+
 
         private void dgvProductos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -42,6 +38,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             dgvProductos.Rows[e.RowIndex].Cells["Presentacion"].Value = prodFila.presentacion;
             dgvProductos.Rows[e.RowIndex].Cells["Granularidad"].Value = prodFila.granularidad;
             dgvProductos.Rows[e.RowIndex].Cells["Restriccion"].Value = prodFila.restriccion;
+
         }
     }
 }
