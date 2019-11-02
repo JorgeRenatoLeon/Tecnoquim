@@ -20,7 +20,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         {
             InitializeComponent();
             dgvInsumo.AutoGenerateColumns = false;
-            dgvInsumo.DataSource = DBController.listarInsumo();
+            //dgvInsumo.DataSource = DBController.listarInsumo();
         }
 
         public insumo InsumoSeleccionado { get => insumoSeleccionado; set => insumoSeleccionado = value; }
@@ -69,7 +69,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvInsumo.DataSource = DBController.listarInsumo();
+            //dgvInsumo.DataSource = DBController.listarInsumo();
         }
 
         private void dgvInsumo_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

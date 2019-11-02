@@ -20,7 +20,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         {
             InitializeComponent();
             dgvInsumo.AutoGenerateColumns = false;
-            dgvInsumo.DataSource = DBController.listarInsumo();
+            //dgvInsumo.DataSource = DBController.listarInsumo();
         }
 
         public insumo InsumoSeleccionado { get => insumoSeleccionado; set => insumoSeleccionado = value; }
@@ -64,7 +64,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvInsumo.DataSource = DBController.listarInsumo();
+            //dgvInsumo.DataSource = DBController.listarInsumo();
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

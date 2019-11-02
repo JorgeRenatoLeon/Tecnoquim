@@ -15,8 +15,8 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
 {
     public partial class frmLogin : Form
     {
-        //private Service.usuario usuario;
-        //Service.ServicioClient DBController = new Service.ServicioClient();
+        private Service.trabajador trabajador = new Service.trabajador();
+        Service.ServicioClient DBController = new Service.ServicioClient();
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -47,23 +47,24 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             if(this.txtUsuario.Text != "Usuario" && this.txtUsuario.Text != ""){
                 if (this.txtContrasena.Text != "Contrasena" && this.txtContrasena.Text != "")
                 {
-                    //usuario.idUsuario = Int32.Parse(this.txtUsuario.Text);
-                    //usuario.password = this.txtContrasena.Text;
-                    //DBController.verificarUsuario(usuario);
-                    if (this.txtUsuario.Text == "admin")
+                    trabajador.usuario = new Service.usuario();
+                    trabajador.usuario.username = this.txtUsuario.Text;
+                    trabajador.usuario.password = this.txtContrasena.Text;
+                    trabajador = DBController.verificarUsuario(trabajador.usuario);
+                    if (trabajador != null)
                     {
-                        if (this.txtContrasena.Text == "1234")
+                        if (trabajador.rol.descripcion == "GERENTE GENERAL")
                         {
-                            frmGerente.frmGerente formGerente = new frmGerente.frmGerente(0,this.txtUsuario.Text);
+                            frmGerente.frmGerente formGerente = new frmGerente.frmGerente(0, trabajador);
                             formGerente.Visible = true;
                         }
-                        else
-                        {
-                            MessageBox.Show("Contraseña Incorrecta");
-                            this.Visible = true;
-                        }
                     }
-                    else if (this.txtUsuario.Text == "prod")
+                    else
+                    {
+                        MessageBox.Show("Datos de Ingreso Incorrectos");
+                        this.Visible = true;
+                    }
+                    if (this.txtUsuario.Text == "prod")
                     {
                         if (this.txtContrasena.Text == "1234")
                         {

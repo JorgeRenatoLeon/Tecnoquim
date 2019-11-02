@@ -8,7 +8,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
     public partial class frmGerente : Form
     {
         int close = 0;
-        public frmGerente(int cont=0, string usuario="")
+        public frmGerente(int cont = 0, Service.trabajador trabajador = null)
         {
             if (cont != 0)
             {
@@ -24,7 +24,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
                 InitializeComponent();
 
-                MessageBox.Show("Bienvenido "+usuario);
+                MessageBox.Show("Bienvenido " + trabajador.nombres + " " + trabajador.apellidos);
 
                 t.Abort();
             }
