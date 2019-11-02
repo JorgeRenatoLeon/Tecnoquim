@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfil));
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,44 +65,47 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // textBox4
+            // txtDNI
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox4.Location = new System.Drawing.Point(486, 273);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(328, 30);
-            this.textBox4.TabIndex = 59;
+            this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtDNI.Location = new System.Drawing.Point(486, 146);
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.ReadOnly = true;
+            this.txtDNI.Size = new System.Drawing.Size(328, 30);
+            this.txtDNI.TabIndex = 59;
             // 
-            // textBox3
+            // txtCorreo
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox3.Location = new System.Drawing.Point(486, 332);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(328, 30);
-            this.textBox3.TabIndex = 58;
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtCorreo.Location = new System.Drawing.Point(486, 332);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(328, 30);
+            this.txtCorreo.TabIndex = 58;
             // 
-            // textBox2
+            // txtApellido
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox2.Location = new System.Drawing.Point(486, 211);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(328, 30);
-            this.textBox2.TabIndex = 57;
+            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtApellido.Location = new System.Drawing.Point(486, 268);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.ReadOnly = true;
+            this.txtApellido.Size = new System.Drawing.Size(328, 30);
+            this.txtApellido.TabIndex = 57;
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox1.Location = new System.Drawing.Point(486, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(328, 30);
-            this.textBox1.TabIndex = 56;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtNombre.Location = new System.Drawing.Point(486, 208);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ReadOnly = true;
+            this.txtNombre.Size = new System.Drawing.Size(328, 30);
+            this.txtNombre.TabIndex = 56;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(334, 278);
+            this.label5.Location = new System.Drawing.Point(334, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 25);
             this.label5.TabIndex = 55;
@@ -124,7 +127,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(334, 214);
+            this.label3.Location = new System.Drawing.Point(334, 271);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 25);
             this.label3.TabIndex = 53;
@@ -135,7 +138,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(334, 156);
+            this.label2.Location = new System.Drawing.Point(334, 213);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 25);
             this.label2.TabIndex = 52;
@@ -246,10 +249,10 @@
             this.ClientSize = new System.Drawing.Size(1084, 511);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDNI);
+            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -271,10 +274,10 @@
         #endregion
 
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDNI;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
