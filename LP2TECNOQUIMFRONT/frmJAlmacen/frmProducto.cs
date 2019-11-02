@@ -29,7 +29,6 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             {
                 case Estado.Inicial:
                     //Etiquetas
-                    lbl
                     lblNombre.Enabled = false;
                     lblPresentacion.Enabled = false;
                     lblGranu.Enabled = false;
@@ -166,9 +165,6 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             if (formProd.ShowDialog() == DialogResult.OK)
             {
                 producto = formProd.ProductoSeleccionado;
-                txt.Text = maquinaria.id.ToString();
-                txtNombre.Text = maquinaria.nombre;
-                txtTipo.Text = maquinaria.tipo;
             }
         }
 

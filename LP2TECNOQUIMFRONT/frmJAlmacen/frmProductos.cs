@@ -19,14 +19,14 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         {
             InitializeComponent();
             dgvProductos.AutoGenerateColumns = false;
-            dgvProductos.DataSource = DBController.listarProductos("");
+            dgvProductos.DataSource = DBController.listarProductos();
         }
 
         public producto ProductoSeleccionado { get => productoSeleccionado; set => productoSeleccionado = value; }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvProductos.DataSource = DBController.listarProductos("");
+            dgvProductos.DataSource = DBController.listarProductos();
         }
                 
         private void btnSeleccionar_Click_1(object sender, EventArgs e)
