@@ -134,11 +134,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(442, 132);
+            this.label1.Location = new System.Drawing.Point(522, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(477, 39);
+            this.label1.Size = new System.Drawing.Size(176, 39);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Registro de Stock";
+            this.label1.Text = "Registrar";
             // 
             // btnInsumos
             // 
@@ -165,7 +165,7 @@
             this.btnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnProductos.Location = new System.Drawing.Point(432, 246);
+            this.btnProductos.Location = new System.Drawing.Point(432, 230);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(349, 56);
             this.btnProductos.TabIndex = 13;

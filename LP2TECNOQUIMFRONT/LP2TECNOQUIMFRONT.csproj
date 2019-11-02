@@ -260,11 +260,11 @@
     <Compile Include="frmJproduccion\frmPolitica.Designer.cs">
       <DependentUpon>frmPolitica.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmJproduccion\frmProductos.cs">
+    <Compile Include="frmJproduccion\frmProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmJproduccion\frmProductos.Designer.cs">
-      <DependentUpon>frmProductos.cs</DependentUpon>
+    <Compile Include="frmJproduccion\frmProducto.Designer.cs">
+      <DependentUpon>frmProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJVenta\frmJVenta.cs">
       <SubType>Form</SubType>
@@ -406,8 +406,8 @@
     <EmbeddedResource Include="frmJproduccion\frmPolitica.resx">
       <DependentUpon>frmPolitica.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmJproduccion\frmProductos.resx">
-      <DependentUpon>frmProductos.cs</DependentUpon>
+    <EmbeddedResource Include="frmJproduccion\frmProducto.resx">
+      <DependentUpon>frmProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJVenta\frmJVenta.resx">
       <DependentUpon>frmJVenta.cs</DependentUpon>

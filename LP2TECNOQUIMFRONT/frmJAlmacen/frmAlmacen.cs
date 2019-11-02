@@ -81,5 +81,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         {
             if (close == 0) { Environment.Exit(0); }
         }
+
+        
     }
 }

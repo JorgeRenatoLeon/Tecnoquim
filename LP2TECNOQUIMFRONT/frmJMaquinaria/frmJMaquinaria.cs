@@ -45,10 +45,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             Application.Run(new frmSplash());
         }
 
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
@@ -68,10 +65,6 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             this.Close();
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-           
-        }
 
         private void frmJMaquinaria_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -84,11 +77,6 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             formRegistro.Visible = true;
         }
 
-        private void btnSeleccionar_Click(object sender, EventArgs e)
-        {
-            frmMaquinaria formRegistro = new frmMaquinaria();
-            formRegistro.Visible = true;
-        }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
