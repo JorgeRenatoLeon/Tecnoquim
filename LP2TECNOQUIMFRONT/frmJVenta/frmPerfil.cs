@@ -16,6 +16,10 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
         public frmPerfil()
         {
             InitializeComponent();
+            txtDNI.Text = "65489";
+            txtNombre.Text = "Alfredo";
+            txtApellido.Text = "Alvarado";
+            txtCorreo.Text = " ";
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -25,11 +29,6 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             fromJProd.Visible = true;
             close = 1;
             this.Close();
-        }
-
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnNotificaciones_Click(object sender, EventArgs e)

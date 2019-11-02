@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LP2TECNOQUIMFRONT.frmJVenta
 {
-    public partial class frmRegistrarProyeccionVenta : Form
+    public partial class frmBuscarProducto : Form
     {
-        public frmRegistrarProyeccionVenta()
+        public frmBuscarProducto()
         {
             InitializeComponent();
         }

@@ -51,7 +51,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblNombre.Location = new System.Drawing.Point(208, 43);
+            this.lblNombre.Location = new System.Drawing.Point(193, 44);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(127, 24);
             this.lblNombre.TabIndex = 35;
@@ -73,7 +73,7 @@
             this.dgvHistorialPlan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Presentacion});
-            this.dgvHistorialPlan.Location = new System.Drawing.Point(213, 93);
+            this.dgvHistorialPlan.Location = new System.Drawing.Point(198, 94);
             this.dgvHistorialPlan.Name = "dgvHistorialPlan";
             this.dgvHistorialPlan.ReadOnly = true;
             this.dgvHistorialPlan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -189,7 +189,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dgvHistorialPlan);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmNotificaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNotificaciones";
