@@ -182,11 +182,23 @@
     <Compile Include="frmGerente\frmBuscarPlanMaestro.Designer.cs">
       <DependentUpon>frmBuscarPlanMaestro.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmJVenta\frmRegistrarProyeccionVenta.cs">
+    <Compile Include="frmJVenta\frmBuscarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmJVenta\frmRegistrarProyeccionVenta.Designer.cs">
-      <DependentUpon>frmRegistrarProyeccionVenta.cs</DependentUpon>
+    <Compile Include="frmJVenta\frmBuscarProducto.Designer.cs">
+      <DependentUpon>frmBuscarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJVenta\frmBuscarProyeccionVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJVenta\frmBuscarProyeccionVenta.Designer.cs">
+      <DependentUpon>frmBuscarProyeccionVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJVenta\frmGestionarProyeccionVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJVenta\frmGestionarProyeccionVenta.Designer.cs">
+      <DependentUpon>frmGestionarProyeccionVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJproduccion\frmGestionarOrden.cs">
       <SubType>Form</SubType>
@@ -367,8 +379,14 @@
     <EmbeddedResource Include="frmGerente\frmBuscarPlanMaestro.resx">
       <DependentUpon>frmBuscarPlanMaestro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmJVenta\frmRegistrarProyeccionVenta.resx">
-      <DependentUpon>frmRegistrarProyeccionVenta.cs</DependentUpon>
+    <EmbeddedResource Include="frmJVenta\frmBuscarProducto.resx">
+      <DependentUpon>frmBuscarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJVenta\frmBuscarProyeccionVenta.resx">
+      <DependentUpon>frmBuscarProyeccionVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJVenta\frmGestionarProyeccionVenta.resx">
+      <DependentUpon>frmGestionarProyeccionVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmGestionarOrden.resx">
       <DependentUpon>frmGestionarOrden.cs</DependentUpon>
