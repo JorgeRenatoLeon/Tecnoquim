@@ -120,6 +120,7 @@
             this.txtNOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNOrden.Location = new System.Drawing.Point(129, 47);
             this.txtNOrden.Name = "txtNOrden";
+            this.txtNOrden.ReadOnly = true;
             this.txtNOrden.Size = new System.Drawing.Size(176, 29);
             this.txtNOrden.TabIndex = 20;
             // 
@@ -234,6 +235,7 @@
             this.txtNombreP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreP.Location = new System.Drawing.Point(210, 82);
             this.txtNombreP.Name = "txtNombreP";
+            this.txtNombreP.ReadOnly = true;
             this.txtNombreP.Size = new System.Drawing.Size(437, 29);
             this.txtNombreP.TabIndex = 39;
             // 
@@ -264,6 +266,7 @@
             this.txtCantidadP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidadP.Location = new System.Drawing.Point(232, 124);
             this.txtCantidadP.Name = "txtCantidadP";
+            this.txtCantidadP.ReadOnly = true;
             this.txtCantidadP.Size = new System.Drawing.Size(142, 29);
             this.txtCantidadP.TabIndex = 35;
             // 
@@ -282,6 +285,7 @@
             this.txtCodigoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoP.Location = new System.Drawing.Point(210, 38);
             this.txtCodigoP.Name = "txtCodigoP";
+            this.txtCodigoP.ReadOnly = true;
             this.txtCodigoP.Size = new System.Drawing.Size(164, 29);
             this.txtCodigoP.TabIndex = 20;
             // 
