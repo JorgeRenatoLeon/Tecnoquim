@@ -47,23 +47,23 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             if(this.txtUsuario.Text != "Usuario" && this.txtUsuario.Text != ""){
                 if (this.txtContrasena.Text != "Contrasena" && this.txtContrasena.Text != "")
                 {
-                    trabajador.usuario = new Service.usuario();
-                    trabajador.usuario.username = this.txtUsuario.Text;
-                    trabajador.usuario.password = this.txtContrasena.Text;
-                    trabajador = DBController.verificarUsuario(trabajador.usuario);
-                    if (trabajador != null)
-                    {
-                        if (trabajador.rol.descripcion == "GERENTE GENERAL")
-                        {
-                            frmGerente.frmGerente formGerente = new frmGerente.frmGerente(0, trabajador);
-                            formGerente.Visible = true;
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Datos de Ingreso Incorrectos");
-                        this.Visible = true;
-                    }
+                    //trabajador.usuario = new Service.usuario();
+                    //trabajador.usuario.username = this.txtUsuario.Text;
+                    //trabajador.usuario.password = this.txtContrasena.Text;
+                    //trabajador = DBController.verificarUsuario(trabajador.usuario);
+                    //if (trabajador != null)
+                    //{
+                    //    if (trabajador.rol.descripcion == "GERENTE GENERAL")
+                    //    {
+                    //        frmGerente.frmGerente formGerente = new frmGerente.frmGerente(0, trabajador);
+                    //        formGerente.Visible = true;
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Datos de Ingreso Incorrectos");
+                    //    this.Visible = true;
+                    //}
                     if (this.txtUsuario.Text == "prod")
                     {
                         if (this.txtContrasena.Text == "1234")

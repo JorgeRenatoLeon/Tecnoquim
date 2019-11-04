@@ -44,7 +44,6 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
         {
             Application.Run(new frmSplash());
         }
-
         
 
         private void btnPerfil_Click(object sender, EventArgs e)
@@ -88,22 +87,22 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
                 txtNombre.Text= maquinaria.nombre;
                 txtTipo.Text=maquinaria.tipo;
             }
-
+            estadoComponentes(Estado.Buscar);
         }
         
         private void guardarToolStripButton_Click(object sender, EventArgs e)
         {
             maquinaria = new Service.maquinaria();
             maquinaria.nombre = txtNombre.Text;
-            maquinaria.id = int.Parse(txtNOrden.Text);
             maquinaria.tipo = txtTipo.Text;
             if (estadoObj == Estado.Nuevo)
             {
-                MessageBox.Show("Maquinaria Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DBController.insertarMaquinaria(maquinaria);
+                MessageBox.Show("Maquinaria Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (estadoObj == Estado.Modificar) 
             {
+                maquinaria.id =int.Parse(txtNOrden.Text);
                 DBController.actualizarMaquinaria(maquinaria);
                 MessageBox.Show("Maquinaria Actualizada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

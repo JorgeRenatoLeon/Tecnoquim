@@ -20,14 +20,14 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         {
             InitializeComponent();
             dgvProductos.AutoGenerateColumns = false;
-            dgvProductos.DataSource = DBController.listarProductos();
+            dgvProductos.DataSource = DBController.listarProductos("");
         }
 
         public producto ProductoSeleccionado { get => productoSeleccionado; set => productoSeleccionado = value; }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvProductos.DataSource = DBController.listarProductos();
+            dgvProductos.DataSource = DBController.listarProductos(txtNombre.Text);
         }
 
 

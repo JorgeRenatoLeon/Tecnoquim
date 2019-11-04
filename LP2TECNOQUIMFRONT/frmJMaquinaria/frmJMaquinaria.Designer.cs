@@ -48,8 +48,8 @@
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -200,6 +200,7 @@
             this.txtNOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNOrden.Location = new System.Drawing.Point(220, 44);
             this.txtNOrden.Name = "txtNOrden";
+            this.txtNOrden.ReadOnly = true;
             this.txtNOrden.Size = new System.Drawing.Size(187, 29);
             this.txtNOrden.TabIndex = 20;
             // 
@@ -221,7 +222,7 @@
             this.btnGuardar,
             this.btnBuscar,
             this.btnEliminar,
-            this.toolStripButton1});
+            this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(166, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(736, 35);
@@ -278,6 +279,15 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(106, 32);
+            this.btnCancelar.Text = "Cancelar";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -288,15 +298,6 @@
             this.label1.Size = new System.Drawing.Size(293, 31);
             this.label1.TabIndex = 40;
             this.label1.Text = "Registro de Maquinaria";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(106, 32);
-            this.toolStripButton1.Text = "Cancelar";
             // 
             // frmJMaquinaria
             // 
@@ -347,6 +348,6 @@
         private System.Windows.Forms.ToolStripButton btnBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripButton btnEliminar;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btnCancelar;
     }
 }

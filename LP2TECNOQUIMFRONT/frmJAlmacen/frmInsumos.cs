@@ -20,37 +20,11 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         {
             InitializeComponent();
             dgvInsumo.AutoGenerateColumns = false;
-            //dgvInsumo.DataSource = DBController.listarInsumo();
+            dgvInsumo.DataSource = DBController.listarInsumo("");
         }
 
         public insumo InsumoSeleccionado { get => insumoSeleccionado; set => insumoSeleccionado = value; }
-
-        private void pbMinimize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Minimized;
-            }
-        }
-
-        private void pbMaximize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                WindowState = FormWindowState.Normal;
-            }
-        }
-
-        private void pbExit_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-        
-                     
+                            
 
         private void dgvInsumo_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -60,11 +34,20 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             dgvInsumo.Rows[e.RowIndex].Cells["Color"].Value = insumoFila.color;
             dgvInsumo.Rows[e.RowIndex].Cells["Cantidad"].Value = insumoFila.cantidad;
             dgvInsumo.Rows[e.RowIndex].Cells["Unidad"].Value = insumoFila.unidad;
+            if (insumoFila.restriccion)
+            {
+                dgvInsumo.Rows[e.RowIndex].Cells["Restriccion"].Value = "Si";
+            }
+            else
+            {
+                dgvInsumo.Rows[e.RowIndex].Cells["Restriccion"].Value = "No";
+            }
+            
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //dgvInsumo.DataSource = DBController.listarInsumo();
+            dgvInsumo.DataSource = DBController.listarInsumo(txtNombre.Text);
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

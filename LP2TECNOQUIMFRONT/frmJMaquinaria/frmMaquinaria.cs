@@ -20,12 +20,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         {
             InitializeComponent();
             dgvMaquinaria.AutoGenerateColumns = false;
-            dgvMaquinaria.DataSource = DBController.listarMaquinaria();
+            dgvMaquinaria.DataSource = DBController.listarMaquinaria("");
         }
 
         public maquinaria MaquinariaSeleccionada { get => maquinariaSeleccionada; set => maquinariaSeleccionada = value; }
-
-        
+               
 
         private void dgvMaquinaria_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -43,7 +42,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvMaquinaria.DataSource = DBController.listarMaquinaria();
+            dgvMaquinaria.DataSource = DBController.listarMaquinaria(txtNombre.Text);
         }
     }
 }

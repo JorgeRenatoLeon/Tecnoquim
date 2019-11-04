@@ -7,13 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2TECNOQUIMFRONT.Service;
 
 namespace LP2TECNOQUIMFRONT.frmJAlmacen
 {   
     public partial class frmProducto : Form
     {
+        int flag=0;
         Service.producto producto;
+        Service.lineaInsumo linea;
+        Service.insumo insumo;
         Service.instructivo instructivo;
+        BindingList<Service.lineaInsumo> lineas;
         Service.ServicioClient DBController = new Service.ServicioClient();
         Estado estadoObj;
 
@@ -29,6 +34,8 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             {
                 case Estado.Inicial:
                     //Etiquetas
+                    lblidProd.Enabled = false;
+                    lblIdInstructivo.Enabled = false;
                     lblNombre.Enabled = false;
                     lblPresentacion.Enabled = false;
                     lblGranu.Enabled = false;
@@ -45,6 +52,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     btnBuscar.Enabled = true;
                     //Campos de Texto
                     txtNomProd.Enabled = false;
+                    txtidinst.Enabled = false;
                     txtPres.Enabled = false;
                     txtGranu.Enabled = false;
                     txtAct.Enabled = false;
@@ -54,6 +62,8 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     break;
                 case Estado.Nuevo:
                     //Etiquetas
+                    lblidProd.Enabled = true;
+                    lblIdInstructivo.Enabled = true;
                     lblNombre.Enabled = true;
                     lblPresentacion.Enabled = true;
                     lblGranu.Enabled = true;
@@ -70,6 +80,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     btnBuscar.Enabled = false;
                     //Campos de Texto
                     txtNomProd.Enabled = true;
+                    txtidinst.Enabled = true;
                     txtPres.Enabled = true;
                     txtGranu.Enabled = true;
                     txtAct.Enabled = true;
@@ -87,6 +98,8 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     break;
                 case Estado.Modificar:
                     //Etiquetas
+                    lblidProd.Enabled = true;
+                    lblIdInstructivo.Enabled = true;
                     lblNombre.Enabled = true;
                     lblPresentacion.Enabled = true;
                     lblGranu.Enabled = true;
@@ -103,6 +116,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     btnBuscar.Enabled = false;
                     //Campos de Texto
                     txtNomProd.Enabled = true;
+                    txtidinst.Enabled = true;
                     txtPres.Enabled = true;
                     txtGranu.Enabled = true;
                     txtAct.Enabled = true;
@@ -121,12 +135,16 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             txtAct.Text = "";
             txtIdInsumo.Text = "";
             txtCant.Text = "";
+            dgvInsumos.Rows.Clear();
+            dgvInsumos.Refresh();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             limpiarComponentes();
             producto = new Service.producto();
+            instructivo = new Service.instructivo();
+            lineas = new BindingList<Service.lineaInsumo>();
             estadoObj = Estado.Nuevo;
             estadoComponentes(Estado.Nuevo);
         }
@@ -137,16 +155,28 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             producto.nombre = txtNomProd.Text;
             producto.presentacion = txtPres.Text;
             producto.granularidad = float.Parse(txtGranu.Text);
-            instructivo = new Service.instructivo();
-            producto.instructivo = instructivo;
 
+            instructivo = new Service.instructivo();
+            instructivo.actividades = txtAct.Text;
+            instructivo.insumos = lineas.ToArray();
+            producto.instructivo = instructivo; 
+            if (flag == 1)
+            {
+                producto.restriccion = true;
+            }
+            else
+            {
+                producto.restriccion = false;
+            }          
             if (estadoObj == Estado.Nuevo)
             {
-                MessageBox.Show("Producto Registrado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DBController.insertarProducto(producto);
+                MessageBox.Show("Producto Registrado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             else if (estadoObj == Estado.Modificar)
             {
+                producto.idProducto= int.Parse(txtidprod.Text);
                 DBController.actualizarProducto(producto);
                 MessageBox.Show("Producto Actualizado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -165,6 +195,13 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             if (formProd.ShowDialog() == DialogResult.OK)
             {
                 producto = formProd.ProductoSeleccionado;
+                txtidprod.Text=producto.idProducto.ToString();
+                txtNomProd.Text = producto.nombre;
+                txtPres.Text = producto.presentacion;
+                txtGranu.Text = producto.granularidad.ToString();
+                txtidinst.Text = producto.instructivo.id.ToString();
+                txtAct.Text = producto.instructivo.actividades;
+                dgvInsumos.DataSource = DBController.listarLineaInsumo(producto.instructivo.id);
             }
         }
 
@@ -172,6 +209,66 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         {
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            linea = new Service.lineaInsumo();
+            linea.insumo = new Service.insumo();
+            linea.insumo = insumo;
+            linea.cantInsumo = int.Parse(txtCant.Text);
+            agregarTabla(linea);
+            lineas.Add(linea);
+        }
+
+        private void agregarTabla(lineaInsumo l)
+        {
+            if (flag == 1)
+            {
+                dgvInsumos.Rows.Add(l.insumo.nombre, l.insumo.cantidad, l.insumo.unidad,
+                l.insumo.granularidad, l.insumo.color,"Si");
+            }
+            else
+            {
+                dgvInsumos.Rows.Add(l.insumo.nombre, l.insumo.cantidad, l.insumo.unidad,
+                l.insumo.granularidad, l.insumo.color,"No");
+            }
+            
+        }
+
+        private void btnBuscarInsumo_Click(object sender, EventArgs e)
+        {
+            frmInsumos formInsumos = new frmInsumos();
+            if (formInsumos.ShowDialog() == DialogResult.OK)
+            {
+                insumo = formInsumos.InsumoSeleccionado;
+                txtIdInsumo.Text = insumo.id.ToString();
+                txtNomInsumo.Text = insumo.nombre;
+                if (insumo.restriccion)
+                {
+                    flag = 1;
+                }
+
+            }
+
+        }
+
+        private void dgvInsumos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            //Service.lineaInsumo filalinea = (Service.lineaInsumo)dgvInsumos.Rows[e.RowIndex].DataBoundItem;
+            //dgvInsumos.Rows[e.RowIndex].Cells["Nombre"].Value = filalinea.insumo.nombre;
+            //dgvInsumos.Rows[e.RowIndex].Cells["cantidad"].Value = filalinea.insumo.cantidad;
+            //dgvInsumos.Rows[e.RowIndex].Cells["Unidad"].Value = filalinea.insumo.unidad;
+            //dgvInsumos.Rows[e.RowIndex].Cells["Granularidad"].Value = filalinea.insumo.granularidad;
+            //dgvInsumos.Rows[e.RowIndex].Cells["Color"].Value = filalinea.insumo.color;
+            //if (filalinea.insumo.restriccion)
+            //{
+            //    dgvInsumos.Rows[e.RowIndex].Cells["Restriccion"].Value = "Si";
+            //}
+            //else
+            //{
+            //    dgvInsumos.Rows[e.RowIndex].Cells["Restriccion"].Value = "No";
+            //}
         }
     }
 }
