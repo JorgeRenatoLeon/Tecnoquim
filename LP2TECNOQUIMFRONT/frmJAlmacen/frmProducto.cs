@@ -149,6 +149,12 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             estadoComponentes(Estado.Nuevo);
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            estadoObj = Estado.Modificar;
+            estadoComponentes(Estado.Modificar);
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             producto = new Service.producto();
@@ -159,7 +165,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             instructivo = new Service.instructivo();
             instructivo.actividades = txtAct.Text;
             instructivo.insumos = lineas.ToArray();
-            producto.instructivo = instructivo; 
+            producto.instructivo = instructivo;
             if (flag == 1)
             {
                 producto.restriccion = true;
@@ -167,7 +173,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             else
             {
                 producto.restriccion = false;
-            }          
+            }
             if (estadoObj == Estado.Nuevo)
             {
                 DBController.insertarProducto(producto);
@@ -176,17 +182,11 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             }
             else if (estadoObj == Estado.Modificar)
             {
-                producto.idProducto= int.Parse(txtidprod.Text);
+                producto.idProducto = int.Parse(txtidprod.Text);
                 DBController.actualizarProducto(producto);
                 MessageBox.Show("Producto Actualizado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             estadoComponentes(Estado.Inicial);
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            estadoObj = Estado.Modificar;
-            estadoComponentes(Estado.Modificar);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -195,7 +195,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             if (formProd.ShowDialog() == DialogResult.OK)
             {
                 producto = formProd.ProductoSeleccionado;
-                txtidprod.Text=producto.idProducto.ToString();
+                txtidprod.Text = producto.idProducto.ToString();
                 txtNomProd.Text = producto.nombre;
                 txtPres.Text = producto.presentacion;
                 txtGranu.Text = producto.granularidad.ToString();
@@ -203,6 +203,16 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 txtAct.Text = producto.instructivo.actividades;
                 dgvInsumos.DataSource = DBController.listarLineaInsumo(producto.instructivo.id);
             }
+        }
+
+        private void btnElimina_Click(object sender, EventArgs e)
+        {
+            DBController.eliminarProducto(int.Parse(txtidprod.Text));
+            limpiarComponentes();
+            estadoObj = Estado.Inicial;
+            estadoComponentes(Estado.Inicial);
+            MessageBox.Show("Producto Eliminado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -226,14 +236,13 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             if (flag == 1)
             {
                 dgvInsumos.Rows.Add(l.insumo.nombre, l.insumo.cantidad, l.insumo.unidad,
-                l.insumo.granularidad, l.insumo.color,"Si");
+                l.insumo.granularidad, l.insumo.color, "Si");
             }
             else
             {
                 dgvInsumos.Rows.Add(l.insumo.nombre, l.insumo.cantidad, l.insumo.unidad,
-                l.insumo.granularidad, l.insumo.color,"No");
+                l.insumo.granularidad, l.insumo.color, "No");
             }
-            
         }
 
         private void btnBuscarInsumo_Click(object sender, EventArgs e)
@@ -250,25 +259,6 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 }
 
             }
-
-        }
-
-        private void dgvInsumos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            //Service.lineaInsumo filalinea = (Service.lineaInsumo)dgvInsumos.Rows[e.RowIndex].DataBoundItem;
-            //dgvInsumos.Rows[e.RowIndex].Cells["Nombre"].Value = filalinea.insumo.nombre;
-            //dgvInsumos.Rows[e.RowIndex].Cells["cantidad"].Value = filalinea.insumo.cantidad;
-            //dgvInsumos.Rows[e.RowIndex].Cells["Unidad"].Value = filalinea.insumo.unidad;
-            //dgvInsumos.Rows[e.RowIndex].Cells["Granularidad"].Value = filalinea.insumo.granularidad;
-            //dgvInsumos.Rows[e.RowIndex].Cells["Color"].Value = filalinea.insumo.color;
-            //if (filalinea.insumo.restriccion)
-            //{
-            //    dgvInsumos.Rows[e.RowIndex].Cells["Restriccion"].Value = "Si";
-            //}
-            //else
-            //{
-            //    dgvInsumos.Rows[e.RowIndex].Cells["Restriccion"].Value = "No";
-            //}
         }
     }
 }

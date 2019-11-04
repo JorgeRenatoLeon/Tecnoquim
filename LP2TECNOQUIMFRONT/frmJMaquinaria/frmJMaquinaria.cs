@@ -192,13 +192,20 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             txtNombre.Text = "";
             txtTipo.Text = "";
         }
-
+        
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
         }
 
-       
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DBController.eliminarMaquinaria(int.Parse(txtNOrden.Text));
+            MessageBox.Show("Maquinaria Eliminada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            limpiarComponentes();
+            estadoObj = Estado.Inicial;
+            estadoComponentes(Estado.Inicial);
+        }
     }
 }
