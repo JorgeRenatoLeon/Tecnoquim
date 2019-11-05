@@ -92,6 +92,12 @@
     <Compile Include="frmJAlmacen\frmAlmacen.Designer.cs">
       <DependentUpon>frmAlmacen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJAlmacen\frmInstructivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmInstructivo.Designer.cs">
+      <DependentUpon>frmInstructivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJAlmacen\frmInsumo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJAlmacen\frmAlmacen.resx">
       <DependentUpon>frmAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJAlmacen\frmInstructivo.resx">
+      <DependentUpon>frmInstructivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJAlmacen\frmInsumo.resx">
       <DependentUpon>frmInsumo.cs</DependentUpon>

@@ -57,8 +57,10 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     txtGranu.Enabled = false;
                     txtAct.Enabled = false;
                     txtIdInsumo.Enabled = false;
+                    txtNomInsumo.Enabled = false;
                     txtCant.Enabled = false;
-                    dgvInsumos.Enabled = false;
+                    dgvInsumos.Rows.Clear();
+                    dgvInsumos.Refresh();
                     break;
                 case Estado.Nuevo:
                     //Etiquetas
@@ -85,8 +87,10 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     txtGranu.Enabled = true;
                     txtAct.Enabled = true;
                     txtIdInsumo.Enabled = true;
+                    txtNomInsumo.Enabled = true;
                     txtCant.Enabled = true;
-                    dgvInsumos.Enabled = true;
+                    dgvInsumos.Rows.Clear();
+                    dgvInsumos.Refresh();
                     break;
                 case Estado.Buscar:
                     //Botones
@@ -121,6 +125,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     txtGranu.Enabled = true;
                     txtAct.Enabled = true;
                     txtIdInsumo.Enabled = true;
+                    txtNomInsumo.Enabled = true;
                     txtCant.Enabled = true;
                     dgvInsumos.Enabled = true;
                     break;
@@ -135,6 +140,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             txtAct.Text = "";
             txtIdInsumo.Text = "";
             txtCant.Text = "";
+            txtNomInsumo.Text = "";
             dgvInsumos.Rows.Clear();
             dgvInsumos.Refresh();
         }
@@ -176,7 +182,15 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             }
             if (estadoObj == Estado.Nuevo)
             {
+
                 DBController.insertarProducto(producto);
+                Service.producto auxProd = new Service.producto();
+                DBController.insertarInstructivo(instructivo,producto.idProducto);
+                //int idInstru = DBController.buscarIdInstru(instructivo);
+                foreach (Service.lineaInsumo l in lineas)
+                {
+                    DBController.insertarLineaInsumo(l,instructivo.id);
+                }
                 MessageBox.Show("Producto Registrado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -203,6 +217,8 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 txtAct.Text = producto.instructivo.actividades;
                 dgvInsumos.DataSource = DBController.listarLineaInsumo(producto.instructivo.id);
             }
+            estadoObj = Estado.Buscar;
+            estadoComponentes(Estado.Buscar);
         }
 
         private void btnElimina_Click(object sender, EventArgs e)
