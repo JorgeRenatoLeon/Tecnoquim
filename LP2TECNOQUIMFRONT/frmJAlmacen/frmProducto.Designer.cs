@@ -42,20 +42,15 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtidinst = new System.Windows.Forms.TextBox();
             this.lblIdInstructivo = new System.Windows.Forms.Label();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
-            this.btnModificar = new System.Windows.Forms.ToolStripButton();
-            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
-            this.btnElimina = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.lblAct = new System.Windows.Forms.Label();
+            this.txtAct = new System.Windows.Forms.TextBox();
             this.dgvInsumos = new System.Windows.Forms.DataGridView();
-            this.Restriccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Granularidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Granularidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Restriccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.lblNomInsumo = new System.Windows.Forms.Label();
             this.txtNomInsumo = new System.Windows.Forms.TextBox();
@@ -66,13 +61,18 @@
             this.lblCantidad = new System.Windows.Forms.Label();
             this.txtCant = new System.Windows.Forms.TextBox();
             this.gbInsumos = new System.Windows.Forms.GroupBox();
-            this.txtAct = new System.Windows.Forms.TextBox();
-            this.lblAct = new System.Windows.Forms.Label();
+            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
+            this.btnModificar = new System.Windows.Forms.ToolStripButton();
+            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
+            this.btnElimina = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.gbDatos.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.gbInsumos.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -83,7 +83,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(17, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(304, 39);
+            this.label1.Size = new System.Drawing.Size(299, 39);
             this.label1.TabIndex = 16;
             this.label1.Text = "Gestionar Productos";
             // 
@@ -218,80 +218,24 @@
             this.lblIdInstructivo.TabIndex = 78;
             this.lblIdInstructivo.Text = "ID Instructivo: ";
             // 
-            // toolStrip2
+            // lblAct
             // 
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnNuevo,
-            this.btnModificar,
-            this.btnGuardar,
-            this.btnBuscar,
-            this.btnElimina,
-            this.btnCancelar});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(953, 35);
-            this.toolStrip2.TabIndex = 68;
-            this.toolStrip2.Text = "toolStrip2";
+            this.lblAct.AutoSize = true;
+            this.lblAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAct.ForeColor = System.Drawing.Color.White;
+            this.lblAct.Location = new System.Drawing.Point(36, 78);
+            this.lblAct.Name = "lblAct";
+            this.lblAct.Size = new System.Drawing.Size(124, 25);
+            this.lblAct.TabIndex = 36;
+            this.lblAct.Text = "Actividades: ";
             // 
-            // btnNuevo
+            // txtAct
             // 
-            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(90, 32);
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(116, 32);
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(103, 32);
-            this.btnGuardar.Text = "&Guardar";
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(88, 32);
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnElimina
-            // 
-            this.btnElimina.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnElimina.Image = ((System.Drawing.Image)(resources.GetObject("btnElimina.Image")));
-            this.btnElimina.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnElimina.Name = "btnElimina";
-            this.btnElimina.Size = new System.Drawing.Size(102, 32);
-            this.btnElimina.Text = "Eliminar";
-            this.btnElimina.Click += new System.EventHandler(this.btnElimina_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(106, 32);
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.txtAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtAct.Location = new System.Drawing.Point(180, 75);
+            this.txtAct.Name = "txtAct";
+            this.txtAct.Size = new System.Drawing.Size(487, 30);
+            this.txtAct.TabIndex = 37;
             // 
             // dgvInsumos
             // 
@@ -311,16 +255,21 @@
             this.dgvInsumos.Size = new System.Drawing.Size(838, 140);
             this.dgvInsumos.TabIndex = 70;
             // 
-            // Restriccion
+            // Nombre
             // 
-            this.Restriccion.HeaderText = "Restriccion";
-            this.Restriccion.Name = "Restriccion";
-            this.Restriccion.Width = 150;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 200;
             // 
-            // Color
+            // cantidad
             // 
-            this.Color.HeaderText = "Color";
-            this.Color.Name = "Color";
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            // 
+            // Unidad
+            // 
+            this.Unidad.HeaderText = "Unidad";
+            this.Unidad.Name = "Unidad";
             // 
             // Granularidad
             // 
@@ -328,21 +277,16 @@
             this.Granularidad.Name = "Granularidad";
             this.Granularidad.Width = 150;
             // 
-            // Unidad
+            // Color
             // 
-            this.Unidad.HeaderText = "Unidad";
-            this.Unidad.Name = "Unidad";
+            this.Color.HeaderText = "Color";
+            this.Color.Name = "Color";
             // 
-            // cantidad
+            // Restriccion
             // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 200;
+            this.Restriccion.HeaderText = "Restriccion";
+            this.Restriccion.Name = "Restriccion";
+            this.Restriccion.Width = 150;
             // 
             // btnBuscarInsumo
             // 
@@ -463,38 +407,94 @@
             this.gbInsumos.Controls.Add(this.dgvInsumos);
             this.gbInsumos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInsumos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gbInsumos.Location = new System.Drawing.Point(23, 440);
+            this.gbInsumos.Location = new System.Drawing.Point(23, 429);
             this.gbInsumos.Name = "gbInsumos";
-            this.gbInsumos.Size = new System.Drawing.Size(901, 308);
+            this.gbInsumos.Size = new System.Drawing.Size(901, 300);
             this.gbInsumos.TabIndex = 66;
             this.gbInsumos.TabStop = false;
             this.gbInsumos.Text = "Linea de Insumos";
             // 
-            // txtAct
+            // btnNuevo
             // 
-            this.txtAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtAct.Location = new System.Drawing.Point(180, 75);
-            this.txtAct.Name = "txtAct";
-            this.txtAct.Size = new System.Drawing.Size(487, 30);
-            this.txtAct.TabIndex = 37;
+            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(90, 32);
+            this.btnNuevo.Text = "&Nuevo";
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // lblAct
+            // btnModificar
             // 
-            this.lblAct.AutoSize = true;
-            this.lblAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAct.ForeColor = System.Drawing.Color.White;
-            this.lblAct.Location = new System.Drawing.Point(36, 78);
-            this.lblAct.Name = "lblAct";
-            this.lblAct.Size = new System.Drawing.Size(124, 25);
-            this.lblAct.TabIndex = 36;
-            this.lblAct.Text = "Actividades: ";
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(116, 32);
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(103, 32);
+            this.btnGuardar.Text = "&Guardar";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(88, 32);
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnElimina
+            // 
+            this.btnElimina.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnElimina.Image = ((System.Drawing.Image)(resources.GetObject("btnElimina.Image")));
+            this.btnElimina.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnElimina.Name = "btnElimina";
+            this.btnElimina.Size = new System.Drawing.Size(102, 32);
+            this.btnElimina.Text = "Eliminar";
+            this.btnElimina.Click += new System.EventHandler(this.btnElimina_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(106, 32);
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnNuevo,
+            this.btnModificar,
+            this.btnGuardar,
+            this.btnBuscar,
+            this.btnElimina,
+            this.btnCancelar});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(948, 35);
+            this.toolStrip2.TabIndex = 68;
+            this.toolStrip2.Text = "toolStrip2";
             // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(953, 741);
+            this.ClientSize = new System.Drawing.Size(948, 741);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbInsumos);
@@ -507,11 +507,11 @@
             this.gbDatos.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).EndInit();
             this.gbInsumos.ResumeLayout(false);
             this.gbInsumos.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -531,13 +531,6 @@
         private System.Windows.Forms.Label lblidProd;
         private System.Windows.Forms.TextBox txtidinst;
         private System.Windows.Forms.Label lblIdInstructivo;
-        private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton btnNuevo;
-        private System.Windows.Forms.ToolStripButton btnModificar;
-        private System.Windows.Forms.ToolStripButton btnGuardar;
-        private System.Windows.Forms.ToolStripButton btnBuscar;
-        private System.Windows.Forms.ToolStripButton btnElimina;
-        private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.Label lblAct;
         private System.Windows.Forms.TextBox txtAct;
         private System.Windows.Forms.DataGridView dgvInsumos;
@@ -557,5 +550,12 @@
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.TextBox txtCant;
         private System.Windows.Forms.GroupBox gbInsumos;
+        private System.Windows.Forms.ToolStripButton btnNuevo;
+        private System.Windows.Forms.ToolStripButton btnModificar;
+        private System.Windows.Forms.ToolStripButton btnGuardar;
+        private System.Windows.Forms.ToolStripButton btnBuscar;
+        private System.Windows.Forms.ToolStripButton btnElimina;
+        private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.ToolStrip toolStrip2;
     }
 }

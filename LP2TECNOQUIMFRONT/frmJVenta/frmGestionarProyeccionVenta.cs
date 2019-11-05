@@ -90,5 +90,10 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             estadoComponentes(Estado.Nuevo);
             limpiarComponentes();
         }
+
+        private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

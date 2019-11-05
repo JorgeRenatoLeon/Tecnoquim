@@ -160,15 +160,14 @@
             this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
             this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(3, 170);
+            this.btnPerfil.Location = new System.Drawing.Point(0, 184);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(163, 79);
             this.btnPerfil.TabIndex = 1;
-            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.Text = "Jefe de Produccion";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPerfil.UseVisualStyleBackColor = true;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnNotificaciones
             // 
@@ -178,7 +177,7 @@
             this.btnNotificaciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotificaciones.ForeColor = System.Drawing.Color.White;
             this.btnNotificaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificaciones.Image")));
-            this.btnNotificaciones.Location = new System.Drawing.Point(3, 304);
+            this.btnNotificaciones.Location = new System.Drawing.Point(0, 341);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Size = new System.Drawing.Size(163, 92);
             this.btnNotificaciones.TabIndex = 5;
@@ -186,7 +185,6 @@
             this.btnNotificaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNotificaciones.UseVisualStyleBackColor = true;
-            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
             // 
             // button4
             // 
@@ -196,7 +194,7 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(3, 240);
+            this.button4.Location = new System.Drawing.Point(0, 269);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(163, 79);
             this.button4.TabIndex = 1;
@@ -204,7 +202,6 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnHome
             // 
@@ -214,7 +211,7 @@
             this.btnHome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(3, 101);
+            this.btnHome.Location = new System.Drawing.Point(0, 99);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(163, 79);
             this.btnHome.TabIndex = 1;
@@ -222,7 +219,6 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panel3
             // 
@@ -259,7 +255,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPerfil";

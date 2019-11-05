@@ -34,8 +34,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
-            this.btnConsultas = new System.Windows.Forms.Button();
-            this.pbHome = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -82,8 +82,8 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
             this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.btnNotificaciones);
-            this.panel1.Controls.Add(this.btnConsultas);
-            this.panel1.Controls.Add(this.pbHome);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -99,15 +99,14 @@
             this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
             this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(0, 196);
+            this.btnPerfil.Location = new System.Drawing.Point(0, 184);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(163, 79);
-            this.btnPerfil.TabIndex = 6;
-            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.TabIndex = 1;
+            this.btnPerfil.Text = "Jefe de Produccion";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPerfil.UseVisualStyleBackColor = true;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnNotificaciones
             // 
@@ -117,7 +116,7 @@
             this.btnNotificaciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotificaciones.ForeColor = System.Drawing.Color.White;
             this.btnNotificaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificaciones.Image")));
-            this.btnNotificaciones.Location = new System.Drawing.Point(0, 344);
+            this.btnNotificaciones.Location = new System.Drawing.Point(0, 341);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Size = new System.Drawing.Size(163, 92);
             this.btnNotificaciones.TabIndex = 5;
@@ -125,43 +124,40 @@
             this.btnNotificaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNotificaciones.UseVisualStyleBackColor = true;
-            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
             // 
-            // btnConsultas
+            // button4
             // 
-            this.btnConsultas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultas.FlatAppearance.BorderSize = 0;
-            this.btnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultas.ForeColor = System.Drawing.Color.White;
-            this.btnConsultas.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultas.Image")));
-            this.btnConsultas.Location = new System.Drawing.Point(0, 258);
-            this.btnConsultas.Name = "btnConsultas";
-            this.btnConsultas.Size = new System.Drawing.Size(163, 79);
-            this.btnConsultas.TabIndex = 1;
-            this.btnConsultas.Text = "Consultas";
-            this.btnConsultas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnConsultas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnConsultas.UseVisualStyleBackColor = true;
-            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(0, 269);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(163, 79);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Consultas";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // pbHome
+            // btnHome
             // 
-            this.pbHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbHome.FlatAppearance.BorderSize = 0;
-            this.pbHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pbHome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pbHome.ForeColor = System.Drawing.Color.White;
-            this.pbHome.Image = ((System.Drawing.Image)(resources.GetObject("pbHome.Image")));
-            this.pbHome.Location = new System.Drawing.Point(0, 119);
-            this.pbHome.Name = "pbHome";
-            this.pbHome.Size = new System.Drawing.Size(163, 79);
-            this.pbHome.TabIndex = 1;
-            this.pbHome.Text = "Inicio";
-            this.pbHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.pbHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.pbHome.UseVisualStyleBackColor = true;
-            this.pbHome.Click += new System.EventHandler(this.pbHome_Click);
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(0, 99);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(163, 79);
+            this.btnHome.TabIndex = 1;
+            this.btnHome.Text = "Inicio";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnHome.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -208,8 +204,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnNotificaciones;
-        private System.Windows.Forms.Button btnConsultas;
-        private System.Windows.Forms.Button pbHome;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
     }

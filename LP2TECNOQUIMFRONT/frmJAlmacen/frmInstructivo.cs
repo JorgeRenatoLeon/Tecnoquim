@@ -12,11 +12,16 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 {
     public partial class frmInstructivo : Form
     {
+        Estado estadoObj;
+        Service.instructivo instructivo;
+        BindingList<Service.lineaInsumo> lineas;
+        Service.ServicioClient DBController = new Service.ServicioClient();
         public frmInstructivo()
         {
             InitializeComponent();
+            estadoComponentes(Estado.Inicial);
         }
-
+            
         public void estadoComponentes(Estado estado)
         {
             switch (estado)
@@ -30,16 +35,9 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     lblInsumo.Enabled = false;
                     lblNomInsumo.Enabled = false;
                     //Botones
-                    btnNuevo.Enabled = true;
-                    btnModificar.Enabled = false;
                     btnGuardar.Enabled = false;
-                    btnEliminar.Enabled = false;
-                    btnBuscar.Enabled = true;
                     //Campos de Texto
-                    txtNomProd.Enabled = false;
                     txtidinst.Enabled = false;
-                    txtPres.Enabled = false;
-                    txtGranu.Enabled = false;
                     txtAct.Enabled = false;
                     txtIdInsumo.Enabled = false;
                     txtNomInsumo.Enabled = false;
@@ -49,27 +47,16 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     break;
                 case Estado.Nuevo:
                     //Etiquetas
-                    lblidProd.Enabled = true;
                     lblIdInstructivo.Enabled = true;
-                    lblNombre.Enabled = true;
-                    lblPresentacion.Enabled = true;
-                    lblGranu.Enabled = true;
                     lblAct.Enabled = true;
                     lblNomInsumo.Enabled = true;
                     lblCantidad.Enabled = true;
                     lblInsumo.Enabled = true;
                     lblNomInsumo.Enabled = true;
                     //Botones
-                    btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
-                    btnModificar.Enabled = false;
-                    btnEliminar.Enabled = true;
-                    btnBuscar.Enabled = false;
                     //Campos de Texto
-                    txtNomProd.Enabled = true;
                     txtidinst.Enabled = true;
-                    txtPres.Enabled = true;
-                    txtGranu.Enabled = true;
                     txtAct.Enabled = true;
                     txtIdInsumo.Enabled = true;
                     txtNomInsumo.Enabled = true;
@@ -79,35 +66,20 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     break;
                 case Estado.Buscar:
                     //Botones
-                    btnNuevo.Enabled = false;
-                    btnModificar.Enabled = true;
                     btnGuardar.Enabled = false;
-                    btnEliminar.Enabled = true;
-                    btnBuscar.Enabled = false;
                     break;
                 case Estado.Modificar:
                     //Etiquetas
-                    lblidProd.Enabled = true;
                     lblIdInstructivo.Enabled = true;
-                    lblNombre.Enabled = true;
-                    lblPresentacion.Enabled = true;
-                    lblGranu.Enabled = true;
                     lblAct.Enabled = true;
                     lblNomInsumo.Enabled = true;
                     lblCantidad.Enabled = true;
                     lblInsumo.Enabled = true;
                     lblNomInsumo.Enabled = true;
                     //Botones
-                    btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
-                    btnModificar.Enabled = false;
-                    btnEliminar.Enabled = true;
-                    btnBuscar.Enabled = false;
                     //Campos de Texto
-                    txtNomProd.Enabled = true;
                     txtidinst.Enabled = true;
-                    txtPres.Enabled = true;
-                    txtGranu.Enabled = true;
                     txtAct.Enabled = true;
                     txtIdInsumo.Enabled = true;
                     txtNomInsumo.Enabled = true;
@@ -119,9 +91,6 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         public void limpiarComponentes()
         {
-            txtNomProd.Text = "";
-            txtPres.Text = "";
-            txtGranu.Text = "";
             txtAct.Text = "";
             txtIdInsumo.Text = "";
             txtCant.Text = "";
@@ -130,6 +99,19 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             dgvInsumos.Refresh();
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            instructivo = new Service.instructivo();
+            instructivo.actividades = txtAct.Text;
+            lineas = new BindingList<Service.lineaInsumo>();
+            instructivo.insumos = lineas.ToArray();
 
+            foreach (Service.lineaInsumo l in lineas)
+            {
+                DBController.insertarLineaInsumo(l, instructivo.id);
+            }
+            MessageBox.Show("Producto Registrado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
     }
 }

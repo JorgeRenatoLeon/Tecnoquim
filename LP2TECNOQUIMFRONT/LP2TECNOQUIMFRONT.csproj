@@ -92,6 +92,12 @@
     <Compile Include="frmJAlmacen\frmAlmacen.Designer.cs">
       <DependentUpon>frmAlmacen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJAlmacen\frmGestionarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmGestionarProducto.Designer.cs">
+      <DependentUpon>frmGestionarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJAlmacen\frmInstructivo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJAlmacen\frmAlmacen.resx">
       <DependentUpon>frmAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJAlmacen\frmGestionarProducto.resx">
+      <DependentUpon>frmGestionarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJAlmacen\frmInstructivo.resx">
       <DependentUpon>frmInstructivo.cs</DependentUpon>
@@ -759,6 +768,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reply.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

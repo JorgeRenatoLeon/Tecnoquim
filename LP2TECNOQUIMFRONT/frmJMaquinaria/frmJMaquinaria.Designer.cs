@@ -82,7 +82,7 @@
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(163, 79);
             this.btnPerfil.TabIndex = 6;
-            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.Text = "Jefe de Mantenimiento";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPerfil.UseVisualStyleBackColor = true;

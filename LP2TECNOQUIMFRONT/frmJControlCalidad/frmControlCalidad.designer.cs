@@ -64,7 +64,7 @@
             this.btnNotificar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotificar.ForeColor = System.Drawing.Color.White;
             this.btnNotificar.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificar.Image")));
-            this.btnNotificar.Location = new System.Drawing.Point(0, 267);
+            this.btnNotificar.Location = new System.Drawing.Point(0, 291);
             this.btnNotificar.Name = "btnNotificar";
             this.btnNotificar.Size = new System.Drawing.Size(163, 92);
             this.btnNotificar.TabIndex = 9;
@@ -82,11 +82,11 @@
             this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
             this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(0, 196);
+            this.btnPerfil.Location = new System.Drawing.Point(0, 206);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(163, 79);
             this.btnPerfil.TabIndex = 6;
-            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.Text = "Jefe de Control de Calidad";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPerfil.UseVisualStyleBackColor = true;

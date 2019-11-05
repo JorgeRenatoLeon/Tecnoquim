@@ -209,6 +209,10 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
         }
-       
+
+        private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

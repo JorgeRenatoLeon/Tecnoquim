@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNotificaciones));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNotificaciones));
             this.btnNotificaciones = new System.Windows.Forms.Panel();
             this.btnNotificar = new System.Windows.Forms.Button();
-            this.btnPerfil = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
@@ -40,6 +39,7 @@
             this.dgvHistorialPlan = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Presentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnNotificaciones.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -49,8 +49,8 @@
             // btnNotificaciones
             // 
             this.btnNotificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.btnNotificaciones.Controls.Add(this.button2);
             this.btnNotificaciones.Controls.Add(this.btnNotificar);
-            this.btnNotificaciones.Controls.Add(this.btnPerfil);
             this.btnNotificaciones.Controls.Add(this.btnInicio);
             this.btnNotificaciones.Controls.Add(this.panel3);
             this.btnNotificaciones.Dock = System.Windows.Forms.DockStyle.Left;
@@ -75,24 +75,6 @@
             this.btnNotificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNotificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNotificar.UseVisualStyleBackColor = true;
-            // 
-            // btnPerfil
-            // 
-            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPerfil.FlatAppearance.BorderSize = 0;
-            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.ForeColor = System.Drawing.Color.White;
-            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(0, 196);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(163, 79);
-            this.btnPerfil.TabIndex = 6;
-            this.btnPerfil.Text = "Perfil";
-            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPerfil.UseVisualStyleBackColor = true;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnInicio
             // 
@@ -180,6 +162,23 @@
             this.Presentacion.ReadOnly = true;
             this.Presentacion.Width = 600;
             // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(0, 195);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(163, 79);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Jefe de Almacen";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // frmNotificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,7 +205,6 @@
 
         private System.Windows.Forms.Panel btnNotificaciones;
         private System.Windows.Forms.Button btnNotificar;
-        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
@@ -214,5 +212,6 @@
         private System.Windows.Forms.DataGridView dgvHistorialPlan;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Presentacion;
+        private System.Windows.Forms.Button button2;
     }
 }

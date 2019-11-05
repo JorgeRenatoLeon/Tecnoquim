@@ -118,26 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnNotificar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
-        TUUH4woIAB8fk1LwqQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKoSURBVEhL
-        xVZLaxNRFI7vN6i4KS4U3agoiAhSdOdrK0jd+lh0oQhzZ6LV3SxcpFoyzp20MJ07CT5WAd3owmIVX/VZ
-        UER/gn+gXVjoIn7fzZ0wzSRpGgU/ONzknHO/75x750ySS0MU1VbhlXf9jd0YG9ti6LKwpXoppHqEtdqL
-        ca+Q8QtDl4Xtq9eiWF1nvi4Zg2G4nhzmaxb/TcBsHBaB+kjDcRToM+EGehIYqFZX8FxtGV/AekoElQMi
-        iC5CZNJ13eUmTaMnATuIz7JiW0Ye7CE7cErRSUdGt51AnTFpGj0KqFtOMH4aItPXh+NNwo/PCV8V2Q1j
-        Jk2jrQCPwfZjGyS/MwJ+dAX+SyA9j/UH7CfsG/Kf8NhMmoYWAAe5yKmd12S4G85JWEFfYpOAKN7bDqLP
-        HEK3UlnLjZZX2en48TGT0gAFHKneg2uInVhetJfDNQOrwVjdbLMAgeTjiE3bQSSxDiWWv1s+YlI0TAez
-        MHKRcwYC0XcQ5HFhX+H4lb9zf4PJXwBWb5Xifpz7QGLs3oQ1Lo+ObiSH5gInudnBl1SQlX3i5lyttkzv
-        6hJClk+Y4yngCDfTp7kTgQTOSLiNSbA3PBrjbgsrUEc5JyKIQ8sL+4xbo6VAAr4ZIfAAF/wMmw/T55TU
-        DpqOw8cYc5hLXzM6CiTQkyvVU+RNpF4VE/QxZtJaojsBVIepfY68wlUp1+BJWYXPuKvolROEe0xaS3QU
-        4HvG8aNBxD8kR5QGq0fsHcUaQ9WEtgLp4XPd6mrjzgBFrKQA7qE+VE3ICKSrtkrlQ8a9KPK+2o89bymW
-        7maBgCPL+/CZLXesuh2SbvgQWN74Qfo0t5m6m3jkphZ7KrpB/W7iKXKSmyrzsDm8Zx5jbfljvmSrc83B
-        5nOcvuQvx782ywv7/gA3Q3el7QIjZQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnPerfil.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
@@ -159,6 +140,25 @@
         CBPPUjfxEXoR2Kbnt8LrhYMrcLAe14mU4GL+4UTYzOKaxPOXoE6pAGk++aulczhRYiKqz0hlV0qYcOTb
         b/WqzMmESV/j/k3LJ4xqAPl7pXVcBUew7430JW7HD3avcNQM/ihyHEXqNpd0vpMFf71YOuHYAfkBY7Ly
         C4kV8u+f+2P4ZpzIZGaLWQRisb/8oC3eTM1CDAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnNotificar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
+        TUUH4woIAB8fk1LwqQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKoSURBVEhL
+        xVZLaxNRFI7vN6i4KS4U3agoiAhSdOdrK0jd+lh0oQhzZ6LV3SxcpFoyzp20MJ07CT5WAd3owmIVX/VZ
+        UER/gn+gXVjoIn7fzZ0wzSRpGgU/ONzknHO/75x750ySS0MU1VbhlXf9jd0YG9ti6LKwpXoppHqEtdqL
+        ca+Q8QtDl4Xtq9eiWF1nvi4Zg2G4nhzmaxb/TcBsHBaB+kjDcRToM+EGehIYqFZX8FxtGV/AekoElQMi
+        iC5CZNJ13eUmTaMnATuIz7JiW0Ye7CE7cErRSUdGt51AnTFpGj0KqFtOMH4aItPXh+NNwo/PCV8V2Q1j
+        Jk2jrQCPwfZjGyS/MwJ+dAX+SyA9j/UH7CfsG/Kf8NhMmoYWAAe5yKmd12S4G85JWEFfYpOAKN7bDqLP
+        HEK3UlnLjZZX2en48TGT0gAFHKneg2uInVhetJfDNQOrwVjdbLMAgeTjiE3bQSSxDiWWv1s+YlI0TAez
+        MHKRcwYC0XcQ5HFhX+H4lb9zf4PJXwBWb5Xifpz7QGLs3oQ1Lo+ObiSH5gInudnBl1SQlX3i5lyttkzv
+        6hJClk+Y4yngCDfTp7kTgQTOSLiNSbA3PBrjbgsrUEc5JyKIQ8sL+4xbo6VAAr4ZIfAAF/wMmw/T55TU
+        DpqOw8cYc5hLXzM6CiTQkyvVU+RNpF4VE/QxZtJaojsBVIepfY68wlUp1+BJWYXPuKvolROEe0xaS3QU
+        4HvG8aNBxD8kR5QGq0fsHcUaQ9WEtgLp4XPd6mrjzgBFrKQA7qE+VE3ICKSrtkrlQ8a9KPK+2o89bymW
+        7maBgCPL+/CZLXesuh2SbvgQWN74Qfo0t5m6m3jkphZ7KrpB/W7iKXKSmyrzsDm8Zx5jbfljvmSrc83B
+        5nOcvuQvx782ywv7/gA3Q3el7QIjZQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnInicio.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

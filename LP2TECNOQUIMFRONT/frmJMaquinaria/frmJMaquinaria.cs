@@ -207,5 +207,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             estadoObj = Estado.Inicial;
             estadoComponentes(Estado.Inicial);
         }
+
+        
     }
 }

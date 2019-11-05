@@ -53,6 +53,7 @@
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.lblBack = new System.Windows.Forms.LinkLabel();
             this.gbDatos.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +66,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 39);
+            this.label1.Size = new System.Drawing.Size(302, 39);
             this.label1.TabIndex = 40;
             this.label1.Text = "Registro de Insumos";
             // 
@@ -254,7 +255,7 @@
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(673, 35);
+            this.toolStrip1.Size = new System.Drawing.Size(667, 35);
             this.toolStrip1.TabIndex = 65;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -318,12 +319,27 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.LinkColor = System.Drawing.Color.AliceBlue;
+            this.lblBack.Location = new System.Drawing.Point(15, 488);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(79, 17);
+            this.lblBack.TabIndex = 66;
+            this.lblBack.TabStop = true;
+            this.lblBack.Text = "< Regresar";
+            this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
+            this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
+            // 
             // frmInsumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(673, 493);
+            this.ClientSize = new System.Drawing.Size(667, 526);
+            this.Controls.Add(this.lblBack);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.label1);
@@ -364,5 +380,6 @@
         private System.Windows.Forms.Label lblRestriccion;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.LinkLabel lblBack;
     }
 }

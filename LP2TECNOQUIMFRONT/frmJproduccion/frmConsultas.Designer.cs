@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 550);
+            this.panel1.Size = new System.Drawing.Size(166, 498);
             this.panel1.TabIndex = 4;
             // 
             // btnPerfil
@@ -67,11 +67,11 @@
             this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
             this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(3, 170);
+            this.btnPerfil.Location = new System.Drawing.Point(0, 184);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(163, 79);
             this.btnPerfil.TabIndex = 1;
-            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.Text = "Jefe de Produccion";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPerfil.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             this.btnNotificaciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotificaciones.ForeColor = System.Drawing.Color.White;
             this.btnNotificaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificaciones.Image")));
-            this.btnNotificaciones.Location = new System.Drawing.Point(3, 302);
+            this.btnNotificaciones.Location = new System.Drawing.Point(0, 341);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Size = new System.Drawing.Size(163, 92);
             this.btnNotificaciones.TabIndex = 5;
@@ -103,7 +103,7 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(3, 238);
+            this.button4.Location = new System.Drawing.Point(0, 269);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(163, 79);
             this.button4.TabIndex = 1;
@@ -120,7 +120,7 @@
             this.btnHome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(3, 101);
+            this.btnHome.Location = new System.Drawing.Point(0, 99);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(163, 79);
             this.btnHome.TabIndex = 1;
@@ -158,9 +158,9 @@
             this.btnPolitica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPolitica.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPolitica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnPolitica.Location = new System.Drawing.Point(418, 394);
+            this.btnPolitica.Location = new System.Drawing.Point(338, 371);
             this.btnPolitica.Name = "btnPolitica";
-            this.btnPolitica.Size = new System.Drawing.Size(365, 65);
+            this.btnPolitica.Size = new System.Drawing.Size(334, 65);
             this.btnPolitica.TabIndex = 24;
             this.btnPolitica.Text = "Politica de Stock";
             this.btnPolitica.UseVisualStyleBackColor = false;
@@ -175,9 +175,9 @@
             this.btnInsumos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInsumos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsumos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnInsumos.Location = new System.Drawing.Point(418, 184);
+            this.btnInsumos.Location = new System.Drawing.Point(338, 161);
             this.btnInsumos.Name = "btnInsumos";
-            this.btnInsumos.Size = new System.Drawing.Size(365, 65);
+            this.btnInsumos.Size = new System.Drawing.Size(334, 65);
             this.btnInsumos.TabIndex = 23;
             this.btnInsumos.Text = "Insumos";
             this.btnInsumos.UseVisualStyleBackColor = false;
@@ -192,9 +192,9 @@
             this.btnProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProducto.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnProducto.Location = new System.Drawing.Point(418, 79);
+            this.btnProducto.Location = new System.Drawing.Point(338, 56);
             this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(365, 65);
+            this.btnProducto.Size = new System.Drawing.Size(334, 65);
             this.btnProducto.TabIndex = 22;
             this.btnProducto.Text = "Productos";
             this.btnProducto.UseVisualStyleBackColor = false;
@@ -209,9 +209,9 @@
             this.btnMaquinaria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaquinaria.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaquinaria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnMaquinaria.Location = new System.Drawing.Point(418, 286);
+            this.btnMaquinaria.Location = new System.Drawing.Point(338, 263);
             this.btnMaquinaria.Name = "btnMaquinaria";
-            this.btnMaquinaria.Size = new System.Drawing.Size(365, 65);
+            this.btnMaquinaria.Size = new System.Drawing.Size(334, 65);
             this.btnMaquinaria.TabIndex = 25;
             this.btnMaquinaria.Text = "Maquinaria";
             this.btnMaquinaria.UseVisualStyleBackColor = false;
@@ -222,7 +222,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(1100, 550);
+            this.ClientSize = new System.Drawing.Size(857, 498);
             this.Controls.Add(this.btnMaquinaria);
             this.Controls.Add(this.btnPolitica);
             this.Controls.Add(this.btnInsumos);

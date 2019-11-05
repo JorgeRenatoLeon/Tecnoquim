@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlmacen));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNotificar = new System.Windows.Forms.Button();
-            this.btnPerfil = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnInsumos = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -46,14 +46,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnNotificar);
-            this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.btnInicio);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 511);
+            this.panel1.Size = new System.Drawing.Size(166, 455);
             this.panel1.TabIndex = 8;
             // 
             // btnNotificar
@@ -73,24 +73,6 @@
             this.btnNotificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNotificar.UseVisualStyleBackColor = true;
             this.btnNotificar.Click += new System.EventHandler(this.btnNotificar_Click);
-            // 
-            // btnPerfil
-            // 
-            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPerfil.FlatAppearance.BorderSize = 0;
-            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.ForeColor = System.Drawing.Color.White;
-            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(0, 196);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(163, 79);
-            this.btnPerfil.TabIndex = 6;
-            this.btnPerfil.Text = "Perfil";
-            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPerfil.UseVisualStyleBackColor = true;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnInicio
             // 
@@ -134,9 +116,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(522, 132);
+            this.label1.Location = new System.Drawing.Point(415, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 39);
+            this.label1.Size = new System.Drawing.Size(277, 39);
             this.label1.TabIndex = 15;
             this.label1.Text = "Registrar";
             // 
@@ -149,9 +131,9 @@
             this.btnInsumos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInsumos.Font = new System.Drawing.Font("Century Gothic", 15.25F, System.Drawing.FontStyle.Bold);
             this.btnInsumos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnInsumos.Location = new System.Drawing.Point(432, 338);
+            this.btnInsumos.Location = new System.Drawing.Point(352, 294);
             this.btnInsumos.Name = "btnInsumos";
-            this.btnInsumos.Size = new System.Drawing.Size(349, 56);
+            this.btnInsumos.Size = new System.Drawing.Size(310, 56);
             this.btnInsumos.TabIndex = 14;
             this.btnInsumos.Text = "Insumos";
             this.btnInsumos.UseVisualStyleBackColor = false;
@@ -165,20 +147,37 @@
             this.btnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnProductos.Location = new System.Drawing.Point(432, 230);
+            this.btnProductos.Location = new System.Drawing.Point(352, 185);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(349, 56);
+            this.btnProductos.Size = new System.Drawing.Size(310, 56);
             this.btnProductos.TabIndex = 13;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(0, 196);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(163, 79);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Jefe de Almacen";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(1084, 511);
+            this.ClientSize = new System.Drawing.Size(841, 455);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInsumos);
             this.Controls.Add(this.btnProductos);
@@ -198,12 +197,12 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnNotificar;
-        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnInsumos;
         private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Button button2;
     }
 }
