@@ -15,13 +15,15 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
 {
     public partial class frmJMaquinaria : Form
     {
+        Service.trabajador trabajador = new Service.trabajador();
         Service.maquinaria maquinaria;
         Service.ServicioClient DBController = new Service.ServicioClient();
         Estado estadoObj;
 
         int close;
-        public frmJMaquinaria(int cont = 0, string usuario = "")
+        public frmJMaquinaria(int cont = 0, Service.trabajador trabajadors = null)
         {
+            this.trabajador = trabajadors;
             if (cont != 0)
             {
                 InitializeComponent();
@@ -33,7 +35,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
                 Thread.Sleep(2500);
                 InitializeComponent();
 
-                MessageBox.Show("Bienvenido " + usuario);
+                MessageBox.Show("Bienvenido/a " + trabajador.nombres + " " + trabajador.apellidos);
 
                 t.Abort();
             }

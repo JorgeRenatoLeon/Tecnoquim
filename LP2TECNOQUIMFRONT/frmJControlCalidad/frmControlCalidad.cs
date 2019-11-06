@@ -15,9 +15,11 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 {
     public partial class frmControlCalidad : Form
     {
+        Service.trabajador trabajador = new Service.trabajador();
         int close = 0;
-        public frmControlCalidad(int cont =0, string usuario = "")
+        public frmControlCalidad(int cont =0, Service.trabajador trabajadors = null)
         {
+            this.trabajador = trabajadors;
             if (cont != 0)
             {
                 InitializeComponent();
@@ -32,7 +34,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 
                 InitializeComponent();
 
-                MessageBox.Show("Bienvenido " + usuario);
+                MessageBox.Show("Bienvenido/a " + trabajador.nombres + " " + trabajador.apellidos);
 
                 t.Abort();
             }

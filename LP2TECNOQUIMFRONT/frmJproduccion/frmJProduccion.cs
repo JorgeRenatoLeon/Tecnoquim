@@ -7,8 +7,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
     public partial class frmJProduccion : Form
     {
-        public frmJProduccion(int cont = 0, string usuario = "")
+        Service.trabajador trabajador = new Service.trabajador();
+        public frmJProduccion(int cont = 0, Service.trabajador trabajadors = null)
         {
+            this.trabajador = trabajadors;
             if (cont != 0)
             {
                 InitializeComponent();
@@ -23,7 +25,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
                 InitializeComponent();
 
-                MessageBox.Show("Bienvenido " + usuario);
+                MessageBox.Show("Bienvenido/a " + trabajador.nombres + " " + trabajador.apellidos);
 
                 t.Abort();
             }

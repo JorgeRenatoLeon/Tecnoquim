@@ -12,10 +12,13 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 {
     public partial class frmNotificaciones : Form
     {
+        Service.ServicioClient DBController = new Service.ServicioClient();
         int close = 0;
         public frmNotificaciones()
         {
             InitializeComponent();
+            dgvNotificaciones.AutoGenerateColumns = true;
+            dgvNotificaciones.DataSource = DBController.listarMensaje(2);
         }
 
         private void frmNotificaciones_FormClosed(object sender, FormClosedEventArgs e)

@@ -7,9 +7,11 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 {
     public partial class frmGerente : Form
     {
+        Service.trabajador trabajador = new Service.trabajador();
         int close = 0;
-        public frmGerente(int cont = 0, Service.trabajador trabajador = null)
+        public frmGerente(int cont = 0, Service.trabajador trabajadors = null)
         {
+            this.trabajador = trabajadors;
             if (cont != 0)
             {
                 InitializeComponent();
