@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2TECNOQUIMFRONT.frmPrincipal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,6 +55,15 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void frmPerfil_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (close == 0) { Environment.Exit(0); }
+        }
+
+        private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Visible = false;
+            frmLogin formNot = new frmLogin();
+            formNot.Visible = true;
+            close = 1;
+            this.Close();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LP2TECNOQUIMFRONT.frmPrincipal;
+using System;
 using System.Windows.Forms;
 
 namespace LP2TECNOQUIMFRONT.frmGerente
@@ -36,6 +37,15 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         {
             this.Visible = false;
             frmNotificaciones formNot = new frmNotificaciones(this.trabajador);
+            formNot.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void lblBack_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Visible = false;
+            frmLogin formNot = new frmLogin();
             formNot.Visible = true;
             close = 1;
             this.Close();
