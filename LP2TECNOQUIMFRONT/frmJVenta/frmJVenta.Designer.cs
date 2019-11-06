@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJVenta));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnPMS = new System.Windows.Forms.Button();
-            this.btnPerfil = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -53,6 +53,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 512);
             this.panel1.TabIndex = 4;
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.ForeColor = System.Drawing.Color.White;
+            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
+            this.btnPerfil.Location = new System.Drawing.Point(0, 204);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(163, 79);
+            this.btnPerfil.TabIndex = 7;
+            this.btnPerfil.Text = "Jefe de Venta";
+            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnNotificaciones
             // 
@@ -125,23 +143,6 @@
             this.btnPMS.Text = "Gestionar Proyecciones Venta";
             this.btnPMS.UseVisualStyleBackColor = false;
             this.btnPMS.Click += new System.EventHandler(this.btnPMS_Click);
-            // 
-            // btnPerfil
-            // 
-            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPerfil.FlatAppearance.BorderSize = 0;
-            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.ForeColor = System.Drawing.Color.White;
-            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(0, 204);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(163, 79);
-            this.btnPerfil.TabIndex = 7;
-            this.btnPerfil.Text = "Jefe de Venta";
-            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPerfil.UseVisualStyleBackColor = true;
             // 
             // frmJVenta
             // 
