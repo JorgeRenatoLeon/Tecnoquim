@@ -42,15 +42,15 @@
             this.txtNOrden = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarMaquinaria = new System.Windows.Forms.Button();
+            this.btnBuscarMaquinaria = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAgregarOrden = new System.Windows.Forms.Button();
+            this.btnBuscarOrden = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -182,8 +182,8 @@
             // 
             // gbDatosGenerales
             // 
-            this.gbDatosGenerales.Controls.Add(this.button2);
-            this.gbDatosGenerales.Controls.Add(this.button1);
+            this.gbDatosGenerales.Controls.Add(this.btnAgregarMaquinaria);
+            this.gbDatosGenerales.Controls.Add(this.btnBuscarMaquinaria);
             this.gbDatosGenerales.Controls.Add(this.txtNombre);
             this.gbDatosGenerales.Controls.Add(this.label1);
             this.gbDatosGenerales.Controls.Add(this.txtCodigo);
@@ -197,29 +197,29 @@
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Maquinaria";
             // 
-            // button2
+            // btnAgregarMaquinaria
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(571, 37);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 28);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Agregar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAgregarMaquinaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAgregarMaquinaria.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAgregarMaquinaria.Location = new System.Drawing.Point(571, 37);
+            this.btnAgregarMaquinaria.Name = "btnAgregarMaquinaria";
+            this.btnAgregarMaquinaria.Size = new System.Drawing.Size(73, 28);
+            this.btnAgregarMaquinaria.TabIndex = 37;
+            this.btnAgregarMaquinaria.Text = "Agregar";
+            this.btnAgregarMaquinaria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAgregarMaquinaria.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnBuscarMaquinaria
             // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(458, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 28);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "...";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBuscarMaquinaria.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBuscarMaquinaria.Location = new System.Drawing.Point(458, 37);
+            this.btnBuscarMaquinaria.Name = "btnBuscarMaquinaria";
+            this.btnBuscarMaquinaria.Size = new System.Drawing.Size(61, 28);
+            this.btnBuscarMaquinaria.TabIndex = 36;
+            this.btnBuscarMaquinaria.Text = "...";
+            this.btnBuscarMaquinaria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBuscarMaquinaria.UseVisualStyleBackColor = true;
+            this.btnBuscarMaquinaria.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtNombre
             // 
@@ -259,8 +259,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.btnAgregarOrden);
+            this.groupBox2.Controls.Add(this.btnBuscarOrden);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.textBox2);
@@ -274,29 +274,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ordenes de Producción";
             // 
-            // button3
+            // btnAgregarOrden
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(571, 30);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 28);
-            this.button3.TabIndex = 37;
-            this.button3.Text = "Agregar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAgregarOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAgregarOrden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAgregarOrden.Location = new System.Drawing.Point(571, 30);
+            this.btnAgregarOrden.Name = "btnAgregarOrden";
+            this.btnAgregarOrden.Size = new System.Drawing.Size(73, 28);
+            this.btnAgregarOrden.TabIndex = 37;
+            this.btnAgregarOrden.Text = "Agregar";
+            this.btnAgregarOrden.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAgregarOrden.UseVisualStyleBackColor = true;
+            this.btnAgregarOrden.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btnBuscarOrden
             // 
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(458, 30);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(61, 28);
-            this.button4.TabIndex = 36;
-            this.button4.Text = "...";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnBuscarOrden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBuscarOrden.Location = new System.Drawing.Point(458, 30);
+            this.btnBuscarOrden.Name = "btnBuscarOrden";
+            this.btnBuscarOrden.Size = new System.Drawing.Size(61, 28);
+            this.btnBuscarOrden.TabIndex = 36;
+            this.btnBuscarOrden.Text = "...";
+            this.btnBuscarOrden.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBuscarOrden.UseVisualStyleBackColor = true;
+            this.btnBuscarOrden.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox1
             // 
@@ -374,18 +375,18 @@
         private System.Windows.Forms.TextBox txtNOrden;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox gbDatosGenerales;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscarMaquinaria;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAgregarMaquinaria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Orden;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAgregarOrden;
+        private System.Windows.Forms.Button btnBuscarOrden;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;

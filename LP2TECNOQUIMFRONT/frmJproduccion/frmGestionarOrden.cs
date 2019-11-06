@@ -7,19 +7,133 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2TECNOQUIMFRONT.Service;
 
 namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
     public partial class frmGestionarOrden : Form
     {
+
+        private DateTime _periodoPlanMaestroProduccion;
+        private int _idPlanMaestroProduccion;
+        private Service.ordenProduccion _orderProduccion;
+        private Estado estadoFormulario;
+
+        Service.ServicioClient DBController = new Service.ServicioClient();
+
+        public ordenProduccion OrderProduccion { get => _orderProduccion; set => _orderProduccion = value; }
+
         public frmGestionarOrden()
         {
             InitializeComponent();
         }
 
+        public frmGestionarOrden(DateTime periodoPlanMaestroProduccion, int idPlanMaestroProduccion)
+        {
+            InitializeComponent();
+            _periodoPlanMaestroProduccion = periodoPlanMaestroProduccion;
+            _idPlanMaestroProduccion = idPlanMaestroProduccion;
+        }
+
+        private void estadoComponentes(Estado estado)
+        {
+            switch (estado)
+            {
+                case Estado.Inicial:
+
+                    //Botones
+                    btnNuevo.Enabled = true;
+                    btnGuardar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnCancelar.Enabled = false;
+
+                    // Cajas de texto
+                    txtNOrden.Enabled = false;
+                    txtNombre.Enabled = false;
+                    txtCodigoProducto.Enabled = false;
+                    txtCantidad.Enabled = false;
+
+                    //Etiquetas
+                    lblFecha.Enabled = false;
+                    lblCodigoProducto.Enabled = false;
+                    lblCantidadDetalle.Enabled = false;
+                    lblNombreProducto.Enabled = false;
+                    lblNOrden.Enabled = false;
+
+                    //DataGridView
+                    dgvOrden.Enabled = false;
+
+                    //Grupos
+                    gbDatosGenerales.Enabled = false;
+                    gbDetalleOrden.Enabled = false;
+                    gbDatosOrden.Enabled = false;
+
+                    //Asignar el estado
+                    estadoFormulario = estado;
+
+                    break;
+                case Estado.Nuevo:
+
+                    //Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = true;
+                    btnModificar.Enabled = false;
+                    btnCancelar.Enabled = true;
+
+                    // Cajas de texto
+                    txtNOrden.Enabled = false;
+                    txtNombre.Enabled = true;
+                    txtCodigoProducto.Enabled = false;
+                    txtCantidad.Enabled = false;
+
+                    //Etiquetas
+                    lblFecha.Enabled = false;
+                    lblCodigoProducto.Enabled = false;
+                    lblCantidadDetalle.Enabled = false;
+                    lblNombreProducto.Enabled = false;
+                    lblNOrden.Enabled = false;
+
+                    //DataGridView
+                    dgvOrden.Enabled = false;
+
+                    //Grupos
+                    gbDatosGenerales.Enabled = false;
+                    gbDetalleOrden.Enabled = false;
+                    gbDatosOrden.Enabled = false;
+
+                    //Asignar el estado
+                    estadoFormulario = estado;
+                    break;
+                case Estado.Buscar:
+                    break;
+                case Estado.Modificar:
+                    break;
+                default:
+                    break;
+            }
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if ((_periodoPlanMaestroProduccion.Month == dtpOrden.Value.Month) && (_periodoPlanMaestroProduccion.Year == dtpOrden.Value.Year))
+            {
+                _orderProduccion = new Service.ordenProduccion();
+                _orderProduccion.fecha = dtpOrden.Value;
+                _orderProduccion.lineasOrden = (lineaOrden[])dgvOrden.DataSource; // No sé si esto funcione
 
+                if (estadoFormulario == Estado.Nuevo)
+                {
+                    DBController.insertarOrdenProduccion(_orderProduccion, _idPlanMaestroProduccion);
+                    MessageBox.Show("Orden de Producción correctamente añadida.","Mensaje Confirmacion", MessageBoxButtons.OK);
+                } else if (estadoFormulario == Estado.Modificar)
+                {
+                    DBController.actualizarOrdenProduccion(_orderProduccion, _idPlanMaestroProduccion);
+                    MessageBox.Show("Orden de Producción correctamente modificada.", "Mensaje Confirmacion", MessageBoxButtons.OK);
+                }
+            } else
+            {
+                MessageBox.Show("El mes y/o el año de la Orden de Producción no coincide con el del Plan Maestro de Producción.", "Mensaje Error", MessageBoxButtons.OK);
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -46,7 +160,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         public void limpiarComponentes()
         {
             txtNOrden.Text = "";
-            txtCodigo.Text = "";
+            txtCodigoProducto.Text = "";
             txtNombre.Text = "";
             txtCantidad.Text = "";
 
