@@ -61,15 +61,12 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
             trabajador.dni = txtDNI.Text;
             trabajador.nombres = txtNombre.Text;
             trabajador.apellidos = txtApellido.Text;
             trabajador.correo = txtCorreo.Text;
             DBController.actualizarTrabajador(trabajador);
-            MessageBox.Show("Maquinaria Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
-            
+            MessageBox.Show("Correo cambiado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
