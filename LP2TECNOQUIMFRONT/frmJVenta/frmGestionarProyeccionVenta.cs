@@ -12,6 +12,8 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 {
     public partial class frmGestionarProyeccionVenta : Form
     {
+        Service.producto producto;
+
         public frmGestionarProyeccionVenta()
         {
             InitializeComponent();
@@ -82,7 +84,14 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
             frmBuscarProducto formBuscarP = new frmBuscarProducto();
-            formBuscarP.Visible = true;
+            if (formBuscarP.ShowDialog() == DialogResult.OK)
+            {
+                producto = formBuscarP.ProductoSeleccionado;
+                txtCodigoP.Text = producto.idProducto.ToString();
+                txtNombreP.Text = producto.nombre;
+                
+            }
+            
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
