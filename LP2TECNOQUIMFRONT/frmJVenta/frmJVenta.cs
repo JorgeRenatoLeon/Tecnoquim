@@ -29,7 +29,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 
                 t.Start();
 
-                Thread.Sleep(2500);
+                Thread.Sleep(1250);
 
                 InitializeComponent();
 

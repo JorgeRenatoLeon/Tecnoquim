@@ -32,7 +32,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             {
                 Thread t = new Thread(new ThreadStart(SplashStart));
                 t.Start();
-                Thread.Sleep(2500);
+                Thread.Sleep(1250);
                 InitializeComponent();
 
                 MessageBox.Show("Bienvenido/a " + trabajador.nombres + " " + trabajador.apellidos);

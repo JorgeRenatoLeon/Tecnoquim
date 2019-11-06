@@ -38,8 +38,10 @@
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Presentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreEmisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RolEmisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotificaciones)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -71,14 +73,17 @@
             this.dgvNotificaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvNotificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNotificaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Presentacion});
+            this.NombreEmisor,
+            this.RolEmisor,
+            this.Descripcion,
+            this.Fecha});
             this.dgvNotificaciones.Location = new System.Drawing.Point(203, 75);
             this.dgvNotificaciones.Name = "dgvNotificaciones";
             this.dgvNotificaciones.ReadOnly = true;
             this.dgvNotificaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNotificaciones.Size = new System.Drawing.Size(843, 398);
             this.dgvNotificaciones.TabIndex = 30;
+            this.dgvNotificaciones.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvNotificaciones_CellFormatting);
             // 
             // panel1
             // 
@@ -165,20 +170,34 @@
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
-            // Nombre
+            // NombreEmisor
             // 
-            this.Nombre.HeaderText = "Fecha";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 200;
+            this.NombreEmisor.HeaderText = "Nombre Emisor";
+            this.NombreEmisor.Name = "NombreEmisor";
+            this.NombreEmisor.ReadOnly = true;
+            this.NombreEmisor.Width = 200;
             // 
-            // Presentacion
+            // RolEmisor
             // 
-            this.Presentacion.FillWeight = 150F;
-            this.Presentacion.HeaderText = "Descripcion";
-            this.Presentacion.Name = "Presentacion";
-            this.Presentacion.ReadOnly = true;
-            this.Presentacion.Width = 150;
+            this.RolEmisor.FillWeight = 150F;
+            this.RolEmisor.HeaderText = "Rol Emisor";
+            this.RolEmisor.Name = "RolEmisor";
+            this.RolEmisor.ReadOnly = true;
+            this.RolEmisor.Width = 150;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Contenido del Mensaje";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 250;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha Recibido";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 200;
             // 
             // frmNotificaciones
             // 
@@ -213,7 +232,9 @@
         private System.Windows.Forms.Button btnNotificaciones;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Presentacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreEmisor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RolEmisor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
     }
 }

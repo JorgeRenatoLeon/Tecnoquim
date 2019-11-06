@@ -27,18 +27,18 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             this.Close();
         }
 
-        private void btnPerfil_Click(object sender, EventArgs e)
+        private void frmNotificaciones_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (close == 0) { Environment.Exit(0); }
+        }
+
+        private void btnPerfil_Click_1(object sender, EventArgs e)
         {
             this.Visible = false;
             frmPerfil formNot = new frmPerfil();
             formNot.Visible = true;
             close = 1;
             this.Close();
-        }
-
-        private void frmNotificaciones_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (close == 0) { Environment.Exit(0); }
         }
     }
 }
