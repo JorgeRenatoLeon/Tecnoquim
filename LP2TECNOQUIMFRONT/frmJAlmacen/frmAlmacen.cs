@@ -64,8 +64,8 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         private void btnProductos_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmInsumo formInsumo = new frmInsumo();
-            formInsumo.ShowDialog();
+            frmProducto formProducto = new frmProducto();
+            formProducto.ShowDialog();
             this.Show();
         }
 
