@@ -24,7 +24,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
                 InitializeComponent();
 
-                MessageBox.Show("Bienvenido " + trabajador.nombres + " " + trabajador.apellidos);
+                MessageBox.Show("Bienvenido/a " + trabajador.nombres + " " + trabajador.apellidos);
 
                 t.Abort();
             }

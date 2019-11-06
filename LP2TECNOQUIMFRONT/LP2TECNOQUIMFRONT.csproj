@@ -654,7 +654,10 @@
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.listarMensajeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionResponse.datasource">
+    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.listarPMPResponse.datasource">

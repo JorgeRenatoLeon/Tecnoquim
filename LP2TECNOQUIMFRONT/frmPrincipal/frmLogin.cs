@@ -47,91 +47,46 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             if(this.txtUsuario.Text != "Usuario" && this.txtUsuario.Text != ""){
                 if (this.txtContrasena.Text != "Contrasena" && this.txtContrasena.Text != "")
                 {
-                    //trabajador.usuario = new Service.usuario();
-                    //trabajador.usuario.username = this.txtUsuario.Text;
-                    //trabajador.usuario.password = this.txtContrasena.Text;
-                    //trabajador = DBController.verificarUsuario(trabajador.usuario);
-                    //if (trabajador != null)
-                    //{
-                    //    if (trabajador.rol.descripcion == "GERENTE GENERAL")
-                    //    {
-                    //        frmGerente.frmGerente formGerente = new frmGerente.frmGerente(0, trabajador);
-                    //        formGerente.Visible = true;
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Datos de Ingreso Incorrectos");
-                    //    this.Visible = true;
-                    //}
-                    if (this.txtUsuario.Text == "prod")
+                    trabajador.usuario = new Service.usuario();
+                    trabajador.usuario.username = this.txtUsuario.Text;
+                    trabajador.usuario.password = this.txtContrasena.Text;
+                    trabajador = DBController.verificarUsuario(trabajador.usuario);
+                    if (trabajador != null)
                     {
-                        if (this.txtContrasena.Text == "1234")
+                        if (trabajador.rol.descripcion == "GERENTE GENERAL")
+                        {
+                            frmGerente.frmGerente formGerente = new frmGerente.frmGerente(0, trabajador);
+                            formGerente.Visible = true;
+                        }
+                        else if (trabajador.rol.descripcion == "JEFE DE PRODUCCION")
                         {
                             frmJproduccion.frmJProduccion formJProduccion = new frmJproduccion.frmJProduccion(0, this.txtUsuario.Text);
                             formJProduccion.Visible = true;
                         }
-                        else
-                        {
-                            MessageBox.Show("Contraseña Incorrecta");
-                            this.Visible = true;
-                        }
-                    }
-                    else if (this.txtUsuario.Text == "almacen")
-                    {
-                        if (this.txtContrasena.Text == "1234")
+                        else if (trabajador.rol.descripcion == "GERENTE GENERAL")
                         {
                             frmAlmacen formAlmacen = new frmAlmacen(0, this.txtUsuario.Text);
                             formAlmacen.Visible = true;
                         }
-                        else
+                        else if (trabajador.rol.descripcion == "JEFE DE CONTROL DE CALIDAD")
                         {
-                            MessageBox.Show("Contraseña Incorrecta");
-                            this.Visible = true;
+                            frmControlCalidad formControlCalidad = new frmControlCalidad(0, this.txtUsuario.Text);
+                            formControlCalidad.Visible = true;
                         }
-                    }
-                    else if (this.txtUsuario.Text == "calidad")
-                    {
-                        if (this.txtContrasena.Text == "1234")
-                        {
-                            frmControlCalidad formAlmacen = new frmControlCalidad(0, this.txtUsuario.Text);
-                            formAlmacen.Visible = true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Contraseña Incorrecta");
-                            this.Visible = true;
-                        }
-                    }
-                    else if (this.txtUsuario.Text == "maquinaria")
-                    {
-                        if (this.txtContrasena.Text == "1234")
+                        else if (trabajador.rol.descripcion == "GERENTE GENERAL")
                         {
                             frmJMaquinaria.frmJMaquinaria formMaq = new frmJMaquinaria.frmJMaquinaria(0, this.txtUsuario.Text);
                             formMaq.Visible = true;
                         }
-                        else
-                        {
-                            MessageBox.Show("Contraseña Incorrecta");
-                            this.Visible = true;
-                        }
-                    }
-                    else if (this.txtUsuario.Text == "venta")
-                    {
-                        if (this.txtContrasena.Text == "1234")
+                        else if (trabajador.rol.descripcion == "JEFE DE VENTA")
                         {
                             frmJVenta.frmJVenta formVenta = new frmJVenta.frmJVenta(0, this.txtUsuario.Text);
                             formVenta.Visible = true;
                         }
-                        else
-                        {
-                            MessageBox.Show("Contraseña Incorrecta");
-                            this.Visible = true;
-                        }
                     }
                     else
                     {
-                        MessageBox.Show("Usuario Incorrecto");
+                        MessageBox.Show("Datos de Ingreso Incorrectos");
                         this.Visible = true;
                     }
                 }
