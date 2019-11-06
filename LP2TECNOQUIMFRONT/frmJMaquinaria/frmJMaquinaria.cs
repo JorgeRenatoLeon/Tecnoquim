@@ -51,7 +51,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmPerfil formNot = new frmPerfil();
+            frmPerfil formNot = new frmPerfil(this.trabajador);
             formNot.Visible = true;
             close = 1;
             this.Close();
@@ -60,7 +60,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
         private void btnNotificaciones_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmNotificaciones formNot = new frmNotificaciones();
+            frmNotificaciones formNot = new frmNotificaciones(this.trabajador);
             formNot.Visible = true;
             close = 1;
             this.Close();
