@@ -164,6 +164,7 @@
             this.btnGuardar.TabIndex = 77;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtDNI
             // 

@@ -14,6 +14,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
     public partial class frmPerfil : Form
     {
         Service.trabajador trabajador = new Service.trabajador();
+        Service.ServicioClient DBController = new Service.ServicioClient();
         int close = 0;
         public frmPerfil(Service.trabajador trabajadors = null)
         {
@@ -64,6 +65,16 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             formNot.Visible = true;
             close = 1;
             this.Close();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            trabajador.dni = txtDNI.Text;
+            trabajador.nombres = txtNombre.Text;
+            trabajador.apellidos = txtApellido.Text;
+            trabajador.correo = txtCorreo.Text;
+            DBController.actualizarTrabajador(trabajador);
+            MessageBox.Show("Maquinaria Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
