@@ -148,6 +148,7 @@
             this.lblBack.TabStop = true;
             this.lblBack.Text = "Cerrar Sesión";
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
+            this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
             // 
             // btnGuardar
             // 
