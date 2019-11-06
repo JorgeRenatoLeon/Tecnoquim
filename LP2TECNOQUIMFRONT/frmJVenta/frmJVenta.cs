@@ -14,9 +14,11 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 {
     public partial class frmJVenta : Form
     {
+        Service.trabajador trabajador = new Service.trabajador();
         int close = 0;
-        public frmJVenta(int cont=0, string usuario = "")
+        public frmJVenta(int cont=0, Service.trabajador trabajadors = null)
         {
+            this.trabajador = trabajadors;
             if (cont != 0)
             {
                 InitializeComponent();
@@ -31,7 +33,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 
                 InitializeComponent();
 
-                MessageBox.Show("Bienvenido " + usuario);
+                MessageBox.Show("Bienvenido/a " + trabajador.nombres + " " + trabajador.apellidos);
 
                 t.Abort();
             }

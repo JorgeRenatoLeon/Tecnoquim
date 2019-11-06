@@ -60,27 +60,27 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
                         }
                         else if (trabajador.rol.descripcion == "JEFE DE PRODUCCION")
                         {
-                            frmJproduccion.frmJProduccion formJProduccion = new frmJproduccion.frmJProduccion(0, this.txtUsuario.Text);
+                            frmJproduccion.frmJProduccion formJProduccion = new frmJproduccion.frmJProduccion(0, trabajador);
                             formJProduccion.Visible = true;
                         }
-                        else if (trabajador.rol.descripcion == "GERENTE GENERAL")
+                        else if (trabajador.rol.descripcion == "JEFE DE ALMACEN")
                         {
-                            frmAlmacen formAlmacen = new frmAlmacen(0, this.txtUsuario.Text);
+                            frmAlmacen formAlmacen = new frmAlmacen(0, trabajador);
                             formAlmacen.Visible = true;
                         }
                         else if (trabajador.rol.descripcion == "JEFE DE CONTROL DE CALIDAD")
                         {
-                            frmControlCalidad formControlCalidad = new frmControlCalidad(0, this.txtUsuario.Text);
+                            frmControlCalidad formControlCalidad = new frmControlCalidad(0, trabajador);
                             formControlCalidad.Visible = true;
                         }
-                        else if (trabajador.rol.descripcion == "GERENTE GENERAL")
+                        else if (trabajador.rol.descripcion == "JEFE DE MANTENIMIENTO")
                         {
-                            frmJMaquinaria.frmJMaquinaria formMaq = new frmJMaquinaria.frmJMaquinaria(0, this.txtUsuario.Text);
+                            frmJMaquinaria.frmJMaquinaria formMaq = new frmJMaquinaria.frmJMaquinaria(0, trabajador);
                             formMaq.Visible = true;
                         }
                         else if (trabajador.rol.descripcion == "JEFE DE VENTA")
                         {
-                            frmJVenta.frmJVenta formVenta = new frmJVenta.frmJVenta(0, this.txtUsuario.Text);
+                            frmJVenta.frmJVenta formVenta = new frmJVenta.frmJVenta(0, trabajador);
                             formVenta.Visible = true;
                         }
                     }

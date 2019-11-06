@@ -14,9 +14,11 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 {
     public partial class frmAlmacen : Form
     {
+        Service.trabajador trabajador = new Service.trabajador();
         int close = 0;
-        public frmAlmacen(int cont = 0, string usuario = "")
+        public frmAlmacen(int cont = 0, Service.trabajador trabajadors = null)
         {
+            this.trabajador = trabajadors;
             if (cont != 0)
             {
                 InitializeComponent();
@@ -31,7 +33,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
                 InitializeComponent();
 
-                MessageBox.Show("Bienvenido " + usuario);
+                MessageBox.Show("Bienvenido/a " + trabajador.nombres + " " + trabajador.apellidos);
 
                 t.Abort();
             }
