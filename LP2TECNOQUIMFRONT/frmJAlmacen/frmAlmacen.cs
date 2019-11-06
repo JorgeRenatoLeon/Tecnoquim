@@ -43,19 +43,10 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             Application.Run(new frmSplash());
         }
 
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmPerfil formPerfil = new frmPerfil();
-            formPerfil.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
         private void btnNotificar_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmNotificaciones formNot = new frmNotificaciones();
+            frmNotificaciones formNot = new frmNotificaciones(this.trabajador);
             formNot.Visible = true;
             close = 1;
             this.Close();
@@ -82,6 +73,13 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             if (close == 0) { Environment.Exit(0); }
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmPerfil formPerfil = new frmPerfil(this.trabajador);
+            formPerfil.Visible = true;
+            close = 1;
+            this.Close();
+        }
     }
 }

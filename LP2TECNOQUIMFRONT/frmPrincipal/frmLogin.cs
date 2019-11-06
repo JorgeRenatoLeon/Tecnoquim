@@ -44,6 +44,10 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+            if (trabajador==null)
+            {
+                trabajador = new Service.trabajador();
+            }
             if(this.txtUsuario.Text != "Usuario" && this.txtUsuario.Text != ""){
                 if (this.txtContrasena.Text != "Contrasena" && this.txtContrasena.Text != "")
                 {

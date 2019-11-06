@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNotificaciones));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnNotificaciones = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnNotificar = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.dgvHistorialPlan = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Presentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dgvNotificaciones = new System.Windows.Forms.DataGridView();
+            this.NombreEmisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RolEmisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNotificaciones.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotificaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNotificaciones
@@ -58,6 +60,23 @@
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Size = new System.Drawing.Size(166, 511);
             this.btnNotificaciones.TabIndex = 10;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(0, 195);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(163, 79);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Jefe de Almacen";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // btnNotificar
             // 
@@ -124,10 +143,10 @@
             this.lblNombre.TabIndex = 29;
             this.lblNombre.Text = "Notificaciones";
             // 
-            // dgvHistorialPlan
+            // dgvNotificaciones
             // 
-            this.dgvHistorialPlan.AllowUserToAddRows = false;
-            this.dgvHistorialPlan.AllowUserToDeleteRows = false;
+            this.dgvNotificaciones.AllowUserToAddRows = false;
+            this.dgvNotificaciones.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,49 +154,49 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistorialPlan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvHistorialPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorialPlan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Presentacion});
-            this.dgvHistorialPlan.Location = new System.Drawing.Point(203, 76);
-            this.dgvHistorialPlan.Name = "dgvHistorialPlan";
-            this.dgvHistorialPlan.ReadOnly = true;
-            this.dgvHistorialPlan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorialPlan.Size = new System.Drawing.Size(843, 398);
-            this.dgvHistorialPlan.TabIndex = 28;
+            this.dgvNotificaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvNotificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNotificaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NombreEmisor,
+            this.RolEmisor,
+            this.Descripcion,
+            this.Fecha});
+            this.dgvNotificaciones.Location = new System.Drawing.Point(203, 79);
+            this.dgvNotificaciones.Name = "dgvNotificaciones";
+            this.dgvNotificaciones.ReadOnly = true;
+            this.dgvNotificaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvNotificaciones.Size = new System.Drawing.Size(843, 398);
+            this.dgvNotificaciones.TabIndex = 31;
+            this.dgvNotificaciones.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvNotificaciones_CellFormatting);
             // 
-            // Nombre
+            // NombreEmisor
             // 
-            this.Nombre.HeaderText = "Fecha";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 200;
+            this.NombreEmisor.HeaderText = "Nombre Emisor";
+            this.NombreEmisor.Name = "NombreEmisor";
+            this.NombreEmisor.ReadOnly = true;
+            this.NombreEmisor.Width = 200;
             // 
-            // Presentacion
+            // RolEmisor
             // 
-            this.Presentacion.FillWeight = 150F;
-            this.Presentacion.HeaderText = "Descripcion";
-            this.Presentacion.Name = "Presentacion";
-            this.Presentacion.ReadOnly = true;
-            this.Presentacion.Width = 600;
+            this.RolEmisor.FillWeight = 150F;
+            this.RolEmisor.HeaderText = "Rol Emisor";
+            this.RolEmisor.Name = "RolEmisor";
+            this.RolEmisor.ReadOnly = true;
+            this.RolEmisor.Width = 150;
             // 
-            // button2
+            // Descripcion
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(0, 195);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 79);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Jefe de Almacen";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.Descripcion.HeaderText = "Contenido del Mensaje";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 250;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha Recibido";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 200;
             // 
             // frmNotificaciones
             // 
@@ -185,8 +204,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.ClientSize = new System.Drawing.Size(1084, 511);
+            this.Controls.Add(this.dgvNotificaciones);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.dgvHistorialPlan);
             this.Controls.Add(this.btnNotificaciones);
             this.Name = "frmNotificaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -195,7 +214,7 @@
             this.btnNotificaciones.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotificaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,9 +228,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.DataGridView dgvHistorialPlan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Presentacion;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dgvNotificaciones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreEmisor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RolEmisor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
     }
 }

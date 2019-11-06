@@ -65,7 +65,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmPerfil formPerfil = new frmPerfil();
+            frmPerfil formPerfil = new frmPerfil(this.trabajador);
             formPerfil.Visible = true;
             close = 1;
             this.Close();
@@ -74,7 +74,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         private void btnNotificar_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmNotificaciones formNot = new frmNotificaciones();
+            frmNotificaciones formNot = new frmNotificaciones(this.trabajador);
             formNot.Visible = true;
             close = 1;
             this.Close();
