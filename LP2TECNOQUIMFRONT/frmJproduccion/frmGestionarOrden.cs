@@ -84,29 +84,85 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     txtNOrden.Enabled = false;
                     txtNombre.Enabled = true;
                     txtCodigoProducto.Enabled = false;
-                    txtCantidad.Enabled = false;
+                    txtCantidad.Enabled = true;
 
                     //Etiquetas
-                    lblFecha.Enabled = false;
-                    lblCodigoProducto.Enabled = false;
-                    lblCantidadDetalle.Enabled = false;
-                    lblNombreProducto.Enabled = false;
-                    lblNOrden.Enabled = false;
+                    lblFecha.Enabled = true;
+                    lblCodigoProducto.Enabled = true;
+                    lblCantidadDetalle.Enabled = true;
+                    lblNombreProducto.Enabled = true;
+                    lblNOrden.Enabled = true;
 
                     //DataGridView
-                    dgvOrden.Enabled = false;
+                    dgvOrden.Enabled = true;
 
                     //Grupos
-                    gbDatosGenerales.Enabled = false;
-                    gbDetalleOrden.Enabled = false;
-                    gbDatosOrden.Enabled = false;
+                    gbDatosGenerales.Enabled = true;
+                    gbDetalleOrden.Enabled = true;
+                    gbDatosOrden.Enabled = true;
 
                     //Asignar el estado
                     estadoFormulario = estado;
                     break;
                 case Estado.Buscar:
+
+                    //Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnCancelar.Enabled = true;
+
+                    // Cajas de texto
+                    txtNOrden.Enabled = false;
+                    txtNombre.Enabled = true;
+                    txtCodigoProducto.Enabled = false;
+                    txtCantidad.Enabled = true;
+
+                    //Etiquetas
+                    lblFecha.Enabled = true;
+                    lblCodigoProducto.Enabled = true;
+                    lblCantidadDetalle.Enabled = true;
+                    lblNombreProducto.Enabled = true;
+                    lblNOrden.Enabled = true;
+
+                    //DataGridView
+                    dgvOrden.Enabled = true;
+
+                    //Grupos
+                    gbDatosGenerales.Enabled = true;
+                    gbDetalleOrden.Enabled = true;
+                    gbDatosOrden.Enabled = true;
+
                     break;
                 case Estado.Modificar:
+
+                    //Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = true;
+                    btnModificar.Enabled = false;
+                    btnCancelar.Enabled = true;
+
+                    // Cajas de texto
+                    txtNOrden.Enabled = false;
+                    txtNombre.Enabled = true;
+                    txtCodigoProducto.Enabled = false;
+                    txtCantidad.Enabled = true;
+
+                    //Etiquetas
+                    lblFecha.Enabled = true;
+                    lblCodigoProducto.Enabled = true;
+                    lblCantidadDetalle.Enabled = true;
+                    lblNombreProducto.Enabled = true;
+                    lblNOrden.Enabled = true;
+
+                    //DataGridView
+                    dgvOrden.Enabled = true;
+
+                    //Grupos
+                    gbDatosGenerales.Enabled = true;
+                    gbDetalleOrden.Enabled = true;
+                    gbDatosOrden.Enabled = true;
+
                     break;
                 default:
                     break;
@@ -124,13 +180,25 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 if (estadoFormulario == Estado.Nuevo)
                 {
                     DBController.insertarOrdenProduccion(_orderProduccion, _idPlanMaestroProduccion);
-                    MessageBox.Show("Orden de Producción correctamente añadida.","Mensaje Confirmacion", MessageBoxButtons.OK);
-                } else if (estadoFormulario == Estado.Modificar)
+
+                    foreach (lineaOrden l in _orderProduccion.lineasOrden)
+                    {
+                        DBController.insertarLineaOrden(l, _orderProduccion.id);
+                    }
+                    MessageBox.Show("Orden de Producción correctamente añadida.", "Mensaje Confirmacion", MessageBoxButtons.OK);
+                }
+                else if (estadoFormulario == Estado.Modificar)
                 {
                     DBController.actualizarOrdenProduccion(_orderProduccion, _idPlanMaestroProduccion);
+
+                    foreach (lineaOrden l in _orderProduccion.lineasOrden)
+                    {
+                        DBController.actualizarLineaOrden(l, _orderProduccion.id);
+                    }
                     MessageBox.Show("Orden de Producción correctamente modificada.", "Mensaje Confirmacion", MessageBoxButtons.OK);
                 }
-            } else
+            }
+            else
             {
                 MessageBox.Show("El mes y/o el año de la Orden de Producción no coincide con el del Plan Maestro de Producción.", "Mensaje Error", MessageBoxButtons.OK);
             }
