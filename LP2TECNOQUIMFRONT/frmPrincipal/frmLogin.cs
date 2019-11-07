@@ -161,27 +161,35 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
 
         private void lblOlvidoContrasena_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            bool count = false;
-            BindingList<Service.trabajador> binding = new BindingList<Service.trabajador>(DBController.listarTrabajadores("%"));
-            for (int i = 0; i < binding.Count; i++)
-            {
-                if (binding[i].usuario.username == txtUsuario.Text)
-                {
-                    trabajador = binding[i];
-                    count = true;
-                    break;
-                }
-            }
-            if (count)
-            {
-                sendpassword(trabajador.usuario.password, trabajador.correo);
-                MessageBox.Show("Se envió tu contraseña al correo registrado. Verifica tu bandeja de correo");
 
+            if (this.txtUsuario.Text != "Usuario" && this.txtUsuario.Text != "")
+            {
+                bool count = false;
+                BindingList<Service.trabajador> binding = new BindingList<Service.trabajador>(DBController.listarTrabajadores("%"));
+                for (int i = 0; i < binding.Count; i++)
+                {
+                    if (binding[i].usuario.username == txtUsuario.Text)
+                    {
+                        trabajador = binding[i];
+                        count = true;
+                        break;
+                    }
+                }
+                if (count)
+                {
+                    sendpassword(trabajador.usuario.password, trabajador.correo);
+                    MessageBox.Show("Se envió tu contraseña al correo registrado. Verifica tu bandeja de correo");
+
+                }
+                else
+                {
+                    MessageBox.Show("Datos Inválidos");
+
+                }
             }
             else
             {
-                MessageBox.Show("Datos Inválidos");
-
+                MessageBox.Show("Ingresa tu usuario para enviar la contraseña");
             }
         }
         private void sendpassword(String password, String email)
@@ -189,20 +197,18 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             SmtpClient smtp = new SmtpClient();
             smtp.Host = "smtp.gmail.com";
             smtp.Port = 587;
-            smtp.Credentials = new System.Net.NetworkCredential("jorgerenato15@gmail.com", "Renato150898");
+            smtp.Credentials = new System.Net.NetworkCredential("soporte.tecnoquim@gmail.com", "tecnoquim1234");
             smtp.EnableSsl = true;
             MailMessage msg = new MailMessage();
             msg.Subject = "Olvido Contraseña ( TECNOQUIM )";
-            msg.Body = "Querido " + trabajador.nombres+" "+trabajador.apellidos + ", Tu Contraseña es  " + password + "\n\n\nSaludos Cordiales,\nEquipo Tecnoquim";
+            msg.Body = "Querido/a " + trabajador.nombres+" "+trabajador.apellidos + ",\nTu Contraseña es  " + password + "\n\n\nSaludos Cordiales,\n\nEquipo Tecnoquim";
             string toaddress = email;
             msg.To.Add(toaddress);
-            string fromaddress = "TECNOQUIM <jorgerenato15@gmail.com>";
+            string fromaddress = "TECNOQUIM <soporte.tecnoquim@gmail.com>";
             msg.From = new MailAddress(fromaddress);
             try
             {
                 smtp.Send(msg);
-
-
             }
             catch
             {
