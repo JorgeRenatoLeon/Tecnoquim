@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarOrden));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
+            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.btnModificar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -46,10 +50,6 @@
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
-            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnModificar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.gbDatosGenerales.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -70,6 +70,40 @@
             this.toolStrip1.Size = new System.Drawing.Size(730, 32);
             this.toolStrip1.TabIndex = 25;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(87, 29);
+            this.btnNuevo.Text = "&Nuevo";
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(101, 29);
+            this.btnGuardar.Text = "&Guardar";
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(113, 29);
+            this.btnModificar.Text = "&Modificar";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(106, 29);
+            this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // gbDatosGenerales
             // 
@@ -236,40 +270,6 @@
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
             this.Cantidad.Width = 175;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(87, 29);
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(101, 29);
-            this.btnGuardar.Text = "&Guardar";
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(113, 29);
-            this.btnModificar.Text = "&Modificar";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(106, 29);
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // frmGestionarOrden
             // 

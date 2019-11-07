@@ -225,7 +225,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarProductoResponse">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarLineaInsumo">
     <xs:sequence>
@@ -442,6 +444,15 @@
   <xs:complexType name="insertarUsuarioResponse">
     <xs:sequence />
   </xs:complexType>
+  <xs:complexType name="actualizarDetalleMaquinaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="maquinaria" type="tns:detalleMaquinaria" />
+      <xs:element name="idPMP" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarDetalleMaquinariaResponse">
+    <xs:sequence />
+  </xs:complexType>
   <xs:complexType name="insertarDetalleAlmacenInsumo">
     <xs:sequence>
       <xs:element minOccurs="0" name="detalleAlmacenInsumo" type="tns:detalleAlmacenInsumo" />
@@ -459,15 +470,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarDetalleAlmacenInsumoResponse">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="actualizarDetalleMaquinaria">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="maquinaria" type="tns:detalleMaquinaria" />
-      <xs:element name="idPMP" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarDetalleMaquinariaResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarTrabajadores">
@@ -561,7 +563,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarInstructivoResponse">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarUsuarios">
     <xs:sequence>
@@ -751,13 +755,13 @@
   <xs:complexType name="actualizarLineaInsumoResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="insertarLineaProyeccion">
+  <xs:complexType name="insertarOrdenProduccion">
     <xs:sequence>
-      <xs:element minOccurs="0" name="lineaProyeccion" type="tns:lineaProyeccion" />
-      <xs:element name="idProyeccion" type="xs:int" />
+      <xs:element minOccurs="0" name="ordenProduccion" type="tns:ordenProduccion" />
+      <xs:element name="arg1" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarLineaProyeccionResponse">
+  <xs:complexType name="insertarOrdenProduccionResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="actualizarInstructivo">
@@ -769,13 +773,13 @@
   <xs:complexType name="actualizarInstructivoResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="insertarOrdenProduccion">
+  <xs:complexType name="insertarLineaProyeccion">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ordenProduccion" type="tns:ordenProduccion" />
-      <xs:element name="arg1" type="xs:int" />
+      <xs:element minOccurs="0" name="lineaProyeccion" type="tns:lineaProyeccion" />
+      <xs:element name="idProyeccion" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarOrdenProduccionResponse">
+  <xs:complexType name="insertarLineaProyeccionResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="actualizarUsuario">

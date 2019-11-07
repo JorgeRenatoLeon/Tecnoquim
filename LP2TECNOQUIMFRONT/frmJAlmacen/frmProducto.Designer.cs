@@ -61,13 +61,15 @@
             this.lblCantidad = new System.Windows.Forms.Label();
             this.txtCant = new System.Windows.Forms.TextBox();
             this.gbInsumos = new System.Windows.Forms.GroupBox();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.lblBack = new System.Windows.Forms.LinkLabel();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnElimina = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.gbDatos.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
@@ -83,7 +85,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(17, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 39);
+            this.label1.Size = new System.Drawing.Size(323, 39);
             this.label1.TabIndex = 16;
             this.label1.Text = "Gestionar Productos";
             // 
@@ -373,6 +375,7 @@
             this.btnEliminar.TabIndex = 77;
             this.btnEliminar.Text = "-";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCantidad
             // 
@@ -413,6 +416,42 @@
             this.gbInsumos.TabIndex = 66;
             this.gbInsumos.TabStop = false;
             this.gbInsumos.Text = "Linea de Insumos";
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnNuevo,
+            this.btnModificar,
+            this.btnGuardar,
+            this.btnBuscar,
+            this.btnElimina,
+            this.btnCancelar});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(972, 35);
+            this.toolStrip2.TabIndex = 68;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(942, 50);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(21, 679);
+            this.vScrollBar1.TabIndex = 69;
+            // 
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.LinkColor = System.Drawing.Color.AliceBlue;
+            this.lblBack.Location = new System.Drawing.Point(836, 63);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(79, 17);
+            this.lblBack.TabIndex = 70;
+            this.lblBack.TabStop = true;
+            this.lblBack.Text = "< Regresar";
+            this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
+            this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
             // 
             // btnNuevo
             // 
@@ -474,27 +513,14 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // toolStrip2
-            // 
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnNuevo,
-            this.btnModificar,
-            this.btnGuardar,
-            this.btnBuscar,
-            this.btnElimina,
-            this.btnCancelar});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(948, 35);
-            this.toolStrip2.TabIndex = 68;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(948, 741);
+            this.ClientSize = new System.Drawing.Size(972, 741);
+            this.Controls.Add(this.lblBack);
+            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbInsumos);
@@ -557,5 +583,7 @@
         private System.Windows.Forms.ToolStripButton btnElimina;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.LinkLabel lblBack;
     }
 }
