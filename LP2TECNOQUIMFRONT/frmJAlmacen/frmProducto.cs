@@ -182,14 +182,11 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             }
             if (estadoObj == Estado.Nuevo)
             {
-
-                DBController.insertarProducto(producto);
-                Service.producto auxProd = new Service.producto();
-                DBController.insertarInstructivo(instructivo,producto.idProducto);
-                //int idInstru = DBController.buscarIdInstru(instructivo);
+                int idProd=DBController.insertarProducto(producto);
+                int idInstru=DBController.insertarInstructivo(instructivo,idProd);
                 foreach (Service.lineaInsumo l in lineas)
                 {
-                    DBController.insertarLineaInsumo(l,instructivo.id);
+                    DBController.insertarLineaInsumo(l,idInstru);
                 }
                 MessageBox.Show("Producto Registrado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -275,6 +272,16 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 }
 
             }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

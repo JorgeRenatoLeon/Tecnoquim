@@ -24,7 +24,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         }
 
         public producto ProductoSeleccionado { get => productoSeleccionado; set => productoSeleccionado = value; }
-                        
+
         private void btnSeleccionar_Click_1(object sender, EventArgs e)
         {
             ProductoSeleccionado = (Service.producto)dgvProductos.CurrentRow.DataBoundItem;
@@ -52,5 +52,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             }
             
         }
+
+        
     }
 }
