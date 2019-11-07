@@ -30,11 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlmacen));
             this.panel1 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
             this.button2 = new System.Windows.Forms.Button();
-=======
             this.btnPerfil = new System.Windows.Forms.Button();
->>>>>>> a02d594fb62a2e0b18542dafd588da4855b8299a
             this.btnNotificar = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -42,12 +39,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnInsumos = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-=======
->>>>>>> a02d594fb62a2e0b18542dafd588da4855b8299a
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -66,7 +60,6 @@
             this.panel1.Size = new System.Drawing.Size(166, 455);
             this.panel1.TabIndex = 8;
             // 
-<<<<<<< HEAD
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -83,7 +76,6 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button2.UseVisualStyleBackColor = true;
-=======
             // btnPerfil
             // 
             this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -101,7 +93,6 @@
             this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPerfil.UseVisualStyleBackColor = true;
             this.btnPerfil.Click += new System.EventHandler(this.button2_Click);
->>>>>>> a02d594fb62a2e0b18542dafd588da4855b8299a
             // 
             // btnNotificar
             // 
@@ -202,7 +193,6 @@
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
-<<<<<<< HEAD
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -248,8 +238,6 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-=======
->>>>>>> a02d594fb62a2e0b18542dafd588da4855b8299a
             // frmAlmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,13 +272,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnInsumos;
         private System.Windows.Forms.Button btnProductos;
-<<<<<<< HEAD
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-=======
         private System.Windows.Forms.Button btnPerfil;
->>>>>>> a02d594fb62a2e0b18542dafd588da4855b8299a
     }
 }

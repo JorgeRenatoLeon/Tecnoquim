@@ -17,6 +17,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
     {
         Service.trabajador trabajador = new Service.trabajador();
         Service.maquinaria maquinaria;
+        Service.detalleMaquinaria detalle;
         Service.ServicioClient DBController = new Service.ServicioClient();
         Estado estadoObj;
 
@@ -94,12 +95,16 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
         
         private void guardarToolStripButton_Click(object sender, EventArgs e)
         {
+            detalle = new Service.detalleMaquinaria();
             maquinaria = new Service.maquinaria();
             maquinaria.nombre = txtNombre.Text;
             maquinaria.tipo = txtTipo.Text;
+            detalle.maquinaria = maquinaria;
+
             if (estadoObj == Estado.Nuevo)
             {
-                DBController.insertarMaquinaria(maquinaria);
+                //int intMaq=DBController.insertarMaquinaria(maquinaria);
+                //DBController.insertarDetalleMaquinaria(detalle);
                 MessageBox.Show("Maquinaria Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (estadoObj == Estado.Modificar) 
