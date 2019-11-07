@@ -17,6 +17,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             this.Visible = false;
             frmJProduccion fromJProd = new frmJProduccion(1);
             fromJProd.Visible = true;
+            close = 1;
             this.Close();
         }
 

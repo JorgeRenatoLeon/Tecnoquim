@@ -31,7 +31,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
                 t.Start();
 
-                Thread.Sleep(2500);
+                Thread.Sleep(1250);
 
                 InitializeComponent();
 
@@ -45,19 +45,10 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             Application.Run(new frmSplash());
         }
 
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmPerfil formPerfil = new frmPerfil();
-            formPerfil.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
         private void btnNotificar_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmNotificaciones formNot = new frmNotificaciones();
+            frmNotificaciones formNot = new frmNotificaciones(this.trabajador);
             formNot.Visible = true;
             close = 1;
             this.Close();
@@ -84,6 +75,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             if (close == 0) { Environment.Exit(0); }
         }
 
+<<<<<<< HEAD
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
@@ -98,6 +90,15 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             frmStockInsumo formStockI = new frmStockInsumo();
             formStockI.ShowDialog();
             this.Show();
+=======
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmPerfil formPerfil = new frmPerfil(this.trabajador);
+            formPerfil.Visible = true;
+            close = 1;
+            this.Close();
+>>>>>>> a02d594fb62a2e0b18542dafd588da4855b8299a
         }
     }
 }

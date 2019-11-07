@@ -12,16 +12,21 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 {
     public partial class frmNotificaciones : Form
     {
+        Service.trabajador trabajador = new Service.trabajador();
+        Service.ServicioClient DBController = new Service.ServicioClient();
         int close = 0;
-        public frmNotificaciones()
+        public frmNotificaciones(Service.trabajador trabajadors = null)
         {
+            this.trabajador = trabajadors;
             InitializeComponent();
+            dgvNotificaciones.AutoGenerateColumns = false;
+            dgvNotificaciones.DataSource = DBController.listarMensaje(trabajador.id);
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmJVenta formGerente = new frmJVenta(1);
+            frmJVenta formGerente = new frmJVenta(1,this.trabajador);
             formGerente.Visible = true;
             close = 1;
             this.Close();
@@ -30,7 +35,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmPerfil formNot = new frmPerfil();
+            frmPerfil formNot = new frmPerfil(this.trabajador);
             formNot.Visible = true;
             close = 1;
             this.Close();
@@ -39,6 +44,15 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
         private void frmNotificaciones_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (close == 0) { Environment.Exit(0); }
+        }
+
+        private void dgvNotificaciones_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            Service.mensaje ppFila = (Service.mensaje)dgvNotificaciones.Rows[e.RowIndex].DataBoundItem;
+            dgvNotificaciones.Rows[e.RowIndex].Cells["NombreEmisor"].Value = ppFila.emisor.nombres + " " + ppFila.emisor.apellidos;
+            dgvNotificaciones.Rows[e.RowIndex].Cells["RolEmisor"].Value = ppFila.emisor.rol.descripcion;
+            dgvNotificaciones.Rows[e.RowIndex].Cells["Descripcion"].Value = ppFila.descripcion;
+            dgvNotificaciones.Rows[e.RowIndex].Cells["Fecha"].Value = ppFila.fechaEnvio;
         }
     }
 }
