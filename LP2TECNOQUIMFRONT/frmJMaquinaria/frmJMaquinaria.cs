@@ -100,17 +100,25 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             maquinaria.nombre = txtNombre.Text;
             maquinaria.tipo = txtTipo.Text;
             detalle.maquinaria = maquinaria;
-
+            if (rbActivo.Checked == true)
+            {
+                detalle.activo = true;
+            }
+            else
+            {
+                detalle.activo = false;
+            }
             if (estadoObj == Estado.Nuevo)
             {
-                //int intMaq=DBController.insertarMaquinaria(maquinaria);
-                //DBController.insertarDetalleMaquinaria(detalle);
+                DBController.insertarMaquinaria(maquinaria);
+                DBController.insertarDetalleMaquinaria(detalle);
                 MessageBox.Show("Maquinaria Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (estadoObj == Estado.Modificar) 
             {
                 maquinaria.id =int.Parse(txtNOrden.Text);
                 DBController.actualizarMaquinaria(maquinaria);
+                DBController.actualizarDetalleMaquinaria(detalle);
                 MessageBox.Show("Maquinaria Actualizada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             estadoComponentes(Estado.Inicial);
