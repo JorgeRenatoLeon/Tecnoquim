@@ -14,11 +14,20 @@ namespace LP2TECNOQUIMFRONT.frmGerente
     {
         Service.planMaestroProduccion pmp = new Service.planMaestroProduccion();
         Service.ServicioClient DBController = new Service.ServicioClient();
+        Service.trabajador trabajador;
+        Service.mensaje mensaje = new Service.mensaje();
         Estado estadoObj;
         public frmGestionarPlanMaestro()
         {
             InitializeComponent();
             estadoComponentes(Estado.Inicial);
+        }
+
+        public frmGestionarPlanMaestro(Service.trabajador gerente)
+        {
+            InitializeComponent();
+            estadoComponentes(Estado.Inicial);
+            trabajador = gerente;
         }
 
         public void estadoComponentes(Estado estado)
@@ -66,6 +75,22 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             estadoComponentes(Estado.Inicial);
+            if (rbAprobado.Checked)
+            {
+                pmp.estado = Service.estado.Aprobado;
+                mensaje.descripcion = "PLAN MAESTRO APROBADO";
+            }
+            else if (rbDesaprobado.Checked)
+            {
+                pmp.estado = Service.estado.Rechazado;
+                mensaje.descripcion = "PLAN MAESTRO RECHAZADO";
+            }
+            DBController.actualizarPMP(pmp);
+
+            mensaje.emisor = trabajador;
+            mensaje.fechaEnvio = DateTime.Now;
+            mensaje.receptor = pmp.responsable;
+            DBController.insertarMensaje(mensaje);
         }
     }
 }
