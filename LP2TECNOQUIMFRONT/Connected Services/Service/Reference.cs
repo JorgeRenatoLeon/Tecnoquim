@@ -223,9 +223,10 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse> actualizarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request);
         
-        // CODEGEN: El parámetro 'maquinaria' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse insertarMaquinaria(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse")]
@@ -3089,7 +3090,15 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class insertarMaquinariaResponse {
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
         public insertarMaquinariaResponse() {
+        }
+        
+        public insertarMaquinariaResponse(int @return) {
+            this.@return = @return;
         }
     }
     
@@ -4870,10 +4879,11 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.insertarMaquinaria(request);
         }
         
-        public void insertarMaquinaria(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+        public int insertarMaquinaria(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
             LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest();
             inValue.maquinaria = maquinaria;
             LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMaquinaria(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
