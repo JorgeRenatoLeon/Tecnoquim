@@ -543,6 +543,9 @@
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.eliminarProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.enviarMensajeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
