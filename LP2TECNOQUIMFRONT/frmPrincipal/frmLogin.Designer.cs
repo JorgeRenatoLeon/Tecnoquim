@@ -42,7 +42,6 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.pbCerrar = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lblOlvidoContrasena = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
@@ -187,16 +186,6 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             this.pbCerrar.TabStop = false;
             this.pbCerrar.Click += new System.EventHandler(this.pbCerrar_Click);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(0, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel1.TabIndex = 13;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            // 
             // lblOlvidoContrasena
             // 
             this.lblOlvidoContrasena.AutoSize = true;
@@ -216,7 +205,6 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblOlvidoContrasena);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pbCerrar);
             this.Controls.Add(this.pbMinimize);
             this.Controls.Add(this.button1);
@@ -256,7 +244,6 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pbMinimize;
         private System.Windows.Forms.PictureBox pbCerrar;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel lblOlvidoContrasena;
     }
 }
