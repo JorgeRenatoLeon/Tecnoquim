@@ -92,18 +92,6 @@
     <Compile Include="frmJAlmacen\frmAlmacen.Designer.cs">
       <DependentUpon>frmAlmacen.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmJAlmacen\frmGestionarProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmJAlmacen\frmGestionarProducto.Designer.cs">
-      <DependentUpon>frmGestionarProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmJAlmacen\frmInstructivo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmJAlmacen\frmInstructivo.Designer.cs">
-      <DependentUpon>frmInstructivo.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmJAlmacen\frmInsumo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +127,18 @@
     </Compile>
     <Compile Include="frmJAlmacen\frmProductos.Designer.cs">
       <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmStockInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmStockInsumo.Designer.cs">
+      <DependentUpon>frmStockInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmStockProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmStockProd.Designer.cs">
+      <DependentUpon>frmStockProd.cs</DependentUpon>
     </Compile>
     <Compile Include="frmJControlCalidad\frmControlCalidad.cs">
       <SubType>Form</SubType>
@@ -346,12 +346,6 @@
     <EmbeddedResource Include="frmJAlmacen\frmAlmacen.resx">
       <DependentUpon>frmAlmacen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmJAlmacen\frmGestionarProducto.resx">
-      <DependentUpon>frmGestionarProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmJAlmacen\frmInstructivo.resx">
-      <DependentUpon>frmInstructivo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmJAlmacen\frmInsumo.resx">
       <DependentUpon>frmInsumo.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,6 +363,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJAlmacen\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJAlmacen\frmStockInsumo.resx">
+      <DependentUpon>frmStockInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJAlmacen\frmStockProd.resx">
+      <DependentUpon>frmStockProd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJControlCalidad\frmControlCalidad.resx">
       <DependentUpon>frmControlCalidad.cs</DependentUpon>

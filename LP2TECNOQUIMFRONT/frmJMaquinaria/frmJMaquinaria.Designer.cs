@@ -50,6 +50,9 @@
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.rbActivo = new System.Windows.Forms.RadioButton();
+            this.rbInactivo = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -144,6 +147,9 @@
             // 
             // gbDatos
             // 
+            this.gbDatos.Controls.Add(this.rbInactivo);
+            this.gbDatos.Controls.Add(this.rbActivo);
+            this.gbDatos.Controls.Add(this.lblEstado);
             this.gbDatos.Controls.Add(this.txtTipo);
             this.gbDatos.Controls.Add(this.txtNombre);
             this.gbDatos.Controls.Add(this.lblTipo);
@@ -152,9 +158,9 @@
             this.gbDatos.Controls.Add(this.lblCodigo);
             this.gbDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gbDatos.Location = new System.Drawing.Point(187, 137);
+            this.gbDatos.Location = new System.Drawing.Point(187, 119);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(682, 218);
+            this.gbDatos.Size = new System.Drawing.Size(682, 262);
             this.gbDatos.TabIndex = 38;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos Generales";
@@ -300,6 +306,38 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Registro de Maquinaria";
             // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(35, 214);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(73, 24);
+            this.lblEstado.TabIndex = 33;
+            this.lblEstado.Text = "Estado:";
+            // 
+            // rbActivo
+            // 
+            this.rbActivo.AutoSize = true;
+            this.rbActivo.Location = new System.Drawing.Point(220, 214);
+            this.rbActivo.Name = "rbActivo";
+            this.rbActivo.Size = new System.Drawing.Size(89, 29);
+            this.rbActivo.TabIndex = 34;
+            this.rbActivo.TabStop = true;
+            this.rbActivo.Text = "Activo";
+            this.rbActivo.UseVisualStyleBackColor = true;
+            // 
+            // rbInactivo
+            // 
+            this.rbInactivo.AutoSize = true;
+            this.rbInactivo.Location = new System.Drawing.Point(373, 214);
+            this.rbInactivo.Name = "rbInactivo";
+            this.rbInactivo.Size = new System.Drawing.Size(104, 29);
+            this.rbInactivo.TabIndex = 35;
+            this.rbInactivo.TabStop = true;
+            this.rbInactivo.Text = "Inactivo";
+            this.rbInactivo.UseVisualStyleBackColor = true;
+            // 
             // frmJMaquinaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,5 +388,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.RadioButton rbActivo;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.RadioButton rbInactivo;
     }
 }

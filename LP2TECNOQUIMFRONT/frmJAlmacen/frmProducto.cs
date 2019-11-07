@@ -182,8 +182,8 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             }
             if (estadoObj == Estado.Nuevo)
             {
-                int idProd=DBController.insertarProducto(producto);
-                int idInstru=DBController.insertarInstructivo(instructivo,idProd);
+                int idProd= DBController.insertarProducto(producto);
+                int idInstru= DBController.insertarInstructivo(instructivo,idProd);
                 foreach (Service.lineaInsumo l in lineas)
                 {
                     DBController.insertarLineaInsumo(l,idInstru);
