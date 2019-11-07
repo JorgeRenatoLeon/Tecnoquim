@@ -223,10 +223,9 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse> actualizarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request);
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        // CODEGEN: El parámetro 'maquinaria' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse insertarMaquinaria(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse")]
@@ -2811,16 +2810,11 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPMP;
-        
         public actualizarDetalleMaquinariaRequest() {
         }
         
-        public actualizarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria, int idPMP) {
+        public actualizarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
             this.maquinaria = maquinaria;
-            this.idPMP = idPMP;
         }
     }
     
@@ -3010,16 +3004,11 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPMP;
-        
         public insertarDetalleMaquinariaRequest() {
         }
         
-        public insertarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria, int idPMP) {
+        public insertarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
             this.maquinaria = maquinaria;
-            this.idPMP = idPMP;
         }
     }
     
@@ -3090,15 +3079,7 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class insertarMaquinariaResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
         public insertarMaquinariaResponse() {
-        }
-        
-        public insertarMaquinariaResponse(int @return) {
-            this.@return = @return;
         }
     }
     
@@ -4691,10 +4672,9 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.actualizarDetalleMaquinaria(request);
         }
         
-        public void actualizarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria, int idPMP) {
+        public void actualizarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
             LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest();
             inValue.maquinaria = maquinaria;
-            inValue.idPMP = idPMP;
             LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleMaquinaria(inValue);
         }
         
@@ -4703,10 +4683,9 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.actualizarDetalleMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse> actualizarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria, int idPMP) {
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse> actualizarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
             LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest();
             inValue.maquinaria = maquinaria;
-            inValue.idPMP = idPMP;
             return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleMaquinariaAsync(inValue);
         }
         
@@ -4831,10 +4810,9 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.insertarDetalleMaquinaria(request);
         }
         
-        public void insertarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria, int idPMP) {
+        public void insertarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
             LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest();
             inValue.maquinaria = maquinaria;
-            inValue.idPMP = idPMP;
             LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleMaquinaria(inValue);
         }
         
@@ -4843,10 +4821,9 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.insertarDetalleMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse> insertarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria, int idPMP) {
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse> insertarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
             LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest();
             inValue.maquinaria = maquinaria;
-            inValue.idPMP = idPMP;
             return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleMaquinariaAsync(inValue);
         }
         
@@ -4879,11 +4856,10 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.insertarMaquinaria(request);
         }
         
-        public int insertarMaquinaria(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+        public void insertarMaquinaria(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
             LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest();
             inValue.maquinaria = maquinaria;
             LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMaquinaria(inValue);
-            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
