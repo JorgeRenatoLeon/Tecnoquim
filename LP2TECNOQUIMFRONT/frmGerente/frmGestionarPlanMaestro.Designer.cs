@@ -31,23 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarPlanMaestro));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
-            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.gbEstado = new System.Windows.Forms.GroupBox();
+            this.rbDesaprobado = new System.Windows.Forms.RadioButton();
+            this.rbAprobado = new System.Windows.Forms.RadioButton();
+            this.txtComentario = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPeriodo = new System.Windows.Forms.TextBox();
+            this.txtResponsable = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNOrden = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbEstado.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,8 +57,9 @@
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnModificar,
-            this.btnBuscar,
-            this.toolStripButton2});
+            this.toolStripButton1,
+            this.btnGuardar,
+            this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(740, 32);
@@ -72,68 +74,76 @@
             this.btnModificar.Size = new System.Drawing.Size(113, 29);
             this.btnModificar.Text = "&Modificar";
             // 
-            // btnBuscar
+            // toolStripButton1
             // 
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(88, 29);
-            this.btnBuscar.Text = "&Buscar";
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(88, 29);
+            this.toolStripButton1.Text = "&Buscar";
             // 
-            // toolStripButton2
+            // btnGuardar
             // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(106, 29);
-            this.toolStripButton2.Text = "&Cancelar";
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(101, 29);
+            this.btnGuardar.Text = "&Guardar";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // groupBox2
+            // btnCancelar
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(12, 266);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(716, 219);
-            this.groupBox2.TabIndex = 36;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Estado:";
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(106, 29);
+            this.btnCancelar.Text = "&Cancelar";
             // 
-            // radioButton2
+            // gbEstado
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(389, 43);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(159, 29);
-            this.radioButton2.TabIndex = 25;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Desaprobado";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.gbEstado.Controls.Add(this.rbDesaprobado);
+            this.gbEstado.Controls.Add(this.rbAprobado);
+            this.gbEstado.Controls.Add(this.txtComentario);
+            this.gbEstado.Controls.Add(this.label7);
+            this.gbEstado.Controls.Add(this.label8);
+            this.gbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbEstado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gbEstado.Location = new System.Drawing.Point(12, 266);
+            this.gbEstado.Name = "gbEstado";
+            this.gbEstado.Size = new System.Drawing.Size(716, 219);
+            this.gbEstado.TabIndex = 36;
+            this.gbEstado.TabStop = false;
+            this.gbEstado.Text = "Estado:";
             // 
-            // radioButton1
+            // rbDesaprobado
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(201, 43);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(123, 29);
-            this.radioButton1.TabIndex = 24;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Aprobado";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbDesaprobado.AutoSize = true;
+            this.rbDesaprobado.Location = new System.Drawing.Point(389, 43);
+            this.rbDesaprobado.Name = "rbDesaprobado";
+            this.rbDesaprobado.Size = new System.Drawing.Size(159, 29);
+            this.rbDesaprobado.TabIndex = 25;
+            this.rbDesaprobado.TabStop = true;
+            this.rbDesaprobado.Text = "Desaprobado";
+            this.rbDesaprobado.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // rbAprobado
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(201, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(487, 98);
-            this.textBox2.TabIndex = 23;
+            this.rbAprobado.AutoSize = true;
+            this.rbAprobado.Location = new System.Drawing.Point(201, 43);
+            this.rbAprobado.Name = "rbAprobado";
+            this.rbAprobado.Size = new System.Drawing.Size(123, 29);
+            this.rbAprobado.TabIndex = 24;
+            this.rbAprobado.TabStop = true;
+            this.rbAprobado.Text = "Aprobado";
+            this.rbAprobado.UseVisualStyleBackColor = true;
+            // 
+            // txtComentario
+            // 
+            this.txtComentario.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComentario.Location = new System.Drawing.Point(201, 94);
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(487, 98);
+            this.txtComentario.TabIndex = 23;
             // 
             // label7
             // 
@@ -157,11 +167,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtPeriodo);
+            this.groupBox1.Controls.Add(this.txtResponsable);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtNOrden);
+            this.groupBox1.Controls.Add(this.txtCodigo);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -172,21 +182,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Generales Plan Maestro Actual";
             // 
-            // dateTimePicker1
+            // txtPeriodo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(201, 93);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(482, 31);
-            this.dateTimePicker1.TabIndex = 33;
+            this.txtPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeriodo.Location = new System.Drawing.Point(201, 90);
+            this.txtPeriodo.Name = "txtPeriodo";
+            this.txtPeriodo.ReadOnly = true;
+            this.txtPeriodo.Size = new System.Drawing.Size(482, 29);
+            this.txtPeriodo.TabIndex = 34;
             // 
-            // textBox3
+            // txtResponsable
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(201, 138);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(482, 29);
-            this.textBox3.TabIndex = 32;
-            this.textBox3.Text = "Felipe Ruiz";
+            this.txtResponsable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtResponsable.Location = new System.Drawing.Point(201, 138);
+            this.txtResponsable.Name = "txtResponsable";
+            this.txtResponsable.ReadOnly = true;
+            this.txtResponsable.Size = new System.Drawing.Size(482, 29);
+            this.txtResponsable.TabIndex = 32;
             // 
             // label2
             // 
@@ -208,14 +220,14 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Periodo:";
             // 
-            // txtNOrden
+            // txtCodigo
             // 
-            this.txtNOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNOrden.Location = new System.Drawing.Point(201, 44);
-            this.txtNOrden.Name = "txtNOrden";
-            this.txtNOrden.Size = new System.Drawing.Size(238, 29);
-            this.txtNOrden.TabIndex = 20;
-            this.txtNOrden.Text = "4562";
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(201, 44);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ReadOnly = true;
+            this.txtCodigo.Size = new System.Drawing.Size(238, 29);
+            this.txtCodigo.TabIndex = 20;
             // 
             // label5
             // 
@@ -233,15 +245,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.ClientSize = new System.Drawing.Size(740, 514);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbEstado);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmGestionarPlanMaestro";
             this.Text = "frmGestionarPlanMaestro";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbEstado.ResumeLayout(false);
+            this.gbEstado.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -252,20 +264,21 @@
         #endregion
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnModificar;
-        private System.Windows.Forms.ToolStripButton btnBuscar;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ToolStripButton btnGuardar;
+        private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.GroupBox gbEstado;
+        private System.Windows.Forms.RadioButton rbDesaprobado;
+        private System.Windows.Forms.RadioButton rbAprobado;
+        private System.Windows.Forms.TextBox txtComentario;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtResponsable;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNOrden;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtPeriodo;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
