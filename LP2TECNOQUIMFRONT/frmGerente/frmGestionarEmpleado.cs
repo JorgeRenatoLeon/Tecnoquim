@@ -152,7 +152,14 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         {
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
+        }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            limpiarComponentes();
+            trabajador = new Service.trabajador();
+            estadoObj = Estado.Nuevo;
+            estadoComponentes(Estado.Nuevo);
         }
     }
 }
