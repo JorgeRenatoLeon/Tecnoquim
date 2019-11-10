@@ -62,13 +62,11 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         private void btnPMS_Click(object sender, EventArgs e)
         {
             frmGestionarPlanMaestro frmGestionarPlanM = new frmGestionarPlanMaestro(trabajador);
-            frmGestionarPlanM.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             frmGestionarEmpleado frmGestionarEmpleado = new frmGestionarEmpleado();
-            frmGestionarEmpleado.Visible = true;
         }
     }
 }

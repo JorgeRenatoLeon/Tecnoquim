@@ -37,7 +37,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
                 case Estado.Inicial:
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = false;
-                    btnGuardar.Enabled = true;
+                    btnBuscar.Enabled = true;
                     btnCancelar.Enabled = false;
                     gbEstado.Enabled = false;
                     break;
@@ -45,12 +45,12 @@ namespace LP2TECNOQUIMFRONT.frmGerente
                     btnModificar.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = true;
-                    btnGuardar.Enabled = false;
+                    btnBuscar.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
-                    btnGuardar.Enabled = false;
+                    btnBuscar.Enabled = false;
                     btnCancelar.Enabled = true;
                     gbEstado.Enabled = true;
                     break;
@@ -58,7 +58,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
                     btnCancelar.Enabled = true;
-                    btnGuardar.Enabled = false;
+                    btnBuscar.Enabled = false;
                     gbEstado.Enabled = true;
                     break;
             }
@@ -74,6 +74,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            /*
             estadoComponentes(Estado.Inicial);
             if (rbAprobado.Checked)
             {
@@ -91,6 +92,20 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             mensaje.fechaEnvio = DateTime.Now;
             mensaje.receptor = pmp.responsable;
             DBController.insertarMensaje(mensaje);
+            */
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscarPlanMaestro formBuscarPlan = new frmBuscarPlanMaestro();
+            if (formBuscarPlan.ShowDialog() == DialogResult.OK)
+            {
+                pmp = formBuscarPlan.PmpSeleccionado;
+                txtCodigo.Text = pmp.id.ToString();
+                txtPeriodo.Text = pmp.periodo.ToString();
+                txtResponsable.Text = pmp.responsable.nombres + " " + pmp.responsable.apellidos;
+                estadoComponentes(Estado.Nuevo);
+            }
         }
     }
 }

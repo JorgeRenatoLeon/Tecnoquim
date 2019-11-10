@@ -36,7 +36,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Periodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Reponsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Responsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).BeginInit();
             this.SuspendLayout();
@@ -80,7 +80,7 @@
             this.dgvHistorialPlan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Periodo,
-            this.Reponsable,
+            this.Responsable,
             this.Estado});
             this.dgvHistorialPlan.Location = new System.Drawing.Point(30, 75);
             this.dgvHistorialPlan.Name = "dgvHistorialPlan";
@@ -124,12 +124,12 @@
             this.Periodo.ReadOnly = true;
             this.Periodo.Width = 150;
             // 
-            // Reponsable
+            // Responsable
             // 
-            this.Reponsable.HeaderText = "Responsable";
-            this.Reponsable.Name = "Reponsable";
-            this.Reponsable.ReadOnly = true;
-            this.Reponsable.Width = 300;
+            this.Responsable.HeaderText = "Responsable";
+            this.Responsable.Name = "Responsable";
+            this.Responsable.ReadOnly = true;
+            this.Responsable.Width = 300;
             // 
             // Estado
             // 
@@ -166,7 +166,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Periodo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Reponsable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Responsable;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }
