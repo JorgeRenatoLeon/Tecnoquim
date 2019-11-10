@@ -73,6 +73,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(113, 29);
             this.btnModificar.Text = "&Modificar";
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnBuscar
             // 
@@ -99,6 +100,7 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(106, 29);
             this.btnCancelar.Text = "&Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // gbEstado
             // 
@@ -111,7 +113,7 @@
             this.gbEstado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbEstado.Location = new System.Drawing.Point(12, 266);
             this.gbEstado.Name = "gbEstado";
-            this.gbEstado.Size = new System.Drawing.Size(716, 219);
+            this.gbEstado.Size = new System.Drawing.Size(716, 161);
             this.gbEstado.TabIndex = 36;
             this.gbEstado.TabStop = false;
             this.gbEstado.Text = "Estado:";
@@ -140,10 +142,10 @@
             // 
             // txtComentario
             // 
-            this.txtComentario.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComentario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComentario.Location = new System.Drawing.Point(201, 94);
             this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(487, 98);
+            this.txtComentario.Size = new System.Drawing.Size(487, 29);
             this.txtComentario.TabIndex = 23;
             // 
             // label7
@@ -245,7 +247,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(740, 514);
+            this.ClientSize = new System.Drawing.Size(740, 460);
             this.Controls.Add(this.gbEstado);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);

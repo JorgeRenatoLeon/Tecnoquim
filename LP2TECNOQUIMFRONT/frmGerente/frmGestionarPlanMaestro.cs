@@ -74,8 +74,6 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            /*
-            estadoComponentes(Estado.Inicial);
             if (rbAprobado.Checked)
             {
                 pmp.estado = Service.estado.Aprobado;
@@ -92,7 +90,8 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             mensaje.fechaEnvio = DateTime.Now;
             mensaje.receptor = pmp.responsable;
             DBController.insertarMensaje(mensaje);
-            */
+            MessageBox.Show("Se han actualizado los datos", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            estadoComponentes(Estado.Inicial);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -102,10 +101,25 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             {
                 pmp = formBuscarPlan.PmpSeleccionado;
                 txtCodigo.Text = pmp.id.ToString();
-                txtPeriodo.Text = pmp.periodo.ToString();
+                txtPeriodo.Text = pmp.periodo.ToString("yyyy - MM - dd");
+                txtComentario.Text = pmp.estado.ToString();
+                if (pmp.estado == Service.estado.Rechazado) rbDesaprobado.Checked = true;
+                else rbAprobado.Checked = true;
                 txtResponsable.Text = pmp.responsable.nombres + " " + pmp.responsable.apellidos;
-                estadoComponentes(Estado.Nuevo);
+                estadoComponentes(Estado.Buscar);
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarComponentes();
+            estadoComponentes(Estado.Inicial);
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            estadoObj = Estado.Modificar;
+            estadoComponentes(Estado.Modificar);
         }
     }
 }

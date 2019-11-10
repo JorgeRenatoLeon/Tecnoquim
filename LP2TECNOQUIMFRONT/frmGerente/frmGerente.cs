@@ -33,7 +33,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         }
         public void SplashStart()
         {
-            Application.Run(new frmSplash());
+            //Application.Run(new frmSplash());
         }
 
         private void frmGerente_FormClosed(object sender, FormClosedEventArgs e)
@@ -62,11 +62,13 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         private void btnPMS_Click(object sender, EventArgs e)
         {
             frmGestionarPlanMaestro frmGestionarPlanM = new frmGestionarPlanMaestro(trabajador);
+            frmGestionarPlanM.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             frmGestionarEmpleado frmGestionarEmpleado = new frmGestionarEmpleado();
+            frmGestionarEmpleado.Visible = true;
         }
     }
 }
