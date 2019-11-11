@@ -16,11 +16,25 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         Service.ServicioClient DBController = new Service.ServicioClient();
         Service.trabajador trabajador;
         Service.mensaje mensaje = new Service.mensaje();
+        int cont;
         Estado estadoObj;
-        public frmGestionarPlanMaestro()
+
+        public frmGestionarPlanMaestro(int cont=0)
         {
+            BindingList<Service.planMaestroProduccion> pmps = new BindingList<Service.planMaestroProduccion>();
+            if (cont == 1)
+            {
+                pmps = new BindingList<Service.planMaestroProduccion>(DBController.listarPMP("2019-01-01"));
+            }
             InitializeComponent();
-            estadoComponentes(Estado.Inicial);
+            pmp = pmps[0];
+            txtCodigo.Text = pmp.id.ToString();
+            txtPeriodo.Text = pmp.periodo.ToString("yyyy - MM - dd");
+            txtComentario.Text = pmp.estado.ToString();
+            if (pmp.estado == Service.estado.Rechazado) rbDesaprobado.Checked = true;
+            else rbAprobado.Checked = true;
+            txtResponsable.Text = pmp.responsable.nombres + " " + pmp.responsable.apellidos;
+            estadoComponentes(Estado.Buscar);
         }
 
         public frmGestionarPlanMaestro(Service.trabajador gerente)

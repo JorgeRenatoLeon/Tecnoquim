@@ -55,5 +55,19 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             dgvNotificaciones.Rows[e.RowIndex].Cells["Fecha"].Value = ppFila.fechaEnvio;
         }
 
+        private void dgvNotificaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string str = dgvNotificaciones.Rows[dgvNotificaciones.SelectedRows[0].Index].Cells[2].Value.ToString();
+
+            if (str == "VALIDAR PMP")
+            {
+                this.Visible = false;
+                frmGerente formHome = new frmGerente(2, this.trabajador);
+                formHome.Visible = true;
+                close = 1;
+                this.Close();
+            }
+
+        }
     }
 }

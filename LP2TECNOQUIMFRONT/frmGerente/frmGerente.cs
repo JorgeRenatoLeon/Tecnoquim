@@ -12,9 +12,16 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         public frmGerente(int cont = 0, Service.trabajador trabajadors = null)
         {
             this.trabajador = trabajadors;
-            if (cont != 0)
+            if (cont == 1)
             {
                 InitializeComponent();
+            }
+            else if (cont==2)
+            {
+                InitializeComponent();
+                this.Visible = true;
+                frmGestionarPlanMaestro frmGestionarPlanM = new frmGestionarPlanMaestro(1);
+                frmGestionarPlanM.ShowDialog(this);
             }
             else
             {
@@ -33,7 +40,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         }
         public void SplashStart()
         {
-            //Application.Run(new frmSplash());
+            Application.Run(new frmSplash());
         }
 
         private void frmGerente_FormClosed(object sender, FormClosedEventArgs e)
