@@ -14,19 +14,21 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
     public partial class frmProducto : Form
     {
         int flag=0;
+        int flagElim = 0;
         Service.producto producto;
         Service.insumo insumo;
         Service.lineaInsumo linea;
-        Service.detalleAlmacenInsumo detalle;
         Service.instructivo instructivo;
         BindingList<Service.lineaInsumo> lineas;
-        BindingList<Service.lineaInsumo> lineas2;
+        BindingList<Service.lineaInsumo> lineasEliminadas;
         Service.ServicioClient DBController = new Service.ServicioClient();
         Estado estadoObj;
 
         public frmProducto()
         {
             InitializeComponent();
+            lineas = new BindingList<lineaInsumo>();
+            lineasEliminadas = new BindingList<lineaInsumo>();
             estadoComponentes(Estado.Inicial);
         }
 
@@ -142,6 +144,8 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         public void limpiarComponentes()
         {
+            txtidprod.Text = "";
+            txtidinst.Text = "";
             txtNomProd.Text = "";
             txtPres.Text = "";
             txtGranu.Text = "";
@@ -149,6 +153,9 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             txtIdInsumo.Text = "";
             txtCant.Text = "";
             txtNomInsumo.Text = "";
+            flag = 0;
+            flagElim = 0;
+            dgvInsumos.DataSource = null;
             dgvInsumos.Rows.Clear();
             dgvInsumos.Refresh();
         }
@@ -171,25 +178,26 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            producto = new Service.producto();
-            producto.nombre = txtNomProd.Text;
-            producto.presentacion = txtPres.Text;
-            producto.granularidad = float.Parse(txtGranu.Text);
-
-            instructivo = new Service.instructivo();
-            instructivo.actividades = txtAct.Text;
-            instructivo.insumos = lineas.ToArray();
-            producto.instructivo = instructivo;
-            if (flag == 1)
-            {
-                producto.restriccion = true;
-            }
-            else
-            {
-                producto.restriccion = false;
-            }
+            
             if (estadoObj == Estado.Nuevo)
             {
+                producto = new Service.producto();
+                producto.nombre = txtNomProd.Text;
+                producto.presentacion = txtPres.Text;
+                producto.granularidad = float.Parse(txtGranu.Text);
+
+                instructivo = new Service.instructivo();
+                instructivo.actividades = txtAct.Text;
+                instructivo.insumos = lineas.ToArray();
+                producto.instructivo = instructivo;
+                if (flag == 1)
+                {
+                    producto.restriccion = true;
+                }
+                else
+                {
+                    producto.restriccion = false;
+                }
                 int idProd= DBController.insertarProducto(producto);
                 int idInstru= DBController.insertarInstructivo(instructivo,idProd);
                 foreach (Service.lineaInsumo l in lineas)
@@ -201,16 +209,28 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             }
             else if (estadoObj == Estado.Modificar)
             {
-                producto.idProducto = int.Parse(txtidprod.Text);
-                instructivo.id = int.Parse(txtIdInsumo.Text);
+                producto.nombre = txtNomProd.Text;
+                producto.presentacion = txtPres.Text;
+                producto.granularidad = float.Parse(txtGranu.Text);
+                producto.instructivo.insumos = lineas.ToArray();
+
                 DBController.actualizarProducto(producto);
-                DBController.actualizarInstructivo(instructivo, producto.idProducto);
+                DBController.actualizarInstructivo(producto.instructivo, producto.idProducto);
                 foreach (Service.lineaInsumo l in lineas)
                 {
-                    DBController.actualizarLineaInsumo(l, instructivo.id);
+                    DBController.eliminarLineaInsumo(l.idLineaI);
+                    DBController.insertarLineaInsumo(l, producto.instructivo.id);
+                }
+                if (flagElim==1)
+                {
+                    foreach (Service.lineaInsumo l in lineasEliminadas)
+                    {
+                        DBController.eliminarLineaInsumo(l.idLineaI);
+                    }
                 }
                 MessageBox.Show("Producto Actualizado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            limpiarComponentes();
             estadoComponentes(Estado.Inicial);
         }
 
@@ -226,17 +246,11 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 txtGranu.Text = producto.granularidad.ToString();
                 txtidinst.Text = producto.instructivo.id.ToString();
                 txtAct.Text = producto.instructivo.actividades;
-                dgvInsumos.Refresh();
-                //lineas2 = new BindingList<lineaInsumo>(DBController.listarLineaInsumo(producto.idProducto).ToArray());
-                ////lineas2= DBController.listarLineaInsumo(producto.idProducto).ToArray();
-                //foreach (Service.lineaInsumo l in lineas2)
-                //{
-                //    agregarTabla(linea);
-                //}
-                dgvInsumos.DataSource = DBController.listarLineaInsumo(int.Parse(txtidinst.Text));
+                lineas = new BindingList<lineaInsumo>(DBController.listarLineaInsumo(producto.instructivo.id));
+                dgvInsumos.DataSource = lineas;
             }
-            //estadoObj = Estado.Buscar;
-            //estadoComponentes(Estado.Buscar);
+            estadoObj = Estado.Buscar;
+            estadoComponentes(Estado.Buscar);
         }
 
         private void btnElimina_Click(object sender, EventArgs e)
@@ -258,25 +272,21 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             linea = new Service.lineaInsumo();
-            linea.insumo = new Service.insumo();
-            linea.insumo = detalle.insumo;
+            linea.insumo = insumo;
             linea.cantInsumo = int.Parse(txtCant.Text);
+            BindingList<Service.lineaInsumo> lineasAg = new BindingList<lineaInsumo>();
+            foreach (lineaInsumo item in lineas)
+            {
+                lineasAg.Add(item);
+            }
+            lineasAg.Add(linea);
+            lineas = lineasAg;
             agregarTabla(linea);
-            lineas.Add(linea);
         }
 
         private void agregarTabla(lineaInsumo l)
         {
-            if (flag == 1)
-            {
-                dgvInsumos.Rows.Add(l.insumo.nombre, l.insumo.cantidad, l.insumo.unidad,
-                l.insumo.granularidad, l.insumo.color, "Si");
-            }
-            else
-            {
-                dgvInsumos.Rows.Add(l.insumo.nombre, l.insumo.cantidad, l.insumo.unidad,
-                l.insumo.granularidad, l.insumo.color, "No");
-            }
+            dgvInsumos.DataSource = lineas;
         }
 
         private void btnBuscarInsumo_Click(object sender, EventArgs e)
@@ -297,10 +307,20 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow item in this.dgvInsumos.SelectedRows)
+            string str = dgvInsumos.Rows[dgvInsumos.SelectedRows[0].Index].Cells[0].Value.ToString();
+
+            BindingList<Service.lineaInsumo> lineasElim = new BindingList<lineaInsumo>();
+            foreach (lineaInsumo item in lineas)
             {
-                dgvInsumos.Rows.RemoveAt(item.Index);
+                if (item.insumo.nombre != str) lineasElim.Add(item);
+                if (estadoObj == Estado.Modificar && item.insumo.nombre==str)
+                {
+                    lineasEliminadas.Add(item);
+                    flagElim = 1;
+                }
             }
+            lineas = lineasElim;
+            dgvInsumos.DataSource = lineas;
         }
 
         private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -311,6 +331,12 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         private void dgvInsumos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             Service.lineaInsumo insumoFila = (Service.lineaInsumo)dgvInsumos.Rows[e.RowIndex].DataBoundItem;
+            dgvInsumos.Rows[e.RowIndex].Cells["Nombre"].Style.ForeColor = System.Drawing.Color.Black;
+            dgvInsumos.Rows[e.RowIndex].Cells["Granularidad"].Style.ForeColor = System.Drawing.Color.Black;
+            dgvInsumos.Rows[e.RowIndex].Cells["Color"].Style.ForeColor = System.Drawing.Color.Black;
+            dgvInsumos.Rows[e.RowIndex].Cells["Cantidad"].Style.ForeColor = System.Drawing.Color.Black;
+            dgvInsumos.Rows[e.RowIndex].Cells["Unidad"].Style.ForeColor = System.Drawing.Color.Black;
+            dgvInsumos.Rows[e.RowIndex].Cells["Restriccion"].Style.ForeColor = System.Drawing.Color.Black;
             dgvInsumos.Rows[e.RowIndex].Cells["Nombre"].Value = insumoFila.insumo.nombre;
             dgvInsumos.Rows[e.RowIndex].Cells["Granularidad"].Value = insumoFila.insumo.granularidad.ToString();
             dgvInsumos.Rows[e.RowIndex].Cells["Color"].Value = insumoFila.insumo.color;

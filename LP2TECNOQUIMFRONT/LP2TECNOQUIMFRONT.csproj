@@ -555,6 +555,9 @@
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.eliminarLineaInsumoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
