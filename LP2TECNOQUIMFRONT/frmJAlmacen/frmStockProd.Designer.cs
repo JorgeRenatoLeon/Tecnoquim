@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtLote = new System.Windows.Forms.TextBox();
+            this.lblnlote = new System.Windows.Forms.Label();
             this.cbAlmacen = new System.Windows.Forms.ComboBox();
             this.lblIdInstructivo = new System.Windows.Forms.Label();
             this.lblAct = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblBack = new System.Windows.Forms.LinkLabel();
-            this.txtLote = new System.Windows.Forms.TextBox();
-            this.lblnlote = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,25 @@
             this.groupBox2.TabIndex = 70;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Almacen";
+            // 
+            // txtLote
+            // 
+            this.txtLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtLote.Location = new System.Drawing.Point(138, 86);
+            this.txtLote.Name = "txtLote";
+            this.txtLote.Size = new System.Drawing.Size(132, 30);
+            this.txtLote.TabIndex = 83;
+            // 
+            // lblnlote
+            // 
+            this.lblnlote.AutoSize = true;
+            this.lblnlote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnlote.ForeColor = System.Drawing.Color.White;
+            this.lblnlote.Location = new System.Drawing.Point(35, 89);
+            this.lblnlote.Name = "lblnlote";
+            this.lblnlote.Size = new System.Drawing.Size(96, 25);
+            this.lblnlote.TabIndex = 82;
+            this.lblnlote.Text = "No. Lote: ";
             // 
             // cbAlmacen
             // 
@@ -203,6 +222,7 @@
             this.txtNomProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.txtNomProd.Location = new System.Drawing.Point(180, 89);
             this.txtNomProd.Name = "txtNomProd";
+            this.txtNomProd.ReadOnly = true;
             this.txtNomProd.Size = new System.Drawing.Size(353, 30);
             this.txtNomProd.TabIndex = 35;
             // 
@@ -211,6 +231,7 @@
             this.txtPres.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.txtPres.Location = new System.Drawing.Point(183, 137);
             this.txtPres.Name = "txtPres";
+            this.txtPres.ReadOnly = true;
             this.txtPres.Size = new System.Drawing.Size(154, 30);
             this.txtPres.TabIndex = 38;
             // 
@@ -255,25 +276,6 @@
             this.lblBack.Text = "< Regresar";
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
-            // 
-            // txtLote
-            // 
-            this.txtLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtLote.Location = new System.Drawing.Point(138, 86);
-            this.txtLote.Name = "txtLote";
-            this.txtLote.Size = new System.Drawing.Size(132, 30);
-            this.txtLote.TabIndex = 83;
-            // 
-            // lblnlote
-            // 
-            this.lblnlote.AutoSize = true;
-            this.lblnlote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnlote.ForeColor = System.Drawing.Color.White;
-            this.lblnlote.Location = new System.Drawing.Point(35, 89);
-            this.lblnlote.Name = "lblnlote";
-            this.lblnlote.Size = new System.Drawing.Size(96, 25);
-            this.lblnlote.TabIndex = 82;
-            this.lblnlote.Text = "No. Lote: ";
             // 
             // frmStockProd
             // 

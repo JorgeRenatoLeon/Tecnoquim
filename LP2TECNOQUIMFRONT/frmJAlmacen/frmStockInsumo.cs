@@ -37,6 +37,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 txtCant.Text = detalle.insumo.cantidad.ToString();
                 txtUnidad.Text = detalle.insumo.unidad.ToString();
                 txtLote.Text = detalle.nLote.ToString();
+                txtAct.Text = detalle.stock.ToString();
 
             }
         }

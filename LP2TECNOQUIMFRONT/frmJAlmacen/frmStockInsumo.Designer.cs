@@ -40,14 +40,14 @@
             this.txtCant = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtLote = new System.Windows.Forms.TextBox();
+            this.lblnlote = new System.Windows.Forms.Label();
             this.cbAlmacen = new System.Windows.Forms.ComboBox();
             this.lblIdInstructivo = new System.Windows.Forms.Label();
             this.lblAct = new System.Windows.Forms.Label();
             this.txtAct = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblBack = new System.Windows.Forms.LinkLabel();
-            this.lblnlote = new System.Windows.Forms.Label();
-            this.txtLote = new System.Windows.Forms.TextBox();
             this.gbDatos.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -113,6 +113,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.txtNombre.Location = new System.Drawing.Point(139, 98);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(365, 30);
             this.txtNombre.TabIndex = 57;
             // 
@@ -130,8 +131,9 @@
             // txtUnidad
             // 
             this.txtUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtUnidad.Location = new System.Drawing.Point(357, 159);
+            this.txtUnidad.Location = new System.Drawing.Point(357, 154);
             this.txtUnidad.Name = "txtUnidad";
+            this.txtUnidad.ReadOnly = true;
             this.txtUnidad.Size = new System.Drawing.Size(88, 30);
             this.txtUnidad.TabIndex = 62;
             // 
@@ -162,6 +164,7 @@
             this.txtCant.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.txtCant.Location = new System.Drawing.Point(139, 156);
             this.txtCant.Name = "txtCant";
+            this.txtCant.ReadOnly = true;
             this.txtCant.Size = new System.Drawing.Size(88, 30);
             this.txtCant.TabIndex = 59;
             // 
@@ -193,6 +196,25 @@
             this.groupBox2.TabIndex = 71;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Almacen";
+            // 
+            // txtLote
+            // 
+            this.txtLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtLote.Location = new System.Drawing.Point(139, 85);
+            this.txtLote.Name = "txtLote";
+            this.txtLote.Size = new System.Drawing.Size(132, 30);
+            this.txtLote.TabIndex = 81;
+            // 
+            // lblnlote
+            // 
+            this.lblnlote.AutoSize = true;
+            this.lblnlote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnlote.ForeColor = System.Drawing.Color.White;
+            this.lblnlote.Location = new System.Drawing.Point(36, 88);
+            this.lblnlote.Name = "lblnlote";
+            this.lblnlote.Size = new System.Drawing.Size(96, 25);
+            this.lblnlote.TabIndex = 80;
+            this.lblnlote.Text = "No. Lote: ";
             // 
             // cbAlmacen
             // 
@@ -261,25 +283,6 @@
             this.lblBack.Text = "< Regresar";
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
-            // 
-            // lblnlote
-            // 
-            this.lblnlote.AutoSize = true;
-            this.lblnlote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnlote.ForeColor = System.Drawing.Color.White;
-            this.lblnlote.Location = new System.Drawing.Point(36, 88);
-            this.lblnlote.Name = "lblnlote";
-            this.lblnlote.Size = new System.Drawing.Size(96, 25);
-            this.lblnlote.TabIndex = 80;
-            this.lblnlote.Text = "No. Lote: ";
-            // 
-            // txtLote
-            // 
-            this.txtLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtLote.Location = new System.Drawing.Point(139, 85);
-            this.txtLote.Name = "txtLote";
-            this.txtLote.Size = new System.Drawing.Size(132, 30);
-            this.txtLote.TabIndex = 81;
             // 
             // frmStockInsumo
             // 

@@ -47,6 +47,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 txtNomProd.Text = almacenP.producto.nombre;
                 txtPres.Text = almacenP.producto.presentacion;
                 txtLote.Text = almacenP.nLote.ToString();
+                txtAct.Text = almacenP.stock.ToString();
             }
         }
 
