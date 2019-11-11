@@ -140,6 +140,18 @@
     <Compile Include="frmJAlmacen\frmStockProd.Designer.cs">
       <DependentUpon>frmStockProd.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJAlmacen\frmStocksI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmStocksI.Designer.cs">
+      <DependentUpon>frmStocksI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmStocksP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJAlmacen\frmStocksP.Designer.cs">
+      <DependentUpon>frmStocksP.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJControlCalidad\frmControlCalidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -369,6 +381,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJAlmacen\frmStockProd.resx">
       <DependentUpon>frmStockProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJAlmacen\frmStocksI.resx">
+      <DependentUpon>frmStocksI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJAlmacen\frmStocksP.resx">
+      <DependentUpon>frmStocksP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJControlCalidad\frmControlCalidad.resx">
       <DependentUpon>frmControlCalidad.cs</DependentUpon>

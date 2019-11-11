@@ -92,9 +92,9 @@
             // txtColor
             // 
             this.txtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtColor.Location = new System.Drawing.Point(117, 269);
+            this.txtColor.Location = new System.Drawing.Point(430, 215);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(328, 30);
+            this.txtColor.Size = new System.Drawing.Size(155, 30);
             this.txtColor.TabIndex = 60;
             // 
             // txtCant
@@ -110,7 +110,7 @@
             this.txtGranu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.txtGranu.Location = new System.Drawing.Point(176, 212);
             this.txtGranu.Name = "txtGranu";
-            this.txtGranu.Size = new System.Drawing.Size(328, 30);
+            this.txtGranu.Size = new System.Drawing.Size(96, 30);
             this.txtGranu.TabIndex = 58;
             // 
             // txtNombre
@@ -126,7 +126,7 @@
             this.lblColor.AutoSize = true;
             this.lblColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColor.ForeColor = System.Drawing.Color.White;
-            this.lblColor.Location = new System.Drawing.Point(31, 272);
+            this.lblColor.Location = new System.Drawing.Point(344, 218);
             this.lblColor.Name = "lblColor";
             this.lblColor.Size = new System.Drawing.Size(70, 25);
             this.lblColor.TabIndex = 56;
@@ -186,7 +186,7 @@
             this.gbDatos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbDatos.Location = new System.Drawing.Point(18, 101);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(624, 369);
+            this.gbDatos.Size = new System.Drawing.Size(624, 318);
             this.gbDatos.TabIndex = 64;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos Generales";
@@ -214,7 +214,7 @@
             // rbNo
             // 
             this.rbNo.AutoSize = true;
-            this.rbNo.Location = new System.Drawing.Point(315, 329);
+            this.rbNo.Location = new System.Drawing.Point(318, 272);
             this.rbNo.Name = "rbNo";
             this.rbNo.Size = new System.Drawing.Size(57, 29);
             this.rbNo.TabIndex = 65;
@@ -225,7 +225,7 @@
             // rbSi
             // 
             this.rbSi.AutoSize = true;
-            this.rbSi.Location = new System.Drawing.Point(189, 329);
+            this.rbSi.Location = new System.Drawing.Point(192, 272);
             this.rbSi.Name = "rbSi";
             this.rbSi.Size = new System.Drawing.Size(49, 29);
             this.rbSi.TabIndex = 64;
@@ -238,7 +238,7 @@
             this.lblRestriccion.AutoSize = true;
             this.lblRestriccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestriccion.ForeColor = System.Drawing.Color.White;
-            this.lblRestriccion.Location = new System.Drawing.Point(30, 329);
+            this.lblRestriccion.Location = new System.Drawing.Point(33, 272);
             this.lblRestriccion.Name = "lblRestriccion";
             this.lblRestriccion.Size = new System.Drawing.Size(109, 25);
             this.lblRestriccion.TabIndex = 63;
@@ -324,7 +324,7 @@
             this.lblBack.AutoSize = true;
             this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBack.LinkColor = System.Drawing.Color.AliceBlue;
-            this.lblBack.Location = new System.Drawing.Point(15, 488);
+            this.lblBack.Location = new System.Drawing.Point(25, 434);
             this.lblBack.Name = "lblBack";
             this.lblBack.Size = new System.Drawing.Size(79, 17);
             this.lblBack.TabIndex = 66;
@@ -338,7 +338,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(667, 526);
+            this.ClientSize = new System.Drawing.Size(667, 470);
             this.Controls.Add(this.lblBack);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.gbDatos);

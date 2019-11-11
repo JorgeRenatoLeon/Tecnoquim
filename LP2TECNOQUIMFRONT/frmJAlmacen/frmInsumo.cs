@@ -13,6 +13,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
     public partial class frmInsumo : Form
     {
         Service.insumo insumo;
+        Service.detalleAlmacenInsumo detalle;
         int flag;
         Estado estadoObj;
         Service.ServicioClient DBController = new Service.ServicioClient();
@@ -21,6 +22,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         {
             InitializeComponent();
             insumo = new Service.insumo();
+            detalle = new Service.detalleAlmacenInsumo();
             estadoObj = Estado.Inicial;
             estadoComponentes(Estado.Inicial);
         }
@@ -62,6 +64,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     lblGranu.Enabled = true;
                     lblColor.Enabled = true;
                     lblRestriccion.Enabled = true;
+
                     //Botones
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
@@ -129,6 +132,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             limpiarComponentes();
+            detalle = new Service.detalleAlmacenInsumo();
             insumo = new Service.insumo();
             estadoObj = Estado.Nuevo;
             estadoComponentes(Estado.Nuevo);
@@ -148,6 +152,8 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             insumo.unidad = txtUnidad.Text;
             insumo.granularidad = float.Parse(txtGranu.Text);
             insumo.color = txtColor.Text;
+
+            detalle.stock = 0;
             if (rbSi.Checked == true)
             {
                 insumo.restriccion = true;
@@ -158,13 +164,15 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             }
             if (estadoObj == Estado.Nuevo)
             {
-                DBController.insertarInsumo(insumo);
+                int idInsumo=DBController.insertarInsumo(insumo);
+
                 MessageBox.Show("Insumo Registrado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (estadoObj == Estado.Modificar)
             {
                 insumo.id = int.Parse(txtCodigo.Text);
                 DBController.actualizarInsumo(insumo);
+
                 MessageBox.Show("Insumo Actualizado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             estadoComponentes(Estado.Inicial);
@@ -175,6 +183,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             frmInsumos formInsumos = new frmInsumos();
             if (formInsumos.ShowDialog() == DialogResult.OK)
             {
+
                 insumo = formInsumos.InsumoSeleccionado;
                 txtCodigo.Text = insumo.id.ToString();
                 txtNombre.Text = insumo.nombre;

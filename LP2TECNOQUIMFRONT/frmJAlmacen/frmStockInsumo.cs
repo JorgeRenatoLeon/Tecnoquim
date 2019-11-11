@@ -12,7 +12,9 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 {
     public partial class frmStockInsumo : Form
     {
+        private int stock;
         Service.insumo insumo;
+        Service.detalleAlmacenInsumo detalle;
         Service.detalleAlmacenInsumo almacenI;
         Service.ServicioClient DBController = new Service.ServicioClient();
         public frmStockInsumo()
@@ -26,14 +28,16 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         private void btnBuscarInsumo_Click(object sender, EventArgs e)
         {
-            frmInsumos formInsumos = new frmInsumos();
+            frmStocksI formInsumos = new frmStocksI();
             if (formInsumos.ShowDialog() == DialogResult.OK)
             {
-                insumo = formInsumos.InsumoSeleccionado;
-                txtCodigo.Text = insumo.id.ToString();
-                txtNombre.Text = insumo.nombre;
-                txtCant.Text = insumo.cantidad.ToString();
-                txtUnidad.Text = insumo.unidad.ToString();
+                detalle = formInsumos.InsumoSeleccionado;
+                txtCodigo.Text = detalle.insumo.id.ToString();
+                txtNombre.Text = detalle.insumo.nombre;
+                txtCant.Text = detalle.insumo.cantidad.ToString();
+                txtUnidad.Text = detalle.insumo.unidad.ToString();
+                txtLote.Text = detalle.nLote.ToString();
+
             }
         }
 
@@ -45,7 +49,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
             almacenI.insumo = insumo;
             almacenI.stock = int.Parse(txtAct.Text);
-
+            almacenI.nLote = int.Parse(txtLote.Text);
             DBController.actualizarDetalleAlmacenInsumo(almacenI);
             MessageBox.Show("Se actualizo el stock Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

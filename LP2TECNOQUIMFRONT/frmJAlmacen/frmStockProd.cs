@@ -29,6 +29,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             producto.idProducto = int.Parse(txtidprod.Text);
 
             almacenP.producto = producto;
+            almacenP.nLote= int.Parse(txtLote.Text);
             almacenP.stock = int.Parse(txtAct.Text);
 
             DBController.actualizarDetalleAlmacenProducto(almacenP);
@@ -38,13 +39,14 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         private void btnBuscarInsumo_Click(object sender, EventArgs e)
         {
-            frmProductos formProd = new frmProductos();
+            frmStocksP formProd = new frmStocksP();
             if (formProd.ShowDialog() == DialogResult.OK)
             {
-                producto = formProd.ProductoSeleccionado;
-                txtidprod.Text = producto.idProducto.ToString();
-                txtNomProd.Text = producto.nombre;
-                txtPres.Text = producto.presentacion;
+                almacenP = formProd.ProductoSeleccionado;
+                txtidprod.Text = almacenP.producto.idProducto.ToString();
+                txtNomProd.Text = almacenP.producto.nombre;
+                txtPres.Text = almacenP.producto.presentacion;
+                txtLote.Text = almacenP.nLote.ToString();
             }
         }
 

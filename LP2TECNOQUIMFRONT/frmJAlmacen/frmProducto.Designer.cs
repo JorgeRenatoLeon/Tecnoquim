@@ -62,14 +62,13 @@
             this.txtCant = new System.Windows.Forms.TextBox();
             this.gbInsumos = new System.Windows.Forms.GroupBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.lblBack = new System.Windows.Forms.LinkLabel();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnElimina = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.lblBack = new System.Windows.Forms.LinkLabel();
             this.gbDatos.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
@@ -85,24 +84,24 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(17, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 39);
+            this.label1.Size = new System.Drawing.Size(304, 39);
             this.label1.TabIndex = 16;
             this.label1.Text = "Gestionar Productos";
             // 
             // txtPres
             // 
             this.txtPres.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtPres.Location = new System.Drawing.Point(183, 137);
+            this.txtPres.Location = new System.Drawing.Point(676, 89);
             this.txtPres.Name = "txtPres";
-            this.txtPres.Size = new System.Drawing.Size(264, 30);
+            this.txtPres.Size = new System.Drawing.Size(200, 30);
             this.txtPres.TabIndex = 38;
             // 
             // txtGranu
             // 
             this.txtGranu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtGranu.Location = new System.Drawing.Point(628, 137);
+            this.txtGranu.Location = new System.Drawing.Point(676, 44);
             this.txtGranu.Name = "txtGranu";
-            this.txtGranu.Size = new System.Drawing.Size(187, 30);
+            this.txtGranu.Size = new System.Drawing.Size(122, 30);
             this.txtGranu.TabIndex = 36;
             // 
             // txtNomProd
@@ -110,7 +109,7 @@
             this.txtNomProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.txtNomProd.Location = new System.Drawing.Point(180, 89);
             this.txtNomProd.Name = "txtNomProd";
-            this.txtNomProd.Size = new System.Drawing.Size(487, 30);
+            this.txtNomProd.Size = new System.Drawing.Size(313, 30);
             this.txtNomProd.TabIndex = 35;
             // 
             // lblPresentacion
@@ -118,7 +117,7 @@
             this.lblPresentacion.AutoSize = true;
             this.lblPresentacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPresentacion.ForeColor = System.Drawing.Color.White;
-            this.lblPresentacion.Location = new System.Drawing.Point(31, 142);
+            this.lblPresentacion.Location = new System.Drawing.Point(524, 94);
             this.lblPresentacion.Name = "lblPresentacion";
             this.lblPresentacion.Size = new System.Drawing.Size(132, 25);
             this.lblPresentacion.TabIndex = 34;
@@ -129,7 +128,7 @@
             this.lblGranu.AutoSize = true;
             this.lblGranu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGranu.ForeColor = System.Drawing.Color.White;
-            this.lblGranu.Location = new System.Drawing.Point(481, 140);
+            this.lblGranu.Location = new System.Drawing.Point(524, 47);
             this.lblGranu.Name = "lblGranu";
             this.lblGranu.Size = new System.Drawing.Size(135, 25);
             this.lblGranu.TabIndex = 32;
@@ -160,7 +159,7 @@
             this.gbDatos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbDatos.Location = new System.Drawing.Point(23, 92);
             this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(901, 186);
+            this.gbDatos.Size = new System.Drawing.Size(901, 144);
             this.gbDatos.TabIndex = 65;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos Generales";
@@ -193,9 +192,9 @@
             this.groupBox2.Controls.Add(this.txtAct);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(23, 297);
+            this.groupBox2.Location = new System.Drawing.Point(23, 251);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(901, 126);
+            this.groupBox2.Size = new System.Drawing.Size(901, 80);
             this.groupBox2.TabIndex = 67;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Instructivo";
@@ -225,7 +224,7 @@
             this.lblAct.AutoSize = true;
             this.lblAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAct.ForeColor = System.Drawing.Color.White;
-            this.lblAct.Location = new System.Drawing.Point(36, 78);
+            this.lblAct.Location = new System.Drawing.Point(370, 33);
             this.lblAct.Name = "lblAct";
             this.lblAct.Size = new System.Drawing.Size(124, 25);
             this.lblAct.TabIndex = 36;
@@ -234,9 +233,9 @@
             // txtAct
             // 
             this.txtAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtAct.Location = new System.Drawing.Point(180, 75);
+            this.txtAct.Location = new System.Drawing.Point(514, 30);
             this.txtAct.Name = "txtAct";
-            this.txtAct.Size = new System.Drawing.Size(487, 30);
+            this.txtAct.Size = new System.Drawing.Size(362, 30);
             this.txtAct.TabIndex = 37;
             // 
             // dgvInsumos
@@ -256,6 +255,7 @@
             this.dgvInsumos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInsumos.Size = new System.Drawing.Size(838, 140);
             this.dgvInsumos.TabIndex = 70;
+            this.dgvInsumos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvInsumos_CellFormatting);
             // 
             // Nombre
             // 
@@ -410,7 +410,7 @@
             this.gbInsumos.Controls.Add(this.dgvInsumos);
             this.gbInsumos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInsumos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gbInsumos.Location = new System.Drawing.Point(23, 429);
+            this.gbInsumos.Location = new System.Drawing.Point(23, 354);
             this.gbInsumos.Name = "gbInsumos";
             this.gbInsumos.Size = new System.Drawing.Size(901, 300);
             this.gbInsumos.TabIndex = 66;
@@ -428,30 +428,9 @@
             this.btnCancelar});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(972, 35);
+            this.toolStrip2.Size = new System.Drawing.Size(953, 35);
             this.toolStrip2.TabIndex = 68;
             this.toolStrip2.Text = "toolStrip2";
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(942, 50);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(21, 679);
-            this.vScrollBar1.TabIndex = 69;
-            // 
-            // lblBack
-            // 
-            this.lblBack.AutoSize = true;
-            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBack.LinkColor = System.Drawing.Color.AliceBlue;
-            this.lblBack.Location = new System.Drawing.Point(836, 63);
-            this.lblBack.Name = "lblBack";
-            this.lblBack.Size = new System.Drawing.Size(79, 17);
-            this.lblBack.TabIndex = 70;
-            this.lblBack.TabStop = true;
-            this.lblBack.Text = "< Regresar";
-            this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
-            this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
             // 
             // btnNuevo
             // 
@@ -513,14 +492,27 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.LinkColor = System.Drawing.Color.AliceBlue;
+            this.lblBack.Location = new System.Drawing.Point(836, 63);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(79, 17);
+            this.lblBack.TabIndex = 70;
+            this.lblBack.TabStop = true;
+            this.lblBack.Text = "< Regresar";
+            this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
+            this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
+            // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(972, 741);
+            this.ClientSize = new System.Drawing.Size(953, 678);
             this.Controls.Add(this.lblBack);
-            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbInsumos);
@@ -583,7 +575,6 @@
         private System.Windows.Forms.ToolStripButton btnElimina;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.LinkLabel lblBack;
     }
 }
