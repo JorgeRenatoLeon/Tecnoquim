@@ -13,8 +13,8 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         {
             InitializeComponent();
             dgvHistorialPlan.AutoGenerateColumns = false;
-            DateTime value = new DateTime(2019, 01, 01);
-            dgvHistorialPlan.DataSource = DBController.listarPMP(value);
+            //DateTime value = new DateTime(2019, 01, 01);
+            dgvHistorialPlan.DataSource = DBController.listarPMP("2019-01-01");
         }
 
         public Service.planMaestroProduccion PmpSeleccionado { get => pmpSeleccionado; set => pmpSeleccionado = value; }
