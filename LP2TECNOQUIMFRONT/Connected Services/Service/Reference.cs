@@ -15,49 +15,13 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.lp2tecnoquim/", ConfigurationName="Service.Servicio")]
     public interface Servicio {
         
-        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarInsumoResponse")]
+        // CODEGEN: El parámetro 'mensaje' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/enviarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/enviarMensajeResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse eliminarInsumo(LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest request);
+        LP2TECNOQUIMFRONT.Service.enviarMensajeResponse enviarMensaje(LP2TECNOQUIMFRONT.Service.enviarMensajeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse> eliminarInsumoAsync(LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-<<<<<<< HEAD
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.insertarInsumoResponse insertarInsumo(LP2TECNOQUIMFRONT.Service.insertarInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInsumoResponse> insertarInsumoAsync(LP2TECNOQUIMFRONT.Service.insertarInsumoRequest request);
-        
-        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse eliminarInsumo(LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse> eliminarInsumoAsync(LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest request);
-=======
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarInsumoResponse listarInsumo(LP2TECNOQUIMFRONT.Service.listarInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarInsumoResponse> listarInsumoAsync(LP2TECNOQUIMFRONT.Service.listarInsumoRequest request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarMaquinariaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse listarMaquinaria(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarMaquinariaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse> listarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/enviarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/enviarMensajeResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.enviarMensajeResponse> enviarMensajeAsync(LP2TECNOQUIMFRONT.Service.enviarMensajeRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/verificarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/verificarUsuarioResponse")]
@@ -68,7 +32,23 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/verificarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/verificarUsuarioResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.verificarUsuarioResponse> verificarUsuarioAsync(LP2TECNOQUIMFRONT.Service.verificarUsuarioRequest request);
         
-<<<<<<< HEAD
+        // CODEGEN: El parámetro 'almacen' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarAlmacenResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse insertarAlmacen(LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarAlmacenResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse> insertarAlmacenAsync(LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarInsumoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.insertarInsumoResponse insertarInsumo(LP2TECNOQUIMFRONT.Service.insertarInsumoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarInsumoResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInsumoResponse> insertarInsumoAsync(LP2TECNOQUIMFRONT.Service.insertarInsumoRequest request);
+        
         // CODEGEN: El parámetro 'insumo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarInsumoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -76,15 +56,6 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarInsumoResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarInsumoResponse> actualizarInsumoAsync(LP2TECNOQUIMFRONT.Service.actualizarInsumoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarAlmacenResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarAlmacenResponse listarAlmacen(LP2TECNOQUIMFRONT.Service.listarAlmacenRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarAlmacenResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarAlmacenResponse> listarAlmacenAsync(LP2TECNOQUIMFRONT.Service.listarAlmacenRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarInsumoResponse")]
@@ -95,56 +66,15 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarInsumoResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarInsumoResponse> listarInsumoAsync(LP2TECNOQUIMFRONT.Service.listarInsumoRequest request);
         
-        // CODEGEN: El parámetro 'almacen' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarAlmacenResponse")]
+        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarInsumoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse insertarAlmacen(LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest request);
-=======
-        // CODEGEN: El parámetro 'mensaje' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMensajeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarMensajeResponse insertarMensaje(LP2TECNOQUIMFRONT.Service.insertarMensajeRequest request);
+        LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse eliminarInsumo(LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMensajeResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMensajeResponse> insertarMensajeAsync(LP2TECNOQUIMFRONT.Service.insertarMensajeRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarInsumoResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse> eliminarInsumoAsync(LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarMensajeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarMensajeResponse listarMensaje(LP2TECNOQUIMFRONT.Service.listarMensajeRequest request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarMensajeResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMensajeResponse> listarMensajeAsync(LP2TECNOQUIMFRONT.Service.listarMensajeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-<<<<<<< HEAD
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarUsuariosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarUsuariosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarUsuariosResponse listarUsuarios(LP2TECNOQUIMFRONT.Service.listarUsuariosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarUsuariosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarUsuariosResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarUsuariosResponse> listarUsuariosAsync(LP2TECNOQUIMFRONT.Service.listarUsuariosRequest request);
-        
-        // CODEGEN: El parámetro 'rol' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarRolRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarRolResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarRolResponse actualizarRol(LP2TECNOQUIMFRONT.Service.actualizarRolRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarRolRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarRolResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarRolResponse> actualizarRolAsync(LP2TECNOQUIMFRONT.Service.actualizarRolRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarPMPResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarPMPResponse listarPMP(LP2TECNOQUIMFRONT.Service.listarPMPRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarPMPResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarPMPResponse> listarPMPAsync(LP2TECNOQUIMFRONT.Service.listarPMPRequest request);
-=======
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarAlmacenResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -153,170 +83,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarAlmacenResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarAlmacenResponse> listarAlmacenAsync(LP2TECNOQUIMFRONT.Service.listarAlmacenRequest request);
         
-        // CODEGEN: El parámetro 'mensaje' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/enviarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/enviarMensajeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.enviarMensajeResponse enviarMensaje(LP2TECNOQUIMFRONT.Service.enviarMensajeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/enviarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/enviarMensajeResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.enviarMensajeResponse> enviarMensajeAsync(LP2TECNOQUIMFRONT.Service.enviarMensajeRequest request);
-        
-        // CODEGEN: El parámetro 'almacen' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarAlmacenResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse insertarAlmacen(LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarAlmacenResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse> insertarAlmacenAsync(LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarRolesRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarRolesResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarRolesResponse listarRoles(LP2TECNOQUIMFRONT.Service.listarRolesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarRolesRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarRolesResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarRolesResponse> listarRolesAsync(LP2TECNOQUIMFRONT.Service.listarRolesRequest request);
-        
-        // CODEGEN: El parámetro 'usuario' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarUsuarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse insertarUsuario(LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarUsuarioResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse> insertarUsuarioAsync(LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest request);
-        
-        // CODEGEN: El parámetro 'insumo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarInsumoResponse actualizarInsumo(LP2TECNOQUIMFRONT.Service.actualizarInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarInsumoResponse> actualizarInsumoAsync(LP2TECNOQUIMFRONT.Service.actualizarInsumoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarProductosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarProductosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarProductosResponse listarProductos(LP2TECNOQUIMFRONT.Service.listarProductosRequest request);
-<<<<<<< HEAD
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarProductosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarProductosResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProductosResponse> listarProductosAsync(LP2TECNOQUIMFRONT.Service.listarProductosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarMaquinariaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse listarMaquinaria(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarMaquinariaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse> listarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request);
-=======
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarProductosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarProductosResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProductosResponse> listarProductosAsync(LP2TECNOQUIMFRONT.Service.listarProductosRequest request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        // CODEGEN: El parámetro 'politicaStock' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarPMPResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarPMPResponse insertarPMP(LP2TECNOQUIMFRONT.Service.insertarPMPRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarPMPResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarPMPResponse> insertarPMPAsync(LP2TECNOQUIMFRONT.Service.insertarPMPRequest request);
-        
-<<<<<<< HEAD
-=======
-        // CODEGEN: El parámetro 'rol' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarRolRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarRolResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarRolResponse insertarRol(LP2TECNOQUIMFRONT.Service.insertarRolRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarRolRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarRolResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarRolResponse> insertarRolAsync(LP2TECNOQUIMFRONT.Service.insertarRolRequest request);
-        
-        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarProductoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.eliminarProductoResponse eliminarProducto(LP2TECNOQUIMFRONT.Service.eliminarProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarProductoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarProductoResponse> eliminarProductoAsync(LP2TECNOQUIMFRONT.Service.eliminarProductoRequest request);
-        
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarPMPResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarPMPResponse listarPMP(LP2TECNOQUIMFRONT.Service.listarPMPRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarPMPResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarPMPResponse> listarPMPAsync(LP2TECNOQUIMFRONT.Service.listarPMPRequest request);
-        
-        // CODEGEN: El parámetro 'usuario' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarUsuarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse insertarUsuario(LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarUsuarioResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse> insertarUsuarioAsync(LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest request);
-        
-<<<<<<< HEAD
-        // CODEGEN: El parámetro 'mensaje' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMensajeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarMensajeResponse insertarMensaje(LP2TECNOQUIMFRONT.Service.insertarMensajeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMensajeResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMensajeResponse> insertarMensajeAsync(LP2TECNOQUIMFRONT.Service.insertarMensajeRequest request);
-=======
-        // CODEGEN: El parámetro 'rol' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarRolRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarRolResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarRolResponse actualizarRol(LP2TECNOQUIMFRONT.Service.actualizarRolRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarRolRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarRolResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarRolResponse> actualizarRolAsync(LP2TECNOQUIMFRONT.Service.actualizarRolRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarRolesRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarRolesResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarRolesResponse listarRoles(LP2TECNOQUIMFRONT.Service.listarRolesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarRolesRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarRolesResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarRolesResponse> listarRolesAsync(LP2TECNOQUIMFRONT.Service.listarRolesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarUsuariosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarUsuariosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarUsuariosResponse listarUsuarios(LP2TECNOQUIMFRONT.Service.listarUsuariosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarUsuariosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarUsuariosResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarUsuariosResponse> listarUsuariosAsync(LP2TECNOQUIMFRONT.Service.listarUsuariosRequest request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        // CODEGEN: El parámetro 'politicaStock' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarPMPResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarPMPResponse actualizarPMP(LP2TECNOQUIMFRONT.Service.actualizarPMPRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarPMPResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPMPResponse> actualizarPMPAsync(LP2TECNOQUIMFRONT.Service.actualizarPMPRequest request);
-        
-        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarProductoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.eliminarProductoResponse eliminarProducto(LP2TECNOQUIMFRONT.Service.eliminarProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarProductoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarProductoResponse> eliminarProductoAsync(LP2TECNOQUIMFRONT.Service.eliminarProductoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-<<<<<<< HEAD
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarLineaOrdenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarLineaOrdenResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -333,22 +100,16 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarRolRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarRolResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarRolResponse> insertarRolAsync(LP2TECNOQUIMFRONT.Service.insertarRolRequest request);
         
-        // CODEGEN: El parámetro 'maquinaria' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaResponse")]
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarProductosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarProductosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse actualizarMaquinaria(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.listarProductosResponse listarProductos(LP2TECNOQUIMFRONT.Service.listarProductosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse> actualizarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarProductosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarProductosResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProductosResponse> listarProductosAsync(LP2TECNOQUIMFRONT.Service.listarProductosRequest request);
         
-        // CODEGEN: El parámetro 'politicaStock' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarPoliticaStockResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarPoliticaStockResponse insertarPoliticaStock(LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarPoliticaStockResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarPoliticaStockResponse> insertarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest request);
-=======
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarProductoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -357,14 +118,122 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarProductoResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProductoResponse> insertarProductoAsync(LP2TECNOQUIMFRONT.Service.insertarProductoRequest request);
         
+        // CODEGEN: El parámetro 'politicaStock' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarPMPResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.insertarPMPResponse insertarPMP(LP2TECNOQUIMFRONT.Service.insertarPMPRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarPMPResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarPMPResponse> insertarPMPAsync(LP2TECNOQUIMFRONT.Service.insertarPMPRequest request);
+        
+        // CODEGEN: El parámetro 'PlanMaestroProduccion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarPMPResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.actualizarPMPResponse actualizarPMP(LP2TECNOQUIMFRONT.Service.actualizarPMPRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarPMPResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPMPResponse> actualizarPMPAsync(LP2TECNOQUIMFRONT.Service.actualizarPMPRequest request);
+        
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/helloRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/helloResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarRolesRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarRolesResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.helloResponse hello(LP2TECNOQUIMFRONT.Service.helloRequest request);
+        LP2TECNOQUIMFRONT.Service.listarRolesResponse listarRoles(LP2TECNOQUIMFRONT.Service.listarRolesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/helloRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/helloResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.helloResponse> helloAsync(LP2TECNOQUIMFRONT.Service.helloRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarRolesRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarRolesResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarRolesResponse> listarRolesAsync(LP2TECNOQUIMFRONT.Service.listarRolesRequest request);
+        
+        // CODEGEN: El parámetro 'usuario' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarUsuarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse insertarUsuario(LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarUsuarioResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse> insertarUsuarioAsync(LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarUsuariosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarUsuariosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.listarUsuariosResponse listarUsuarios(LP2TECNOQUIMFRONT.Service.listarUsuariosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarUsuariosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarUsuariosResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarUsuariosResponse> listarUsuariosAsync(LP2TECNOQUIMFRONT.Service.listarUsuariosRequest request);
+        
+        // CODEGEN: El parámetro 'mensaje' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMensajeResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.insertarMensajeResponse insertarMensaje(LP2TECNOQUIMFRONT.Service.insertarMensajeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMensajeResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMensajeResponse> insertarMensajeAsync(LP2TECNOQUIMFRONT.Service.insertarMensajeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarMensajeResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.listarMensajeResponse listarMensaje(LP2TECNOQUIMFRONT.Service.listarMensajeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarMensajeRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarMensajeResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMensajeResponse> listarMensajeAsync(LP2TECNOQUIMFRONT.Service.listarMensajeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarPMPResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.listarPMPResponse listarPMP(LP2TECNOQUIMFRONT.Service.listarPMPRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarPMPRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarPMPResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarPMPResponse> listarPMPAsync(LP2TECNOQUIMFRONT.Service.listarPMPRequest request);
+        
+        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.eliminarProductoResponse eliminarProducto(LP2TECNOQUIMFRONT.Service.eliminarProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarProductoResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarProductoResponse> eliminarProductoAsync(LP2TECNOQUIMFRONT.Service.eliminarProductoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarMaquinariaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse listarMaquinaria(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarMaquinariaResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse> listarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request);
+        
+        // CODEGEN: El parámetro 'rol' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarRolRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarRolResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.actualizarRolResponse actualizarRol(LP2TECNOQUIMFRONT.Service.actualizarRolRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarRolRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarRolResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarRolResponse> actualizarRolAsync(LP2TECNOQUIMFRONT.Service.actualizarRolRequest request);
+        
+        // CODEGEN: El parámetro 'detalleAlmacenProducto' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse insertarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse> insertarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest request);
+        
+        // CODEGEN: El parámetro 'lineaProyeccion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse actualizarLineaProyeccion(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse> actualizarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request);
+        
+        // CODEGEN: El parámetro 'detalleAlmacenInsumo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse actualizarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse> actualizarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest request);
         
         // CODEGEN: El parámetro 'maquinaria' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleMaquinariaResponse")]
@@ -373,34 +242,32 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleMaquinariaResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse> insertarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionPlanRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionPlanResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse listarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest request);
+        LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse listarOrdenesProduccionPlan(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse> listarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest request);
-        
-        // CODEGEN: El parámetro 'lineaInsumo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-<<<<<<< HEAD
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoResponse actualizarLineaInsumo(LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoResponse> actualizarLineaInsumoAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionPlanRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionPlanResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse> listarOrdenesProduccionPlanAsync(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarInstructivosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarInstructivosResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarInstructivosResponse listarInstructivos(LP2TECNOQUIMFRONT.Service.listarInstructivosRequest request);
+        LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse listarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarInstructivosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarInstructivosResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarInstructivosResponse> listarInstructivosAsync(LP2TECNOQUIMFRONT.Service.listarInstructivosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse> listarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest request);
+        
+        // CODEGEN: El parámetro 'detalleAlmacenProducto' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse actualizarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse> actualizarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest request);
         
         // CODEGEN: El parámetro 'proyeccionVenta' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarProyeccionVentaResponse")]
@@ -411,28 +278,21 @@ namespace LP2TECNOQUIMFRONT.Service {
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse> actualizarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse listarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest request);
+        LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse listarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse> listarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse> listarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest request);
         
-        // CODEGEN: El parámetro 'producto' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarProductoResponse")]
+        // CODEGEN: El parámetro 'detalleAlmacenInsumo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarProductoResponse actualizarProducto(LP2TECNOQUIMFRONT.Service.actualizarProductoRequest request);
+        LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse insertarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarProductoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProductoResponse> actualizarProductoAsync(LP2TECNOQUIMFRONT.Service.actualizarProductoRequest request);
-=======
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarLineaInsumoResponse insertarLineaInsumo(LP2TECNOQUIMFRONT.Service.insertarLineaInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaInsumoResponse> insertarLineaInsumoAsync(LP2TECNOQUIMFRONT.Service.insertarLineaInsumoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse> insertarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest request);
         
         // CODEGEN: El parámetro 'maquinaria' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleMaquinariaResponse")]
@@ -442,21 +302,39 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleMaquinariaResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse> actualizarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest request);
         
-        // CODEGEN: El parámetro 'lineaProyeccion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaProyeccionResponse")]
+        // CODEGEN: El parámetro 'ordenProduccion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse insertarLineaProyeccion(LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest request);
+        LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse actualizarOrdenProduccion(LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaProyeccionResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse> insertarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse> actualizarOrdenProduccionAsync(LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest request);
         
-        // CODEGEN: El parámetro 'lineaProyeccion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionResponse")]
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse actualizarLineaProyeccion(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse listarOrdenesProduccionFecha(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse> actualizarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse> listarOrdenesProduccionFechaAsync(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse listarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse> listarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest request);
+        
+        // CODEGEN: El parámetro 'almacen' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarAlmacenResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse actualizarAlmacen(LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarAlmacenResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse> actualizarAlmacenAsync(LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarInstructivoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarInstructivoResponse")]
@@ -467,51 +345,145 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarInstructivoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarInstructivoResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse> insertarInstructivoAsync(LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest request);
         
-        // CODEGEN: El parámetro 'maquinaria' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaResponse")]
+        // CODEGEN: El parámetro 'instructivo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarInstructivoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarInstructivoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse actualizarMaquinaria(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request);
+        LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse actualizarInstructivo(LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse> actualizarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarInstructivoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarInstructivoResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse> actualizarInstructivoAsync(LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest request);
+        
+        // CODEGEN: El parámetro 'usuario' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarUsuarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse actualizarUsuario(LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarUsuarioResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse> actualizarUsuarioAsync(LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'proyeccionVenta' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse insertarProyeccionVenta(LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse> insertarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest request);
+        
+        // CODEGEN: El parámetro 'lineaProyeccion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaProyeccionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse insertarLineaProyeccion(LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaProyeccionResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse> insertarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest request);
+        
+        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse eliminarMaquinaria(LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse> eliminarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest request);
         
         // CODEGEN: El parámetro 'trabajador' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarTrabajadorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-<<<<<<< HEAD
         LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse insertarTrabajador(LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest request);
-=======
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse listarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse> listarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarTrabajadorResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse> insertarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse listarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest request);
+        LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse listarLineaProyeccion(LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse> listarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse> listarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest request);
         
-        // CODEGEN: El parámetro 'detalleAlmacenProducto' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoResponse")]
+        // CODEGEN: El parámetro 'lineaOrden' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse actualizarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest request);
+        LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse insertarLineaOrden(LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse> actualizarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse> insertarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest request);
         
-        // CODEGEN: El parámetro 'detalleAlmacenInsumo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoResponse")]
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarPoliticaStockResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse actualizarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest request);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse listarPoliticaStock(LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse> actualizarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarPoliticaStockResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse> listarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest request);
+        
+        // CODEGEN: El parámetro 'lineaOrden' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse actualizarLineaOrden(LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse> actualizarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarTrabajadoresRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarTrabajadoresResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse listarTrabajadores(LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarTrabajadoresRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarTrabajadoresResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse> listarTrabajadoresAsync(LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest request);
+        
+        // CODEGEN: El parámetro 'lineaInsumo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoResponse actualizarLineaInsumo(LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoResponse> actualizarLineaInsumoAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoRequest request);
+        
+        // CODEGEN: El parámetro 'lineaInsumo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaInsumoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.insertarLineaInsumoResponse insertarLineaInsumo(LP2TECNOQUIMFRONT.Service.insertarLineaInsumoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaInsumoResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaInsumoResponse> insertarLineaInsumoAsync(LP2TECNOQUIMFRONT.Service.insertarLineaInsumoRequest request);
+        
+        // CODEGEN: El parámetro 'politicaStock' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse actualizarPoliticaStock(LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse> actualizarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse listarProyeccionVenta(LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse> listarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest request);
+        
+        // CODEGEN: El parámetro 'trabajador' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarTrabajadorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.actualizarTrabajadorResponse actualizarTrabajador(LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarTrabajadorResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarTrabajadorResponse> actualizarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest request);
+        
+        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse eliminarTrabajador(LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse> eliminarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarInstructivosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarInstructivosResponse")]
@@ -522,162 +494,21 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarInstructivosRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarInstructivosResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarInstructivosResponse> listarInstructivosAsync(LP2TECNOQUIMFRONT.Service.listarInstructivosRequest request);
         
-        // CODEGEN: El parámetro 'maquinaria' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse insertarMaquinaria(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse> insertarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request);
-        
-        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse eliminarMaquinaria(LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarTrabajadorResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse> insertarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest request);
-        
-        // CODEGEN: El parámetro 'detalleAlmacenProducto' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse actualizarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse> actualizarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest request);
-        
-        // CODEGEN: El parámetro 'almacen' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarAlmacenResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse actualizarAlmacen(LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarAlmacenResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse> actualizarAlmacenAsync(LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest request);
-        
-<<<<<<< HEAD
-        // CODEGEN: El parámetro 'almacen' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarAlmacenResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse actualizarAlmacen(LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarAlmacenResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse> actualizarAlmacenAsync(LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest request);
-        
-        // CODEGEN: El parámetro 'maquinaria' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleMaquinariaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse insertarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleMaquinariaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse> insertarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest request);
-=======
-        // CODEGEN: El parámetro 'detalleAlmacenInsumo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse insertarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse> insertarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest request);
-        
-        // CODEGEN: El parámetro 'lineaOrden' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse insertarLineaOrden(LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse> insertarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse listarLineaProyeccion(LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse> listarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest request);
-        
-<<<<<<< HEAD
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarInstructivoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarInstructivoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse insertarInstructivo(LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarInstructivoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarInstructivoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse> insertarInstructivoAsync(LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest request);
-=======
         // CODEGEN: El parámetro 'ordenProduccion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarOrdenProduccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarOrdenProduccionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse actualizarOrdenProduccion(LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest request);
+        LP2TECNOQUIMFRONT.Service.insertarOrdenProduccionResponse insertarOrdenProduccion(LP2TECNOQUIMFRONT.Service.insertarOrdenProduccionRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse> actualizarOrdenProduccionAsync(LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarOrdenProduccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarOrdenProduccionResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarOrdenProduccionResponse> insertarOrdenProduccionAsync(LP2TECNOQUIMFRONT.Service.insertarOrdenProduccionRequest request);
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionPlanRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionPlanResponse")]
+        // CODEGEN: El parámetro 'producto' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarProductoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse listarOrdenesProduccionPlan(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest request);
+        LP2TECNOQUIMFRONT.Service.actualizarProductoResponse actualizarProducto(LP2TECNOQUIMFRONT.Service.actualizarProductoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionPlanRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionPlanResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse> listarOrdenesProduccionPlanAsync(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest request);
-        
-        // CODEGEN: El parámetro 'lineaOrden' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse actualizarLineaOrden(LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse> actualizarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarLineaInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-<<<<<<< HEAD
-        LP2TECNOQUIMFRONT.Service.listarLineaInsumoResponse listarLineaInsumo(LP2TECNOQUIMFRONT.Service.listarLineaInsumoRequest request);
-=======
-        LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse listarOrdenesProduccionFecha(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse> listarOrdenesProduccionFechaAsync(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest request);
-        
-        // CODEGEN: El parámetro 'instructivo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarInstructivoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarInstructivoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse actualizarInstructivo(LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarInstructivoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarInstructivoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse> actualizarInstructivoAsync(LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarLineaInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarLineaInsumoResponse listarLineaInsumo(LP2TECNOQUIMFRONT.Service.listarLineaInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarLineaInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarLineaInsumoResponse> listarLineaInsumoAsync(LP2TECNOQUIMFRONT.Service.listarLineaInsumoRequest request);
-        
-        // CODEGEN: El parámetro 'politicaStock' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse actualizarPoliticaStock(LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse> actualizarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest request);
-        
-        // CODEGEN: El parámetro 'lineaInsumo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoResponse actualizarLineaInsumo(LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoResponse> actualizarLineaInsumoAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarProductoResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProductoResponse> actualizarProductoAsync(LP2TECNOQUIMFRONT.Service.actualizarProductoRequest request);
         
         // CODEGEN: El parámetro 'politicaStock' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarPoliticaStockResponse")]
@@ -687,490 +518,30 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarPoliticaStockResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarPoliticaStockResponse> insertarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest request);
         
-        // CODEGEN: El parámetro 'detalleAlmacenProducto' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoResponse")]
+        // CODEGEN: El parámetro 'maquinaria' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse insertarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest request);
+        LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse insertarMaquinaria(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse> insertarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse> insertarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request);
         
-        // CODEGEN: El parámetro 'proyeccionVenta' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarProyeccionVentaResponse")]
+        // CODEGEN: El parámetro 'maquinaria' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse actualizarProyeccionVenta(LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse actualizarMaquinaria(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse> actualizarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarLineaInsumoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.listarLineaInsumoResponse listarLineaInsumo(LP2TECNOQUIMFRONT.Service.listarLineaInsumoRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarLineaInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarLineaInsumoResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarLineaInsumoResponse> listarLineaInsumoAsync(LP2TECNOQUIMFRONT.Service.listarLineaInsumoRequest request);
-        
-        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse eliminarTrabajador(LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse> eliminarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest request);
-        
-<<<<<<< HEAD
-        // CODEGEN: El parámetro 'maquinaria' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse")]
-=======
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse listarProyeccionVenta(LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse> listarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarTrabajadoresRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarTrabajadoresResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse listarTrabajadores(LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarTrabajadoresRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarTrabajadoresResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse> listarTrabajadoresAsync(LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest request);
-        
-        // CODEGEN: El parámetro 'usuario' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarUsuarioResponse")]
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse actualizarUsuario(LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarUsuarioResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse> actualizarUsuarioAsync(LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse listarProyeccionVenta(LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse> listarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest request);
-        
-<<<<<<< HEAD
-        // CODEGEN: El parámetro 'ordenProduccion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarOrdenProduccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarOrdenProduccionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarOrdenProduccionResponse insertarOrdenProduccion(LP2TECNOQUIMFRONT.Service.insertarOrdenProduccionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarOrdenProduccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarOrdenProduccionResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarOrdenProduccionResponse> insertarOrdenProduccionAsync(LP2TECNOQUIMFRONT.Service.insertarOrdenProduccionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionPlanRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionPlanResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse listarOrdenesProduccionPlan(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionPlanRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionPlanResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse> listarOrdenesProduccionPlanAsync(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest request);
-        
-        // CODEGEN: El parámetro 'lineaProyeccion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse actualizarLineaProyeccion(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse> actualizarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request);
-        
-        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse eliminarMaquinaria(LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse> eliminarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest request);
-        
-        // CODEGEN: El parámetro 'politicaStock' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse actualizarPoliticaStock(LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse> actualizarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest request);
-        
-        // CODEGEN: El parámetro 'lineaOrden' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse insertarLineaOrden(LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse> insertarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest request);
-        
-        // CODEGEN: El parámetro 'lineaOrden' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse actualizarLineaOrden(LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse> actualizarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse listarOrdenesProduccionFecha(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse> listarOrdenesProduccionFechaAsync(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest request);
-        
-        // CODEGEN: El parámetro 'proyeccionVenta' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse insertarProyeccionVenta(LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse> insertarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarPoliticaStockResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse listarPoliticaStock(LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest request);
-=======
-        // CODEGEN: El parámetro 'trabajador' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarTrabajadorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse insertarTrabajador(LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarTrabajadorResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse> insertarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarPoliticaStockResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse listarPoliticaStock(LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarPoliticaStockResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse> listarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest request);
-        
-        // CODEGEN: El parámetro 'proyeccionVenta' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse insertarProyeccionVenta(LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse> insertarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest request);
-        
-        // CODEGEN: El parámetro 'producto' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarProductoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarProductoResponse actualizarProducto(LP2TECNOQUIMFRONT.Service.actualizarProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarProductoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProductoResponse> actualizarProductoAsync(LP2TECNOQUIMFRONT.Service.actualizarProductoRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class eliminarInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public eliminarInsumoRequest() {
-        }
-        
-        public eliminarInsumoRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class eliminarInsumoResponse {
-        
-        public eliminarInsumoResponse() {
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class insumo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private float cantidadField;
-        
-        private string colorField;
-        
-        private float granularidadField;
-        
-        private int idField;
-        
-        private string nombreField;
-        
-        private bool restriccionField;
-        
-        private string unidadField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public float cantidad {
-            get {
-                return this.cantidadField;
-            }
-            set {
-                this.cantidadField = value;
-                this.RaisePropertyChanged("cantidad");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string color {
-            get {
-                return this.colorField;
-            }
-            set {
-                this.colorField = value;
-                this.RaisePropertyChanged("color");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public float granularidad {
-            get {
-                return this.granularidadField;
-            }
-            set {
-                this.granularidadField = value;
-                this.RaisePropertyChanged("granularidad");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public bool restriccion {
-            get {
-                return this.restriccionField;
-            }
-            set {
-                this.restriccionField = value;
-                this.RaisePropertyChanged("restriccion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string unidad {
-            get {
-                return this.unidadField;
-            }
-            set {
-                this.unidadField = value;
-                this.RaisePropertyChanged("unidad");
-            }
-        }
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarPoliticaStockRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarPoliticaStockResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse> listarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest request);
-        
-<<<<<<< HEAD
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse listarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse> listarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest request);
-        
-        // CODEGEN: El parámetro 'detalleAlmacenProducto' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse insertarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse> insertarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest request);
-=======
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class proyeccionVenta : object, System.ComponentModel.INotifyPropertyChanged {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        // CODEGEN: El parámetro 'ordenProduccion' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse actualizarOrdenProduccion(LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest request);
-        
-<<<<<<< HEAD
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse> actualizarOrdenProduccionAsync(LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest request);
-        
-        // CODEGEN: El parámetro 'trabajador' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarTrabajadorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarTrabajadorResponse actualizarTrabajador(LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarTrabajadorResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarTrabajadorResponse> actualizarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarTrabajadoresRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarTrabajadoresResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse listarTrabajadores(LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarTrabajadoresRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarTrabajadoresResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse> listarTrabajadoresAsync(LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest request);
-        
-        // CODEGEN: El parámetro 'detalleAlmacenInsumo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse insertarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse> insertarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest request);
-        
-        // CODEGEN: El parámetro 'id' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse eliminarTrabajador(LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse> eliminarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest request);
-        
-        // CODEGEN: El parámetro 'detalleAlmacenInsumo' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse actualizarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest request);
-=======
-        private System.DateTime periodoField;
-        
-        private bool periodoFieldSpecified;
-        
-        private lineaProyeccion[] proyeccionesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime periodo {
-            get {
-                return this.periodoField;
-            }
-            set {
-                this.periodoField = value;
-                this.RaisePropertyChanged("periodo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool periodoSpecified {
-            get {
-                return this.periodoFieldSpecified;
-            }
-            set {
-                this.periodoFieldSpecified = value;
-                this.RaisePropertyChanged("periodoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("proyecciones", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public lineaProyeccion[] proyecciones {
-            get {
-                return this.proyeccionesField;
-            }
-            set {
-                this.proyeccionesField = value;
-                this.RaisePropertyChanged("proyecciones");
-            }
-        }
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse> actualizarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest request);
-        
-<<<<<<< HEAD
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse listarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse> listarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse listarLineaProyeccion(LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse> listarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest request);
-        
-        // CODEGEN: El parámetro 'usuario' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarUsuarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse actualizarUsuario(LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarUsuarioRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarUsuarioResponse")]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse> actualizarUsuarioAsync(LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/helloRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/helloResponse")]
@@ -1182,8 +553,582 @@ namespace LP2TECNOQUIMFRONT.Service {
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.helloResponse> helloAsync(LP2TECNOQUIMFRONT.Service.helloRequest request);
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
+    public partial class mensaje : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string descripcionField;
+        
+        private trabajador emisorField;
+        
+        private System.DateTime fechaEnvioField;
+        
+        private bool fechaEnvioFieldSpecified;
+        
+        private int idMensajeField;
+        
+        private trabajador receptorField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public trabajador emisor {
+            get {
+                return this.emisorField;
+            }
+            set {
+                this.emisorField = value;
+                this.RaisePropertyChanged("emisor");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime fechaEnvio {
+            get {
+                return this.fechaEnvioField;
+            }
+            set {
+                this.fechaEnvioField = value;
+                this.RaisePropertyChanged("fechaEnvio");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaEnvioSpecified {
+            get {
+                return this.fechaEnvioFieldSpecified;
+            }
+            set {
+                this.fechaEnvioFieldSpecified = value;
+                this.RaisePropertyChanged("fechaEnvioSpecified");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int idMensaje {
+            get {
+                return this.idMensajeField;
+            }
+            set {
+                this.idMensajeField = value;
+                this.RaisePropertyChanged("idMensaje");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public trabajador receptor {
+            get {
+                return this.receptorField;
+            }
+            set {
+                this.receptorField = value;
+                this.RaisePropertyChanged("receptor");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
+    public partial class trabajador : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string apellidosField;
+        
+        private string correoField;
+        
+        private string dniField;
+        
+        private int idField;
+        
+        private string nombresField;
+        
+        private rol rolField;
+        
+        private usuario usuarioField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string apellidos {
+            get {
+                return this.apellidosField;
+            }
+            set {
+                this.apellidosField = value;
+                this.RaisePropertyChanged("apellidos");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string correo {
+            get {
+                return this.correoField;
+            }
+            set {
+                this.correoField = value;
+                this.RaisePropertyChanged("correo");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string dni {
+            get {
+                return this.dniField;
+            }
+            set {
+                this.dniField = value;
+                this.RaisePropertyChanged("dni");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string nombres {
+            get {
+                return this.nombresField;
+            }
+            set {
+                this.nombresField = value;
+                this.RaisePropertyChanged("nombres");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public rol rol {
+            get {
+                return this.rolField;
+            }
+            set {
+                this.rolField = value;
+                this.RaisePropertyChanged("rol");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public usuario usuario {
+            get {
+                return this.usuarioField;
+            }
+            set {
+                this.usuarioField = value;
+                this.RaisePropertyChanged("usuario");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
+    public partial class rol : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string descripcionField;
+        
+        private int idRolField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int idRol {
+            get {
+                return this.idRolField;
+            }
+            set {
+                this.idRolField = value;
+                this.RaisePropertyChanged("idRol");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
+    public partial class politicaStock : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int cantMaxField;
+        
+        private int cantMinField;
+        
+        private int idField;
+        
+        private producto productoField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int cantMax {
+            get {
+                return this.cantMaxField;
+            }
+            set {
+                this.cantMaxField = value;
+                this.RaisePropertyChanged("cantMax");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int cantMin {
+            get {
+                return this.cantMinField;
+            }
+            set {
+                this.cantMinField = value;
+                this.RaisePropertyChanged("cantMin");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public producto producto {
+            get {
+                return this.productoField;
+            }
+            set {
+                this.productoField = value;
+                this.RaisePropertyChanged("producto");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
+    public partial class producto : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private float granularidadField;
+        
+        private int idProductoField;
+        
+        private instructivo instructivoField;
+        
+        private string nombreField;
+        
+        private string presentacionField;
+        
+        private bool restriccionField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public float granularidad {
+            get {
+                return this.granularidadField;
+            }
+            set {
+                this.granularidadField = value;
+                this.RaisePropertyChanged("granularidad");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int idProducto {
+            get {
+                return this.idProductoField;
+            }
+            set {
+                this.idProductoField = value;
+                this.RaisePropertyChanged("idProducto");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public instructivo instructivo {
+            get {
+                return this.instructivoField;
+            }
+            set {
+                this.instructivoField = value;
+                this.RaisePropertyChanged("instructivo");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string presentacion {
+            get {
+                return this.presentacionField;
+            }
+            set {
+                this.presentacionField = value;
+                this.RaisePropertyChanged("presentacion");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public bool restriccion {
+            get {
+                return this.restriccionField;
+            }
+            set {
+                this.restriccionField = value;
+                this.RaisePropertyChanged("restriccion");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
+    public partial class instructivo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string actividadesField;
+        
+        private int idField;
+        
+        private lineaInsumo[] insumosField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string actividades {
+            get {
+                return this.actividadesField;
+            }
+            set {
+                this.actividadesField = value;
+                this.RaisePropertyChanged("actividades");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute("insumos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public lineaInsumo[] insumos {
+            get {
+                return this.insumosField;
+            }
+            set {
+                this.insumosField = value;
+                this.RaisePropertyChanged("insumos");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
+    public partial class lineaInsumo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int cantInsumoField;
+        
+        private bool estadoField;
+        
+        private int idLineaIField;
+        
+        private insumo insumoField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int cantInsumo {
+            get {
+                return this.cantInsumoField;
+            }
+            set {
+                this.cantInsumoField = value;
+                this.RaisePropertyChanged("cantInsumo");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public bool estado {
+            get {
+                return this.estadoField;
+            }
+            set {
+                this.estadoField = value;
+                this.RaisePropertyChanged("estado");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int idLineaI {
+            get {
+                return this.idLineaIField;
+            }
+            set {
+                this.idLineaIField = value;
+                this.RaisePropertyChanged("idLineaI");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public insumo insumo {
+            get {
+                return this.insumoField;
+            }
+            set {
+                this.insumoField = value;
+                this.RaisePropertyChanged("insumo");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1204,7 +1149,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private string unidadField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public float cantidad {
             get {
@@ -1216,7 +1161,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string color {
             get {
@@ -1228,7 +1173,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public float granularidad {
             get {
@@ -1240,7 +1185,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int id {
             get {
@@ -1252,40 +1197,11 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string nombre {
             get {
                 return this.nombreField;
-=======
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class lineaProyeccion : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int cantidadField;
-        
-        private int idField;
-        
-        private producto productoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int cantidad {
-            get {
-                return this.cantidadField;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
             }
             set {
                 this.nombreField = value;
@@ -1293,7 +1209,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public bool restriccion {
             get {
@@ -1305,7 +1221,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public string unidad {
             get {
@@ -1327,8 +1243,290 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
+    public partial class proyeccionVenta : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private System.DateTime periodoField;
+        
+        private bool periodoFieldSpecified;
+        
+        private lineaProyeccion[] proyeccionesField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime periodo {
+            get {
+                return this.periodoField;
+            }
+            set {
+                this.periodoField = value;
+                this.RaisePropertyChanged("periodo");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool periodoSpecified {
+            get {
+                return this.periodoFieldSpecified;
+            }
+            set {
+                this.periodoFieldSpecified = value;
+                this.RaisePropertyChanged("periodoSpecified");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute("proyecciones", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public lineaProyeccion[] proyecciones {
+            get {
+                return this.proyeccionesField;
+            }
+            set {
+                this.proyeccionesField = value;
+                this.RaisePropertyChanged("proyecciones");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
+    public partial class lineaProyeccion : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int cantidadField;
+        
+        private int idField;
+        
+        private producto productoField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int cantidad {
+            get {
+                return this.cantidadField;
+            }
+            set {
+                this.cantidadField = value;
+                this.RaisePropertyChanged("cantidad");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public producto producto {
+            get {
+                return this.productoField;
+            }
+            set {
+                this.productoField = value;
+                this.RaisePropertyChanged("producto");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
+    public partial class detalleMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool activoField;
+        
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private int idDetalleMField;
+        
+        private maquinaria maquinariaField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int idDetalleM {
+            get {
+                return this.idDetalleMField;
+            }
+            set {
+                this.idDetalleMField = value;
+                this.RaisePropertyChanged("idDetalleM");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public maquinaria maquinaria {
+            get {
+                return this.maquinariaField;
+            }
+            set {
+                this.maquinariaField = value;
+                this.RaisePropertyChanged("maquinaria");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
+    public partial class maquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private string nombreField;
+        
+        private string tipoField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string tipo {
+            get {
+                return this.tipoField;
+            }
+            set {
+                this.tipoField = value;
+                this.RaisePropertyChanged("tipo");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1353,7 +1551,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private int nLoteField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public almacen almacen {
             get {
@@ -1365,7 +1563,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public estadoMaterial estado {
             get {
@@ -1377,7 +1575,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool estadoSpecified {
             get {
@@ -1389,7 +1587,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public int id {
             get {
@@ -1401,7 +1599,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public insumo insumo {
             get {
@@ -1413,7 +1611,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public System.DateTime periodo {
             get {
@@ -1424,26 +1622,8 @@ namespace LP2TECNOQUIMFRONT.Service {
                 this.RaisePropertyChanged("periodo");
             }
         }
-<<<<<<< HEAD
-=======
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class instructivo : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string actividadesField;
-        
-        private int idField;
-        
-        private lineaInsumo[] insumosField;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool periodoSpecified {
             get {
@@ -1455,7 +1635,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public int stock {
             get {
@@ -1467,7 +1647,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int nLote {
             get {
@@ -1489,8 +1669,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1505,7 +1685,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private trabajador trabajadorField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string direccion {
             get {
@@ -1517,7 +1697,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int idAlmacen {
             get {
@@ -1529,7 +1709,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string tipo {
             get {
@@ -1541,7 +1721,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public trabajador trabajador {
             get {
@@ -1563,181 +1743,28 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-<<<<<<< HEAD
-    public partial class trabajador : object, System.ComponentModel.INotifyPropertyChanged {
+    public enum estadoMaterial {
         
-        private string apellidosField;
+        /// <comentarios/>
+        Bueno,
         
-        private string correoField;
+        /// <comentarios/>
+        Pendiente,
         
-        private string dniField;
-        
-        private int idField;
-        
-        private string nombresField;
-        
-        private rol rolField;
-        
-        private usuario usuarioField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string apellidos {
-            get {
-                return this.apellidosField;
-            }
-            set {
-                this.apellidosField = value;
-                this.RaisePropertyChanged("apellidos");
-=======
-    public partial class politicaStock : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int cantMaxField;
-        
-        private int cantMinField;
-        
-        private int idField;
-        
-        private producto productoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int cantMax {
-            get {
-                return this.cantMaxField;
-            }
-            set {
-                this.cantMaxField = value;
-                this.RaisePropertyChanged("cantMax");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-<<<<<<< HEAD
-        public string correo {
-            get {
-                return this.correoField;
-            }
-            set {
-                this.correoField = value;
-                this.RaisePropertyChanged("correo");
-=======
-        public int cantMin {
-            get {
-                return this.cantMinField;
-            }
-            set {
-                this.cantMinField = value;
-                this.RaisePropertyChanged("cantMin");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-<<<<<<< HEAD
-        public string dni {
-            get {
-                return this.dniField;
-            }
-            set {
-                this.dniField = value;
-                this.RaisePropertyChanged("dni");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-=======
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-<<<<<<< HEAD
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string nombres {
-            get {
-                return this.nombresField;
-            }
-            set {
-                this.nombresField = value;
-                this.RaisePropertyChanged("nombres");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public rol rol {
-            get {
-                return this.rolField;
-            }
-            set {
-                this.rolField = value;
-                this.RaisePropertyChanged("rol");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public usuario usuario {
-            get {
-                return this.usuarioField;
-            }
-            set {
-                this.usuarioField = value;
-                this.RaisePropertyChanged("usuario");
-=======
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public producto producto {
-            get {
-                return this.productoField;
-            }
-            set {
-                this.productoField = value;
-                this.RaisePropertyChanged("producto");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
+        /// <comentarios/>
+        Corregido,
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-<<<<<<< HEAD
-    public partial class rol : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string descripcionField;
-        
-        private int idRolField;
-=======
     public partial class detalleAlmacenProducto : object, System.ComponentModel.INotifyPropertyChanged {
         
         private almacen almacenField;
@@ -1745,79 +1772,21 @@ namespace LP2TECNOQUIMFRONT.Service {
         private estadoMaterial estadoField;
         
         private bool estadoFieldSpecified;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
+        private int idField;
         
-<<<<<<< HEAD
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int idRol {
-            get {
-                return this.idRolField;
-            }
-            set {
-                this.idRolField = value;
-                this.RaisePropertyChanged("idRol");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class usuario : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int idUsuarioField;
-        
-        private string passwordField;
-        
-        private string usernameField;
-=======
         private System.DateTime periodoField;
         
         private bool periodoFieldSpecified;
         
         private producto productoField;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
         
         private int stockField;
         
         private int nLoteField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-<<<<<<< HEAD
-        public int idUsuario {
-            get {
-                return this.idUsuarioField;
-            }
-            set {
-                this.idUsuarioField = value;
-                this.RaisePropertyChanged("idUsuario");
-=======
         public almacen almacen {
             get {
                 return this.almacenField;
@@ -1825,21 +1794,11 @@ namespace LP2TECNOQUIMFRONT.Service {
             set {
                 this.almacenField = value;
                 this.RaisePropertyChanged("almacen");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-<<<<<<< HEAD
-        public string password {
-            get {
-                return this.passwordField;
-            }
-            set {
-                this.passwordField = value;
-                this.RaisePropertyChanged("password");
-=======
         public estadoMaterial estado {
             get {
                 return this.estadoField;
@@ -1850,7 +1809,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool estadoSpecified {
             get {
@@ -1859,77 +1818,11 @@ namespace LP2TECNOQUIMFRONT.Service {
             set {
                 this.estadoFieldSpecified = value;
                 this.RaisePropertyChanged("estadoSpecified");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-<<<<<<< HEAD
-        public string username {
-            get {
-                return this.usernameField;
-            }
-            set {
-                this.usernameField = value;
-                this.RaisePropertyChanged("username");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public enum estadoMaterial {
-        
-        /// <remarks/>
-        Bueno,
-        
-        /// <remarks/>
-        Pendiente,
-        
-        /// <remarks/>
-        Corregido,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class detalleMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool activoField;
-        
-        private System.DateTime fechaField;
-        
-        private bool fechaFieldSpecified;
-        
-        private int idDetalleMField;
-        
-        private maquinaria maquinariaField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-=======
         public int id {
             get {
                 return this.idField;
@@ -1940,7 +1833,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public System.DateTime periodo {
             get {
@@ -1949,11 +1842,10 @@ namespace LP2TECNOQUIMFRONT.Service {
             set {
                 this.periodoField = value;
                 this.RaisePropertyChanged("periodo");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool periodoSpecified {
             get {
@@ -1965,7 +1857,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public producto producto {
             get {
@@ -1977,7 +1869,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public int stock {
             get {
@@ -1989,7 +1881,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int nLote {
             get {
@@ -2011,965 +1903,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class almacen : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string direccionField;
-        
-        private int idAlmacenField;
-        
-        private string tipoField;
-        
-        private trabajador trabajadorField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string direccion {
-            get {
-                return this.direccionField;
-            }
-            set {
-                this.direccionField = value;
-                this.RaisePropertyChanged("direccion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int idAlmacen {
-            get {
-                return this.idAlmacenField;
-            }
-            set {
-                this.idAlmacenField = value;
-                this.RaisePropertyChanged("idAlmacen");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string tipo {
-            get {
-                return this.tipoField;
-            }
-            set {
-                this.tipoField = value;
-                this.RaisePropertyChanged("tipo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public trabajador trabajador {
-            get {
-                return this.trabajadorField;
-            }
-            set {
-                this.trabajadorField = value;
-                this.RaisePropertyChanged("trabajador");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class trabajador : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string apellidosField;
-        
-        private string correoField;
-        
-        private string dniField;
-        
-        private int idField;
-        
-        private string nombresField;
-        
-        private rol rolField;
-        
-        private usuario usuarioField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string apellidos {
-            get {
-                return this.apellidosField;
-            }
-            set {
-                this.apellidosField = value;
-                this.RaisePropertyChanged("apellidos");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string correo {
-            get {
-                return this.correoField;
-            }
-            set {
-                this.correoField = value;
-                this.RaisePropertyChanged("correo");
-            }
-        }
-        
-        /// <remarks/>
-<<<<<<< HEAD
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool estadoSpecified {
-            get {
-                return this.estadoFieldSpecified;
-            }
-            set {
-                this.estadoFieldSpecified = value;
-                this.RaisePropertyChanged("estadoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime periodo {
-            get {
-                return this.periodoField;
-            }
-            set {
-                this.periodoField = value;
-                this.RaisePropertyChanged("periodo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool periodoSpecified {
-            get {
-                return this.periodoFieldSpecified;
-            }
-            set {
-                this.periodoFieldSpecified = value;
-                this.RaisePropertyChanged("periodoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public producto producto {
-            get {
-                return this.productoField;
-            }
-            set {
-                this.productoField = value;
-                this.RaisePropertyChanged("producto");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int stock {
-            get {
-                return this.stockField;
-            }
-            set {
-                this.stockField = value;
-                this.RaisePropertyChanged("stock");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int nLote {
-            get {
-                return this.nLoteField;
-            }
-            set {
-                this.nLoteField = value;
-                this.RaisePropertyChanged("nLote");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class producto : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private float granularidadField;
-        
-        private int idProductoField;
-        
-        private instructivo instructivoField;
-        
-        private string nombreField;
-        
-        private string presentacionField;
-        
-        private bool restriccionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public float granularidad {
-            get {
-                return this.granularidadField;
-            }
-            set {
-                this.granularidadField = value;
-                this.RaisePropertyChanged("granularidad");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int idProducto {
-            get {
-                return this.idProductoField;
-            }
-            set {
-                this.idProductoField = value;
-                this.RaisePropertyChanged("idProducto");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public instructivo instructivo {
-            get {
-                return this.instructivoField;
-            }
-            set {
-                this.instructivoField = value;
-                this.RaisePropertyChanged("instructivo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string presentacion {
-            get {
-                return this.presentacionField;
-            }
-            set {
-                this.presentacionField = value;
-                this.RaisePropertyChanged("presentacion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public bool restriccion {
-            get {
-                return this.restriccionField;
-            }
-            set {
-                this.restriccionField = value;
-                this.RaisePropertyChanged("restriccion");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class instructivo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string actividadesField;
-        
-        private int idField;
-        
-        private lineaInsumo[] insumosField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string actividades {
-            get {
-                return this.actividadesField;
-            }
-            set {
-                this.actividadesField = value;
-                this.RaisePropertyChanged("actividades");
-=======
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string dni {
-            get {
-                return this.dniField;
-            }
-            set {
-                this.dniField = value;
-                this.RaisePropertyChanged("dni");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            }
-        }
-        
-        /// <remarks/>
-<<<<<<< HEAD
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-=======
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-<<<<<<< HEAD
-        [System.Xml.Serialization.XmlElementAttribute("insumos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public lineaInsumo[] insumos {
-            get {
-                return this.insumosField;
-            }
-            set {
-                this.insumosField = value;
-                this.RaisePropertyChanged("insumos");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-=======
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string nombres {
-            get {
-                return this.nombresField;
-            }
-            set {
-                this.nombresField = value;
-                this.RaisePropertyChanged("nombres");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class lineaInsumo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int cantInsumoField;
-        
-        private bool estadoField;
-        
-        private int idLineaIField;
-        
-        private insumo insumoField;
-        
-        /// <remarks/>
-<<<<<<< HEAD
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int cantInsumo {
-            get {
-                return this.cantInsumoField;
-            }
-            set {
-                this.cantInsumoField = value;
-                this.RaisePropertyChanged("cantInsumo");
-=======
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public rol rol {
-            get {
-                return this.rolField;
-            }
-            set {
-                this.rolField = value;
-                this.RaisePropertyChanged("rol");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            }
-        }
-        
-        /// <remarks/>
-<<<<<<< HEAD
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public bool estado {
-            get {
-                return this.estadoField;
-            }
-            set {
-                this.estadoField = value;
-                this.RaisePropertyChanged("estado");
-=======
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public usuario usuario {
-            get {
-                return this.usuarioField;
-            }
-            set {
-                this.usuarioField = value;
-                this.RaisePropertyChanged("usuario");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class rol : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string descripcionField;
-        
-        private int idRolField;
-        
-        /// <remarks/>
-<<<<<<< HEAD
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idLineaI {
-            get {
-                return this.idLineaIField;
-            }
-            set {
-                this.idLineaIField = value;
-                this.RaisePropertyChanged("idLineaI");
-=======
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            }
-        }
-        
-        /// <remarks/>
-<<<<<<< HEAD
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public insumo insumo {
-            get {
-                return this.insumoField;
-            }
-            set {
-                this.insumoField = value;
-                this.RaisePropertyChanged("insumo");
-=======
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int idRol {
-            get {
-                return this.idRolField;
-            }
-            set {
-                this.idRolField = value;
-                this.RaisePropertyChanged("idRol");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-<<<<<<< HEAD
-    public partial class lineaProyeccion : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int cantidadField;
-        
-        private int idField;
-        
-        private producto productoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int cantidad {
-            get {
-                return this.cantidadField;
-            }
-            set {
-                this.cantidadField = value;
-                this.RaisePropertyChanged("cantidad");
-=======
-    public partial class usuario : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int idUsuarioField;
-        
-        private string passwordField;
-        
-        private string usernameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int idUsuario {
-            get {
-                return this.idUsuarioField;
-            }
-            set {
-                this.idUsuarioField = value;
-                this.RaisePropertyChanged("idUsuario");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-<<<<<<< HEAD
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-=======
-        public string password {
-            get {
-                return this.passwordField;
-            }
-            set {
-                this.passwordField = value;
-                this.RaisePropertyChanged("password");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-<<<<<<< HEAD
-        public producto producto {
-            get {
-                return this.productoField;
-            }
-            set {
-                this.productoField = value;
-                this.RaisePropertyChanged("producto");
-=======
-        public string username {
-            get {
-                return this.usernameField;
-            }
-            set {
-                this.usernameField = value;
-                this.RaisePropertyChanged("username");
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-<<<<<<< HEAD
-=======
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public enum estadoMaterial {
-        
-        /// <remarks/>
-        Bueno,
-        
-        /// <remarks/>
-        Pendiente,
-        
-        /// <remarks/>
-        Corregido,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class proyeccionVenta : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int idField;
-        
-        private System.DateTime periodoField;
-        
-        private bool periodoFieldSpecified;
-        
-        private lineaProyeccion[] proyeccionesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime periodo {
-            get {
-                return this.periodoField;
-            }
-            set {
-                this.periodoField = value;
-                this.RaisePropertyChanged("periodo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool periodoSpecified {
-            get {
-                return this.periodoFieldSpecified;
-            }
-            set {
-                this.periodoFieldSpecified = value;
-                this.RaisePropertyChanged("periodoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("proyecciones", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public lineaProyeccion[] proyecciones {
-            get {
-                return this.proyeccionesField;
-            }
-            set {
-                this.proyeccionesField = value;
-                this.RaisePropertyChanged("proyecciones");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class politicaStock : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int cantMaxField;
-        
-        private int cantMinField;
-        
-        private int idField;
-        
-        private producto productoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int cantMax {
-            get {
-                return this.cantMaxField;
-            }
-            set {
-                this.cantMaxField = value;
-                this.RaisePropertyChanged("cantMax");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int cantMin {
-            get {
-                return this.cantMinField;
-            }
-            set {
-                this.cantMinField = value;
-                this.RaisePropertyChanged("cantMin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public producto producto {
-            get {
-                return this.productoField;
-            }
-            set {
-                this.productoField = value;
-                this.RaisePropertyChanged("producto");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class detalleMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool activoField;
-        
-        private System.DateTime fechaField;
-        
-        private bool fechaFieldSpecified;
-        
-        private int idDetalleMField;
-        
-        private maquinaria maquinariaField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("fecha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSpecified {
-            get {
-                return this.fechaFieldSpecified;
-            }
-            set {
-                this.fechaFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idDetalleM {
-            get {
-                return this.idDetalleMField;
-            }
-            set {
-                this.idDetalleMField = value;
-                this.RaisePropertyChanged("idDetalleM");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public maquinaria maquinaria {
-            get {
-                return this.maquinariaField;
-            }
-            set {
-                this.maquinariaField = value;
-                this.RaisePropertyChanged("maquinaria");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class maquinaria : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int idField;
-        
-        private string nombreField;
-        
-        private string tipoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string tipo {
-            get {
-                return this.tipoField;
-            }
-            set {
-                this.tipoField = value;
-                this.RaisePropertyChanged("tipo");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2984,7 +1919,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private lineaOrden[] lineasOrdenField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public System.DateTime fecha {
             get {
@@ -2996,7 +1931,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool fechaSpecified {
             get {
@@ -3008,7 +1943,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int id {
             get {
@@ -3020,7 +1955,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("lineasOrden", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         public lineaOrden[] lineasOrden {
             get {
@@ -3042,8 +1977,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3060,7 +1995,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private producto productoField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public int cantProducto {
             get {
@@ -3072,7 +2007,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public estadoMaterial estadoCalidad {
             get {
@@ -3084,7 +2019,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool estadoCalidadSpecified {
             get {
@@ -3096,7 +2031,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public int idLineaOrden {
             get {
@@ -3108,7 +2043,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public producto producto {
             get {
@@ -3130,8 +2065,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3154,7 +2089,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private trabajador responsableField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public estado estado {
             get {
@@ -3166,7 +2101,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool estadoSpecified {
             get {
@@ -3178,7 +2113,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int id {
             get {
@@ -3190,7 +2125,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("maquinarias", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         public maquinaria[] maquinarias {
             get {
@@ -3202,7 +2137,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("ordenes", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
         public ordenProduccion[] ordenes {
             get {
@@ -3214,7 +2149,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public System.DateTime periodo {
             get {
@@ -3226,7 +2161,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool periodoSpecified {
             get {
@@ -3238,7 +2173,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public trabajador responsable {
             get {
@@ -3260,112 +2195,69 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
     public enum estado {
         
-        /// <remarks/>
+        /// <comentarios/>
         Aprobado,
         
-        /// <remarks/>
+        /// <comentarios/>
         Rechazado,
         
-        /// <remarks/>
+        /// <comentarios/>
         Pendiente,
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class mensaje : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class usuario : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string descripcionField;
+        private int idUsuarioField;
         
-        private trabajador emisorField;
+        private string passwordField;
         
-        private System.DateTime fechaEnvioField;
+        private string usernameField;
         
-        private bool fechaEnvioFieldSpecified;
-        
-        private int idMensajeField;
-        
-        private trabajador receptorField;
-        
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string descripcion {
+        public int idUsuario {
             get {
-                return this.descripcionField;
+                return this.idUsuarioField;
             }
             set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
+                this.idUsuarioField = value;
+                this.RaisePropertyChanged("idUsuario");
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public trabajador emisor {
+        public string password {
             get {
-                return this.emisorField;
+                return this.passwordField;
             }
             set {
-                this.emisorField = value;
-                this.RaisePropertyChanged("emisor");
+                this.passwordField = value;
+                this.RaisePropertyChanged("password");
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime fechaEnvio {
+        public string username {
             get {
-                return this.fechaEnvioField;
+                return this.usernameField;
             }
             set {
-                this.fechaEnvioField = value;
-                this.RaisePropertyChanged("fechaEnvio");
-<<<<<<< HEAD
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaEnvioSpecified {
-            get {
-                return this.fechaEnvioFieldSpecified;
-            }
-            set {
-                this.fechaEnvioFieldSpecified = value;
-                this.RaisePropertyChanged("fechaEnvioSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int idMensaje {
-            get {
-                return this.idMensajeField;
-            }
-            set {
-                this.idMensajeField = value;
-                this.RaisePropertyChanged("idMensaje");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public trabajador receptor {
-            get {
-                return this.receptorField;
-            }
-            set {
-                this.receptorField = value;
-                this.RaisePropertyChanged("receptor");
+                this.usernameField = value;
+                this.RaisePropertyChanged("username");
             }
         }
         
@@ -3376,6 +2268,98 @@ namespace LP2TECNOQUIMFRONT.Service {
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="enviarMensaje", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class enviarMensajeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.mensaje mensaje;
+        
+        public enviarMensajeRequest() {
+        }
+        
+        public enviarMensajeRequest(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
+            this.mensaje = mensaje;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="enviarMensajeResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class enviarMensajeResponse {
+        
+        public enviarMensajeResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarUsuario", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class verificarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.usuario usuario;
+        
+        public verificarUsuarioRequest() {
+        }
+        
+        public verificarUsuarioRequest(LP2TECNOQUIMFRONT.Service.usuario usuario) {
+            this.usuario = usuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarUsuarioResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class verificarUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.trabajador @return;
+        
+        public verificarUsuarioResponse() {
+        }
+        
+        public verificarUsuarioResponse(LP2TECNOQUIMFRONT.Service.trabajador @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAlmacen", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarAlmacenRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.almacen almacen;
+        
+        public insertarAlmacenRequest() {
+        }
+        
+        public insertarAlmacenRequest(LP2TECNOQUIMFRONT.Service.almacen almacen) {
+            this.almacen = almacen;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAlmacenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarAlmacenResponse {
+        
+        public insertarAlmacenResponse() {
         }
     }
     
@@ -3418,131 +2402,6 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class eliminarInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public eliminarInsumoRequest() {
-        }
-        
-        public eliminarInsumoRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class eliminarInsumoResponse {
-        
-        public eliminarInsumoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="enviarMensaje", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class enviarMensajeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.mensaje mensaje;
-=======
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaEnvioSpecified {
-            get {
-                return this.fechaEnvioFieldSpecified;
-            }
-            set {
-                this.fechaEnvioFieldSpecified = value;
-                this.RaisePropertyChanged("fechaEnvioSpecified");
-            }
-        }
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int idMensaje {
-            get {
-                return this.idMensajeField;
-            }
-            set {
-                this.idMensajeField = value;
-                this.RaisePropertyChanged("idMensaje");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public trabajador receptor {
-            get {
-                return this.receptorField;
-            }
-            set {
-                this.receptorField = value;
-                this.RaisePropertyChanged("receptor");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarUsuario", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class verificarUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.usuario usuario;
-        
-        public verificarUsuarioRequest() {
-        }
-        
-        public verificarUsuarioRequest(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            this.usuario = usuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarUsuarioResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class verificarUsuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.trabajador @return;
-        
-        public verificarUsuarioResponse() {
-        }
-        
-        public verificarUsuarioResponse(LP2TECNOQUIMFRONT.Service.trabajador @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class actualizarInsumoRequest {
         
@@ -3571,44 +2430,6 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAlmacen", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarAlmacenRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string tipo;
-        
-        public listarAlmacenRequest() {
-        }
-        
-        public listarAlmacenRequest(string tipo) {
-            this.tipo = tipo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAlmacenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarAlmacenResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.almacen[] @return;
-        
-        public listarAlmacenResponse() {
-        }
-        
-        public listarAlmacenResponse(LP2TECNOQUIMFRONT.Service.almacen[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-=======
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class listarInsumoRequest {
         
@@ -3645,229 +2466,34 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAlmacen", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarAlmacenRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class eliminarInsumoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.almacen almacen;
+        public int id;
         
-        public insertarAlmacenRequest() {
+        public eliminarInsumoRequest() {
         }
         
-        public insertarAlmacenRequest(LP2TECNOQUIMFRONT.Service.almacen almacen) {
-            this.almacen = almacen;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarMaquinariaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dato;
-        
-        public listarMaquinariaRequest() {
-        }
-        
-        public listarMaquinariaRequest(string dato) {
-            this.dato = dato;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public eliminarInsumoRequest(int id) {
+            this.id = id;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAlmacenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarAlmacenResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class eliminarInsumoResponse {
         
-        public insertarAlmacenResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarMaquinariaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.maquinaria[] @return;
-        
-        public listarMaquinariaResponse() {
-        }
-        
-        public listarMaquinariaResponse(LP2TECNOQUIMFRONT.Service.maquinaria[] @return) {
-            this.@return = @return;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public eliminarInsumoResponse() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuarios", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarUsuariosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string username;
-        
-        public listarUsuariosRequest() {
-        }
-        
-        public listarUsuariosRequest(string username) {
-            this.username = username;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarUsuario", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class verificarUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.usuario usuario;
-        
-        public verificarUsuarioRequest() {
-        }
-        
-        public verificarUsuarioRequest(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            this.usuario = usuario;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuariosResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarUsuariosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.usuario[] @return;
-        
-        public listarUsuariosResponse() {
-        }
-        
-        public listarUsuariosResponse(LP2TECNOQUIMFRONT.Service.usuario[] @return) {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarUsuarioResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class verificarUsuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.trabajador @return;
-        
-        public verificarUsuarioResponse() {
-        }
-        
-        public verificarUsuarioResponse(LP2TECNOQUIMFRONT.Service.trabajador @return) {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarRol", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarRolRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.rol rol;
-        
-        public actualizarRolRequest() {
-        }
-        
-        public actualizarRolRequest(LP2TECNOQUIMFRONT.Service.rol rol) {
-            this.rol = rol;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMensaje", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarMensajeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.mensaje mensaje;
-        
-        public insertarMensajeRequest() {
-        }
-        
-        public insertarMensajeRequest(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
-            this.mensaje = mensaje;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarRolResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarRolResponse {
-        
-        public actualizarRolResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMensajeResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarMensajeResponse {
-        
-        public insertarMensajeResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMensaje", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarMensajeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idReceptor;
-        
-        public listarMensajeRequest() {
-        }
-        
-        public listarMensajeRequest(int idReceptor) {
-            this.idReceptor = idReceptor;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMensajeResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarMensajeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.mensaje[] @return;
-        
-        public listarMensajeResponse() {
-        }
-        
-        public listarMensajeResponse(LP2TECNOQUIMFRONT.Service.mensaje[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRoles", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarRolesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string descripcion;
-        
-        public listarRolesRequest() {
-        }
-        
-        public listarRolesRequest(string descripcion) {
-            this.descripcion = descripcion;
-=======
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarAlmacen", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class listarAlmacenRequest {
         
@@ -3880,26 +2506,12 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         public listarAlmacenRequest(string tipo) {
             this.tipo = tipo;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRolesResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarRolesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.rol[] @return;
-        
-        public listarRolesResponse() {
-        }
-        
-        public listarRolesResponse(LP2TECNOQUIMFRONT.Service.rol[] @return) {
-=======
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarAlmacenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class listarAlmacenResponse {
         
@@ -3911,7 +2523,6 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
         
         public listarAlmacenResponse(LP2TECNOQUIMFRONT.Service.almacen[] @return) {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
             this.@return = @return;
         }
     }
@@ -3919,108 +2530,64 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuario", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarUsuarioRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaOrden", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarLineaOrdenRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.usuario usuario;
+        public int idOrden;
         
-        public insertarUsuarioRequest() {
+        public listarLineaOrdenRequest() {
         }
         
-        public insertarUsuarioRequest(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            this.usuario = usuario;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="enviarMensaje", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class enviarMensajeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.mensaje mensaje;
-        
-        public enviarMensajeRequest() {
-        }
-        
-        public enviarMensajeRequest(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
-            this.mensaje = mensaje;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public listarLineaOrdenRequest(int idOrden) {
+            this.idOrden = idOrden;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuarioResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarUsuarioResponse {
-        
-        public insertarUsuarioResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="enviarMensajeResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class enviarMensajeResponse {
-        
-        public enviarMensajeResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMensaje", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarMensajeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idReceptor;
-        
-        public listarMensajeRequest() {
-        }
-        
-        public listarMensajeRequest(int idReceptor) {
-            this.idReceptor = idReceptor;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAlmacen", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarAlmacenRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.almacen almacen;
-        
-        public insertarAlmacenRequest() {
-        }
-        
-        public insertarAlmacenRequest(LP2TECNOQUIMFRONT.Service.almacen almacen) {
-            this.almacen = almacen;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMensajeResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarMensajeResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaOrdenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarLineaOrdenResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.mensaje[] @return;
+        public LP2TECNOQUIMFRONT.Service.lineaOrden[] @return;
         
-        public listarMensajeResponse() {
+        public listarLineaOrdenResponse() {
         }
         
-        public listarMensajeResponse(LP2TECNOQUIMFRONT.Service.mensaje[] @return) {
+        public listarLineaOrdenResponse(LP2TECNOQUIMFRONT.Service.lineaOrden[] @return) {
             this.@return = @return;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAlmacenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarAlmacenResponse {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarRol", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarRolRequest {
         
-        public insertarAlmacenResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.rol rol;
+        
+        public insertarRolRequest() {
+        }
+        
+        public insertarRolRequest(LP2TECNOQUIMFRONT.Service.rol rol) {
+            this.rol = rol;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarRolResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarRolResponse {
+        
+        public insertarRolResponse() {
         }
     }
     
@@ -4063,93 +2630,6 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarMaquinariaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dato;
-        
-        public listarMaquinariaRequest() {
-        }
-        
-        public listarMaquinariaRequest(string dato) {
-            this.dato = dato;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarMaquinariaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.maquinaria[] @return;
-        
-        public listarMaquinariaResponse() {
-        }
-        
-        public listarMaquinariaResponse(LP2TECNOQUIMFRONT.Service.maquinaria[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPMP", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarPMPRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.planMaestroProduccion politicaStock;
-        
-        public insertarPMPRequest() {
-        }
-        
-        public insertarPMPRequest(LP2TECNOQUIMFRONT.Service.planMaestroProduccion politicaStock) {
-            this.politicaStock = politicaStock;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.insumo insumo;
-        
-        public actualizarInsumoRequest() {
-        }
-        
-        public actualizarInsumoRequest(LP2TECNOQUIMFRONT.Service.insumo insumo) {
-            this.insumo = insumo;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPMPResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarPMPResponse {
-        
-        public insertarPMPResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarInsumoResponse {
-        
-        public actualizarInsumoResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProducto", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class insertarProductoRequest {
         
@@ -4162,27 +2642,12 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         public insertarProductoRequest(LP2TECNOQUIMFRONT.Service.producto producto) {
             this.producto = producto;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProductos", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarProductosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dato;
-        
-        public listarProductosRequest() {
-        }
-        
-        public listarProductosRequest(string dato) {
-            this.dato = dato;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProductoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class insertarProductoResponse {
         
@@ -4194,19 +2659,6 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
         
         public insertarProductoResponse(int @return) {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProductosResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarProductosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.producto[] @return;
-        
-        public listarProductosResponse() {
-        }
-        
-        public listarProductosResponse(LP2TECNOQUIMFRONT.Service.producto[] @return) {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
             this.@return = @return;
         }
     }
@@ -4214,20 +2666,6 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMensaje", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarMensajeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.mensaje mensaje;
-        
-        public insertarMensajeRequest() {
-        }
-        
-        public insertarMensajeRequest(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
-            this.mensaje = mensaje;
-=======
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPMP", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class insertarPMPRequest {
         
@@ -4240,72 +2678,244 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         public insertarPMPRequest(LP2TECNOQUIMFRONT.Service.planMaestroProduccion politicaStock) {
             this.politicaStock = politicaStock;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMensajeResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarMensajeResponse {
-        
-        public insertarMensajeResponse() {
-=======
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPMPResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class insertarPMPResponse {
         
         public insertarPMPResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPMP", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class actualizarPMPRequest {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarRol", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarRolRequest {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.rol rol;
+        public LP2TECNOQUIMFRONT.Service.planMaestroProduccion PlanMaestroProduccion;
         
-<<<<<<< HEAD
         public actualizarPMPRequest() {
         }
         
-        public actualizarPMPRequest(LP2TECNOQUIMFRONT.Service.planMaestroProduccion politicaStock) {
-            this.politicaStock = politicaStock;
-=======
-        public insertarRolRequest() {
-        }
-        
-        public insertarRolRequest(LP2TECNOQUIMFRONT.Service.rol rol) {
-            this.rol = rol;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public actualizarPMPRequest(LP2TECNOQUIMFRONT.Service.planMaestroProduccion PlanMaestroProduccion) {
+            this.PlanMaestroProduccion = PlanMaestroProduccion;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPMPResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class actualizarPMPResponse {
         
         public actualizarPMPResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarRolResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarRolResponse {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRoles", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarRolesRequest {
         
-        public insertarRolResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string descripcion;
+        
+        public listarRolesRequest() {
+        }
+        
+        public listarRolesRequest(string descripcion) {
+            this.descripcion = descripcion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRolesResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarRolesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.rol[] @return;
+        
+        public listarRolesResponse() {
+        }
+        
+        public listarRolesResponse(LP2TECNOQUIMFRONT.Service.rol[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuario", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.usuario usuario;
+        
+        public insertarUsuarioRequest() {
+        }
+        
+        public insertarUsuarioRequest(LP2TECNOQUIMFRONT.Service.usuario usuario) {
+            this.usuario = usuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuarioResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarUsuarioResponse {
+        
+        public insertarUsuarioResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuarios", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarUsuariosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string username;
+        
+        public listarUsuariosRequest() {
+        }
+        
+        public listarUsuariosRequest(string username) {
+            this.username = username;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuariosResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarUsuariosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.usuario[] @return;
+        
+        public listarUsuariosResponse() {
+        }
+        
+        public listarUsuariosResponse(LP2TECNOQUIMFRONT.Service.usuario[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMensaje", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarMensajeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.mensaje mensaje;
+        
+        public insertarMensajeRequest() {
+        }
+        
+        public insertarMensajeRequest(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
+            this.mensaje = mensaje;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMensajeResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarMensajeResponse {
+        
+        public insertarMensajeResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMensaje", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarMensajeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idReceptor;
+        
+        public listarMensajeRequest() {
+        }
+        
+        public listarMensajeRequest(int idReceptor) {
+            this.idReceptor = idReceptor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMensajeResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarMensajeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.mensaje[] @return;
+        
+        public listarMensajeResponse() {
+        }
+        
+        public listarMensajeResponse(LP2TECNOQUIMFRONT.Service.mensaje[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPMP", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarPMPRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string periodo;
+        
+        public listarPMPRequest() {
+        }
+        
+        public listarPMPRequest(string periodo) {
+            this.periodo = periodo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPMPResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarPMPResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.planMaestroProduccion[] @return;
+        
+        public listarPMPResponse() {
+        }
+        
+        public listarPMPResponse(LP2TECNOQUIMFRONT.Service.planMaestroProduccion[] @return) {
+            this.@return = @return;
         }
     }
     
@@ -4340,64 +2950,35 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaOrden", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarLineaOrdenRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarMaquinariaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idOrden;
+        public string dato;
         
-        public listarLineaOrdenRequest() {
+        public listarMaquinariaRequest() {
         }
         
-        public listarLineaOrdenRequest(int idOrden) {
-            this.idOrden = idOrden;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPMP", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarPMPRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string periodo;
-        
-        public listarPMPRequest() {
-        }
-        
-        public listarPMPRequest(string periodo) {
-            this.periodo = periodo;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public listarMaquinariaRequest(string dato) {
+            this.dato = dato;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaOrdenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarLineaOrdenResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarMaquinariaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.lineaOrden[] @return;
+        public LP2TECNOQUIMFRONT.Service.maquinaria[] @return;
         
-        public listarLineaOrdenResponse() {
+        public listarMaquinariaResponse() {
         }
         
-        public listarLineaOrdenResponse(LP2TECNOQUIMFRONT.Service.lineaOrden[] @return) {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPMPResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarPMPResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.planMaestroProduccion[] @return;
-        
-        public listarPMPResponse() {
-        }
-        
-        public listarPMPResponse(LP2TECNOQUIMFRONT.Service.planMaestroProduccion[] @return) {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public listarMaquinariaResponse(LP2TECNOQUIMFRONT.Service.maquinaria[] @return) {
             this.@return = @return;
         }
     }
@@ -4405,67 +2986,134 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarRol", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarRolRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarRol", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarRolRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LP2TECNOQUIMFRONT.Service.rol rol;
         
-        public insertarRolRequest() {
+        public actualizarRolRequest() {
         }
         
-        public insertarRolRequest(LP2TECNOQUIMFRONT.Service.rol rol) {
+        public actualizarRolRequest(LP2TECNOQUIMFRONT.Service.rol rol) {
             this.rol = rol;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuario", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.usuario usuario;
-        
-        public insertarUsuarioRequest() {
-        }
-        
-        public insertarUsuarioRequest(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            this.usuario = usuario;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarRolResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarRolResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarRolResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarRolResponse {
         
-        public insertarRolResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuarioResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarUsuarioResponse {
-        
-        public insertarUsuarioResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public actualizarRolResponse() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarMaquinariaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleAlmacenProducto", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarDetalleAlmacenProductoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.maquinaria maquinaria;
+        public LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto;
         
-        public actualizarMaquinariaRequest() {
+        public insertarDetalleAlmacenProductoRequest() {
         }
         
-        public actualizarMaquinariaRequest(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+        public insertarDetalleAlmacenProductoRequest(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
+            this.detalleAlmacenProducto = detalleAlmacenProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleAlmacenProductoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarDetalleAlmacenProductoResponse {
+        
+        public insertarDetalleAlmacenProductoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaProyeccion", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarLineaProyeccionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProyeccion;
+        
+        public actualizarLineaProyeccionRequest() {
+        }
+        
+        public actualizarLineaProyeccionRequest(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
+            this.lineaProyeccion = lineaProyeccion;
+            this.idProyeccion = idProyeccion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaProyeccionResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarLineaProyeccionResponse {
+        
+        public actualizarLineaProyeccionResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleAlmacenInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarDetalleAlmacenInsumoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo;
+        
+        public actualizarDetalleAlmacenInsumoRequest() {
+        }
+        
+        public actualizarDetalleAlmacenInsumoRequest(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo) {
+            this.detalleAlmacenInsumo = detalleAlmacenInsumo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleAlmacenInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarDetalleAlmacenInsumoResponse {
+        
+        public actualizarDetalleAlmacenInsumoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarDetalleMaquinariaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria;
+        
+        public insertarDetalleMaquinariaRequest() {
+        }
+        
+        public insertarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
             this.maquinaria = maquinaria;
         }
     }
@@ -4473,251 +3121,46 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarMaquinariaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarDetalleMaquinariaResponse {
         
-        public actualizarMaquinariaResponse() {
+        public insertarDetalleMaquinariaResponse() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPoliticaStock", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarPoliticaStockRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenesProduccionPlan", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarOrdenesProduccionPlanRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.politicaStock politicaStock;
+        public int idPMP;
         
-        public insertarPoliticaStockRequest() {
+        public listarOrdenesProduccionPlanRequest() {
         }
         
-        public insertarPoliticaStockRequest(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
-            this.politicaStock = politicaStock;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRoles", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarRolesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string descripcion;
-        
-        public listarRolesRequest() {
-        }
-        
-        public listarRolesRequest(string descripcion) {
-            this.descripcion = descripcion;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public listarOrdenesProduccionPlanRequest(int idPMP) {
+            this.idPMP = idPMP;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPoliticaStockResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarPoliticaStockResponse {
-        
-        public insertarPoliticaStockResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRolesResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarRolesResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenesProduccionPlanResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarOrdenesProduccionPlanResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.rol[] @return;
+        public LP2TECNOQUIMFRONT.Service.ordenProduccion[] @return;
         
-        public listarRolesResponse() {
+        public listarOrdenesProduccionPlanResponse() {
         }
         
-        public listarRolesResponse(LP2TECNOQUIMFRONT.Service.rol[] @return) {
+        public listarOrdenesProduccionPlanResponse(LP2TECNOQUIMFRONT.Service.ordenProduccion[] @return) {
             this.@return = @return;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarInstructivo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarInstructivoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.instructivo instructivo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProducto;
-        
-        public actualizarInstructivoRequest() {
-        }
-        
-        public actualizarInstructivoRequest(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
-            this.instructivo = instructivo;
-            this.idProducto = idProducto;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuarios", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarUsuariosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string username;
-        
-        public listarUsuariosRequest() {
-        }
-        
-        public listarUsuariosRequest(string username) {
-            this.username = username;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarInstructivoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarInstructivoResponse {
-        
-        public actualizarInstructivoResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuariosResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarUsuariosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.usuario[] @return;
-        
-        public listarUsuariosResponse() {
-        }
-        
-        public listarUsuariosResponse(LP2TECNOQUIMFRONT.Service.usuario[] @return) {
-            this.@return = @return;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarLineaInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idInstructivo;
-        
-        public actualizarLineaInsumoRequest() {
-        }
-        
-        public actualizarLineaInsumoRequest(LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo, int idInstructivo) {
-            this.lineaInsumo = lineaInsumo;
-            this.idInstructivo = idInstructivo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarLineaInsumoResponse {
-        
-        public actualizarLineaInsumoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInstructivos", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarInstructivosRequest {
-        
-        public listarInstructivosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInstructivosResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarInstructivosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.instructivo[] @return;
-        
-        public listarInstructivosResponse() {
-        }
-        
-        public listarInstructivosResponse(LP2TECNOQUIMFRONT.Service.instructivo[] @return) {
-            this.@return = @return;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProducto", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.producto producto;
-        
-        public insertarProductoRequest() {
-        }
-        
-        public insertarProductoRequest(LP2TECNOQUIMFRONT.Service.producto producto) {
-            this.producto = producto;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProyeccionVenta", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarProyeccionVentaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta;
-        
-        public actualizarProyeccionVentaRequest() {
-        }
-        
-        public actualizarProyeccionVentaRequest(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
-            this.proyeccionVenta = proyeccionVenta;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProductoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarProductoResponse() {
-        }
-        
-        public insertarProductoResponse(int @return) {
-            this.@return = @return;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProyeccionVentaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarProyeccionVentaResponse {
-        
-        public actualizarProyeccionVentaResponse() {
         }
     }
     
@@ -4736,27 +3179,12 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         public listarDetalleAlmacenProductoRequest(string dato) {
             this.dato = dato;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="hello", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class helloRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string name;
-        
-        public helloRequest() {
-        }
-        
-        public helloRequest(string name) {
-            this.name = name;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarDetalleAlmacenProductoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class listarDetalleAlmacenProductoResponse {
         
@@ -4768,19 +3196,6 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
         
         public listarDetalleAlmacenProductoResponse(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto[] @return) {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="helloResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class helloResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public helloResponse() {
-        }
-        
-        public helloResponse(string @return) {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
             this.@return = @return;
         }
     }
@@ -4788,70 +3203,228 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProducto", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarProductoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleAlmacenProducto", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarDetalleAlmacenProductoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.producto producto;
+        public LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto;
         
-        public actualizarProductoRequest() {
+        public actualizarDetalleAlmacenProductoRequest() {
         }
         
-        public actualizarProductoRequest(LP2TECNOQUIMFRONT.Service.producto producto) {
-            this.producto = producto;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarDetalleMaquinariaRequest {
+        public actualizarDetalleAlmacenProductoRequest(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
+            this.detalleAlmacenProducto = detalleAlmacenProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleAlmacenProductoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarDetalleAlmacenProductoResponse {
+        
+        public actualizarDetalleAlmacenProductoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProyeccionVenta", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarProyeccionVentaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta;
+        
+        public actualizarProyeccionVentaRequest() {
+        }
+        
+        public actualizarProyeccionVentaRequest(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
+            this.proyeccionVenta = proyeccionVenta;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProyeccionVentaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarProyeccionVentaResponse {
+        
+        public actualizarProyeccionVentaResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDetalleAlmacenInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarDetalleAlmacenInsumoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string dato;
+        
+        public listarDetalleAlmacenInsumoRequest() {
+        }
+        
+        public listarDetalleAlmacenInsumoRequest(string dato) {
+            this.dato = dato;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDetalleAlmacenInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarDetalleAlmacenInsumoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo[] @return;
+        
+        public listarDetalleAlmacenInsumoResponse() {
+        }
+        
+        public listarDetalleAlmacenInsumoResponse(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleAlmacenInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarDetalleAlmacenInsumoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idInsumo;
+        
+        public insertarDetalleAlmacenInsumoRequest() {
+        }
+        
+        public insertarDetalleAlmacenInsumoRequest(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo, int idInsumo) {
+            this.detalleAlmacenInsumo = detalleAlmacenInsumo;
+            this.idInsumo = idInsumo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleAlmacenInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarDetalleAlmacenInsumoResponse {
+        
+        public insertarDetalleAlmacenInsumoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarDetalleMaquinariaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria;
         
-        public insertarDetalleMaquinariaRequest() {
+        public actualizarDetalleMaquinariaRequest() {
         }
         
-        public insertarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
+        public actualizarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
             this.maquinaria = maquinaria;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProductoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarProductoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarDetalleMaquinariaResponse {
         
-        public actualizarProductoResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarDetalleMaquinariaResponse {
-        
-        public insertarDetalleMaquinariaResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public actualizarDetalleMaquinariaResponse() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTrabajador", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarTrabajadorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarOrdenProduccion", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarOrdenProduccionRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.trabajador trabajador;
+        public LP2TECNOQUIMFRONT.Service.ordenProduccion ordenProduccion;
         
-        public insertarTrabajadorRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg1;
+        
+        public actualizarOrdenProduccionRequest() {
         }
         
-        public insertarTrabajadorRequest(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
-            this.trabajador = trabajador;
-=======
+        public actualizarOrdenProduccionRequest(LP2TECNOQUIMFRONT.Service.ordenProduccion ordenProduccion, int arg1) {
+            this.ordenProduccion = ordenProduccion;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarOrdenProduccionResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarOrdenProduccionResponse {
+        
+        public actualizarOrdenProduccionResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenesProduccionFecha", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarOrdenesProduccionFechaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fecha;
+        
+        public listarOrdenesProduccionFechaRequest() {
+        }
+        
+        public listarOrdenesProduccionFechaRequest(System.DateTime fecha) {
+            this.fecha = fecha;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenesProduccionFechaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarOrdenesProduccionFechaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.ordenProduccion[] @return;
+        
+        public listarOrdenesProduccionFechaResponse() {
+        }
+        
+        public listarOrdenesProduccionFechaResponse(LP2TECNOQUIMFRONT.Service.ordenProduccion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarDetalleMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class listarDetalleMaquinariaRequest {
         
@@ -4888,91 +3461,158 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarLineaInsumoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarAlmacen", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarAlmacenRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo;
+        public LP2TECNOQUIMFRONT.Service.almacen almacen;
+        
+        public actualizarAlmacenRequest() {
+        }
+        
+        public actualizarAlmacenRequest(LP2TECNOQUIMFRONT.Service.almacen almacen) {
+            this.almacen = almacen;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarAlmacenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarAlmacenResponse {
+        
+        public actualizarAlmacenResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarInstructivo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarInstructivoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.instructivo instructivo;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idInstructivo;
+        public int idProducto;
         
-        public insertarLineaInsumoRequest() {
+        public insertarInstructivoRequest() {
         }
         
-        public insertarLineaInsumoRequest(LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo, int idInstructivo) {
-            this.lineaInsumo = lineaInsumo;
-            this.idInstructivo = idInstructivo;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTrabajadorResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarTrabajadorResponse {
-        
-        public insertarTrabajadorResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarLineaInsumoResponse {
-        
-        public insertarLineaInsumoResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public insertarInstructivoRequest(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
+            this.instructivo = instructivo;
+            this.idProducto = idProducto;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleAlmacenProducto", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarDetalleAlmacenProductoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarInstructivoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarInstructivoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto;
+        public int @return;
         
-        public actualizarDetalleAlmacenProductoRequest() {
+        public insertarInstructivoResponse() {
         }
         
-        public actualizarDetalleAlmacenProductoRequest(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
-            this.detalleAlmacenProducto = detalleAlmacenProducto;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarDetalleMaquinariaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria;
-        
-        public actualizarDetalleMaquinariaRequest() {
-        }
-        
-        public actualizarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
-            this.maquinaria = maquinaria;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public insertarInstructivoResponse(int @return) {
+            this.@return = @return;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleAlmacenProductoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarDetalleAlmacenProductoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarInstructivo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarInstructivoRequest {
         
-        public actualizarDetalleAlmacenProductoResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarDetalleMaquinariaResponse {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.instructivo instructivo;
         
-        public actualizarDetalleMaquinariaResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProducto;
+        
+        public actualizarInstructivoRequest() {
+        }
+        
+        public actualizarInstructivoRequest(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
+            this.instructivo = instructivo;
+            this.idProducto = idProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarInstructivoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarInstructivoResponse {
+        
+        public actualizarInstructivoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuario", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.usuario usuario;
+        
+        public actualizarUsuarioRequest() {
+        }
+        
+        public actualizarUsuarioRequest(LP2TECNOQUIMFRONT.Service.usuario usuario) {
+            this.usuario = usuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuarioResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarUsuarioResponse {
+        
+        public actualizarUsuarioResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProyeccionVenta", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarProyeccionVentaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta;
+        
+        public insertarProyeccionVentaRequest() {
+        }
+        
+        public insertarProyeccionVentaRequest(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
+            this.proyeccionVenta = proyeccionVenta;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProyeccionVentaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarProyeccionVentaResponse {
+        
+        public insertarProyeccionVentaResponse() {
         }
     }
     
@@ -5012,469 +3652,6 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarAlmacen", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarAlmacenRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.almacen almacen;
-        
-        public actualizarAlmacenRequest() {
-        }
-        
-        public actualizarAlmacenRequest(LP2TECNOQUIMFRONT.Service.almacen almacen) {
-            this.almacen = almacen;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaProyeccion", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarLineaProyeccionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProyeccion;
-        
-        public actualizarLineaProyeccionRequest() {
-        }
-        
-        public actualizarLineaProyeccionRequest(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
-            this.lineaProyeccion = lineaProyeccion;
-            this.idProyeccion = idProyeccion;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarAlmacenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarAlmacenResponse {
-        
-        public actualizarAlmacenResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaProyeccionResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarLineaProyeccionResponse {
-        
-        public actualizarLineaProyeccionResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarDetalleMaquinariaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria;
-        
-        public insertarDetalleMaquinariaRequest() {
-        }
-        
-        public insertarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
-            this.maquinaria = maquinaria;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarInstructivo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarInstructivoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.instructivo instructivo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProducto;
-        
-        public insertarInstructivoRequest() {
-        }
-        
-        public insertarInstructivoRequest(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
-            this.instructivo = instructivo;
-            this.idProducto = idProducto;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarDetalleMaquinariaResponse {
-        
-        public insertarDetalleMaquinariaResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarInstructivoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarInstructivoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarInstructivoResponse() {
-        }
-        
-        public insertarInstructivoResponse(int @return) {
-            this.@return = @return;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarDetalleMaquinariaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria;
-        
-        public actualizarDetalleMaquinariaRequest() {
-        }
-        
-        public actualizarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarMaquinariaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.maquinaria maquinaria;
-        
-        public actualizarMaquinariaRequest() {
-        }
-        
-        public actualizarMaquinariaRequest(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            this.maquinaria = maquinaria;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarDetalleMaquinariaResponse {
-        
-        public actualizarDetalleMaquinariaResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarMaquinariaResponse {
-        
-        public actualizarMaquinariaResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarInstructivo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarInstructivoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.instructivo instructivo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProducto;
-        
-        public insertarInstructivoRequest() {
-        }
-        
-        public insertarInstructivoRequest(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
-            this.instructivo = instructivo;
-            this.idProducto = idProducto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarInstructivoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarInstructivoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarInstructivoResponse() {
-        }
-        
-        public insertarInstructivoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarLineaInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idInstructivo;
-        
-        public listarLineaInsumoRequest() {
-        }
-        
-        public listarLineaInsumoRequest(int idInstructivo) {
-            this.idInstructivo = idInstructivo;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDetalleAlmacenProducto", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarDetalleAlmacenProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public listarDetalleAlmacenProductoRequest() {
-        }
-        
-        public listarDetalleAlmacenProductoRequest(int id) {
-            this.id = id;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarLineaInsumoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.lineaInsumo[] @return;
-        
-        public listarLineaInsumoResponse() {
-        }
-        
-        public listarLineaInsumoResponse(LP2TECNOQUIMFRONT.Service.lineaInsumo[] @return) {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDetalleAlmacenProductoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarDetalleAlmacenProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto[] @return;
-        
-        public listarDetalleAlmacenProductoResponse() {
-        }
-        
-        public listarDetalleAlmacenProductoResponse(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto[] @return) {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarLineaInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idInstructivo;
-        
-        public insertarLineaInsumoRequest() {
-        }
-        
-        public insertarLineaInsumoRequest(LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo, int idInstructivo) {
-            this.lineaInsumo = lineaInsumo;
-            this.idInstructivo = idInstructivo;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleAlmacenProducto", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarDetalleAlmacenProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto;
-        
-        public actualizarDetalleAlmacenProductoRequest() {
-        }
-        
-        public actualizarDetalleAlmacenProductoRequest(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
-            this.detalleAlmacenProducto = detalleAlmacenProducto;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarLineaInsumoResponse {
-        
-        public insertarLineaInsumoResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleAlmacenProductoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarDetalleAlmacenProductoResponse {
-        
-        public actualizarDetalleAlmacenProductoResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarMaquinariaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.maquinaria maquinaria;
-        
-        public insertarMaquinariaRequest() {
-        }
-        
-        public insertarMaquinariaRequest(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
-            this.maquinaria = maquinaria;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleAlmacenInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarDetalleAlmacenInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo;
-        
-        public actualizarDetalleAlmacenInsumoRequest() {
-        }
-        
-        public actualizarDetalleAlmacenInsumoRequest(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo) {
-            this.detalleAlmacenInsumo = detalleAlmacenInsumo;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarMaquinariaResponse {
-        
-        public insertarMaquinariaResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleAlmacenInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarDetalleAlmacenInsumoResponse {
-        
-        public actualizarDetalleAlmacenInsumoResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProyeccionVenta", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarProyeccionVentaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime periodo;
-        
-        public listarProyeccionVentaRequest() {
-        }
-        
-        public listarProyeccionVentaRequest(System.DateTime periodo) {
-            this.periodo = periodo;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInstructivos", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarInstructivosRequest {
-        
-        public listarInstructivosRequest() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProyeccionVentaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarProyeccionVentaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.proyeccionVenta[] @return;
-        
-        public listarProyeccionVentaResponse() {
-        }
-        
-        public listarProyeccionVentaResponse(LP2TECNOQUIMFRONT.Service.proyeccionVenta[] @return) {
-            this.@return = @return;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInstructivosResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarInstructivosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.instructivo[] @return;
-        
-        public listarInstructivosResponse() {
-        }
-        
-        public listarInstructivosResponse(LP2TECNOQUIMFRONT.Service.instructivo[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarMaquinariaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.maquinaria maquinaria;
-        
-        public insertarMaquinariaRequest() {
-        }
-        
-        public insertarMaquinariaRequest(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
-            this.maquinaria = maquinaria;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarMaquinariaResponse {
-        
-        public insertarMaquinariaResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class eliminarMaquinariaRequest {
         
@@ -5497,7 +3674,414 @@ namespace LP2TECNOQUIMFRONT.Service {
     public partial class eliminarMaquinariaResponse {
         
         public eliminarMaquinariaResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTrabajador", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarTrabajadorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.trabajador trabajador;
+        
+        public insertarTrabajadorRequest() {
+        }
+        
+        public insertarTrabajadorRequest(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
+            this.trabajador = trabajador;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTrabajadorResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarTrabajadorResponse {
+        
+        public insertarTrabajadorResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaProyeccion", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarLineaProyeccionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProyeccion;
+        
+        public listarLineaProyeccionRequest() {
+        }
+        
+        public listarLineaProyeccionRequest(int idProyeccion) {
+            this.idProyeccion = idProyeccion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaProyeccionResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarLineaProyeccionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.lineaProyeccion[] @return;
+        
+        public listarLineaProyeccionResponse() {
+        }
+        
+        public listarLineaProyeccionResponse(LP2TECNOQUIMFRONT.Service.lineaProyeccion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaOrden", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarLineaOrdenRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idOrden;
+        
+        public insertarLineaOrdenRequest() {
+        }
+        
+        public insertarLineaOrdenRequest(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
+            this.lineaOrden = lineaOrden;
+            this.idOrden = idOrden;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaOrdenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarLineaOrdenResponse {
+        
+        public insertarLineaOrdenResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPoliticaStock", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarPoliticaStockRequest {
+        
+        public listarPoliticaStockRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPoliticaStockResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarPoliticaStockResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.politicaStock[] @return;
+        
+        public listarPoliticaStockResponse() {
+        }
+        
+        public listarPoliticaStockResponse(LP2TECNOQUIMFRONT.Service.politicaStock[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaOrden", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarLineaOrdenRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idOrden;
+        
+        public actualizarLineaOrdenRequest() {
+        }
+        
+        public actualizarLineaOrdenRequest(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
+            this.lineaOrden = lineaOrden;
+            this.idOrden = idOrden;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaOrdenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarLineaOrdenResponse {
+        
+        public actualizarLineaOrdenResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTrabajadores", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarTrabajadoresRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombres;
+        
+        public listarTrabajadoresRequest() {
+        }
+        
+        public listarTrabajadoresRequest(string nombres) {
+            this.nombres = nombres;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTrabajadoresResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarTrabajadoresResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.trabajador[] @return;
+        
+        public listarTrabajadoresResponse() {
+        }
+        
+        public listarTrabajadoresResponse(LP2TECNOQUIMFRONT.Service.trabajador[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarLineaInsumoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idInstructivo;
+        
+        public actualizarLineaInsumoRequest() {
+        }
+        
+        public actualizarLineaInsumoRequest(LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo, int idInstructivo) {
+            this.lineaInsumo = lineaInsumo;
+            this.idInstructivo = idInstructivo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarLineaInsumoResponse {
+        
+        public actualizarLineaInsumoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarLineaInsumoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idInstructivo;
+        
+        public insertarLineaInsumoRequest() {
+        }
+        
+        public insertarLineaInsumoRequest(LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo, int idInstructivo) {
+            this.lineaInsumo = lineaInsumo;
+            this.idInstructivo = idInstructivo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarLineaInsumoResponse {
+        
+        public insertarLineaInsumoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPoliticaStock", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarPoliticaStockRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.politicaStock politicaStock;
+        
+        public actualizarPoliticaStockRequest() {
+        }
+        
+        public actualizarPoliticaStockRequest(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
+            this.politicaStock = politicaStock;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPoliticaStockResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarPoliticaStockResponse {
+        
+        public actualizarPoliticaStockResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProyeccionVenta", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarProyeccionVentaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime periodo;
+        
+        public listarProyeccionVentaRequest() {
+        }
+        
+        public listarProyeccionVentaRequest(System.DateTime periodo) {
+            this.periodo = periodo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProyeccionVentaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarProyeccionVentaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.proyeccionVenta[] @return;
+        
+        public listarProyeccionVentaResponse() {
+        }
+        
+        public listarProyeccionVentaResponse(LP2TECNOQUIMFRONT.Service.proyeccionVenta[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarTrabajador", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarTrabajadorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.trabajador trabajador;
+        
+        public actualizarTrabajadorRequest() {
+        }
+        
+        public actualizarTrabajadorRequest(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
+            this.trabajador = trabajador;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarTrabajadorResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarTrabajadorResponse {
+        
+        public actualizarTrabajadorResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTrabajador", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class eliminarTrabajadorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public eliminarTrabajadorRequest() {
+        }
+        
+        public eliminarTrabajadorRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTrabajadorResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class eliminarTrabajadorResponse {
+        
+        public eliminarTrabajadorResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInstructivos", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarInstructivosRequest {
+        
+        public listarInstructivosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarInstructivosResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class listarInstructivosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2TECNOQUIMFRONT.Service.instructivo[] @return;
+        
+        public listarInstructivosResponse() {
+        }
+        
+        public listarInstructivosResponse(LP2TECNOQUIMFRONT.Service.instructivo[] @return) {
+            this.@return = @return;
         }
     }
     
@@ -5537,420 +4121,118 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenesProduccionPlan", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarOrdenesProduccionPlanRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProducto", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarProductoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPMP;
+        public LP2TECNOQUIMFRONT.Service.producto producto;
         
-        public listarOrdenesProduccionPlanRequest() {
+        public actualizarProductoRequest() {
         }
         
-        public listarOrdenesProduccionPlanRequest(int idPMP) {
-            this.idPMP = idPMP;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarAlmacen", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarAlmacenRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.almacen almacen;
-        
-        public actualizarAlmacenRequest() {
-        }
-        
-        public actualizarAlmacenRequest(LP2TECNOQUIMFRONT.Service.almacen almacen) {
-            this.almacen = almacen;
+        public actualizarProductoRequest(LP2TECNOQUIMFRONT.Service.producto producto) {
+            this.producto = producto;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarAlmacenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarAlmacenResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProductoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarProductoResponse {
         
-        public actualizarAlmacenResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public actualizarProductoResponse() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenesProduccionPlanResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarOrdenesProduccionPlanResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.ordenProduccion[] @return;
-        
-        public listarOrdenesProduccionPlanResponse() {
-        }
-        
-        public listarOrdenesProduccionPlanResponse(LP2TECNOQUIMFRONT.Service.ordenProduccion[] @return) {
-            this.@return = @return;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleAlmacenInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarDetalleAlmacenInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo;
-        
-        public insertarDetalleAlmacenInsumoRequest() {
-        }
-        
-        public insertarDetalleAlmacenInsumoRequest(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo) {
-            this.detalleAlmacenInsumo = detalleAlmacenInsumo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleAlmacenInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarDetalleAlmacenInsumoResponse {
-        
-        public insertarDetalleAlmacenInsumoResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaOrden", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarLineaOrdenRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idOrden;
-        
-        public insertarLineaOrdenRequest() {
-        }
-        
-        public insertarLineaOrdenRequest(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
-            this.lineaOrden = lineaOrden;
-            this.idOrden = idOrden;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaOrdenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarLineaOrdenResponse {
-        
-        public insertarLineaOrdenResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class eliminarMaquinariaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public eliminarMaquinariaRequest() {
-        }
-        
-        public eliminarMaquinariaRequest(int id) {
-            this.id = id;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaProyeccion", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarLineaProyeccionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProyeccion;
-        
-        public listarLineaProyeccionRequest() {
-        }
-        
-        public listarLineaProyeccionRequest(int idProyeccion) {
-            this.idProyeccion = idProyeccion;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class eliminarMaquinariaResponse {
-        
-        public eliminarMaquinariaResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaProyeccionResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarLineaProyeccionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.lineaProyeccion[] @return;
-        
-        public listarLineaProyeccionResponse() {
-        }
-        
-        public listarLineaProyeccionResponse(LP2TECNOQUIMFRONT.Service.lineaProyeccion[] @return) {
-            this.@return = @return;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPoliticaStock", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarPoliticaStockRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPoliticaStock", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarPoliticaStockRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LP2TECNOQUIMFRONT.Service.politicaStock politicaStock;
         
-        public actualizarPoliticaStockRequest() {
+        public insertarPoliticaStockRequest() {
         }
         
-        public actualizarPoliticaStockRequest(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
+        public insertarPoliticaStockRequest(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
             this.politicaStock = politicaStock;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarOrdenProduccion", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarOrdenProduccionRequest {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPoliticaStockResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarPoliticaStockResponse {
+        
+        public insertarPoliticaStockResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarMaquinariaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.ordenProduccion ordenProduccion;
+        public LP2TECNOQUIMFRONT.Service.maquinaria maquinaria;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg1;
-        
-        public actualizarOrdenProduccionRequest() {
+        public insertarMaquinariaRequest() {
         }
         
-        public actualizarOrdenProduccionRequest(LP2TECNOQUIMFRONT.Service.ordenProduccion ordenProduccion, int arg1) {
-            this.ordenProduccion = ordenProduccion;
-            this.arg1 = arg1;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public insertarMaquinariaRequest(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+            this.maquinaria = maquinaria;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPoliticaStockResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarPoliticaStockResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class insertarMaquinariaResponse {
         
-        public actualizarPoliticaStockResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarOrdenProduccionResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarOrdenProduccionResponse {
-        
-        public actualizarOrdenProduccionResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public insertarMaquinariaResponse() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaOrden", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarLineaOrdenRequest {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenesProduccionPlan", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarOrdenesProduccionPlanRequest {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarMaquinariaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden;
+        public LP2TECNOQUIMFRONT.Service.maquinaria maquinaria;
         
-<<<<<<< HEAD
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idOrden;
-        
-        public insertarLineaOrdenRequest() {
+        public actualizarMaquinariaRequest() {
         }
         
-        public insertarLineaOrdenRequest(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
-            this.lineaOrden = lineaOrden;
-            this.idOrden = idOrden;
-=======
-        public listarOrdenesProduccionPlanRequest() {
-        }
-        
-        public listarOrdenesProduccionPlanRequest(int idPMP) {
-            this.idPMP = idPMP;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public actualizarMaquinariaRequest(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+            this.maquinaria = maquinaria;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaOrdenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarLineaOrdenResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class actualizarMaquinariaResponse {
         
-        public insertarLineaOrdenResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenesProduccionPlanResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarOrdenesProduccionPlanResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.ordenProduccion[] @return;
-        
-        public listarOrdenesProduccionPlanResponse() {
-        }
-        
-        public listarOrdenesProduccionPlanResponse(LP2TECNOQUIMFRONT.Service.ordenProduccion[] @return) {
-            this.@return = @return;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        public actualizarMaquinariaResponse() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaOrden", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarLineaOrdenRequest {
-<<<<<<< HEAD
-=======
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idOrden;
-        
-        public actualizarLineaOrdenRequest() {
-        }
-        
-        public actualizarLineaOrdenRequest(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
-            this.lineaOrden = lineaOrden;
-            this.idOrden = idOrden;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaOrdenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarLineaOrdenResponse {
-        
-        public actualizarLineaOrdenResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenesProduccionFecha", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarOrdenesProduccionFechaRequest {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idOrden;
-        
-        public actualizarLineaOrdenRequest() {
-        }
-        
-        public actualizarLineaOrdenRequest(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
-            this.lineaOrden = lineaOrden;
-            this.idOrden = idOrden;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaOrdenResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarLineaOrdenResponse {
-        
-        public actualizarLineaOrdenResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenesProduccionFecha", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarOrdenesProduccionFechaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha;
-        
-        public listarOrdenesProduccionFechaRequest() {
-        }
-        
-        public listarOrdenesProduccionFechaRequest(System.DateTime fecha) {
-            this.fecha = fecha;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarInstructivo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarInstructivoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.instructivo instructivo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProducto;
-        
-        public actualizarInstructivoRequest() {
-        }
-        
-        public actualizarInstructivoRequest(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
-            this.instructivo = instructivo;
-            this.idProducto = idProducto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarInstructivoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarInstructivoResponse {
-        
-        public actualizarInstructivoResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenesProduccionFechaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarOrdenesProduccionFechaResponse {
-=======
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class listarLineaInsumoRequest {
         
@@ -5987,658 +4269,6 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPoliticaStock", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarPoliticaStockRequest {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.ordenProduccion[] @return;
-        
-        public listarOrdenesProduccionFechaResponse() {
-        }
-        
-        public listarOrdenesProduccionFechaResponse(LP2TECNOQUIMFRONT.Service.ordenProduccion[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProyeccionVenta", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarProyeccionVentaRequest {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarLineaInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idInstructivo;
-        
-        public actualizarLineaInsumoRequest() {
-        }
-        
-        public actualizarLineaInsumoRequest(LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo, int idInstructivo) {
-            this.lineaInsumo = lineaInsumo;
-            this.idInstructivo = idInstructivo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarLineaInsumoResponse {
-        
-        public actualizarLineaInsumoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPoliticaStock", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarPoliticaStockRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.politicaStock politicaStock;
-        
-        public insertarPoliticaStockRequest() {
-        }
-        
-        public insertarPoliticaStockRequest(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
-            this.politicaStock = politicaStock;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPoliticaStockResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarPoliticaStockResponse {
-        
-        public insertarPoliticaStockResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleAlmacenProducto", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarDetalleAlmacenProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto;
-        
-        public insertarDetalleAlmacenProductoRequest() {
-        }
-        
-        public insertarDetalleAlmacenProductoRequest(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
-            this.detalleAlmacenProducto = detalleAlmacenProducto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleAlmacenProductoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarDetalleAlmacenProductoResponse {
-        
-        public insertarDetalleAlmacenProductoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProyeccionVenta", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarProyeccionVentaRequest {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta;
-        
-        public insertarProyeccionVentaRequest() {
-        }
-        
-        public insertarProyeccionVentaRequest(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
-            this.proyeccionVenta = proyeccionVenta;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProyeccionVentaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarProyeccionVentaResponse {
-        
-        public insertarProyeccionVentaResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPoliticaStock", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarPoliticaStockRequest {
-        
-        public listarPoliticaStockRequest() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTrabajador", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class eliminarTrabajadorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public eliminarTrabajadorRequest() {
-        }
-        
-        public eliminarTrabajadorRequest(int id) {
-            this.id = id;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPoliticaStockResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarPoliticaStockResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.politicaStock[] @return;
-        
-        public listarPoliticaStockResponse() {
-        }
-        
-        public listarPoliticaStockResponse(LP2TECNOQUIMFRONT.Service.politicaStock[] @return) {
-            this.@return = @return;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarTrabajadorResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class eliminarTrabajadorResponse {
-        
-        public eliminarTrabajadorResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDetalleAlmacenInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarDetalleAlmacenInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string dato;
-        
-        public listarDetalleAlmacenInsumoRequest() {
-        }
-        
-        public listarDetalleAlmacenInsumoRequest(string dato) {
-            this.dato = dato;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProyeccionVenta", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarProyeccionVentaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime periodo;
-        
-        public listarProyeccionVentaRequest() {
-        }
-        
-        public listarProyeccionVentaRequest(System.DateTime periodo) {
-            this.periodo = periodo;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDetalleAlmacenInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarDetalleAlmacenInsumoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo[] @return;
-        
-        public listarDetalleAlmacenInsumoResponse() {
-        }
-        
-        public listarDetalleAlmacenInsumoResponse(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo[] @return) {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProyeccionVentaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarProyeccionVentaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.proyeccionVenta[] @return;
-        
-        public listarProyeccionVentaResponse() {
-        }
-        
-        public listarProyeccionVentaResponse(LP2TECNOQUIMFRONT.Service.proyeccionVenta[] @return) {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleAlmacenProducto", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarDetalleAlmacenProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto;
-        
-        public insertarDetalleAlmacenProductoRequest() {
-        }
-        
-        public insertarDetalleAlmacenProductoRequest(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
-            this.detalleAlmacenProducto = detalleAlmacenProducto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleAlmacenProductoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarDetalleAlmacenProductoResponse {
-        
-        public insertarDetalleAlmacenProductoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarOrdenProduccion", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarOrdenProduccionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.ordenProduccion ordenProduccion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg1;
-        
-        public actualizarOrdenProduccionRequest() {
-        }
-        
-        public actualizarOrdenProduccionRequest(LP2TECNOQUIMFRONT.Service.ordenProduccion ordenProduccion, int arg1) {
-            this.ordenProduccion = ordenProduccion;
-            this.arg1 = arg1;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuario", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.usuario usuario;
-        
-        public actualizarUsuarioRequest() {
-        }
-        
-        public actualizarUsuarioRequest(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            this.usuario = usuario;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarOrdenProduccionResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarOrdenProduccionResponse {
-        
-        public actualizarOrdenProduccionResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuarioResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarUsuarioResponse {
-        
-        public actualizarUsuarioResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarTrabajador", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarTrabajadorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.trabajador trabajador;
-        
-        public actualizarTrabajadorRequest() {
-        }
-        
-        public actualizarTrabajadorRequest(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
-            this.trabajador = trabajador;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarTrabajadorResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarTrabajadorResponse {
-        
-        public actualizarTrabajadorResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTrabajadores", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarTrabajadoresRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombres;
-        
-        public listarTrabajadoresRequest() {
-        }
-        
-        public listarTrabajadoresRequest(string nombres) {
-            this.nombres = nombres;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTrabajador", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarTrabajadorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.trabajador trabajador;
-        
-        public insertarTrabajadorRequest() {
-        }
-        
-        public insertarTrabajadorRequest(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
-            this.trabajador = trabajador;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTrabajadoresResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarTrabajadoresResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.trabajador[] @return;
-        
-        public listarTrabajadoresResponse() {
-        }
-        
-        public listarTrabajadoresResponse(LP2TECNOQUIMFRONT.Service.trabajador[] @return) {
-            this.@return = @return;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTrabajadorResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarTrabajadorResponse {
-        
-        public insertarTrabajadorResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleAlmacenInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarDetalleAlmacenInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idInsumo;
-        
-        public insertarDetalleAlmacenInsumoRequest() {
-        }
-        
-        public insertarDetalleAlmacenInsumoRequest(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo, int idInsumo) {
-            this.detalleAlmacenInsumo = detalleAlmacenInsumo;
-            this.idInsumo = idInsumo;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPoliticaStock", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarPoliticaStockRequest {
-        
-        public listarPoliticaStockRequest() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDetalleAlmacenInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarDetalleAlmacenInsumoResponse {
-        
-        public insertarDetalleAlmacenInsumoResponse() {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPoliticaStockResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarPoliticaStockResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.politicaStock[] @return;
-        
-        public listarPoliticaStockResponse() {
-        }
-        
-        public listarPoliticaStockResponse(LP2TECNOQUIMFRONT.Service.politicaStock[] @return) {
-            this.@return = @return;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProyeccionVenta", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarProyeccionVentaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta;
-        
-        public insertarProyeccionVentaRequest() {
-        }
-        
-        public insertarProyeccionVentaRequest(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
-            this.proyeccionVenta = proyeccionVenta;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProyeccionVentaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class insertarProyeccionVentaResponse {
-        
-        public insertarProyeccionVentaResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleAlmacenInsumo", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarDetalleAlmacenInsumoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo;
-        
-        public actualizarDetalleAlmacenInsumoRequest() {
-        }
-        
-        public actualizarDetalleAlmacenInsumoRequest(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo) {
-            this.detalleAlmacenInsumo = detalleAlmacenInsumo;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProducto", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.producto producto;
-        
-        public actualizarProductoRequest() {
-        }
-        
-        public actualizarProductoRequest(LP2TECNOQUIMFRONT.Service.producto producto) {
-            this.producto = producto;
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDetalleAlmacenInsumoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarDetalleAlmacenInsumoResponse {
-        
-        public actualizarDetalleAlmacenInsumoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDetalleMaquinaria", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarDetalleMaquinariaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPMP;
-        
-        public listarDetalleMaquinariaRequest() {
-        }
-        
-        public listarDetalleMaquinariaRequest(int idPMP) {
-            this.idPMP = idPMP;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDetalleMaquinariaResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarDetalleMaquinariaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.detalleMaquinaria[] @return;
-        
-        public listarDetalleMaquinariaResponse() {
-        }
-        
-        public listarDetalleMaquinariaResponse(LP2TECNOQUIMFRONT.Service.detalleMaquinaria[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaProyeccion", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarLineaProyeccionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProyeccion;
-        
-        public listarLineaProyeccionRequest() {
-        }
-        
-        public listarLineaProyeccionRequest(int idProyeccion) {
-            this.idProyeccion = idProyeccion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarLineaProyeccionResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class listarLineaProyeccionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.lineaProyeccion[] @return;
-        
-        public listarLineaProyeccionResponse() {
-        }
-        
-        public listarLineaProyeccionResponse(LP2TECNOQUIMFRONT.Service.lineaProyeccion[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuario", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2TECNOQUIMFRONT.Service.usuario usuario;
-        
-        public actualizarUsuarioRequest() {
-        }
-        
-        public actualizarUsuarioRequest(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            this.usuario = usuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuarioResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarUsuarioResponse {
-        
-        public actualizarUsuarioResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="hello", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class helloRequest {
         
@@ -6669,12 +4299,6 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         public helloResponse(string @return) {
             this.@return = @return;
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarProductoResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
-    public partial class actualizarProductoResponse {
-        
-        public actualizarProductoResponse() {
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
         }
     }
     
@@ -6706,115 +4330,25 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        LP2TECNOQUIMFRONT.Service.insertarInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarInsumo(LP2TECNOQUIMFRONT.Service.insertarInsumoRequest request) {
-            return base.Channel.insertarInsumo(request);
+        LP2TECNOQUIMFRONT.Service.enviarMensajeResponse LP2TECNOQUIMFRONT.Service.Servicio.enviarMensaje(LP2TECNOQUIMFRONT.Service.enviarMensajeRequest request) {
+            return base.Channel.enviarMensaje(request);
         }
         
-        public int insertarInsumo(LP2TECNOQUIMFRONT.Service.insumo insumo) {
-            LP2TECNOQUIMFRONT.Service.insertarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarInsumoRequest();
-            inValue.insumo = insumo;
-            LP2TECNOQUIMFRONT.Service.insertarInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarInsumo(inValue);
-=======
-        LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.eliminarInsumo(LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest request) {
-            return base.Channel.eliminarInsumo(request);
-        }
-        
-        public void eliminarInsumo(int id) {
-            LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest();
-            inValue.id = id;
-            LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarInsumo(inValue);
+        public void enviarMensaje(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
+            LP2TECNOQUIMFRONT.Service.enviarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.enviarMensajeRequest();
+            inValue.mensaje = mensaje;
+            LP2TECNOQUIMFRONT.Service.enviarMensajeResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).enviarMensaje(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.eliminarInsumoAsync(LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest request) {
-            return base.Channel.eliminarInsumoAsync(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.enviarMensajeResponse> LP2TECNOQUIMFRONT.Service.Servicio.enviarMensajeAsync(LP2TECNOQUIMFRONT.Service.enviarMensajeRequest request) {
+            return base.Channel.enviarMensajeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse> eliminarInsumoAsync(int id) {
-            LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest();
-            inValue.id = id;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarInsumoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.listarInsumo(LP2TECNOQUIMFRONT.Service.listarInsumoRequest request) {
-            return base.Channel.listarInsumo(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.insumo[] listarInsumo(string dato) {
-            LP2TECNOQUIMFRONT.Service.listarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarInsumoRequest();
-            inValue.dato = dato;
-            LP2TECNOQUIMFRONT.Service.listarInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarInsumo(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarInsumoAsync(LP2TECNOQUIMFRONT.Service.insertarInsumoRequest request) {
-            return base.Channel.insertarInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInsumoResponse> insertarInsumoAsync(LP2TECNOQUIMFRONT.Service.insumo insumo) {
-            LP2TECNOQUIMFRONT.Service.insertarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarInsumoRequest();
-            inValue.insumo = insumo;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarInsumoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.eliminarInsumo(LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest request) {
-            return base.Channel.eliminarInsumo(request);
-        }
-        
-        public void eliminarInsumo(int id) {
-            LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest();
-            inValue.id = id;
-            LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarInsumo(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.eliminarInsumoAsync(LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest request) {
-            return base.Channel.eliminarInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse> eliminarInsumoAsync(int id) {
-            LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest();
-            inValue.id = id;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarInsumoAsync(inValue);
-=======
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarInsumoAsync(LP2TECNOQUIMFRONT.Service.listarInsumoRequest request) {
-            return base.Channel.listarInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarInsumoResponse> listarInsumoAsync(string dato) {
-            LP2TECNOQUIMFRONT.Service.listarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarInsumoRequest();
-            inValue.dato = dato;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarInsumoAsync(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.listarMaquinaria(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request) {
-            return base.Channel.listarMaquinaria(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.maquinaria[] listarMaquinaria(string dato) {
-            LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest();
-            inValue.dato = dato;
-            LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarMaquinaria(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request) {
-            return base.Channel.listarMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse> listarMaquinariaAsync(string dato) {
-            LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest();
-            inValue.dato = dato;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarMaquinariaAsync(inValue);
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.enviarMensajeResponse> enviarMensajeAsync(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
+            LP2TECNOQUIMFRONT.Service.enviarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.enviarMensajeRequest();
+            inValue.mensaje = mensaje;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).enviarMensajeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6841,7 +4375,51 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
+        LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarAlmacen(LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest request) {
+            return base.Channel.insertarAlmacen(request);
+        }
+        
+        public void insertarAlmacen(LP2TECNOQUIMFRONT.Service.almacen almacen) {
+            LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest();
+            inValue.almacen = almacen;
+            LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarAlmacen(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarAlmacenAsync(LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest request) {
+            return base.Channel.insertarAlmacenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse> insertarAlmacenAsync(LP2TECNOQUIMFRONT.Service.almacen almacen) {
+            LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest();
+            inValue.almacen = almacen;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarAlmacenAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarInsumo(LP2TECNOQUIMFRONT.Service.insertarInsumoRequest request) {
+            return base.Channel.insertarInsumo(request);
+        }
+        
+        public int insertarInsumo(LP2TECNOQUIMFRONT.Service.insumo insumo) {
+            LP2TECNOQUIMFRONT.Service.insertarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarInsumoRequest();
+            inValue.insumo = insumo;
+            LP2TECNOQUIMFRONT.Service.insertarInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarInsumo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarInsumoAsync(LP2TECNOQUIMFRONT.Service.insertarInsumoRequest request) {
+            return base.Channel.insertarInsumoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInsumoResponse> insertarInsumoAsync(LP2TECNOQUIMFRONT.Service.insumo insumo) {
+            LP2TECNOQUIMFRONT.Service.insertarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarInsumoRequest();
+            inValue.insumo = insumo;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarInsumoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         LP2TECNOQUIMFRONT.Service.actualizarInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarInsumo(LP2TECNOQUIMFRONT.Service.actualizarInsumoRequest request) {
             return base.Channel.actualizarInsumo(request);
         }
@@ -6861,29 +4439,6 @@ namespace LP2TECNOQUIMFRONT.Service {
             LP2TECNOQUIMFRONT.Service.actualizarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarInsumoRequest();
             inValue.insumo = insumo;
             return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarInsumoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarAlmacenResponse LP2TECNOQUIMFRONT.Service.Servicio.listarAlmacen(LP2TECNOQUIMFRONT.Service.listarAlmacenRequest request) {
-            return base.Channel.listarAlmacen(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.almacen[] listarAlmacen(string tipo) {
-            LP2TECNOQUIMFRONT.Service.listarAlmacenRequest inValue = new LP2TECNOQUIMFRONT.Service.listarAlmacenRequest();
-            inValue.tipo = tipo;
-            LP2TECNOQUIMFRONT.Service.listarAlmacenResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarAlmacen(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarAlmacenResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarAlmacenAsync(LP2TECNOQUIMFRONT.Service.listarAlmacenRequest request) {
-            return base.Channel.listarAlmacenAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarAlmacenResponse> listarAlmacenAsync(string tipo) {
-            LP2TECNOQUIMFRONT.Service.listarAlmacenRequest inValue = new LP2TECNOQUIMFRONT.Service.listarAlmacenRequest();
-            inValue.tipo = tipo;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarAlmacenAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6910,118 +4465,25 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarAlmacen(LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest request) {
-            return base.Channel.insertarAlmacen(request);
-=======
-        LP2TECNOQUIMFRONT.Service.insertarMensajeResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarMensaje(LP2TECNOQUIMFRONT.Service.insertarMensajeRequest request) {
-            return base.Channel.insertarMensaje(request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+        LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.eliminarInsumo(LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest request) {
+            return base.Channel.eliminarInsumo(request);
         }
         
-        public void insertarMensaje(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
-            LP2TECNOQUIMFRONT.Service.insertarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMensajeRequest();
-            inValue.mensaje = mensaje;
-            LP2TECNOQUIMFRONT.Service.insertarMensajeResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMensaje(inValue);
+        public void eliminarInsumo(int id) {
+            LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest();
+            inValue.id = id;
+            LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarInsumo(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMensajeResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarMensajeAsync(LP2TECNOQUIMFRONT.Service.insertarMensajeRequest request) {
-            return base.Channel.insertarMensajeAsync(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.eliminarInsumoAsync(LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest request) {
+            return base.Channel.eliminarInsumoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMensajeResponse> insertarMensajeAsync(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
-            LP2TECNOQUIMFRONT.Service.insertarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMensajeRequest();
-            inValue.mensaje = mensaje;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMensajeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        LP2TECNOQUIMFRONT.Service.listarUsuariosResponse LP2TECNOQUIMFRONT.Service.Servicio.listarUsuarios(LP2TECNOQUIMFRONT.Service.listarUsuariosRequest request) {
-            return base.Channel.listarUsuarios(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.usuario[] listarUsuarios(string username) {
-            LP2TECNOQUIMFRONT.Service.listarUsuariosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarUsuariosRequest();
-            inValue.username = username;
-            LP2TECNOQUIMFRONT.Service.listarUsuariosResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarUsuarios(inValue);
-=======
-        LP2TECNOQUIMFRONT.Service.listarMensajeResponse LP2TECNOQUIMFRONT.Service.Servicio.listarMensaje(LP2TECNOQUIMFRONT.Service.listarMensajeRequest request) {
-            return base.Channel.listarMensaje(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.mensaje[] listarMensaje(int idReceptor) {
-            LP2TECNOQUIMFRONT.Service.listarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.listarMensajeRequest();
-            inValue.idReceptor = idReceptor;
-            LP2TECNOQUIMFRONT.Service.listarMensajeResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarMensaje(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarUsuariosResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarUsuariosAsync(LP2TECNOQUIMFRONT.Service.listarUsuariosRequest request) {
-            return base.Channel.listarUsuariosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarUsuariosResponse> listarUsuariosAsync(string username) {
-            LP2TECNOQUIMFRONT.Service.listarUsuariosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarUsuariosRequest();
-            inValue.username = username;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarUsuariosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarRolResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarRol(LP2TECNOQUIMFRONT.Service.actualizarRolRequest request) {
-            return base.Channel.actualizarRol(request);
-        }
-        
-        public void actualizarRol(LP2TECNOQUIMFRONT.Service.rol rol) {
-            LP2TECNOQUIMFRONT.Service.actualizarRolRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarRolRequest();
-            inValue.rol = rol;
-            LP2TECNOQUIMFRONT.Service.actualizarRolResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarRol(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarRolResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarRolAsync(LP2TECNOQUIMFRONT.Service.actualizarRolRequest request) {
-            return base.Channel.actualizarRolAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarRolResponse> actualizarRolAsync(LP2TECNOQUIMFRONT.Service.rol rol) {
-            LP2TECNOQUIMFRONT.Service.actualizarRolRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarRolRequest();
-            inValue.rol = rol;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarRolAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarPMPResponse LP2TECNOQUIMFRONT.Service.Servicio.listarPMP(LP2TECNOQUIMFRONT.Service.listarPMPRequest request) {
-            return base.Channel.listarPMP(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.planMaestroProduccion[] listarPMP(System.DateTime periodo) {
-            LP2TECNOQUIMFRONT.Service.listarPMPRequest inValue = new LP2TECNOQUIMFRONT.Service.listarPMPRequest();
-            inValue.periodo = periodo;
-            LP2TECNOQUIMFRONT.Service.listarPMPResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarPMP(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarPMPResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarPMPAsync(LP2TECNOQUIMFRONT.Service.listarPMPRequest request) {
-            return base.Channel.listarPMPAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarPMPResponse> listarPMPAsync(System.DateTime periodo) {
-            LP2TECNOQUIMFRONT.Service.listarPMPRequest inValue = new LP2TECNOQUIMFRONT.Service.listarPMPRequest();
-            inValue.periodo = periodo;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarPMPAsync(inValue);
-=======
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMensajeResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarMensajeAsync(LP2TECNOQUIMFRONT.Service.listarMensajeRequest request) {
-            return base.Channel.listarMensajeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMensajeResponse> listarMensajeAsync(int idReceptor) {
-            LP2TECNOQUIMFRONT.Service.listarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.listarMensajeRequest();
-            inValue.idReceptor = idReceptor;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarMensajeAsync(inValue);
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarInsumoResponse> eliminarInsumoAsync(int id) {
+            LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarInsumoRequest();
+            inValue.id = id;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarInsumoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7045,290 +4507,6 @@ namespace LP2TECNOQUIMFRONT.Service {
             LP2TECNOQUIMFRONT.Service.listarAlmacenRequest inValue = new LP2TECNOQUIMFRONT.Service.listarAlmacenRequest();
             inValue.tipo = tipo;
             return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarAlmacenAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.enviarMensajeResponse LP2TECNOQUIMFRONT.Service.Servicio.enviarMensaje(LP2TECNOQUIMFRONT.Service.enviarMensajeRequest request) {
-            return base.Channel.enviarMensaje(request);
-        }
-        
-        public void enviarMensaje(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
-            LP2TECNOQUIMFRONT.Service.enviarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.enviarMensajeRequest();
-            inValue.mensaje = mensaje;
-            LP2TECNOQUIMFRONT.Service.enviarMensajeResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).enviarMensaje(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.enviarMensajeResponse> LP2TECNOQUIMFRONT.Service.Servicio.enviarMensajeAsync(LP2TECNOQUIMFRONT.Service.enviarMensajeRequest request) {
-            return base.Channel.enviarMensajeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.enviarMensajeResponse> enviarMensajeAsync(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
-            LP2TECNOQUIMFRONT.Service.enviarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.enviarMensajeRequest();
-            inValue.mensaje = mensaje;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).enviarMensajeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarAlmacen(LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest request) {
-            return base.Channel.insertarAlmacen(request);
-        }
-        
-        public void insertarAlmacen(LP2TECNOQUIMFRONT.Service.almacen almacen) {
-            LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest();
-            inValue.almacen = almacen;
-            LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarAlmacen(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarAlmacenAsync(LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest request) {
-            return base.Channel.insertarAlmacenAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarAlmacenResponse> insertarAlmacenAsync(LP2TECNOQUIMFRONT.Service.almacen almacen) {
-            LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarAlmacenRequest();
-            inValue.almacen = almacen;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarAlmacenAsync(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarRolesResponse LP2TECNOQUIMFRONT.Service.Servicio.listarRoles(LP2TECNOQUIMFRONT.Service.listarRolesRequest request) {
-            return base.Channel.listarRoles(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.rol[] listarRoles(string descripcion) {
-            LP2TECNOQUIMFRONT.Service.listarRolesRequest inValue = new LP2TECNOQUIMFRONT.Service.listarRolesRequest();
-            inValue.descripcion = descripcion;
-            LP2TECNOQUIMFRONT.Service.listarRolesResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarRoles(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarRolesResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarRolesAsync(LP2TECNOQUIMFRONT.Service.listarRolesRequest request) {
-            return base.Channel.listarRolesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarRolesResponse> listarRolesAsync(string descripcion) {
-            LP2TECNOQUIMFRONT.Service.listarRolesRequest inValue = new LP2TECNOQUIMFRONT.Service.listarRolesRequest();
-            inValue.descripcion = descripcion;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarRolesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarUsuario(LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest request) {
-            return base.Channel.insertarUsuario(request);
-        }
-        
-        public void insertarUsuario(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest();
-            inValue.usuario = usuario;
-            LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarUsuario(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarUsuarioAsync(LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest request) {
-            return base.Channel.insertarUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse> insertarUsuarioAsync(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest();
-            inValue.usuario = usuario;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarUsuarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarInsumo(LP2TECNOQUIMFRONT.Service.actualizarInsumoRequest request) {
-            return base.Channel.actualizarInsumo(request);
-        }
-        
-        public void actualizarInsumo(LP2TECNOQUIMFRONT.Service.insumo insumo) {
-            LP2TECNOQUIMFRONT.Service.actualizarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarInsumoRequest();
-            inValue.insumo = insumo;
-            LP2TECNOQUIMFRONT.Service.actualizarInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarInsumo(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarInsumoAsync(LP2TECNOQUIMFRONT.Service.actualizarInsumoRequest request) {
-            return base.Channel.actualizarInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarInsumoResponse> actualizarInsumoAsync(LP2TECNOQUIMFRONT.Service.insumo insumo) {
-            LP2TECNOQUIMFRONT.Service.actualizarInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarInsumoRequest();
-            inValue.insumo = insumo;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarInsumoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarProductosResponse LP2TECNOQUIMFRONT.Service.Servicio.listarProductos(LP2TECNOQUIMFRONT.Service.listarProductosRequest request) {
-            return base.Channel.listarProductos(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.producto[] listarProductos(string dato) {
-            LP2TECNOQUIMFRONT.Service.listarProductosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarProductosRequest();
-            inValue.dato = dato;
-            LP2TECNOQUIMFRONT.Service.listarProductosResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarProductos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProductosResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarProductosAsync(LP2TECNOQUIMFRONT.Service.listarProductosRequest request) {
-            return base.Channel.listarProductosAsync(request);
-<<<<<<< HEAD
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProductosResponse> listarProductosAsync(string dato) {
-            LP2TECNOQUIMFRONT.Service.listarProductosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarProductosRequest();
-            inValue.dato = dato;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarProductosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.listarMaquinaria(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request) {
-            return base.Channel.listarMaquinaria(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.maquinaria[] listarMaquinaria(string dato) {
-            LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest();
-            inValue.dato = dato;
-            LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarMaquinaria(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request) {
-            return base.Channel.listarMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse> listarMaquinariaAsync(string dato) {
-            LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest();
-            inValue.dato = dato;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarMaquinariaAsync(inValue);
-=======
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProductosResponse> listarProductosAsync(string dato) {
-            LP2TECNOQUIMFRONT.Service.listarProductosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarProductosRequest();
-            inValue.dato = dato;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarProductosAsync(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarPMPResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarPMP(LP2TECNOQUIMFRONT.Service.insertarPMPRequest request) {
-            return base.Channel.insertarPMP(request);
-        }
-        
-        public void insertarPMP(LP2TECNOQUIMFRONT.Service.planMaestroProduccion politicaStock) {
-            LP2TECNOQUIMFRONT.Service.insertarPMPRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarPMPRequest();
-            inValue.politicaStock = politicaStock;
-            LP2TECNOQUIMFRONT.Service.insertarPMPResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarPMP(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarPMPResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarPMPAsync(LP2TECNOQUIMFRONT.Service.insertarPMPRequest request) {
-            return base.Channel.insertarPMPAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarPMPResponse> insertarPMPAsync(LP2TECNOQUIMFRONT.Service.planMaestroProduccion politicaStock) {
-            LP2TECNOQUIMFRONT.Service.insertarPMPRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarPMPRequest();
-            inValue.politicaStock = politicaStock;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarPMPAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        LP2TECNOQUIMFRONT.Service.insertarProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarProducto(LP2TECNOQUIMFRONT.Service.insertarProductoRequest request) {
-            return base.Channel.insertarProducto(request);
-        }
-        
-        public int insertarProducto(LP2TECNOQUIMFRONT.Service.producto producto) {
-            LP2TECNOQUIMFRONT.Service.insertarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarProductoRequest();
-            inValue.producto = producto;
-            LP2TECNOQUIMFRONT.Service.insertarProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarProductoAsync(LP2TECNOQUIMFRONT.Service.insertarProductoRequest request) {
-            return base.Channel.insertarProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProductoResponse> insertarProductoAsync(LP2TECNOQUIMFRONT.Service.producto producto) {
-            LP2TECNOQUIMFRONT.Service.insertarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarProductoRequest();
-            inValue.producto = producto;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarMensajeResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarMensaje(LP2TECNOQUIMFRONT.Service.insertarMensajeRequest request) {
-            return base.Channel.insertarMensaje(request);
-=======
-        LP2TECNOQUIMFRONT.Service.insertarRolResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarRol(LP2TECNOQUIMFRONT.Service.insertarRolRequest request) {
-            return base.Channel.insertarRol(request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-        
-        public void insertarRol(LP2TECNOQUIMFRONT.Service.rol rol) {
-            LP2TECNOQUIMFRONT.Service.insertarRolRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarRolRequest();
-            inValue.rol = rol;
-            LP2TECNOQUIMFRONT.Service.insertarRolResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarRol(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMensajeResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarMensajeAsync(LP2TECNOQUIMFRONT.Service.insertarMensajeRequest request) {
-            return base.Channel.insertarMensajeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMensajeResponse> insertarMensajeAsync(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
-            LP2TECNOQUIMFRONT.Service.insertarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMensajeRequest();
-            inValue.mensaje = mensaje;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMensajeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarPMPResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarPMP(LP2TECNOQUIMFRONT.Service.actualizarPMPRequest request) {
-            return base.Channel.actualizarPMP(request);
-        }
-        
-        public void actualizarPMP(LP2TECNOQUIMFRONT.Service.planMaestroProduccion politicaStock) {
-            LP2TECNOQUIMFRONT.Service.actualizarPMPRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarPMPRequest();
-            inValue.politicaStock = politicaStock;
-            LP2TECNOQUIMFRONT.Service.actualizarPMPResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarPMP(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPMPResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarPMPAsync(LP2TECNOQUIMFRONT.Service.actualizarPMPRequest request) {
-            return base.Channel.actualizarPMPAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPMPResponse> actualizarPMPAsync(LP2TECNOQUIMFRONT.Service.planMaestroProduccion politicaStock) {
-            LP2TECNOQUIMFRONT.Service.actualizarPMPRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarPMPRequest();
-            inValue.politicaStock = politicaStock;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarPMPAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.eliminarProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.eliminarProducto(LP2TECNOQUIMFRONT.Service.eliminarProductoRequest request) {
-            return base.Channel.eliminarProducto(request);
-        }
-        
-        public void eliminarProducto(int id) {
-            LP2TECNOQUIMFRONT.Service.eliminarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarProductoRequest();
-            inValue.id = id;
-            LP2TECNOQUIMFRONT.Service.eliminarProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarProducto(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.eliminarProductoAsync(LP2TECNOQUIMFRONT.Service.eliminarProductoRequest request) {
-            return base.Channel.eliminarProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarProductoResponse> eliminarProductoAsync(int id) {
-            LP2TECNOQUIMFRONT.Service.eliminarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarProductoRequest();
-            inValue.id = id;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarProductoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7377,102 +4555,206 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarMaquinaria(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request) {
-            return base.Channel.actualizarMaquinaria(request);
+        LP2TECNOQUIMFRONT.Service.listarProductosResponse LP2TECNOQUIMFRONT.Service.Servicio.listarProductos(LP2TECNOQUIMFRONT.Service.listarProductosRequest request) {
+            return base.Channel.listarProductos(request);
         }
         
-        public void actualizarMaquinaria(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarMaquinaria(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request) {
-            return base.Channel.actualizarMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse> actualizarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarMaquinariaAsync(inValue);
+        public LP2TECNOQUIMFRONT.Service.producto[] listarProductos(string dato) {
+            LP2TECNOQUIMFRONT.Service.listarProductosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarProductosRequest();
+            inValue.dato = dato;
+            LP2TECNOQUIMFRONT.Service.listarProductosResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarProductos(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarPoliticaStockResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarPoliticaStock(LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest request) {
-            return base.Channel.insertarPoliticaStock(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProductosResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarProductosAsync(LP2TECNOQUIMFRONT.Service.listarProductosRequest request) {
+            return base.Channel.listarProductosAsync(request);
         }
         
-        public void insertarPoliticaStock(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
-            LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest();
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProductosResponse> listarProductosAsync(string dato) {
+            LP2TECNOQUIMFRONT.Service.listarProductosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarProductosRequest();
+            inValue.dato = dato;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarProductosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarProducto(LP2TECNOQUIMFRONT.Service.insertarProductoRequest request) {
+            return base.Channel.insertarProducto(request);
+        }
+        
+        public int insertarProducto(LP2TECNOQUIMFRONT.Service.producto producto) {
+            LP2TECNOQUIMFRONT.Service.insertarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarProductoRequest();
+            inValue.producto = producto;
+            LP2TECNOQUIMFRONT.Service.insertarProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarProductoAsync(LP2TECNOQUIMFRONT.Service.insertarProductoRequest request) {
+            return base.Channel.insertarProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProductoResponse> insertarProductoAsync(LP2TECNOQUIMFRONT.Service.producto producto) {
+            LP2TECNOQUIMFRONT.Service.insertarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarProductoRequest();
+            inValue.producto = producto;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarPMPResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarPMP(LP2TECNOQUIMFRONT.Service.insertarPMPRequest request) {
+            return base.Channel.insertarPMP(request);
+        }
+        
+        public void insertarPMP(LP2TECNOQUIMFRONT.Service.planMaestroProduccion politicaStock) {
+            LP2TECNOQUIMFRONT.Service.insertarPMPRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarPMPRequest();
             inValue.politicaStock = politicaStock;
-            LP2TECNOQUIMFRONT.Service.insertarPoliticaStockResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarPoliticaStock(inValue);
+            LP2TECNOQUIMFRONT.Service.insertarPMPResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarPMP(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarPoliticaStockResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest request) {
-            return base.Channel.insertarPoliticaStockAsync(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarPMPResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarPMPAsync(LP2TECNOQUIMFRONT.Service.insertarPMPRequest request) {
+            return base.Channel.insertarPMPAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarPoliticaStockResponse> insertarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
-            LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest();
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarPMPResponse> insertarPMPAsync(LP2TECNOQUIMFRONT.Service.planMaestroProduccion politicaStock) {
+            LP2TECNOQUIMFRONT.Service.insertarPMPRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarPMPRequest();
             inValue.politicaStock = politicaStock;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarPoliticaStockAsync(inValue);
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarPMPAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarInstructivo(LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest request) {
-            return base.Channel.actualizarInstructivo(request);
+        LP2TECNOQUIMFRONT.Service.actualizarPMPResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarPMP(LP2TECNOQUIMFRONT.Service.actualizarPMPRequest request) {
+            return base.Channel.actualizarPMP(request);
         }
         
-        public void actualizarInstructivo(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
-            LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest();
-            inValue.instructivo = instructivo;
-            inValue.idProducto = idProducto;
-            LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarInstructivo(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarInstructivoAsync(LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest request) {
-            return base.Channel.actualizarInstructivoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse> actualizarInstructivoAsync(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
-            LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest();
-            inValue.instructivo = instructivo;
-            inValue.idProducto = idProducto;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarInstructivoAsync(inValue);
-=======
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarRolResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarRolAsync(LP2TECNOQUIMFRONT.Service.insertarRolRequest request) {
-            return base.Channel.insertarRolAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarRolResponse> insertarRolAsync(LP2TECNOQUIMFRONT.Service.rol rol) {
-            LP2TECNOQUIMFRONT.Service.insertarRolRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarRolRequest();
-            inValue.rol = rol;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarRolAsync(inValue);
+        public void actualizarPMP(LP2TECNOQUIMFRONT.Service.planMaestroProduccion PlanMaestroProduccion) {
+            LP2TECNOQUIMFRONT.Service.actualizarPMPRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarPMPRequest();
+            inValue.PlanMaestroProduccion = PlanMaestroProduccion;
+            LP2TECNOQUIMFRONT.Service.actualizarPMPResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarPMP(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.eliminarProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.eliminarProducto(LP2TECNOQUIMFRONT.Service.eliminarProductoRequest request) {
-            return base.Channel.eliminarProducto(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPMPResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarPMPAsync(LP2TECNOQUIMFRONT.Service.actualizarPMPRequest request) {
+            return base.Channel.actualizarPMPAsync(request);
         }
         
-        public void eliminarProducto(int id) {
-            LP2TECNOQUIMFRONT.Service.eliminarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarProductoRequest();
-            inValue.id = id;
-            LP2TECNOQUIMFRONT.Service.eliminarProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarProducto(inValue);
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPMPResponse> actualizarPMPAsync(LP2TECNOQUIMFRONT.Service.planMaestroProduccion PlanMaestroProduccion) {
+            LP2TECNOQUIMFRONT.Service.actualizarPMPRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarPMPRequest();
+            inValue.PlanMaestroProduccion = PlanMaestroProduccion;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarPMPAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.eliminarProductoAsync(LP2TECNOQUIMFRONT.Service.eliminarProductoRequest request) {
-            return base.Channel.eliminarProductoAsync(request);
+        LP2TECNOQUIMFRONT.Service.listarRolesResponse LP2TECNOQUIMFRONT.Service.Servicio.listarRoles(LP2TECNOQUIMFRONT.Service.listarRolesRequest request) {
+            return base.Channel.listarRoles(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarProductoResponse> eliminarProductoAsync(int id) {
-            LP2TECNOQUIMFRONT.Service.eliminarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarProductoRequest();
-            inValue.id = id;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarProductoAsync(inValue);
+        public LP2TECNOQUIMFRONT.Service.rol[] listarRoles(string descripcion) {
+            LP2TECNOQUIMFRONT.Service.listarRolesRequest inValue = new LP2TECNOQUIMFRONT.Service.listarRolesRequest();
+            inValue.descripcion = descripcion;
+            LP2TECNOQUIMFRONT.Service.listarRolesResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarRoles(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarRolesResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarRolesAsync(LP2TECNOQUIMFRONT.Service.listarRolesRequest request) {
+            return base.Channel.listarRolesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarRolesResponse> listarRolesAsync(string descripcion) {
+            LP2TECNOQUIMFRONT.Service.listarRolesRequest inValue = new LP2TECNOQUIMFRONT.Service.listarRolesRequest();
+            inValue.descripcion = descripcion;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarRolesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarUsuario(LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest request) {
+            return base.Channel.insertarUsuario(request);
+        }
+        
+        public void insertarUsuario(LP2TECNOQUIMFRONT.Service.usuario usuario) {
+            LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest();
+            inValue.usuario = usuario;
+            LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarUsuario(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarUsuarioAsync(LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest request) {
+            return base.Channel.insertarUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse> insertarUsuarioAsync(LP2TECNOQUIMFRONT.Service.usuario usuario) {
+            LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest();
+            inValue.usuario = usuario;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.listarUsuariosResponse LP2TECNOQUIMFRONT.Service.Servicio.listarUsuarios(LP2TECNOQUIMFRONT.Service.listarUsuariosRequest request) {
+            return base.Channel.listarUsuarios(request);
+        }
+        
+        public LP2TECNOQUIMFRONT.Service.usuario[] listarUsuarios(string username) {
+            LP2TECNOQUIMFRONT.Service.listarUsuariosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarUsuariosRequest();
+            inValue.username = username;
+            LP2TECNOQUIMFRONT.Service.listarUsuariosResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarUsuarios(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarUsuariosResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarUsuariosAsync(LP2TECNOQUIMFRONT.Service.listarUsuariosRequest request) {
+            return base.Channel.listarUsuariosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarUsuariosResponse> listarUsuariosAsync(string username) {
+            LP2TECNOQUIMFRONT.Service.listarUsuariosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarUsuariosRequest();
+            inValue.username = username;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarUsuariosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarMensajeResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarMensaje(LP2TECNOQUIMFRONT.Service.insertarMensajeRequest request) {
+            return base.Channel.insertarMensaje(request);
+        }
+        
+        public void insertarMensaje(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
+            LP2TECNOQUIMFRONT.Service.insertarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMensajeRequest();
+            inValue.mensaje = mensaje;
+            LP2TECNOQUIMFRONT.Service.insertarMensajeResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMensaje(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMensajeResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarMensajeAsync(LP2TECNOQUIMFRONT.Service.insertarMensajeRequest request) {
+            return base.Channel.insertarMensajeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMensajeResponse> insertarMensajeAsync(LP2TECNOQUIMFRONT.Service.mensaje mensaje) {
+            LP2TECNOQUIMFRONT.Service.insertarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMensajeRequest();
+            inValue.mensaje = mensaje;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMensajeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.listarMensajeResponse LP2TECNOQUIMFRONT.Service.Servicio.listarMensaje(LP2TECNOQUIMFRONT.Service.listarMensajeRequest request) {
+            return base.Channel.listarMensaje(request);
+        }
+        
+        public LP2TECNOQUIMFRONT.Service.mensaje[] listarMensaje(int idReceptor) {
+            LP2TECNOQUIMFRONT.Service.listarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.listarMensajeRequest();
+            inValue.idReceptor = idReceptor;
+            LP2TECNOQUIMFRONT.Service.listarMensajeResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarMensaje(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMensajeResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarMensajeAsync(LP2TECNOQUIMFRONT.Service.listarMensajeRequest request) {
+            return base.Channel.listarMensajeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMensajeResponse> listarMensajeAsync(int idReceptor) {
+            LP2TECNOQUIMFRONT.Service.listarMensajeRequest inValue = new LP2TECNOQUIMFRONT.Service.listarMensajeRequest();
+            inValue.idReceptor = idReceptor;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarMensajeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7499,26 +4781,687 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarUsuario(LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest request) {
-            return base.Channel.insertarUsuario(request);
+        LP2TECNOQUIMFRONT.Service.eliminarProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.eliminarProducto(LP2TECNOQUIMFRONT.Service.eliminarProductoRequest request) {
+            return base.Channel.eliminarProducto(request);
         }
         
-        public void insertarUsuario(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest();
-            inValue.usuario = usuario;
-            LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarUsuario(inValue);
+        public void eliminarProducto(int id) {
+            LP2TECNOQUIMFRONT.Service.eliminarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarProductoRequest();
+            inValue.id = id;
+            LP2TECNOQUIMFRONT.Service.eliminarProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarProducto(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarUsuarioAsync(LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest request) {
-            return base.Channel.insertarUsuarioAsync(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.eliminarProductoAsync(LP2TECNOQUIMFRONT.Service.eliminarProductoRequest request) {
+            return base.Channel.eliminarProductoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarUsuarioResponse> insertarUsuarioAsync(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarUsuarioRequest();
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarProductoResponse> eliminarProductoAsync(int id) {
+            LP2TECNOQUIMFRONT.Service.eliminarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarProductoRequest();
+            inValue.id = id;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.listarMaquinaria(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request) {
+            return base.Channel.listarMaquinaria(request);
+        }
+        
+        public LP2TECNOQUIMFRONT.Service.maquinaria[] listarMaquinaria(string dato) {
+            LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest();
+            inValue.dato = dato;
+            LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarMaquinaria(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest request) {
+            return base.Channel.listarMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarMaquinariaResponse> listarMaquinariaAsync(string dato) {
+            LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarMaquinariaRequest();
+            inValue.dato = dato;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.actualizarRolResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarRol(LP2TECNOQUIMFRONT.Service.actualizarRolRequest request) {
+            return base.Channel.actualizarRol(request);
+        }
+        
+        public void actualizarRol(LP2TECNOQUIMFRONT.Service.rol rol) {
+            LP2TECNOQUIMFRONT.Service.actualizarRolRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarRolRequest();
+            inValue.rol = rol;
+            LP2TECNOQUIMFRONT.Service.actualizarRolResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarRol(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarRolResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarRolAsync(LP2TECNOQUIMFRONT.Service.actualizarRolRequest request) {
+            return base.Channel.actualizarRolAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarRolResponse> actualizarRolAsync(LP2TECNOQUIMFRONT.Service.rol rol) {
+            LP2TECNOQUIMFRONT.Service.actualizarRolRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarRolRequest();
+            inValue.rol = rol;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarRolAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest request) {
+            return base.Channel.insertarDetalleAlmacenProducto(request);
+        }
+        
+        public void insertarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
+            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest();
+            inValue.detalleAlmacenProducto = detalleAlmacenProducto;
+            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleAlmacenProducto(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest request) {
+            return base.Channel.insertarDetalleAlmacenProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse> insertarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
+            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest();
+            inValue.detalleAlmacenProducto = detalleAlmacenProducto;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleAlmacenProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaProyeccion(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request) {
+            return base.Channel.actualizarLineaProyeccion(request);
+        }
+        
+        public void actualizarLineaProyeccion(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
+            LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest();
+            inValue.lineaProyeccion = lineaProyeccion;
+            inValue.idProyeccion = idProyeccion;
+            LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaProyeccion(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request) {
+            return base.Channel.actualizarLineaProyeccionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse> actualizarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
+            LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest();
+            inValue.lineaProyeccion = lineaProyeccion;
+            inValue.idProyeccion = idProyeccion;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaProyeccionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest request) {
+            return base.Channel.actualizarDetalleAlmacenInsumo(request);
+        }
+        
+        public void actualizarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo) {
+            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest();
+            inValue.detalleAlmacenInsumo = detalleAlmacenInsumo;
+            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleAlmacenInsumo(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest request) {
+            return base.Channel.actualizarDetalleAlmacenInsumoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse> actualizarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo) {
+            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest();
+            inValue.detalleAlmacenInsumo = detalleAlmacenInsumo;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleAlmacenInsumoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest request) {
+            return base.Channel.insertarDetalleMaquinaria(request);
+        }
+        
+        public void insertarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
+            LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleMaquinaria(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest request) {
+            return base.Channel.insertarDetalleMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse> insertarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
+            LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse LP2TECNOQUIMFRONT.Service.Servicio.listarOrdenesProduccionPlan(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest request) {
+            return base.Channel.listarOrdenesProduccionPlan(request);
+        }
+        
+        public LP2TECNOQUIMFRONT.Service.ordenProduccion[] listarOrdenesProduccionPlan(int idPMP) {
+            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest inValue = new LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest();
+            inValue.idPMP = idPMP;
+            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarOrdenesProduccionPlan(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarOrdenesProduccionPlanAsync(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest request) {
+            return base.Channel.listarOrdenesProduccionPlanAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse> listarOrdenesProduccionPlanAsync(int idPMP) {
+            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest inValue = new LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest();
+            inValue.idPMP = idPMP;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarOrdenesProduccionPlanAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest request) {
+            return base.Channel.listarDetalleAlmacenProducto(request);
+        }
+        
+        public LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto[] listarDetalleAlmacenProducto(string dato) {
+            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest();
+            inValue.dato = dato;
+            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleAlmacenProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest request) {
+            return base.Channel.listarDetalleAlmacenProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse> listarDetalleAlmacenProductoAsync(string dato) {
+            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest();
+            inValue.dato = dato;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleAlmacenProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest request) {
+            return base.Channel.actualizarDetalleAlmacenProducto(request);
+        }
+        
+        public void actualizarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
+            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest();
+            inValue.detalleAlmacenProducto = detalleAlmacenProducto;
+            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleAlmacenProducto(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest request) {
+            return base.Channel.actualizarDetalleAlmacenProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse> actualizarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
+            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest();
+            inValue.detalleAlmacenProducto = detalleAlmacenProducto;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleAlmacenProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarProyeccionVenta(LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest request) {
+            return base.Channel.actualizarProyeccionVenta(request);
+        }
+        
+        public void actualizarProyeccionVenta(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
+            LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest();
+            inValue.proyeccionVenta = proyeccionVenta;
+            LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarProyeccionVenta(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest request) {
+            return base.Channel.actualizarProyeccionVentaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse> actualizarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
+            LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest();
+            inValue.proyeccionVenta = proyeccionVenta;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarProyeccionVentaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest request) {
+            return base.Channel.listarDetalleAlmacenInsumo(request);
+        }
+        
+        public LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo[] listarDetalleAlmacenInsumo(string dato) {
+            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest();
+            inValue.dato = dato;
+            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleAlmacenInsumo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest request) {
+            return base.Channel.listarDetalleAlmacenInsumoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse> listarDetalleAlmacenInsumoAsync(string dato) {
+            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest();
+            inValue.dato = dato;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleAlmacenInsumoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest request) {
+            return base.Channel.insertarDetalleAlmacenInsumo(request);
+        }
+        
+        public void insertarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo, int idInsumo) {
+            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest();
+            inValue.detalleAlmacenInsumo = detalleAlmacenInsumo;
+            inValue.idInsumo = idInsumo;
+            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleAlmacenInsumo(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest request) {
+            return base.Channel.insertarDetalleAlmacenInsumoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse> insertarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo, int idInsumo) {
+            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest();
+            inValue.detalleAlmacenInsumo = detalleAlmacenInsumo;
+            inValue.idInsumo = idInsumo;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleAlmacenInsumoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest request) {
+            return base.Channel.actualizarDetalleMaquinaria(request);
+        }
+        
+        public void actualizarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
+            LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleMaquinaria(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest request) {
+            return base.Channel.actualizarDetalleMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse> actualizarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
+            LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarOrdenProduccion(LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest request) {
+            return base.Channel.actualizarOrdenProduccion(request);
+        }
+        
+        public void actualizarOrdenProduccion(LP2TECNOQUIMFRONT.Service.ordenProduccion ordenProduccion, int arg1) {
+            LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest();
+            inValue.ordenProduccion = ordenProduccion;
+            inValue.arg1 = arg1;
+            LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarOrdenProduccion(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarOrdenProduccionAsync(LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest request) {
+            return base.Channel.actualizarOrdenProduccionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse> actualizarOrdenProduccionAsync(LP2TECNOQUIMFRONT.Service.ordenProduccion ordenProduccion, int arg1) {
+            LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest();
+            inValue.ordenProduccion = ordenProduccion;
+            inValue.arg1 = arg1;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarOrdenProduccionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse LP2TECNOQUIMFRONT.Service.Servicio.listarOrdenesProduccionFecha(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest request) {
+            return base.Channel.listarOrdenesProduccionFecha(request);
+        }
+        
+        public LP2TECNOQUIMFRONT.Service.ordenProduccion[] listarOrdenesProduccionFecha(System.DateTime fecha) {
+            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest();
+            inValue.fecha = fecha;
+            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarOrdenesProduccionFecha(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarOrdenesProduccionFechaAsync(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest request) {
+            return base.Channel.listarOrdenesProduccionFechaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse> listarOrdenesProduccionFechaAsync(System.DateTime fecha) {
+            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest();
+            inValue.fecha = fecha;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarOrdenesProduccionFechaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest request) {
+            return base.Channel.listarDetalleMaquinaria(request);
+        }
+        
+        public LP2TECNOQUIMFRONT.Service.detalleMaquinaria[] listarDetalleMaquinaria(int idPMP) {
+            LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest();
+            inValue.idPMP = idPMP;
+            LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleMaquinaria(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest request) {
+            return base.Channel.listarDetalleMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse> listarDetalleMaquinariaAsync(int idPMP) {
+            LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest();
+            inValue.idPMP = idPMP;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarAlmacen(LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest request) {
+            return base.Channel.actualizarAlmacen(request);
+        }
+        
+        public void actualizarAlmacen(LP2TECNOQUIMFRONT.Service.almacen almacen) {
+            LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest();
+            inValue.almacen = almacen;
+            LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarAlmacen(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarAlmacenAsync(LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest request) {
+            return base.Channel.actualizarAlmacenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse> actualizarAlmacenAsync(LP2TECNOQUIMFRONT.Service.almacen almacen) {
+            LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest();
+            inValue.almacen = almacen;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarAlmacenAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarInstructivo(LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest request) {
+            return base.Channel.insertarInstructivo(request);
+        }
+        
+        public int insertarInstructivo(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
+            LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest();
+            inValue.instructivo = instructivo;
+            inValue.idProducto = idProducto;
+            LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarInstructivo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarInstructivoAsync(LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest request) {
+            return base.Channel.insertarInstructivoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse> insertarInstructivoAsync(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
+            LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest();
+            inValue.instructivo = instructivo;
+            inValue.idProducto = idProducto;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarInstructivoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarInstructivo(LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest request) {
+            return base.Channel.actualizarInstructivo(request);
+        }
+        
+        public void actualizarInstructivo(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
+            LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest();
+            inValue.instructivo = instructivo;
+            inValue.idProducto = idProducto;
+            LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarInstructivo(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarInstructivoAsync(LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest request) {
+            return base.Channel.actualizarInstructivoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse> actualizarInstructivoAsync(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
+            LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest();
+            inValue.instructivo = instructivo;
+            inValue.idProducto = idProducto;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarInstructivoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarUsuario(LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest request) {
+            return base.Channel.actualizarUsuario(request);
+        }
+        
+        public void actualizarUsuario(LP2TECNOQUIMFRONT.Service.usuario usuario) {
+            LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest();
             inValue.usuario = usuario;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarUsuarioAsync(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
+            LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarUsuario(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarUsuarioAsync(LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest request) {
+            return base.Channel.actualizarUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse> actualizarUsuarioAsync(LP2TECNOQUIMFRONT.Service.usuario usuario) {
+            LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest();
+            inValue.usuario = usuario;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarProyeccionVenta(LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest request) {
+            return base.Channel.insertarProyeccionVenta(request);
+        }
+        
+        public void insertarProyeccionVenta(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
+            LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest();
+            inValue.proyeccionVenta = proyeccionVenta;
+            LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarProyeccionVenta(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest request) {
+            return base.Channel.insertarProyeccionVentaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse> insertarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
+            LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest();
+            inValue.proyeccionVenta = proyeccionVenta;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarProyeccionVentaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarLineaProyeccion(LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest request) {
+            return base.Channel.insertarLineaProyeccion(request);
+        }
+        
+        public void insertarLineaProyeccion(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
+            LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest();
+            inValue.lineaProyeccion = lineaProyeccion;
+            inValue.idProyeccion = idProyeccion;
+            LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarLineaProyeccion(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest request) {
+            return base.Channel.insertarLineaProyeccionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse> insertarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
+            LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest();
+            inValue.lineaProyeccion = lineaProyeccion;
+            inValue.idProyeccion = idProyeccion;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarLineaProyeccionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.eliminarMaquinaria(LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest request) {
+            return base.Channel.eliminarMaquinaria(request);
+        }
+        
+        public void eliminarMaquinaria(int id) {
+            LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest();
+            inValue.id = id;
+            LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarMaquinaria(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.eliminarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest request) {
+            return base.Channel.eliminarMaquinariaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse> eliminarMaquinariaAsync(int id) {
+            LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest();
+            inValue.id = id;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarMaquinariaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarTrabajador(LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest request) {
+            return base.Channel.insertarTrabajador(request);
+        }
+        
+        public void insertarTrabajador(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
+            LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest();
+            inValue.trabajador = trabajador;
+            LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarTrabajador(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest request) {
+            return base.Channel.insertarTrabajadorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse> insertarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
+            LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest();
+            inValue.trabajador = trabajador;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarTrabajadorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse LP2TECNOQUIMFRONT.Service.Servicio.listarLineaProyeccion(LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest request) {
+            return base.Channel.listarLineaProyeccion(request);
+        }
+        
+        public LP2TECNOQUIMFRONT.Service.lineaProyeccion[] listarLineaProyeccion(int idProyeccion) {
+            LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest();
+            inValue.idProyeccion = idProyeccion;
+            LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarLineaProyeccion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest request) {
+            return base.Channel.listarLineaProyeccionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse> listarLineaProyeccionAsync(int idProyeccion) {
+            LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest();
+            inValue.idProyeccion = idProyeccion;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarLineaProyeccionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarLineaOrden(LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest request) {
+            return base.Channel.insertarLineaOrden(request);
+        }
+        
+        public void insertarLineaOrden(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
+            LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest();
+            inValue.lineaOrden = lineaOrden;
+            inValue.idOrden = idOrden;
+            LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarLineaOrden(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest request) {
+            return base.Channel.insertarLineaOrdenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse> insertarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
+            LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest();
+            inValue.lineaOrden = lineaOrden;
+            inValue.idOrden = idOrden;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarLineaOrdenAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse LP2TECNOQUIMFRONT.Service.Servicio.listarPoliticaStock(LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest request) {
+            return base.Channel.listarPoliticaStock(request);
+        }
+        
+        public LP2TECNOQUIMFRONT.Service.politicaStock[] listarPoliticaStock() {
+            LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest();
+            LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarPoliticaStock(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest request) {
+            return base.Channel.listarPoliticaStockAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse> listarPoliticaStockAsync() {
+            LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest();
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarPoliticaStockAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaOrden(LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest request) {
+            return base.Channel.actualizarLineaOrden(request);
+        }
+        
+        public void actualizarLineaOrden(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
+            LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest();
+            inValue.lineaOrden = lineaOrden;
+            inValue.idOrden = idOrden;
+            LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaOrden(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest request) {
+            return base.Channel.actualizarLineaOrdenAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse> actualizarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
+            LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest();
+            inValue.lineaOrden = lineaOrden;
+            inValue.idOrden = idOrden;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaOrdenAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse LP2TECNOQUIMFRONT.Service.Servicio.listarTrabajadores(LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest request) {
+            return base.Channel.listarTrabajadores(request);
+        }
+        
+        public LP2TECNOQUIMFRONT.Service.trabajador[] listarTrabajadores(string nombres) {
+            LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest inValue = new LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest();
+            inValue.nombres = nombres;
+            LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarTrabajadores(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarTrabajadoresAsync(LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest request) {
+            return base.Channel.listarTrabajadoresAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse> listarTrabajadoresAsync(string nombres) {
+            LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest inValue = new LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest();
+            inValue.nombres = nombres;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarTrabajadoresAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7546,298 +5489,6 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        LP2TECNOQUIMFRONT.Service.listarInstructivosResponse LP2TECNOQUIMFRONT.Service.Servicio.listarInstructivos(LP2TECNOQUIMFRONT.Service.listarInstructivosRequest request) {
-            return base.Channel.listarInstructivos(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.instructivo[] listarInstructivos() {
-            LP2TECNOQUIMFRONT.Service.listarInstructivosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarInstructivosRequest();
-            LP2TECNOQUIMFRONT.Service.listarInstructivosResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarInstructivos(inValue);
-=======
-        LP2TECNOQUIMFRONT.Service.listarRolesResponse LP2TECNOQUIMFRONT.Service.Servicio.listarRoles(LP2TECNOQUIMFRONT.Service.listarRolesRequest request) {
-            return base.Channel.listarRoles(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.rol[] listarRoles(string descripcion) {
-            LP2TECNOQUIMFRONT.Service.listarRolesRequest inValue = new LP2TECNOQUIMFRONT.Service.listarRolesRequest();
-            inValue.descripcion = descripcion;
-            LP2TECNOQUIMFRONT.Service.listarRolesResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarRoles(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarInstructivosResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarInstructivosAsync(LP2TECNOQUIMFRONT.Service.listarInstructivosRequest request) {
-            return base.Channel.listarInstructivosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarInstructivosResponse> listarInstructivosAsync() {
-            LP2TECNOQUIMFRONT.Service.listarInstructivosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarInstructivosRequest();
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarInstructivosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarProyeccionVenta(LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest request) {
-            return base.Channel.actualizarProyeccionVenta(request);
-        }
-        
-        public void actualizarProyeccionVenta(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
-            LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest();
-            inValue.proyeccionVenta = proyeccionVenta;
-            LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarProyeccionVenta(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest request) {
-            return base.Channel.actualizarProyeccionVentaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse> actualizarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
-            LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest();
-            inValue.proyeccionVenta = proyeccionVenta;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarProyeccionVentaAsync(inValue);
-=======
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarRolesResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarRolesAsync(LP2TECNOQUIMFRONT.Service.listarRolesRequest request) {
-            return base.Channel.listarRolesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarRolesResponse> listarRolesAsync(string descripcion) {
-            LP2TECNOQUIMFRONT.Service.listarRolesRequest inValue = new LP2TECNOQUIMFRONT.Service.listarRolesRequest();
-            inValue.descripcion = descripcion;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarRolesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarUsuariosResponse LP2TECNOQUIMFRONT.Service.Servicio.listarUsuarios(LP2TECNOQUIMFRONT.Service.listarUsuariosRequest request) {
-            return base.Channel.listarUsuarios(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.usuario[] listarUsuarios(string username) {
-            LP2TECNOQUIMFRONT.Service.listarUsuariosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarUsuariosRequest();
-            inValue.username = username;
-            LP2TECNOQUIMFRONT.Service.listarUsuariosResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarUsuarios(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarUsuariosResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarUsuariosAsync(LP2TECNOQUIMFRONT.Service.listarUsuariosRequest request) {
-            return base.Channel.listarUsuariosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarUsuariosResponse> listarUsuariosAsync(string username) {
-            LP2TECNOQUIMFRONT.Service.listarUsuariosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarUsuariosRequest();
-            inValue.username = username;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarUsuariosAsync(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest request) {
-            return base.Channel.listarDetalleAlmacenProducto(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto[] listarDetalleAlmacenProducto(string dato) {
-            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest();
-            inValue.dato = dato;
-            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleAlmacenProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest request) {
-            return base.Channel.listarDetalleAlmacenProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse> listarDetalleAlmacenProductoAsync(string dato) {
-            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest();
-            inValue.dato = dato;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleAlmacenProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        LP2TECNOQUIMFRONT.Service.actualizarProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarProducto(LP2TECNOQUIMFRONT.Service.actualizarProductoRequest request) {
-            return base.Channel.actualizarProducto(request);
-        }
-        
-        public void actualizarProducto(LP2TECNOQUIMFRONT.Service.producto producto) {
-            LP2TECNOQUIMFRONT.Service.actualizarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarProductoRequest();
-            inValue.producto = producto;
-            LP2TECNOQUIMFRONT.Service.actualizarProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarProducto(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarProductoAsync(LP2TECNOQUIMFRONT.Service.actualizarProductoRequest request) {
-            return base.Channel.actualizarProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProductoResponse> actualizarProductoAsync(LP2TECNOQUIMFRONT.Service.producto producto) {
-            LP2TECNOQUIMFRONT.Service.actualizarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarProductoRequest();
-            inValue.producto = producto;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarTrabajador(LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest request) {
-            return base.Channel.insertarTrabajador(request);
-        }
-        
-        public void insertarTrabajador(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
-            LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest();
-            inValue.trabajador = trabajador;
-            LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarTrabajador(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest request) {
-            return base.Channel.insertarTrabajadorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse> insertarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
-            LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest();
-            inValue.trabajador = trabajador;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarTrabajadorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest request) {
-            return base.Channel.actualizarDetalleAlmacenProducto(request);
-        }
-        
-        public void actualizarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest();
-            inValue.detalleAlmacenProducto = detalleAlmacenProducto;
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleAlmacenProducto(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest request) {
-            return base.Channel.actualizarDetalleAlmacenProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse> actualizarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest();
-            inValue.detalleAlmacenProducto = detalleAlmacenProducto;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleAlmacenProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarLineaProyeccion(LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest request) {
-            return base.Channel.insertarLineaProyeccion(request);
-        }
-        
-        public void insertarLineaProyeccion(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
-            LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest();
-            inValue.lineaProyeccion = lineaProyeccion;
-            inValue.idProyeccion = idProyeccion;
-            LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarLineaProyeccion(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest request) {
-            return base.Channel.insertarLineaProyeccionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse> insertarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
-            LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest();
-            inValue.lineaProyeccion = lineaProyeccion;
-            inValue.idProyeccion = idProyeccion;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarLineaProyeccionAsync(inValue);
-=======
-        LP2TECNOQUIMFRONT.Service.insertarProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarProducto(LP2TECNOQUIMFRONT.Service.insertarProductoRequest request) {
-            return base.Channel.insertarProducto(request);
-        }
-        
-        public int insertarProducto(LP2TECNOQUIMFRONT.Service.producto producto) {
-            LP2TECNOQUIMFRONT.Service.insertarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarProductoRequest();
-            inValue.producto = producto;
-            LP2TECNOQUIMFRONT.Service.insertarProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarProductoAsync(LP2TECNOQUIMFRONT.Service.insertarProductoRequest request) {
-            return base.Channel.insertarProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProductoResponse> insertarProductoAsync(LP2TECNOQUIMFRONT.Service.producto producto) {
-            LP2TECNOQUIMFRONT.Service.insertarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarProductoRequest();
-            inValue.producto = producto;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.helloResponse LP2TECNOQUIMFRONT.Service.Servicio.hello(LP2TECNOQUIMFRONT.Service.helloRequest request) {
-            return base.Channel.hello(request);
-        }
-        
-        public string hello(string name) {
-            LP2TECNOQUIMFRONT.Service.helloRequest inValue = new LP2TECNOQUIMFRONT.Service.helloRequest();
-            inValue.name = name;
-            LP2TECNOQUIMFRONT.Service.helloResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).hello(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.helloResponse> LP2TECNOQUIMFRONT.Service.Servicio.helloAsync(LP2TECNOQUIMFRONT.Service.helloRequest request) {
-            return base.Channel.helloAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.helloResponse> helloAsync(string name) {
-            LP2TECNOQUIMFRONT.Service.helloRequest inValue = new LP2TECNOQUIMFRONT.Service.helloRequest();
-            inValue.name = name;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).helloAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest request) {
-            return base.Channel.insertarDetalleMaquinaria(request);
-        }
-        
-        public void insertarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleMaquinaria(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest request) {
-            return base.Channel.insertarDetalleMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse> insertarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleMaquinariaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest request) {
-            return base.Channel.listarDetalleMaquinaria(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.detalleMaquinaria[] listarDetalleMaquinaria(int idPMP) {
-            LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest();
-            inValue.idPMP = idPMP;
-            LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleMaquinaria(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest request) {
-            return base.Channel.listarDetalleMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse> listarDetalleMaquinariaAsync(int idPMP) {
-            LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest();
-            inValue.idPMP = idPMP;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleMaquinariaAsync(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         LP2TECNOQUIMFRONT.Service.insertarLineaInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarLineaInsumo(LP2TECNOQUIMFRONT.Service.insertarLineaInsumoRequest request) {
             return base.Channel.insertarLineaInsumo(request);
         }
@@ -7862,214 +5513,25 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest request) {
-            return base.Channel.insertarDetalleMaquinaria(request);
+        LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarPoliticaStock(LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest request) {
+            return base.Channel.actualizarPoliticaStock(request);
         }
         
-        public void insertarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleMaquinaria(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest request) {
-            return base.Channel.insertarDetalleMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse> insertarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleMaquinariaAsync(inValue);
+        public void actualizarPoliticaStock(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
+            LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest();
+            inValue.politicaStock = politicaStock;
+            LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarPoliticaStock(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest request) {
-            return base.Channel.actualizarDetalleMaquinaria(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest request) {
+            return base.Channel.actualizarPoliticaStockAsync(request);
         }
         
-        public void actualizarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleMaquinaria(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest request) {
-            return base.Channel.actualizarDetalleMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse> actualizarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleMaquinariaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarInstructivo(LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest request) {
-            return base.Channel.insertarInstructivo(request);
-        }
-        
-        public int insertarInstructivo(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
-            LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest();
-            inValue.instructivo = instructivo;
-            inValue.idProducto = idProducto;
-            LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarInstructivo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarInstructivoAsync(LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest request) {
-            return base.Channel.insertarInstructivoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse> insertarInstructivoAsync(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
-            LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest();
-            inValue.instructivo = instructivo;
-            inValue.idProducto = idProducto;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarInstructivoAsync(inValue);
-=======
-        LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest request) {
-            return base.Channel.actualizarDetalleMaquinaria(request);
-        }
-        
-        public void actualizarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleMaquinaria(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest request) {
-            return base.Channel.actualizarDetalleMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse> actualizarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleMaquinariaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarLineaProyeccion(LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest request) {
-            return base.Channel.insertarLineaProyeccion(request);
-        }
-        
-        public void insertarLineaProyeccion(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
-            LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest();
-            inValue.lineaProyeccion = lineaProyeccion;
-            inValue.idProyeccion = idProyeccion;
-            LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarLineaProyeccion(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest request) {
-            return base.Channel.insertarLineaProyeccionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionResponse> insertarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
-            LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarLineaProyeccionRequest();
-            inValue.lineaProyeccion = lineaProyeccion;
-            inValue.idProyeccion = idProyeccion;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarLineaProyeccionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaProyeccion(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request) {
-            return base.Channel.actualizarLineaProyeccion(request);
-        }
-        
-        public void actualizarLineaProyeccion(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
-            LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest();
-            inValue.lineaProyeccion = lineaProyeccion;
-            inValue.idProyeccion = idProyeccion;
-            LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaProyeccion(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request) {
-            return base.Channel.actualizarLineaProyeccionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse> actualizarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
-            LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest();
-            inValue.lineaProyeccion = lineaProyeccion;
-            inValue.idProyeccion = idProyeccion;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaProyeccionAsync(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarInstructivo(LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest request) {
-            return base.Channel.insertarInstructivo(request);
-        }
-        
-        public int insertarInstructivo(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
-            LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest();
-            inValue.instructivo = instructivo;
-            inValue.idProducto = idProducto;
-            LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarInstructivo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarInstructivoAsync(LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest request) {
-            return base.Channel.insertarInstructivoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarInstructivoResponse> insertarInstructivoAsync(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
-            LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarInstructivoRequest();
-            inValue.instructivo = instructivo;
-            inValue.idProducto = idProducto;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarInstructivoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        LP2TECNOQUIMFRONT.Service.insertarLineaInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarLineaInsumo(LP2TECNOQUIMFRONT.Service.insertarLineaInsumoRequest request) {
-            return base.Channel.insertarLineaInsumo(request);
-        }
-        
-        public void insertarLineaInsumo(LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo, int idInstructivo) {
-            LP2TECNOQUIMFRONT.Service.insertarLineaInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarLineaInsumoRequest();
-            inValue.lineaInsumo = lineaInsumo;
-            inValue.idInstructivo = idInstructivo;
-            LP2TECNOQUIMFRONT.Service.insertarLineaInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarLineaInsumo(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarLineaInsumoAsync(LP2TECNOQUIMFRONT.Service.insertarLineaInsumoRequest request) {
-            return base.Channel.insertarLineaInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaInsumoResponse> insertarLineaInsumoAsync(LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo, int idInstructivo) {
-            LP2TECNOQUIMFRONT.Service.insertarLineaInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarLineaInsumoRequest();
-            inValue.lineaInsumo = lineaInsumo;
-            inValue.idInstructivo = idInstructivo;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarLineaInsumoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarMaquinaria(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request) {
-            return base.Channel.insertarMaquinaria(request);
-        }
-        
-        public void insertarMaquinaria(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMaquinaria(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request) {
-            return base.Channel.insertarMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse> insertarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMaquinariaAsync(inValue);
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse> actualizarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
+            LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest();
+            inValue.politicaStock = politicaStock;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarPoliticaStockAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8081,116 +5543,62 @@ namespace LP2TECNOQUIMFRONT.Service {
             LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest();
             inValue.periodo = periodo;
             LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarProyeccionVenta(inValue);
-=======
-        LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarMaquinaria(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request) {
-            return base.Channel.actualizarMaquinaria(request);
-        }
-        
-        public void actualizarMaquinaria(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarMaquinaria(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request) {
-            return base.Channel.actualizarMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse> actualizarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarMaquinariaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest request) {
-            return base.Channel.listarDetalleAlmacenInsumo(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo[] listarDetalleAlmacenInsumo(int id) {
-            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest();
-            inValue.id = id;
-            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleAlmacenInsumo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest request) {
-            return base.Channel.listarDetalleAlmacenInsumoAsync(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest request) {
+            return base.Channel.listarProyeccionVentaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse> listarDetalleAlmacenInsumoAsync(int id) {
-            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest();
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse> listarProyeccionVentaAsync(System.DateTime periodo) {
+            LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest();
+            inValue.periodo = periodo;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarProyeccionVentaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.actualizarTrabajadorResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarTrabajador(LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest request) {
+            return base.Channel.actualizarTrabajador(request);
+        }
+        
+        public void actualizarTrabajador(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
+            LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest();
+            inValue.trabajador = trabajador;
+            LP2TECNOQUIMFRONT.Service.actualizarTrabajadorResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarTrabajador(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarTrabajadorResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest request) {
+            return base.Channel.actualizarTrabajadorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarTrabajadorResponse> actualizarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
+            LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest();
+            inValue.trabajador = trabajador;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarTrabajadorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse LP2TECNOQUIMFRONT.Service.Servicio.eliminarTrabajador(LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest request) {
+            return base.Channel.eliminarTrabajador(request);
+        }
+        
+        public void eliminarTrabajador(int id) {
+            LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest();
             inValue.id = id;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleAlmacenInsumoAsync(inValue);
+            LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarTrabajador(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest request) {
-            return base.Channel.listarDetalleAlmacenProducto(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse> LP2TECNOQUIMFRONT.Service.Servicio.eliminarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest request) {
+            return base.Channel.eliminarTrabajadorAsync(request);
         }
         
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto[] listarDetalleAlmacenProducto(int id) {
-            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest();
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse> eliminarTrabajadorAsync(int id) {
+            LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest();
             inValue.id = id;
-            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleAlmacenProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest request) {
-            return base.Channel.listarDetalleAlmacenProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoResponse> listarDetalleAlmacenProductoAsync(int id) {
-            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenProductoRequest();
-            inValue.id = id;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleAlmacenProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest request) {
-            return base.Channel.actualizarDetalleAlmacenProducto(request);
-        }
-        
-        public void actualizarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest();
-            inValue.detalleAlmacenProducto = detalleAlmacenProducto;
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleAlmacenProducto(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest request) {
-            return base.Channel.actualizarDetalleAlmacenProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoResponse> actualizarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenProductoRequest();
-            inValue.detalleAlmacenProducto = detalleAlmacenProducto;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleAlmacenProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest request) {
-            return base.Channel.actualizarDetalleAlmacenInsumo(request);
-        }
-        
-        public void actualizarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo) {
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest();
-            inValue.detalleAlmacenInsumo = detalleAlmacenInsumo;
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleAlmacenInsumo(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest request) {
-            return base.Channel.actualizarDetalleAlmacenInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse> actualizarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo) {
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest();
-            inValue.detalleAlmacenInsumo = detalleAlmacenInsumo;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleAlmacenInsumoAsync(inValue);
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarTrabajadorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8201,15 +5609,10 @@ namespace LP2TECNOQUIMFRONT.Service {
         public LP2TECNOQUIMFRONT.Service.instructivo[] listarInstructivos() {
             LP2TECNOQUIMFRONT.Service.listarInstructivosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarInstructivosRequest();
             LP2TECNOQUIMFRONT.Service.listarInstructivosResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarInstructivos(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest request) {
-            return base.Channel.listarProyeccionVentaAsync(request);
-=======
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarInstructivosResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarInstructivosAsync(LP2TECNOQUIMFRONT.Service.listarInstructivosRequest request) {
             return base.Channel.listarInstructivosAsync(request);
         }
@@ -8217,51 +5620,6 @@ namespace LP2TECNOQUIMFRONT.Service {
         public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarInstructivosResponse> listarInstructivosAsync() {
             LP2TECNOQUIMFRONT.Service.listarInstructivosRequest inValue = new LP2TECNOQUIMFRONT.Service.listarInstructivosRequest();
             return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarInstructivosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarMaquinaria(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request) {
-            return base.Channel.insertarMaquinaria(request);
-        }
-        
-        public void insertarMaquinaria(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMaquinaria(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request) {
-            return base.Channel.insertarMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse> insertarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
-            LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest();
-            inValue.maquinaria = maquinaria;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMaquinariaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.eliminarMaquinaria(LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest request) {
-            return base.Channel.eliminarMaquinaria(request);
-        }
-        
-        public void eliminarMaquinaria(int id) {
-            LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest();
-            inValue.id = id;
-            LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarMaquinaria(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.eliminarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest request) {
-            return base.Channel.eliminarMaquinariaAsync(request);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse> listarProyeccionVentaAsync(System.DateTime periodo) {
-            LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest();
-            inValue.periodo = periodo;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarProyeccionVentaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8289,440 +5647,91 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse LP2TECNOQUIMFRONT.Service.Servicio.listarOrdenesProduccionPlan(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest request) {
-            return base.Channel.listarOrdenesProduccionPlan(request);
+        LP2TECNOQUIMFRONT.Service.actualizarProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarProducto(LP2TECNOQUIMFRONT.Service.actualizarProductoRequest request) {
+            return base.Channel.actualizarProducto(request);
         }
         
-        public LP2TECNOQUIMFRONT.Service.ordenProduccion[] listarOrdenesProduccionPlan(int idPMP) {
-            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest inValue = new LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest();
-            inValue.idPMP = idPMP;
-            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarOrdenesProduccionPlan(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarOrdenesProduccionPlanAsync(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest request) {
-            return base.Channel.listarOrdenesProduccionPlanAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse> listarOrdenesProduccionPlanAsync(int idPMP) {
-            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest inValue = new LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest();
-            inValue.idPMP = idPMP;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarOrdenesProduccionPlanAsync(inValue);
+        public void actualizarProducto(LP2TECNOQUIMFRONT.Service.producto producto) {
+            LP2TECNOQUIMFRONT.Service.actualizarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarProductoRequest();
+            inValue.producto = producto;
+            LP2TECNOQUIMFRONT.Service.actualizarProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarProducto(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaProyeccion(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request) {
-            return base.Channel.actualizarLineaProyeccion(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarProductoAsync(LP2TECNOQUIMFRONT.Service.actualizarProductoRequest request) {
+            return base.Channel.actualizarProductoAsync(request);
         }
         
-        public void actualizarLineaProyeccion(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
-            LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest();
-            inValue.lineaProyeccion = lineaProyeccion;
-            inValue.idProyeccion = idProyeccion;
-            LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaProyeccion(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest request) {
-            return base.Channel.actualizarLineaProyeccionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionResponse> actualizarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.lineaProyeccion lineaProyeccion, int idProyeccion) {
-            LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaProyeccionRequest();
-            inValue.lineaProyeccion = lineaProyeccion;
-            inValue.idProyeccion = idProyeccion;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaProyeccionAsync(inValue);
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProductoResponse> actualizarProductoAsync(LP2TECNOQUIMFRONT.Service.producto producto) {
+            LP2TECNOQUIMFRONT.Service.actualizarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarProductoRequest();
+            inValue.producto = producto;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarProductoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.eliminarMaquinaria(LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest request) {
-            return base.Channel.eliminarMaquinaria(request);
+        LP2TECNOQUIMFRONT.Service.insertarPoliticaStockResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarPoliticaStock(LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest request) {
+            return base.Channel.insertarPoliticaStock(request);
         }
         
-        public void eliminarMaquinaria(int id) {
-            LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest();
-            inValue.id = id;
-            LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarMaquinaria(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.eliminarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest request) {
-            return base.Channel.eliminarMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarMaquinariaResponse> eliminarMaquinariaAsync(int id) {
-            LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarMaquinariaRequest();
-            inValue.id = id;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarMaquinariaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarPoliticaStock(LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest request) {
-            return base.Channel.actualizarPoliticaStock(request);
-        }
-        
-        public void actualizarPoliticaStock(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
-            LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest();
+        public void insertarPoliticaStock(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
+            LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest();
             inValue.politicaStock = politicaStock;
-            LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarPoliticaStock(inValue);
+            LP2TECNOQUIMFRONT.Service.insertarPoliticaStockResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarPoliticaStock(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest request) {
-            return base.Channel.actualizarPoliticaStockAsync(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarPoliticaStockResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest request) {
+            return base.Channel.insertarPoliticaStockAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse> actualizarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
-            LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest();
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarPoliticaStockResponse> insertarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
+            LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarPoliticaStockRequest();
             inValue.politicaStock = politicaStock;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarPoliticaStockAsync(inValue);
-=======
-        LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarAlmacen(LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest request) {
-            return base.Channel.actualizarAlmacen(request);
-        }
-        
-        public void actualizarAlmacen(LP2TECNOQUIMFRONT.Service.almacen almacen) {
-            LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest();
-            inValue.almacen = almacen;
-            LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarAlmacen(inValue);
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarPoliticaStockAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarAlmacenAsync(LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest request) {
-            return base.Channel.actualizarAlmacenAsync(request);
+        LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarMaquinaria(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request) {
+            return base.Channel.insertarMaquinaria(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse> actualizarAlmacenAsync(LP2TECNOQUIMFRONT.Service.almacen almacen) {
-            LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarAlmacenRequest();
-            inValue.almacen = almacen;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarAlmacenAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest request) {
-            return base.Channel.insertarDetalleAlmacenInsumo(request);
-        }
-        
-        public void insertarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo) {
-            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest();
-            inValue.detalleAlmacenInsumo = detalleAlmacenInsumo;
-            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleAlmacenInsumo(inValue);
+        public void insertarMaquinaria(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+            LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMaquinaria(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest request) {
-            return base.Channel.insertarDetalleAlmacenInsumoAsync(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest request) {
+            return base.Channel.insertarMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse> insertarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo) {
-            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest();
-            inValue.detalleAlmacenInsumo = detalleAlmacenInsumo;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleAlmacenInsumoAsync(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarLineaOrden(LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest request) {
-            return base.Channel.insertarLineaOrden(request);
-        }
-        
-        public void insertarLineaOrden(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
-            LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest();
-            inValue.lineaOrden = lineaOrden;
-            inValue.idOrden = idOrden;
-            LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarLineaOrden(inValue);
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarMaquinariaResponse> insertarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+            LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarMaquinariaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest request) {
-            return base.Channel.insertarLineaOrdenAsync(request);
+        LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarMaquinaria(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request) {
+            return base.Channel.actualizarMaquinaria(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarLineaOrdenResponse> insertarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
-            LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarLineaOrdenRequest();
-            inValue.lineaOrden = lineaOrden;
-            inValue.idOrden = idOrden;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarLineaOrdenAsync(inValue);
-<<<<<<< HEAD
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaOrden(LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest request) {
-            return base.Channel.actualizarLineaOrden(request);
-        }
-        
-        public void actualizarLineaOrden(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
-            LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest();
-            inValue.lineaOrden = lineaOrden;
-            inValue.idOrden = idOrden;
-            LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaOrden(inValue);
+        public void actualizarMaquinaria(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+            LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarMaquinaria(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest request) {
-            return base.Channel.actualizarLineaOrdenAsync(request);
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest request) {
+            return base.Channel.actualizarMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse> actualizarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
-            LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest();
-            inValue.lineaOrden = lineaOrden;
-            inValue.idOrden = idOrden;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaOrdenAsync(inValue);
-=======
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse LP2TECNOQUIMFRONT.Service.Servicio.listarLineaProyeccion(LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest request) {
-            return base.Channel.listarLineaProyeccion(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.lineaProyeccion[] listarLineaProyeccion(int idProyeccion) {
-            LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest();
-            inValue.idProyeccion = idProyeccion;
-            LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarLineaProyeccion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest request) {
-            return base.Channel.listarLineaProyeccionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse> listarLineaProyeccionAsync(int idProyeccion) {
-            LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest();
-            inValue.idProyeccion = idProyeccion;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarLineaProyeccionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarProyeccionVenta(LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest request) {
-            return base.Channel.insertarProyeccionVenta(request);
-        }
-        
-        public void insertarProyeccionVenta(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
-            LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest();
-            inValue.proyeccionVenta = proyeccionVenta;
-            LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarProyeccionVenta(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest request) {
-            return base.Channel.insertarProyeccionVentaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse> insertarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
-            LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest();
-            inValue.proyeccionVenta = proyeccionVenta;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarProyeccionVentaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse LP2TECNOQUIMFRONT.Service.Servicio.listarPoliticaStock(LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest request) {
-            return base.Channel.listarPoliticaStock(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.politicaStock[] listarPoliticaStock() {
-            LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest();
-            LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarPoliticaStock(inValue);
-=======
-        LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarOrdenProduccion(LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest request) {
-            return base.Channel.actualizarOrdenProduccion(request);
-        }
-        
-        public void actualizarOrdenProduccion(LP2TECNOQUIMFRONT.Service.ordenProduccion ordenProduccion, int arg1) {
-            LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest();
-            inValue.ordenProduccion = ordenProduccion;
-            inValue.arg1 = arg1;
-            LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarOrdenProduccion(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarOrdenProduccionAsync(LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest request) {
-            return base.Channel.actualizarOrdenProduccionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse> actualizarOrdenProduccionAsync(LP2TECNOQUIMFRONT.Service.ordenProduccion ordenProduccion, int arg1) {
-            LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest();
-            inValue.ordenProduccion = ordenProduccion;
-            inValue.arg1 = arg1;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarOrdenProduccionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse LP2TECNOQUIMFRONT.Service.Servicio.listarOrdenesProduccionPlan(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest request) {
-            return base.Channel.listarOrdenesProduccionPlan(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.ordenProduccion[] listarOrdenesProduccionPlan(int idPMP) {
-            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest inValue = new LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest();
-            inValue.idPMP = idPMP;
-            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarOrdenesProduccionPlan(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarOrdenesProduccionPlanAsync(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest request) {
-            return base.Channel.listarOrdenesProduccionPlanAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanResponse> listarOrdenesProduccionPlanAsync(int idPMP) {
-            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest inValue = new LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionPlanRequest();
-            inValue.idPMP = idPMP;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarOrdenesProduccionPlanAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaOrden(LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest request) {
-            return base.Channel.actualizarLineaOrden(request);
-        }
-        
-        public void actualizarLineaOrden(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
-            LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest();
-            inValue.lineaOrden = lineaOrden;
-            inValue.idOrden = idOrden;
-            LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaOrden(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest request) {
-            return base.Channel.actualizarLineaOrdenAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenResponse> actualizarLineaOrdenAsync(LP2TECNOQUIMFRONT.Service.lineaOrden lineaOrden, int idOrden) {
-            LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaOrdenRequest();
-            inValue.lineaOrden = lineaOrden;
-            inValue.idOrden = idOrden;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaOrdenAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse LP2TECNOQUIMFRONT.Service.Servicio.listarOrdenesProduccionFecha(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest request) {
-            return base.Channel.listarOrdenesProduccionFecha(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.ordenProduccion[] listarOrdenesProduccionFecha(System.DateTime fecha) {
-            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest();
-            inValue.fecha = fecha;
-            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarOrdenesProduccionFecha(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest request) {
-            return base.Channel.listarPoliticaStockAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarPoliticaStockResponse> listarPoliticaStockAsync() {
-            LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.listarPoliticaStockRequest();
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarPoliticaStockAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest request) {
-            return base.Channel.listarDetalleAlmacenInsumo(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo[] listarDetalleAlmacenInsumo(string dato) {
-            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest();
-            inValue.dato = dato;
-            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleAlmacenInsumo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest request) {
-            return base.Channel.listarDetalleAlmacenInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoResponse> listarDetalleAlmacenInsumoAsync(string dato) {
-            LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleAlmacenInsumoRequest();
-            inValue.dato = dato;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleAlmacenInsumoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest request) {
-            return base.Channel.insertarDetalleAlmacenProducto(request);
-        }
-        
-        public void insertarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
-            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest();
-            inValue.detalleAlmacenProducto = detalleAlmacenProducto;
-            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleAlmacenProducto(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest request) {
-            return base.Channel.insertarDetalleAlmacenProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse> insertarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
-            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest();
-            inValue.detalleAlmacenProducto = detalleAlmacenProducto;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleAlmacenProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarOrdenProduccion(LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest request) {
-            return base.Channel.actualizarOrdenProduccion(request);
-        }
-        
-        public void actualizarOrdenProduccion(LP2TECNOQUIMFRONT.Service.ordenProduccion ordenProduccion, int arg1) {
-            LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest();
-            inValue.ordenProduccion = ordenProduccion;
-            inValue.arg1 = arg1;
-            LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarOrdenProduccion(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarOrdenProduccionAsync(LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest request) {
-            return base.Channel.actualizarOrdenProduccionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionResponse> actualizarOrdenProduccionAsync(LP2TECNOQUIMFRONT.Service.ordenProduccion ordenProduccion, int arg1) {
-            LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarOrdenProduccionRequest();
-            inValue.ordenProduccion = ordenProduccion;
-            inValue.arg1 = arg1;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarOrdenProduccionAsync(inValue);
-=======
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarOrdenesProduccionFechaAsync(LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest request) {
-            return base.Channel.listarOrdenesProduccionFechaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse> listarOrdenesProduccionFechaAsync(System.DateTime fecha) {
-            LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest();
-            inValue.fecha = fecha;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarOrdenesProduccionFechaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarInstructivo(LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest request) {
-            return base.Channel.actualizarInstructivo(request);
-        }
-        
-        public void actualizarInstructivo(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
-            LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest();
-            inValue.instructivo = instructivo;
-            inValue.idProducto = idProducto;
-            LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarInstructivo(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarInstructivoAsync(LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest request) {
-            return base.Channel.actualizarInstructivoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarInstructivoResponse> actualizarInstructivoAsync(LP2TECNOQUIMFRONT.Service.instructivo instructivo, int idProducto) {
-            LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarInstructivoRequest();
-            inValue.instructivo = instructivo;
-            inValue.idProducto = idProducto;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarInstructivoAsync(inValue);
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarMaquinariaResponse> actualizarMaquinariaAsync(LP2TECNOQUIMFRONT.Service.maquinaria maquinaria) {
+            LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarMaquinariaRequest();
+            inValue.maquinaria = maquinaria;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarMaquinariaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8749,368 +5758,6 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarPoliticaStock(LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest request) {
-            return base.Channel.actualizarPoliticaStock(request);
-        }
-        
-        public void actualizarPoliticaStock(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
-            LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest();
-            inValue.politicaStock = politicaStock;
-            LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarPoliticaStock(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest request) {
-            return base.Channel.actualizarPoliticaStockAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockResponse> actualizarPoliticaStockAsync(LP2TECNOQUIMFRONT.Service.politicaStock politicaStock) {
-            LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarPoliticaStockRequest();
-            inValue.politicaStock = politicaStock;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarPoliticaStockAsync(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaInsumo(LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoRequest request) {
-            return base.Channel.actualizarLineaInsumo(request);
-        }
-        
-        public void actualizarLineaInsumo(LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo, int idInstructivo) {
-            LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoRequest();
-            inValue.lineaInsumo = lineaInsumo;
-            inValue.idInstructivo = idInstructivo;
-            LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaInsumo(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarLineaInsumoAsync(LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoRequest request) {
-            return base.Channel.actualizarLineaInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoResponse> actualizarLineaInsumoAsync(LP2TECNOQUIMFRONT.Service.lineaInsumo lineaInsumo, int idInstructivo) {
-            LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarLineaInsumoRequest();
-            inValue.lineaInsumo = lineaInsumo;
-            inValue.idInstructivo = idInstructivo;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarLineaInsumoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse LP2TECNOQUIMFRONT.Service.Servicio.listarTrabajadores(LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest request) {
-            return base.Channel.listarTrabajadores(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.trabajador[] listarTrabajadores(string nombres) {
-            LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest inValue = new LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest();
-            inValue.nombres = nombres;
-            LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarTrabajadores(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarTrabajadoresAsync(LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest request) {
-            return base.Channel.listarTrabajadoresAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse> listarTrabajadoresAsync(string nombres) {
-            LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest inValue = new LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest();
-            inValue.nombres = nombres;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarTrabajadoresAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest request) {
-            return base.Channel.insertarDetalleAlmacenInsumo(request);
-        }
-        
-        public void insertarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo, int idInsumo) {
-            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest();
-            inValue.detalleAlmacenInsumo = detalleAlmacenInsumo;
-            inValue.idInsumo = idInsumo;
-            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleAlmacenInsumo(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest request) {
-            return base.Channel.insertarDetalleAlmacenInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse> insertarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo, int idInsumo) {
-            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoRequest();
-            inValue.detalleAlmacenInsumo = detalleAlmacenInsumo;
-            inValue.idInsumo = idInsumo;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleAlmacenInsumoAsync(inValue);
-=======
-        LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest request) {
-            return base.Channel.insertarDetalleAlmacenProducto(request);
-        }
-        
-        public void insertarDetalleAlmacenProducto(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
-            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest();
-            inValue.detalleAlmacenProducto = detalleAlmacenProducto;
-            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleAlmacenProducto(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest request) {
-            return base.Channel.insertarDetalleAlmacenProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse> insertarDetalleAlmacenProductoAsync(LP2TECNOQUIMFRONT.Service.detalleAlmacenProducto detalleAlmacenProducto) {
-            LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoRequest();
-            inValue.detalleAlmacenProducto = detalleAlmacenProducto;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleAlmacenProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarProyeccionVenta(LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest request) {
-            return base.Channel.actualizarProyeccionVenta(request);
-        }
-        
-        public void actualizarProyeccionVenta(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
-            LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest();
-            inValue.proyeccionVenta = proyeccionVenta;
-            LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarProyeccionVenta(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest request) {
-            return base.Channel.actualizarProyeccionVentaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaResponse> actualizarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
-            LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarProyeccionVentaRequest();
-            inValue.proyeccionVenta = proyeccionVenta;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarProyeccionVentaAsync(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse LP2TECNOQUIMFRONT.Service.Servicio.eliminarTrabajador(LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest request) {
-            return base.Channel.eliminarTrabajador(request);
-        }
-        
-        public void eliminarTrabajador(int id) {
-            LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest();
-            inValue.id = id;
-            LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarTrabajador(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse> LP2TECNOQUIMFRONT.Service.Servicio.eliminarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest request) {
-            return base.Channel.eliminarTrabajadorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse> eliminarTrabajadorAsync(int id) {
-            LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.eliminarTrabajadorRequest();
-            inValue.id = id;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).eliminarTrabajadorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest request) {
-            return base.Channel.actualizarDetalleAlmacenInsumo(request);
-        }
-        
-        public void actualizarDetalleAlmacenInsumo(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo) {
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest();
-            inValue.detalleAlmacenInsumo = detalleAlmacenInsumo;
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleAlmacenInsumo(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest request) {
-            return base.Channel.actualizarDetalleAlmacenInsumoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse> actualizarDetalleAlmacenInsumoAsync(LP2TECNOQUIMFRONT.Service.detalleAlmacenInsumo detalleAlmacenInsumo) {
-            LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoRequest();
-            inValue.detalleAlmacenInsumo = detalleAlmacenInsumo;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleAlmacenInsumoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest request) {
-            return base.Channel.listarDetalleMaquinaria(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.detalleMaquinaria[] listarDetalleMaquinaria(int idPMP) {
-            LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest();
-            inValue.idPMP = idPMP;
-            LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleMaquinaria(inValue);
-=======
-        LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse LP2TECNOQUIMFRONT.Service.Servicio.listarProyeccionVenta(LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest request) {
-            return base.Channel.listarProyeccionVenta(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.proyeccionVenta[] listarProyeccionVenta(System.DateTime periodo) {
-            LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest();
-            inValue.periodo = periodo;
-            LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarProyeccionVenta(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest request) {
-            return base.Channel.listarProyeccionVentaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarProyeccionVentaResponse> listarProyeccionVentaAsync(System.DateTime periodo) {
-            LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarProyeccionVentaRequest();
-            inValue.periodo = periodo;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarProyeccionVentaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse LP2TECNOQUIMFRONT.Service.Servicio.listarTrabajadores(LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest request) {
-            return base.Channel.listarTrabajadores(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.trabajador[] listarTrabajadores(string nombres) {
-            LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest inValue = new LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest();
-            inValue.nombres = nombres;
-            LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarTrabajadores(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest request) {
-            return base.Channel.listarDetalleMaquinariaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse> listarDetalleMaquinariaAsync(int idPMP) {
-            LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest();
-            inValue.idPMP = idPMP;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleMaquinariaAsync(inValue);
-=======
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarTrabajadoresAsync(LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest request) {
-            return base.Channel.listarTrabajadoresAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarTrabajadoresResponse> listarTrabajadoresAsync(string nombres) {
-            LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest inValue = new LP2TECNOQUIMFRONT.Service.listarTrabajadoresRequest();
-            inValue.nombres = nombres;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarTrabajadoresAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarUsuario(LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest request) {
-            return base.Channel.actualizarUsuario(request);
-        }
-        
-        public void actualizarUsuario(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest();
-            inValue.usuario = usuario;
-            LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarUsuario(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarUsuarioAsync(LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest request) {
-            return base.Channel.actualizarUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse> actualizarUsuarioAsync(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest();
-            inValue.usuario = usuario;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarUsuarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarTrabajadorResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarTrabajador(LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest request) {
-            return base.Channel.actualizarTrabajador(request);
-        }
-        
-        public void actualizarTrabajador(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
-            LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest();
-            inValue.trabajador = trabajador;
-            LP2TECNOQUIMFRONT.Service.actualizarTrabajadorResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarTrabajador(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarTrabajadorResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest request) {
-            return base.Channel.actualizarTrabajadorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarTrabajadorResponse> actualizarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
-            LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarTrabajadorRequest();
-            inValue.trabajador = trabajador;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarTrabajadorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarTrabajador(LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest request) {
-            return base.Channel.insertarTrabajador(request);
-        }
-        
-        public void insertarTrabajador(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
-            LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest();
-            inValue.trabajador = trabajador;
-            LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarTrabajador(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest request) {
-            return base.Channel.insertarTrabajadorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarTrabajadorResponse> insertarTrabajadorAsync(LP2TECNOQUIMFRONT.Service.trabajador trabajador) {
-            LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarTrabajadorRequest();
-            inValue.trabajador = trabajador;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarTrabajadorAsync(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse LP2TECNOQUIMFRONT.Service.Servicio.listarLineaProyeccion(LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest request) {
-            return base.Channel.listarLineaProyeccion(request);
-        }
-        
-        public LP2TECNOQUIMFRONT.Service.lineaProyeccion[] listarLineaProyeccion(int idProyeccion) {
-            LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest();
-            inValue.idProyeccion = idProyeccion;
-            LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarLineaProyeccion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse> LP2TECNOQUIMFRONT.Service.Servicio.listarLineaProyeccionAsync(LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest request) {
-            return base.Channel.listarLineaProyeccionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarLineaProyeccionResponse> listarLineaProyeccionAsync(int idProyeccion) {
-            LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest inValue = new LP2TECNOQUIMFRONT.Service.listarLineaProyeccionRequest();
-            inValue.idProyeccion = idProyeccion;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarLineaProyeccionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
-        LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarUsuario(LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest request) {
-            return base.Channel.actualizarUsuario(request);
-        }
-        
-        public void actualizarUsuario(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest();
-            inValue.usuario = usuario;
-            LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarUsuario(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarUsuarioAsync(LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest request) {
-            return base.Channel.actualizarUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarUsuarioResponse> actualizarUsuarioAsync(LP2TECNOQUIMFRONT.Service.usuario usuario) {
-            LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarUsuarioRequest();
-            inValue.usuario = usuario;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarUsuarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         LP2TECNOQUIMFRONT.Service.helloResponse LP2TECNOQUIMFRONT.Service.Servicio.hello(LP2TECNOQUIMFRONT.Service.helloRequest request) {
             return base.Channel.hello(request);
         }
@@ -9131,49 +5778,6 @@ namespace LP2TECNOQUIMFRONT.Service {
             LP2TECNOQUIMFRONT.Service.helloRequest inValue = new LP2TECNOQUIMFRONT.Service.helloRequest();
             inValue.name = name;
             return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).helloAsync(inValue);
-=======
-        LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse LP2TECNOQUIMFRONT.Service.Servicio.insertarProyeccionVenta(LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest request) {
-            return base.Channel.insertarProyeccionVenta(request);
-        }
-        
-        public void insertarProyeccionVenta(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
-            LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest();
-            inValue.proyeccionVenta = proyeccionVenta;
-            LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarProyeccionVenta(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse> LP2TECNOQUIMFRONT.Service.Servicio.insertarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest request) {
-            return base.Channel.insertarProyeccionVentaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaResponse> insertarProyeccionVentaAsync(LP2TECNOQUIMFRONT.Service.proyeccionVenta proyeccionVenta) {
-            LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarProyeccionVentaRequest();
-            inValue.proyeccionVenta = proyeccionVenta;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarProyeccionVentaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2TECNOQUIMFRONT.Service.actualizarProductoResponse LP2TECNOQUIMFRONT.Service.Servicio.actualizarProducto(LP2TECNOQUIMFRONT.Service.actualizarProductoRequest request) {
-            return base.Channel.actualizarProducto(request);
-        }
-        
-        public void actualizarProducto(LP2TECNOQUIMFRONT.Service.producto producto) {
-            LP2TECNOQUIMFRONT.Service.actualizarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarProductoRequest();
-            inValue.producto = producto;
-            LP2TECNOQUIMFRONT.Service.actualizarProductoResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarProducto(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProductoResponse> LP2TECNOQUIMFRONT.Service.Servicio.actualizarProductoAsync(LP2TECNOQUIMFRONT.Service.actualizarProductoRequest request) {
-            return base.Channel.actualizarProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarProductoResponse> actualizarProductoAsync(LP2TECNOQUIMFRONT.Service.producto producto) {
-            LP2TECNOQUIMFRONT.Service.actualizarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarProductoRequest();
-            inValue.producto = producto;
-            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarProductoAsync(inValue);
->>>>>>> 0e6b1f925210e2ddf1c11d267ae7f276b6270d62
         }
     }
 }

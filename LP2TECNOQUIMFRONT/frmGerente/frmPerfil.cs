@@ -59,7 +59,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             trabajador.apellidos = txtApellido.Text;
             trabajador.correo = txtCorreo.Text;
             DBController.actualizarTrabajador(trabajador);
-            MessageBox.Show("Maquinaria Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Perfil Actualizado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
