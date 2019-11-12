@@ -14,9 +14,14 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
     public partial class frmGestionarOrden : Form
     {
 
+        int flagElim = 0;
         private DateTime _periodoPlanMaestroProduccion;
         private int _idPlanMaestroProduccion;
         private Service.ordenProduccion _orderProduccion;
+        private Service.lineaOrden lineaOrden;
+        private Service.producto producto;
+        BindingList<Service.lineaOrden> lineas;
+        BindingList<Service.lineaOrden> lineasEliminadas;
         private Estado estadoFormulario;
 
         Service.ServicioClient DBController = new Service.ServicioClient();
@@ -26,6 +31,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         public frmGestionarOrden()
         {
             InitializeComponent();
+            lineas = new BindingList<lineaOrden>();
+            lineasEliminadas = new BindingList<lineaOrden>();
+            lineaOrden = new lineaOrden();
+            _orderProduccion = new ordenProduccion();
         }
 
         public frmGestionarOrden(DateTime periodoPlanMaestroProduccion, int idPlanMaestroProduccion)
@@ -237,7 +246,12 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void button1_Click(object sender, EventArgs e)
         {
             frmProducto formProducto = new frmProducto();
-            formProducto.Visible = true;
+            if (formProducto.ShowDialog(this) == DialogResult.OK)
+            {
+                producto = formProducto.ProductoSeleccionado;
+                txtCodigoProducto.Text = producto.idProducto.ToString();
+                txtNombre.Text = producto.nombre;
+            }
         }
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
@@ -251,6 +265,104 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void frmGestionarOrden_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            lineaOrden = new Service.lineaOrden();
+            lineaOrden.cantProducto = int.Parse(txtCantidad.Text);
+            lineaOrden.producto = producto;
+            BindingList<Service.lineaOrden> lineasAg = new BindingList<lineaOrden>();
+            foreach (lineaOrden item in lineas)
+            {
+                lineasAg.Add(item);
+            }
+            lineasAg.Add(lineaOrden);
+            lineas = lineasAg;
+            _orderProduccion.lineasOrden = lineas.ToArray();
+            dgvOrden.DataSource = lineas;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string str = dgvOrden.Rows[dgvOrden.SelectedRows[0].Index].Cells[1].Value.ToString();
+
+            BindingList<Service.lineaOrden> lineasElim = new BindingList<lineaOrden>();
+            foreach (lineaOrden item in lineas)
+            {
+                if (item.producto.nombre != str) lineasElim.Add(item);
+                if (estadoFormulario == Estado.Modificar && item.producto.nombre == str)
+                {
+                    lineasEliminadas.Add(item);
+                    flagElim = 1;
+                }
+            }
+            lineas = lineasElim;
+            dgvOrden.DataSource = lineas;
+        }
+        private void dgvOrden_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            Service.lineaOrden lineaOrdenFila = (Service.lineaOrden)dgvOrden.Rows[e.RowIndex].DataBoundItem;
+            dgvOrden.Rows[e.RowIndex].Cells["Producto"].Style.ForeColor = System.Drawing.Color.Black;
+            dgvOrden.Rows[e.RowIndex].Cells["Codigo"].Style.ForeColor = System.Drawing.Color.Black;
+            dgvOrden.Rows[e.RowIndex].Cells["Cantidad"].Style.ForeColor = System.Drawing.Color.Black;
+            dgvOrden.Rows[e.RowIndex].Cells["Producto"].Value = lineaOrdenFila.producto.nombre;
+            dgvOrden.Rows[e.RowIndex].Cells["Codigo"].Value = lineaOrdenFila.producto.idProducto;
+            dgvOrden.Rows[e.RowIndex].Cells["Cantidad"].Value = lineaOrdenFila.cantProducto;
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+            if (estadoFormulario == Estado.Nuevo)
+            {
+                producto.presentacion = txtPres.Text;
+                producto.granularidad = float.Parse(txtGranu.Text);
+
+                instructivo = new Service.instructivo();
+                instructivo.actividades = txtAct.Text;
+                instructivo.insumos = lineas.ToArray();
+                producto.instructivo = instructivo;
+                if (flag == 1)
+                {
+                    producto.restriccion = true;
+                }
+                else
+                {
+                    producto.restriccion = false;
+                }
+                _orderProduccion.id = DBController.insertarOrdenProduccion(_orderProduccion,0);
+                foreach (Service.lineaOrden l in lineas)
+                {
+                    DBController.insertarLineaOrden(l, _orderProduccion.id);
+                }
+                MessageBox.Show("Producto Registrado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else if (estadoFormulario == Estado.Modificar)
+            {
+                producto.nombre = txtNomProd.Text;
+                producto.presentacion = txtPres.Text;
+                producto.granularidad = float.Parse(txtGranu.Text);
+                producto.instructivo.insumos = lineas.ToArray();
+
+                DBController.actualizarProducto(producto);
+                DBController.actualizarInstructivo(producto.instructivo, producto.idProducto);
+                foreach (Service.lineaInsumo l in lineas)
+                {
+                    DBController.eliminarLineaInsumo(l.idLineaI);
+                    DBController.insertarLineaInsumo(l, producto.instructivo.id);
+                }
+                if (flagElim == 1)
+                {
+                    foreach (Service.lineaInsumo l in lineasEliminadas)
+                    {
+                        DBController.eliminarLineaInsumo(l.idLineaI);
+                    }
+                }
+                MessageBox.Show("Producto Actualizado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            limpiarComponentes();
+            estadoComponentes(Estado.Inicial);
         }
     }
 }

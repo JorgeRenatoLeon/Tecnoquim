@@ -40,5 +40,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             dgvProductos.Rows[e.RowIndex].Cells["Restriccion"].Value = prodFila.restriccion;
 
         }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            ProductoSeleccionado = (Service.producto)dgvProductos.CurrentRow.DataBoundItem;
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

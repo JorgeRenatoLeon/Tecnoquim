@@ -119,15 +119,6 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             }
         }
 
-        private void txtUsuarioLeave(object sender, EventArgs e)
-        {
-            if (this.txtUsuario.Text == "")
-            {
-                this.txtUsuario.Text = "Usuario";
-                this.txtUsuario.ForeColor = Color.Silver;
-            }
-        }
-
         private void txtContrasenaEnter(object sender, EventArgs e)
         {
             if (this.txtContrasena.Text != "")
@@ -215,6 +206,10 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
                 throw;
             }
         }
-        
+
+        private void txtUsuarioLeave(object sender, EventArgs e)
+        {
+
+        }
     }
 }

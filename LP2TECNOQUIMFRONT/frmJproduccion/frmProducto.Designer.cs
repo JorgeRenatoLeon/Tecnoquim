@@ -37,6 +37,7 @@
             this.Presentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Granularidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Restriccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,12 +126,25 @@
             this.Restriccion.ReadOnly = true;
             this.Restriccion.Width = 160;
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.Location = new System.Drawing.Point(726, 21);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(126, 33);
+            this.btnSeleccionar.TabIndex = 30;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.ClientSize = new System.Drawing.Size(901, 496);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblNombre);
@@ -153,5 +167,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Presentacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Granularidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Restriccion;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }

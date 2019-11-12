@@ -20,7 +20,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void button4_Click(object sender, EventArgs e)
         {
             frmOrdenes formOrdenes = new frmOrdenes();
-            formOrdenes.Visible = true;
+            formOrdenes.ShowDialog(this);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -33,13 +33,14 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Service.maquinaria maquinaria = new Service.maquinaria();
             frmMaquinaria form = new frmMaquinaria();
-            form.Visible = true;
-        }
-
-        private void frmGestionarPlan_Load(object sender, EventArgs e)
-        {
-
+            if (form.ShowDialog(this) == DialogResult.OK)
+            {
+                maquinaria = form.MaquinariaSeleccionada;
+                txtCodigo.Text = maquinaria.id.ToString();
+                txtNombre.Text = maquinaria.nombre;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

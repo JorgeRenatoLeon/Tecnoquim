@@ -48,7 +48,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnCrear_Click(object sender, EventArgs e)
         {
             frmGestionarPlan formGestionarPlan = new frmGestionarPlan();
-            formGestionarPlan.Visible = true;
+            formGestionarPlan.ShowDialog(this);
         }
 
 
@@ -64,7 +64,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void button7_Click(object sender, EventArgs e)
         {
             frmHistorialPMP form = new frmHistorialPMP();
-            form.Visible = true;
+            form.ShowDialog(this);
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)

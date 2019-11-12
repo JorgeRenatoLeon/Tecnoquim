@@ -348,7 +348,6 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmGestionarPlan";
             this.Text = "°";
-            this.Load += new System.EventHandler(this.frmGestionarPlan_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).EndInit();
