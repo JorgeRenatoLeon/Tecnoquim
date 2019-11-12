@@ -12,7 +12,6 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 {
     public partial class frmStockInsumo : Form
     {
-        private int stock;
         Service.insumo insumo;
         Service.detalleAlmacenInsumo detalle;
         Service.detalleAlmacenInsumo almacenI;

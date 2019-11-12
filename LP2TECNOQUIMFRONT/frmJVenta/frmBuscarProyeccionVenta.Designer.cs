@@ -33,10 +33,10 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.dgvHistorialPlan = new System.Windows.Forms.DataGridView();
+            this.dgvProyeccion = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Periodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyeccion)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -57,6 +57,7 @@
             this.btnBuscar.TabIndex = 21;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblNombre
             // 
@@ -79,11 +80,12 @@
             this.btnSeleccionar.TabIndex = 19;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // dgvHistorialPlan
+            // dgvProyeccion
             // 
-            this.dgvHistorialPlan.AllowUserToAddRows = false;
-            this.dgvHistorialPlan.AllowUserToDeleteRows = false;
+            this.dgvProyeccion.AllowUserToAddRows = false;
+            this.dgvProyeccion.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -91,17 +93,18 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistorialPlan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvHistorialPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorialPlan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProyeccion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProyeccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyeccion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Periodo});
-            this.dgvHistorialPlan.Location = new System.Drawing.Point(37, 77);
-            this.dgvHistorialPlan.Name = "dgvHistorialPlan";
-            this.dgvHistorialPlan.ReadOnly = true;
-            this.dgvHistorialPlan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorialPlan.Size = new System.Drawing.Size(842, 398);
-            this.dgvHistorialPlan.TabIndex = 18;
+            this.dgvProyeccion.Location = new System.Drawing.Point(37, 77);
+            this.dgvProyeccion.Name = "dgvProyeccion";
+            this.dgvProyeccion.ReadOnly = true;
+            this.dgvProyeccion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProyeccion.Size = new System.Drawing.Size(842, 398);
+            this.dgvProyeccion.TabIndex = 18;
+            this.dgvProyeccion.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProyeccion_CellFormatting);
             // 
             // Codigo
             // 
@@ -127,10 +130,10 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnSeleccionar);
-            this.Controls.Add(this.dgvHistorialPlan);
+            this.Controls.Add(this.dgvProyeccion);
             this.Name = "frmBuscarProyeccionVenta";
             this.Text = "frmBuscarProyeccionVenta";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyeccion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,7 +145,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnSeleccionar;
-        private System.Windows.Forms.DataGridView dgvHistorialPlan;
+        private System.Windows.Forms.DataGridView dgvProyeccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Periodo;
     }

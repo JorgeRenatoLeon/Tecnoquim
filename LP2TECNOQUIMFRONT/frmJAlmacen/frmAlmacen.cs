@@ -15,7 +15,6 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
     public partial class frmAlmacen : Form
     {
         Service.trabajador trabajador = new Service.trabajador();
-        Service.producto producto;
         int close = 0;
 
         public frmAlmacen(int cont = 0, Service.trabajador trabajadors = null)

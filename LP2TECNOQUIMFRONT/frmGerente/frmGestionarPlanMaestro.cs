@@ -16,7 +16,6 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         Service.ServicioClient DBController = new Service.ServicioClient();
         Service.trabajador trabajador;
         Service.mensaje mensaje = new Service.mensaje();
-        int cont;
         Estado estadoObj;
 
         public frmGestionarPlanMaestro(int cont=0)
@@ -34,7 +33,8 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             if (pmp.estado == Service.estado.Rechazado) rbDesaprobado.Checked = true;
             else rbAprobado.Checked = true;
             txtResponsable.Text = pmp.responsable.nombres + " " + pmp.responsable.apellidos;
-            estadoComponentes(Estado.Buscar);
+            estadoObj = Estado.Inicial;
+            estadoComponentes(estadoObj);
         }
 
         public frmGestionarPlanMaestro(Service.trabajador gerente)

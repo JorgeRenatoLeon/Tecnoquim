@@ -14,7 +14,6 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
     {
         Service.insumo insumo;
         Service.detalleAlmacenInsumo detalle;
-        int flag;
         Estado estadoObj;
         Service.ServicioClient DBController = new Service.ServicioClient();
 

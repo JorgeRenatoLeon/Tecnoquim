@@ -61,6 +61,12 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             txtCodigoP.Text = "";
             txtNombreP.Text = "";
             txtCantidadP.Text = "";
+            txtNOrden.Text = "";
+            lineas = new BindingList<Service.lineaProyeccion>();
+            lineasEliminadas = new BindingList<Service.lineaProyeccion>();
+            dgvProductos.DataSource = null;
+            dgvProductos.Rows.Clear();
+            dgvProductos.Refresh();
         }
 
         public void estadoComponentes(Estado estado) {
@@ -83,7 +89,34 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
-                    btnBuscar.Enabled = false;
+                    btnBuscar.Enabled = true;
+                    btnCancelar.Enabled = false;
+                    btnAgregarP.Enabled = true;
+                    btnEliminarP.Enabled = true;
+                    btnBuscarProducto.Enabled = true;
+                    gbDatosG.Enabled = true;
+                    gbDatosP.Enabled = true;
+                    dgvProductos.Enabled = true;
+                    break;
+
+                case Estado.Buscar:
+                    btnNuevo.Enabled = true;
+                    btnGuardar.Enabled = true;
+                    btnModificar.Enabled = true;
+                    btnBuscar.Enabled = true;
+                    btnCancelar.Enabled = true;
+                    btnAgregarP.Enabled = false;
+                    btnEliminarP.Enabled = false;
+                    btnBuscarProducto.Enabled = false;
+                    gbDatosG.Enabled = false;
+                    gbDatosP.Enabled = false;
+                    dgvProductos.Enabled = false;
+                    break;
+                case Estado.Modificar:
+                    btnNuevo.Enabled = true;
+                    btnGuardar.Enabled = true;
+                    btnModificar.Enabled = true;
+                    btnBuscar.Enabled = true;
                     btnCancelar.Enabled = true;
                     btnAgregarP.Enabled = true;
                     btnEliminarP.Enabled = true;
@@ -109,8 +142,9 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            estadoComponentes(Estado.Nuevo);
             limpiarComponentes();
+            estadoObj = Estado.Nuevo;
+            estadoComponentes(estadoObj);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -134,20 +168,21 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
                 DBController.actualizarProyeccionVenta(proyeccionVenta);
                 foreach (Service.lineaProyeccion l in lineas)
                 {
-                    DBController.eliminarLineaInsumo(l.id);
+                    DBController.eliminarLineaProyeccion(l.id);
                     DBController.insertarLineaProyeccion(l, proyeccionVenta.id);
                 }
                 if (flagElim == 1)
                 {
                     foreach (Service.lineaProyeccion l in lineasEliminadas)
                     {
-                        DBController.eliminarLineaInsumo(l.id);
+                        DBController.eliminarLineaProyeccion(l.id);
                     }
                 }
                 MessageBox.Show("Proyección Actualizada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             limpiarComponentes();
-            estadoComponentes(Estado.Inicial);
+            estadoObj = Estado.Inicial;
+            estadoComponentes(estadoObj);
         }
 
         private void btnAgregarP_Click(object sender, EventArgs e)
@@ -174,6 +209,81 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             }
             lineas = lineasElim;
             dgvProductos.DataSource = lineas;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscarProyeccionVenta formProd = new frmBuscarProyeccionVenta();
+            if (formProd.ShowDialog() == DialogResult.OK)
+            {
+                proyeccionVenta = formProd.ProyeccionSeleccionada;
+                txtNOrden.Text = proyeccionVenta.id.ToString();
+                string anio = proyeccionVenta.periodo.ToString("yyyy");
+                cbAnio.SelectedIndex = cbAnio.FindStringExact(anio);
+                string mes = seleccionarMes(proyeccionVenta.periodo.ToString("MM"));
+                cbMes.SelectedIndex = cbMes.FindStringExact(mes);
+                lineas = new BindingList<Service.lineaProyeccion>(DBController.listarLineaProyeccion(proyeccionVenta.id));
+                dgvProductos.DataSource = lineas;
+            }
+            estadoObj = Estado.Buscar;
+            estadoComponentes(estadoObj);
+        }
+
+        private void dgvInsumos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            Service.lineaProyeccion pFila = (Service.lineaProyeccion)dgvProductos.Rows[e.RowIndex].DataBoundItem;
+            dgvProductos.Rows[e.RowIndex].Cells["Codigo"].Style.ForeColor = System.Drawing.Color.Black;
+            dgvProductos.Rows[e.RowIndex].Cells["Nombre"].Style.ForeColor = System.Drawing.Color.Black;
+            dgvProductos.Rows[e.RowIndex].Cells["Cantidad"].Style.ForeColor = System.Drawing.Color.Black;
+            dgvProductos.Rows[e.RowIndex].Cells["Codigo"].Value = pFila.producto.idProducto;
+            dgvProductos.Rows[e.RowIndex].Cells["Nombre"].Value = pFila.producto.nombre;
+            dgvProductos.Rows[e.RowIndex].Cells["Cantidad"].Value = pFila.cantidad;
+        }
+
+        private string seleccionarMes(string v)
+        {
+            switch (v)
+            {
+                case ("01"):
+                    return "Enero";
+                case ("02"):
+                    return "Febrero";
+                case ("03"):
+                    return "Marzo";
+                case ("04"):
+                    return "Abril";
+                case ("05"):
+                    return "Mayo";
+                case ("06"):
+                    return "Junio";
+                case ("07"):
+                    return "Julio";
+                case ("08"):
+                    return "Agosto";
+                case ("09"):
+                    return "Setiembre";
+                case ("10"):
+                    return "Octubre";
+                case ("11"):
+                    return "Noviembre";
+                case ("12"):
+                    return "Diciembre";
+                default:
+                    return "";
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            estadoObj = Estado.Modificar;
+            estadoComponentes(estadoObj);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarComponentes();
+            estadoObj = Estado.Inicial;
+            estadoComponentes(estadoObj);
         }
     }
 }
