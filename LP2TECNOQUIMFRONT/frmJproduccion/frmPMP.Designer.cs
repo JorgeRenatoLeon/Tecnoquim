@@ -107,6 +107,7 @@
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnNotificaciones
             // 
@@ -124,6 +125,7 @@
             this.btnNotificaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNotificaciones.UseVisualStyleBackColor = true;
+            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
             // 
             // button4
             // 
@@ -141,6 +143,7 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
             // btnHome
             // 
@@ -158,6 +161,7 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panel3
             // 

@@ -33,11 +33,10 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.dgvHistorialPlan = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,43 +86,15 @@
             this.dgvHistorialPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorialPlan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
-            this.Producto,
-            this.Cantidad,
-            this.Fecha});
+            this.FechaOrden,
+            this.PMP});
             this.dgvHistorialPlan.Location = new System.Drawing.Point(26, 76);
             this.dgvHistorialPlan.Name = "dgvHistorialPlan";
             this.dgvHistorialPlan.ReadOnly = true;
             this.dgvHistorialPlan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHistorialPlan.Size = new System.Drawing.Size(842, 398);
             this.dgvHistorialPlan.TabIndex = 28;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 160;
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            this.Producto.Width = 250;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 160;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 280;
+            this.dgvHistorialPlan.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrden_CellFormatting);
             // 
             // btnSeleccionar
             // 
@@ -136,6 +107,27 @@
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 160;
+            // 
+            // FechaOrden
+            // 
+            this.FechaOrden.HeaderText = "Fecha Orden";
+            this.FechaOrden.Name = "FechaOrden";
+            this.FechaOrden.ReadOnly = true;
+            this.FechaOrden.Width = 250;
+            // 
+            // PMP
+            // 
+            this.PMP.HeaderText = "PMP";
+            this.PMP.Name = "PMP";
+            this.PMP.ReadOnly = true;
+            this.PMP.Width = 280;
             // 
             // frmOrdenes
             // 
@@ -162,10 +154,9 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.DataGridView dgvHistorialPlan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaOrden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PMP;
     }
 }

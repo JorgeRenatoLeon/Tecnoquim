@@ -268,6 +268,7 @@
             this.btnAgregarP.TabIndex = 40;
             this.btnAgregarP.Text = "+";
             this.btnAgregarP.UseVisualStyleBackColor = true;
+            this.btnAgregarP.Click += new System.EventHandler(this.btnAgregarP_Click);
             // 
             // btnEliminarP
             // 
@@ -278,6 +279,7 @@
             this.btnEliminarP.TabIndex = 41;
             this.btnEliminarP.Text = "-";
             this.btnEliminarP.UseVisualStyleBackColor = true;
+            this.btnEliminarP.Click += new System.EventHandler(this.btnEliminarP_Click);
             // 
             // gbDatosP
             // 

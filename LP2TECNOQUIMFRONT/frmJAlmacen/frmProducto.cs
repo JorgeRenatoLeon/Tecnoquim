@@ -155,6 +155,8 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             txtNomInsumo.Text = "";
             flag = 0;
             flagElim = 0;
+            lineas = new BindingList<lineaInsumo>();
+            lineasEliminadas = new BindingList<lineaInsumo>();
             dgvInsumos.DataSource = null;
             dgvInsumos.Rows.Clear();
             dgvInsumos.Refresh();

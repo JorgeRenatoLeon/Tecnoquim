@@ -44,7 +44,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnPMS_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmPMS formPMS = new frmPMS();
+            frmPMS formPMS = new frmPMS(this.trabajador);
             formPMS.Visible = true;
             close = 1;
             this.Close();
@@ -53,7 +53,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnOrden_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmOrden formOrden = new frmOrden();
+            frmOrden formOrden = new frmOrden(this.trabajador);
             formOrden.Visible = true;
             close = 1;
             this.Close();
@@ -62,7 +62,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnConsultas_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmConsultas formConsultas = new frmConsultas();
+            frmConsultas formConsultas = new frmConsultas(this.trabajador);
             formConsultas.Visible = true;
             close = 1;
             this.Close();

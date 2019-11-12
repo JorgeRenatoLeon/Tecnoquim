@@ -54,6 +54,7 @@
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnOrdenes = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.gbDatosGenerales.SuspendLayout();
             this.gbDatosOrden.SuspendLayout();
@@ -100,6 +101,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(113, 29);
             this.btnModificar.Text = "&Modificar";
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCancelar
             // 
@@ -176,6 +178,7 @@
             // 
             // gbDatosOrden
             // 
+            this.gbDatosOrden.Controls.Add(this.btnOrdenes);
             this.gbDatosOrden.Controls.Add(this.dtpOrden);
             this.gbDatosOrden.Controls.Add(this.lblFecha);
             this.gbDatosOrden.Controls.Add(this.txtNOrden);
@@ -330,6 +333,18 @@
             this.Cantidad.ReadOnly = true;
             this.Cantidad.Width = 175;
             // 
+            // btnOrdenes
+            // 
+            this.btnOrdenes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnOrdenes.Location = new System.Drawing.Point(441, 37);
+            this.btnOrdenes.Name = "btnOrdenes";
+            this.btnOrdenes.Size = new System.Drawing.Size(68, 28);
+            this.btnOrdenes.TabIndex = 37;
+            this.btnOrdenes.Text = "...";
+            this.btnOrdenes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnOrdenes.UseVisualStyleBackColor = true;
+            this.btnOrdenes.Click += new System.EventHandler(this.btnOrdenes_Click);
+            // 
             // frmGestionarOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,5 +399,6 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnOrdenes;
     }
 }

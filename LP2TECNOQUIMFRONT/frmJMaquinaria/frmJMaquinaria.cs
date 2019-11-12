@@ -89,6 +89,15 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
                 txtNOrden.Text = maquinaria.id.ToString();
                 txtNombre.Text= maquinaria.nombre;
                 txtTipo.Text=maquinaria.tipo;
+
+                if (detalle.activo == true)
+                {
+                    rbActivo.Checked = true;
+                }
+                else
+                {
+                    rbInactivo.Checked = true;
+                }
             }
             estadoComponentes(Estado.Buscar);
         }

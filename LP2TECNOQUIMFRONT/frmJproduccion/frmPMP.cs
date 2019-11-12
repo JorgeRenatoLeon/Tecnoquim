@@ -5,9 +5,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
     public partial class frmPMS : Form
     {
+        Service.trabajador trabajador = new Service.trabajador();
         int close = 0;
-        public frmPMS()
+        public frmPMS(Service.trabajador trabajadors = null)
         {
+            this.trabajador = trabajadors;
             InitializeComponent();
         }
 
@@ -36,15 +38,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             }
         }
 
-        private void pbHome_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmJProduccion fromJProd = new frmJProduccion(1);
-            fromJProd.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
         private void btnCrear_Click(object sender, EventArgs e)
         {
             frmGestionarPlan formGestionarPlan = new frmGestionarPlan();
@@ -55,7 +48,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnConsultas_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmConsultas formConsultas = new frmConsultas();
+            frmConsultas formConsultas = new frmConsultas(this.trabajador);
             formConsultas.Visible = true;
             close = 1;
             this.Close();
@@ -70,7 +63,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmPerfil formPerfil = new frmPerfil();
+            frmPerfil formPerfil = new frmPerfil(this.trabajador);
             formPerfil.Visible = true;
             close = 1;
             this.Close();
@@ -79,7 +72,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnNotificaciones_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmNotificaciones formNot = new frmNotificaciones();
+            frmNotificaciones formNot = new frmNotificaciones(this.trabajador);
             formNot.Visible = true;
             close = 1;
             this.Close();
@@ -88,6 +81,15 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void frmPMS_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (close == 0) { Environment.Exit(0); }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmJProduccion fromJProd = new frmJProduccion(1, this.trabajador);
+            fromJProd.Visible = true;
+            close = 1;
+            this.Close();
         }
     }
 }

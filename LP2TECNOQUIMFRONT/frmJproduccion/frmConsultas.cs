@@ -6,16 +6,18 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
     public partial class frmConsultas : Form
     {
+        Service.trabajador trabajador = new Service.trabajador();
         int close = 0;
-        public frmConsultas()
+        public frmConsultas(Service.trabajador trabajadors = null)
         {
+            this.trabajador = trabajadors;
             InitializeComponent();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmJProduccion fromJProd = new frmJProduccion(1);
+            frmJProduccion fromJProd = new frmJProduccion(1, this.trabajador);
             fromJProd.Visible = true;
             close = 1;
             this.Close();
@@ -49,31 +51,31 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnProducto_Click(object sender, EventArgs e)
         {
             frmProducto formProducto = new frmProducto();
-            formProducto.Visible = true;
+            formProducto.ShowDialog(this);
         }
 
         private void btnInsumos_Click(object sender, EventArgs e)
         {
             frmInsumos formInsumos = new frmInsumos();
-            formInsumos.Visible = true;
+            formInsumos.ShowDialog(this);
         }
 
         private void btnMaquinaria_Click(object sender, EventArgs e)
         {
             frmMaquinaria formMaquinaria = new frmMaquinaria();
-            formMaquinaria.Visible = true;
+            formMaquinaria.ShowDialog(this);
         }
 
         private void btnPolitica_Click(object sender, EventArgs e)
         {
             frmPolitica formPolitica = new frmPolitica();
-            formPolitica.Visible = true;
+            formPolitica.ShowDialog(this);
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmPerfil formPerfil = new frmPerfil();
+            frmPerfil formPerfil = new frmPerfil(this.trabajador);
             formPerfil.Visible = true;
             close = 1;
             this.Close();
@@ -82,7 +84,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnNotificaciones_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmNotificaciones formNot = new frmNotificaciones();
+            frmNotificaciones formNot = new frmNotificaciones(this.trabajador);
             formNot.Visible = true;
             close = 1;
             this.Close();

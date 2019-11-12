@@ -44,7 +44,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void button4_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmConsultas formConsultas = new frmConsultas();
+            frmConsultas formConsultas = new frmConsultas(this.trabajador);
             formConsultas.Visible = true;
             close = 1;
             this.Close();

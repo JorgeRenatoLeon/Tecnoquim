@@ -12,11 +12,19 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 {
     public partial class frmGestionarProyeccionVenta : Form
     {
+        int flagElim = 0;
+        Service.proyeccionVenta proyeccionVenta;
         Service.producto producto;
+        Service.lineaProyeccion lineaProyeccion;
+        BindingList<Service.lineaProyeccion> lineas;
+        BindingList<Service.lineaProyeccion> lineasEliminadas;
+        Estado estadoObj;
+        Service.ServicioClient DBController = new Service.ServicioClient();
 
         public frmGestionarProyeccionVenta()
         {
             InitializeComponent();
+            estadoObj = Estado.Inicial;
             BindingList<String> meses;
             meses = new BindingList<String>();
             meses.Add("Enero");
@@ -40,7 +48,13 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             anios.Add("2020");
             cbAnio.DataSource = anios;
 
-            estadoComponentes(Estado.Inicial);
+            
+            producto = new Service.producto();
+            lineaProyeccion = new Service.lineaProyeccion();
+            proyeccionVenta = new Service.proyeccionVenta();
+            lineasEliminadas = new BindingList<Service.lineaProyeccion>();
+            lineas = new BindingList<Service.lineaProyeccion>();
+            estadoComponentes(estadoObj);
         }
         public void limpiarComponentes()
         {
@@ -89,7 +103,6 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
                 producto = formBuscarP.ProductoSeleccionado;
                 txtCodigoP.Text = producto.idProducto.ToString();
                 txtNombreP.Text = producto.nombre;
-                
             }
             
         }
@@ -100,14 +113,67 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             limpiarComponentes();
         }
 
-        private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-        }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (estadoObj == Estado.Nuevo)
+            {
+                proyeccionVenta.periodo = DateTime.Parse(cbAnio.SelectedValue + "-" + cbMes.SelectedValue + "-01");
+                proyeccionVenta.proyecciones = lineas.ToArray();
+                DBController.insertarProyeccionVenta(proyeccionVenta);
+                foreach (Service.lineaProyeccion l in lineas)
+                {
+                    DBController.insertarLineaProyeccion(l, proyeccionVenta.id);
+                }
+                MessageBox.Show("Proyección Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            }
+            else if (estadoObj == Estado.Modificar)
+            {
+                proyeccionVenta.periodo = DateTime.Parse(cbAnio.SelectedValue + "-" + cbMes.SelectedValue + "-01");
+                proyeccionVenta.proyecciones = lineas.ToArray();
+                DBController.actualizarProyeccionVenta(proyeccionVenta);
+                foreach (Service.lineaProyeccion l in lineas)
+                {
+                    DBController.eliminarLineaInsumo(l.id);
+                    DBController.insertarLineaProyeccion(l, proyeccionVenta.id);
+                }
+                if (flagElim == 1)
+                {
+                    foreach (Service.lineaProyeccion l in lineasEliminadas)
+                    {
+                        DBController.eliminarLineaInsumo(l.id);
+                    }
+                }
+                MessageBox.Show("Proyección Actualizada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            limpiarComponentes();
+            estadoComponentes(Estado.Inicial);
+        }
+
+        private void btnAgregarP_Click(object sender, EventArgs e)
+        {
+            lineaProyeccion.producto = producto;
+            lineaProyeccion.cantidad = int.Parse(txtCantidadP.Text);
+            lineas.Add(lineaProyeccion);
+            dgvProductos.DataSource = lineas;
+        }
+
+        private void btnEliminarP_Click(object sender, EventArgs e)
+        {
+            string str = dgvProductos.Rows[dgvProductos.SelectedRows[0].Index].Cells[1].Value.ToString();
+
+            BindingList<Service.lineaProyeccion> lineasElim = new BindingList<Service.lineaProyeccion>();
+            foreach (Service.lineaProyeccion item in lineas)
+            {
+                if (item.producto.nombre != str) lineasElim.Add(item);
+                if (estadoObj == Estado.Modificar && item.producto.nombre == str)
+                {
+                    lineasEliminadas.Add(item);
+                    flagElim = 1;
+                }
+            }
+            lineas = lineasElim;
+            dgvProductos.DataSource = lineas;
         }
     }
 }

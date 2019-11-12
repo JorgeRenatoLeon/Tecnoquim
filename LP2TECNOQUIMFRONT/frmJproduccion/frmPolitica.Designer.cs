@@ -32,12 +32,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.dgvHistorialPlan = new System.Windows.Forms.DataGridView();
+            this.dgvPolitica = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad_Maxima = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad_Minima = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPolitica)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -58,6 +58,7 @@
             this.btnBuscar.TabIndex = 26;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblNombre
             // 
@@ -70,10 +71,10 @@
             this.lblNombre.TabIndex = 25;
             this.lblNombre.Text = "Politicas";
             // 
-            // dgvHistorialPlan
+            // dgvPolitica
             // 
-            this.dgvHistorialPlan.AllowUserToAddRows = false;
-            this.dgvHistorialPlan.AllowUserToDeleteRows = false;
+            this.dgvPolitica.AllowUserToAddRows = false;
+            this.dgvPolitica.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,19 +82,20 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistorialPlan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvHistorialPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorialPlan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPolitica.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPolitica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPolitica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nombre,
             this.Cantidad_Maxima,
             this.Cantidad_Minima});
-            this.dgvHistorialPlan.Location = new System.Drawing.Point(31, 78);
-            this.dgvHistorialPlan.Name = "dgvHistorialPlan";
-            this.dgvHistorialPlan.ReadOnly = true;
-            this.dgvHistorialPlan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorialPlan.Size = new System.Drawing.Size(842, 398);
-            this.dgvHistorialPlan.TabIndex = 23;
+            this.dgvPolitica.Location = new System.Drawing.Point(31, 78);
+            this.dgvPolitica.Name = "dgvPolitica";
+            this.dgvPolitica.ReadOnly = true;
+            this.dgvPolitica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPolitica.Size = new System.Drawing.Size(842, 398);
+            this.dgvPolitica.TabIndex = 23;
+            this.dgvPolitica.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPolitica_CellFormatting);
             // 
             // Codigo
             // 
@@ -132,11 +134,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.dgvHistorialPlan);
+            this.Controls.Add(this.dgvPolitica);
             this.Name = "frmPolitica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPolitica";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPolitica)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,7 +148,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.DataGridView dgvHistorialPlan;
+        private System.Windows.Forms.DataGridView dgvPolitica;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad_Maxima;

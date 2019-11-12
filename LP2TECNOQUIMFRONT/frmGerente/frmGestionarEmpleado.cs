@@ -110,6 +110,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
                 DBController.actualizarTrabajador(trabajador);
                 MessageBox.Show("Se han actualizado los datos", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            limpiarComponentes();
             estadoComponentes(Estado.Inicial);
         }
 

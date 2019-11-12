@@ -31,10 +31,13 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         public frmGestionarOrden()
         {
             InitializeComponent();
+            estadoFormulario = Estado.Inicial;
+            estadoComponentes(estadoFormulario);
             lineas = new BindingList<lineaOrden>();
             lineasEliminadas = new BindingList<lineaOrden>();
             lineaOrden = new lineaOrden();
             _orderProduccion = new ordenProduccion();
+            dgvOrden.AutoGenerateColumns = false;
         }
 
         public frmGestionarOrden(DateTime periodoPlanMaestroProduccion, int idPlanMaestroProduccion)
@@ -118,7 +121,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     //Botones
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = false;
-                    btnModificar.Enabled = false;
+                    btnModificar.Enabled = true;
                     btnCancelar.Enabled = true;
 
                     // Cajas de texto
@@ -213,25 +216,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             }
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             limpiarComponentes();
-
+            estadoFormulario = Estado.Nuevo;
+            estadoComponentes(estadoFormulario);
         }
 
         public void limpiarComponentes()
@@ -240,7 +229,13 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             txtCodigoProducto.Text = "";
             txtNombre.Text = "";
             txtCantidad.Text = "";
-
+            lineas = new BindingList<lineaOrden>();
+            lineasEliminadas = new BindingList<lineaOrden>();
+            lineaOrden = new lineaOrden();
+            _orderProduccion = new ordenProduccion();
+            dgvOrden.DataSource = null;
+            dgvOrden.Rows.Clear();
+            dgvOrden.Refresh();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -256,10 +251,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
-            this.Visible = false;
-            frmOrden formProducto = new frmOrden();
-            formProducto.Visible = true;
-            this.Close();
+            limpiarComponentes();
+            estadoFormulario = Estado.Inicial;
+            estadoComponentes(estadoFormulario);
         }
 
         private void frmGestionarOrden_Load(object sender, EventArgs e)
@@ -313,56 +307,59 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
+            _orderProduccion.fecha = dtpOrden.Value;
             if (estadoFormulario == Estado.Nuevo)
             {
-                producto.presentacion = txtPres.Text;
-                producto.granularidad = float.Parse(txtGranu.Text);
-
-                instructivo = new Service.instructivo();
-                instructivo.actividades = txtAct.Text;
-                instructivo.insumos = lineas.ToArray();
-                producto.instructivo = instructivo;
-                if (flag == 1)
-                {
-                    producto.restriccion = true;
-                }
-                else
-                {
-                    producto.restriccion = false;
-                }
-                _orderProduccion.id = DBController.insertarOrdenProduccion(_orderProduccion,0);
+                _orderProduccion.id = DBController.insertarOrdenProduccion(_orderProduccion,1);
+                txtNOrden.Text = _orderProduccion.id.ToString();
                 foreach (Service.lineaOrden l in lineas)
                 {
                     DBController.insertarLineaOrden(l, _orderProduccion.id);
                 }
-                MessageBox.Show("Producto Registrado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Orden de Producción correctamente añadida.", "Mensaje Confirmacion", MessageBoxButtons.OK);
 
             }
             else if (estadoFormulario == Estado.Modificar)
             {
-                producto.nombre = txtNomProd.Text;
-                producto.presentacion = txtPres.Text;
-                producto.granularidad = float.Parse(txtGranu.Text);
-                producto.instructivo.insumos = lineas.ToArray();
-
-                DBController.actualizarProducto(producto);
+                DBController.actualizarOrdenProduccion(_orderProduccion,1);
                 DBController.actualizarInstructivo(producto.instructivo, producto.idProducto);
-                foreach (Service.lineaInsumo l in lineas)
+                foreach (Service.lineaOrden l in lineas)
                 {
-                    DBController.eliminarLineaInsumo(l.idLineaI);
-                    DBController.insertarLineaInsumo(l, producto.instructivo.id);
+                    DBController.eliminarLineaOrden(l.idLineaOrden);
+                    DBController.insertarLineaOrden(l, _orderProduccion.id);
                 }
                 if (flagElim == 1)
                 {
-                    foreach (Service.lineaInsumo l in lineasEliminadas)
+                    foreach (Service.lineaOrden l in lineasEliminadas)
                     {
-                        DBController.eliminarLineaInsumo(l.idLineaI);
+                        DBController.eliminarLineaOrden(l.idLineaOrden);
                     }
                 }
-                MessageBox.Show("Producto Actualizado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Orden de Producción correctamente modificada.", "Mensaje Confirmacion", MessageBoxButtons.OK);
             }
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            estadoFormulario = Estado.Modificar;
+            estadoComponentes(estadoFormulario);
+        }
+
+        private void btnOrdenes_Click(object sender, EventArgs e)
+        {
+            frmOrdenes formOrd = new frmOrdenes();
+            if (formOrd.ShowDialog() == DialogResult.OK)
+            {
+                _orderProduccion = formOrd.OrdenSeleccionada;
+                txtNOrden.Text = _orderProduccion.id.ToString();
+                dtpOrden.Value = _orderProduccion.fecha;
+                lineas = new BindingList<lineaOrden>(DBController.listarLineaOrden(_orderProduccion.id));
+                dgvOrden.DataSource = lineas;
+            }
+            estadoFormulario = Estado.Buscar;
+            estadoComponentes(Estado.Buscar);
         }
     }
 }

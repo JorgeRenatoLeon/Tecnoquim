@@ -53,6 +53,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             almacenI.nLote = int.Parse(txtLote.Text);
             DBController.actualizarDetalleAlmacenInsumo(almacenI);
             MessageBox.Show("Se actualizo el stock Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
 
         }
 

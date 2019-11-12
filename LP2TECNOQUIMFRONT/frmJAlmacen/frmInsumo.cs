@@ -175,6 +175,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
                 MessageBox.Show("Insumo Actualizado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            limpiarComponentes();
             estadoComponentes(Estado.Inicial);
         }
 
