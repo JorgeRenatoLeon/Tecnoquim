@@ -101,7 +101,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 
                 case Estado.Buscar:
                     btnNuevo.Enabled = true;
-                    btnGuardar.Enabled = true;
+                    btnGuardar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnBuscar.Enabled = true;
                     btnCancelar.Enabled = true;
@@ -115,7 +115,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
                 case Estado.Modificar:
                     btnNuevo.Enabled = true;
                     btnGuardar.Enabled = true;
-                    btnModificar.Enabled = true;
+                    btnModificar.Enabled = false;
                     btnBuscar.Enabled = true;
                     btnCancelar.Enabled = true;
                     btnAgregarP.Enabled = true;
@@ -151,7 +151,8 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
         {
             if (estadoObj == Estado.Nuevo)
             {
-                proyeccionVenta.periodo = DateTime.Parse(cbAnio.SelectedValue + "-" + cbMes.SelectedValue + "-01");
+                proyeccionVenta.periodo = DateTime.Parse(cbAnio.SelectedValue + "-" + (cbMes.SelectedIndex + 1) + "-01");
+                proyeccionVenta.periodoSpecified = true;
                 proyeccionVenta.proyecciones = lineas.ToArray();
                 DBController.insertarProyeccionVenta(proyeccionVenta);
                 foreach (Service.lineaProyeccion l in lineas)
@@ -163,7 +164,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             }
             else if (estadoObj == Estado.Modificar)
             {
-                proyeccionVenta.periodo = DateTime.Parse(cbAnio.SelectedValue + "-" + cbMes.SelectedValue + "-01");
+                proyeccionVenta.periodo = DateTime.Parse(cbAnio.SelectedValue + "-" + (cbMes.SelectedIndex+1) + "-01");
                 proyeccionVenta.proyecciones = lineas.ToArray();
                 DBController.actualizarProyeccionVenta(proyeccionVenta);
                 foreach (Service.lineaProyeccion l in lineas)
@@ -189,7 +190,13 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
         {
             lineaProyeccion.producto = producto;
             lineaProyeccion.cantidad = int.Parse(txtCantidadP.Text);
-            lineas.Add(lineaProyeccion);
+            BindingList<Service.lineaProyeccion> lineasAg = new BindingList<Service.lineaProyeccion>();
+            foreach (Service.lineaProyeccion item in lineas)
+            {
+                lineasAg.Add(item);
+            }
+            lineasAg.Add(lineaProyeccion);
+            lineas = lineasAg;
             dgvProductos.DataSource = lineas;
         }
 
@@ -220,13 +227,17 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
                 txtNOrden.Text = proyeccionVenta.id.ToString();
                 string anio = proyeccionVenta.periodo.ToString("yyyy");
                 cbAnio.SelectedIndex = cbAnio.FindStringExact(anio);
-                string mes = seleccionarMes(proyeccionVenta.periodo.ToString("MM"));
+                string mes = seleccionarMes(proyeccionVenta.periodo.AddDays(1).ToString("MM"));
                 cbMes.SelectedIndex = cbMes.FindStringExact(mes);
-                lineas = new BindingList<Service.lineaProyeccion>(DBController.listarLineaProyeccion(proyeccionVenta.id));
-                dgvProductos.DataSource = lineas;
+                Service.lineaProyeccion[] l = DBController.listarLineaProyeccion(proyeccionVenta.id);
+                if (l != null)
+                {
+                    lineas = new BindingList<Service.lineaProyeccion>(l);
+                    dgvProductos.DataSource = lineas;
+                }
+                estadoObj = Estado.Buscar;
+                estadoComponentes(estadoObj);
             }
-            estadoObj = Estado.Buscar;
-            estadoComponentes(estadoObj);
         }
 
         private void dgvInsumos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
