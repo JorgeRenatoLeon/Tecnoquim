@@ -91,12 +91,12 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             if (rbAprobado.Checked)
             {
                 pmp.estado = Service.estado.Aprobado;
-                mensaje.descripcion = "PLAN MAESTRO APROBADO. " + txtComentario;
+                mensaje.descripcion = "PLAN MAESTRO APROBADO. " + txtComentario.Text;
             }
             else if (rbDesaprobado.Checked)
             {
                 pmp.estado = Service.estado.Rechazado;
-                mensaje.descripcion = "PLAN MAESTRO RECHAZADO. " + txtComentario;
+                mensaje.descripcion = "PLAN MAESTRO RECHAZADO. " + txtComentario.Text;
             }
             DBController.actualizarPMP(pmp);
 
