@@ -358,7 +358,6 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmGestionarOrden";
             this.Text = "frmCrearOrden";
-            this.Load += new System.EventHandler(this.frmGestionarOrden_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.gbDatosGenerales.ResumeLayout(false);

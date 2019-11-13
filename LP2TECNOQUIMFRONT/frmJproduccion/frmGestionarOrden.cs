@@ -78,7 +78,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     //Grupos
                     gbDatosGenerales.Enabled = false;
                     gbDetalleOrden.Enabled = false;
-                    gbDatosOrden.Enabled = false;
+                    gbDatosOrden.Enabled = true;
+                    txtNOrden.Enabled = false;
+                    dtpOrden.Enabled = false;
+                    btnOrdenes.Enabled = true;
 
                     //Asignar el estado
                     estadoFormulario = estado;
@@ -119,31 +122,37 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 case Estado.Buscar:
 
                     //Botones
-                    btnNuevo.Enabled = false;
+                    btnNuevo.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnCancelar.Enabled = true;
 
                     // Cajas de texto
                     txtNOrden.Enabled = false;
-                    txtNombre.Enabled = true;
+                    txtNombre.Enabled = false;
                     txtCodigoProducto.Enabled = false;
-                    txtCantidad.Enabled = true;
+                    txtCantidad.Enabled = false;
 
                     //Etiquetas
-                    lblFecha.Enabled = true;
-                    lblCodigoProducto.Enabled = true;
-                    lblCantidadDetalle.Enabled = true;
-                    lblNombreProducto.Enabled = true;
-                    lblNOrden.Enabled = true;
+                    lblFecha.Enabled = false;
+                    lblCodigoProducto.Enabled = false;
+                    lblCantidadDetalle.Enabled = false;
+                    lblNombreProducto.Enabled = false;
+                    lblNOrden.Enabled = false;
 
                     //DataGridView
-                    dgvOrdenProduccion.Enabled = true;
+                    dgvOrdenProduccion.Enabled = false;
 
                     //Grupos
-                    gbDatosGenerales.Enabled = true;
-                    gbDetalleOrden.Enabled = true;
+                    gbDatosGenerales.Enabled = false;
+                    gbDetalleOrden.Enabled = false;
                     gbDatosOrden.Enabled = true;
+                    txtNOrden.Enabled = false;
+                    dtpOrden.Enabled = false;
+                    btnOrdenes.Enabled = true;
+
+                    //Asignar el estado
+                    estadoFormulario = estado;
 
                     break;
                 case Estado.Modificar:
@@ -256,11 +265,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             estadoComponentes(estadoFormulario);
         }
 
-        private void frmGestionarOrden_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             lineaOrden = new Service.lineaOrden();
@@ -355,11 +359,15 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 _orderProduccion = formOrd.OrdenSeleccionada;
                 txtNOrden.Text = _orderProduccion.id.ToString();
                 dtpOrden.Value = _orderProduccion.fecha;
-                lineas = new BindingList<lineaOrden>(DBController.listarLineaOrden(_orderProduccion.id));
-                dgvOrdenProduccion.DataSource = lineas;
+                Service.lineaOrden[] l = DBController.listarLineaOrden(_orderProduccion.id);
+                if (l != null)
+                {
+                    lineas = new BindingList<lineaOrden>(l);
+                    dgvOrdenProduccion.DataSource = lineas;
+                }
+                estadoFormulario = Estado.Buscar;
+                estadoComponentes(Estado.Buscar);
             }
-            estadoFormulario = Estado.Buscar;
-            estadoComponentes(Estado.Buscar);
         }
     }
 }
