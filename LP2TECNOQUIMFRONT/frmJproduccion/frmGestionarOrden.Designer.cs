@@ -41,6 +41,7 @@
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.lblCodigoProducto = new System.Windows.Forms.Label();
             this.gbDatosOrden = new System.Windows.Forms.GroupBox();
+            this.btnOrdenes = new System.Windows.Forms.Button();
             this.dtpOrden = new System.Windows.Forms.DateTimePicker();
             this.lblFecha = new System.Windows.Forms.Label();
             this.txtNOrden = new System.Windows.Forms.TextBox();
@@ -50,16 +51,15 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblCantidadDetalle = new System.Windows.Forms.Label();
-            this.dgvOrden = new System.Windows.Forms.DataGridView();
+            this.dgvOrdenProduccion = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnOrdenes = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.gbDatosGenerales.SuspendLayout();
             this.gbDatosOrden.SuspendLayout();
             this.gbDetalleOrden.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenProduccion)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -192,6 +192,18 @@
             this.gbDatosOrden.TabStop = false;
             this.gbDatosOrden.Text = "Datos de la Orden";
             // 
+            // btnOrdenes
+            // 
+            this.btnOrdenes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnOrdenes.Location = new System.Drawing.Point(441, 37);
+            this.btnOrdenes.Name = "btnOrdenes";
+            this.btnOrdenes.Size = new System.Drawing.Size(68, 28);
+            this.btnOrdenes.TabIndex = 37;
+            this.btnOrdenes.Text = "...";
+            this.btnOrdenes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnOrdenes.UseVisualStyleBackColor = true;
+            this.btnOrdenes.Click += new System.EventHandler(this.btnOrdenes_Click);
+            // 
             // dtpOrden
             // 
             this.dtpOrden.Location = new System.Drawing.Point(134, 89);
@@ -292,23 +304,23 @@
             this.lblCantidadDetalle.TabIndex = 19;
             this.lblCantidadDetalle.Text = "Cantidad:";
             // 
-            // dgvOrden
+            // dgvOrdenProduccion
             // 
-            this.dgvOrden.AllowUserToAddRows = false;
-            this.dgvOrden.AllowUserToDeleteRows = false;
-            this.dgvOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrden.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvOrdenProduccion.AllowUserToAddRows = false;
+            this.dgvOrdenProduccion.AllowUserToDeleteRows = false;
+            this.dgvOrdenProduccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrdenProduccion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Producto,
             this.Cantidad});
-            this.dgvOrden.Location = new System.Drawing.Point(24, 489);
-            this.dgvOrden.Name = "dgvOrden";
-            this.dgvOrden.ReadOnly = true;
-            this.dgvOrden.RowHeadersWidth = 50;
-            this.dgvOrden.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrden.Size = new System.Drawing.Size(679, 204);
-            this.dgvOrden.TabIndex = 29;
-            this.dgvOrden.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrden_CellFormatting);
+            this.dgvOrdenProduccion.Location = new System.Drawing.Point(24, 489);
+            this.dgvOrdenProduccion.Name = "dgvOrdenProduccion";
+            this.dgvOrdenProduccion.ReadOnly = true;
+            this.dgvOrdenProduccion.RowHeadersWidth = 50;
+            this.dgvOrdenProduccion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrdenProduccion.Size = new System.Drawing.Size(679, 204);
+            this.dgvOrdenProduccion.TabIndex = 29;
+            this.dgvOrdenProduccion.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrden_CellFormatting);
             // 
             // Codigo
             // 
@@ -333,25 +345,13 @@
             this.Cantidad.ReadOnly = true;
             this.Cantidad.Width = 175;
             // 
-            // btnOrdenes
-            // 
-            this.btnOrdenes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnOrdenes.Location = new System.Drawing.Point(441, 37);
-            this.btnOrdenes.Name = "btnOrdenes";
-            this.btnOrdenes.Size = new System.Drawing.Size(68, 28);
-            this.btnOrdenes.TabIndex = 37;
-            this.btnOrdenes.Text = "...";
-            this.btnOrdenes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnOrdenes.UseVisualStyleBackColor = true;
-            this.btnOrdenes.Click += new System.EventHandler(this.btnOrdenes_Click);
-            // 
             // frmGestionarOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.ClientSize = new System.Drawing.Size(730, 716);
-            this.Controls.Add(this.dgvOrden);
+            this.Controls.Add(this.dgvOrdenProduccion);
             this.Controls.Add(this.gbDetalleOrden);
             this.Controls.Add(this.gbDatosOrden);
             this.Controls.Add(this.gbDatosGenerales);
@@ -367,7 +367,7 @@
             this.gbDatosOrden.PerformLayout();
             this.gbDetalleOrden.ResumeLayout(false);
             this.gbDetalleOrden.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenProduccion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,7 +391,7 @@
         private System.Windows.Forms.GroupBox gbDetalleOrden;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblCantidadDetalle;
-        private System.Windows.Forms.DataGridView dgvOrden;
+        private System.Windows.Forms.DataGridView dgvOrdenProduccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
