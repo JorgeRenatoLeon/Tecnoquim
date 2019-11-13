@@ -34,10 +34,7 @@
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.dgvOrden = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Orden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMaquinaria = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNOrden = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,8 +49,11 @@
             this.calOrdenProduccion = new System.Windows.Forms.MonthCalendar();
             this.btnBuscarOrden = new System.Windows.Forms.Button();
             this.dgvOrdenProduccion = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Maquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinaria)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gbDatosGenerales.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -110,45 +110,22 @@
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // dgvOrden
+            // dgvMaquinaria
             // 
-            this.dgvOrden.AllowUserToAddRows = false;
-            this.dgvOrden.AllowUserToDeleteRows = false;
-            this.dgvOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrden.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMaquinaria.AllowUserToAddRows = false;
+            this.dgvMaquinaria.AllowUserToDeleteRows = false;
+            this.dgvMaquinaria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMaquinaria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
-            this.Orden,
+            this.Maquinaria,
             this.Fecha});
-            this.dgvOrden.Location = new System.Drawing.Point(26, 521);
-            this.dgvOrden.Name = "dgvOrden";
-            this.dgvOrden.ReadOnly = true;
-            this.dgvOrden.RowHeadersWidth = 50;
-            this.dgvOrden.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrden.Size = new System.Drawing.Size(801, 162);
-            this.dgvOrden.TabIndex = 33;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 150;
-            // 
-            // Orden
-            // 
-            this.Orden.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Orden.FillWeight = 150F;
-            this.Orden.HeaderText = "Orden";
-            this.Orden.Name = "Orden";
-            this.Orden.ReadOnly = true;
-            this.Orden.Width = 300;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 175;
+            this.dgvMaquinaria.Location = new System.Drawing.Point(26, 525);
+            this.dgvMaquinaria.Name = "dgvMaquinaria";
+            this.dgvMaquinaria.ReadOnly = true;
+            this.dgvMaquinaria.RowHeadersWidth = 50;
+            this.dgvMaquinaria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMaquinaria.Size = new System.Drawing.Size(801, 162);
+            this.dgvMaquinaria.TabIndex = 33;
             // 
             // groupBox1
             // 
@@ -299,6 +276,29 @@
             this.dgvOrdenProduccion.Size = new System.Drawing.Size(504, 168);
             this.dgvOrdenProduccion.TabIndex = 38;
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 150;
+            // 
+            // Maquinaria
+            // 
+            this.Maquinaria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Maquinaria.FillWeight = 150F;
+            this.Maquinaria.HeaderText = "Maquinaria";
+            this.Maquinaria.Name = "Maquinaria";
+            this.Maquinaria.ReadOnly = true;
+            this.Maquinaria.Width = 300;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 175;
+            // 
             // frmGestionarPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,7 +306,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.ClientSize = new System.Drawing.Size(842, 719);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dgvOrden);
+            this.Controls.Add(this.dgvMaquinaria);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbDatosGenerales);
             this.Controls.Add(this.toolStrip1);
@@ -314,7 +314,7 @@
             this.Text = "°";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinaria)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbDatosGenerales.ResumeLayout(false);
@@ -333,7 +333,7 @@
         private System.Windows.Forms.ToolStripButton btnGuardar;
         private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.ToolStripButton btnCancelar;
-        private System.Windows.Forms.DataGridView dgvOrden;
+        private System.Windows.Forms.DataGridView dgvMaquinaria;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtNOrden;
         private System.Windows.Forms.Label label5;
@@ -344,12 +344,12 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnAgregarMaquinaria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Orden;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnBuscarOrden;
         private System.Windows.Forms.MonthCalendar calOrdenProduccion;
         private System.Windows.Forms.DataGridView dgvOrdenProduccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Maquinaria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
     }
 }
