@@ -344,7 +344,7 @@
   </xs:complexType>
   <xs:complexType name="listarOrdenesProduccionFecha">
     <xs:sequence>
-      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fecha" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarOrdenesProduccionFechaResponse">

@@ -15,6 +15,8 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
     {
 
         Service.ServicioClient DBController = new Service.ServicioClient();
+        BindingList<Service.maquinaria> maquinarias;
+        BindingList<Service.ordenProduccion> ordenes;
         private Service.planMaestroProduccion _pmp;
 
         public planMaestroProduccion PMP { get => _pmp; set => _pmp = value; }
@@ -22,6 +24,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         public frmGestionarPlan()
         {
             InitializeComponent();
+            PMP = new planMaestroProduccion();
+            maquinarias = new BindingList<maquinaria>();
+            ordenes = new BindingList<ordenProduccion>();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -75,6 +80,29 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void calOrdenProduccion_DateChanged(object sender, DateRangeEventArgs e)
         {
 
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            frmHistorialPMP form = new frmHistorialPMP();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                PMP = form.PMPSeleccionado;
+                txtNOrden.Text = PMP.id.ToString();
+                Service.maquinaria[] lm = PMP.maquinarias;
+                Service.ordenProduccion[] lo = PMP.ordenes;
+                if (lm != null)
+                {
+                    maquinarias = new BindingList<maquinaria>(lm);
+                    dgvMaquinaria.DataSource = maquinarias;
+                }
+                if (lo != null)
+                {
+                    ordenes = new BindingList<ordenProduccion>(lo);
+                }
+                //estadoFormulario = Estado.Buscar;
+                //estadoComponentes(Estado.Buscar);
+            }
         }
     }
 }

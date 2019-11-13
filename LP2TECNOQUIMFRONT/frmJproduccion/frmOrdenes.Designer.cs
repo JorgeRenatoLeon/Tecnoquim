@@ -36,7 +36,6 @@
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,8 +85,7 @@
             this.dgvHistorialPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorialPlan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
-            this.FechaOrden,
-            this.PMP});
+            this.FechaOrden});
             this.dgvHistorialPlan.Location = new System.Drawing.Point(26, 76);
             this.dgvHistorialPlan.Name = "dgvHistorialPlan";
             this.dgvHistorialPlan.ReadOnly = true;
@@ -122,13 +120,6 @@
             this.FechaOrden.ReadOnly = true;
             this.FechaOrden.Width = 250;
             // 
-            // PMP
-            // 
-            this.PMP.HeaderText = "PMP";
-            this.PMP.Name = "PMP";
-            this.PMP.ReadOnly = true;
-            this.PMP.Width = 280;
-            // 
             // frmOrdenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +148,5 @@
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaOrden;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PMP;
     }
 }

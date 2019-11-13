@@ -4261,12 +4261,12 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fecha;
+        public string fecha;
         
         public listarOrdenesProduccionFechaRequest() {
         }
         
-        public listarOrdenesProduccionFechaRequest(System.DateTime fecha) {
+        public listarOrdenesProduccionFechaRequest(string fecha) {
             this.fecha = fecha;
         }
     }
@@ -5853,7 +5853,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.listarOrdenesProduccionFecha(request);
         }
         
-        public LP2TECNOQUIMFRONT.Service.ordenProduccion[] listarOrdenesProduccionFecha(System.DateTime fecha) {
+        public LP2TECNOQUIMFRONT.Service.ordenProduccion[] listarOrdenesProduccionFecha(string fecha) {
             LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest();
             inValue.fecha = fecha;
             LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarOrdenesProduccionFecha(inValue);
@@ -5865,7 +5865,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.listarOrdenesProduccionFechaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse> listarOrdenesProduccionFechaAsync(System.DateTime fecha) {
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaResponse> listarOrdenesProduccionFechaAsync(string fecha) {
             LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarOrdenesProduccionFechaRequest();
             inValue.fecha = fecha;
             return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarOrdenesProduccionFechaAsync(inValue);

@@ -35,6 +35,9 @@
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.dgvMaquinaria = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Maquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNOrden = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,12 +49,10 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvOrdenProduccion = new System.Windows.Forms.DataGridView();
             this.calOrdenProduccion = new System.Windows.Forms.MonthCalendar();
             this.btnBuscarOrden = new System.Windows.Forms.Button();
-            this.dgvOrdenProduccion = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Maquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinaria)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -67,6 +68,7 @@
             this.btnNuevo,
             this.btnGuardar,
             this.btnModificar,
+            this.btnBuscar,
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -126,6 +128,29 @@
             this.dgvMaquinaria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMaquinaria.Size = new System.Drawing.Size(801, 162);
             this.dgvMaquinaria.TabIndex = 33;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 150;
+            // 
+            // Maquinaria
+            // 
+            this.Maquinaria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Maquinaria.FillWeight = 150F;
+            this.Maquinaria.HeaderText = "Maquinaria";
+            this.Maquinaria.Name = "Maquinaria";
+            this.Maquinaria.ReadOnly = true;
+            this.Maquinaria.Width = 300;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 175;
             // 
             // groupBox1
             // 
@@ -249,6 +274,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ordenes de Producción";
             // 
+            // dgvOrdenProduccion
+            // 
+            this.dgvOrdenProduccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrdenProduccion.Location = new System.Drawing.Point(272, 30);
+            this.dgvOrdenProduccion.Name = "dgvOrdenProduccion";
+            this.dgvOrdenProduccion.Size = new System.Drawing.Size(504, 168);
+            this.dgvOrdenProduccion.TabIndex = 38;
+            // 
             // calOrdenProduccion
             // 
             this.calOrdenProduccion.Location = new System.Drawing.Point(12, 36);
@@ -268,36 +301,14 @@
             this.btnBuscarOrden.UseVisualStyleBackColor = true;
             this.btnBuscarOrden.Click += new System.EventHandler(this.button4_Click);
             // 
-            // dgvOrdenProduccion
+            // btnBuscar
             // 
-            this.dgvOrdenProduccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrdenProduccion.Location = new System.Drawing.Point(272, 30);
-            this.dgvOrdenProduccion.Name = "dgvOrdenProduccion";
-            this.dgvOrdenProduccion.Size = new System.Drawing.Size(504, 168);
-            this.dgvOrdenProduccion.TabIndex = 38;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 150;
-            // 
-            // Maquinaria
-            // 
-            this.Maquinaria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Maquinaria.FillWeight = 150F;
-            this.Maquinaria.HeaderText = "Maquinaria";
-            this.Maquinaria.Name = "Maquinaria";
-            this.Maquinaria.ReadOnly = true;
-            this.Maquinaria.Width = 300;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 175;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(88, 29);
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // frmGestionarPlan
             // 
@@ -351,5 +362,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Maquinaria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.ToolStripButton btnBuscar;
     }
 }
