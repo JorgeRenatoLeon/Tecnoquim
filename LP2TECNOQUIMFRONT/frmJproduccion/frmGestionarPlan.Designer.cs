@@ -29,13 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarPlan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
-            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.dgvMaquinaria = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,19 +49,16 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvOrden = new System.Windows.Forms.DataGridView();
+            this.dgvOrdenProduccion = new System.Windows.Forms.DataGridView();
             this.calOrdenProduccion = new System.Windows.Forms.MonthCalendar();
             this.btnBuscarOrden = new System.Windows.Forms.Button();
-            this.btnEditarOrden = new System.Windows.Forms.Button();
-            this.CodigoOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinaria)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gbDatosGenerales.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenProduccion)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -109,15 +103,6 @@
             this.btnModificar.Text = "&Modificar";
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(88, 29);
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
@@ -143,7 +128,6 @@
             this.dgvMaquinaria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMaquinaria.Size = new System.Drawing.Size(801, 162);
             this.dgvMaquinaria.TabIndex = 33;
-            this.dgvMaquinaria.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMaquinaria_CellFormatting);
             // 
             // Codigo
             // 
@@ -278,8 +262,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnEditarOrden);
-            this.groupBox2.Controls.Add(this.dgvOrden);
+            this.groupBox2.Controls.Add(this.dgvOrdenProduccion);
             this.groupBox2.Controls.Add(this.calOrdenProduccion);
             this.groupBox2.Controls.Add(this.btnBuscarOrden);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,40 +274,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ordenes de Producción";
             // 
-            // dgvOrden
+            // dgvOrdenProduccion
             // 
-            this.dgvOrden.AllowUserToAddRows = false;
-            this.dgvOrden.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrden.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrden.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CodigoOrden,
-            this.Producto,
-            this.Cantidad});
-            this.dgvOrden.Location = new System.Drawing.Point(272, 36);
-            this.dgvOrden.Name = "dgvOrden";
-            this.dgvOrden.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrden.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvOrden.RowHeadersWidth = 50;
-            this.dgvOrden.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvOrden.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrden.Size = new System.Drawing.Size(444, 162);
-            this.dgvOrden.TabIndex = 39;
-            this.dgvOrden.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrden_CellFormatting);
+            this.dgvOrdenProduccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrdenProduccion.Location = new System.Drawing.Point(272, 30);
+            this.dgvOrdenProduccion.Name = "dgvOrdenProduccion";
+            this.dgvOrdenProduccion.Size = new System.Drawing.Size(504, 168);
+            this.dgvOrdenProduccion.TabIndex = 38;
             // 
             // calOrdenProduccion
             // 
@@ -345,39 +301,14 @@
             this.btnBuscarOrden.UseVisualStyleBackColor = true;
             this.btnBuscarOrden.Click += new System.EventHandler(this.button4_Click);
             // 
-            // btnEditarOrden
+            // btnBuscar
             // 
-            this.btnEditarOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnEditarOrden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEditarOrden.Location = new System.Drawing.Point(722, 36);
-            this.btnEditarOrden.Name = "btnEditarOrden";
-            this.btnEditarOrden.Size = new System.Drawing.Size(73, 28);
-            this.btnEditarOrden.TabIndex = 40;
-            this.btnEditarOrden.Text = "Editar";
-            this.btnEditarOrden.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditarOrden.UseVisualStyleBackColor = true;
-            // 
-            // CodigoOrden
-            // 
-            this.CodigoOrden.HeaderText = "Codigo";
-            this.CodigoOrden.Name = "CodigoOrden";
-            this.CodigoOrden.ReadOnly = true;
-            // 
-            // Producto
-            // 
-            this.Producto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Producto.FillWeight = 150F;
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            this.Producto.Width = 180;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 110;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(88, 29);
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // frmGestionarPlan
             // 
@@ -400,7 +331,7 @@
             this.gbDatosGenerales.ResumeLayout(false);
             this.gbDatosGenerales.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenProduccion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,14 +358,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnBuscarOrden;
         private System.Windows.Forms.MonthCalendar calOrdenProduccion;
+        private System.Windows.Forms.DataGridView dgvOrdenProduccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Maquinaria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.ToolStripButton btnBuscar;
-        private System.Windows.Forms.DataGridView dgvOrden;
-        private System.Windows.Forms.Button btnEditarOrden;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoOrden;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
     }
 }
