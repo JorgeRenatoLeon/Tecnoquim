@@ -21,5 +21,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         {
             this.DialogResult = DialogResult.OK;
         }
+
+
     }
 }

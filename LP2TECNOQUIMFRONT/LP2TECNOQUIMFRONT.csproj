@@ -158,6 +158,12 @@
     <Compile Include="frmJControlCalidad\frmControlCalidad.designer.cs">
       <DependentUpon>frmControlCalidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJControlCalidad\frmListaOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJControlCalidad\frmListaOrden.Designer.cs">
+      <DependentUpon>frmListaOrden.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJControlCalidad\frmModCalidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJControlCalidad\frmControlCalidad.resx">
       <DependentUpon>frmControlCalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJControlCalidad\frmListaOrden.resx">
+      <DependentUpon>frmListaOrden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJControlCalidad\frmModCalidad.resx">
       <DependentUpon>frmModCalidad.cs</DependentUpon>

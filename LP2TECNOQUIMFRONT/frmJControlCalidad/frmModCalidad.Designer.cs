@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.gbDatos = new System.Windows.Forms.GroupBox();
-            this.btnBuscarInsumo = new System.Windows.Forms.Button();
+            this.cbRol = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnProductos = new System.Windows.Forms.Button();
             this.txtidprod = new System.Windows.Forms.TextBox();
             this.lblidProd = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -38,9 +40,6 @@
             this.txtPres = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblBack = new System.Windows.Forms.LinkLabel();
-            this.btnProductos = new System.Windows.Forms.Button();
-            this.cbRol = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +48,6 @@
             this.gbDatos.Controls.Add(this.cbRol);
             this.gbDatos.Controls.Add(this.label2);
             this.gbDatos.Controls.Add(this.btnProductos);
-            this.gbDatos.Controls.Add(this.btnBuscarInsumo);
             this.gbDatos.Controls.Add(this.txtidprod);
             this.gbDatos.Controls.Add(this.lblidProd);
             this.gbDatos.Controls.Add(this.lblNombre);
@@ -65,20 +63,39 @@
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos ";
             // 
-            // btnBuscarInsumo
+            // cbRol
             // 
-            this.btnBuscarInsumo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cbRol.FormattingEnabled = true;
+            this.cbRol.Location = new System.Drawing.Point(180, 155);
+            this.cbRol.Name = "cbRol";
+            this.cbRol.Size = new System.Drawing.Size(482, 33);
+            this.cbRol.TabIndex = 84;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(33, 158);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 25);
+            this.label2.TabIndex = 83;
+            this.label2.Text = "Estado: ";
+            // 
+            // btnProductos
+            // 
+            this.btnProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarInsumo.BackColor = System.Drawing.Color.White;
-            this.btnBuscarInsumo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarInsumo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarInsumo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnBuscarInsumo.Location = new System.Drawing.Point(419, 41);
-            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
-            this.btnBuscarInsumo.Size = new System.Drawing.Size(52, 30);
-            this.btnBuscarInsumo.TabIndex = 79;
-            this.btnBuscarInsumo.Text = "...";
-            this.btnBuscarInsumo.UseVisualStyleBackColor = false;
+            this.btnProductos.BackColor = System.Drawing.Color.White;
+            this.btnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnProductos.Location = new System.Drawing.Point(380, 235);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(130, 33);
+            this.btnProductos.TabIndex = 80;
+            this.btnProductos.Text = "Guardar";
+            this.btnProductos.UseVisualStyleBackColor = false;
             // 
             // txtidprod
             // 
@@ -167,40 +184,6 @@
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
             // 
-            // btnProductos
-            // 
-            this.btnProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProductos.BackColor = System.Drawing.Color.White;
-            this.btnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnProductos.Location = new System.Drawing.Point(380, 235);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(130, 33);
-            this.btnProductos.TabIndex = 80;
-            this.btnProductos.Text = "Guardar";
-            this.btnProductos.UseVisualStyleBackColor = false;
-            // 
-            // cbRol
-            // 
-            this.cbRol.FormattingEnabled = true;
-            this.cbRol.Location = new System.Drawing.Point(180, 155);
-            this.cbRol.Name = "cbRol";
-            this.cbRol.Size = new System.Drawing.Size(482, 33);
-            this.cbRol.TabIndex = 84;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(33, 158);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 25);
-            this.label2.TabIndex = 83;
-            this.label2.Text = "Estado: ";
-            // 
             // frmModCalidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,7 +212,6 @@
         private System.Windows.Forms.TextBox txtNomProd;
         private System.Windows.Forms.TextBox txtPres;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnBuscarInsumo;
         private System.Windows.Forms.LinkLabel lblBack;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.ComboBox cbRol;
