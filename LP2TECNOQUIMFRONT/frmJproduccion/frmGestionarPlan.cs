@@ -19,6 +19,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         BindingList<Service.maquinaria> maquinarias;
         BindingList<Service.ordenProduccion> ordenes;
         private Service.planMaestroProduccion _pmp;
+        Estado estado;
 
         public planMaestroProduccion PMP { get => _pmp; set => _pmp = value; }
 
@@ -31,6 +32,131 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             dgvMaquinaria.AutoGenerateColumns = false;
             maquinarias = new BindingList<maquinaria>();
             ordenes = new BindingList<ordenProduccion>();
+        }
+
+        private void estadoComponentes(Estado estado)
+        {
+            switch (estado)
+            {
+                case Estado.Inicial:
+
+                    // Botones
+                    btnNuevo.Enabled = true;
+                    btnGuardar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnCancelar.Enabled = false;
+                    btnEditarOrden.Enabled = false;
+                    btnBuscarMaquinaria.Enabled = false;
+                    btnAgregarMaquinaria.Enabled = false;
+
+                    // Etiquetas
+                    lblCodigoMaquinaria.Enabled = false;
+                    lblNombreMaquinaria.Enabled = false;
+                    lblCodigoPMP.Enabled = false;
+
+                    // Texto
+                    txtCodigo.Enabled = false;
+                    txtNombre.Enabled = false;
+                    txtNOrden.Enabled = false;
+
+                    // Calendario
+                    calOrdenProduccion.Enabled = false;
+                    calOrdenProduccion.SetDate(new DateTime(DateTime.Now.AddMonths(1).Year, DateTime.Now.AddMonths(1).Month, 1);
+
+                    // Data Grid View
+                    dgvMaquinaria.Enabled = false;
+                    dgvOrden.Enabled = false;
+                    
+                    break;
+                case Estado.Nuevo:
+
+                    // Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = true;
+                    btnModificar.Enabled = false;
+                    btnCancelar.Enabled = true;
+                    btnEditarOrden.Enabled = true;
+                    btnBuscarMaquinaria.Enabled = true;
+                    btnAgregarMaquinaria.Enabled = true;
+
+                    // Etiquetas
+                    lblCodigoMaquinaria.Enabled = true;
+                    lblNombreMaquinaria.Enabled = true;
+                    lblCodigoPMP.Enabled = true;
+
+                    // Texto
+                    txtCodigo.Enabled = false;
+                    txtNombre.Enabled = true;
+                    txtNOrden.Enabled = true;
+
+                    // Calendario
+                    calOrdenProduccion.Enabled = true;
+                    calOrdenProduccion.SetDate(new DateTime(DateTime.Now.AddMonths(1).Year, DateTime.Now.AddMonths(1).Month, 1);
+
+                    // Data Grid View
+                    dgvMaquinaria.Enabled = true;
+                    dgvOrden.Enabled = true;
+
+                    break;
+                case Estado.Buscar:
+                    // Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = false;
+                    btnModificar.Enabled = false;
+                    btnCancelar.Enabled = false;
+                    btnEditarOrden.Enabled = false;
+                    btnBuscarMaquinaria.Enabled = false;
+                    btnAgregarMaquinaria.Enabled = false;
+
+                    // Etiquetas
+                    lblCodigoMaquinaria.Enabled = false;
+                    lblNombreMaquinaria.Enabled = false;
+                    lblCodigoPMP.Enabled = false;
+
+                    // Texto
+                    txtCodigo.Enabled = false;
+                    txtNombre.Enabled = false;
+                    txtNOrden.Enabled = false;
+
+                    // Calendario
+                    calOrdenProduccion.Enabled = false;
+
+                    // Data Grid View
+                    dgvMaquinaria.Enabled = false;
+                    dgvOrden.Enabled = false;
+
+                    break;
+
+                case Estado.Modificar:
+                    // Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = true;
+                    btnModificar.Enabled = false;
+                    btnCancelar.Enabled = true;
+                    btnEditarOrden.Enabled = true;
+                    btnBuscarMaquinaria.Enabled = true;
+                    btnAgregarMaquinaria.Enabled = true;
+
+                    // Etiquetas
+                    lblCodigoMaquinaria.Enabled = true;
+                    lblNombreMaquinaria.Enabled = true;
+                    lblCodigoPMP.Enabled = true;
+
+                    // Texto
+                    txtCodigo.Enabled = false;
+                    txtNombre.Enabled = true;
+                    txtNOrden.Enabled = true;
+
+                    // Calendario
+                    calOrdenProduccion.Enabled = true;
+
+                    // Data Grid View
+                    dgvMaquinaria.Enabled = true;
+                    dgvOrden.Enabled = true;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -69,7 +195,18 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             _pmp = new Service.planMaestroProduccion();
-            //limpiarComponentes();
+            limpiarComponentes();
+            estado = Estado.Nuevo;
+            estadoComponentes(Estado.Nuevo);
+        }
+
+        private void limpiarComponentes()
+        {
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtNOrden.Text = "";
+            dgvOrden.DataSource = new BindingList<ordenProduccion>();
+            dgvMaquinaria.DataSource = new BindingList<detalleMaquinaria>();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
