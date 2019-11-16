@@ -47,7 +47,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         private void btnProductos_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmModCalidad formProducto = new frmModCalidad();
+            frmProducto formProducto = new frmProducto();
             formProducto.Visible = true;
             close = 1;
             this.Close();
@@ -56,7 +56,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         private void btnInsumos_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmModCalidadI formInsumo = new frmModCalidadI();
+            frmInsumos formInsumo = new frmInsumos();
             formInsumo.Visible = true;
             close = 1;
             this.Close();

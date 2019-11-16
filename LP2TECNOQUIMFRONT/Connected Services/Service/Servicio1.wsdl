@@ -5,161 +5,83 @@
       <xsd:import schemaLocation="http://localhost:8080/LP2TECNOQUIMSERVICES/Servicio?xsd=1" namespace="http://services.lp2tecnoquim/" />
     </xsd:schema>
   </types>
-  <message name="hello">
-    <part name="parameters" element="tns:hello" />
+  <message name="insertarDetalleAlmacenInsumo">
+    <part name="parameters" element="tns:insertarDetalleAlmacenInsumo" />
   </message>
-  <message name="helloResponse">
-    <part name="parameters" element="tns:helloResponse" />
+  <message name="insertarDetalleAlmacenInsumoResponse">
+    <part name="parameters" element="tns:insertarDetalleAlmacenInsumoResponse" />
   </message>
-  <message name="actualizarAlmacen">
-    <part name="parameters" element="tns:actualizarAlmacen" />
+  <message name="actualizarPMP">
+    <part name="parameters" element="tns:actualizarPMP" />
   </message>
-  <message name="actualizarAlmacenResponse">
-    <part name="parameters" element="tns:actualizarAlmacenResponse" />
+  <message name="actualizarPMPResponse">
+    <part name="parameters" element="tns:actualizarPMPResponse" />
   </message>
-  <message name="actualizarProducto">
-    <part name="parameters" element="tns:actualizarProducto" />
+  <message name="listarPMP">
+    <part name="parameters" element="tns:listarPMP" />
   </message>
-  <message name="actualizarProductoResponse">
-    <part name="parameters" element="tns:actualizarProductoResponse" />
+  <message name="listarPMPResponse">
+    <part name="parameters" element="tns:listarPMPResponse" />
   </message>
-  <message name="insertarProyeccionVenta">
-    <part name="parameters" element="tns:insertarProyeccionVenta" />
+  <message name="listarInsumo">
+    <part name="parameters" element="tns:listarInsumo" />
   </message>
-  <message name="insertarProyeccionVentaResponse">
-    <part name="parameters" element="tns:insertarProyeccionVentaResponse" />
+  <message name="listarInsumoResponse">
+    <part name="parameters" element="tns:listarInsumoResponse" />
   </message>
-  <message name="listarDetalleMaquinaria">
-    <part name="parameters" element="tns:listarDetalleMaquinaria" />
+  <message name="listarRoles">
+    <part name="parameters" element="tns:listarRoles" />
   </message>
-  <message name="listarDetalleMaquinariaResponse">
-    <part name="parameters" element="tns:listarDetalleMaquinariaResponse" />
+  <message name="listarRolesResponse">
+    <part name="parameters" element="tns:listarRolesResponse" />
   </message>
-  <message name="insertarInstructivo">
-    <part name="parameters" element="tns:insertarInstructivo" />
+  <message name="insertarUsuario">
+    <part name="parameters" element="tns:insertarUsuario" />
   </message>
-  <message name="insertarInstructivoResponse">
-    <part name="parameters" element="tns:insertarInstructivoResponse" />
+  <message name="insertarUsuarioResponse">
+    <part name="parameters" element="tns:insertarUsuarioResponse" />
   </message>
-  <message name="actualizarInstructivo">
-    <part name="parameters" element="tns:actualizarInstructivo" />
+  <message name="actualizarRol">
+    <part name="parameters" element="tns:actualizarRol" />
   </message>
-  <message name="actualizarInstructivoResponse">
-    <part name="parameters" element="tns:actualizarInstructivoResponse" />
+  <message name="actualizarRolResponse">
+    <part name="parameters" element="tns:actualizarRolResponse" />
   </message>
-  <message name="eliminarLineaInsumo">
-    <part name="parameters" element="tns:eliminarLineaInsumo" />
+  <message name="listarProductos">
+    <part name="parameters" element="tns:listarProductos" />
   </message>
-  <message name="eliminarLineaInsumoResponse">
-    <part name="parameters" element="tns:eliminarLineaInsumoResponse" />
+  <message name="listarProductosResponse">
+    <part name="parameters" element="tns:listarProductosResponse" />
   </message>
-  <message name="insertarLineaInsumo">
-    <part name="parameters" element="tns:insertarLineaInsumo" />
+  <message name="insertarPMP">
+    <part name="parameters" element="tns:insertarPMP" />
   </message>
-  <message name="insertarLineaInsumoResponse">
-    <part name="parameters" element="tns:insertarLineaInsumoResponse" />
+  <message name="insertarPMPResponse">
+    <part name="parameters" element="tns:insertarPMPResponse" />
   </message>
-  <message name="listarInstructivos">
-    <part name="parameters" element="tns:listarInstructivos" />
+  <message name="actualizarInsumo">
+    <part name="parameters" element="tns:actualizarInsumo" />
   </message>
-  <message name="listarInstructivosResponse">
-    <part name="parameters" element="tns:listarInstructivosResponse" />
+  <message name="actualizarInsumoResponse">
+    <part name="parameters" element="tns:actualizarInsumoResponse" />
   </message>
-  <message name="actualizarLineaInsumo">
-    <part name="parameters" element="tns:actualizarLineaInsumo" />
+  <message name="insertarRol">
+    <part name="parameters" element="tns:insertarRol" />
   </message>
-  <message name="actualizarLineaInsumoResponse">
-    <part name="parameters" element="tns:actualizarLineaInsumoResponse" />
+  <message name="insertarRolResponse">
+    <part name="parameters" element="tns:insertarRolResponse" />
   </message>
-  <message name="listarLineaInsumo">
-    <part name="parameters" element="tns:listarLineaInsumo" />
+  <message name="listarUsuarios">
+    <part name="parameters" element="tns:listarUsuarios" />
   </message>
-  <message name="listarLineaInsumoResponse">
-    <part name="parameters" element="tns:listarLineaInsumoResponse" />
+  <message name="listarUsuariosResponse">
+    <part name="parameters" element="tns:listarUsuariosResponse" />
   </message>
-  <message name="insertarLineaProyeccion">
-    <part name="parameters" element="tns:insertarLineaProyeccion" />
+  <message name="insertarProducto">
+    <part name="parameters" element="tns:insertarProducto" />
   </message>
-  <message name="insertarLineaProyeccionResponse">
-    <part name="parameters" element="tns:insertarLineaProyeccionResponse" />
-  </message>
-  <message name="insertarLineaOrden">
-    <part name="parameters" element="tns:insertarLineaOrden" />
-  </message>
-  <message name="insertarLineaOrdenResponse">
-    <part name="parameters" element="tns:insertarLineaOrdenResponse" />
-  </message>
-  <message name="actualizarLineaOrden">
-    <part name="parameters" element="tns:actualizarLineaOrden" />
-  </message>
-  <message name="actualizarLineaOrdenResponse">
-    <part name="parameters" element="tns:actualizarLineaOrdenResponse" />
-  </message>
-  <message name="eliminarLineaOrden">
-    <part name="parameters" element="tns:eliminarLineaOrden" />
-  </message>
-  <message name="eliminarLineaOrdenResponse">
-    <part name="parameters" element="tns:eliminarLineaOrdenResponse" />
-  </message>
-  <message name="listarLineaProyeccion">
-    <part name="parameters" element="tns:listarLineaProyeccion" />
-  </message>
-  <message name="listarLineaProyeccionResponse">
-    <part name="parameters" element="tns:listarLineaProyeccionResponse" />
-  </message>
-  <message name="eliminarLineaProyeccion">
-    <part name="parameters" element="tns:eliminarLineaProyeccion" />
-  </message>
-  <message name="eliminarLineaProyeccionResponse">
-    <part name="parameters" element="tns:eliminarLineaProyeccionResponse" />
-  </message>
-  <message name="actualizarPoliticaStock">
-    <part name="parameters" element="tns:actualizarPoliticaStock" />
-  </message>
-  <message name="actualizarPoliticaStockResponse">
-    <part name="parameters" element="tns:actualizarPoliticaStockResponse" />
-  </message>
-  <message name="listarPoliticaStock">
-    <part name="parameters" element="tns:listarPoliticaStock" />
-  </message>
-  <message name="listarPoliticaStockResponse">
-    <part name="parameters" element="tns:listarPoliticaStockResponse" />
-  </message>
-  <message name="insertarMaquinaria">
-    <part name="parameters" element="tns:insertarMaquinaria" />
-  </message>
-  <message name="insertarMaquinariaResponse">
-    <part name="parameters" element="tns:insertarMaquinariaResponse" />
-  </message>
-  <message name="actualizarMaquinaria">
-    <part name="parameters" element="tns:actualizarMaquinaria" />
-  </message>
-  <message name="actualizarMaquinariaResponse">
-    <part name="parameters" element="tns:actualizarMaquinariaResponse" />
-  </message>
-  <message name="eliminarMaquinaria">
-    <part name="parameters" element="tns:eliminarMaquinaria" />
-  </message>
-  <message name="eliminarMaquinariaResponse">
-    <part name="parameters" element="tns:eliminarMaquinariaResponse" />
-  </message>
-  <message name="insertarOrdenProduccion">
-    <part name="parameters" element="tns:insertarOrdenProduccion" />
-  </message>
-  <message name="insertarOrdenProduccionResponse">
-    <part name="parameters" element="tns:insertarOrdenProduccionResponse" />
-  </message>
-  <message name="insertarPoliticaStock">
-    <part name="parameters" element="tns:insertarPoliticaStock" />
-  </message>
-  <message name="insertarPoliticaStockResponse">
-    <part name="parameters" element="tns:insertarPoliticaStockResponse" />
-  </message>
-  <message name="listarProyeccionVenta">
-    <part name="parameters" element="tns:listarProyeccionVenta" />
-  </message>
-  <message name="listarProyeccionVentaResponse">
-    <part name="parameters" element="tns:listarProyeccionVentaResponse" />
+  <message name="insertarProductoResponse">
+    <part name="parameters" element="tns:insertarProductoResponse" />
   </message>
   <message name="listarMaquinaria">
     <part name="parameters" element="tns:listarMaquinaria" />
@@ -167,11 +89,11 @@
   <message name="listarMaquinariaResponse">
     <part name="parameters" element="tns:listarMaquinariaResponse" />
   </message>
-  <message name="insertarMensaje">
-    <part name="parameters" element="tns:insertarMensaje" />
+  <message name="listarLineaOrden">
+    <part name="parameters" element="tns:listarLineaOrden" />
   </message>
-  <message name="insertarMensajeResponse">
-    <part name="parameters" element="tns:insertarMensajeResponse" />
+  <message name="listarLineaOrdenResponse">
+    <part name="parameters" element="tns:listarLineaOrdenResponse" />
   </message>
   <message name="listarMensaje">
     <part name="parameters" element="tns:listarMensaje" />
@@ -179,11 +101,35 @@
   <message name="listarMensajeResponse">
     <part name="parameters" element="tns:listarMensajeResponse" />
   </message>
-  <message name="listarInsumo">
-    <part name="parameters" element="tns:listarInsumo" />
+  <message name="insertarMensaje">
+    <part name="parameters" element="tns:insertarMensaje" />
   </message>
-  <message name="listarInsumoResponse">
-    <part name="parameters" element="tns:listarInsumoResponse" />
+  <message name="insertarMensajeResponse">
+    <part name="parameters" element="tns:insertarMensajeResponse" />
+  </message>
+  <message name="insertarInsumo">
+    <part name="parameters" element="tns:insertarInsumo" />
+  </message>
+  <message name="insertarInsumoResponse">
+    <part name="parameters" element="tns:insertarInsumoResponse" />
+  </message>
+  <message name="eliminarInsumo">
+    <part name="parameters" element="tns:eliminarInsumo" />
+  </message>
+  <message name="eliminarInsumoResponse">
+    <part name="parameters" element="tns:eliminarInsumoResponse" />
+  </message>
+  <message name="eliminarProducto">
+    <part name="parameters" element="tns:eliminarProducto" />
+  </message>
+  <message name="eliminarProductoResponse">
+    <part name="parameters" element="tns:eliminarProductoResponse" />
+  </message>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
   </message>
   <message name="enviarMensaje">
     <part name="parameters" element="tns:enviarMensaje" />
@@ -197,155 +143,29 @@
   <message name="verificarUsuarioResponse">
     <part name="parameters" element="tns:verificarUsuarioResponse" />
   </message>
-  <message name="insertarAlmacen">
-    <part name="parameters" element="tns:insertarAlmacen" />
-  </message>
-  <message name="insertarAlmacenResponse">
-    <part name="parameters" element="tns:insertarAlmacenResponse" />
-  </message>
-  <message name="insertarInsumo">
-    <part name="parameters" element="tns:insertarInsumo" />
-  </message>
-  <message name="insertarInsumoResponse">
-    <part name="parameters" element="tns:insertarInsumoResponse" />
-  </message>
-  <message name="actualizarInsumo">
-    <part name="parameters" element="tns:actualizarInsumo" />
-  </message>
-  <message name="actualizarInsumoResponse">
-    <part name="parameters" element="tns:actualizarInsumoResponse" />
-  </message>
-  <message name="eliminarInsumo">
-    <part name="parameters" element="tns:eliminarInsumo" />
-  </message>
-  <message name="eliminarInsumoResponse">
-    <part name="parameters" element="tns:eliminarInsumoResponse" />
-  </message>
-  <message name="listarLineaOrden">
-    <part name="parameters" element="tns:listarLineaOrden" />
-  </message>
-  <message name="listarLineaOrdenResponse">
-    <part name="parameters" element="tns:listarLineaOrdenResponse" />
-  </message>
   <message name="listarAlmacen">
     <part name="parameters" element="tns:listarAlmacen" />
   </message>
   <message name="listarAlmacenResponse">
     <part name="parameters" element="tns:listarAlmacenResponse" />
   </message>
-  <message name="insertarPMP">
-    <part name="parameters" element="tns:insertarPMP" />
+  <message name="insertarProyeccionVenta">
+    <part name="parameters" element="tns:insertarProyeccionVenta" />
   </message>
-  <message name="insertarPMPResponse">
-    <part name="parameters" element="tns:insertarPMPResponse" />
+  <message name="insertarProyeccionVentaResponse">
+    <part name="parameters" element="tns:insertarProyeccionVentaResponse" />
   </message>
-  <message name="insertarRol">
-    <part name="parameters" element="tns:insertarRol" />
+  <message name="insertarLineaProyeccion">
+    <part name="parameters" element="tns:insertarLineaProyeccion" />
   </message>
-  <message name="insertarRolResponse">
-    <part name="parameters" element="tns:insertarRolResponse" />
+  <message name="insertarLineaProyeccionResponse">
+    <part name="parameters" element="tns:insertarLineaProyeccionResponse" />
   </message>
-  <message name="actualizarRol">
-    <part name="parameters" element="tns:actualizarRol" />
+  <message name="actualizarMaquinaria">
+    <part name="parameters" element="tns:actualizarMaquinaria" />
   </message>
-  <message name="actualizarRolResponse">
-    <part name="parameters" element="tns:actualizarRolResponse" />
-  </message>
-  <message name="listarUsuarios">
-    <part name="parameters" element="tns:listarUsuarios" />
-  </message>
-  <message name="listarUsuariosResponse">
-    <part name="parameters" element="tns:listarUsuariosResponse" />
-  </message>
-  <message name="insertarUsuario">
-    <part name="parameters" element="tns:insertarUsuario" />
-  </message>
-  <message name="insertarUsuarioResponse">
-    <part name="parameters" element="tns:insertarUsuarioResponse" />
-  </message>
-  <message name="listarPMP">
-    <part name="parameters" element="tns:listarPMP" />
-  </message>
-  <message name="listarPMPResponse">
-    <part name="parameters" element="tns:listarPMPResponse" />
-  </message>
-  <message name="actualizarPMP">
-    <part name="parameters" element="tns:actualizarPMP" />
-  </message>
-  <message name="actualizarPMPResponse">
-    <part name="parameters" element="tns:actualizarPMPResponse" />
-  </message>
-  <message name="insertarProducto">
-    <part name="parameters" element="tns:insertarProducto" />
-  </message>
-  <message name="insertarProductoResponse">
-    <part name="parameters" element="tns:insertarProductoResponse" />
-  </message>
-  <message name="listarProductos">
-    <part name="parameters" element="tns:listarProductos" />
-  </message>
-  <message name="listarProductosResponse">
-    <part name="parameters" element="tns:listarProductosResponse" />
-  </message>
-  <message name="eliminarProducto">
-    <part name="parameters" element="tns:eliminarProducto" />
-  </message>
-  <message name="eliminarProductoResponse">
-    <part name="parameters" element="tns:eliminarProductoResponse" />
-  </message>
-  <message name="listarRoles">
-    <part name="parameters" element="tns:listarRoles" />
-  </message>
-  <message name="listarRolesResponse">
-    <part name="parameters" element="tns:listarRolesResponse" />
-  </message>
-  <message name="actualizarTrabajador">
-    <part name="parameters" element="tns:actualizarTrabajador" />
-  </message>
-  <message name="actualizarTrabajadorResponse">
-    <part name="parameters" element="tns:actualizarTrabajadorResponse" />
-  </message>
-  <message name="listarTrabajadores">
-    <part name="parameters" element="tns:listarTrabajadores" />
-  </message>
-  <message name="listarTrabajadoresResponse">
-    <part name="parameters" element="tns:listarTrabajadoresResponse" />
-  </message>
-  <message name="eliminarTrabajador">
-    <part name="parameters" element="tns:eliminarTrabajador" />
-  </message>
-  <message name="eliminarTrabajadorResponse">
-    <part name="parameters" element="tns:eliminarTrabajadorResponse" />
-  </message>
-  <message name="insertarTrabajador">
-    <part name="parameters" element="tns:insertarTrabajador" />
-  </message>
-  <message name="insertarTrabajadorResponse">
-    <part name="parameters" element="tns:insertarTrabajadorResponse" />
-  </message>
-  <message name="actualizarUsuario">
-    <part name="parameters" element="tns:actualizarUsuario" />
-  </message>
-  <message name="actualizarUsuarioResponse">
-    <part name="parameters" element="tns:actualizarUsuarioResponse" />
-  </message>
-  <message name="actualizarDetalleAlmacenProducto">
-    <part name="parameters" element="tns:actualizarDetalleAlmacenProducto" />
-  </message>
-  <message name="actualizarDetalleAlmacenProductoResponse">
-    <part name="parameters" element="tns:actualizarDetalleAlmacenProductoResponse" />
-  </message>
-  <message name="listarDetalleAlmacenProducto">
-    <part name="parameters" element="tns:listarDetalleAlmacenProducto" />
-  </message>
-  <message name="listarDetalleAlmacenProductoResponse">
-    <part name="parameters" element="tns:listarDetalleAlmacenProductoResponse" />
-  </message>
-  <message name="insertarDetalleAlmacenInsumo">
-    <part name="parameters" element="tns:insertarDetalleAlmacenInsumo" />
-  </message>
-  <message name="insertarDetalleAlmacenInsumoResponse">
-    <part name="parameters" element="tns:insertarDetalleAlmacenInsumoResponse" />
+  <message name="actualizarMaquinariaResponse">
+    <part name="parameters" element="tns:actualizarMaquinariaResponse" />
   </message>
   <message name="actualizarDetalleAlmacenInsumo">
     <part name="parameters" element="tns:actualizarDetalleAlmacenInsumo" />
@@ -353,35 +173,11 @@
   <message name="actualizarDetalleAlmacenInsumoResponse">
     <part name="parameters" element="tns:actualizarDetalleAlmacenInsumoResponse" />
   </message>
-  <message name="listarDetalleAlmacenInsumo">
-    <part name="parameters" element="tns:listarDetalleAlmacenInsumo" />
+  <message name="listarInstructivos">
+    <part name="parameters" element="tns:listarInstructivos" />
   </message>
-  <message name="listarDetalleAlmacenInsumoResponse">
-    <part name="parameters" element="tns:listarDetalleAlmacenInsumoResponse" />
-  </message>
-  <message name="insertarDetalleMaquinaria">
-    <part name="parameters" element="tns:insertarDetalleMaquinaria" />
-  </message>
-  <message name="insertarDetalleMaquinariaResponse">
-    <part name="parameters" element="tns:insertarDetalleMaquinariaResponse" />
-  </message>
-  <message name="actualizarDetalleMaquinaria">
-    <part name="parameters" element="tns:actualizarDetalleMaquinaria" />
-  </message>
-  <message name="actualizarDetalleMaquinariaResponse">
-    <part name="parameters" element="tns:actualizarDetalleMaquinariaResponse" />
-  </message>
-  <message name="insertarDetalleAlmacenProducto">
-    <part name="parameters" element="tns:insertarDetalleAlmacenProducto" />
-  </message>
-  <message name="insertarDetalleAlmacenProductoResponse">
-    <part name="parameters" element="tns:insertarDetalleAlmacenProductoResponse" />
-  </message>
-  <message name="listarOrdenesProduccionFecha">
-    <part name="parameters" element="tns:listarOrdenesProduccionFecha" />
-  </message>
-  <message name="listarOrdenesProduccionFechaResponse">
-    <part name="parameters" element="tns:listarOrdenesProduccionFechaResponse" />
+  <message name="listarInstructivosResponse">
+    <part name="parameters" element="tns:listarInstructivosResponse" />
   </message>
   <message name="listarOrdenesProduccionPlan">
     <part name="parameters" element="tns:listarOrdenesProduccionPlan" />
@@ -395,11 +191,179 @@
   <message name="actualizarProyeccionVentaResponse">
     <part name="parameters" element="tns:actualizarProyeccionVentaResponse" />
   </message>
-  <message name="actualizarOrdenProduccion">
-    <part name="parameters" element="tns:actualizarOrdenProduccion" />
+  <message name="insertarLineaOrden">
+    <part name="parameters" element="tns:insertarLineaOrden" />
   </message>
-  <message name="actualizarOrdenProduccionResponse">
-    <part name="parameters" element="tns:actualizarOrdenProduccionResponse" />
+  <message name="insertarLineaOrdenResponse">
+    <part name="parameters" element="tns:insertarLineaOrdenResponse" />
+  </message>
+  <message name="insertarTrabajador">
+    <part name="parameters" element="tns:insertarTrabajador" />
+  </message>
+  <message name="insertarTrabajadorResponse">
+    <part name="parameters" element="tns:insertarTrabajadorResponse" />
+  </message>
+  <message name="listarTrabajadores">
+    <part name="parameters" element="tns:listarTrabajadores" />
+  </message>
+  <message name="listarTrabajadoresResponse">
+    <part name="parameters" element="tns:listarTrabajadoresResponse" />
+  </message>
+  <message name="eliminarTrabajador">
+    <part name="parameters" element="tns:eliminarTrabajador" />
+  </message>
+  <message name="eliminarTrabajadorResponse">
+    <part name="parameters" element="tns:eliminarTrabajadorResponse" />
+  </message>
+  <message name="listarProyeccionVenta">
+    <part name="parameters" element="tns:listarProyeccionVenta" />
+  </message>
+  <message name="listarProyeccionVentaResponse">
+    <part name="parameters" element="tns:listarProyeccionVentaResponse" />
+  </message>
+  <message name="eliminarMaquinaria">
+    <part name="parameters" element="tns:eliminarMaquinaria" />
+  </message>
+  <message name="eliminarMaquinariaResponse">
+    <part name="parameters" element="tns:eliminarMaquinariaResponse" />
+  </message>
+  <message name="listarLineaProyeccion">
+    <part name="parameters" element="tns:listarLineaProyeccion" />
+  </message>
+  <message name="listarLineaProyeccionResponse">
+    <part name="parameters" element="tns:listarLineaProyeccionResponse" />
+  </message>
+  <message name="listarDetalleMaquinaria">
+    <part name="parameters" element="tns:listarDetalleMaquinaria" />
+  </message>
+  <message name="listarDetalleMaquinariaResponse">
+    <part name="parameters" element="tns:listarDetalleMaquinariaResponse" />
+  </message>
+  <message name="actualizarDetalleAlmacenProducto">
+    <part name="parameters" element="tns:actualizarDetalleAlmacenProducto" />
+  </message>
+  <message name="actualizarDetalleAlmacenProductoResponse">
+    <part name="parameters" element="tns:actualizarDetalleAlmacenProductoResponse" />
+  </message>
+  <message name="actualizarDetalleMaquinaria">
+    <part name="parameters" element="tns:actualizarDetalleMaquinaria" />
+  </message>
+  <message name="actualizarDetalleMaquinariaResponse">
+    <part name="parameters" element="tns:actualizarDetalleMaquinariaResponse" />
+  </message>
+  <message name="insertarInstructivo">
+    <part name="parameters" element="tns:insertarInstructivo" />
+  </message>
+  <message name="insertarInstructivoResponse">
+    <part name="parameters" element="tns:insertarInstructivoResponse" />
+  </message>
+  <message name="actualizarLineaInsumo">
+    <part name="parameters" element="tns:actualizarLineaInsumo" />
+  </message>
+  <message name="actualizarLineaInsumoResponse">
+    <part name="parameters" element="tns:actualizarLineaInsumoResponse" />
+  </message>
+  <message name="listarOrdenesProduccionFecha">
+    <part name="parameters" element="tns:listarOrdenesProduccionFecha" />
+  </message>
+  <message name="listarOrdenesProduccionFechaResponse">
+    <part name="parameters" element="tns:listarOrdenesProduccionFechaResponse" />
+  </message>
+  <message name="eliminarLineaProyeccion">
+    <part name="parameters" element="tns:eliminarLineaProyeccion" />
+  </message>
+  <message name="eliminarLineaProyeccionResponse">
+    <part name="parameters" element="tns:eliminarLineaProyeccionResponse" />
+  </message>
+  <message name="actualizarInstructivo">
+    <part name="parameters" element="tns:actualizarInstructivo" />
+  </message>
+  <message name="actualizarInstructivoResponse">
+    <part name="parameters" element="tns:actualizarInstructivoResponse" />
+  </message>
+  <message name="listarLineaInsumo">
+    <part name="parameters" element="tns:listarLineaInsumo" />
+  </message>
+  <message name="listarLineaInsumoResponse">
+    <part name="parameters" element="tns:listarLineaInsumoResponse" />
+  </message>
+  <message name="insertarMaquinaria">
+    <part name="parameters" element="tns:insertarMaquinaria" />
+  </message>
+  <message name="insertarMaquinariaResponse">
+    <part name="parameters" element="tns:insertarMaquinariaResponse" />
+  </message>
+  <message name="insertarLineaInsumo">
+    <part name="parameters" element="tns:insertarLineaInsumo" />
+  </message>
+  <message name="insertarLineaInsumoResponse">
+    <part name="parameters" element="tns:insertarLineaInsumoResponse" />
+  </message>
+  <message name="insertarPoliticaStock">
+    <part name="parameters" element="tns:insertarPoliticaStock" />
+  </message>
+  <message name="insertarPoliticaStockResponse">
+    <part name="parameters" element="tns:insertarPoliticaStockResponse" />
+  </message>
+  <message name="actualizarUsuario">
+    <part name="parameters" element="tns:actualizarUsuario" />
+  </message>
+  <message name="actualizarUsuarioResponse">
+    <part name="parameters" element="tns:actualizarUsuarioResponse" />
+  </message>
+  <message name="listarDetalleAlmacenProducto">
+    <part name="parameters" element="tns:listarDetalleAlmacenProducto" />
+  </message>
+  <message name="listarDetalleAlmacenProductoResponse">
+    <part name="parameters" element="tns:listarDetalleAlmacenProductoResponse" />
+  </message>
+  <message name="eliminarLineaInsumo">
+    <part name="parameters" element="tns:eliminarLineaInsumo" />
+  </message>
+  <message name="eliminarLineaInsumoResponse">
+    <part name="parameters" element="tns:eliminarLineaInsumoResponse" />
+  </message>
+  <message name="actualizarTrabajador">
+    <part name="parameters" element="tns:actualizarTrabajador" />
+  </message>
+  <message name="actualizarTrabajadorResponse">
+    <part name="parameters" element="tns:actualizarTrabajadorResponse" />
+  </message>
+  <message name="insertarDetalleAlmacenProducto">
+    <part name="parameters" element="tns:insertarDetalleAlmacenProducto" />
+  </message>
+  <message name="insertarDetalleAlmacenProductoResponse">
+    <part name="parameters" element="tns:insertarDetalleAlmacenProductoResponse" />
+  </message>
+  <message name="eliminarLineaOrden">
+    <part name="parameters" element="tns:eliminarLineaOrden" />
+  </message>
+  <message name="eliminarLineaOrdenResponse">
+    <part name="parameters" element="tns:eliminarLineaOrdenResponse" />
+  </message>
+  <message name="insertarOrdenProduccion">
+    <part name="parameters" element="tns:insertarOrdenProduccion" />
+  </message>
+  <message name="insertarOrdenProduccionResponse">
+    <part name="parameters" element="tns:insertarOrdenProduccionResponse" />
+  </message>
+  <message name="listarPoliticaStock">
+    <part name="parameters" element="tns:listarPoliticaStock" />
+  </message>
+  <message name="listarPoliticaStockResponse">
+    <part name="parameters" element="tns:listarPoliticaStockResponse" />
+  </message>
+  <message name="insertarDetalleMaquinaria">
+    <part name="parameters" element="tns:insertarDetalleMaquinaria" />
+  </message>
+  <message name="insertarDetalleMaquinariaResponse">
+    <part name="parameters" element="tns:insertarDetalleMaquinariaResponse" />
+  </message>
+  <message name="actualizarLineaOrden">
+    <part name="parameters" element="tns:actualizarLineaOrden" />
+  </message>
+  <message name="actualizarLineaOrdenResponse">
+    <part name="parameters" element="tns:actualizarLineaOrdenResponse" />
   </message>
   <message name="actualizarLineaProyeccion">
     <part name="parameters" element="tns:actualizarLineaProyeccion" />
@@ -407,126 +371,126 @@
   <message name="actualizarLineaProyeccionResponse">
     <part name="parameters" element="tns:actualizarLineaProyeccionResponse" />
   </message>
+  <message name="actualizarOrdenProduccion">
+    <part name="parameters" element="tns:actualizarOrdenProduccion" />
+  </message>
+  <message name="actualizarOrdenProduccionResponse">
+    <part name="parameters" element="tns:actualizarOrdenProduccionResponse" />
+  </message>
+  <message name="actualizarPoliticaStock">
+    <part name="parameters" element="tns:actualizarPoliticaStock" />
+  </message>
+  <message name="actualizarPoliticaStockResponse">
+    <part name="parameters" element="tns:actualizarPoliticaStockResponse" />
+  </message>
+  <message name="listarDetalleAlmacenInsumo">
+    <part name="parameters" element="tns:listarDetalleAlmacenInsumo" />
+  </message>
+  <message name="listarDetalleAlmacenInsumoResponse">
+    <part name="parameters" element="tns:listarDetalleAlmacenInsumoResponse" />
+  </message>
+  <message name="actualizarProducto">
+    <part name="parameters" element="tns:actualizarProducto" />
+  </message>
+  <message name="actualizarProductoResponse">
+    <part name="parameters" element="tns:actualizarProductoResponse" />
+  </message>
+  <message name="actualizarAlmacen">
+    <part name="parameters" element="tns:actualizarAlmacen" />
+  </message>
+  <message name="actualizarAlmacenResponse">
+    <part name="parameters" element="tns:actualizarAlmacenResponse" />
+  </message>
+  <message name="insertarAlmacen">
+    <part name="parameters" element="tns:insertarAlmacen" />
+  </message>
+  <message name="insertarAlmacenResponse">
+    <part name="parameters" element="tns:insertarAlmacenResponse" />
+  </message>
   <portType name="Servicio">
-    <operation name="hello">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/helloRequest" message="tns:hello" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/helloResponse" message="tns:helloResponse" />
+    <operation name="insertarDetalleAlmacenInsumo">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoRequest" message="tns:insertarDetalleAlmacenInsumo" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoResponse" message="tns:insertarDetalleAlmacenInsumoResponse" />
     </operation>
-    <operation name="actualizarAlmacen">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarAlmacenRequest" message="tns:actualizarAlmacen" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarAlmacenResponse" message="tns:actualizarAlmacenResponse" />
+    <operation name="actualizarPMP">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarPMPRequest" message="tns:actualizarPMP" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarPMPResponse" message="tns:actualizarPMPResponse" />
     </operation>
-    <operation name="actualizarProducto">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarProductoRequest" message="tns:actualizarProducto" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarProductoResponse" message="tns:actualizarProductoResponse" />
+    <operation name="listarPMP">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarPMPRequest" message="tns:listarPMP" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarPMPResponse" message="tns:listarPMPResponse" />
     </operation>
-    <operation name="insertarProyeccionVenta">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaRequest" message="tns:insertarProyeccionVenta" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaResponse" message="tns:insertarProyeccionVentaResponse" />
+    <operation name="listarInsumo">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarInsumoRequest" message="tns:listarInsumo" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarInsumoResponse" message="tns:listarInsumoResponse" />
     </operation>
-    <operation name="listarDetalleMaquinaria">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaRequest" message="tns:listarDetalleMaquinaria" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaResponse" message="tns:listarDetalleMaquinariaResponse" />
+    <operation name="listarRoles">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarRolesRequest" message="tns:listarRoles" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarRolesResponse" message="tns:listarRolesResponse" />
     </operation>
-    <operation name="insertarInstructivo">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarInstructivoRequest" message="tns:insertarInstructivo" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarInstructivoResponse" message="tns:insertarInstructivoResponse" />
+    <operation name="insertarUsuario">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarUsuarioRequest" message="tns:insertarUsuario" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
     </operation>
-    <operation name="actualizarInstructivo">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarInstructivoRequest" message="tns:actualizarInstructivo" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarInstructivoResponse" message="tns:actualizarInstructivoResponse" />
+    <operation name="actualizarRol">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarRolRequest" message="tns:actualizarRol" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarRolResponse" message="tns:actualizarRolResponse" />
     </operation>
-    <operation name="eliminarLineaInsumo">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarLineaInsumoRequest" message="tns:eliminarLineaInsumo" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarLineaInsumoResponse" message="tns:eliminarLineaInsumoResponse" />
+    <operation name="listarProductos">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarProductosRequest" message="tns:listarProductos" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarProductosResponse" message="tns:listarProductosResponse" />
     </operation>
-    <operation name="insertarLineaInsumo">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarLineaInsumoRequest" message="tns:insertarLineaInsumo" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarLineaInsumoResponse" message="tns:insertarLineaInsumoResponse" />
+    <operation name="insertarPMP">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarPMPRequest" message="tns:insertarPMP" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarPMPResponse" message="tns:insertarPMPResponse" />
     </operation>
-    <operation name="listarInstructivos">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarInstructivosRequest" message="tns:listarInstructivos" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarInstructivosResponse" message="tns:listarInstructivosResponse" />
+    <operation name="actualizarInsumo">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarInsumoRequest" message="tns:actualizarInsumo" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarInsumoResponse" message="tns:actualizarInsumoResponse" />
     </operation>
-    <operation name="actualizarLineaInsumo">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoRequest" message="tns:actualizarLineaInsumo" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoResponse" message="tns:actualizarLineaInsumoResponse" />
+    <operation name="insertarRol">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarRolRequest" message="tns:insertarRol" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarRolResponse" message="tns:insertarRolResponse" />
     </operation>
-    <operation name="listarLineaInsumo">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarLineaInsumoRequest" message="tns:listarLineaInsumo" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarLineaInsumoResponse" message="tns:listarLineaInsumoResponse" />
+    <operation name="listarUsuarios">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarUsuariosRequest" message="tns:listarUsuarios" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarUsuariosResponse" message="tns:listarUsuariosResponse" />
     </operation>
-    <operation name="insertarLineaProyeccion">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarLineaProyeccionRequest" message="tns:insertarLineaProyeccion" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarLineaProyeccionResponse" message="tns:insertarLineaProyeccionResponse" />
-    </operation>
-    <operation name="insertarLineaOrden">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenRequest" message="tns:insertarLineaOrden" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenResponse" message="tns:insertarLineaOrdenResponse" />
-    </operation>
-    <operation name="actualizarLineaOrden">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenRequest" message="tns:actualizarLineaOrden" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenResponse" message="tns:actualizarLineaOrdenResponse" />
-    </operation>
-    <operation name="eliminarLineaOrden">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarLineaOrdenRequest" message="tns:eliminarLineaOrden" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarLineaOrdenResponse" message="tns:eliminarLineaOrdenResponse" />
-    </operation>
-    <operation name="listarLineaProyeccion">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionRequest" message="tns:listarLineaProyeccion" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionResponse" message="tns:listarLineaProyeccionResponse" />
-    </operation>
-    <operation name="eliminarLineaProyeccion">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarLineaProyeccionRequest" message="tns:eliminarLineaProyeccion" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarLineaProyeccionResponse" message="tns:eliminarLineaProyeccionResponse" />
-    </operation>
-    <operation name="actualizarPoliticaStock">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockRequest" message="tns:actualizarPoliticaStock" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockResponse" message="tns:actualizarPoliticaStockResponse" />
-    </operation>
-    <operation name="listarPoliticaStock">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarPoliticaStockRequest" message="tns:listarPoliticaStock" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarPoliticaStockResponse" message="tns:listarPoliticaStockResponse" />
-    </operation>
-    <operation name="insertarMaquinaria">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest" message="tns:insertarMaquinaria" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse" message="tns:insertarMaquinariaResponse" />
-    </operation>
-    <operation name="actualizarMaquinaria">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaRequest" message="tns:actualizarMaquinaria" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaResponse" message="tns:actualizarMaquinariaResponse" />
-    </operation>
-    <operation name="eliminarMaquinaria">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaRequest" message="tns:eliminarMaquinaria" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaResponse" message="tns:eliminarMaquinariaResponse" />
-    </operation>
-    <operation name="insertarOrdenProduccion">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarOrdenProduccionRequest" message="tns:insertarOrdenProduccion" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarOrdenProduccionResponse" message="tns:insertarOrdenProduccionResponse" />
-    </operation>
-    <operation name="insertarPoliticaStock">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarPoliticaStockRequest" message="tns:insertarPoliticaStock" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarPoliticaStockResponse" message="tns:insertarPoliticaStockResponse" />
-    </operation>
-    <operation name="listarProyeccionVenta">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaRequest" message="tns:listarProyeccionVenta" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaResponse" message="tns:listarProyeccionVentaResponse" />
+    <operation name="insertarProducto">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarProductoRequest" message="tns:insertarProducto" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarProductoResponse" message="tns:insertarProductoResponse" />
     </operation>
     <operation name="listarMaquinaria">
       <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarMaquinariaRequest" message="tns:listarMaquinaria" />
       <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarMaquinariaResponse" message="tns:listarMaquinariaResponse" />
     </operation>
-    <operation name="insertarMensaje">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarMensajeRequest" message="tns:insertarMensaje" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarMensajeResponse" message="tns:insertarMensajeResponse" />
+    <operation name="listarLineaOrden">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarLineaOrdenRequest" message="tns:listarLineaOrden" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarLineaOrdenResponse" message="tns:listarLineaOrdenResponse" />
     </operation>
     <operation name="listarMensaje">
       <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarMensajeRequest" message="tns:listarMensaje" />
       <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarMensajeResponse" message="tns:listarMensajeResponse" />
     </operation>
-    <operation name="listarInsumo">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarInsumoRequest" message="tns:listarInsumo" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarInsumoResponse" message="tns:listarInsumoResponse" />
+    <operation name="insertarMensaje">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarMensajeRequest" message="tns:insertarMensaje" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarMensajeResponse" message="tns:insertarMensajeResponse" />
+    </operation>
+    <operation name="insertarInsumo">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarInsumoRequest" message="tns:insertarInsumo" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarInsumoResponse" message="tns:insertarInsumoResponse" />
+    </operation>
+    <operation name="eliminarInsumo">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarInsumoRequest" message="tns:eliminarInsumo" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarInsumoResponse" message="tns:eliminarInsumoResponse" />
+    </operation>
+    <operation name="eliminarProducto">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarProductoRequest" message="tns:eliminarProducto" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarProductoResponse" message="tns:eliminarProductoResponse" />
+    </operation>
+    <operation name="hello">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/helloResponse" message="tns:helloResponse" />
     </operation>
     <operation name="enviarMensaje">
       <input wsam:Action="http://services.lp2tecnoquim/Servicio/enviarMensajeRequest" message="tns:enviarMensaje" />
@@ -536,129 +500,29 @@
       <input wsam:Action="http://services.lp2tecnoquim/Servicio/verificarUsuarioRequest" message="tns:verificarUsuario" />
       <output wsam:Action="http://services.lp2tecnoquim/Servicio/verificarUsuarioResponse" message="tns:verificarUsuarioResponse" />
     </operation>
-    <operation name="insertarAlmacen">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarAlmacenRequest" message="tns:insertarAlmacen" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarAlmacenResponse" message="tns:insertarAlmacenResponse" />
-    </operation>
-    <operation name="insertarInsumo">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarInsumoRequest" message="tns:insertarInsumo" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarInsumoResponse" message="tns:insertarInsumoResponse" />
-    </operation>
-    <operation name="actualizarInsumo">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarInsumoRequest" message="tns:actualizarInsumo" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarInsumoResponse" message="tns:actualizarInsumoResponse" />
-    </operation>
-    <operation name="eliminarInsumo">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarInsumoRequest" message="tns:eliminarInsumo" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarInsumoResponse" message="tns:eliminarInsumoResponse" />
-    </operation>
-    <operation name="listarLineaOrden">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarLineaOrdenRequest" message="tns:listarLineaOrden" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarLineaOrdenResponse" message="tns:listarLineaOrdenResponse" />
-    </operation>
     <operation name="listarAlmacen">
       <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarAlmacenRequest" message="tns:listarAlmacen" />
       <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarAlmacenResponse" message="tns:listarAlmacenResponse" />
     </operation>
-    <operation name="insertarPMP">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarPMPRequest" message="tns:insertarPMP" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarPMPResponse" message="tns:insertarPMPResponse" />
+    <operation name="insertarProyeccionVenta">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaRequest" message="tns:insertarProyeccionVenta" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarProyeccionVentaResponse" message="tns:insertarProyeccionVentaResponse" />
     </operation>
-    <operation name="insertarRol">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarRolRequest" message="tns:insertarRol" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarRolResponse" message="tns:insertarRolResponse" />
+    <operation name="insertarLineaProyeccion">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarLineaProyeccionRequest" message="tns:insertarLineaProyeccion" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarLineaProyeccionResponse" message="tns:insertarLineaProyeccionResponse" />
     </operation>
-    <operation name="actualizarRol">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarRolRequest" message="tns:actualizarRol" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarRolResponse" message="tns:actualizarRolResponse" />
-    </operation>
-    <operation name="listarUsuarios">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarUsuariosRequest" message="tns:listarUsuarios" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarUsuariosResponse" message="tns:listarUsuariosResponse" />
-    </operation>
-    <operation name="insertarUsuario">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarUsuarioRequest" message="tns:insertarUsuario" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
-    </operation>
-    <operation name="listarPMP">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarPMPRequest" message="tns:listarPMP" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarPMPResponse" message="tns:listarPMPResponse" />
-    </operation>
-    <operation name="actualizarPMP">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarPMPRequest" message="tns:actualizarPMP" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarPMPResponse" message="tns:actualizarPMPResponse" />
-    </operation>
-    <operation name="insertarProducto">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarProductoRequest" message="tns:insertarProducto" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarProductoResponse" message="tns:insertarProductoResponse" />
-    </operation>
-    <operation name="listarProductos">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarProductosRequest" message="tns:listarProductos" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarProductosResponse" message="tns:listarProductosResponse" />
-    </operation>
-    <operation name="eliminarProducto">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarProductoRequest" message="tns:eliminarProducto" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarProductoResponse" message="tns:eliminarProductoResponse" />
-    </operation>
-    <operation name="listarRoles">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarRolesRequest" message="tns:listarRoles" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarRolesResponse" message="tns:listarRolesResponse" />
-    </operation>
-    <operation name="actualizarTrabajador">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarTrabajadorRequest" message="tns:actualizarTrabajador" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarTrabajadorResponse" message="tns:actualizarTrabajadorResponse" />
-    </operation>
-    <operation name="listarTrabajadores">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarTrabajadoresRequest" message="tns:listarTrabajadores" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarTrabajadoresResponse" message="tns:listarTrabajadoresResponse" />
-    </operation>
-    <operation name="eliminarTrabajador">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorRequest" message="tns:eliminarTrabajador" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorResponse" message="tns:eliminarTrabajadorResponse" />
-    </operation>
-    <operation name="insertarTrabajador">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarTrabajadorRequest" message="tns:insertarTrabajador" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarTrabajadorResponse" message="tns:insertarTrabajadorResponse" />
-    </operation>
-    <operation name="actualizarUsuario">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
-    </operation>
-    <operation name="actualizarDetalleAlmacenProducto">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoRequest" message="tns:actualizarDetalleAlmacenProducto" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoResponse" message="tns:actualizarDetalleAlmacenProductoResponse" />
-    </operation>
-    <operation name="listarDetalleAlmacenProducto">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoRequest" message="tns:listarDetalleAlmacenProducto" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoResponse" message="tns:listarDetalleAlmacenProductoResponse" />
-    </operation>
-    <operation name="insertarDetalleAlmacenInsumo">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoRequest" message="tns:insertarDetalleAlmacenInsumo" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenInsumoResponse" message="tns:insertarDetalleAlmacenInsumoResponse" />
+    <operation name="actualizarMaquinaria">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaRequest" message="tns:actualizarMaquinaria" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarMaquinariaResponse" message="tns:actualizarMaquinariaResponse" />
     </operation>
     <operation name="actualizarDetalleAlmacenInsumo">
       <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoRequest" message="tns:actualizarDetalleAlmacenInsumo" />
       <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenInsumoResponse" message="tns:actualizarDetalleAlmacenInsumoResponse" />
     </operation>
-    <operation name="listarDetalleAlmacenInsumo">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoRequest" message="tns:listarDetalleAlmacenInsumo" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoResponse" message="tns:listarDetalleAlmacenInsumoResponse" />
-    </operation>
-    <operation name="insertarDetalleMaquinaria">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarDetalleMaquinariaRequest" message="tns:insertarDetalleMaquinaria" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarDetalleMaquinariaResponse" message="tns:insertarDetalleMaquinariaResponse" />
-    </operation>
-    <operation name="actualizarDetalleMaquinaria">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleMaquinariaRequest" message="tns:actualizarDetalleMaquinaria" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleMaquinariaResponse" message="tns:actualizarDetalleMaquinariaResponse" />
-    </operation>
-    <operation name="insertarDetalleAlmacenProducto">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoRequest" message="tns:insertarDetalleAlmacenProducto" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoResponse" message="tns:insertarDetalleAlmacenProductoResponse" />
-    </operation>
-    <operation name="listarOrdenesProduccionFecha">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaRequest" message="tns:listarOrdenesProduccionFecha" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaResponse" message="tns:listarOrdenesProduccionFechaResponse" />
+    <operation name="listarInstructivos">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarInstructivosRequest" message="tns:listarInstructivos" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarInstructivosResponse" message="tns:listarInstructivosResponse" />
     </operation>
     <operation name="listarOrdenesProduccionPlan">
       <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionPlanRequest" message="tns:listarOrdenesProduccionPlan" />
@@ -668,18 +532,154 @@
       <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarProyeccionVentaRequest" message="tns:actualizarProyeccionVenta" />
       <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarProyeccionVentaResponse" message="tns:actualizarProyeccionVentaResponse" />
     </operation>
-    <operation name="actualizarOrdenProduccion">
-      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionRequest" message="tns:actualizarOrdenProduccion" />
-      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionResponse" message="tns:actualizarOrdenProduccionResponse" />
+    <operation name="insertarLineaOrden">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenRequest" message="tns:insertarLineaOrden" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarLineaOrdenResponse" message="tns:insertarLineaOrdenResponse" />
+    </operation>
+    <operation name="insertarTrabajador">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarTrabajadorRequest" message="tns:insertarTrabajador" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarTrabajadorResponse" message="tns:insertarTrabajadorResponse" />
+    </operation>
+    <operation name="listarTrabajadores">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarTrabajadoresRequest" message="tns:listarTrabajadores" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarTrabajadoresResponse" message="tns:listarTrabajadoresResponse" />
+    </operation>
+    <operation name="eliminarTrabajador">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorRequest" message="tns:eliminarTrabajador" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarTrabajadorResponse" message="tns:eliminarTrabajadorResponse" />
+    </operation>
+    <operation name="listarProyeccionVenta">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaRequest" message="tns:listarProyeccionVenta" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarProyeccionVentaResponse" message="tns:listarProyeccionVentaResponse" />
+    </operation>
+    <operation name="eliminarMaquinaria">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaRequest" message="tns:eliminarMaquinaria" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarMaquinariaResponse" message="tns:eliminarMaquinariaResponse" />
+    </operation>
+    <operation name="listarLineaProyeccion">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionRequest" message="tns:listarLineaProyeccion" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarLineaProyeccionResponse" message="tns:listarLineaProyeccionResponse" />
+    </operation>
+    <operation name="listarDetalleMaquinaria">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaRequest" message="tns:listarDetalleMaquinaria" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarDetalleMaquinariaResponse" message="tns:listarDetalleMaquinariaResponse" />
+    </operation>
+    <operation name="actualizarDetalleAlmacenProducto">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoRequest" message="tns:actualizarDetalleAlmacenProducto" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleAlmacenProductoResponse" message="tns:actualizarDetalleAlmacenProductoResponse" />
+    </operation>
+    <operation name="actualizarDetalleMaquinaria">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleMaquinariaRequest" message="tns:actualizarDetalleMaquinaria" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarDetalleMaquinariaResponse" message="tns:actualizarDetalleMaquinariaResponse" />
+    </operation>
+    <operation name="insertarInstructivo">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarInstructivoRequest" message="tns:insertarInstructivo" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarInstructivoResponse" message="tns:insertarInstructivoResponse" />
+    </operation>
+    <operation name="actualizarLineaInsumo">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoRequest" message="tns:actualizarLineaInsumo" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarLineaInsumoResponse" message="tns:actualizarLineaInsumoResponse" />
+    </operation>
+    <operation name="listarOrdenesProduccionFecha">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaRequest" message="tns:listarOrdenesProduccionFecha" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarOrdenesProduccionFechaResponse" message="tns:listarOrdenesProduccionFechaResponse" />
+    </operation>
+    <operation name="eliminarLineaProyeccion">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarLineaProyeccionRequest" message="tns:eliminarLineaProyeccion" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarLineaProyeccionResponse" message="tns:eliminarLineaProyeccionResponse" />
+    </operation>
+    <operation name="actualizarInstructivo">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarInstructivoRequest" message="tns:actualizarInstructivo" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarInstructivoResponse" message="tns:actualizarInstructivoResponse" />
+    </operation>
+    <operation name="listarLineaInsumo">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarLineaInsumoRequest" message="tns:listarLineaInsumo" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarLineaInsumoResponse" message="tns:listarLineaInsumoResponse" />
+    </operation>
+    <operation name="insertarMaquinaria">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaRequest" message="tns:insertarMaquinaria" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarMaquinariaResponse" message="tns:insertarMaquinariaResponse" />
+    </operation>
+    <operation name="insertarLineaInsumo">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarLineaInsumoRequest" message="tns:insertarLineaInsumo" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarLineaInsumoResponse" message="tns:insertarLineaInsumoResponse" />
+    </operation>
+    <operation name="insertarPoliticaStock">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarPoliticaStockRequest" message="tns:insertarPoliticaStock" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarPoliticaStockResponse" message="tns:insertarPoliticaStockResponse" />
+    </operation>
+    <operation name="actualizarUsuario">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
+    </operation>
+    <operation name="listarDetalleAlmacenProducto">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoRequest" message="tns:listarDetalleAlmacenProducto" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenProductoResponse" message="tns:listarDetalleAlmacenProductoResponse" />
+    </operation>
+    <operation name="eliminarLineaInsumo">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarLineaInsumoRequest" message="tns:eliminarLineaInsumo" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarLineaInsumoResponse" message="tns:eliminarLineaInsumoResponse" />
+    </operation>
+    <operation name="actualizarTrabajador">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarTrabajadorRequest" message="tns:actualizarTrabajador" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarTrabajadorResponse" message="tns:actualizarTrabajadorResponse" />
+    </operation>
+    <operation name="insertarDetalleAlmacenProducto">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoRequest" message="tns:insertarDetalleAlmacenProducto" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarDetalleAlmacenProductoResponse" message="tns:insertarDetalleAlmacenProductoResponse" />
+    </operation>
+    <operation name="eliminarLineaOrden">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarLineaOrdenRequest" message="tns:eliminarLineaOrden" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/eliminarLineaOrdenResponse" message="tns:eliminarLineaOrdenResponse" />
+    </operation>
+    <operation name="insertarOrdenProduccion">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarOrdenProduccionRequest" message="tns:insertarOrdenProduccion" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarOrdenProduccionResponse" message="tns:insertarOrdenProduccionResponse" />
+    </operation>
+    <operation name="listarPoliticaStock">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarPoliticaStockRequest" message="tns:listarPoliticaStock" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarPoliticaStockResponse" message="tns:listarPoliticaStockResponse" />
+    </operation>
+    <operation name="insertarDetalleMaquinaria">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarDetalleMaquinariaRequest" message="tns:insertarDetalleMaquinaria" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarDetalleMaquinariaResponse" message="tns:insertarDetalleMaquinariaResponse" />
+    </operation>
+    <operation name="actualizarLineaOrden">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenRequest" message="tns:actualizarLineaOrden" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarLineaOrdenResponse" message="tns:actualizarLineaOrdenResponse" />
     </operation>
     <operation name="actualizarLineaProyeccion">
       <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionRequest" message="tns:actualizarLineaProyeccion" />
       <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarLineaProyeccionResponse" message="tns:actualizarLineaProyeccionResponse" />
     </operation>
+    <operation name="actualizarOrdenProduccion">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionRequest" message="tns:actualizarOrdenProduccion" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarOrdenProduccionResponse" message="tns:actualizarOrdenProduccionResponse" />
+    </operation>
+    <operation name="actualizarPoliticaStock">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockRequest" message="tns:actualizarPoliticaStock" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarPoliticaStockResponse" message="tns:actualizarPoliticaStockResponse" />
+    </operation>
+    <operation name="listarDetalleAlmacenInsumo">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoRequest" message="tns:listarDetalleAlmacenInsumo" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/listarDetalleAlmacenInsumoResponse" message="tns:listarDetalleAlmacenInsumoResponse" />
+    </operation>
+    <operation name="actualizarProducto">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarProductoRequest" message="tns:actualizarProducto" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarProductoResponse" message="tns:actualizarProductoResponse" />
+    </operation>
+    <operation name="actualizarAlmacen">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarAlmacenRequest" message="tns:actualizarAlmacen" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarAlmacenResponse" message="tns:actualizarAlmacenResponse" />
+    </operation>
+    <operation name="insertarAlmacen">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarAlmacenRequest" message="tns:insertarAlmacen" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarAlmacenResponse" message="tns:insertarAlmacenResponse" />
+    </operation>
   </portType>
   <binding name="ServicioPortBinding" type="tns:Servicio">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="hello">
+    <operation name="insertarDetalleAlmacenInsumo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -688,7 +688,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarAlmacen">
+    <operation name="actualizarPMP">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -697,7 +697,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarProducto">
+    <operation name="listarPMP">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -706,7 +706,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarProyeccionVenta">
+    <operation name="listarInsumo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -715,7 +715,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarDetalleMaquinaria">
+    <operation name="listarRoles">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -724,7 +724,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarInstructivo">
+    <operation name="insertarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -733,7 +733,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarInstructivo">
+    <operation name="actualizarRol">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -742,7 +742,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarLineaInsumo">
+    <operation name="listarProductos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -751,7 +751,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarLineaInsumo">
+    <operation name="insertarPMP">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -760,7 +760,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarInstructivos">
+    <operation name="actualizarInsumo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -769,7 +769,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarLineaInsumo">
+    <operation name="insertarRol">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -778,7 +778,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarLineaInsumo">
+    <operation name="listarUsuarios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -787,124 +787,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarLineaProyeccion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarLineaOrden">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarLineaOrden">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarLineaOrden">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarLineaProyeccion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarLineaProyeccion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarPoliticaStock">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPoliticaStock">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarMaquinaria">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarMaquinaria">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarMaquinaria">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarOrdenProduccion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarPoliticaStock">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarProyeccionVenta">
+    <operation name="insertarProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -922,7 +805,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarMensaje">
+    <operation name="listarLineaOrden">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -940,7 +823,43 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarInsumo">
+    <operation name="insertarMensaje">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarInsumo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarInsumo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hello">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -967,51 +886,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarAlmacen">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarInsumo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarInsumo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarInsumo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarLineaOrden">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="listarAlmacen">
       <soap:operation soapAction="" />
       <input>
@@ -1021,7 +895,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarPMP">
+    <operation name="insertarProyeccionVenta">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1030,7 +904,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarRol">
+    <operation name="insertarLineaProyeccion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1039,151 +913,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarRol">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarUsuarios">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPMP">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarPMP">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarProductos">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarRoles">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarTrabajador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTrabajadores">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarTrabajador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarTrabajador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarDetalleAlmacenProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarDetalleAlmacenProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarDetalleAlmacenInsumo">
+    <operation name="actualizarMaquinaria">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1201,43 +931,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarDetalleAlmacenInsumo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarDetalleMaquinaria">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarDetalleMaquinaria">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarDetalleAlmacenProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarOrdenesProduccionFecha">
+    <operation name="listarInstructivos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1264,7 +958,259 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarOrdenProduccion">
+    <operation name="insertarLineaOrden">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarTrabajador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTrabajadores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarTrabajador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProyeccionVenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarLineaProyeccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDetalleMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarDetalleAlmacenProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarDetalleMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarInstructivo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarLineaInsumo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarOrdenesProduccionFecha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarLineaProyeccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarInstructivo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarLineaInsumo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarLineaInsumo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPoliticaStock">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDetalleAlmacenProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarLineaInsumo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarTrabajador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarDetalleAlmacenProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarLineaOrden">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarOrdenProduccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPoliticaStock">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarDetalleMaquinaria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarLineaOrden">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -1274,6 +1220,60 @@
       </output>
     </operation>
     <operation name="actualizarLineaProyeccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarOrdenProduccion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarPoliticaStock">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDetalleAlmacenInsumo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarAlmacen">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAlmacen">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
