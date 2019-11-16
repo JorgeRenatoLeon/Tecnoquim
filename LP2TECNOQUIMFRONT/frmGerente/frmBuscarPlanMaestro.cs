@@ -13,7 +13,8 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         {
             InitializeComponent();
             dgvHistorialPlan.AutoGenerateColumns = false;
-            dgvHistorialPlan.DataSource = DBController.listarPMP("");
+            //DateTime value = new DateTime(2019, 01, 01);
+            dgvHistorialPlan.DataSource = DBController.listarPMP("2019-01-01");
         }
 
         public Service.planMaestroProduccion PmpSeleccionado { get => pmpSeleccionado; set => pmpSeleccionado = value; }
@@ -26,7 +27,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvHistorialPlan.DataSource = DBController.listarPMP(txtNombre.Text);
+            //dgvHistorialPlan.DataSource = DBController.listarPMP(txtNombre.Text);
         }
 
         private void dgvHistorialPlan_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
