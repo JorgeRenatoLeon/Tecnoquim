@@ -16,13 +16,6 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             {
                 InitializeComponent();
             }
-            else if (cont==2)
-            {
-                InitializeComponent();
-                this.Visible = true;
-                frmGestionarPlanMaestro frmGestionarPlanM = new frmGestionarPlanMaestro(1);
-                frmGestionarPlanM.ShowDialog(this);
-            }
             else
             {
                 Thread t = new Thread(new ThreadStart(SplashStart));
@@ -68,8 +61,11 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         private void btnPMS_Click(object sender, EventArgs e)
         {
-            frmGestionarPlanMaestro frmGestionarPlanM = new frmGestionarPlanMaestro(trabajador);
+            this.Visible = false;
+            frmGestionarPMP frmGestionarPlanM = new frmGestionarPMP(trabajador);
             frmGestionarPlanM.Visible = true;
+            close = 1;
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

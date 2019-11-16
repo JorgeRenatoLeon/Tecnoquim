@@ -68,11 +68,17 @@
     <Compile Include="frmGerente\frmGestionarEmpleado.Designer.cs">
       <DependentUpon>frmGestionarEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGerente\frmGestionarPlanMaestro.cs">
+    <Compile Include="frmGerente\frmRevisarPlanMaestro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGerente\frmGestionarPlanMaestro.Designer.cs">
-      <DependentUpon>frmGestionarPlanMaestro.cs</DependentUpon>
+    <Compile Include="frmGerente\frmRevisarPlanMaestro.Designer.cs">
+      <DependentUpon>frmRevisarPlanMaestro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGerente\frmGestionarPMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerente\frmGestionarPMP.Designer.cs">
+      <DependentUpon>frmGestionarPMP.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGerente\frmNotificaciones.cs">
       <SubType>Form</SubType>
@@ -358,8 +364,11 @@
     <EmbeddedResource Include="frmGerente\frmBuscarEmpleado.resx">
       <DependentUpon>frmBuscarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGerente\frmGestionarPlanMaestro.resx">
-      <DependentUpon>frmGestionarPlanMaestro.cs</DependentUpon>
+    <EmbeddedResource Include="frmGerente\frmRevisarPlanMaestro.resx">
+      <DependentUpon>frmRevisarPlanMaestro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGerente\frmGestionarPMP.resx">
+      <DependentUpon>frmGestionarPMP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGerente\frmNotificaciones.resx">
       <DependentUpon>frmNotificaciones.cs</DependentUpon>
