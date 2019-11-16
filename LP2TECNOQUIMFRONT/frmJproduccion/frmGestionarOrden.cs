@@ -360,6 +360,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 txtNOrden.Text = _orderProduccion.id.ToString();
                 dtpOrden.Value = _orderProduccion.fecha;
                 Service.lineaOrden[] l = DBController.listarLineaOrden(_orderProduccion.id);
+                _orderProduccion.lineasOrden = l.ToArray();
                 if (l != null)
                 {
                     lineas = new BindingList<lineaOrden>(l);
