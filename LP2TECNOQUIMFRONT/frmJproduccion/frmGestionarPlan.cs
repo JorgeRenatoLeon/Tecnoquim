@@ -61,7 +61,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
                     // Calendario
                     calOrdenProduccion.Enabled = false;
-                    calOrdenProduccion.SetDate(new DateTime(DateTime.Now.AddMonths(1).Year, DateTime.Now.AddMonths(1).Month, 1);
+                    calOrdenProduccion.SetDate(new DateTime(DateTime.Now.AddMonths(1).Year, DateTime.Now.AddMonths(1).Month, 1));
 
                     // Data Grid View
                     dgvMaquinaria.Enabled = false;
@@ -91,7 +91,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
                     // Calendario
                     calOrdenProduccion.Enabled = true;
-                    calOrdenProduccion.SetDate(new DateTime(DateTime.Now.AddMonths(1).Year, DateTime.Now.AddMonths(1).Month, 1);
+                    calOrdenProduccion.SetDate(new DateTime(DateTime.Now.AddMonths(1).Year, DateTime.Now.AddMonths(1).Month, 1));
 
                     // Data Grid View
                     dgvMaquinaria.Enabled = true;
