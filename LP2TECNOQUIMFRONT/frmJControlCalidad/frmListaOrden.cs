@@ -27,6 +27,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             lineas =DBController.listarOrdenesProduccionFecha(DateTime.Now.ToString("yyyy-MM-dd"));
             
             dgvListaOrden.AutoGenerateColumns = false;
+            dgvListaOrden.ReadOnly = true;
             if (lineas == null)
             {
                 MessageBox.Show("No hay Ordenes pendientes por hoy", "Advertencia", MessageBoxButtons.OK);
@@ -64,9 +65,11 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
                 dgvListaOrden.Rows[e.RowIndex].Cells["Producto"].Value = lineaOrdenFila.producto.nombre;
                 dgvListaOrden.Rows[e.RowIndex].Cells["Codigo"].Value = lineaOrdenFila.producto.idProducto;
                 dgvListaOrden.Rows[e.RowIndex].Cells["Cantidad"].Value = lineaOrdenFila.cantProducto;
-            }
+                LineaOrdenSeleccionada = (Service.lineaOrden)dgvListaOrden.CurrentRow.DataBoundItem;
 
-            LineaOrdenSeleccionada = (Service.lineaOrden)dgvListaOrden.CurrentRow.DataBoundItem;
+            }
+            
+
 
         }
 
@@ -75,16 +78,15 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             this.DialogResult = DialogResult.OK;
         }
 
-        private void dgvListaOrden_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void dgvListaOrden_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.Visible = false;
             
             frmModCalidad formModCalidad = new frmModCalidad();
             formModCalidad.ShowDialog();
             this.Show();
-
-
-
         }
     }
 }
