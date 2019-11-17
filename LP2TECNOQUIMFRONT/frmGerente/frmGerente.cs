@@ -33,7 +33,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         }
         public void SplashStart()
         {
-            Application.Run(new frmSplash());
+            //Application.Run(new frmSplash());
         }
 
         private void frmGerente_FormClosed(object sender, FormClosedEventArgs e)
