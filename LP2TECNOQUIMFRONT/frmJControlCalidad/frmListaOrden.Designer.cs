@@ -46,6 +46,7 @@
             this.Cantidad});
             this.dgvListaOrden.Location = new System.Drawing.Point(59, 101);
             this.dgvListaOrden.Name = "dgvListaOrden";
+            this.dgvListaOrden.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaOrden.Size = new System.Drawing.Size(582, 275);
             this.dgvListaOrden.TabIndex = 0;
             this.dgvListaOrden.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaOrden_CellContentClick);

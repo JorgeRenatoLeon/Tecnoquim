@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2TECNOQUIMFRONT.Service;
 
 namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 {
@@ -15,13 +16,18 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 
         
         Service.ServicioClient DBController = new Service.ServicioClient();
+        Service.lineaOrden lineaOrdenSeleccionada = new Service.lineaOrden();
         Service.ordenProduccion[] lineas;
+
+        public lineaOrden LineaOrdenSeleccionada { get => lineaOrdenSeleccionada; set => lineaOrdenSeleccionada = value; }
+
         public frmListaOrden()
         {
             InitializeComponent();
             lineas =DBController.listarOrdenesProduccionFecha(DateTime.Now.ToString("yyyy-MM-dd"));
             
-            if (lineas[0].lineasOrden == null)
+            dgvListaOrden.AutoGenerateColumns = false;
+            if (lineas == null)
             {
                 MessageBox.Show("No hay Ordenes pendientes por hoy", "Advertencia", MessageBoxButtons.OK);
                 this.DialogResult = DialogResult.OK;
@@ -29,8 +35,10 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             }
             else
             {
+
+                dgvListaOrden.DataSource = DBController.listarLineaOrden(lineas[0].id);
                 
-                dgvListaOrden.DataSource = lineas[0].lineasOrden;
+
             }
 
         }
@@ -57,7 +65,9 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
                 dgvListaOrden.Rows[e.RowIndex].Cells["Codigo"].Value = lineaOrdenFila.producto.idProducto;
                 dgvListaOrden.Rows[e.RowIndex].Cells["Cantidad"].Value = lineaOrdenFila.cantProducto;
             }
-            
+
+            LineaOrdenSeleccionada = (Service.lineaOrden)dgvListaOrden.CurrentRow.DataBoundItem;
+
         }
 
         private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -68,6 +78,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         private void dgvListaOrden_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             this.Visible = false;
+            
             frmModCalidad formModCalidad = new frmModCalidad();
             formModCalidad.ShowDialog();
             this.Show();
