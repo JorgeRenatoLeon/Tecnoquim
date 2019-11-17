@@ -47,8 +47,10 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         private void btnProductos_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmListaOrden formListaOrden = new frmListaOrden();
-            formListaOrden.ShowDialog();
+            //frmListaOrden formListaOrden = new frmListaOrden();
+            //formListaOrden.ShowDialog();
+            frmModCalidad formModCalidad = new frmModCalidad();
+            formModCalidad.ShowDialog();
             this.Show();
 
         }

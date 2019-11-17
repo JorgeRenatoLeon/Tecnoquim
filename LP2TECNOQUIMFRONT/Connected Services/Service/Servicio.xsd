@@ -52,6 +52,10 @@
   <xs:element name="eliminarTrabajadorResponse" type="tns:eliminarTrabajadorResponse" />
   <xs:element name="enviarMensaje" type="tns:enviarMensaje" />
   <xs:element name="enviarMensajeResponse" type="tns:enviarMensajeResponse" />
+  <xs:element name="generarReporteInsumosRestringidosPDF" type="tns:generarReporteInsumosRestringidosPDF" />
+  <xs:element name="generarReporteInsumosRestringidosPDFResponse" type="tns:generarReporteInsumosRestringidosPDFResponse" />
+  <xs:element name="generarReporteProductosRestringidosPDF" type="tns:generarReporteProductosRestringidosPDF" />
+  <xs:element name="generarReporteProductosRestringidosPDFResponse" type="tns:generarReporteProductosRestringidosPDFResponse" />
   <xs:element name="hello" type="tns:hello" />
   <xs:element name="helloResponse" type="tns:helloResponse" />
   <xs:element name="insertarAlmacen" type="tns:insertarAlmacen" />
@@ -309,6 +313,17 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="generarReporteProductosRestringidosPDF">
+    <xs:sequence>
+      <xs:element name="mes" type="xs:int" />
+      <xs:element name="anio" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteProductosRestringidosPDFResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="actualizarInsumo">
     <xs:sequence>
       <xs:element minOccurs="0" name="insumo" type="tns:insumo" />
@@ -359,6 +374,16 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="lineasOrden" nillable="true" type="tns:lineaOrden" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarRoles">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarRolesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:rol" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="enviarMensaje">
     <xs:sequence>
       <xs:element minOccurs="0" name="mensaje" type="tns:mensaje" />
@@ -375,16 +400,6 @@
   </xs:complexType>
   <xs:complexType name="enviarMensajeResponse">
     <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarRoles">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarRolesResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:rol" />
-    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarProducto">
     <xs:sequence>
@@ -658,20 +673,20 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:instructivo" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarAlmacen">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="almacen" type="tns:almacen" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarAlmacenResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="eliminarMaquinaria">
     <xs:sequence>
       <xs:element name="id" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarMaquinariaResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="actualizarAlmacen">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="almacen" type="tns:almacen" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarAlmacenResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarProyeccionVenta">
@@ -754,6 +769,27 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+<<<<<<< HEAD:LP2TECNOQUIMFRONT/Connected Services/Service/Servicio1.xsd
+  <xs:complexType name="eliminarTrabajador">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTrabajadorResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="actualizarLineaProyeccion">
+=======
+  <xs:complexType name="actualizarOrdenProduccion">
+>>>>>>> cdac18069a470d7408a09132ff63f0f5a66d5d64:LP2TECNOQUIMFRONT/Connected Services/Service/Servicio.xsd
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lineaProyeccion" type="tns:lineaProyeccion" />
+      <xs:element name="idProyeccion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarLineaProyeccionResponse">
+    <xs:sequence />
+  </xs:complexType>
   <xs:complexType name="actualizarOrdenProduccion">
     <xs:sequence>
       <xs:element minOccurs="0" name="ordenProduccion" type="tns:ordenProduccion" />
@@ -761,15 +797,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarOrdenProduccionResponse">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="actualizarLineaProyeccion">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="lineaProyeccion" type="tns:lineaProyeccion" />
-      <xs:element name="idProyeccion" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarLineaProyeccionResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="insertarMensaje">
@@ -825,6 +852,17 @@
   </xs:complexType>
   <xs:complexType name="eliminarLineaProyeccionResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="generarReporteInsumosRestringidosPDF">
+    <xs:sequence>
+      <xs:element name="mes" type="xs:int" />
+      <xs:element name="anio" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteInsumosRestringidosPDFResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarUsuario">
     <xs:sequence>

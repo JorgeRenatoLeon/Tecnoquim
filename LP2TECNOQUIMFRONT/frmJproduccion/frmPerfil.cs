@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
-    public partial class frmPerfil : Form
+    public partial class btnReporte : Form
     {
         Service.trabajador trabajador = new Service.trabajador();
         Service.ServicioClient DBController = new Service.ServicioClient();
         int close = 0;
-        public frmPerfil(Service.trabajador trabajadors = null)
+        public btnReporte(Service.trabajador trabajadors = null)
         {
             this.trabajador = trabajadors;
             InitializeComponent();
@@ -75,6 +75,14 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             trabajador.correo = txtCorreo.Text;
             DBController.actualizarTrabajador(trabajador);
             MessageBox.Show("Correo cambiado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnRep_Click(object sender, EventArgs e)
+        {
+            InsumosRestringidos formInsR = new InsumosRestringidos();
+            formInsR.Visible = true;
+            close = 1;
+            this.Close();
         }
     }
 }

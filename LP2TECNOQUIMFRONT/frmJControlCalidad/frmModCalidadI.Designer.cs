@@ -30,6 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.cbRol = new System.Windows.Forms.ComboBox();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.txtidprod = new System.Windows.Forms.TextBox();
             this.lblidProd = new System.Windows.Forms.Label();
@@ -38,9 +41,6 @@
             this.txtNomProd = new System.Windows.Forms.TextBox();
             this.txtPres = new System.Windows.Forms.TextBox();
             this.lblBack = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnProductos = new System.Windows.Forms.Button();
-            this.cbRol = new System.Windows.Forms.ComboBox();
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,41 @@
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos ";
             // 
+            // cbRol
+            // 
+            this.cbRol.FormattingEnabled = true;
+            this.cbRol.Location = new System.Drawing.Point(180, 154);
+            this.cbRol.Name = "cbRol";
+            this.cbRol.Size = new System.Drawing.Size(482, 33);
+            this.cbRol.TabIndex = 82;
+            // 
+            // btnProductos
+            // 
+            this.btnProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProductos.BackColor = System.Drawing.Color.White;
+            this.btnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnProductos.Location = new System.Drawing.Point(388, 231);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(130, 33);
+            this.btnProductos.TabIndex = 81;
+            this.btnProductos.Text = "Guardar";
+            this.btnProductos.UseVisualStyleBackColor = false;
+            
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(33, 157);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 25);
+            this.label2.TabIndex = 80;
+            this.label2.Text = "Estado: ";
+            // 
             // btnBuscarInsumo
             // 
             this.btnBuscarInsumo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -91,6 +126,7 @@
             this.btnBuscarInsumo.TabIndex = 79;
             this.btnBuscarInsumo.Text = "...";
             this.btnBuscarInsumo.UseVisualStyleBackColor = false;
+            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
             // 
             // txtidprod
             // 
@@ -166,41 +202,6 @@
             this.lblBack.Text = "< Regresar";
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(33, 157);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 25);
-            this.label2.TabIndex = 80;
-            this.label2.Text = "Estado: ";
-            // 
-            // btnProductos
-            // 
-            this.btnProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProductos.BackColor = System.Drawing.Color.White;
-            this.btnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnProductos.Location = new System.Drawing.Point(388, 231);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(130, 33);
-            this.btnProductos.TabIndex = 81;
-            this.btnProductos.Text = "Guardar";
-            this.btnProductos.UseVisualStyleBackColor = false;
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
-            // 
-            // cbRol
-            // 
-            this.cbRol.FormattingEnabled = true;
-            this.cbRol.Location = new System.Drawing.Point(180, 154);
-            this.cbRol.Name = "cbRol";
-            this.cbRol.Size = new System.Drawing.Size(482, 33);
-            this.cbRol.TabIndex = 82;
             // 
             // frmModCalidadI
             // 
