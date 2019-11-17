@@ -35,7 +35,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            frmPerfil formPerfil = new frmPerfil(this.trabajador);
+            btnReporte formPerfil = new btnReporte(this.trabajador);
             formPerfil.Visible = true;
             close = 1;
             this.Close();
@@ -62,6 +62,14 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             dgvNotificaciones.Rows[e.RowIndex].Cells["RolEmisor"].Value = ppFila.emisor.rol.descripcion;
             dgvNotificaciones.Rows[e.RowIndex].Cells["Descripcion"].Value = ppFila.descripcion;
             dgvNotificaciones.Rows[e.RowIndex].Cells["Fecha"].Value = ppFila.fechaEnvio;
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            InsumosRestringidos formInsR = new InsumosRestringidos();
+            formInsR.Visible = true;
+            close = 1;
+            this.Close();
         }
     }
 }
