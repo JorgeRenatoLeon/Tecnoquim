@@ -65,20 +65,12 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
                 dgvListaOrden.Rows[e.RowIndex].Cells["Producto"].Value = lineaOrdenFila.producto.nombre;
                 dgvListaOrden.Rows[e.RowIndex].Cells["Codigo"].Value = lineaOrdenFila.producto.idProducto;
                 dgvListaOrden.Rows[e.RowIndex].Cells["Cantidad"].Value = lineaOrdenFila.cantProducto;
-                LineaOrdenSeleccionada = (Service.lineaOrden)dgvListaOrden.CurrentRow.DataBoundItem;
+               
 
             }
             
-
-
         }
 
-        private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-        }
-
-        
 
         private void dgvListaOrden_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -87,6 +79,12 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             frmModCalidad formModCalidad = new frmModCalidad();
             formModCalidad.ShowDialog();
             this.Show();
+        }
+
+        private void btnBuscarInsumo_Click(object sender, EventArgs e)
+        {
+            LineaOrdenSeleccionada = (Service.lineaOrden)dgvListaOrden.CurrentRow.DataBoundItem;
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

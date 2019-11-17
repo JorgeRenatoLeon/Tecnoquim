@@ -16,5 +16,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         {
             InitializeComponent();
         }
+
+
     }
 }

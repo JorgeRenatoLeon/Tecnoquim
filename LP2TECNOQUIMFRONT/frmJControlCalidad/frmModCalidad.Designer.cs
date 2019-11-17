@@ -40,11 +40,13 @@
             this.txtPres = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblBack = new System.Windows.Forms.LinkLabel();
+            this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatos
             // 
+            this.gbDatos.Controls.Add(this.btnBuscarInsumo);
             this.gbDatos.Controls.Add(this.cbRol);
             this.gbDatos.Controls.Add(this.label2);
             this.gbDatos.Controls.Add(this.btnProductos);
@@ -184,6 +186,22 @@
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
             // 
+            // btnBuscarInsumo
+            // 
+            this.btnBuscarInsumo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscarInsumo.BackColor = System.Drawing.Color.White;
+            this.btnBuscarInsumo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarInsumo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarInsumo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnBuscarInsumo.Location = new System.Drawing.Point(420, 41);
+            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
+            this.btnBuscarInsumo.Size = new System.Drawing.Size(52, 30);
+            this.btnBuscarInsumo.TabIndex = 85;
+            this.btnBuscarInsumo.Text = "...";
+            this.btnBuscarInsumo.UseVisualStyleBackColor = false;
+            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
+            // 
             // frmModCalidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,5 +234,6 @@
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.ComboBox cbRol;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnBuscarInsumo;
     }
 }
