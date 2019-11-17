@@ -236,6 +236,12 @@
     <Compile Include="frmGerente\frmBuscarPlanMaestro.Designer.cs">
       <DependentUpon>frmBuscarPlanMaestro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJproduccion\InsumosRestringidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJproduccion\InsumosRestringidos.Designer.cs">
+      <DependentUpon>InsumosRestringidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJVenta\frmBuscarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -460,6 +466,9 @@
     <EmbeddedResource Include="frmGerente\frmBuscarPlanMaestro.resx">
       <DependentUpon>frmBuscarPlanMaestro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmJproduccion\InsumosRestringidos.resx">
+      <DependentUpon>InsumosRestringidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmJVenta\frmBuscarProducto.resx">
       <DependentUpon>frmBuscarProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -619,6 +628,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.enviarMensajeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.generarReporteInsumosRestringidosPDFResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.generarReporteProductosRestringidosPDFResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.helloResponse.datasource">
@@ -849,6 +864,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_11.wide.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-940818100-1024x1024.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
-    partial class frmPerfil
+    partial class btnReporte
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfil));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btnReporte));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRep = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.btnRep);
             this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.btnNotificaciones);
             this.panel1.Controls.Add(this.button4);
@@ -65,6 +67,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 554);
             this.panel1.TabIndex = 31;
+            // 
+            // btnRep
+            // 
+            this.btnRep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRep.FlatAppearance.BorderSize = 0;
+            this.btnRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRep.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRep.ForeColor = System.Drawing.Color.White;
+            this.btnRep.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.document;
+            this.btnRep.Location = new System.Drawing.Point(0, 341);
+            this.btnRep.Name = "btnRep";
+            this.btnRep.Size = new System.Drawing.Size(163, 92);
+            this.btnRep.TabIndex = 7;
+            this.btnRep.Text = "Reportes";
+            this.btnRep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRep.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnRep.UseVisualStyleBackColor = true;
+            this.btnRep.Click += new System.EventHandler(this.btnRep_Click);
             // 
             // btnPerfil
             // 
@@ -91,7 +111,7 @@
             this.btnNotificaciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotificaciones.ForeColor = System.Drawing.Color.White;
             this.btnNotificaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificaciones.Image")));
-            this.btnNotificaciones.Location = new System.Drawing.Point(0, 341);
+            this.btnNotificaciones.Location = new System.Drawing.Point(0, 424);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Size = new System.Drawing.Size(163, 92);
             this.btnNotificaciones.TabIndex = 5;
@@ -161,6 +181,7 @@
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardar.BackColor = System.Drawing.Color.White;
+            this.btnGuardar.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
@@ -277,7 +298,7 @@
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
             // 
-            // frmPerfil
+            // btnReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -296,7 +317,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "frmPerfil";
+            this.Name = "btnReporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPerfil";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPerfil_FormClosed);
@@ -327,5 +348,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel lblBack;
+        private System.Windows.Forms.Button btnRep;
     }
 }
