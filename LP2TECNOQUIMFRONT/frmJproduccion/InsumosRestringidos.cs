@@ -65,16 +65,16 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnGenRepI_Click(object sender, EventArgs e)
         {
             saveFileDialog1.ShowDialog();
-            byte[] arreglo = DBController.generarReporteInsumosRestringidosPDF(
-                cbMesI.SelectedIndex + 1, int.Parse(cbAnioI.SelectedValue.ToString()));
-            File.WriteAllBytes(saveFileDialog1.FileName+ ".pdf", arreglo);
+            byte[] arreglo1 = DBController.generarReporteInsumosRestringidosPDF(
+                cbMesI.SelectedIndex, int.Parse(cbAnioI.SelectedValue.ToString()));
+            File.WriteAllBytes(saveFileDialog1.FileName+ ".pdf", arreglo1);
         }
 
         private void btnGenRepP_Click(object sender, EventArgs e)
         {
             saveFileDialog2.ShowDialog();
             byte[] arreglo = DBController.generarReporteProductosRestringidosPDF(
-                cbMesP.SelectedIndex + 1, int.Parse(cbAnioP.SelectedValue.ToString()));
+                cbMesP.SelectedIndex, int.Parse(cbAnioP.SelectedValue.ToString()));
             File.WriteAllBytes(saveFileDialog2.FileName+ ".pdf", arreglo);
         }
     }
