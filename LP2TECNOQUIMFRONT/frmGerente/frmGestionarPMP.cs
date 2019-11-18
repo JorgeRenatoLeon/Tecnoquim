@@ -53,7 +53,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         {
             BindingList<Service.planMaestroProduccion> pmps = new BindingList<Service.planMaestroProduccion>(DBController.listarPMP(""));
             pmp = pmps[0];
-            frmRevisarPlanMaestro frmGestionarPlanM = new frmRevisarPlanMaestro(pmp);
+            frmRevisarPlanMaestro frmGestionarPlanM = new frmRevisarPlanMaestro(pmp, true);
             frmGestionarPlanM.Visible = true;
         }
 

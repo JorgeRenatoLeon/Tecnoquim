@@ -36,8 +36,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvOrden = new System.Windows.Forms.DataGridView();
+            this.CodigoOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumeroProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscarOrden = new System.Windows.Forms.Button();
             this.dgvMaquinaria = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Maquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtResponsable = new System.Windows.Forms.TextBox();
             this.lblResponsable = new System.Windows.Forms.Label();
@@ -47,12 +53,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.gbMaquinaria = new System.Windows.Forms.GroupBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.CodigoOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumeroProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Maquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbEstado.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).BeginInit();
@@ -159,6 +159,30 @@
             this.dgvOrden.TabIndex = 39;
             this.dgvOrden.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvOrden_CellFormatting);
             // 
+            // CodigoOrden
+            // 
+            this.CodigoOrden.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CodigoOrden.HeaderText = "Codigo";
+            this.CodigoOrden.Name = "CodigoOrden";
+            this.CodigoOrden.ReadOnly = true;
+            this.CodigoOrden.Width = 165;
+            // 
+            // NumeroProducto
+            // 
+            this.NumeroProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.NumeroProducto.FillWeight = 150F;
+            this.NumeroProducto.HeaderText = "Numero Productos";
+            this.NumeroProducto.Name = "NumeroProducto";
+            this.NumeroProducto.ReadOnly = true;
+            this.NumeroProducto.Width = 350;
+            // 
+            // FechaOrden
+            // 
+            this.FechaOrden.HeaderText = "Fecha";
+            this.FechaOrden.Name = "FechaOrden";
+            this.FechaOrden.ReadOnly = true;
+            this.FechaOrden.Width = 200;
+            // 
             // btnBuscarOrden
             // 
             this.btnBuscarOrden.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -187,6 +211,29 @@
             this.dgvMaquinaria.Size = new System.Drawing.Size(767, 162);
             this.dgvMaquinaria.TabIndex = 41;
             this.dgvMaquinaria.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMaquinaria_CellFormatting);
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 165;
+            // 
+            // Maquinaria
+            // 
+            this.Maquinaria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Maquinaria.FillWeight = 150F;
+            this.Maquinaria.HeaderText = "Maquinaria";
+            this.Maquinaria.Name = "Maquinaria";
+            this.Maquinaria.ReadOnly = true;
+            this.Maquinaria.Width = 350;
+            // 
+            // tipo
+            // 
+            this.tipo.HeaderText = "Tipo";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            this.tipo.Width = 200;
             // 
             // groupBox1
             // 
@@ -282,58 +329,11 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.btnGuardar.Location = new System.Drawing.Point(308, 876);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(181, 44);
+            this.btnGuardar.Size = new System.Drawing.Size(147, 44);
             this.btnGuardar.TabIndex = 43;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
-            // 
-            // CodigoOrden
-            // 
-            this.CodigoOrden.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CodigoOrden.HeaderText = "Codigo";
-            this.CodigoOrden.Name = "CodigoOrden";
-            this.CodigoOrden.ReadOnly = true;
-            this.CodigoOrden.Width = 165;
-            // 
-            // NumeroProducto
-            // 
-            this.NumeroProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.NumeroProducto.FillWeight = 150F;
-            this.NumeroProducto.HeaderText = "Numero Productos";
-            this.NumeroProducto.Name = "NumeroProducto";
-            this.NumeroProducto.ReadOnly = true;
-            this.NumeroProducto.Width = 350;
-            // 
-            // FechaOrden
-            // 
-            this.FechaOrden.HeaderText = "Fecha";
-            this.FechaOrden.Name = "FechaOrden";
-            this.FechaOrden.ReadOnly = true;
-            this.FechaOrden.Width = 200;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 165;
-            // 
-            // Maquinaria
-            // 
-            this.Maquinaria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Maquinaria.FillWeight = 150F;
-            this.Maquinaria.HeaderText = "Maquinaria";
-            this.Maquinaria.Name = "Maquinaria";
-            this.Maquinaria.ReadOnly = true;
-            this.Maquinaria.Width = 350;
-            // 
-            // tipo
-            // 
-            this.tipo.HeaderText = "Tipo";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            this.tipo.Width = 200;
             // 
             // frmRevisarPlanMaestro
             // 

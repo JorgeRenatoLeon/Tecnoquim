@@ -18,12 +18,6 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         public Service.planMaestroProduccion PmpSeleccionado { get => pmpSeleccionado; set => pmpSeleccionado = value; }
 
-        private void btnSeleccionar_Click(object sender, EventArgs e)
-        {
-            PmpSeleccionado = (Service.planMaestroProduccion)dgvHistorialPlan.CurrentRow.DataBoundItem;
-            this.DialogResult = DialogResult.OK;
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             dgvHistorialPlan.DataSource = DBController.listarPMP(txtNombre.Text);
@@ -36,6 +30,13 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             dgvHistorialPlan.Rows[e.RowIndex].Cells["Periodo"].Value = pmpFila.periodo.AddHours(5).ToString("MM/yyyy");
             dgvHistorialPlan.Rows[e.RowIndex].Cells["Responsable"].Value = pmpFila.responsable.nombres + " " + pmpFila.responsable.apellidos;
             dgvHistorialPlan.Rows[e.RowIndex].Cells["Estado"].Value = pmpFila.estado;
+        }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            PmpSeleccionado = (Service.planMaestroProduccion)dgvHistorialPlan.CurrentRow.DataBoundItem;
+            frmRevisarPlanMaestro frmRevisarPMP = new frmRevisarPlanMaestro(PmpSeleccionado, false);
+            frmRevisarPMP.Visible = true;
         }
     }
 }
