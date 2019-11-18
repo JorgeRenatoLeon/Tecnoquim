@@ -16,22 +16,58 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         Service.ServicioClient DBController = new Service.ServicioClient();
         Service.detalleMaquinaria[] lm;
+        Service.maquinaria maquinaria;
         BindingList<Service.maquinaria> maquinarias;
         BindingList<Service.ordenProduccion> ordenes;
         private Service.planMaestroProduccion _pmp;
+        Service.ordenProduccion ordenSeleccionada;
         Estado estado;
 
         public planMaestroProduccion PMP { get => _pmp; set => _pmp = value; }
 
         public frmGestionarPlan()
         {
-            InitializeComponent();
-            calOrdenProduccion.MaxSelectionCount = 1;
             PMP = new planMaestroProduccion();
+            InitializeComponent();
+            estado = Estado.Inicial;
+            estadoComponentes(estado);
+            calOrdenProduccion.MaxSelectionCount = 1;
             dgvOrden.AutoGenerateColumns = false;
             dgvMaquinaria.AutoGenerateColumns = false;
+            ordenSeleccionada = new ordenProduccion();
+            maquinaria = new maquinaria();
             maquinarias = new BindingList<maquinaria>();
             ordenes = new BindingList<ordenProduccion>();
+            Service.planMaestroProduccion[] pmpSel = DBController.listarPMPEstado(1);
+            if (pmpSel != null)
+            {
+                llenarDatos(pmpSel[0]);
+            }
+        }
+
+        private void llenarDatos(Service.planMaestroProduccion PMPSeleccionado)
+        {
+            PMP = PMPSeleccionado;
+            lm = DBController.listarDetalleMaquinaria(PMP.id);
+            foreach (Service.detalleMaquinaria item in lm)
+            {
+                Service.maquinaria[] maqs = DBController.listarMaquinaria(item.maquinaria.nombre);
+                maquinarias.Add(maqs[0]);
+            }
+            if (lm != null)
+            {
+                PMP.maquinarias = maquinarias.ToArray();
+                dgvMaquinaria.DataSource = maquinarias;
+            }
+            txtNOrden.Text = PMP.id.ToString();
+            Service.ordenProduccion[] lo = DBController.listarOrdenesProduccionPlan(PMP.id);
+            foreach (Service.ordenProduccion item in lo)
+            {
+                item.lineasOrden = DBController.listarLineaOrden(item.id);
+            }
+            PMP.ordenes = lo.ToArray();
+            estado = Estado.Buscar;
+            estadoComponentes(estado);
         }
 
         private void estadoComponentes(Estado estado)
@@ -102,8 +138,8 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     // Botones
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = false;
-                    btnModificar.Enabled = false;
-                    btnCancelar.Enabled = false;
+                    btnModificar.Enabled = true;
+                    btnCancelar.Enabled = true;
                     btnEditarOrden.Enabled = false;
                     btnBuscarMaquinaria.Enabled = false;
                     btnAgregarMaquinaria.Enabled = false;
@@ -120,6 +156,8 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
                     // Calendario
                     calOrdenProduccion.Enabled = false;
+                    DateTime date = PMP.periodo.AddHours(5);
+                    calOrdenProduccion.SetDate(new DateTime(date.Year, date.Month, 1));
 
                     // Data Grid View
                     dgvMaquinaria.Enabled = false;
@@ -177,7 +215,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Service.maquinaria maquinaria = new Service.maquinaria();
             frmMaquinaria form = new frmMaquinaria();
             if (form.ShowDialog(this) == DialogResult.OK)
             {
@@ -211,12 +248,52 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (estado == Estado.Nuevo)
+            {
+                PMP.periodo = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+                PMP.id = DBController.insertarPMP(PMP);
+                txtNOrden.Text = PMP.id.ToString();
+                foreach (ordenProduccion l in PMP.ordenes)
+                {
+                    DBController.insertarOrdenProduccion(l,PMP.id);
+                }
+                foreach (maquinaria m in PMP.maquinarias)
+                {
+                    detalleMaquinaria det = new detalleMaquinaria();
+                    det.activo = true;
+                    det.fecha = DateTime.Now;
+                    det.fechaSpecified = true;
+                    det.maquinaria = m;
+                    DBController.insertarDetalleMaquinaria(det);
+                }
+                MessageBox.Show("Plan Maestro de Producción correctamente añadido.", "Mensaje Confirmacion", MessageBoxButtons.OK);
 
+            }
+            else if (estado == Estado.Modificar)
+            {
+                DBController.actualizarPMP(PMP);
+                //foreach (Service.lineaOrden l in lineas)
+                //{
+                  //  DBController.eliminarLineaOrden(l.idLineaOrden);
+                    //DBController.insertarLineaOrden(l, _orderProduccion.id);
+                //}
+               // if (flagElim == 1)
+                //{
+                  //  foreach (Service.lineaOrden l in lineasEliminadas)
+                    //{
+                      //  DBController.eliminarLineaOrden(l.idLineaOrden);
+                    //}
+               // }
+                MessageBox.Show("Orden de Producción correctamente modificada.", "Mensaje Confirmacion", MessageBoxButtons.OK);
+            }
+            limpiarComponentes();
+            estadoComponentes(Estado.Inicial);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            estado = Estado.Modificar;
+            estadoComponentes(estado);
         }
 
         private void calOrdenProduccion_DateChanged(object sender, DateRangeEventArgs e)
@@ -226,10 +303,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             {
                 foreach (Service.ordenProduccion item in PMP.ordenes)
                 {
-                    string a = item.fecha.ToString("dd-MM-yyy");
+                    string a = item.fecha.AddHours(5).ToString("dd-MM-yyy");
                     string b = calOrdenProduccion.SelectionRange.Start.ToString("dd-MM-yyy");
                     if (a == b)
                     {
+                        ordenSeleccionada = item;
                         dgvOrden.DataSource = item.lineasOrden;
                         hubo = 1;
                     }
@@ -243,27 +321,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             frmHistorialPMP form = new frmHistorialPMP();
             if (form.ShowDialog() == DialogResult.OK)
             {
-                PMP = form.PMPSeleccionado;
-                lm = DBController.listarDetalleMaquinaria(PMP.id);
-                foreach (Service.detalleMaquinaria item in lm)
-                {
-                    Service.maquinaria[] maqs = DBController.listarMaquinaria(item.maquinaria.nombre);
-                    maquinarias.Add(maqs[0]);
-                }
-                if (lm != null)
-                {
-                    PMP.maquinarias = maquinarias.ToArray();
-                    dgvMaquinaria.DataSource = maquinarias;
-                }
-                txtNOrden.Text = PMP.id.ToString();
-                Service.ordenProduccion[] lo = DBController.listarOrdenesProduccionPlan(PMP.id);
-                foreach (Service.ordenProduccion item in lo)
-                {
-                    item.lineasOrden = DBController.listarLineaOrden(item.id);
-                }
-                PMP.ordenes = lo.ToArray();
-                //estadoFormulario = Estado.Buscar;
-                //estadoComponentes(Estado.Buscar);
+                
             }
         }
         private void dgvOrden_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -294,6 +352,28 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             }
             dgvMaquinaria.Rows[e.RowIndex].Cells["Fecha"].Value = fecha;
         }
-        
+
+        private void btnEditarOrden_Click(object sender, EventArgs e)
+        {
+            frmGestionarOrden formOrd = new frmGestionarOrden(ordenSeleccionada);
+            if (formOrd.ShowDialog(this) == DialogResult.OK)
+            {
+                ordenSeleccionada = formOrd.OrderProduccion;
+                dgvOrden.DataSource = ordenSeleccionada.lineasOrden;
+            }
+        }
+
+        private void btnAgregarMaquinaria_Click(object sender, EventArgs e)
+        {
+            BindingList<maquinaria> lineasAg = new BindingList<maquinaria>();
+            foreach (maquinaria item in maquinarias)
+            {
+                lineasAg.Add(item);
+            }
+            lineasAg.Add(maquinaria);
+            maquinarias = lineasAg;
+            PMP.maquinarias = maquinarias.ToArray();
+            dgvMaquinaria.DataSource = maquinarias;
+        }
     }
 }

@@ -22,15 +22,17 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private Service.producto producto;
         BindingList<Service.lineaOrden> lineas;
         BindingList<Service.lineaOrden> lineasEliminadas;
+        Service.ordenProduccion ordenRecivida;
         private Estado estadoFormulario;
 
         Service.ServicioClient DBController = new Service.ServicioClient();
 
-        public ordenProduccion OrderProduccion { get => _orderProduccion; set => _orderProduccion = value; }
+        public ordenProduccion OrderProduccion { get => ordenRecivida; set => ordenRecivida = value; }
 
-        public frmGestionarOrden()
+        public frmGestionarOrden(Service.ordenProduccion ordenReciv = null)
         {
             InitializeComponent();
+            ordenRecivida = ordenReciv;
             estadoFormulario = Estado.Inicial;
             estadoComponentes(estadoFormulario);
             lineas = new BindingList<lineaOrden>();
@@ -38,6 +40,26 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             lineaOrden = new lineaOrden();
             _orderProduccion = new ordenProduccion();
             dgvOrdenProduccion.AutoGenerateColumns = false;
+            if (ordenRecivida != null)
+            {
+                llenarDatos(ordenRecivida);
+                _orderProduccion = ordenRecivida;
+            }
+        }
+
+        private void llenarDatos(ordenProduccion orden)
+        {
+            txtNOrden.Text = orden.id.ToString();
+            dtpOrden.Value = orden.fecha;
+            Service.lineaOrden[] l = DBController.listarLineaOrden(orden.id);
+            orden.lineasOrden = l.ToArray();
+            if (l != null)
+            {
+                lineas = new BindingList<lineaOrden>(l);
+                dgvOrdenProduccion.DataSource = lineas;
+            }
+            estadoFormulario = Estado.Buscar;
+            estadoComponentes(Estado.Buscar);
         }
 
         public frmGestionarOrden(DateTime periodoPlanMaestroProduccion, int idPlanMaestroProduccion)
@@ -83,6 +105,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     dtpOrden.Enabled = false;
                     btnOrdenes.Enabled = true;
 
+                    if (ordenRecivida != null)
+                    {
+                        btnOrdenes.Visible = false;
+                    }
+
                     //Asignar el estado
                     estadoFormulario = estado;
 
@@ -115,6 +142,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     gbDatosGenerales.Enabled = true;
                     gbDetalleOrden.Enabled = true;
                     gbDatosOrden.Enabled = true;
+
+                    if (ordenRecivida != null)
+                    {
+                        btnOrdenes.Visible = false;
+                    }
 
                     //Asignar el estado
                     estadoFormulario = estado;
@@ -151,6 +183,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     dtpOrden.Enabled = false;
                     btnOrdenes.Enabled = true;
 
+                    if (ordenRecivida != null)
+                    {
+                        btnOrdenes.Visible = false;
+                    }
+
                     //Asignar el estado
                     estadoFormulario = estado;
 
@@ -183,6 +220,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     gbDatosGenerales.Enabled = true;
                     gbDetalleOrden.Enabled = true;
                     gbDatosOrden.Enabled = true;
+
+                    if (ordenRecivida != null)
+                    {
+                        btnOrdenes.Visible = false;
+                    }
 
                     break;
                 default:
@@ -326,7 +368,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             else if (estadoFormulario == Estado.Modificar)
             {
                 DBController.actualizarOrdenProduccion(_orderProduccion,1);
-                DBController.actualizarInstructivo(producto.instructivo, producto.idProducto);
                 foreach (Service.lineaOrden l in lineas)
                 {
                     DBController.eliminarLineaOrden(l.idLineaOrden);
@@ -341,6 +382,12 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 }
                 MessageBox.Show("Orden de Producción correctamente modificada.", "Mensaje Confirmacion", MessageBoxButtons.OK);
             }
+            if (ordenRecivida != null)
+            {
+                _orderProduccion.lineasOrden = lineas.ToArray();
+                OrderProduccion = _orderProduccion;
+                this.DialogResult = DialogResult.OK;
+            }
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
         }
@@ -354,20 +401,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnOrdenes_Click(object sender, EventArgs e)
         {
             frmOrdenes formOrd = new frmOrdenes();
-            if (formOrd.ShowDialog() == DialogResult.OK)
+            if (formOrd.ShowDialog(this) == DialogResult.OK)
             {
                 _orderProduccion = formOrd.OrdenSeleccionada;
-                txtNOrden.Text = _orderProduccion.id.ToString();
-                dtpOrden.Value = _orderProduccion.fecha;
-                Service.lineaOrden[] l = DBController.listarLineaOrden(_orderProduccion.id);
-                _orderProduccion.lineasOrden = l.ToArray();
-                if (l != null)
-                {
-                    lineas = new BindingList<lineaOrden>(l);
-                    dgvOrdenProduccion.DataSource = lineas;
-                }
-                estadoFormulario = Estado.Buscar;
-                estadoComponentes(Estado.Buscar);
+                llenarDatos(_orderProduccion);
             }
         }
     }

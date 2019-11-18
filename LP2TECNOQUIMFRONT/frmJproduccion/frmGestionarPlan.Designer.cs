@@ -214,6 +214,7 @@
             this.btnAgregarMaquinaria.Text = "Agregar";
             this.btnAgregarMaquinaria.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAgregarMaquinaria.UseVisualStyleBackColor = true;
+            this.btnAgregarMaquinaria.Click += new System.EventHandler(this.btnAgregarMaquinaria_Click);
             // 
             // btnBuscarMaquinaria
             // 
@@ -289,6 +290,7 @@
             this.btnEditarOrden.Text = "Editar";
             this.btnEditarOrden.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnEditarOrden.UseVisualStyleBackColor = true;
+            this.btnEditarOrden.Click += new System.EventHandler(this.btnEditarOrden_Click);
             // 
             // dgvOrden
             // 
