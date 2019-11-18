@@ -40,7 +40,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
         }
         public void SplashStart()
         {
-            //Application.Run(new frmSplash());
+            Application.Run(new frmSplash());
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
