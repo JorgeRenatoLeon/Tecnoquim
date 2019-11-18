@@ -36,6 +36,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.rbInactivo = new System.Windows.Forms.RadioButton();
+            this.rbActivo = new System.Windows.Forms.RadioButton();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
@@ -50,9 +53,6 @@
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.rbActivo = new System.Windows.Forms.RadioButton();
-            this.rbInactivo = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -147,6 +147,7 @@
             // 
             // gbDatos
             // 
+            this.gbDatos.BackColor = System.Drawing.Color.Transparent;
             this.gbDatos.Controls.Add(this.rbInactivo);
             this.gbDatos.Controls.Add(this.rbActivo);
             this.gbDatos.Controls.Add(this.lblEstado);
@@ -164,6 +165,38 @@
             this.gbDatos.TabIndex = 38;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos Generales";
+            // 
+            // rbInactivo
+            // 
+            this.rbInactivo.AutoSize = true;
+            this.rbInactivo.Location = new System.Drawing.Point(373, 214);
+            this.rbInactivo.Name = "rbInactivo";
+            this.rbInactivo.Size = new System.Drawing.Size(104, 29);
+            this.rbInactivo.TabIndex = 35;
+            this.rbInactivo.TabStop = true;
+            this.rbInactivo.Text = "Inactivo";
+            this.rbInactivo.UseVisualStyleBackColor = true;
+            // 
+            // rbActivo
+            // 
+            this.rbActivo.AutoSize = true;
+            this.rbActivo.Location = new System.Drawing.Point(220, 214);
+            this.rbActivo.Name = "rbActivo";
+            this.rbActivo.Size = new System.Drawing.Size(89, 29);
+            this.rbActivo.TabIndex = 34;
+            this.rbActivo.TabStop = true;
+            this.rbActivo.Text = "Activo";
+            this.rbActivo.UseVisualStyleBackColor = true;
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(35, 214);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(73, 24);
+            this.lblEstado.TabIndex = 33;
+            this.lblEstado.Text = "Estado:";
             // 
             // txtTipo
             // 
@@ -298,6 +331,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(181, 64);
@@ -306,43 +340,12 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Registro de Maquinaria";
             // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(35, 214);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(73, 24);
-            this.lblEstado.TabIndex = 33;
-            this.lblEstado.Text = "Estado:";
-            // 
-            // rbActivo
-            // 
-            this.rbActivo.AutoSize = true;
-            this.rbActivo.Location = new System.Drawing.Point(220, 214);
-            this.rbActivo.Name = "rbActivo";
-            this.rbActivo.Size = new System.Drawing.Size(89, 29);
-            this.rbActivo.TabIndex = 34;
-            this.rbActivo.TabStop = true;
-            this.rbActivo.Text = "Activo";
-            this.rbActivo.UseVisualStyleBackColor = true;
-            // 
-            // rbInactivo
-            // 
-            this.rbInactivo.AutoSize = true;
-            this.rbInactivo.Location = new System.Drawing.Point(373, 214);
-            this.rbInactivo.Name = "rbInactivo";
-            this.rbInactivo.Size = new System.Drawing.Size(104, 29);
-            this.rbInactivo.TabIndex = 35;
-            this.rbInactivo.TabStop = true;
-            this.rbInactivo.Text = "Inactivo";
-            this.rbInactivo.UseVisualStyleBackColor = true;
-            // 
             // frmJMaquinaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.background_11_wide;
             this.ClientSize = new System.Drawing.Size(902, 411);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
