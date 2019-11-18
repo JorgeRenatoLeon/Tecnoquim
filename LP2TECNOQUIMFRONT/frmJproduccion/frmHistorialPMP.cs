@@ -25,8 +25,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            PMPSeleccionado = (Service.planMaestroProduccion)dgvHistorialPlan.CurrentRow.DataBoundItem;
-            this.DialogResult = DialogResult.OK;
+            this.Visible = false;
+            frmGestionarPlan frmGestionarPlan = new frmGestionarPlan((Service.planMaestroProduccion)dgvHistorialPlan.CurrentRow.DataBoundItem);
+            frmGestionarPlan.Visible = true;
+            this.Close();
         }
         
         private void btnBuscar_Click(object sender, EventArgs e)

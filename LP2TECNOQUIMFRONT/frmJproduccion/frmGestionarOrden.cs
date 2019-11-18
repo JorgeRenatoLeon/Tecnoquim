@@ -13,7 +13,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
     public partial class frmGestionarOrden : Form
     {
-
+        int idPMP = 0;
         int flagElim = 0;
         private DateTime _periodoPlanMaestroProduccion;
         private int _idPlanMaestroProduccion;
@@ -29,9 +29,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         public ordenProduccion OrderProduccion { get => ordenRecivida; set => ordenRecivida = value; }
 
-        public frmGestionarOrden(Service.ordenProduccion ordenReciv = null)
+        public frmGestionarOrden(Service.ordenProduccion ordenReciv = null, int id=0)
         {
             InitializeComponent();
+            idPMP = id;
             ordenRecivida = ordenReciv;
             estadoFormulario = Estado.Inicial;
             estadoComponentes(estadoFormulario);
@@ -42,8 +43,19 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             dgvOrdenProduccion.AutoGenerateColumns = false;
             if (ordenRecivida != null)
             {
-                llenarDatos(ordenRecivida);
-                _orderProduccion = ordenRecivida;
+                if (ordenRecivida.id == 0)
+                {
+                    _orderProduccion = ordenRecivida;
+                    dtpOrden.Value = _orderProduccion.fecha;
+                    estadoFormulario = Estado.Nuevo;
+                    estadoComponentes(estadoFormulario);
+                }
+                else
+                {
+                    llenarDatos(ordenRecivida);
+                    _orderProduccion = ordenRecivida;
+                }
+                dtpOrden.Enabled = false;
             }
         }
 
@@ -356,7 +368,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             _orderProduccion.fecha = dtpOrden.Value;
             if (estadoFormulario == Estado.Nuevo)
             {
-                _orderProduccion.id = DBController.insertarOrdenProduccion(_orderProduccion,1);
+                _orderProduccion.id = DBController.insertarOrdenProduccion(_orderProduccion,idPMP);
                 txtNOrden.Text = _orderProduccion.id.ToString();
                 foreach (Service.lineaOrden l in lineas)
                 {

@@ -202,7 +202,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
 
         }

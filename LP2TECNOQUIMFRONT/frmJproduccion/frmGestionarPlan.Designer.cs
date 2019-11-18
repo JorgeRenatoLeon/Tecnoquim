@@ -42,13 +42,14 @@
             this.txtNOrden = new System.Windows.Forms.TextBox();
             this.lblCodigoPMP = new System.Windows.Forms.Label();
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregarMaquinaria = new System.Windows.Forms.Button();
             this.btnBuscarMaquinaria = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombreMaquinaria = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigoMaquinaria = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbOrdenes = new System.Windows.Forms.GroupBox();
             this.btnEditarOrden = new System.Windows.Forms.Button();
             this.dgvOrden = new System.Windows.Forms.DataGridView();
             this.CodigoOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,7 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinaria)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gbDatosGenerales.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbOrdenes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,6 +189,7 @@
             // 
             // gbDatosGenerales
             // 
+            this.gbDatosGenerales.Controls.Add(this.btnEliminar);
             this.gbDatosGenerales.Controls.Add(this.btnAgregarMaquinaria);
             this.gbDatosGenerales.Controls.Add(this.btnBuscarMaquinaria);
             this.gbDatosGenerales.Controls.Add(this.txtNombre);
@@ -203,11 +205,24 @@
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Maquinaria";
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEliminar.Location = new System.Drawing.Point(722, 94);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(73, 28);
+            this.btnEliminar.TabIndex = 38;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // btnAgregarMaquinaria
             // 
             this.btnAgregarMaquinaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnAgregarMaquinaria.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAgregarMaquinaria.Location = new System.Drawing.Point(571, 37);
+            this.btnAgregarMaquinaria.Location = new System.Drawing.Point(722, 41);
             this.btnAgregarMaquinaria.Name = "btnAgregarMaquinaria";
             this.btnAgregarMaquinaria.Size = new System.Drawing.Size(73, 28);
             this.btnAgregarMaquinaria.TabIndex = 37;
@@ -264,20 +279,20 @@
             this.lblCodigoMaquinaria.TabIndex = 19;
             this.lblCodigoMaquinaria.Text = "Codigo de la Maquinaria:";
             // 
-            // groupBox2
+            // gbOrdenes
             // 
-            this.groupBox2.Controls.Add(this.btnEditarOrden);
-            this.groupBox2.Controls.Add(this.dgvOrden);
-            this.groupBox2.Controls.Add(this.calOrdenProduccion);
-            this.groupBox2.Controls.Add(this.btnBuscarOrden);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(26, 142);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(801, 217);
-            this.groupBox2.TabIndex = 38;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Ordenes de Producción";
+            this.gbOrdenes.Controls.Add(this.btnEditarOrden);
+            this.gbOrdenes.Controls.Add(this.dgvOrden);
+            this.gbOrdenes.Controls.Add(this.calOrdenProduccion);
+            this.gbOrdenes.Controls.Add(this.btnBuscarOrden);
+            this.gbOrdenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbOrdenes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gbOrdenes.Location = new System.Drawing.Point(26, 142);
+            this.gbOrdenes.Name = "gbOrdenes";
+            this.gbOrdenes.Size = new System.Drawing.Size(801, 217);
+            this.gbOrdenes.TabIndex = 38;
+            this.gbOrdenes.TabStop = false;
+            this.gbOrdenes.Text = "Ordenes de Producción";
             // 
             // btnEditarOrden
             // 
@@ -358,7 +373,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.ClientSize = new System.Drawing.Size(842, 719);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbOrdenes);
             this.Controls.Add(this.dgvMaquinaria);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbDatosGenerales);
@@ -372,7 +387,7 @@
             this.groupBox1.PerformLayout();
             this.gbDatosGenerales.ResumeLayout(false);
             this.gbDatosGenerales.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.gbOrdenes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -397,7 +412,7 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCodigoMaquinaria;
         private System.Windows.Forms.Button btnAgregarMaquinaria;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbOrdenes;
         private System.Windows.Forms.Button btnBuscarOrden;
         private System.Windows.Forms.MonthCalendar calOrdenProduccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
@@ -408,5 +423,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CodigoOrden;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

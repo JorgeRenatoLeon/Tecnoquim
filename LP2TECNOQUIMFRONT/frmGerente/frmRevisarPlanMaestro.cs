@@ -16,7 +16,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         Service.ServicioClient DBController = new Service.ServicioClient();
         Service.trabajador trabajador;
         Service.mensaje mensaje = new Service.mensaje();
-        Estado estadoObj;
+        //Estado estadoObj;
 
         public frmRevisarPlanMaestro(Service.planMaestroProduccion firstpmp, bool save)
         {
@@ -32,7 +32,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             dgvOrden.DataSource = pmp.ordenes;
             dgvMaquinaria.AutoGenerateColumns = false;
             dgvMaquinaria.DataSource = pmp.maquinarias;
-            estadoObj = Estado.Inicial;
+            //estadoObj = Estado.Inicial;
             if (!save) {
                 gbEstado.Enabled = false;
                 btnGuardar.Visible = false;
