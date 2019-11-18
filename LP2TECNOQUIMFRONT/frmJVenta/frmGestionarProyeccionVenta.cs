@@ -12,18 +12,16 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 {
     public partial class frmGestionarProyeccionVenta : Form
     {
-        int flagElim = 0;
         Service.proyeccionVenta proyeccionVenta;
         Service.producto producto;
-        Service.lineaProyeccion lineaProyeccion;
         BindingList<Service.lineaProyeccion> lineas;
-        BindingList<Service.lineaProyeccion> lineasEliminadas;
         Estado estadoObj;
         Service.ServicioClient DBController = new Service.ServicioClient();
 
         public frmGestionarProyeccionVenta()
         {
             InitializeComponent();
+            dgvProductos.AutoGenerateColumns = false;
             estadoObj = Estado.Inicial;
             BindingList<String> meses;
             meses = new BindingList<String>();
@@ -48,12 +46,6 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             anios.Add("2020");
             cbAnio.DataSource = anios;
 
-            
-            producto = new Service.producto();
-            lineaProyeccion = new Service.lineaProyeccion();
-            proyeccionVenta = new Service.proyeccionVenta();
-            lineasEliminadas = new BindingList<Service.lineaProyeccion>();
-            lineas = new BindingList<Service.lineaProyeccion>();
             estadoComponentes(estadoObj);
         }
         public void limpiarComponentes()
@@ -63,7 +55,6 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             txtCantidadP.Text = "";
             txtNOrden.Text = "";
             lineas = new BindingList<Service.lineaProyeccion>();
-            lineasEliminadas = new BindingList<Service.lineaProyeccion>();
             dgvProductos.DataSource = null;
             dgvProductos.Rows.Clear();
             dgvProductos.Refresh();
@@ -145,96 +136,53 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             limpiarComponentes();
             estadoObj = Estado.Nuevo;
             estadoComponentes(estadoObj);
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            if (estadoObj == Estado.Nuevo)
-            {
-                proyeccionVenta.periodo = DateTime.Parse(cbAnio.SelectedValue + "-" + (cbMes.SelectedIndex + 1) + "-01");
-                proyeccionVenta.periodoSpecified = true;
-                proyeccionVenta.proyecciones = lineas.ToArray();
-                DBController.insertarProyeccionVenta(proyeccionVenta);
-                foreach (Service.lineaProyeccion l in lineas)
-                {
-                    DBController.insertarLineaProyeccion(l, proyeccionVenta.id);
-                }
-                MessageBox.Show("Proyección Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            else if (estadoObj == Estado.Modificar)
-            {
-                proyeccionVenta.periodo = DateTime.Parse(cbAnio.SelectedValue + "-" + (cbMes.SelectedIndex+1) + "-01");
-                proyeccionVenta.proyecciones = lineas.ToArray();
-                DBController.actualizarProyeccionVenta(proyeccionVenta);
-                foreach (Service.lineaProyeccion l in lineas)
-                {
-                    DBController.eliminarLineaProyeccion(l.id);
-                    DBController.insertarLineaProyeccion(l, proyeccionVenta.id);
-                }
-                if (flagElim == 1)
-                {
-                    foreach (Service.lineaProyeccion l in lineasEliminadas)
-                    {
-                        DBController.eliminarLineaProyeccion(l.id);
-                    }
-                }
-                MessageBox.Show("Proyección Actualizada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            limpiarComponentes();
-            estadoObj = Estado.Inicial;
-            estadoComponentes(estadoObj);
+            producto = new Service.producto();
+            proyeccionVenta = new Service.proyeccionVenta();
+            lineas = new BindingList<Service.lineaProyeccion>();
+            dgvProductos.AutoGenerateColumns = false;
+            dgvProductos.DataSource = lineas;
         }
 
         private void btnAgregarP_Click(object sender, EventArgs e)
         {
-            lineaProyeccion.producto = producto;
-            lineaProyeccion.cantidad = int.Parse(txtCantidadP.Text);
-            BindingList<Service.lineaProyeccion> lineasAg = new BindingList<Service.lineaProyeccion>();
-            foreach (Service.lineaProyeccion item in lineas)
-            {
-                lineasAg.Add(item);
-            }
-            lineasAg.Add(lineaProyeccion);
-            lineas = lineasAg;
-            dgvProductos.DataSource = lineas;
+            Service.lineaProyeccion lp = new Service.lineaProyeccion();
+            lp.producto = producto;
+            lp.cantidad = int.Parse(txtCantidadP.Text);
+            lineas.Add(lp);
         }
 
         private void btnEliminarP_Click(object sender, EventArgs e)
         {
-            string str = dgvProductos.Rows[dgvProductos.SelectedRows[0].Index].Cells[1].Value.ToString();
-
-            BindingList<Service.lineaProyeccion> lineasElim = new BindingList<Service.lineaProyeccion>();
-            foreach (Service.lineaProyeccion item in lineas)
+            if (lineas.Count == 0)
             {
-                if (item.producto.nombre != str) lineasElim.Add(item);
-                if (estadoObj == Estado.Modificar && item.producto.nombre == str)
-                {
-                    lineasEliminadas.Add(item);
-                    flagElim = 1;
-                }
+                MessageBox.Show("No se ha seleccionado una linea a eliminar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            lineas = lineasElim;
-            dgvProductos.DataSource = lineas;
+            Service.lineaProyeccion linea = (Service.lineaProyeccion)dgvProductos.CurrentRow.DataBoundItem;
+            lineas.Remove(linea);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            frmBuscarProyeccionVenta formProd = new frmBuscarProyeccionVenta();
-            if (formProd.ShowDialog() == DialogResult.OK)
+            frmBuscarProyeccionVenta formProy = new frmBuscarProyeccionVenta();
+            if (formProy.ShowDialog() == DialogResult.OK)
             {
-                proyeccionVenta = formProd.ProyeccionSeleccionada;
+                proyeccionVenta = formProy.ProyeccionSeleccionada;
                 txtNOrden.Text = proyeccionVenta.id.ToString();
-                string anio = proyeccionVenta.periodo.ToString("yyyy");
+                string anio = proyeccionVenta.periodo.AddHours(5).ToString("yyyy");
                 cbAnio.SelectedIndex = cbAnio.FindStringExact(anio);
-                string mes = seleccionarMes(proyeccionVenta.periodo.AddDays(1).ToString("MM"));
+                string mes = seleccionarMes(proyeccionVenta.periodo.AddHours(5).ToString("MM"));
                 cbMes.SelectedIndex = cbMes.FindStringExact(mes);
-                Service.lineaProyeccion[] l = DBController.listarLineaProyeccion(proyeccionVenta.id);
-                if (l != null)
+                if (proyeccionVenta.proyecciones != null)
                 {
-                    lineas = new BindingList<Service.lineaProyeccion>(l);
-                    dgvProductos.DataSource = lineas;
+                    lineas = new BindingList<Service.lineaProyeccion>(proyeccionVenta.proyecciones.ToList());
                 }
+                else
+                {
+                    lineas = new BindingList<Service.lineaProyeccion>();
+                }
+                dgvProductos.AutoGenerateColumns = false;
+                dgvProductos.DataSource = lineas;
                 estadoObj = Estado.Buscar;
                 estadoComponentes(estadoObj);
             }
@@ -242,13 +190,21 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 
         private void dgvInsumos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            Service.lineaProyeccion pFila = (Service.lineaProyeccion)dgvProductos.Rows[e.RowIndex].DataBoundItem;
-            dgvProductos.Rows[e.RowIndex].Cells["Codigo"].Style.ForeColor = System.Drawing.Color.Black;
-            dgvProductos.Rows[e.RowIndex].Cells["Nombre"].Style.ForeColor = System.Drawing.Color.Black;
-            dgvProductos.Rows[e.RowIndex].Cells["Cantidad"].Style.ForeColor = System.Drawing.Color.Black;
-            dgvProductos.Rows[e.RowIndex].Cells["Codigo"].Value = pFila.producto.idProducto;
-            dgvProductos.Rows[e.RowIndex].Cells["Nombre"].Value = pFila.producto.nombre;
-            dgvProductos.Rows[e.RowIndex].Cells["Cantidad"].Value = pFila.cantidad;
+            try
+            {
+                Service.lineaProyeccion pFila = (Service.lineaProyeccion)dgvProductos.Rows[e.RowIndex].DataBoundItem;
+                dgvProductos.Rows[e.RowIndex].Cells["Codigo"].Style.ForeColor = System.Drawing.Color.Black;
+                dgvProductos.Rows[e.RowIndex].Cells["Nombre"].Style.ForeColor = System.Drawing.Color.Black;
+                dgvProductos.Rows[e.RowIndex].Cells["Cantidad"].Style.ForeColor = System.Drawing.Color.Black;
+                dgvProductos.Rows[e.RowIndex].Cells["Codigo"].Value = pFila.producto.idProducto;
+                dgvProductos.Rows[e.RowIndex].Cells["Nombre"].Value = pFila.producto.nombre;
+                dgvProductos.Rows[e.RowIndex].Cells["Cantidad"].Value = pFila.cantidad;
+            }
+            catch (Exception ex)
+            {
+
+            }
+
         }
 
         private string seleccionarMes(string v)
@@ -284,16 +240,40 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             }
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            estadoObj = Estado.Modificar;
-            estadoComponentes(estadoObj);
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpiarComponentes();
             estadoObj = Estado.Inicial;
+            estadoComponentes(estadoObj);
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
+        {
+            if (estadoObj == Estado.Nuevo)
+            {
+                proyeccionVenta.periodo = DateTime.Parse(cbAnio.SelectedValue + "-" + (cbMes.SelectedIndex + 1) + "-01");
+                proyeccionVenta.periodoSpecified = true;
+                proyeccionVenta.proyecciones = lineas.ToArray();
+                DBController.insertarProyeccionVenta(proyeccionVenta);
+                MessageBox.Show("Proyección Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else if (estadoObj == Estado.Modificar)
+            {
+                proyeccionVenta.periodo = DateTime.Parse(cbAnio.SelectedValue + "-" + (cbMes.SelectedIndex + 1) + "-01");
+                proyeccionVenta.proyecciones = lineas.ToArray();
+                DBController.actualizarProyeccionVenta(proyeccionVenta);
+                MessageBox.Show("Proyección Actualizada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            limpiarComponentes();
+            estadoObj = Estado.Inicial;
+            estadoComponentes(estadoObj);
+
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+            estadoObj = Estado.Modificar;
             estadoComponentes(estadoObj);
         }
     }

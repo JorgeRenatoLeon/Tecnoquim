@@ -38,7 +38,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
         {
             Service.proyeccionVenta proyFila = (Service.proyeccionVenta)dgvProyeccion.Rows[e.RowIndex].DataBoundItem;
             dgvProyeccion.Rows[e.RowIndex].Cells["Codigo"].Value = proyFila.id;
-            dgvProyeccion.Rows[e.RowIndex].Cells["Periodo"].Value = proyFila.periodo.AddDays(1);
+            dgvProyeccion.Rows[e.RowIndex].Cells["Periodo"].Value = proyFila.periodo.AddHours(5).ToString("MM/yyyy");
         }
     }
 }
