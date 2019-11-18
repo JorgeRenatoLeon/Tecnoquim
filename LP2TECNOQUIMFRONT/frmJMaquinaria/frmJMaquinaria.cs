@@ -122,7 +122,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             if (estadoObj == Estado.Nuevo)
             {
                 DBController.insertarMaquinaria(maquinaria);
-                DBController.insertarDetalleMaquinaria(detalle);
+                DBController.insertarDetalleMaquinaria(detalle,1);
                 MessageBox.Show("Maquinaria Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (estadoObj == Estado.Modificar) 

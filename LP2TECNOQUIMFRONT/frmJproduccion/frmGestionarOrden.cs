@@ -366,42 +366,46 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             _orderProduccion.fecha = dtpOrden.Value;
-            if (estadoFormulario == Estado.Nuevo)
-            {
-                _orderProduccion.id = DBController.insertarOrdenProduccion(_orderProduccion,idPMP);
-                txtNOrden.Text = _orderProduccion.id.ToString();
-                foreach (Service.lineaOrden l in lineas)
-                {
-                    DBController.insertarLineaOrden(l, _orderProduccion.id);
-                }
-                MessageBox.Show("Orden de Producción correctamente añadida.", "Mensaje Confirmacion", MessageBoxButtons.OK);
-
-            }
-            else if (estadoFormulario == Estado.Modificar)
-            {
-                DBController.actualizarOrdenProduccion(_orderProduccion,1);
-                foreach (Service.lineaOrden l in lineas)
-                {
-                    DBController.eliminarLineaOrden(l.idLineaOrden);
-                    DBController.insertarLineaOrden(l, _orderProduccion.id);
-                }
-                if (flagElim == 1)
-                {
-                    foreach (Service.lineaOrden l in lineasEliminadas)
-                    {
-                        DBController.eliminarLineaOrden(l.idLineaOrden);
-                    }
-                }
-                MessageBox.Show("Orden de Producción correctamente modificada.", "Mensaje Confirmacion", MessageBoxButtons.OK);
-            }
             if (ordenRecivida != null)
             {
                 _orderProduccion.lineasOrden = lineas.ToArray();
                 OrderProduccion = _orderProduccion;
                 this.DialogResult = DialogResult.OK;
             }
-            limpiarComponentes();
-            estadoComponentes(Estado.Inicial);
+            else
+            {
+                if (estadoFormulario == Estado.Nuevo)
+                {
+                    _orderProduccion.id = DBController.insertarOrdenProduccion(_orderProduccion, idPMP);
+                    txtNOrden.Text = _orderProduccion.id.ToString();
+                    foreach (Service.lineaOrden l in lineas)
+                    {
+                        DBController.insertarLineaOrden(l, _orderProduccion.id);
+                    }
+                    MessageBox.Show("Orden de Producción correctamente añadida.", "Mensaje Confirmacion", MessageBoxButtons.OK);
+
+                }
+                else if (estadoFormulario == Estado.Modificar)
+                {
+                    DBController.actualizarOrdenProduccion(_orderProduccion, 1);
+                    foreach (Service.lineaOrden l in lineas)
+                    {
+                        DBController.eliminarLineaOrden(l.idLineaOrden);
+                        DBController.insertarLineaOrden(l, _orderProduccion.id);
+                    }
+                    if (flagElim == 1)
+                    {
+                        foreach (Service.lineaOrden l in lineasEliminadas)
+                        {
+                            DBController.eliminarLineaOrden(l.idLineaOrden);
+                        }
+                    }
+                    MessageBox.Show("Orden de Producción correctamente modificada.", "Mensaje Confirmacion", MessageBoxButtons.OK);
+                }
+
+                limpiarComponentes();
+                estadoComponentes(Estado.Inicial);
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
