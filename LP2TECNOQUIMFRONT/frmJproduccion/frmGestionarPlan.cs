@@ -21,6 +21,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         BindingList<Service.detalleMaquinaria> detMaquinarias;
         BindingList<Service.ordenProduccion> ordenes;
         BindingList<Service.ordenProduccion> ordenesAg;
+        BindingList<Service.ordenProduccion> ordenesMod;
         BindingList<Service.detalleMaquinaria> lineasEliminadas;
         private Service.planMaestroProduccion _pmp;
         Service.ordenProduccion ordenSeleccionada;
@@ -40,8 +41,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             ordenSeleccionada = new ordenProduccion();
             det = new detalleMaquinaria();
             detMaquinarias = new BindingList<detalleMaquinaria>();
+            lineasEliminadas = new BindingList<detalleMaquinaria>();
             ordenes = new BindingList<ordenProduccion>();
             ordenesAg = new BindingList<ordenProduccion>();
+            ordenesMod = new BindingList<ordenProduccion>();
             if (pmpSelec == null)
             {
                 Service.planMaestroProduccion[] pmpSel = DBController.listarPMPEstado(1);
@@ -300,8 +303,16 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtNOrden.Text = "";
-            dgvOrden.DataSource = new BindingList<ordenProduccion>();
-            dgvMaquinaria.DataSource = new BindingList<detalleMaquinaria>();
+            PMP = new planMaestroProduccion();
+            ordenSeleccionada = new ordenProduccion();
+            det = new detalleMaquinaria();
+            detMaquinarias = new BindingList<detalleMaquinaria>();
+            lineasEliminadas = new BindingList<detalleMaquinaria>();
+            ordenes = new BindingList<ordenProduccion>();
+            ordenesAg = new BindingList<ordenProduccion>();
+            ordenesMod = new BindingList<ordenProduccion>();
+            dgvOrden.DataSource = null;
+            dgvMaquinaria.DataSource = null;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -326,12 +337,20 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 DBController.actualizarPMP(PMP);
                 foreach (ordenProduccion o in ordenesAg)
                 {
-                    DBController.insertarOrdenProduccion(o,PMP.id);
+                    o.id = DBController.insertarOrdenProduccion(o,PMP.id);
                     foreach (lineaOrden lo in o.lineasOrden)
                     {
                         DBController.insertarLineaOrden(lo, o.id);
                     }
                 }
+                foreach (ordenProduccion o in ordenesMod)
+                {
+                    foreach (lineaOrden lo in o.lineasOrden)
+                    {
+                        DBController.insertarLineaOrden(lo, o.id);
+                    }
+                }
+
                 foreach (detalleMaquinaria m in PMP.maquinarias)
                 {
                     DBController.eliminarDetalleMaquinaria(m.idDetalleM);
@@ -368,7 +387,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     string b = calOrdenProduccion.SelectionRange.Start.ToString("dd-MM-yyy");
                     if (a == b)
                     {
-                        item.lineasOrden = DBController.listarLineaOrden(item.id);
+                        if (item.lineasOrden == null)
+                        {
+                            item.lineasOrden = DBController.listarLineaOrden(item.id);
+                        }
                         ordenSeleccionada = item;
                         dgvOrden.DataSource = item.lineasOrden;
                         hubo = 1;
@@ -385,14 +407,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            frmHistorialPMP form = new frmHistorialPMP();
-            if (form.ShowDialog() == DialogResult.OK)
-            {
-                
-            }
-        }
         private void dgvOrden_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             Service.lineaOrden lineaOrdenFila = (Service.lineaOrden)dgvOrden.Rows[e.RowIndex].DataBoundItem;
@@ -433,6 +447,26 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     ordenes = lineasAg;
                     PMP.ordenes = ordenes.ToArray();
                     flagOrden = 0;
+                }
+                else if (formOrd.Flag == 1)
+                {
+                    BindingList<lineaOrden> lin = new BindingList<lineaOrden>(ordenSeleccionada.lineasOrden);
+                    foreach (ordenProduccion o in PMP.ordenes)
+                    {
+                        if(o.id == ordenSeleccionada.id)
+                        {
+                            foreach(lineaOrden ls in o.lineasOrden)
+                            {
+                                lineaOrden lineaMod = new lineaOrden();
+                                lineaMod = lin.SingleOrDefault(p=> p.idLineaOrden == ls.idLineaOrden);
+                                if(lineaMod != null)
+                                {
+                                    lin.Remove(lineaMod);
+                                }
+                            }
+                        }
+                    }
+                    ordenesMod.Add(ordenSeleccionada);
                 }
             }
         }

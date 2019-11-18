@@ -249,6 +249,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 txtidinst.Text = producto.instructivo.id.ToString();
                 txtAct.Text = producto.instructivo.actividades;
                 lineas = new BindingList<lineaInsumo>(DBController.listarLineaInsumo(producto.instructivo.id));
+                producto.instructivo.insumos = lineas.ToArray();
                 dgvInsumos.DataSource = lineas;
             }
             estadoObj = Estado.Buscar;

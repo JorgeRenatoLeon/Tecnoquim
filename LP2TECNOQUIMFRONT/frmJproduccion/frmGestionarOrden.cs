@@ -15,6 +15,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
     {
         int idPMP = 0;
         int flagElim = 0;
+        int flagEnv = 0;
         private DateTime _periodoPlanMaestroProduccion;
         private int _idPlanMaestroProduccion;
         private Service.ordenProduccion _orderProduccion;
@@ -29,7 +30,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         public ordenProduccion OrderProduccion { get => ordenRecivida; set => ordenRecivida = value; }
 
-        public frmGestionarOrden(Service.ordenProduccion ordenReciv = null, int id=0)
+        public int Flag { get => flagEnv; set => flagEnv = value; }
+
+        public frmGestionarOrden(Service.ordenProduccion ordenReciv = null, int id = 0)
         {
             InitializeComponent();
             idPMP = id;
@@ -64,9 +67,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             txtNOrden.Text = orden.id.ToString();
             dtpOrden.Value = orden.fecha;
             Service.lineaOrden[] l = DBController.listarLineaOrden(orden.id);
-            orden.lineasOrden = l.ToArray();
             if (l != null)
             {
+                orden.lineasOrden = l.ToArray();
                 lineas = new BindingList<lineaOrden>(l);
                 dgvOrdenProduccion.DataSource = lineas;
             }
@@ -371,6 +374,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 _orderProduccion.lineasOrden = lineas.ToArray();
                 OrderProduccion = _orderProduccion;
                 this.DialogResult = DialogResult.OK;
+                Flag = flagElim;
             }
             else
             {
