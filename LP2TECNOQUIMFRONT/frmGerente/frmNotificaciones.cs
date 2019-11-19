@@ -49,6 +49,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         private void dgvNotificaciones_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             Service.mensaje ppFila = (Service.mensaje)dgvNotificaciones.Rows[e.RowIndex].DataBoundItem;
+            dgvNotificaciones.Rows[e.RowIndex].Cells["ID"].Value = ppFila.idMensaje.ToString();
             dgvNotificaciones.Rows[e.RowIndex].Cells["NombreEmisor"].Value = ppFila.emisor.nombres+" "+ppFila.emisor.apellidos;
             dgvNotificaciones.Rows[e.RowIndex].Cells["RolEmisor"].Value = ppFila.emisor.rol.descripcion;
             dgvNotificaciones.Rows[e.RowIndex].Cells["Descripcion"].Value = ppFila.descripcion;
@@ -57,13 +58,13 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         private void dgvNotificaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string str = dgvNotificaciones.Rows[dgvNotificaciones.SelectedRows[0].Index].Cells[2].Value.ToString();
-
+            string str = dgvNotificaciones.Rows[dgvNotificaciones.SelectedRows[0].Index].Cells[3].Value.ToString();
+            
             if (str == "VALIDAR PMP")
             {
+                DBController.leerMensaje(int.Parse(dgvNotificaciones.Rows[e.RowIndex].Cells["ID"].Value.ToString()));
                 this.Visible = false;
                 frmGerente formHome = new frmGerente(2, this.trabajador);
-                formHome.Visible = true;
                 close = 1;
                 this.Close();
             }
