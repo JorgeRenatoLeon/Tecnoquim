@@ -17,6 +17,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         Service.ServicioClient DBController = new Service.ServicioClient();
         //frmListaOrden formListaOrden = new frmListaOrden();
         Service.lineaOrden lorden;
+        
 
         public frmModCalidad()
         {
@@ -50,6 +51,24 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
                 txtPres.Text = lorden.cantProducto.ToString();
             }
 
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            //lorden = new Service.lineaOrden();
+
+            //maquinaria.nombre = txtNombre.Text;
+            //maquinaria.tipo = txtTipo.Text;
+            //detalle.maquinaria = maquinaria;
+            //detalle.fechaSpecified = true;
+            //detalle.fecha = DateTime.Today;
+
+            //maquinaria.id = int.Parse(txtNOrden.Text);
+            lorden.estadoCalidad = (Service.estadoMaterial)cbRol.SelectedValue;
+            DBController.actualizarLineaOrden(lorden,lorden.idLineaOrden);
+            
+            MessageBox.Show("Producto Verificado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
     }
 }
