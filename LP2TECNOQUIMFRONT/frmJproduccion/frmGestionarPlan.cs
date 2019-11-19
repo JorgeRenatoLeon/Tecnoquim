@@ -17,12 +17,12 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         int flagElim = 0;
         int flagHistorial = 0;
         Service.ServicioClient DBController = new Service.ServicioClient();
-        detalleMaquinaria det;
-        BindingList<Service.detalleMaquinaria> detMaquinarias;
+        maquinaria maq;
+        BindingList<Service.maquinaria> maquinarias;
         BindingList<Service.ordenProduccion> ordenes;
         BindingList<Service.ordenProduccion> ordenesAg;
         BindingList<Service.ordenProduccion> ordenesMod;
-        BindingList<Service.detalleMaquinaria> lineasEliminadas;
+        BindingList<Service.maquinaria> lineasEliminadas;
         trabajador trabajador;
         mensaje mensaje;
         private Service.planMaestroProduccion _pmp;
@@ -42,10 +42,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             dgvOrden.AutoGenerateColumns = false;
             dgvMaquinaria.AutoGenerateColumns = false;
             ordenSeleccionada = new ordenProduccion();
-            det = new detalleMaquinaria();
+            maq = new maquinaria();
             mensaje = new mensaje();
-            detMaquinarias = new BindingList<detalleMaquinaria>();
-            lineasEliminadas = new BindingList<detalleMaquinaria>();
+            maquinarias = new BindingList<maquinaria>();
+            lineasEliminadas = new BindingList<maquinaria>();
             ordenes = new BindingList<ordenProduccion>();
             ordenesAg = new BindingList<ordenProduccion>();
             ordenesMod = new BindingList<ordenProduccion>();
@@ -67,12 +67,8 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void llenarDatos(Service.planMaestroProduccion PMPSeleccionado)
         {
             PMP = PMPSeleccionado;
-            detMaquinarias = new BindingList<detalleMaquinaria>(DBController.listarDetalleMaquinaria(PMP.id));
-            if (detMaquinarias != null)
-            {
-                PMP.maquinarias = detMaquinarias.ToArray();
-                dgvMaquinaria.DataSource = detMaquinarias;
-            }
+            //maquinarias = new BindingList<maquinaria>(DBController.listarMaquinaria(PMP.id));
+            //if (detMaquinarias != null)
             txtNOrden.Text = PMP.id.ToString();
             Service.ordenProduccion[] lo = DBController.listarOrdenesProduccionPlan(PMP.id);
             PMP.ordenes = lo.ToArray();
@@ -288,9 +284,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             frmMaquinaria form = new frmMaquinaria();
             if (form.ShowDialog(this) == DialogResult.OK)
             {
-                det = form.DetalleMaquinariaSeleccionada;
-                txtCodigo.Text = det.maquinaria.id.ToString();
-                txtNombre.Text = det.maquinaria.nombre;
+                maq = form.MaquinariaSeleccionada;
+                txtCodigo.Text = maq.id.ToString();
+                txtNombre.Text = maq.nombre;
             }
         }
 
@@ -309,9 +305,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             txtNOrden.Text = "";
             PMP = new planMaestroProduccion();
             ordenSeleccionada = new ordenProduccion();
-            det = new detalleMaquinaria();
-            detMaquinarias = new BindingList<detalleMaquinaria>();
-            lineasEliminadas = new BindingList<detalleMaquinaria>();
+            maq = new maquinaria();
+            maquinarias = new BindingList<maquinaria>();
+            lineasEliminadas = new BindingList<maquinaria>();
             ordenes = new BindingList<ordenProduccion>();
             ordenesAg = new BindingList<ordenProduccion>();
             ordenesMod = new BindingList<ordenProduccion>();
@@ -330,10 +326,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 {
                     DBController.insertarOrdenProduccion(l,PMP.id);
                 }
-                foreach (detalleMaquinaria m in PMP.maquinarias)
-                {
-                    DBController.insertarDetalleMaquinaria(m,PMP.id);
-                }
+                //foreach (maquinaria m in PMP.maquinarias)
                 mensaje.descripcion = "VALIDAR PMP";
                 mensaje.emisor = trabajador;
                 mensaje.fechaEnvio = DateTime.Now;
@@ -372,18 +365,18 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     }
                 }
 
-                foreach (detalleMaquinaria m in PMP.maquinarias)
-                {
-                    DBController.eliminarDetalleMaquinaria(m.idDetalleM);
-                    DBController.insertarDetalleMaquinaria(m,PMP.id);
-                }
-                if (flagElim == 1)
-                {
-                    foreach (Service.detalleMaquinaria l in lineasEliminadas)
-                    {
-                        DBController.eliminarDetalleMaquinaria(l.idDetalleM);
-                    }
-                }
+                //foreach (detalleMaquinaria m in PMP.maquinarias)
+                //{
+                //    DBController.eliminarDetalleMaquinaria(m.idDetalleM);
+                //    DBController.insertarDetalleMaquinaria(m,PMP.id);
+                //}
+                //if (flagElim == 1)
+                //{
+                //    foreach (Service.detalleMaquinaria l in lineasEliminadas)
+                //    {
+                //        DBController.eliminarDetalleMaquinaria(l.idDetalleM);
+                //    }
+                //}
                 PMP.estado = Service.estado.Pendiente;
                 DBController.actualizarPMP(PMP);
                 mensaje.descripcion = "VALIDAR PMP";
@@ -481,13 +474,13 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         }
         private void dgvMaquinaria_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            Service.detalleMaquinaria maqFila = (Service.detalleMaquinaria)dgvMaquinaria.Rows[e.RowIndex].DataBoundItem;
+            Service.maquinaria maqFila = (Service.maquinaria)dgvMaquinaria.Rows[e.RowIndex].DataBoundItem;
             dgvMaquinaria.Rows[e.RowIndex].Cells["Codigo"].Style.ForeColor = System.Drawing.Color.Black;
             dgvMaquinaria.Rows[e.RowIndex].Cells["Maquinaria"].Style.ForeColor = System.Drawing.Color.Black;
             dgvMaquinaria.Rows[e.RowIndex].Cells["Fecha"].Style.ForeColor = System.Drawing.Color.Black;
-            dgvMaquinaria.Rows[e.RowIndex].Cells["Codigo"].Value = maqFila.maquinaria.id;
-            dgvMaquinaria.Rows[e.RowIndex].Cells["Maquinaria"].Value = maqFila.maquinaria.nombre;
-            dgvMaquinaria.Rows[e.RowIndex].Cells["Fecha"].Value = maqFila.fecha.AddHours(5);
+            dgvMaquinaria.Rows[e.RowIndex].Cells["Codigo"].Value = maqFila.id;
+            dgvMaquinaria.Rows[e.RowIndex].Cells["Maquinaria"].Value = maqFila.nombre;
+            dgvMaquinaria.Rows[e.RowIndex].Cells["Fecha"].Value = maqFila.detallesMaquinaria[0].fecha.AddHours(5);
         }
 
         private void btnEditarOrden_Click(object sender, EventArgs e)
@@ -515,34 +508,34 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnAgregarMaquinaria_Click(object sender, EventArgs e)
         {
-            BindingList<detalleMaquinaria> lineasAg = new BindingList<detalleMaquinaria>();
-            foreach (detalleMaquinaria item in detMaquinarias)
+            BindingList<maquinaria> lineasAg = new BindingList<maquinaria>();
+            foreach (maquinaria item in maquinarias)
             {
                 lineasAg.Add(item);
             }
-            lineasAg.Add(det);
-            detMaquinarias = lineasAg;
-            PMP.maquinarias = detMaquinarias.ToArray();
-            dgvMaquinaria.DataSource = detMaquinarias;
+            lineasAg.Add(maq);
+            maquinarias = lineasAg;
+            PMP.maquinarias = maquinarias.ToArray();
+            dgvMaquinaria.DataSource = maquinarias;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             string str = dgvMaquinaria.Rows[dgvMaquinaria.SelectedRows[0].Index].Cells[1].Value.ToString();
 
-            BindingList<Service.detalleMaquinaria> lineasElim = new BindingList<detalleMaquinaria>();
-            foreach (detalleMaquinaria item in detMaquinarias)
+            BindingList<Service.maquinaria> lineasElim = new BindingList<maquinaria>();
+            foreach (maquinaria item in maquinarias)
             {
-                if (item.maquinaria.nombre != str) lineasElim.Add(item);
-                if (estado == Estado.Modificar && item.maquinaria.nombre == str)
+                if (item.nombre != str) lineasElim.Add(item);
+                if (estado == Estado.Modificar && item.nombre == str)
                 {
                     lineasEliminadas.Add(item);
                     flagElim = 1;
                 }
             }
-            detMaquinarias = lineasElim;
-            PMP.maquinarias = detMaquinarias.ToArray();
-            dgvMaquinaria.DataSource = detMaquinarias;
+            maquinarias = lineasElim;
+            PMP.maquinarias = maquinarias.ToArray();
+            dgvMaquinaria.DataSource = maquinarias;
         }
 
         private void dgvOrden_CellContentClick(object sender, DataGridViewCellEventArgs e)
