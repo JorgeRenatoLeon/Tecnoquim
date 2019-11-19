@@ -217,11 +217,11 @@
             // btnGenRepI
             // 
             this.btnGenRepI.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
-            this.btnGenRepI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenRepI.ForeColor = System.Drawing.Color.Black;
-            this.btnGenRepI.Location = new System.Drawing.Point(450, 43);
+            this.btnGenRepI.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenRepI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnGenRepI.Location = new System.Drawing.Point(432, 43);
             this.btnGenRepI.Name = "btnGenRepI";
-            this.btnGenRepI.Size = new System.Drawing.Size(143, 32);
+            this.btnGenRepI.Size = new System.Drawing.Size(161, 32);
             this.btnGenRepI.TabIndex = 43;
             this.btnGenRepI.Text = "Generar Reporte";
             this.btnGenRepI.UseVisualStyleBackColor = true;
@@ -283,11 +283,11 @@
             // btnGenRepP
             // 
             this.btnGenRepP.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
-            this.btnGenRepP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenRepP.ForeColor = System.Drawing.Color.Black;
-            this.btnGenRepP.Location = new System.Drawing.Point(450, 43);
+            this.btnGenRepP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenRepP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnGenRepP.Location = new System.Drawing.Point(432, 43);
             this.btnGenRepP.Name = "btnGenRepP";
-            this.btnGenRepP.Size = new System.Drawing.Size(143, 32);
+            this.btnGenRepP.Size = new System.Drawing.Size(161, 32);
             this.btnGenRepP.TabIndex = 43;
             this.btnGenRepP.Text = "Generar Reporte";
             this.btnGenRepP.UseVisualStyleBackColor = true;

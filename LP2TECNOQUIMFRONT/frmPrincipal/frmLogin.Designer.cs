@@ -140,6 +140,7 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             // 
             // button1
             // 
+            this.button1.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(338, 309);
