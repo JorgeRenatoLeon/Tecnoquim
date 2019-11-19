@@ -13,10 +13,13 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 {
     public partial class InsumosRestringidos : Form
     {
+        Service.trabajador trabajador = new Service.trabajador();
         Service.ServicioClient DBController = new Service.ServicioClient();
-        public InsumosRestringidos()
+        int close;
+        public InsumosRestringidos(Service.trabajador trabajadors = null)
         {
             InitializeComponent();
+            this.trabajador = trabajadors;
             BindingList<String> meses;
             meses = new BindingList<String>();
             meses.Add("Enero");
@@ -76,6 +79,43 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             byte[] arreglo = DBController.generarReporteProductosRestringidosPDF(
                 cbMesP.SelectedIndex+1, int.Parse(cbAnioP.SelectedValue.ToString()));
             File.WriteAllBytes(saveFileDialog2.FileName+ ".pdf", arreglo);
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConsultas_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmConsultas formConsultas = new frmConsultas(this.trabajador);
+            formConsultas.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void btnNotificaciones_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmNotificaciones formNot = new frmNotificaciones(this.trabajador);
+            formNot.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmJProduccion fromJProd = new frmJProduccion(1, this.trabajador);
+            fromJProd.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            if (close == 0) { Environment.Exit(0); }
         }
     }
 }

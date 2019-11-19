@@ -1,4 +1,4 @@
-﻿using LP2TECNOQUIMFRONT.frmPrincipal;
+﻿    using LP2TECNOQUIMFRONT.frmPrincipal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
