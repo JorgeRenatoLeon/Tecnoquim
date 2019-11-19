@@ -16,6 +16,14 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             {
                 InitializeComponent();
             }
+            else if (cont == 2)
+            {
+                this.Visible = false;
+                frmGestionarPMP frmGestionarPlanM = new frmGestionarPMP(trabajador,1);
+                frmGestionarPlanM.Visible = true;
+                close = 1;
+                this.Close();
+            }
             else
             {
                 Thread t = new Thread(new ThreadStart(SplashStart));

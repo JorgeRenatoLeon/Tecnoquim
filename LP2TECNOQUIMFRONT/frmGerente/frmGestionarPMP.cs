@@ -16,10 +16,20 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         Service.ServicioClient DBController = new Service.ServicioClient();
         Service.trabajador trabajador = new Service.trabajador();
         int close = 0;
-        public frmGestionarPMP(Service.trabajador trabajadors = null)
+        public frmGestionarPMP(Service.trabajador trabajadors = null, int cont=0)
         {
             this.trabajador = trabajadors;
             InitializeComponent();
+            if (cont == 1)
+            {
+                Service.planMaestroProduccion[] pmps = DBController.listarPMPEstado(2);
+                if (pmps != null)
+                {
+                    pmp = pmps[0];
+                    frmRevisarPlanMaestro frmGestionarPlanM = new frmRevisarPlanMaestro(pmp, true);
+                    frmGestionarPlanM.ShowDialog(this);
+                }
+            }
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -51,7 +61,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         private void btnRevisarPMP_Click(object sender, EventArgs e)
         {
-            BindingList<Service.planMaestroProduccion> pmps = new BindingList<Service.planMaestroProduccion>(DBController.listarPMP(""));
+            BindingList<Service.planMaestroProduccion> pmps = new BindingList<Service.planMaestroProduccion>(DBController.listarPMPEstado(2));
             pmp = pmps[0];
             frmRevisarPlanMaestro frmGestionarPlanM = new frmRevisarPlanMaestro(pmp, true);
             frmGestionarPlanM.Visible = true;

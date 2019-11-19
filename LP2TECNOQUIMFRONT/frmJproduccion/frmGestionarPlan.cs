@@ -23,14 +23,17 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         BindingList<Service.ordenProduccion> ordenesAg;
         BindingList<Service.ordenProduccion> ordenesMod;
         BindingList<Service.detalleMaquinaria> lineasEliminadas;
+        trabajador trabajador;
+        mensaje mensaje;
         private Service.planMaestroProduccion _pmp;
         Service.ordenProduccion ordenSeleccionada;
         Estado estado;
 
         public planMaestroProduccion PMP { get => _pmp; set => _pmp = value; }
 
-        public frmGestionarPlan(Service.planMaestroProduccion pmpSelec = null)
+        public frmGestionarPlan(Service.planMaestroProduccion pmpSelec = null, trabajador t = null)
         {
+            trabajador = t;
             PMP = new planMaestroProduccion();
             InitializeComponent();
             estado = Estado.Inicial;
@@ -40,6 +43,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             dgvMaquinaria.AutoGenerateColumns = false;
             ordenSeleccionada = new ordenProduccion();
             det = new detalleMaquinaria();
+            mensaje = new mensaje();
             detMaquinarias = new BindingList<detalleMaquinaria>();
             lineasEliminadas = new BindingList<detalleMaquinaria>();
             ordenes = new BindingList<ordenProduccion>();
@@ -330,11 +334,24 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 {
                     DBController.insertarDetalleMaquinaria(m,PMP.id);
                 }
+                mensaje.descripcion = "VALIDAR PMP";
+                mensaje.emisor = trabajador;
+                mensaje.fechaEnvio = DateTime.Now;
+                mensaje.fechaEnvioSpecified = true;
+                trabajador[] trabajadores = DBController.listarTrabajadores("");
+                foreach (trabajador tr in trabajadores)
+                {
+                    if (trabajador.rol.idRol == 2)
+                    {
+                        mensaje.receptor = tr;
+                        break;
+                    }
+                }
+                DBController.insertarMensaje(mensaje);
                 MessageBox.Show("Plan Maestro de Producción correctamente añadido.", "Mensaje Confirmacion", MessageBoxButtons.OK);
             }
             else if (estado == Estado.Modificar)
             {
-                DBController.actualizarPMP(PMP);
                 foreach (ordenProduccion o in ordenesAg)
                 {
                     o.id = DBController.insertarOrdenProduccion(o,PMP.id);
@@ -343,11 +360,15 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                         DBController.insertarLineaOrden(lo, o.id);
                     }
                 }
-                foreach (ordenProduccion o in ordenesMod)
+                foreach (ordenProduccion o in PMP.ordenes)
                 {
-                    foreach (lineaOrden lo in o.lineasOrden)
+                    if (o.lineasOrden != null)
                     {
-                        DBController.insertarLineaOrden(lo, o.id);
+                        foreach (lineaOrden lo in o.lineasOrden)
+                        {
+                            DBController.eliminarLineaOrden(o.id);
+                            DBController.insertarLineaOrden(lo, o.id);
+                        }
                     }
                 }
 
@@ -363,10 +384,27 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                         DBController.eliminarDetalleMaquinaria(l.idDetalleM);
                     }
                 }
+                PMP.estado = Service.estado.Pendiente;
+                DBController.actualizarPMP(PMP);
+                mensaje.descripcion = "VALIDAR PMP";
+                mensaje.emisor = trabajador;
+                mensaje.fechaEnvio = DateTime.Now;
+                mensaje.fechaEnvioSpecified = true;
+                trabajador[] trabajadores = DBController.listarTrabajadores("");
+                foreach(trabajador tr in trabajadores)
+                {
+                    if(tr.rol.idRol == 2)
+                    {
+                        mensaje.receptor = tr;
+                        break;
+                    }
+                }
+                DBController.insertarMensaje(mensaje);
                 MessageBox.Show("Plan Maestro de Producción correctamente modificado.", "Mensaje Confirmacion", MessageBoxButtons.OK);
             }
             limpiarComponentes();
             estadoComponentes(Estado.Inicial);
+            this.Close();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -377,6 +415,30 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void calOrdenProduccion_DateChanged(object sender, DateRangeEventArgs e)
         {
+            if(flagHistorial == 0)
+            {
+                if(estado == Estado.Nuevo)
+                {
+                    if(calOrdenProduccion.SelectionRange.Start.Month != DateTime.Now.Month )
+                    {
+                        calOrdenProduccion.SetDate(new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1));
+                    }
+                }
+                else
+                {
+                    if (calOrdenProduccion.SelectionRange.Start.Month != PMP.periodo.AddHours(5).Month)
+                    {
+                        calOrdenProduccion.SetDate(new DateTime(PMP.periodo.AddHours(5).Year, PMP.periodo.AddHours(5).Month, 1));
+                    }
+                }
+            }
+            else
+            {
+                if (calOrdenProduccion.SelectionRange.Start.Month != PMP.periodo.AddHours(5).Month)
+                {
+                    calOrdenProduccion.SetDate(new DateTime(PMP.periodo.AddHours(5).Year, PMP.periodo.AddHours(5).Month, 1));
+                }
+            }
             int hubo = 0;
             flagOrden = 0;
             if (PMP.ordenes != null)
@@ -448,26 +510,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     PMP.ordenes = ordenes.ToArray();
                     flagOrden = 0;
                 }
-                else if (formOrd.Flag == 1)
-                {
-                    BindingList<lineaOrden> lin = new BindingList<lineaOrden>(ordenSeleccionada.lineasOrden);
-                    foreach (ordenProduccion o in PMP.ordenes)
-                    {
-                        if(o.id == ordenSeleccionada.id)
-                        {
-                            foreach(lineaOrden ls in o.lineasOrden)
-                            {
-                                lineaOrden lineaMod = new lineaOrden();
-                                lineaMod = lin.SingleOrDefault(p=> p.idLineaOrden == ls.idLineaOrden);
-                                if(lineaMod != null)
-                                {
-                                    lin.Remove(lineaMod);
-                                }
-                            }
-                        }
-                    }
-                    ordenesMod.Add(ordenSeleccionada);
-                }
             }
         }
 
@@ -499,6 +541,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 }
             }
             detMaquinarias = lineasElim;
+            PMP.maquinarias = detMaquinarias.ToArray();
             dgvMaquinaria.DataSource = detMaquinarias;
         }
     }

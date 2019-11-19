@@ -61,7 +61,14 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
             mensaje.emisor = trabajador;
             mensaje.fechaEnvio = DateTime.Now;
-            mensaje.receptor = pmp.responsable;
+            Service.trabajador[] trabajadores = DBController.listarTrabajadores("");
+            foreach (Service.trabajador tr in trabajadores)
+            {
+                if (tr.rol.idRol == 1)
+                {
+                    mensaje.receptor = tr;
+                }
+            }
             DBController.insertarMensaje(mensaje);
             MessageBox.Show("Se ha actualizado correctamente el plan de maestro de producción", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
