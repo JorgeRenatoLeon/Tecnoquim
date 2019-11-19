@@ -73,6 +73,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 lineas = new BindingList<lineaOrden>(l);
                 dgvOrdenProduccion.DataSource = lineas;
             }
+            else
+            {
+                flagEnv = 1;
+            }
             estadoFormulario = Estado.Buscar;
             estadoComponentes(Estado.Buscar);
         }
@@ -350,6 +354,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 {
                     lineasEliminadas.Add(item);
                     flagElim = 1;
+                    flagEnv = 1;
                 }
             }
             lineas = lineasElim;
@@ -374,7 +379,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 _orderProduccion.lineasOrden = lineas.ToArray();
                 OrderProduccion = _orderProduccion;
                 this.DialogResult = DialogResult.OK;
-                Flag = flagElim;
+                Flag = flagEnv;
             }
             else
             {

@@ -40,7 +40,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            frmGestionarPlan formGestionarPlan = new frmGestionarPlan();
+            frmGestionarPlan formGestionarPlan = new frmGestionarPlan(null,trabajador);
             formGestionarPlan.ShowDialog(this);
         }
 

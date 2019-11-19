@@ -31,6 +31,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             dgvOrden.AutoGenerateColumns = false;
             dgvOrden.DataSource = pmp.ordenes;
             dgvMaquinaria.AutoGenerateColumns = false;
+            pmp.maquinarias = DBController.listarDetalleMaquinaria(pmp.id);
             dgvMaquinaria.DataSource = pmp.maquinarias;
             //estadoObj = Estado.Inicial;
             if (!save) {
@@ -61,7 +62,14 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
             mensaje.emisor = trabajador;
             mensaje.fechaEnvio = DateTime.Now;
-            mensaje.receptor = pmp.responsable;
+            Service.trabajador[] trabajadores = DBController.listarTrabajadores("");
+            foreach (Service.trabajador tr in trabajadores)
+            {
+                if (tr.rol.idRol == 1)
+                {
+                    mensaje.receptor = tr;
+                }
+            }
             DBController.insertarMensaje(mensaje);
             MessageBox.Show("Se ha actualizado correctamente el plan de maestro de producción", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -80,6 +88,37 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             dgvMaquinaria.Rows[e.RowIndex].Cells[0].Value = fila.id;
             dgvMaquinaria.Rows[e.RowIndex].Cells[1].Value = fila.nombre;
             dgvMaquinaria.Rows[e.RowIndex].Cells[2].Value = fila.tipo;
+        }
+
+        private void calOrdenProduccion_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            if (calOrdenProduccion.SelectionRange.Start.Month != pmp.periodo.AddHours(5).Month)
+            {
+                calOrdenProduccion.SetDate(new DateTime(pmp.periodo.AddHours(5).Year, pmp.periodo.AddHours(5).Month, 1));
+            }
+            
+            int hubo = 0;
+            if (pmp.ordenes != null)
+            {
+                foreach (Service.ordenProduccion item in pmp.ordenes)
+                {
+                    string a = item.fecha.AddHours(5).ToString("dd-MM-yyy");
+                    string b = calOrdenProduccion.SelectionRange.Start.ToString("dd-MM-yyy");
+                    if (a == b)
+                    {
+                        if (item.lineasOrden == null)
+                        {
+                            item.lineasOrden = DBController.listarLineaOrden(item.id);
+                        }
+                        dgvOrden.DataSource = item.lineasOrden;
+                        hubo = 1;
+                    }
+                }
+            }
+            if (hubo == 0)
+            {
+                dgvOrden.DataSource = null;
+            }
         }
     }
 }
