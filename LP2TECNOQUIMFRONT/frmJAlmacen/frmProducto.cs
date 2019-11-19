@@ -217,7 +217,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 producto.presentacion = txtPres.Text;
                 producto.granularidad = float.Parse(txtGranu.Text);
                 instructivo = new Service.instructivo();
-                producto.instructivo.id = int.Parse(txtidinst.Text);
+                instructivo.id = int.Parse(txtidinst.Text);
                 instructivo.actividades = txtAct.Text;
                 instructivo.insumos = lineas.ToArray();
                 producto.instructivo = instructivo;
