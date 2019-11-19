@@ -85,12 +85,12 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             frmMaquinaria formMaquinaria = new frmMaquinaria();
             if (formMaquinaria.ShowDialog(this) == DialogResult.OK)
             {
-                maquinaria = formMaquinaria.DetalleMaquinariaSeleccionada.maquinaria;
+                maquinaria = formMaquinaria.MaquinariaSeleccionada;
                 txtNOrden.Text = maquinaria.id.ToString();
                 txtNombre.Text= maquinaria.nombre;
                 txtTipo.Text=maquinaria.tipo;
 
-                if (formMaquinaria.DetalleMaquinariaSeleccionada.activo == true)
+                if (maquinaria.estado == true)
                 {
                     rbActivo.Checked = true;
                 }
@@ -104,32 +104,26 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
         
         private void guardarToolStripButton_Click(object sender, EventArgs e)
         {
-            detalle = new Service.detalleMaquinaria();
             maquinaria = new Service.maquinaria();
             maquinaria.nombre = txtNombre.Text;
             maquinaria.tipo = txtTipo.Text;
-            detalle.maquinaria = maquinaria;
-            detalle.fechaSpecified = true;
-            detalle.fecha = DateTime.Today;
             if (rbActivo.Enabled == true)
             {
-                detalle.activo = true;
+                maquinaria.estado = true;
             }
             else
             {
-                detalle.activo = false;
+                maquinaria.estado = false;
             }
             if (estadoObj == Estado.Nuevo)
             {
                 int idMaq=DBController.insertarMaquinaria(maquinaria);
-                DBController.insertarDetalleMaquinaria(detalle,idMaq);
                 MessageBox.Show("Maquinaria Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (estadoObj == Estado.Modificar) 
             {
                 maquinaria.id =int.Parse(txtNOrden.Text);
                 DBController.actualizarMaquinaria(maquinaria);
-                DBController.actualizarDetalleMaquinaria(detalle);
                 MessageBox.Show("Maquinaria Actualizada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             estadoComponentes(Estado.Inicial);

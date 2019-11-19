@@ -543,6 +543,7 @@
     <EmbeddedResource Include="frmPrincipal\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -630,7 +631,7 @@
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.eliminarProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse1.datasource">
+    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.eliminarTrabajadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.enviarMensajeResponse.datasource">
@@ -816,15 +817,10 @@
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.verificarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Service\Servicio1.wsdl" />
-    <None Include="Connected Services\Service\Servicio1.xsd">
+    <None Include="Connected Services\Service\Servicio.wsdl" />
+    <None Include="Connected Services\Service\Servicio.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Service\Servicio11.wsdl" />
-    <None Include="Connected Services\Service\Servicio11.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -865,6 +861,18 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\reply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_11.wide.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-940818100-1024x1024.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\Service\" />
   </ItemGroup>
   <ItemGroup>
@@ -878,18 +886,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\reply.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\background_11.wide.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\istockphoto-940818100-1024x1024.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\document.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

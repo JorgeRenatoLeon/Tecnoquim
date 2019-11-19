@@ -1057,7 +1057,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private int idField;
         
-        private maquinaria[] maquinariasField;
+        private detalleMaquinaria[] maquinariasField;
         
         private ordenProduccion[] ordenesField;
         
@@ -1105,7 +1105,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("maquinarias", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public maquinaria[] maquinarias {
+        public detalleMaquinaria[] maquinarias {
             get {
                 return this.maquinariasField;
             }
@@ -1195,9 +1195,83 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
+    public partial class detalleMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private int idDetalleMField;
+        
+        private maquinaria maquinariaField;
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int idDetalleM {
+            get {
+                return this.idDetalleMField;
+            }
+            set {
+                this.idDetalleMField = value;
+                this.RaisePropertyChanged("idDetalleM");
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public maquinaria maquinaria {
+            get {
+                return this.maquinariaField;
+            }
+            set {
+                this.maquinariaField = value;
+                this.RaisePropertyChanged("maquinaria");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
     public partial class maquinaria : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private detalleMaquinaria[] detallesMaquinariaField;
+        private bool estadoField;
         
         private int idField;
         
@@ -1206,14 +1280,14 @@ namespace LP2TECNOQUIMFRONT.Service {
         private string tipoField;
         
         /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute("detallesMaquinaria", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
-        public detalleMaquinaria[] detallesMaquinaria {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool estado {
             get {
-                return this.detallesMaquinariaField;
+                return this.estadoField;
             }
             set {
-                this.detallesMaquinariaField = value;
-                this.RaisePropertyChanged("detallesMaquinaria");
+                this.estadoField = value;
+                this.RaisePropertyChanged("estado");
             }
         }
         
@@ -1250,80 +1324,6 @@ namespace LP2TECNOQUIMFRONT.Service {
             set {
                 this.tipoField = value;
                 this.RaisePropertyChanged("tipo");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <comentarios/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
-    public partial class detalleMaquinaria : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool activoField;
-        
-        private System.DateTime fechaField;
-        
-        private bool fechaFieldSpecified;
-        
-        private int idDetalleMField;
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("fecha");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSpecified {
-            get {
-                return this.fechaFieldSpecified;
-            }
-            set {
-                this.fechaFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSpecified");
-            }
-        }
-        
-        /// <comentarios/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idDetalleM {
-            get {
-                return this.idDetalleMField;
-            }
-            set {
-                this.idDetalleMField = value;
-                this.RaisePropertyChanged("idDetalleM");
             }
         }
         
@@ -2490,13 +2490,13 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaquinaria;
+        public int idPMP;
         
         public listarDetalleMaquinariaRequest() {
         }
         
-        public listarDetalleMaquinariaRequest(int idMaquinaria) {
-            this.idMaquinaria = idMaquinaria;
+        public listarDetalleMaquinariaRequest(int idPMP) {
+            this.idPMP = idPMP;
         }
     }
     
@@ -3494,14 +3494,14 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaq;
+        public int idPMP;
         
         public insertarDetalleMaquinariaRequest() {
         }
         
-        public insertarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria detMaquinaria, int idMaq) {
+        public insertarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria detMaquinaria, int idPMP) {
             this.detMaquinaria = detMaquinaria;
-            this.idMaq = idMaq;
+            this.idPMP = idPMP;
         }
     }
     
@@ -3525,16 +3525,11 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LP2TECNOQUIMFRONT.Service.detalleMaquinaria detMaquinaria;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaquinaria;
-        
         public actualizarDetalleMaquinariaRequest() {
         }
         
-        public actualizarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria detMaquinaria, int idMaquinaria) {
+        public actualizarDetalleMaquinariaRequest(LP2TECNOQUIMFRONT.Service.detalleMaquinaria detMaquinaria) {
             this.detMaquinaria = detMaquinaria;
-            this.idMaquinaria = idMaquinaria;
         }
     }
     
@@ -4796,9 +4791,9 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.listarDetalleMaquinaria(request);
         }
         
-        public LP2TECNOQUIMFRONT.Service.detalleMaquinaria[] listarDetalleMaquinaria(int idMaquinaria) {
+        public LP2TECNOQUIMFRONT.Service.detalleMaquinaria[] listarDetalleMaquinaria(int idPMP) {
             LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest();
-            inValue.idMaquinaria = idMaquinaria;
+            inValue.idPMP = idPMP;
             LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleMaquinaria(inValue);
             return retVal.@return;
         }
@@ -4808,9 +4803,9 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.listarDetalleMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse> listarDetalleMaquinariaAsync(int idMaquinaria) {
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaResponse> listarDetalleMaquinariaAsync(int idPMP) {
             LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.listarDetalleMaquinariaRequest();
-            inValue.idMaquinaria = idMaquinaria;
+            inValue.idPMP = idPMP;
             return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).listarDetalleMaquinariaAsync(inValue);
         }
         
@@ -5522,10 +5517,10 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.insertarDetalleMaquinaria(request);
         }
         
-        public void insertarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria detMaquinaria, int idMaq) {
+        public void insertarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria detMaquinaria, int idPMP) {
             LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest();
             inValue.detMaquinaria = detMaquinaria;
-            inValue.idMaq = idMaq;
+            inValue.idPMP = idPMP;
             LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleMaquinaria(inValue);
         }
         
@@ -5534,10 +5529,10 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.insertarDetalleMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse> insertarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria detMaquinaria, int idMaq) {
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaResponse> insertarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria detMaquinaria, int idPMP) {
             LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarDetalleMaquinariaRequest();
             inValue.detMaquinaria = detMaquinaria;
-            inValue.idMaq = idMaq;
+            inValue.idPMP = idPMP;
             return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarDetalleMaquinariaAsync(inValue);
         }
         
@@ -5546,10 +5541,9 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.actualizarDetalleMaquinaria(request);
         }
         
-        public void actualizarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria detMaquinaria, int idMaquinaria) {
+        public void actualizarDetalleMaquinaria(LP2TECNOQUIMFRONT.Service.detalleMaquinaria detMaquinaria) {
             LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest();
             inValue.detMaquinaria = detMaquinaria;
-            inValue.idMaquinaria = idMaquinaria;
             LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleMaquinaria(inValue);
         }
         
@@ -5558,10 +5552,9 @@ namespace LP2TECNOQUIMFRONT.Service {
             return base.Channel.actualizarDetalleMaquinariaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse> actualizarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria detMaquinaria, int idMaquinaria) {
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaResponse> actualizarDetalleMaquinariaAsync(LP2TECNOQUIMFRONT.Service.detalleMaquinaria detMaquinaria) {
             LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest inValue = new LP2TECNOQUIMFRONT.Service.actualizarDetalleMaquinariaRequest();
             inValue.detMaquinaria = detMaquinaria;
-            inValue.idMaquinaria = idMaquinaria;
             return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).actualizarDetalleMaquinariaAsync(inValue);
         }
         

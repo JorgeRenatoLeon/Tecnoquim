@@ -17,12 +17,12 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         int flagElim = 0;
         int flagHistorial = 0;
         Service.ServicioClient DBController = new Service.ServicioClient();
-        maquinaria maq;
-        BindingList<Service.maquinaria> maquinarias;
+        detalleMaquinaria det;
+        BindingList<Service.detalleMaquinaria> detMaquinarias;
         BindingList<Service.ordenProduccion> ordenes;
         BindingList<Service.ordenProduccion> ordenesAg;
         BindingList<Service.ordenProduccion> ordenesMod;
-        BindingList<Service.maquinaria> lineasEliminadas;
+        BindingList<Service.detalleMaquinaria> lineasEliminadas;
         trabajador trabajador;
         mensaje mensaje;
         private Service.planMaestroProduccion _pmp;
@@ -42,10 +42,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             dgvOrden.AutoGenerateColumns = false;
             dgvMaquinaria.AutoGenerateColumns = false;
             ordenSeleccionada = new ordenProduccion();
-            maq = new maquinaria();
+            det = new detalleMaquinaria();
             mensaje = new mensaje();
-            maquinarias = new BindingList<maquinaria>();
-            lineasEliminadas = new BindingList<maquinaria>();
+            detMaquinarias = new BindingList<detalleMaquinaria>();
+            lineasEliminadas = new BindingList<detalleMaquinaria>();
             ordenes = new BindingList<ordenProduccion>();
             ordenesAg = new BindingList<ordenProduccion>();
             ordenesMod = new BindingList<ordenProduccion>();
@@ -284,9 +284,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             frmMaquinaria form = new frmMaquinaria();
             if (form.ShowDialog(this) == DialogResult.OK)
             {
-                maq = form.MaquinariaSeleccionada;
-                txtCodigo.Text = maq.id.ToString();
-                txtNombre.Text = maq.nombre;
+                det.fecha = DateTime.Now;
+                det.fechaSpecified = true;
+                det.maquinaria = form.MaquinariaSeleccionada;
+                txtCodigo.Text = det.maquinaria.id.ToString();
+                txtNombre.Text = det.maquinaria.nombre;
             }
         }
 
@@ -305,9 +307,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             txtNOrden.Text = "";
             PMP = new planMaestroProduccion();
             ordenSeleccionada = new ordenProduccion();
-            maq = new maquinaria();
-            maquinarias = new BindingList<maquinaria>();
-            lineasEliminadas = new BindingList<maquinaria>();
+            det = new detalleMaquinaria();
+            detMaquinarias = new BindingList<detalleMaquinaria>();
+            lineasEliminadas = new BindingList<detalleMaquinaria>();
             ordenes = new BindingList<ordenProduccion>();
             ordenesAg = new BindingList<ordenProduccion>();
             ordenesMod = new BindingList<ordenProduccion>();
@@ -474,13 +476,13 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         }
         private void dgvMaquinaria_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            Service.maquinaria maqFila = (Service.maquinaria)dgvMaquinaria.Rows[e.RowIndex].DataBoundItem;
+            Service.detalleMaquinaria maqFila = (Service.detalleMaquinaria)dgvMaquinaria.Rows[e.RowIndex].DataBoundItem;
             dgvMaquinaria.Rows[e.RowIndex].Cells["Codigo"].Style.ForeColor = System.Drawing.Color.Black;
             dgvMaquinaria.Rows[e.RowIndex].Cells["Maquinaria"].Style.ForeColor = System.Drawing.Color.Black;
             dgvMaquinaria.Rows[e.RowIndex].Cells["Fecha"].Style.ForeColor = System.Drawing.Color.Black;
-            dgvMaquinaria.Rows[e.RowIndex].Cells["Codigo"].Value = maqFila.id;
-            dgvMaquinaria.Rows[e.RowIndex].Cells["Maquinaria"].Value = maqFila.nombre;
-            dgvMaquinaria.Rows[e.RowIndex].Cells["Fecha"].Value = maqFila.detallesMaquinaria[0].fecha.AddHours(5);
+            dgvMaquinaria.Rows[e.RowIndex].Cells["Codigo"].Value = maqFila.maquinaria.id;
+            dgvMaquinaria.Rows[e.RowIndex].Cells["Maquinaria"].Value = maqFila.maquinaria.nombre;
+            dgvMaquinaria.Rows[e.RowIndex].Cells["Fecha"].Value = maqFila.fecha.AddHours(5);
         }
 
         private void btnEditarOrden_Click(object sender, EventArgs e)
@@ -508,34 +510,34 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnAgregarMaquinaria_Click(object sender, EventArgs e)
         {
-            BindingList<maquinaria> lineasAg = new BindingList<maquinaria>();
-            foreach (maquinaria item in maquinarias)
+            BindingList<detalleMaquinaria> lineasAg = new BindingList<detalleMaquinaria>();
+            foreach (detalleMaquinaria item in detMaquinarias)
             {
                 lineasAg.Add(item);
             }
-            lineasAg.Add(maq);
-            maquinarias = lineasAg;
-            PMP.maquinarias = maquinarias.ToArray();
-            dgvMaquinaria.DataSource = maquinarias;
+            lineasAg.Add(det);
+            detMaquinarias = lineasAg;
+            PMP.maquinarias = detMaquinarias.ToArray();
+            dgvMaquinaria.DataSource = detMaquinarias;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             string str = dgvMaquinaria.Rows[dgvMaquinaria.SelectedRows[0].Index].Cells[1].Value.ToString();
 
-            BindingList<Service.maquinaria> lineasElim = new BindingList<maquinaria>();
-            foreach (maquinaria item in maquinarias)
+            BindingList<Service.detalleMaquinaria> lineasElim = new BindingList<detalleMaquinaria>();
+            foreach (detalleMaquinaria item in detMaquinarias)
             {
-                if (item.nombre != str) lineasElim.Add(item);
-                if (estado == Estado.Modificar && item.nombre == str)
+                if (item.maquinaria.nombre != str) lineasElim.Add(item);
+                if (estado == Estado.Modificar && item.maquinaria.nombre == str)
                 {
                     lineasEliminadas.Add(item);
                     flagElim = 1;
                 }
             }
-            maquinarias = lineasElim;
-            PMP.maquinarias = maquinarias.ToArray();
-            dgvMaquinaria.DataSource = maquinarias;
+            detMaquinarias = lineasElim;
+            PMP.maquinarias = detMaquinarias.ToArray();
+            dgvMaquinaria.DataSource = detMaquinarias;
         }
 
         private void dgvOrden_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -20,12 +20,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         {
             InitializeComponent();
             dgvMaquinaria.AutoGenerateColumns = false;
-            maquinaria[] mqs = DBController.listarMaquinaria("");
-            foreach(maquinaria item in mqs)
-            {
-                item.detallesMaquinaria = DBController.listarDetalleMaquinaria(item.id);
-            }
-            dgvMaquinaria.DataSource = mqs;
+            dgvMaquinaria.DataSource = DBController.listarMaquinaria("");
         }
 
         public maquinaria MaquinariaSeleccionada { get => maquinariaSeleccionada; set => maquinariaSeleccionada = value; }
@@ -36,8 +31,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             dgvMaquinaria.Rows[e.RowIndex].Cells["Nombre"].Value = maquinariaFila.nombre;
             dgvMaquinaria.Rows[e.RowIndex].Cells["Codigo"].Value = maquinariaFila.id;
             dgvMaquinaria.Rows[e.RowIndex].Cells["Tipo"].Value = maquinariaFila.tipo;
-            dgvMaquinaria.Rows[e.RowIndex].Cells["Fecha"].Value = maquinariaFila.detallesMaquinaria[0].fecha;
-            if(maquinariaFila.detallesMaquinaria[0].activo == true)
+            if(maquinariaFila.estado == true)
             {
                 dgvMaquinaria.Rows[e.RowIndex].Cells["Estado"].Value = "ACTIVO";
             }
@@ -55,12 +49,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            maquinaria[] mqs = DBController.listarMaquinaria("");
-            foreach (maquinaria item in mqs)
-            {
-                item.detallesMaquinaria = DBController.listarDetalleMaquinaria(item.id);
-            }
-            dgvMaquinaria.DataSource = mqs;
+            dgvMaquinaria.DataSource = DBController.listarMaquinaria(txtNombre.Text);
         }
     }
 }

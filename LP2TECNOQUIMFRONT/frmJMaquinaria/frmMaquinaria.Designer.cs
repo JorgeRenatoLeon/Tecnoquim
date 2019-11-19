@@ -36,7 +36,6 @@
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinaria)).BeginInit();
@@ -89,7 +88,6 @@
             this.dgvMaquinaria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nombre,
-            this.Fecha,
             this.Tipo,
             this.Estado});
             this.dgvMaquinaria.Location = new System.Drawing.Point(27, 81);
@@ -117,7 +115,7 @@
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
             this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 80;
+            this.Codigo.Width = 150;
             // 
             // Nombre
             // 
@@ -126,25 +124,19 @@
             this.Nombre.ReadOnly = true;
             this.Nombre.Width = 250;
             // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 190;
-            // 
             // Tipo
             // 
             this.Tipo.HeaderText = "Tipo";
             this.Tipo.Name = "Tipo";
             this.Tipo.ReadOnly = true;
-            this.Tipo.Width = 180;
+            this.Tipo.Width = 200;
             // 
             // Estado
             // 
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
+            this.Estado.Width = 200;
             // 
             // frmMaquinaria
             // 
@@ -174,7 +166,6 @@
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
