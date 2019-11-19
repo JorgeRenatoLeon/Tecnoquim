@@ -67,11 +67,15 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void llenarDatos(Service.planMaestroProduccion PMPSeleccionado)
         {
             PMP = PMPSeleccionado;
-            detMaquinarias = new BindingList<detalleMaquinaria>(DBController.listarDetalleMaquinaria(PMP.id));
-            if (detMaquinarias != null)
+            Service.detalleMaquinaria[] detalleMaquinarias = DBController.listarDetalleMaquinaria(PMP.id);
+            if (detalleMaquinarias == null)
             {
                 PMP.maquinarias = detMaquinarias.ToArray();
                 dgvMaquinaria.DataSource = detMaquinarias;
+            }
+            else
+            {
+                detMaquinarias = new BindingList<detalleMaquinaria>(detalleMaquinarias);
             }
             txtNOrden.Text = PMP.id.ToString();
             Service.ordenProduccion[] lo = DBController.listarOrdenesProduccionPlan(PMP.id);
