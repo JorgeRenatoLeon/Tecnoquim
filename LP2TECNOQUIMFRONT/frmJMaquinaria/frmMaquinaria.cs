@@ -26,7 +26,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             }
             else
             {
-               // dgvMaquinaria.DataSource = DBController.listarDetalleMaquinariaTodos("");
+               dgvMaquinaria.DataSource = DBController.listarDetalleMaquinariaTodos("");
             }
         }
 
@@ -37,8 +37,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         {
             Service.detalleMaquinaria maquinariaFila = (Service.detalleMaquinaria)dgvMaquinaria.Rows[e.RowIndex].DataBoundItem;
             dgvMaquinaria.Rows[e.RowIndex].Cells["Nombre"].Value = maquinariaFila.maquinaria.nombre;
-            dgvMaquinaria.Rows[e.RowIndex].Cells["Codigo"].Value = maquinariaFila.maquinaria.id;
+            dgvMaquinaria.Rows[e.RowIndex].Cells["Codigo"].Value = maquinariaFila.idDetalleM;
             dgvMaquinaria.Rows[e.RowIndex].Cells["Tipo"].Value = maquinariaFila.maquinaria.tipo;
+            dgvMaquinaria.Rows[e.RowIndex].Cells["Fecha"].Value = maquinariaFila.fecha;
             if(maquinariaFila.activo == true)
             {
                 dgvMaquinaria.Rows[e.RowIndex].Cells["Estado"].Value = "ACTIVO";

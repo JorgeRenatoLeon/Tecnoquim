@@ -110,7 +110,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             maquinaria.tipo = txtTipo.Text;
             detalle.maquinaria = maquinaria;
             detalle.fechaSpecified = true;
-            detalle.fecha = DateTime.Now;
+            detalle.fecha = DateTime.Today;
             if (rbActivo.Enabled == true)
             {
                 detalle.activo = true;
@@ -121,8 +121,8 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             }
             if (estadoObj == Estado.Nuevo)
             {
-                DBController.insertarMaquinaria(maquinaria);
-                DBController.insertarDetalleMaquinaria(detalle,1);
+                int idMaq=DBController.insertarMaquinaria(maquinaria);
+                DBController.insertarDetalleMaquinaria(detalle,idMaq);
                 MessageBox.Show("Maquinaria Registrada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (estadoObj == Estado.Modificar) 
@@ -158,39 +158,42 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
                     lblCodigo.Enabled = false;
                     lblNombre.Enabled = false;
                     lblTipo.Enabled = false;
+                    lblEstado.Enabled = false;
                     //Botones
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
                     btnGuardar.Enabled = false;
-                    btnEliminar.Enabled = false;
                     btnBuscar.Enabled = true;
                     //Campos de Texto
                     txtNOrden.Enabled = false;
                     txtNombre.Enabled = false;
                     txtTipo.Enabled = false;
+                    rbActivo.Enabled = false;
+                    rbInactivo.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     //Etiquetas
                     lblCodigo.Enabled = true;
                     lblNombre.Enabled = true;
                     lblTipo.Enabled = true;
+                    lblEstado.Enabled = true;
                     //Botones
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
-                    btnEliminar.Enabled = true;
                     btnBuscar.Enabled = false;
                     //Campos de Texto
                     txtNOrden.Enabled = true;
                     txtNombre.Enabled = true;
                     txtTipo.Enabled = true;
+                    rbActivo.Enabled = true;
+                    rbInactivo.Enabled = true;
                     break;
                 case Estado.Buscar:
                     //Botones
                     btnNuevo.Enabled = false;
                     btnModificar.Enabled = true;
                     btnGuardar.Enabled = false;
-                    btnEliminar.Enabled = true;
                     btnBuscar.Enabled = false;
                     break;
                 case Estado.Modificar:
@@ -198,16 +201,18 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
                     lblCodigo.Enabled = true;
                     lblNombre.Enabled = true;
                     lblTipo.Enabled = true;
+                    lblEstado.Enabled = true;
                     //Botones
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
-                    btnEliminar.Enabled = true;
                     btnBuscar.Enabled = false;
                     //Campos de Texto
                     txtNOrden.Enabled = true;
                     txtNombre.Enabled = true;
                     txtTipo.Enabled = true;
+                    rbActivo.Enabled = true;
+                    rbInactivo.Enabled = true;
                     break;
             }
         }
@@ -225,14 +230,6 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             estadoComponentes(Estado.Inicial);
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            DBController.eliminarMaquinaria(int.Parse(txtNOrden.Text));
-            MessageBox.Show("Maquinaria Eliminada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            limpiarComponentes();
-            estadoObj = Estado.Inicial;
-            estadoComponentes(Estado.Inicial);
-        }
 
         
     }

@@ -50,7 +50,6 @@
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -260,7 +259,6 @@
             this.btnModificar,
             this.btnGuardar,
             this.btnBuscar,
-            this.btnEliminar,
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(166, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -307,16 +305,6 @@
             this.btnBuscar.Size = new System.Drawing.Size(88, 32);
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(102, 32);
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCancelar
             // 
@@ -389,7 +377,6 @@
         private System.Windows.Forms.ToolStripButton btnGuardar;
         private System.Windows.Forms.ToolStripButton btnBuscar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.RadioButton rbActivo;
         private System.Windows.Forms.Label lblEstado;
