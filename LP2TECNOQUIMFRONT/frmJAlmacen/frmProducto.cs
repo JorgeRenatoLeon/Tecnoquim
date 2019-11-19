@@ -211,10 +211,16 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             }
             else if (estadoObj == Estado.Modificar)
             {
+                producto = new Service.producto();
+                producto.idProducto = int.Parse(txtidprod.Text);
                 producto.nombre = txtNomProd.Text;
                 producto.presentacion = txtPres.Text;
                 producto.granularidad = float.Parse(txtGranu.Text);
-                producto.instructivo.insumos = lineas.ToArray();
+                instructivo = new Service.instructivo();
+                producto.instructivo.id = int.Parse(txtidinst.Text);
+                instructivo.actividades = txtAct.Text;
+                instructivo.insumos = lineas.ToArray();
+                producto.instructivo = instructivo;
 
                 DBController.actualizarProducto(producto);
                 DBController.actualizarInstructivo(producto.instructivo, producto.idProducto);
@@ -338,13 +344,14 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             dgvInsumos.Rows[e.RowIndex].Cells["Granularidad"].Style.ForeColor = System.Drawing.Color.Black;
             dgvInsumos.Rows[e.RowIndex].Cells["Color"].Style.ForeColor = System.Drawing.Color.Black;
             dgvInsumos.Rows[e.RowIndex].Cells["Cantidad"].Style.ForeColor = System.Drawing.Color.Black;
-            dgvInsumos.Rows[e.RowIndex].Cells["Unidad"].Style.ForeColor = System.Drawing.Color.Black;
+            dgvInsumos.Rows[e.RowIndex].Cells["Presentacion"].Style.ForeColor = System.Drawing.Color.Black;
             dgvInsumos.Rows[e.RowIndex].Cells["Restriccion"].Style.ForeColor = System.Drawing.Color.Black;
+
             dgvInsumos.Rows[e.RowIndex].Cells["Nombre"].Value = insumoFila.insumo.nombre;
             dgvInsumos.Rows[e.RowIndex].Cells["Granularidad"].Value = insumoFila.insumo.granularidad.ToString();
             dgvInsumos.Rows[e.RowIndex].Cells["Color"].Value = insumoFila.insumo.color;
-            dgvInsumos.Rows[e.RowIndex].Cells["Cantidad"].Value = insumoFila.insumo.cantidad;
-            dgvInsumos.Rows[e.RowIndex].Cells["Unidad"].Value = insumoFila.insumo.unidad;
+            dgvInsumos.Rows[e.RowIndex].Cells["Cantidad"].Value = insumoFila.cantInsumo.ToString();
+            dgvInsumos.Rows[e.RowIndex].Cells["Presentacion"].Value = insumoFila.insumo.cantidad+" "+ insumoFila.insumo.unidad;
             if (insumoFila.insumo.restriccion)
             {
                 dgvInsumos.Rows[e.RowIndex].Cells["Restriccion"].Value = "Si";

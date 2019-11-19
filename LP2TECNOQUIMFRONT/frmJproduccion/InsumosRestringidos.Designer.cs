@@ -83,9 +83,9 @@
             this.btnReporte.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.document;
-            this.btnReporte.Location = new System.Drawing.Point(0, 328);
+            this.btnReporte.Location = new System.Drawing.Point(0, 337);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(163, 92);
+            this.btnReporte.Size = new System.Drawing.Size(163, 77);
             this.btnReporte.TabIndex = 6;
             this.btnReporte.Text = "Reportes";
             this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -100,7 +100,7 @@
             this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.White;
             this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(0, 184);
+            this.btnPerfil.Location = new System.Drawing.Point(0, 174);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(163, 79);
             this.btnPerfil.TabIndex = 1;
@@ -117,7 +117,7 @@
             this.btnNotificaciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotificaciones.ForeColor = System.Drawing.Color.White;
             this.btnNotificaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificaciones.Image")));
-            this.btnNotificaciones.Location = new System.Drawing.Point(0, 403);
+            this.btnNotificaciones.Location = new System.Drawing.Point(0, 405);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Size = new System.Drawing.Size(163, 92);
             this.btnNotificaciones.TabIndex = 5;
@@ -136,7 +136,7 @@
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(0, 259);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(163, 79);
+            this.button4.Size = new System.Drawing.Size(163, 72);
             this.button4.TabIndex = 1;
             this.button4.Text = "Consultas";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

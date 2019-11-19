@@ -45,12 +45,6 @@
             this.lblAct = new System.Windows.Forms.Label();
             this.txtAct = new System.Windows.Forms.TextBox();
             this.dgvInsumos = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Granularidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Restriccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.lblNomInsumo = new System.Windows.Forms.Label();
             this.txtNomInsumo = new System.Windows.Forms.TextBox();
@@ -69,6 +63,12 @@
             this.btnElimina = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.lblBack = new System.Windows.Forms.LinkLabel();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Presentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Granularidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Restriccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbDatos.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
@@ -93,7 +93,7 @@
             this.txtPres.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.txtPres.Location = new System.Drawing.Point(676, 89);
             this.txtPres.Name = "txtPres";
-            this.txtPres.Size = new System.Drawing.Size(200, 30);
+            this.txtPres.Size = new System.Drawing.Size(139, 30);
             this.txtPres.TabIndex = 38;
             // 
             // txtGranu
@@ -245,10 +245,10 @@
             this.dgvInsumos.ColumnHeadersHeight = 40;
             this.dgvInsumos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
-            this.cantidad,
-            this.Unidad,
+            this.Presentacion,
             this.Granularidad,
             this.Color,
+            this.cantidad,
             this.Restriccion});
             this.dgvInsumos.Location = new System.Drawing.Point(38, 149);
             this.dgvInsumos.Name = "dgvInsumos";
@@ -256,39 +256,6 @@
             this.dgvInsumos.Size = new System.Drawing.Size(838, 140);
             this.dgvInsumos.TabIndex = 70;
             this.dgvInsumos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvInsumos_CellFormatting);
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 200;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            // 
-            // Unidad
-            // 
-            this.Unidad.HeaderText = "Unidad";
-            this.Unidad.Name = "Unidad";
-            // 
-            // Granularidad
-            // 
-            this.Granularidad.HeaderText = "Granularidad";
-            this.Granularidad.Name = "Granularidad";
-            this.Granularidad.Width = 150;
-            // 
-            // Color
-            // 
-            this.Color.HeaderText = "Color";
-            this.Color.Name = "Color";
-            // 
-            // Restriccion
-            // 
-            this.Restriccion.HeaderText = "Restriccion";
-            this.Restriccion.Name = "Restriccion";
-            this.Restriccion.Width = 150;
             // 
             // btnBuscarInsumo
             // 
@@ -506,6 +473,40 @@
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
             // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 150;
+            // 
+            // Presentacion
+            // 
+            this.Presentacion.HeaderText = "Presentacion";
+            this.Presentacion.Name = "Presentacion";
+            this.Presentacion.Width = 150;
+            // 
+            // Granularidad
+            // 
+            this.Granularidad.HeaderText = "Granularidad";
+            this.Granularidad.Name = "Granularidad";
+            this.Granularidad.Width = 150;
+            // 
+            // Color
+            // 
+            this.Color.HeaderText = "Color";
+            this.Color.Name = "Color";
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            // 
+            // Restriccion
+            // 
+            this.Restriccion.HeaderText = "Restriccion";
+            this.Restriccion.Name = "Restriccion";
+            this.Restriccion.Width = 150;
+            // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,12 +553,6 @@
         private System.Windows.Forms.Label lblAct;
         private System.Windows.Forms.TextBox txtAct;
         private System.Windows.Forms.DataGridView dgvInsumos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Granularidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Restriccion;
         private System.Windows.Forms.Button btnBuscarInsumo;
         private System.Windows.Forms.Label lblNomInsumo;
         private System.Windows.Forms.TextBox txtNomInsumo;
@@ -576,5 +571,11 @@
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.LinkLabel lblBack;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Presentacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Granularidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Restriccion;
     }
 }

@@ -66,7 +66,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         {
             saveFileDialog1.ShowDialog();
             byte[] arreglo1 = DBController.generarReporteInsumosRestringidosPDF(
-                cbMesI.SelectedIndex, int.Parse(cbAnioI.SelectedValue.ToString()));
+                cbMesI.SelectedIndex+1, int.Parse(cbAnioI.SelectedValue.ToString()));
             File.WriteAllBytes(saveFileDialog1.FileName+ ".pdf", arreglo1);
         }
 
@@ -74,7 +74,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         {
             saveFileDialog2.ShowDialog();
             byte[] arreglo = DBController.generarReporteProductosRestringidosPDF(
-                cbMesP.SelectedIndex, int.Parse(cbAnioP.SelectedValue.ToString()));
+                cbMesP.SelectedIndex+1, int.Parse(cbAnioP.SelectedValue.ToString()));
             File.WriteAllBytes(saveFileDialog2.FileName+ ".pdf", arreglo);
         }
     }

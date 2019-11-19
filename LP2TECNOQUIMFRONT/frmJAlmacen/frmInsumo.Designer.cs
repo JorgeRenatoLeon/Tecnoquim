@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsumo));
             this.label1 = new System.Windows.Forms.Label();
-            this.txtUnidad = new System.Windows.Forms.TextBox();
             this.lblUnidad = new System.Windows.Forms.Label();
             this.txtColor = new System.Windows.Forms.TextBox();
             this.txtCant = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.lblBack = new System.Windows.Forms.LinkLabel();
+            this.cbUnidades = new System.Windows.Forms.ComboBox();
             this.gbDatos.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,14 +69,6 @@
             this.label1.Size = new System.Drawing.Size(302, 39);
             this.label1.TabIndex = 40;
             this.label1.Text = "Registro de Insumos";
-            // 
-            // txtUnidad
-            // 
-            this.txtUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtUnidad.Location = new System.Drawing.Point(357, 159);
-            this.txtUnidad.Name = "txtUnidad";
-            this.txtUnidad.Size = new System.Drawing.Size(88, 30);
-            this.txtUnidad.TabIndex = 62;
             // 
             // lblUnidad
             // 
@@ -167,6 +159,7 @@
             // 
             // gbDatos
             // 
+            this.gbDatos.Controls.Add(this.cbUnidades);
             this.gbDatos.Controls.Add(this.txtCodigo);
             this.gbDatos.Controls.Add(this.lblCodigo);
             this.gbDatos.Controls.Add(this.rbNo);
@@ -174,7 +167,6 @@
             this.gbDatos.Controls.Add(this.lblRestriccion);
             this.gbDatos.Controls.Add(this.txtNombre);
             this.gbDatos.Controls.Add(this.lblNombre);
-            this.gbDatos.Controls.Add(this.txtUnidad);
             this.gbDatos.Controls.Add(this.lblGranu);
             this.gbDatos.Controls.Add(this.lblUnidad);
             this.gbDatos.Controls.Add(this.lblCant);
@@ -333,6 +325,14 @@
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
             // 
+            // cbUnidades
+            // 
+            this.cbUnidades.FormattingEnabled = true;
+            this.cbUnidades.Location = new System.Drawing.Point(349, 156);
+            this.cbUnidades.Name = "cbUnidades";
+            this.cbUnidades.Size = new System.Drawing.Size(121, 33);
+            this.cbUnidades.TabIndex = 68;
+            // 
             // frmInsumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,7 +357,6 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtUnidad;
         private System.Windows.Forms.Label lblUnidad;
         private System.Windows.Forms.TextBox txtColor;
         private System.Windows.Forms.TextBox txtCant;
@@ -381,5 +380,6 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.LinkLabel lblBack;
+        private System.Windows.Forms.ComboBox cbUnidades;
     }
 }

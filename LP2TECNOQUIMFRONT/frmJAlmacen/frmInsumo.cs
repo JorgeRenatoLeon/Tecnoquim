@@ -22,6 +22,15 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             InitializeComponent();
             insumo = new Service.insumo();
             detalle = new Service.detalleAlmacenInsumo();
+            BindingList<string> unidades = new BindingList<string>();
+            unidades.Add("");
+            unidades.Add("GR");
+            unidades.Add("ML");
+            unidades.Add("KG");
+            unidades.Add("L");
+            cbUnidades.DataSource = unidades;
+            cbUnidades.DisplayMember = cbUnidades.SelectedText;
+            cbUnidades.ValueMember = cbUnidades.SelectedText;
             estadoObj = Estado.Inicial;
             estadoComponentes(Estado.Inicial);
         }
@@ -49,10 +58,11 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     txtNombre.Enabled = false;
                     txtCant.Enabled = false;
                     txtGranu.Enabled = false;
-                    txtUnidad.Enabled = false;
                     txtColor.Enabled = false;
                     rbSi.Enabled = false;
                     rbNo.Enabled = false;
+                    cbUnidades.SelectedText = "";
+                    cbUnidades.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     //Etiquetas
@@ -75,10 +85,11 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     txtNombre.Enabled = true;
                     txtCant.Enabled = true;
                     txtGranu.Enabled = true;
-                    txtUnidad.Enabled = true;
                     txtColor.Enabled = true;
                     rbSi.Enabled = true;
                     rbNo.Enabled = true;
+                    cbUnidades.SelectedText = "";
+                    cbUnidades.Enabled = true;
                     break;
                 case Estado.Buscar:
                     //Botones
@@ -108,10 +119,10 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     txtNombre.Enabled = true;
                     txtCant.Enabled = true;
                     txtGranu.Enabled = true;
-                    txtUnidad.Enabled = true;
                     txtColor.Enabled = true;
                     rbSi.Enabled = true;
                     rbNo.Enabled = true;
+                    cbUnidades.Enabled = true;
                     break;
             }
         }
@@ -122,10 +133,10 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             txtNombre.Text = "";
             txtCant.Text = "";
             txtGranu.Text = "";
-            txtUnidad.Text = "";
             txtColor.Text = "";
             rbSi.Checked = false;
             rbNo.Checked = false;
+            cbUnidades.SelectedText = " ";
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -148,7 +159,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             insumo = new Service.insumo();
             insumo.nombre = txtNombre.Text;
             insumo.cantidad = int.Parse(txtCant.Text);
-            insumo.unidad = txtUnidad.Text;
+            insumo.unidad = cbUnidades.SelectedItem.ToString();
             insumo.granularidad = float.Parse(txtGranu.Text);
             insumo.color = txtColor.Text;
 
@@ -188,7 +199,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 txtCodigo.Text = insumo.id.ToString();
                 txtNombre.Text = insumo.nombre;
                 txtCant.Text = insumo.cantidad.ToString();
-                txtUnidad.Text = insumo.unidad.ToString();
+                cbUnidades.SelectedText= insumo.unidad;
                 txtGranu.Text = insumo.granularidad.ToString();
                 txtColor.Text = insumo.color;
                 if (insumo.restriccion)

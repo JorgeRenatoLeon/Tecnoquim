@@ -26,7 +26,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             }
             else
             {
-                dgvMaquinaria.DataSource = DBController.listarDetalleMaquinariaTodos("");
+               // dgvMaquinaria.DataSource = DBController.listarDetalleMaquinariaTodos("");
             }
         }
 
