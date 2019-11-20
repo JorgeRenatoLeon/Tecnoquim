@@ -83,7 +83,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             }
             else
             {
-                proyeccionVenta = pvs[0];
+                proyeccionVenta = pvs[pvs.Length - 1];
                 frmGestionarProyeccionVenta formRegistro = new frmGestionarProyeccionVenta(proyeccionVenta,true);
                 formRegistro.Visible = true;
             }

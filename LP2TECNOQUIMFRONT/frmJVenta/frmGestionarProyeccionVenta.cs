@@ -24,7 +24,8 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             proyeccionVenta = thispv;
             estadoObj = Estado.Inicial;
             txtNOrden.Text = proyeccionVenta.id.ToString();
-            txtPeriodo.Text = proyeccionVenta.periodo.ToString("MMMM, yyyy");
+            txtPeriodo.Text = proyeccionVenta.periodo.AddHours(5).ToString("MMMM, yyyy");
+            proyeccionVenta.proyecciones = DBController.listarLineaProyeccion(proyeccionVenta.id);
             if (proyeccionVenta.proyecciones != null)
             {
                 lineas = new BindingList<Service.lineaProyeccion>(proyeccionVenta.proyecciones.ToList());
@@ -34,7 +35,9 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
                 lineas = new BindingList<Service.lineaProyeccion>();
             }
             dgvProductos.AutoGenerateColumns = false;
-            dgvProductos.DataSource = lineas;
+            dgvProductos.DataSource = lineas; gbDatosP.Enabled = false;
+            gbDatosP.Enabled = true;
+
             if (!save)
             {
                 gbDatosP.Enabled = false;
