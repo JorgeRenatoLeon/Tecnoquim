@@ -324,7 +324,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(319, 866);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(112, 44);
+            this.btnGuardar.Size = new System.Drawing.Size(156, 44);
             this.btnGuardar.TabIndex = 43;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;

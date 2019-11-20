@@ -71,6 +71,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             if (detMaquinarias != null)
             {
                 dgvMaquinaria.DataSource = detMaquinarias;
+                PMP.maquinarias = detMaquinarias.ToArray();
             }
             txtNOrden.Text = PMP.id.ToString();
             Service.ordenProduccion[] lo = DBController.listarOrdenesProduccionPlan(PMP.id);

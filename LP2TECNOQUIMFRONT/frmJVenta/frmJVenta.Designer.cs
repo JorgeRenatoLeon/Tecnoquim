@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJVenta));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnPMS = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
-            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -54,8 +54,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 512);
+            this.panel1.Size = new System.Drawing.Size(166, 498);
             this.panel1.TabIndex = 4;
+            // 
+            // lblCantNotificaciones
+            // 
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(116, 290);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 17;
+            this.lblCantNotificaciones.Text = "1";
             // 
             // btnPerfil
             // 
@@ -139,9 +149,9 @@
             this.btnPMS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPMS.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPMS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnPMS.Location = new System.Drawing.Point(402, 189);
+            this.btnPMS.Location = new System.Drawing.Point(334, 177);
             this.btnPMS.Name = "btnPMS";
-            this.btnPMS.Size = new System.Drawing.Size(403, 65);
+            this.btnPMS.Size = new System.Drawing.Size(329, 65);
             this.btnPMS.TabIndex = 12;
             this.btnPMS.Text = "Gestionar Proyección Venta Actual";
             this.btnPMS.UseVisualStyleBackColor = false;
@@ -156,23 +166,13 @@
             this.btnHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHistorial.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnHistorial.Location = new System.Drawing.Point(402, 290);
+            this.btnHistorial.Location = new System.Drawing.Point(334, 278);
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(403, 65);
+            this.btnHistorial.Size = new System.Drawing.Size(329, 65);
             this.btnHistorial.TabIndex = 16;
             this.btnHistorial.Text = "Ver historial";
             this.btnHistorial.UseVisualStyleBackColor = false;
             this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
-            // 
-            // lblCantNotificaciones
-            // 
-            this.lblCantNotificaciones.AutoSize = true;
-            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
-            this.lblCantNotificaciones.Location = new System.Drawing.Point(116, 290);
-            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
-            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
-            this.lblCantNotificaciones.TabIndex = 17;
-            this.lblCantNotificaciones.Text = "1";
             // 
             // frmJVenta
             // 
@@ -180,7 +180,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.background_11_wide;
-            this.ClientSize = new System.Drawing.Size(1087, 512);
+            this.ClientSize = new System.Drawing.Size(857, 498);
             this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.btnPMS);
             this.Controls.Add(this.panel1);

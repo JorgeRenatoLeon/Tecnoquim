@@ -36,25 +36,6 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             if (close == 0) { Environment.Exit(0); }
         }
 
-
-        private void btnHome_Click_1(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmGerente formGerente = new frmGerente(1,this.trabajador);
-            formGerente.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
-        private void btnNotificaciones_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmNotificaciones formNot = new frmNotificaciones(this.trabajador);
-            formNot.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
         private void lblBack_MouseClick(object sender, MouseEventArgs e)
         {
             this.Visible = false;
@@ -73,5 +54,39 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             DBController.actualizarTrabajador(trabajador);
             MessageBox.Show("Perfil Actualizado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmGerente formGerente = new frmGerente(1, this.trabajador);
+            formGerente.Visible = true;
+            close = 1;
+            this.Close();
+
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmResumen formNot = new frmResumen(this.trabajador);
+            formNot.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void btnNotificaciones_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmNotificaciones formNot = new frmNotificaciones(this.trabajador);
+            formNot.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
     }
 }

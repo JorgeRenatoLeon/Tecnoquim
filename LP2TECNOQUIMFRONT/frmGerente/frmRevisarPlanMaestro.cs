@@ -116,6 +116,10 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         }
         private void calOrdenProduccion_DateChanged(object sender, DateRangeEventArgs e)
         {
+            if (calOrdenProduccion.SelectionRange.Start.Month != pmp.periodo.AddHours(5).Month)
+            {
+                calOrdenProduccion.SetDate(new DateTime(pmp.periodo.AddHours(5).Year, pmp.periodo.AddHours(5).Month, 1));
+            }
             setOrden();
         }
 

@@ -39,14 +39,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblBack = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.lblBack = new System.Windows.Forms.LinkLabel();
-            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -60,9 +61,9 @@
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnGuardar.Location = new System.Drawing.Point(458, 415);
+            this.btnGuardar.Location = new System.Drawing.Point(351, 396);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(211, 42);
+            this.btnGuardar.Size = new System.Drawing.Size(169, 42);
             this.btnGuardar.TabIndex = 60;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -71,44 +72,45 @@
             // txtDNI
             // 
             this.txtDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtDNI.Location = new System.Drawing.Point(486, 146);
+            this.txtDNI.Location = new System.Drawing.Point(351, 133);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.ReadOnly = true;
-            this.txtDNI.Size = new System.Drawing.Size(328, 30);
+            this.txtDNI.Size = new System.Drawing.Size(424, 30);
             this.txtDNI.TabIndex = 59;
             // 
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtCorreo.Location = new System.Drawing.Point(486, 332);
+            this.txtCorreo.Location = new System.Drawing.Point(351, 319);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(328, 30);
+            this.txtCorreo.Size = new System.Drawing.Size(424, 30);
             this.txtCorreo.TabIndex = 58;
             // 
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtApellido.Location = new System.Drawing.Point(486, 268);
+            this.txtApellido.Location = new System.Drawing.Point(351, 255);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.ReadOnly = true;
-            this.txtApellido.Size = new System.Drawing.Size(328, 30);
+            this.txtApellido.Size = new System.Drawing.Size(424, 30);
             this.txtApellido.TabIndex = 57;
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtNombre.Location = new System.Drawing.Point(486, 208);
+            this.txtNombre.Location = new System.Drawing.Point(351, 195);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
-            this.txtNombre.Size = new System.Drawing.Size(328, 30);
+            this.txtNombre.Size = new System.Drawing.Size(424, 30);
             this.txtNombre.TabIndex = 56;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(334, 151);
+            this.label5.Location = new System.Drawing.Point(199, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 25);
             this.label5.TabIndex = 55;
@@ -117,9 +119,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(334, 332);
+            this.label4.Location = new System.Drawing.Point(199, 319);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 25);
             this.label4.TabIndex = 54;
@@ -128,9 +131,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(334, 271);
+            this.label3.Location = new System.Drawing.Point(199, 258);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 25);
             this.label3.TabIndex = 53;
@@ -139,9 +143,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(334, 213);
+            this.label2.Location = new System.Drawing.Point(199, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 25);
             this.label2.TabIndex = 52;
@@ -151,18 +156,35 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(417, 47);
+            this.label1.Location = new System.Drawing.Point(344, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(477, 39);
+            this.label1.Size = new System.Drawing.Size(346, 39);
             this.label1.TabIndex = 51;
             this.label1.Text = "Datos personales";
+            // 
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.BackColor = System.Drawing.Color.Transparent;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.LinkColor = System.Drawing.Color.AliceBlue;
+            this.lblBack.Location = new System.Drawing.Point(732, 31);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(95, 17);
+            this.lblBack.TabIndex = 70;
+            this.lblBack.TabStop = true;
+            this.lblBack.Text = "Cerrar Sesión";
+            this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
+            this.lblBack.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblBack_MouseClick);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
             this.panel1.Controls.Add(this.lblCantNotificaciones);
+            this.panel1.Controls.Add(this.btnReporte);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.btnNotificaciones);
@@ -170,8 +192,36 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 511);
-            this.panel1.TabIndex = 61;
+            this.panel1.Size = new System.Drawing.Size(166, 498);
+            this.panel1.TabIndex = 71;
+            // 
+            // lblCantNotificaciones
+            // 
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(117, 376);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 19;
+            this.lblCantNotificaciones.Text = "1";
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReporte.FlatAppearance.BorderSize = 0;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.ForeColor = System.Drawing.Color.White;
+            this.btnReporte.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.document;
+            this.btnReporte.Location = new System.Drawing.Point(0, 271);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(163, 92);
+            this.btnReporte.TabIndex = 8;
+            this.btnReporte.Text = "Reportes";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnHome
             // 
@@ -189,7 +239,7 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click_1);
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnPerfil
             // 
@@ -207,6 +257,7 @@
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnNotificaciones
             // 
@@ -216,7 +267,7 @@
             this.btnNotificaciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotificaciones.ForeColor = System.Drawing.Color.White;
             this.btnNotificaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificaciones.Image")));
-            this.btnNotificaciones.Location = new System.Drawing.Point(0, 271);
+            this.btnNotificaciones.Location = new System.Drawing.Point(0, 357);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Size = new System.Drawing.Size(163, 92);
             this.btnNotificaciones.TabIndex = 5;
@@ -224,7 +275,7 @@
             this.btnNotificaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNotificaciones.UseVisualStyleBackColor = true;
-            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
+            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click_1);
             // 
             // panel3
             // 
@@ -245,38 +296,15 @@
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
-            // lblBack
-            // 
-            this.lblBack.AutoSize = true;
-            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBack.LinkColor = System.Drawing.Color.AliceBlue;
-            this.lblBack.Location = new System.Drawing.Point(905, 23);
-            this.lblBack.Name = "lblBack";
-            this.lblBack.Size = new System.Drawing.Size(95, 17);
-            this.lblBack.TabIndex = 70;
-            this.lblBack.TabStop = true;
-            this.lblBack.Text = "Cerrar Sesión";
-            this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
-            this.lblBack.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblBack_MouseClick);
-            // 
-            // lblCantNotificaciones
-            // 
-            this.lblCantNotificaciones.AutoSize = true;
-            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
-            this.lblCantNotificaciones.Location = new System.Drawing.Point(119, 285);
-            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
-            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
-            this.lblCantNotificaciones.TabIndex = 71;
-            this.lblCantNotificaciones.Text = "1";
-            // 
             // frmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(1084, 511);
-            this.Controls.Add(this.lblBack);
+            this.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.background_11_wide;
+            this.ClientSize = new System.Drawing.Size(857, 498);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblBack);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.txtCorreo);
@@ -313,13 +341,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel lblBack;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblCantNotificaciones;
+        private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnNotificaciones;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.LinkLabel lblBack;
-        private System.Windows.Forms.Label lblCantNotificaciones;
     }
 }

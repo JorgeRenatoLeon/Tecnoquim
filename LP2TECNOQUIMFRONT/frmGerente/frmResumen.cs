@@ -85,7 +85,11 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            frmResumen formRes = new frmResumen(this.trabajador);
+            formRes.Visible = true;
+            close = 1;
+            this.Close();
         }
 
         private void btnGenRepI_Click(object sender, EventArgs e)

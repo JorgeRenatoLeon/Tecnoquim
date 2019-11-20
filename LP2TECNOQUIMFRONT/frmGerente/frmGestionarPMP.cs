@@ -44,33 +44,6 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             }
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmGerente frmHome = new frmGerente(1, this.trabajador);
-            frmHome.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmPerfil formPerfil = new frmPerfil(this.trabajador);
-            formPerfil.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
-        private void btnNotificaciones_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmNotificaciones formNot = new frmNotificaciones(trabajador);
-            formNot.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
         private void btnRevisarPMP_Click(object sender, EventArgs e)
         {
             Service.planMaestroProduccion[] pmps = DBController.listarPMPEstado(2);
@@ -95,6 +68,44 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         private void frmGestionarPMP_FormClosed_1(object sender, FormClosedEventArgs e)
         {
             if (close == 0) { Environment.Exit(0); }
+        }
+
+        private void btnHome_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmGerente frmHome = new frmGerente(1, this.trabajador);
+            frmHome.Visible = true;
+            close = 1;
+            this.Close();
+
+        }
+
+        private void btnPerfil_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmPerfil formPerfil = new frmPerfil(this.trabajador);
+            formPerfil.Visible = true;
+            close = 1;
+            this.Close();
+
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmResumen formNot = new frmResumen(this.trabajador);
+            formNot.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void btnNotificaciones_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmNotificaciones formNot = new frmNotificaciones(trabajador);
+            formNot.Visible = true;
+            close = 1;
+            this.Close();
         }
     }
 }

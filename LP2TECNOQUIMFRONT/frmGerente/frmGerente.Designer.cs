@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGerente));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnPMS = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -56,8 +56,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 511);
+            this.panel1.Size = new System.Drawing.Size(166, 498);
             this.panel1.TabIndex = 6;
+            // 
+            // lblCantNotificaciones
+            // 
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(109, 366);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 13;
+            this.lblCantNotificaciones.Text = "1";
             // 
             // btnReporte
             // 
@@ -159,9 +169,9 @@
             this.btnPMS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPMS.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPMS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnPMS.Location = new System.Drawing.Point(410, 186);
+            this.btnPMS.Location = new System.Drawing.Point(351, 186);
             this.btnPMS.Name = "btnPMS";
-            this.btnPMS.Size = new System.Drawing.Size(403, 65);
+            this.btnPMS.Size = new System.Drawing.Size(303, 65);
             this.btnPMS.TabIndex = 11;
             this.btnPMS.Text = "Gestionar Plan Maestro de Produccion";
             this.btnPMS.UseVisualStyleBackColor = false;
@@ -176,23 +186,13 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.button1.Location = new System.Drawing.Point(410, 284);
+            this.button1.Location = new System.Drawing.Point(351, 284);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(403, 65);
+            this.button1.Size = new System.Drawing.Size(303, 65);
             this.button1.TabIndex = 12;
             this.button1.Text = "Gestionar Empleados";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lblCantNotificaciones
-            // 
-            this.lblCantNotificaciones.AutoSize = true;
-            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
-            this.lblCantNotificaciones.Location = new System.Drawing.Point(109, 366);
-            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
-            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
-            this.lblCantNotificaciones.TabIndex = 13;
-            this.lblCantNotificaciones.Text = "1";
             // 
             // frmGerente
             // 
@@ -200,7 +200,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.background_11_wide;
-            this.ClientSize = new System.Drawing.Size(1084, 511);
+            this.ClientSize = new System.Drawing.Size(857, 498);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnPMS);
             this.Controls.Add(this.panel1);

@@ -40,24 +40,6 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             if (close == 0) { Environment.Exit(0); }
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmGerente formHome = new frmGerente(1,this.trabajador);
-            formHome.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmPerfil formPerfil = new frmPerfil(this.trabajador);
-            formPerfil.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
         private void dgvNotificaciones_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             Service.mensaje ppFila = (Service.mensaje)dgvNotificaciones.Rows[e.RowIndex].DataBoundItem;
@@ -81,6 +63,33 @@ namespace LP2TECNOQUIMFRONT.frmGerente
                 this.Close();
             }
 
+        }
+
+        private void btnHome_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmGerente formHome = new frmGerente(1, this.trabajador);
+            formHome.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void btnPerfil_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmPerfil formPerfil = new frmPerfil(this.trabajador);
+            formPerfil.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmResumen formRes = new frmResumen(this.trabajador);
+            formRes.Visible = true;
+            close = 1;
+            this.Close();
         }
     }
 }
