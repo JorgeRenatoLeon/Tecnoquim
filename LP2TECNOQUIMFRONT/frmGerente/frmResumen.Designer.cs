@@ -1,6 +1,6 @@
 ﻿namespace LP2TECNOQUIMFRONT.frmGerente
 {
-    partial class frmGerente
+    partial class frmResumen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGerente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmResumen));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -36,11 +36,17 @@
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.btnPMS = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGenRepI = new System.Windows.Forms.Button();
+            this.cbAnioI = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbMesI = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -54,8 +60,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 511);
-            this.panel1.TabIndex = 6;
+            this.panel1.Size = new System.Drawing.Size(166, 498);
+            this.panel1.TabIndex = 7;
             // 
             // btnReporte
             // 
@@ -109,7 +115,7 @@
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnPerfil.UseVisualStyleBackColor = true;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click_1);
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnNotificaciones
             // 
@@ -148,70 +154,121 @@
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
-            // btnPMS
+            // label1
             // 
-            this.btnPMS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPMS.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnPMS.BackColor = System.Drawing.Color.White;
-            this.btnPMS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPMS.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPMS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnPMS.Location = new System.Drawing.Point(410, 186);
-            this.btnPMS.Name = "btnPMS";
-            this.btnPMS.Size = new System.Drawing.Size(403, 65);
-            this.btnPMS.TabIndex = 11;
-            this.btnPMS.Text = "Gestionar Plan Maestro de Produccion";
-            this.btnPMS.UseVisualStyleBackColor = false;
-            this.btnPMS.Click += new System.EventHandler(this.btnPMS_Click);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(191, 37);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(463, 39);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Plan Maestro Produccion";
             // 
-            // button1
+            // groupBox1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.button1.Location = new System.Drawing.Point(410, 284);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(403, 65);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Gestionar Empleados";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnGenRepI);
+            this.groupBox1.Controls.Add(this.cbAnioI);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.cbMesI);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(198, 101);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(617, 104);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Periodo";
             // 
-            // frmGerente
+            // btnGenRepI
+            // 
+            this.btnGenRepI.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
+            this.btnGenRepI.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenRepI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnGenRepI.Location = new System.Drawing.Point(432, 43);
+            this.btnGenRepI.Name = "btnGenRepI";
+            this.btnGenRepI.Size = new System.Drawing.Size(161, 32);
+            this.btnGenRepI.TabIndex = 43;
+            this.btnGenRepI.Text = "Generar Reporte";
+            this.btnGenRepI.UseVisualStyleBackColor = true;
+            this.btnGenRepI.Click += new System.EventHandler(this.btnGenRepI_Click);
+            // 
+            // cbAnioI
+            // 
+            this.cbAnioI.FormattingEnabled = true;
+            this.cbAnioI.Location = new System.Drawing.Point(324, 43);
+            this.cbAnioI.Name = "cbAnioI";
+            this.cbAnioI.Size = new System.Drawing.Size(93, 32);
+            this.cbAnioI.TabIndex = 42;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 24);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Mes:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(268, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 24);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Año:";
+            // 
+            // cbMesI
+            // 
+            this.cbMesI.FormattingEnabled = true;
+            this.cbMesI.Location = new System.Drawing.Point(69, 43);
+            this.cbMesI.Name = "cbMesI";
+            this.cbMesI.Size = new System.Drawing.Size(176, 32);
+            this.cbMesI.TabIndex = 41;
+            // 
+            // frmResumen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.background_11_wide;
-            this.ClientSize = new System.Drawing.Size(1084, 511);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnPMS);
+            this.ClientSize = new System.Drawing.Size(857, 498);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Name = "frmGerente";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "8";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmGerente_FormClosed);
+            this.Name = "frmResumen";
+            this.Text = "frmResumen";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnNotificaciones;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.Button btnPMS;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnGenRepI;
+        private System.Windows.Forms.ComboBox cbAnioI;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbMesI;
     }
 }

@@ -31,9 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvListaOrden = new System.Windows.Forms.DataGridView();
             this.btnBuscarInsumo = new System.Windows.Forms.Button();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Insumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Periodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaOrden)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,14 +53,16 @@
             // 
             this.dgvListaOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaOrden.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
             this.Insumo,
-            this.Cantidad});
+            this.Lote,
+            this.Stock,
+            this.Periodo});
             this.dgvListaOrden.Location = new System.Drawing.Point(39, 100);
             this.dgvListaOrden.Name = "dgvListaOrden";
             this.dgvListaOrden.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaOrden.Size = new System.Drawing.Size(582, 275);
             this.dgvListaOrden.TabIndex = 81;
+            this.dgvListaOrden.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvListaOrden_CellFormatting);
             // 
             // btnBuscarInsumo
             // 
@@ -75,22 +78,27 @@
             this.btnBuscarInsumo.TabIndex = 83;
             this.btnBuscarInsumo.Text = "Seleccionar";
             this.btnBuscarInsumo.UseVisualStyleBackColor = false;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
+            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
             // 
             // Insumo
             // 
             this.Insumo.HeaderText = "Insumo";
             this.Insumo.Name = "Insumo";
             // 
-            // Cantidad
+            // Lote
             // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 150;
+            this.Lote.HeaderText = "Lote";
+            this.Lote.Name = "Lote";
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            // 
+            // Periodo
+            // 
+            this.Periodo.HeaderText = "Periodo";
+            this.Periodo.Name = "Periodo";
             // 
             // frmListaInsumo
             // 
@@ -112,9 +120,10 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvListaOrden;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Insumo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.Button btnBuscarInsumo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Insumo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Periodo;
     }
 }

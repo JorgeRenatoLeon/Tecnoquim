@@ -87,5 +87,22 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         {
             if (close == 0) { Environment.Exit(0); }
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            frmReportes formReportes = new frmReportes();
+            formReportes.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void btnConsultas_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmConsultas formConsultas = new frmConsultas(this.trabajador);
+            formConsultas.Visible = true;
+            close = 1;
+            this.Close();
+        }
     }
 }

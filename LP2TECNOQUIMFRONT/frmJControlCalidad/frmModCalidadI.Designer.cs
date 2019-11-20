@@ -34,13 +34,15 @@
             this.btnProductos = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBuscarInsumo = new System.Windows.Forms.Button();
-            this.txtidprod = new System.Windows.Forms.TextBox();
+            this.txtid = new System.Windows.Forms.TextBox();
             this.lblidProd = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPresentacion = new System.Windows.Forms.Label();
-            this.txtNomProd = new System.Windows.Forms.TextBox();
-            this.txtPres = new System.Windows.Forms.TextBox();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.txtStock = new System.Windows.Forms.TextBox();
             this.lblBack = new System.Windows.Forms.LinkLabel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtLote = new System.Windows.Forms.TextBox();
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,16 +60,18 @@
             // 
             // gbDatos
             // 
+            this.gbDatos.Controls.Add(this.label3);
+            this.gbDatos.Controls.Add(this.txtLote);
             this.gbDatos.Controls.Add(this.cbRol);
             this.gbDatos.Controls.Add(this.btnProductos);
             this.gbDatos.Controls.Add(this.label2);
             this.gbDatos.Controls.Add(this.btnBuscarInsumo);
-            this.gbDatos.Controls.Add(this.txtidprod);
+            this.gbDatos.Controls.Add(this.txtid);
             this.gbDatos.Controls.Add(this.lblidProd);
             this.gbDatos.Controls.Add(this.lblNombre);
             this.gbDatos.Controls.Add(this.lblPresentacion);
-            this.gbDatos.Controls.Add(this.txtNomProd);
-            this.gbDatos.Controls.Add(this.txtPres);
+            this.gbDatos.Controls.Add(this.txtNom);
+            this.gbDatos.Controls.Add(this.txtStock);
             this.gbDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbDatos.Location = new System.Drawing.Point(41, 132);
@@ -80,7 +84,7 @@
             // cbRol
             // 
             this.cbRol.FormattingEnabled = true;
-            this.cbRol.Location = new System.Drawing.Point(180, 154);
+            this.cbRol.Location = new System.Drawing.Point(145, 154);
             this.cbRol.Name = "cbRol";
             this.cbRol.Size = new System.Drawing.Size(482, 33);
             this.cbRol.TabIndex = 82;
@@ -99,7 +103,6 @@
             this.btnProductos.TabIndex = 81;
             this.btnProductos.Text = "Guardar";
             this.btnProductos.UseVisualStyleBackColor = false;
-            
             // 
             // label2
             // 
@@ -128,15 +131,15 @@
             this.btnBuscarInsumo.UseVisualStyleBackColor = false;
             this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
             // 
-            // txtidprod
+            // txtid
             // 
-            this.txtidprod.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.txtidprod.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtidprod.Location = new System.Drawing.Point(196, 41);
-            this.txtidprod.Name = "txtidprod";
-            this.txtidprod.ReadOnly = true;
-            this.txtidprod.Size = new System.Drawing.Size(157, 30);
-            this.txtidprod.TabIndex = 77;
+            this.txtid.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtid.Location = new System.Drawing.Point(196, 41);
+            this.txtid.Name = "txtid";
+            this.txtid.ReadOnly = true;
+            this.txtid.Size = new System.Drawing.Size(157, 30);
+            this.txtid.TabIndex = 77;
             // 
             // lblidProd
             // 
@@ -165,29 +168,29 @@
             this.lblPresentacion.AutoSize = true;
             this.lblPresentacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPresentacion.ForeColor = System.Drawing.Color.White;
-            this.lblPresentacion.Location = new System.Drawing.Point(547, 100);
+            this.lblPresentacion.Location = new System.Drawing.Point(495, 100);
             this.lblPresentacion.Name = "lblPresentacion";
-            this.lblPresentacion.Size = new System.Drawing.Size(97, 25);
+            this.lblPresentacion.Size = new System.Drawing.Size(68, 25);
             this.lblPresentacion.TabIndex = 34;
-            this.lblPresentacion.Text = "Cantidad:";
+            this.lblPresentacion.Text = "Stock:";
             // 
-            // txtNomProd
+            // txtNom
             // 
-            this.txtNomProd.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.txtNomProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtNomProd.Location = new System.Drawing.Point(180, 97);
-            this.txtNomProd.Name = "txtNomProd";
-            this.txtNomProd.Size = new System.Drawing.Size(313, 30);
-            this.txtNomProd.TabIndex = 35;
+            this.txtNom.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtNom.Location = new System.Drawing.Point(145, 97);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(313, 30);
+            this.txtNom.TabIndex = 35;
             // 
-            // txtPres
+            // txtStock
             // 
-            this.txtPres.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.txtPres.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtPres.Location = new System.Drawing.Point(676, 97);
-            this.txtPres.Name = "txtPres";
-            this.txtPres.Size = new System.Drawing.Size(200, 30);
-            this.txtPres.TabIndex = 38;
+            this.txtStock.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtStock.Location = new System.Drawing.Point(569, 100);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(99, 30);
+            this.txtStock.TabIndex = 38;
             // 
             // lblBack
             // 
@@ -202,6 +205,26 @@
             this.lblBack.Text = "< Regresar";
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(706, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 25);
+            this.label3.TabIndex = 83;
+            this.label3.Text = "Lote:";
+            // 
+            // txtLote
+            // 
+            this.txtLote.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txtLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtLote.Location = new System.Drawing.Point(780, 100);
+            this.txtLote.Name = "txtLote";
+            this.txtLote.Size = new System.Drawing.Size(99, 30);
+            this.txtLote.TabIndex = 84;
             // 
             // frmModCalidadI
             // 
@@ -226,15 +249,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbDatos;
         private System.Windows.Forms.Button btnBuscarInsumo;
-        private System.Windows.Forms.TextBox txtidprod;
+        private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Label lblidProd;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblPresentacion;
-        private System.Windows.Forms.TextBox txtNomProd;
-        private System.Windows.Forms.TextBox txtPres;
+        private System.Windows.Forms.TextBox txtNom;
+        private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.LinkLabel lblBack;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.ComboBox cbRol;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtLote;
     }
 }

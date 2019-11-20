@@ -26,7 +26,8 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             ProyeccionSeleccionada = (Service.proyeccionVenta)dgvProyeccion.CurrentRow.DataBoundItem;
-            this.DialogResult = DialogResult.OK;
+            frmGestionarProyeccionVenta frmPv = new frmGestionarProyeccionVenta(ProyeccionSeleccionada, false);
+            frmPv.Visible = true;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

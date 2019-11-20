@@ -81,5 +81,18 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             frmGestionarEmpleado frmGestionarEmpleado = new frmGestionarEmpleado();
             frmGestionarEmpleado.Visible = true;
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            frmResumen formRes = new frmResumen();
+            formRes.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

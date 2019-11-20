@@ -36,6 +36,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnPMS = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -136,13 +137,30 @@
             this.btnPMS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPMS.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPMS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnPMS.Location = new System.Drawing.Point(407, 210);
+            this.btnPMS.Location = new System.Drawing.Point(402, 189);
             this.btnPMS.Name = "btnPMS";
             this.btnPMS.Size = new System.Drawing.Size(403, 65);
             this.btnPMS.TabIndex = 12;
-            this.btnPMS.Text = "Gestionar Proyecciones Venta";
+            this.btnPMS.Text = "Gestionar Proyección Venta Actual";
             this.btnPMS.UseVisualStyleBackColor = false;
             this.btnPMS.Click += new System.EventHandler(this.btnPMS_Click);
+            // 
+            // btnHistorial
+            // 
+            this.btnHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHistorial.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnHistorial.BackColor = System.Drawing.Color.White;
+            this.btnHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHistorial.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnHistorial.Location = new System.Drawing.Point(402, 290);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(403, 65);
+            this.btnHistorial.TabIndex = 16;
+            this.btnHistorial.Text = "Ver historial";
+            this.btnHistorial.UseVisualStyleBackColor = false;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
             // frmJVenta
             // 
@@ -151,6 +169,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.background_11_wide;
             this.ClientSize = new System.Drawing.Size(1087, 512);
+            this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.btnPMS);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -174,5 +193,6 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Button btnPMS;
         private System.Windows.Forms.Button btnPerfil;
+        private System.Windows.Forms.Button btnHistorial;
     }
 }

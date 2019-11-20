@@ -15,6 +15,9 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
     public partial class frmJVenta : Form
     {
         Service.trabajador trabajador = new Service.trabajador();
+        Service.ServicioClient DBController = new Service.ServicioClient();
+        Service.proyeccionVenta proyeccionVenta = new Service.proyeccionVenta();
+
         int close = 0;
         public frmJVenta(int cont=0, Service.trabajador trabajadors = null)
         {
@@ -73,8 +76,23 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 
         private void btnPMS_Click(object sender, EventArgs e)
         {
-            frmGestionarProyeccionVenta formRegistro = new frmGestionarProyeccionVenta();
-            formRegistro.Visible = true;
+            Service.proyeccionVenta[] pvs = DBController.listarProyeccionVenta("");
+            if (pvs == null)
+            {
+                MessageBox.Show("No hay planes pendientes.", "Mensaje Confirmacion", MessageBoxButtons.OK);
+            }
+            else
+            {
+                proyeccionVenta = pvs[pvs.Length - 1];
+                frmGestionarProyeccionVenta formRegistro = new frmGestionarProyeccionVenta(proyeccionVenta,true);
+                formRegistro.Visible = true;
+            }
+        }
+
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            frmBuscarProyeccionVenta frmBuscarPV = new frmBuscarProyeccionVenta();
+            frmBuscarPV.Visible = true;
         }
     }
 }

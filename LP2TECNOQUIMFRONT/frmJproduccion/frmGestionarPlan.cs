@@ -328,7 +328,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 {
                     DBController.insertarOrdenProduccion(l,PMP.id);
                 }
-                //foreach (maquinaria m in PMP.maquinarias)
+                foreach (detalleMaquinaria m in PMP.maquinarias)
+                {
+                    DBController.insertarDetalleMaquinaria(m, PMP.id);
+                }
                 mensaje.descripcion = "VALIDAR PMP";
                 mensaje.emisor = trabajador;
                 mensaje.fechaEnvio = DateTime.Now;
@@ -355,30 +358,30 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                         DBController.insertarLineaOrden(lo, o.id);
                     }
                 }
-                foreach (ordenProduccion o in PMP.ordenes)
+                foreach (ordenProduccion o in ordenesMod)
                 {
+                    DBController.actualizarOrdenProduccion(o,PMP.id);
                     if (o.lineasOrden != null)
                     {
                         foreach (lineaOrden lo in o.lineasOrden)
                         {
-                            DBController.eliminarLineaOrden(o.id);
                             DBController.insertarLineaOrden(lo, o.id);
                         }
                     }
                 }
 
-                //foreach (detalleMaquinaria m in PMP.maquinarias)
-                //{
-                //    DBController.eliminarDetalleMaquinaria(m.idDetalleM);
-                //    DBController.insertarDetalleMaquinaria(m,PMP.id);
-                //}
-                //if (flagElim == 1)
-                //{
-                //    foreach (Service.detalleMaquinaria l in lineasEliminadas)
-                //    {
-                //        DBController.eliminarDetalleMaquinaria(l.idDetalleM);
-                //    }
-                //}
+                foreach (detalleMaquinaria m in PMP.maquinarias)
+                {
+                    DBController.eliminarDetalleMaquinaria(m.idDetalleM);
+                    DBController.insertarDetalleMaquinaria(m,PMP.id);
+                }
+                if (flagElim == 1)
+                {
+                    foreach (Service.detalleMaquinaria l in lineasEliminadas)
+                    {
+                        DBController.eliminarDetalleMaquinaria(l.idDetalleM);
+                    }
+                }
                 PMP.estado = Service.estado.Pendiente;
                 DBController.actualizarPMP(PMP);
                 mensaje.descripcion = "VALIDAR PMP";
@@ -505,6 +508,13 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     PMP.ordenes = ordenes.ToArray();
                     flagOrden = 0;
                 }
+                else
+                {
+                    if (formOrd.Flag == 1)
+                    {
+                        ordenesMod.Add(ordenSeleccionada);
+                    }
+                }
             }
         }
 
@@ -539,6 +549,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             PMP.maquinarias = detMaquinarias.ToArray();
             dgvMaquinaria.DataSource = detMaquinarias;
         }
+<<<<<<< HEAD
 
         private void dgvOrden_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -550,5 +561,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             frmHistorialPMP form = new frmHistorialPMP();
             form.ShowDialog(this);
         }
+=======
+>>>>>>> d41bf20cc1a21d6b82bb994737970fe4e4a1f130
     }
 }
