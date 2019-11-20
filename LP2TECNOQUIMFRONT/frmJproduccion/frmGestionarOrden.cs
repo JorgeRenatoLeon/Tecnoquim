@@ -54,7 +54,8 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     estadoComponentes(estadoFormulario);
                 }
                 else
-                {
+                { 
+                    Flag = 2;
                     llenarDatos(ordenRecivida);
                     _orderProduccion = ordenRecivida;
                 }
@@ -340,6 +341,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             lineas = lineasAg;
             _orderProduccion.lineasOrden = lineas.ToArray();
             dgvOrdenProduccion.DataSource = lineas;
+            if(Flag == 2)
+            {
+                Flag = 1;
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -359,6 +364,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             }
             lineas = lineasElim;
             dgvOrdenProduccion.DataSource = lineas;
+            if (Flag == 2)
+            {
+                Flag = 1;
+            }
         }
         private void dgvOrden_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {

@@ -583,6 +583,9 @@
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoPorOrdenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -683,6 +686,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenInsumoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoPorOrdenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.insertarDetalleAlmacenProductoResponse.datasource">

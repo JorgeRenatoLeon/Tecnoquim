@@ -328,7 +328,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 {
                     DBController.insertarOrdenProduccion(l,PMP.id);
                 }
-                //foreach (maquinaria m in PMP.maquinarias)
+                foreach (detalleMaquinaria m in PMP.maquinarias)
+                {
+                    DBController.insertarDetalleMaquinaria(m, PMP.id);
+                }
                 mensaje.descripcion = "VALIDAR PMP";
                 mensaje.emisor = trabajador;
                 mensaje.fechaEnvio = DateTime.Now;
@@ -355,13 +358,13 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                         DBController.insertarLineaOrden(lo, o.id);
                     }
                 }
-                foreach (ordenProduccion o in PMP.ordenes)
+                foreach (ordenProduccion o in ordenesMod)
                 {
+                    DBController.actualizarOrdenProduccion(o,PMP.id);
                     if (o.lineasOrden != null)
                     {
                         foreach (lineaOrden lo in o.lineasOrden)
                         {
-                            DBController.eliminarLineaOrden(o.id);
                             DBController.insertarLineaOrden(lo, o.id);
                         }
                     }
@@ -507,7 +510,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 }
                 else
                 {
-
+                    if (formOrd.Flag == 1)
+                    {
+                        ordenesMod.Add(ordenSeleccionada);
+                    }
                 }
             }
         }
