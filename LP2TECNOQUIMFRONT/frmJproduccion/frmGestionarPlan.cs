@@ -367,18 +367,18 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     }
                 }
 
-                //foreach (detalleMaquinaria m in PMP.maquinarias)
-                //{
-                //    DBController.eliminarDetalleMaquinaria(m.idDetalleM);
-                //    DBController.insertarDetalleMaquinaria(m,PMP.id);
-                //}
-                //if (flagElim == 1)
-                //{
-                //    foreach (Service.detalleMaquinaria l in lineasEliminadas)
-                //    {
-                //        DBController.eliminarDetalleMaquinaria(l.idDetalleM);
-                //    }
-                //}
+                foreach (detalleMaquinaria m in PMP.maquinarias)
+                {
+                    DBController.eliminarDetalleMaquinaria(m.idDetalleM);
+                    DBController.insertarDetalleMaquinaria(m,PMP.id);
+                }
+                if (flagElim == 1)
+                {
+                    foreach (Service.detalleMaquinaria l in lineasEliminadas)
+                    {
+                        DBController.eliminarDetalleMaquinaria(l.idDetalleM);
+                    }
+                }
                 PMP.estado = Service.estado.Pendiente;
                 DBController.actualizarPMP(PMP);
                 mensaje.descripcion = "VALIDAR PMP";
@@ -505,6 +505,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     PMP.ordenes = ordenes.ToArray();
                     flagOrden = 0;
                 }
+                else
+                {
+
+                }
             }
         }
 
@@ -538,11 +542,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             detMaquinarias = lineasElim;
             PMP.maquinarias = detMaquinarias.ToArray();
             dgvMaquinaria.DataSource = detMaquinarias;
-        }
-
-        private void dgvOrden_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
