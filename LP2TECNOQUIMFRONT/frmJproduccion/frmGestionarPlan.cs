@@ -549,7 +549,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             PMP.maquinarias = detMaquinarias.ToArray();
             dgvMaquinaria.DataSource = detMaquinarias;
         }
-<<<<<<< HEAD
 
         private void dgvOrden_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -561,7 +560,5 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             frmHistorialPMP form = new frmHistorialPMP();
             form.ShowDialog(this);
         }
-=======
->>>>>>> d41bf20cc1a21d6b82bb994737970fe4e4a1f130
     }
 }

@@ -57,14 +57,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         {
             
             string dato = cbRol.SelectedValue.ToString();
-
-
-<<<<<<< HEAD
-            //maquinaria.id = int.Parse(txtNOrden.Text);
-            lorden.estadoCalidad = (Service.estadoMaterial)cbRol.SelectedValue;
-            //DBController.actualizarLineaOrden(lorden,lorden.idLineaOrden);
             
-=======
 
             if(dato == "Bueno")
             {
@@ -76,7 +69,6 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             }
 
             DBController.actualizarLineaOrden(lorden);
->>>>>>> d41bf20cc1a21d6b82bb994737970fe4e4a1f130
             MessageBox.Show("Producto Verificado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             
         }
