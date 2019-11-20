@@ -79,7 +79,15 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             this.Close();
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnRep_Click(object sender, EventArgs e)
+        {
+            InsumosRestringidos formInsR = new InsumosRestringidos(this.trabajador);
+            formInsR.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             trabajador.dni = txtDNI.Text;
             trabajador.nombres = txtNombre.Text;
@@ -87,14 +95,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             trabajador.correo = txtCorreo.Text;
             DBController.actualizarTrabajador(trabajador);
             MessageBox.Show("Correo cambiado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btnRep_Click(object sender, EventArgs e)
-        {
-            InsumosRestringidos formInsR = new InsumosRestringidos();
-            formInsR.Visible = true;
-            close = 1;
-            this.Close();
         }
     }
 }

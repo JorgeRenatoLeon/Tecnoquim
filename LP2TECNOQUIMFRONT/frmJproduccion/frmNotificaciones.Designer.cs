@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNombre = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.RolEmisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -54,6 +54,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.lblNombre.Location = new System.Drawing.Point(199, 20);
@@ -75,8 +76,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 502);
+            this.panel1.Size = new System.Drawing.Size(166, 511);
             this.panel1.TabIndex = 34;
+            // 
+            // lblCantNotificaciones
+            // 
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(111, 430);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 35;
+            this.lblCantNotificaciones.Text = "1";
             // 
             // btnReporte
             // 
@@ -208,7 +219,7 @@
             this.dgvNotificaciones.Name = "dgvNotificaciones";
             this.dgvNotificaciones.ReadOnly = true;
             this.dgvNotificaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNotificaciones.Size = new System.Drawing.Size(843, 398);
+            this.dgvNotificaciones.Size = new System.Drawing.Size(840, 398);
             this.dgvNotificaciones.TabIndex = 31;
             this.dgvNotificaciones.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvNotificaciones_CellFormatting);
             // 
@@ -241,22 +252,12 @@
             this.Fecha.ReadOnly = true;
             this.Fecha.Width = 200;
             // 
-            // lblCantNotificaciones
-            // 
-            this.lblCantNotificaciones.AutoSize = true;
-            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
-            this.lblCantNotificaciones.Location = new System.Drawing.Point(111, 430);
-            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
-            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
-            this.lblCantNotificaciones.TabIndex = 35;
-            this.lblCantNotificaciones.Text = "1";
-            // 
             // frmNotificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(1084, 502);
+            this.ClientSize = new System.Drawing.Size(1084, 511);
             this.Controls.Add(this.dgvNotificaciones);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblNombre);

@@ -30,163 +30,174 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportes));
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbAnioP = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbMesP = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnGenRepP = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.cbAnioI = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbMesI = new System.Windows.Forms.ComboBox();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnInsumos = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
+            this.btnConsultas = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
+            this.btnNotificar = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnGenRepI = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnReporte = new System.Windows.Forms.Button();
-            this.btnPerfil = new System.Windows.Forms.Button();
-            this.btnNotificaciones = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.lblCantNotificaciones = new System.Windows.Forms.Label();
-            this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label6
+            // btnProductos
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(223, 270);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(409, 39);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Productos ";
+            this.btnProductos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnProductos.BackColor = System.Drawing.Color.White;
+            this.btnProductos.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
+            this.btnProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnProductos.Location = new System.Drawing.Point(362, 264);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(296, 65);
+            this.btnProductos.TabIndex = 45;
+            this.btnProductos.Text = "Reporte Productos";
+            this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
-            // cbAnioP
+            // btnInsumos
             // 
-            this.cbAnioP.FormattingEnabled = true;
-            this.cbAnioP.Location = new System.Drawing.Point(324, 43);
-            this.cbAnioP.Name = "cbAnioP";
-            this.cbAnioP.Size = new System.Drawing.Size(93, 32);
-            this.cbAnioP.TabIndex = 42;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 43);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 24);
-            this.label4.TabIndex = 39;
-            this.label4.Text = "Mes:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(268, 43);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 24);
-            this.label5.TabIndex = 40;
-            this.label5.Text = "Año:";
-            // 
-            // cbMesP
-            // 
-            this.cbMesP.FormattingEnabled = true;
-            this.cbMesP.Location = new System.Drawing.Point(69, 43);
-            this.cbMesP.Name = "cbMesP";
-            this.cbMesP.Size = new System.Drawing.Size(176, 32);
-            this.cbMesP.TabIndex = 41;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.btnGenRepP);
-            this.groupBox2.Controls.Add(this.cbAnioP);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.cbMesP);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(230, 325);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(617, 104);
-            this.groupBox2.TabIndex = 24;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Periodo";
-            // 
-            // btnGenRepP
-            // 
-            this.btnGenRepP.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
-            this.btnGenRepP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenRepP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnGenRepP.Location = new System.Drawing.Point(432, 43);
-            this.btnGenRepP.Name = "btnGenRepP";
-            this.btnGenRepP.Size = new System.Drawing.Size(161, 32);
-            this.btnGenRepP.TabIndex = 43;
-            this.btnGenRepP.Text = "Generar Reporte";
-            this.btnGenRepP.UseVisualStyleBackColor = true;
-            this.btnGenRepP.Click += new System.EventHandler(this.btnGenRepP_Click);
-            // 
-            // cbAnioI
-            // 
-            this.cbAnioI.FormattingEnabled = true;
-            this.cbAnioI.Location = new System.Drawing.Point(324, 43);
-            this.cbAnioI.Name = "cbAnioI";
-            this.cbAnioI.Size = new System.Drawing.Size(93, 32);
-            this.cbAnioI.TabIndex = 42;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnInsumos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(223, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(409, 39);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Insumos ";
+            this.btnInsumos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnInsumos.BackColor = System.Drawing.Color.White;
+            this.btnInsumos.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
+            this.btnInsumos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInsumos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsumos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnInsumos.Location = new System.Drawing.Point(362, 149);
+            this.btnInsumos.Name = "btnInsumos";
+            this.btnInsumos.Size = new System.Drawing.Size(296, 65);
+            this.btnInsumos.TabIndex = 44;
+            this.btnInsumos.Text = "Reporte Insumos";
+            this.btnInsumos.UseVisualStyleBackColor = false;
+            this.btnInsumos.Click += new System.EventHandler(this.btnInsumos_Click);
             // 
-            // label3
+            // panel1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 43);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 24);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Mes:";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.lblCantNotificaciones);
+            this.panel1.Controls.Add(this.btnConsultas);
+            this.panel1.Controls.Add(this.btnReporte);
+            this.panel1.Controls.Add(this.btnNotificar);
+            this.panel1.Controls.Add(this.btnPerfil);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(166, 498);
+            this.panel1.TabIndex = 46;
             // 
-            // label2
+            // lblCantNotificaciones
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(268, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 24);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "Año:";
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(121, 435);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 14;
+            this.lblCantNotificaciones.Text = "1";
             // 
-            // cbMesI
+            // btnConsultas
             // 
-            this.cbMesI.FormattingEnabled = true;
-            this.cbMesI.Location = new System.Drawing.Point(69, 43);
-            this.cbMesI.Name = "cbMesI";
-            this.cbMesI.Size = new System.Drawing.Size(176, 32);
-            this.cbMesI.TabIndex = 41;
+            this.btnConsultas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultas.FlatAppearance.BorderSize = 0;
+            this.btnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultas.ForeColor = System.Drawing.Color.White;
+            this.btnConsultas.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultas.Image")));
+            this.btnConsultas.Location = new System.Drawing.Point(2, 274);
+            this.btnConsultas.Name = "btnConsultas";
+            this.btnConsultas.Size = new System.Drawing.Size(163, 79);
+            this.btnConsultas.TabIndex = 11;
+            this.btnConsultas.Text = "Consultas";
+            this.btnConsultas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConsultas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnConsultas.UseVisualStyleBackColor = true;
+            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReporte.FlatAppearance.BorderSize = 0;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.ForeColor = System.Drawing.Color.White;
+            this.btnReporte.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.document;
+            this.btnReporte.Location = new System.Drawing.Point(-1, 340);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(163, 92);
+            this.btnReporte.TabIndex = 10;
+            this.btnReporte.Text = "Reportes";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+            // btnNotificar
+            // 
+            this.btnNotificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNotificar.FlatAppearance.BorderSize = 0;
+            this.btnNotificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotificar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotificar.ForeColor = System.Drawing.Color.White;
+            this.btnNotificar.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificar.Image")));
+            this.btnNotificar.Location = new System.Drawing.Point(0, 418);
+            this.btnNotificar.Name = "btnNotificar";
+            this.btnNotificar.Size = new System.Drawing.Size(163, 92);
+            this.btnNotificar.TabIndex = 9;
+            this.btnNotificar.Text = "Notificaciones";
+            this.btnNotificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNotificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNotificar.UseVisualStyleBackColor = true;
+            this.btnNotificar.Click += new System.EventHandler(this.btnNotificar_Click);
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.ForeColor = System.Drawing.Color.White;
+            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
+            this.btnPerfil.Location = new System.Drawing.Point(0, 189);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(163, 79);
+            this.btnPerfil.TabIndex = 6;
+            this.btnPerfil.Text = "Jefe de Control de Calidad";
+            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(0, 101);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 79);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Inicio";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -207,153 +218,22 @@
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.btnGenRepI);
-            this.groupBox1.Controls.Add(this.cbAnioI);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cbMesI);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(230, 111);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(617, 104);
-            this.groupBox1.TabIndex = 22;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Periodo";
-            // 
-            // btnGenRepI
-            // 
-            this.btnGenRepI.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
-            this.btnGenRepI.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenRepI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnGenRepI.Location = new System.Drawing.Point(432, 43);
-            this.btnGenRepI.Name = "btnGenRepI";
-            this.btnGenRepI.Size = new System.Drawing.Size(161, 32);
-            this.btnGenRepI.TabIndex = 43;
-            this.btnGenRepI.Text = "Generar Reporte";
-            this.btnGenRepI.UseVisualStyleBackColor = true;
-            this.btnGenRepI.Click += new System.EventHandler(this.btnGenRepI_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
-            this.panel1.Controls.Add(this.lblCantNotificaciones);
-            this.panel1.Controls.Add(this.btnReporte);
-            this.panel1.Controls.Add(this.btnPerfil);
-            this.panel1.Controls.Add(this.btnNotificaciones);
-            this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 495);
-            this.panel1.TabIndex = 20;
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReporte.FlatAppearance.BorderSize = 0;
-            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporte.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.document;
-            this.btnReporte.Location = new System.Drawing.Point(2, 305);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(163, 77);
-            this.btnReporte.TabIndex = 6;
-            this.btnReporte.Text = "Reportes";
-            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnReporte.UseVisualStyleBackColor = true;
-            // 
-            // btnPerfil
-            // 
-            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPerfil.FlatAppearance.BorderSize = 0;
-            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.ForeColor = System.Drawing.Color.White;
-            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(2, 206);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(163, 79);
-            this.btnPerfil.TabIndex = 1;
-            this.btnPerfil.Text = "Jefe de Control de Calidad";
-            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnPerfil.UseVisualStyleBackColor = true;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
-            // 
-            // btnNotificaciones
-            // 
-            this.btnNotificaciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNotificaciones.FlatAppearance.BorderSize = 0;
-            this.btnNotificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotificaciones.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotificaciones.ForeColor = System.Drawing.Color.White;
-            this.btnNotificaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificaciones.Image")));
-            this.btnNotificaciones.Location = new System.Drawing.Point(0, 387);
-            this.btnNotificaciones.Name = "btnNotificaciones";
-            this.btnNotificaciones.Size = new System.Drawing.Size(163, 92);
-            this.btnNotificaciones.TabIndex = 5;
-            this.btnNotificaciones.Text = "Notificaciones";
-            this.btnNotificaciones.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNotificaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnNotificaciones.UseVisualStyleBackColor = true;
-            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(0, 119);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(163, 79);
-            this.btnHome.TabIndex = 1;
-            this.btnHome.Text = "Inicio";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // lblCantNotificaciones
-            // 
-            this.lblCantNotificaciones.AutoSize = true;
-            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
-            this.lblCantNotificaciones.Location = new System.Drawing.Point(115, 400);
-            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
-            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
-            this.lblCantNotificaciones.TabIndex = 25;
-            this.lblCantNotificaciones.Text = "1";
-            // 
             // frmReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.background_11_wide;
-            this.ClientSize = new System.Drawing.Size(877, 495);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(857, 498);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnProductos);
+            this.Controls.Add(this.btnInsumos);
             this.Name = "frmReportes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReportes";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,28 +241,17 @@
         #endregion
 
         private System.Windows.Forms.SaveFileDialog saveFileDialog2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnGenRepP;
-        private System.Windows.Forms.ComboBox cbAnioP;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbMesP;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button btnGenRepI;
-        private System.Windows.Forms.ComboBox cbAnioI;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbMesI;
-        private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.Button btnReporte;
-        private System.Windows.Forms.Button btnPerfil;
-        private System.Windows.Forms.Button btnNotificaciones;
-        private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Button btnInsumos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblCantNotificaciones;
+        private System.Windows.Forms.Button btnConsultas;
+        private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Button btnNotificar;
+        private System.Windows.Forms.Button btnPerfil;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pbLogo;
     }
 }

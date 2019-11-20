@@ -38,7 +38,26 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             }
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void btnInsumos_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.ShowDialog();
+            byte[] arreglo1 = DBController.generarReporteInsumosCalidadPDF();
+            if (arreglo1 == null)
+            {
+                MessageBox.Show("Ups, problema con el server", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                File.WriteAllBytes(saveFileDialog1.FileName + ".pdf", arreglo1);
+            }
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             frmControlCalidad formControlCalidad = new frmControlCalidad(1, this.trabajador);
@@ -47,37 +66,42 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             this.Close();
         }
 
-        private void btnPerfil_Click(object sender, EventArgs e)
+        private void btnPerfil_Click_1(object sender, EventArgs e)
         {
             this.Visible = false;
             frmPerfil formPerfil = new frmPerfil(this.trabajador);
             formPerfil.Visible = true;
             close = 1;
             this.Close();
+
         }
 
-        private void btnNotificaciones_Click(object sender, EventArgs e)
+        private void btnConsultas_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmConsultas formConsultas = new frmConsultas(this.trabajador);
+            formConsultas.Visible = true;
+            close = 1;
+            this.Close();
+
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmControlCalidad formControlCalidad = new frmControlCalidad(1, this.trabajador);
+            formControlCalidad.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void btnNotificar_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             frmNotificaciones formNot = new frmNotificaciones(this.trabajador);
             formNot.Visible = true;
             close = 1;
             this.Close();
-        }
-
-        private void btnGenRepI_Click(object sender, EventArgs e)
-        {
-
-            //saveFileDialog1.ShowDialog();
-            //byte[] arreglo1 = DBController.generarReporteInsumosRestringidosPDF(
-            //    cbMesI.SelectedIndex + 1, int.Parse(cbAnioI.SelectedValue.ToString()));
-            //File.WriteAllBytes(saveFileDialog1.FileName + ".pdf", arreglo1);
-
-
-        }
-
-        private void btnGenRepP_Click(object sender, EventArgs e)
-        {
 
         }
     }

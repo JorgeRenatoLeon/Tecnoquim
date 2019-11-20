@@ -34,25 +34,6 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
                 lblCantNotificaciones.Text = not.ToString();
             }
         }
-
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmControlCalidad formInicio = new frmControlCalidad(1,this.trabajador);
-            formInicio.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            frmPerfil formPerfil = new frmPerfil(this.trabajador);
-            formPerfil.Visible = true;
-            close = 1;
-            this.Close();
-        }
-
         private void frmNotificaciones_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (close == 0) { Environment.Exit(0); }
@@ -66,5 +47,42 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             dgvNotificaciones.Rows[e.RowIndex].Cells["Descripcion"].Value = ppFila.descripcion;
             dgvNotificaciones.Rows[e.RowIndex].Cells["Fecha"].Value = ppFila.fechaEnvio;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmControlCalidad formInicio = new frmControlCalidad(1, this.trabajador);
+            formInicio.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void btnPerfil_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmPerfil formPerfil = new frmPerfil(this.trabajador);
+            formPerfil.Visible = true;
+            close = 1;
+            this.Close();
+        }
+
+        private void btnConsultas_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmConsultas formConsultas = new frmConsultas(this.trabajador);
+            formConsultas.Visible = true;
+            close = 1;
+            this.Close();
+
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            frmReportes formReportes = new frmReportes(this.trabajador);
+            formReportes.Visible = true;
+            close = 1;
+            this.Close();
+        }
     }
+
 }

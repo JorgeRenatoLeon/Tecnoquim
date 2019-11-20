@@ -275,9 +275,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            frmPMS form = new frmPMS();
-            form.Visible = true;
             this.Close();
         }
 

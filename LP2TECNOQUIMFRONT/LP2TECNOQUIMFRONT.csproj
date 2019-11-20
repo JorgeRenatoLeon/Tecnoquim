@@ -670,6 +670,9 @@
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.enviarMensajeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.generarReporteInsumosCalidadPDFResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.generarReporteInsumosRestringidosPDFResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

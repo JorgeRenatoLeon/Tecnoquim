@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrden));
             this.button7 = new System.Windows.Forms.Button();
-            this.btnGestionar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
@@ -39,7 +39,6 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -56,32 +55,13 @@
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.button7.Location = new System.Drawing.Point(320, 272);
+            this.button7.Location = new System.Drawing.Point(321, 203);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(352, 65);
+            this.button7.Size = new System.Drawing.Size(356, 58);
             this.button7.TabIndex = 27;
             this.button7.Text = "Ver Historial";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // btnGestionar
-            // 
-            this.btnGestionar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGestionar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnGestionar.BackColor = System.Drawing.Color.White;
-            this.btnGestionar.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
-            this.btnGestionar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGestionar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnGestionar.Location = new System.Drawing.Point(320, 161);
-            this.btnGestionar.Name = "btnGestionar";
-            this.btnGestionar.Size = new System.Drawing.Size(352, 65);
-            this.btnGestionar.TabIndex = 25;
-            this.btnGestionar.Text = "Gestionar Orden de Produccion";
-            this.btnGestionar.UseVisualStyleBackColor = false;
-            this.btnGestionar.Click += new System.EventHandler(this.btnGestionar_Click);
             // 
             // panel1
             // 
@@ -96,8 +76,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 505);
+            this.panel1.Size = new System.Drawing.Size(166, 498);
             this.panel1.TabIndex = 28;
+            // 
+            // lblCantNotificaciones
+            // 
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(108, 429);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 29;
+            this.lblCantNotificaciones.Text = "1";
             // 
             // btnReporte
             // 
@@ -208,26 +198,15 @@
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
-            // lblCantNotificaciones
-            // 
-            this.lblCantNotificaciones.AutoSize = true;
-            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
-            this.lblCantNotificaciones.Location = new System.Drawing.Point(108, 429);
-            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
-            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
-            this.lblCantNotificaciones.TabIndex = 29;
-            this.lblCantNotificaciones.Text = "1";
-            // 
             // frmOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.background_11_wide;
-            this.ClientSize = new System.Drawing.Size(853, 505);
+            this.ClientSize = new System.Drawing.Size(857, 498);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.btnGestionar);
             this.Name = "frmOrden";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOrden";
@@ -242,7 +221,6 @@
 
         #endregion
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button btnGestionar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnNotificaciones;

@@ -111,7 +111,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            InsumosRestringidos formInsR = new InsumosRestringidos();
+            InsumosRestringidos formInsR = new InsumosRestringidos(this.trabajador);
             formInsR.Visible = true;
             close = 1;
             this.Close();

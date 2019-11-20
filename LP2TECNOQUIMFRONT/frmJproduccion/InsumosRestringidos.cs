@@ -16,10 +16,16 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         Service.trabajador trabajador = new Service.trabajador();
         Service.ServicioClient DBController = new Service.ServicioClient();
         int close;
+        int not = 0;
         public InsumosRestringidos(Service.trabajador trabajadors = null)
         {
             InitializeComponent();
             this.trabajador = trabajadors;
+            Service.mensaje[] mensajes = DBController.listarMensaje(trabajador.id);
+            if (mensajes != null)
+            {
+                not = mensajes.Length;
+            }
             BindingList<String> meses;
             meses = new BindingList<String>();
             meses.Add("Enero");
@@ -63,6 +69,12 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             aniosP.Add("2019");
             aniosP.Add("2020");
             cbAnioP.DataSource = aniosP;
+            lblCantNotificaciones.Visible = false;
+            if (not > 0)
+            {
+                lblCantNotificaciones.Visible = true;
+                lblCantNotificaciones.Text = not.ToString();
+            }
         }
 
         private void btnGenRepI_Click(object sender, EventArgs e)
@@ -83,7 +95,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            btnReporte formPerfil = new btnReporte(this.trabajador);
+            formPerfil.Visible = true;
+            close = 1;
+            this.Close();
         }
 
         private void btnConsultas_Click(object sender, EventArgs e)
