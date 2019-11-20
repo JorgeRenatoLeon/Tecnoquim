@@ -16,6 +16,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         int idPMP = 0;
         int flagElim = 0;
         int flagEnv = 0;
+        int flagHist = 0;
         private DateTime _periodoPlanMaestroProduccion;
         private int _idPlanMaestroProduccion;
         private Service.ordenProduccion _orderProduccion;
@@ -32,8 +33,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         public int Flag { get => flagEnv; set => flagEnv = value; }
 
-        public frmGestionarOrden(Service.ordenProduccion ordenReciv = null, int id = 0)
+        public frmGestionarOrden(Service.ordenProduccion ordenReciv = null, int id = 0, int flag=0)
         {
+            flagHist = flag;
             InitializeComponent();
             idPMP = id;
             ordenRecivida = ordenReciv;
@@ -124,7 +126,13 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     txtNOrden.Enabled = false;
                     dtpOrden.Enabled = false;
                     
-
+                    if(flagHist == 0)
+                    {
+                        btnNuevo.Enabled = false;
+                        btnGuardar.Enabled = false;
+                        btnModificar.Enabled = false;
+                        btnCancelar.Enabled = false;
+                    }
                     //Asignar el estado
                     estadoFormulario = estado;
 
@@ -158,6 +166,14 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     gbDetalleOrden.Enabled = true;
                     gbDatosOrden.Enabled = true;
 
+
+                    if (flagHist == 0)
+                    {
+                        btnNuevo.Enabled = false;
+                        btnGuardar.Enabled = false;
+                        btnModificar.Enabled = false;
+                        btnCancelar.Enabled = false;
+                    }
 
                     //Asignar el estado
                     estadoFormulario = estado;
@@ -194,6 +210,14 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     dtpOrden.Enabled = false;
 
 
+                    if (flagHist == 0)
+                    {
+                        btnNuevo.Enabled = false;
+                        btnGuardar.Enabled = false;
+                        btnModificar.Enabled = false;
+                        btnCancelar.Enabled = false;
+                    }
+
                     //Asignar el estado
                     estadoFormulario = estado;
 
@@ -228,6 +252,14 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     gbDatosOrden.Enabled = true;
 
 
+
+                    if (flagHist == 0)
+                    {
+                        btnNuevo.Enabled = false;
+                        btnGuardar.Enabled = false;
+                        btnModificar.Enabled = false;
+                        btnCancelar.Enabled = false;
+                    }
                     break;
                 default:
                     break;
