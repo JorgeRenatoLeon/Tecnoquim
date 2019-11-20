@@ -9,14 +9,26 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         Service.trabajador trabajador = new Service.trabajador();
         Service.ServicioClient DBController = new Service.ServicioClient();
         int close = 0;
+        int not = 0;
         public frmPerfil(Service.trabajador trabajadors = null)
         {
             this.trabajador = trabajadors;
+            Service.mensaje[] mensajes = DBController.listarMensaje(trabajador.id);
+            if (mensajes != null)
+            {
+                not = mensajes.Length;
+            }
             InitializeComponent();
             txtNombre.Text = trabajador.nombres;
             txtApellido.Text = trabajador.apellidos;
             txtDNI.Text = trabajador.dni;
             txtCorreo.Text = trabajador.correo;
+            lblCantNotificaciones.Visible = false;
+            if (not > 0)
+            {
+                lblCantNotificaciones.Visible = true;
+                lblCantNotificaciones.Text = not.ToString();
+            }
         }
 
         private void frmPerfil_FormClosed(object sender, FormClosedEventArgs e)

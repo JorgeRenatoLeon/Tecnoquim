@@ -32,17 +32,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNotificaciones));
             this.lblNombre = new System.Windows.Forms.Label();
             this.dgvNotificaciones = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreEmisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RolEmisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreEmisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RolEmisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotificaciones)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -89,9 +90,46 @@
             this.dgvNotificaciones.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNotificaciones_CellContentClick);
             this.dgvNotificaciones.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvNotificaciones_CellFormatting);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 10;
+            // 
+            // NombreEmisor
+            // 
+            this.NombreEmisor.HeaderText = "Nombre Emisor";
+            this.NombreEmisor.Name = "NombreEmisor";
+            this.NombreEmisor.ReadOnly = true;
+            this.NombreEmisor.Width = 200;
+            // 
+            // RolEmisor
+            // 
+            this.RolEmisor.FillWeight = 150F;
+            this.RolEmisor.HeaderText = "Rol Emisor";
+            this.RolEmisor.Name = "RolEmisor";
+            this.RolEmisor.ReadOnly = true;
+            this.RolEmisor.Width = 150;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Contenido del Mensaje";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 250;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha Recibido";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 200;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.lblCantNotificaciones);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.btnNotificaciones);
@@ -174,41 +212,15 @@
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
-            // ID
+            // lblCantNotificaciones
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 10;
-            // 
-            // NombreEmisor
-            // 
-            this.NombreEmisor.HeaderText = "Nombre Emisor";
-            this.NombreEmisor.Name = "NombreEmisor";
-            this.NombreEmisor.ReadOnly = true;
-            this.NombreEmisor.Width = 200;
-            // 
-            // RolEmisor
-            // 
-            this.RolEmisor.FillWeight = 150F;
-            this.RolEmisor.HeaderText = "Rol Emisor";
-            this.RolEmisor.Name = "RolEmisor";
-            this.RolEmisor.ReadOnly = true;
-            this.RolEmisor.Width = 150;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Contenido del Mensaje";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 250;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha Recibido";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 200;
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(121, 285);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 33;
+            this.lblCantNotificaciones.Text = "1";
             // 
             // frmNotificaciones
             // 
@@ -226,6 +238,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmNotificaciones_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotificaciones)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
@@ -248,5 +261,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RolEmisor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.Label lblCantNotificaciones;
     }
 }

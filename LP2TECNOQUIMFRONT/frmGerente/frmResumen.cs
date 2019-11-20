@@ -14,12 +14,24 @@ namespace LP2TECNOQUIMFRONT.frmGerente
     {
         Service.trabajador trabajador = new Service.trabajador();
         Service.ServicioClient DBController = new Service.ServicioClient();
-        int close;
+        int close=0;
+        int not = 0;
 
         public frmResumen(Service.trabajador trabajadors = null)
         {
             InitializeComponent();
             this.trabajador = trabajadors;
+            Service.mensaje[] mensajes = DBController.listarMensaje(trabajador.id);
+            if (mensajes != null)
+            {
+                not = mensajes.Length;
+            }
+            lblCantNotificaciones.Visible = false;
+            if (not > 0)
+            {
+                lblCantNotificaciones.Visible = true;
+                lblCantNotificaciones.Text = not.ToString();
+            }
             BindingList<String> meses;
             meses = new BindingList<String>();
             meses.Add("Enero");

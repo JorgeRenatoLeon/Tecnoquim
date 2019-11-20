@@ -16,9 +16,15 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         Service.ServicioClient DBController = new Service.ServicioClient();
         Service.trabajador trabajador = new Service.trabajador();
         int close = 0;
+        int not = 0;
         public frmGestionarPMP(Service.trabajador trabajadors = null, int cont=0)
         {
             this.trabajador = trabajadors;
+            Service.mensaje[] mensajes = DBController.listarMensaje(trabajador.id);
+            if (mensajes != null)
+            {
+                not = mensajes.Length;
+            }
             InitializeComponent();
             if (cont == 1)
             {
@@ -29,6 +35,12 @@ namespace LP2TECNOQUIMFRONT.frmGerente
                     frmRevisarPlanMaestro frmGestionarPlanM = new frmRevisarPlanMaestro(pmp, true);
                     frmGestionarPlanM.ShowDialog(this);
                 }
+            }
+            lblCantNotificaciones.Visible = false;
+            if (not > 0)
+            {
+                lblCantNotificaciones.Visible = true;
+                lblCantNotificaciones.Text = not.ToString();
             }
         }
 

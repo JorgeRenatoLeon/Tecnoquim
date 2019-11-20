@@ -15,12 +15,24 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         Service.trabajador trabajador = new Service.trabajador();
         Service.ServicioClient DBController = new Service.ServicioClient();
         int close = 0;
+        int not = 0;
         public frmNotificaciones(Service.trabajador trabajadors=null)
         {
             this.trabajador = trabajadors;
+            Service.mensaje[] mensajes = DBController.listarMensaje(trabajador.id);
+            if (mensajes != null)
+            {
+                not = mensajes.Length;
+            }
             InitializeComponent();
             dgvNotificaciones.AutoGenerateColumns = false;
-            dgvNotificaciones.DataSource = DBController.listarMensaje(trabajador.id);
+            dgvNotificaciones.DataSource = mensajes;
+            lblCantNotificaciones.Visible = false;
+            if (not > 0)
+            {
+                lblCantNotificaciones.Visible = true;
+                lblCantNotificaciones.Text = not.ToString();
+            }
         }
 
         private void frmNotificaciones_FormClosed(object sender, FormClosedEventArgs e)

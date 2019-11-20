@@ -38,6 +38,7 @@
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnPMS = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -46,6 +47,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.lblCantNotificaciones);
             this.panel1.Controls.Add(this.btnReporte);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.btnPerfil);
@@ -182,6 +184,16 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lblCantNotificaciones
+            // 
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(109, 366);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 13;
+            this.lblCantNotificaciones.Text = "1";
+            // 
             // frmGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,6 +209,7 @@
             this.Text = "8";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmGerente_FormClosed);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
@@ -213,5 +226,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Label lblCantNotificaciones;
     }
 }
