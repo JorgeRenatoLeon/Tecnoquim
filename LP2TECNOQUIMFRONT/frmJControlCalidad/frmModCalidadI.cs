@@ -14,12 +14,15 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
     {
 
         BindingList<String> datoE = new BindingList<string>();
+        Service.detalleAlmacenInsumo detalle = new Service.detalleAlmacenInsumo();
         public frmModCalidadI()
         {
             InitializeComponent();
-            txtidprod.Enabled = false;
-            txtNomProd.Enabled = false;
-            txtPres.Enabled = false;
+            txtid.Enabled = false;
+            txtNom.Enabled = false;
+            txtStock.Enabled = false;
+            txtLote.Enabled = false;
+            
 
             datoE.Add("Bueno");
             datoE.Add("Pendiente");
@@ -39,10 +42,12 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             frmListaInsumo formListaInsumo = new frmListaInsumo();
             if (formListaInsumo.ShowDialog(this) == DialogResult.OK)
             {
-                //lorden = formListaInsumo.LineaOrdenSeleccionada;
-                //txtidprod.Text = formListaInsumo.idLineaOrden.ToString();
-                //txtNomProd.Text = formListaInsumo.LineaOrdenSeleccionada.producto.nombre;
-                //txtPres.Text = formListaInsumo.cantProducto.ToString();
+                detalle = formListaInsumo.DetalleSeleccionada;
+                txtid.Text = detalle.id.ToString();
+                txtNom.Text = detalle.insumo.nombre.ToString();
+                txtLote.Text = detalle.nLote.ToString();
+                txtStock.Text = detalle.stock.ToString();
+
             }
 
         }
