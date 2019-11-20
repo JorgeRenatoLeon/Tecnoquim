@@ -19,12 +19,24 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
         Service.proyeccionVenta proyeccionVenta = new Service.proyeccionVenta();
 
         int close = 0;
+        int not = 0;
         public frmJVenta(int cont=0, Service.trabajador trabajadors = null)
         {
             this.trabajador = trabajadors;
+            Service.mensaje[] mensajes = DBController.listarMensaje(trabajador.id);
+            if (mensajes != null)
+            {
+                not = mensajes.Length;
+            }
             if (cont != 0)
             {
                 InitializeComponent();
+                lblCantNotificaciones.Visible = false;
+                if (not > 0)
+                {
+                    lblCantNotificaciones.Visible = true;
+                    lblCantNotificaciones.Text = not.ToString();
+                }
             }
             else
             {
@@ -39,6 +51,12 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
                 MessageBox.Show("Bienvenido/a " + trabajador.nombres + " " + trabajador.apellidos);
 
                 t.Abort();
+                lblCantNotificaciones.Visible = false;
+                if (not > 0)
+                {
+                    lblCantNotificaciones.Visible = true;
+                    lblCantNotificaciones.Text = not.ToString();
+                }
             }
         }
         public void SplashStart()

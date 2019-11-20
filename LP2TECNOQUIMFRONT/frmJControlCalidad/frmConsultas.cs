@@ -14,10 +14,23 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
     {
         Service.trabajador trabajador = new Service.trabajador();
         int close = 0;
+        int not = 0;
+        Service.ServicioClient DBController = new Service.ServicioClient();
         public frmConsultas(Service.trabajador trabajadors = null)
         {
             this.trabajador = trabajadors;
+            Service.mensaje[] mensajes = DBController.listarMensaje(trabajador.id);
+            if (mensajes != null)
+            {
+                not = mensajes.Length;
+            }
             InitializeComponent();
+            lblCantNotificaciones.Visible = false;
+            if (not > 0)
+            {
+                lblCantNotificaciones.Visible = true;
+                lblCantNotificaciones.Text = not.ToString();
+            }
         }
 
         private void btnProducto_Click(object sender, EventArgs e)

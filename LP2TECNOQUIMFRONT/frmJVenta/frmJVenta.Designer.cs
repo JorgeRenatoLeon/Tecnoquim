@@ -37,6 +37,7 @@
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnPMS = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -45,6 +46,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.lblCantNotificaciones);
             this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.btnNotificaciones);
             this.panel1.Controls.Add(this.btnInicio);
@@ -162,6 +164,16 @@
             this.btnHistorial.UseVisualStyleBackColor = false;
             this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
             // 
+            // lblCantNotificaciones
+            // 
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(116, 290);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 17;
+            this.lblCantNotificaciones.Text = "1";
+            // 
             // frmJVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +190,7 @@
             this.Text = "frmJVenta";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmJVenta_FormClosed);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
@@ -194,5 +207,6 @@
         private System.Windows.Forms.Button btnPMS;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnHistorial;
+        private System.Windows.Forms.Label lblCantNotificaciones;
     }
 }

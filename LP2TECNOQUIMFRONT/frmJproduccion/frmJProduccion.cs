@@ -9,12 +9,25 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
     {
         Service.trabajador trabajador = new Service.trabajador();
         int close = 0;
+        int not = 0;
+        Service.ServicioClient DBController = new Service.ServicioClient();
         public frmJProduccion(int cont = 0, Service.trabajador trabajadors = null)
         {
             this.trabajador = trabajadors;
+            Service.mensaje[] mensajes = DBController.listarMensaje(trabajador.id);
+            if (mensajes != null)
+            {
+                not = mensajes.Length;
+            }
             if (cont != 0)
             {
                 InitializeComponent();
+                lblCantNotificaciones.Visible = false;
+                if (not > 0)
+                {
+                    lblCantNotificaciones.Visible = true;
+                    lblCantNotificaciones.Text = not.ToString();
+                }
             }
             else
             {
@@ -29,6 +42,12 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 MessageBox.Show("Bienvenido/a " + trabajador.nombres + " " + trabajador.apellidos);
 
                 t.Abort();
+                lblCantNotificaciones.Visible = false;
+                if (not > 0)
+                {
+                    lblCantNotificaciones.Visible = true;
+                    lblCantNotificaciones.Text = not.ToString();
+                }
             }
         }
         public void SplashStart()
@@ -88,7 +107,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            InsumosRestringidos formInsR = new InsumosRestringidos();
+            InsumosRestringidos formInsR = new InsumosRestringidos(this.trabajador);
             formInsR.Visible = true;
             close = 1;
             this.Close();

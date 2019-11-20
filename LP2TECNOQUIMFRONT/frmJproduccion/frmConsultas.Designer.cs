@@ -41,6 +41,7 @@
             this.btnInsumos = new System.Windows.Forms.Button();
             this.btnProducto = new System.Windows.Forms.Button();
             this.btnMaquinaria = new System.Windows.Forms.Button();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -49,6 +50,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.lblCantNotificaciones);
             this.panel1.Controls.Add(this.btnReporte);
             this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.btnNotificaciones);
@@ -241,6 +243,16 @@
             this.btnMaquinaria.UseVisualStyleBackColor = false;
             this.btnMaquinaria.Click += new System.EventHandler(this.btnMaquinaria_Click);
             // 
+            // lblCantNotificaciones
+            // 
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(108, 423);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 26;
+            this.lblCantNotificaciones.Text = "1";
+            // 
             // frmConsultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,6 +270,7 @@
             this.Text = "frmConsultasJprod";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmConsultas_FormClosed);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
@@ -278,5 +291,6 @@
         private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.Button btnMaquinaria;
         private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Label lblCantNotificaciones;
     }
 }

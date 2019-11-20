@@ -15,12 +15,23 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         Service.trabajador trabajador = new Service.trabajador();
         Service.ServicioClient DBController = new Service.ServicioClient();
         int close = 0;
+        int not = 0;
         public frmNotificaciones(Service.trabajador trabajadors = null)
         {
             this.trabajador = trabajadors;
+            Service.mensaje[] mensajes = DBController.listarMensaje(trabajador.id);
+            if (mensajes != null)
+            {
+                not = mensajes.Length;
+            }
             InitializeComponent();
             dgvNotificaciones.AutoGenerateColumns = false;
-            dgvNotificaciones.DataSource = DBController.listarMensaje(trabajador.id);
+            dgvNotificaciones.DataSource = mensajes;
+            if (not > 0)
+            {
+                lblCantNotificaciones.Visible = true;
+                lblCantNotificaciones.Text = not.ToString();
+            }
         }
 
         private void btnInicio_Click(object sender, EventArgs e)

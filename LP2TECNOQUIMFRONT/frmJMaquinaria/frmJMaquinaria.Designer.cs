@@ -52,6 +52,7 @@
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -62,6 +63,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.lblCantNotificaciones);
             this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.btnNotificaciones);
             this.panel1.Controls.Add(this.btnInicio);
@@ -328,6 +330,16 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Registro de Maquinaria";
             // 
+            // lblCantNotificaciones
+            // 
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(117, 291);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 41;
+            this.lblCantNotificaciones.Text = "1";
+            // 
             // frmJMaquinaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +357,7 @@
             this.Text = "frmJMaquinaria";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmJMaquinaria_FormClosed);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.gbDatos.ResumeLayout(false);
@@ -381,5 +394,6 @@
         private System.Windows.Forms.RadioButton rbActivo;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.RadioButton rbInactivo;
+        private System.Windows.Forms.Label lblCantNotificaciones;
     }
 }

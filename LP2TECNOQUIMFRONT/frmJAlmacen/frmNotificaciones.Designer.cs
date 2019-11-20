@@ -42,6 +42,7 @@
             this.RolEmisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.btnNotificaciones.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -51,6 +52,7 @@
             // btnNotificaciones
             // 
             this.btnNotificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.btnNotificaciones.Controls.Add(this.lblCantNotificaciones);
             this.btnNotificaciones.Controls.Add(this.button2);
             this.btnNotificaciones.Controls.Add(this.btnNotificar);
             this.btnNotificaciones.Controls.Add(this.btnInicio);
@@ -198,6 +200,16 @@
             this.Fecha.ReadOnly = true;
             this.Fecha.Width = 200;
             // 
+            // lblCantNotificaciones
+            // 
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(123, 286);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 32;
+            this.lblCantNotificaciones.Text = "1";
+            // 
             // frmNotificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +224,7 @@
             this.Text = "frmNotificaciones";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmNotificaciones_FormClosed);
             this.btnNotificaciones.ResumeLayout(false);
+            this.btnNotificaciones.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotificaciones)).EndInit();
@@ -234,5 +247,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RolEmisor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.Label lblCantNotificaciones;
     }
 }

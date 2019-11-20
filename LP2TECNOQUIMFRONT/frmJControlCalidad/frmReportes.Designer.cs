@@ -36,6 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbMesP = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnGenRepP = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.cbAnioI = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,20 +44,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbMesI = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnGenRepP = new System.Windows.Forms.Button();
             this.btnGenRepI = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -125,6 +126,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Periodo";
             // 
+            // btnGenRepP
+            // 
+            this.btnGenRepP.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
+            this.btnGenRepP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenRepP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnGenRepP.Location = new System.Drawing.Point(432, 43);
+            this.btnGenRepP.Name = "btnGenRepP";
+            this.btnGenRepP.Size = new System.Drawing.Size(161, 32);
+            this.btnGenRepP.TabIndex = 43;
+            this.btnGenRepP.Text = "Generar Reporte";
+            this.btnGenRepP.UseVisualStyleBackColor = true;
+            this.btnGenRepP.Click += new System.EventHandler(this.btnGenRepP_Click);
+            // 
             // cbAnioI
             // 
             this.cbAnioI.FormattingEnabled = true;
@@ -184,6 +198,15 @@
             this.panel3.Size = new System.Drawing.Size(166, 99);
             this.panel3.TabIndex = 0;
             // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.logo_web;
+            this.pbLogo.Location = new System.Drawing.Point(0, 3);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(163, 92);
+            this.pbLogo.TabIndex = 2;
+            this.pbLogo.TabStop = false;
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
@@ -201,33 +224,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Periodo";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
-            this.panel1.Controls.Add(this.btnReporte);
-            this.panel1.Controls.Add(this.btnPerfil);
-            this.panel1.Controls.Add(this.btnNotificaciones);
-            this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 495);
-            this.panel1.TabIndex = 20;
-            // 
-            // btnGenRepP
-            // 
-            this.btnGenRepP.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
-            this.btnGenRepP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenRepP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnGenRepP.Location = new System.Drawing.Point(432, 43);
-            this.btnGenRepP.Name = "btnGenRepP";
-            this.btnGenRepP.Size = new System.Drawing.Size(161, 32);
-            this.btnGenRepP.TabIndex = 43;
-            this.btnGenRepP.Text = "Generar Reporte";
-            this.btnGenRepP.UseVisualStyleBackColor = true;
-            this.btnGenRepP.Click += new System.EventHandler(this.btnGenRepP_Click);
-            // 
             // btnGenRepI
             // 
             this.btnGenRepI.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
@@ -240,6 +236,21 @@
             this.btnGenRepI.Text = "Generar Reporte";
             this.btnGenRepI.UseVisualStyleBackColor = true;
             this.btnGenRepI.Click += new System.EventHandler(this.btnGenRepI_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.lblCantNotificaciones);
+            this.panel1.Controls.Add(this.btnReporte);
+            this.panel1.Controls.Add(this.btnPerfil);
+            this.panel1.Controls.Add(this.btnNotificaciones);
+            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(166, 495);
+            this.panel1.TabIndex = 20;
             // 
             // btnReporte
             // 
@@ -312,14 +323,15 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // pbLogo
+            // lblCantNotificaciones
             // 
-            this.pbLogo.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.logo_web;
-            this.pbLogo.Location = new System.Drawing.Point(0, 3);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(163, 92);
-            this.pbLogo.TabIndex = 2;
-            this.pbLogo.TabStop = false;
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(115, 400);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 25;
+            this.lblCantNotificaciones.Text = "1";
             // 
             // frmReportes
             // 
@@ -337,10 +349,11 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -370,5 +383,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblCantNotificaciones;
     }
 }

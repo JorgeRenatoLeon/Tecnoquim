@@ -20,14 +20,26 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
         Service.detalleMaquinaria detalle;
         Service.ServicioClient DBController = new Service.ServicioClient();
         Estado estadoObj;
+        int not = 0;
 
         int close;
         public frmJMaquinaria(int cont = 0, Service.trabajador trabajadors = null)
         {
             this.trabajador = trabajadors;
+            Service.mensaje[] mensajes = DBController.listarMensaje(trabajador.id);
+            if (mensajes != null)
+            {
+                not = mensajes.Length;
+            }
             if (cont != 0)
             {
                 InitializeComponent();
+                lblCantNotificaciones.Visible = false;
+                if (not > 0)
+                {
+                    lblCantNotificaciones.Visible = true;
+                    lblCantNotificaciones.Text = not.ToString();
+                }
             }
             else
             {
@@ -39,6 +51,12 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
                 MessageBox.Show("Bienvenido/a " + trabajador.nombres + " " + trabajador.apellidos);
 
                 t.Abort();
+                lblCantNotificaciones.Visible = false;
+                if (not > 0)
+                {
+                    lblCantNotificaciones.Visible = true;
+                    lblCantNotificaciones.Text = not.ToString();
+                }
             }
             estadoComponentes(Estado.Inicial);
             
