@@ -28,16 +28,21 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             if (pmp.estado == Service.estado.Rechazado) rbDesaprobado.Checked = true;
             else if (pmp.estado == Service.estado.Aprobado) rbAprobado.Checked = true;
             txtResponsable.Text = pmp.responsable.nombres + " " + pmp.responsable.apellidos;
+            calOrdenProduccion.MaxSelectionCount = 1;
             dgvOrden.AutoGenerateColumns = false;
-            dgvOrden.DataSource = pmp.ordenes;
             dgvMaquinaria.AutoGenerateColumns = false;
             pmp.maquinarias = DBController.listarDetalleMaquinaria(pmp.id);
+            pmp.ordenes = DBController.listarOrdenesProduccionPlan(pmp.id);
+            setOrden();
+
             dgvMaquinaria.DataSource = pmp.maquinarias;
             //estadoObj = Estado.Inicial;
             if (!save) {
                 gbEstado.Enabled = false;
                 btnGuardar.Visible = false;
             }
+            DateTime date = pmp.periodo.AddHours(5);
+            calOrdenProduccion.SetDate(new DateTime(date.Year, date.Month, 1));
         }
 
         public frmRevisarPlanMaestro(Service.trabajador gerente)
@@ -74,30 +79,19 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             MessageBox.Show("Se ha actualizado correctamente el plan de maestro de producción", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void dgvOrden_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            Service.ordenProduccion ordenFila = (Service.ordenProduccion)dgvOrden.Rows[e.RowIndex].DataBoundItem;
-            dgvOrden.Rows[e.RowIndex].Cells[0].Value = ordenFila.id;
-            //dgvOrden.Rows[e.RowIndex].Cells[1].Value = ordenFila.lineasOrden.ToArray().Length;
-            dgvOrden.Rows[e.RowIndex].Cells[2].Value = ordenFila.fecha.ToString("dd/MM/yyyy");
-        }
-
         private void dgvMaquinaria_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            Service.maquinaria fila = (Service.maquinaria)dgvMaquinaria.Rows[e.RowIndex].DataBoundItem;
-            dgvMaquinaria.Rows[e.RowIndex].Cells[0].Value = fila.id;
-            dgvMaquinaria.Rows[e.RowIndex].Cells[1].Value = fila.nombre;
-            dgvMaquinaria.Rows[e.RowIndex].Cells[2].Value = fila.tipo;
+            Service.detalleMaquinaria maqFila = (Service.detalleMaquinaria)dgvMaquinaria.Rows[e.RowIndex].DataBoundItem;
+            dgvMaquinaria.Rows[e.RowIndex].Cells[0].Style.ForeColor = System.Drawing.Color.Black;
+            dgvMaquinaria.Rows[e.RowIndex].Cells[1].Style.ForeColor = System.Drawing.Color.Black;
+            dgvMaquinaria.Rows[e.RowIndex].Cells[2].Style.ForeColor = System.Drawing.Color.Black;
+            dgvMaquinaria.Rows[e.RowIndex].Cells[0].Value = maqFila.maquinaria.id;
+            dgvMaquinaria.Rows[e.RowIndex].Cells[1].Value = maqFila.maquinaria.nombre;
+            dgvMaquinaria.Rows[e.RowIndex].Cells[2].Value = maqFila.fecha.AddHours(5);
         }
 
-        private void calOrdenProduccion_DateChanged(object sender, DateRangeEventArgs e)
+        private void setOrden()
         {
-            if (calOrdenProduccion.SelectionRange.Start.Month != pmp.periodo.AddHours(5).Month)
-            {
-                calOrdenProduccion.SetDate(new DateTime(pmp.periodo.AddHours(5).Year, pmp.periodo.AddHours(5).Month, 1));
-            }
-            
-            int hubo = 0;
             if (pmp.ordenes != null)
             {
                 foreach (Service.ordenProduccion item in pmp.ordenes)
@@ -111,14 +105,28 @@ namespace LP2TECNOQUIMFRONT.frmGerente
                             item.lineasOrden = DBController.listarLineaOrden(item.id);
                         }
                         dgvOrden.DataSource = item.lineasOrden;
-                        hubo = 1;
                     }
                 }
             }
-            if (hubo == 0)
+            else
             {
                 dgvOrden.DataSource = null;
             }
+        }
+        private void calOrdenProduccion_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            setOrden();
+        }
+
+        private void dgvOrden_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            Service.lineaOrden lineaOrdenFila = (Service.lineaOrden)dgvOrden.Rows[e.RowIndex].DataBoundItem;
+            dgvOrden.Rows[e.RowIndex].Cells[0].Style.ForeColor = System.Drawing.Color.Black;
+            dgvOrden.Rows[e.RowIndex].Cells[1].Style.ForeColor = System.Drawing.Color.Black;
+            dgvOrden.Rows[e.RowIndex].Cells[2].Style.ForeColor = System.Drawing.Color.Black;
+            dgvOrden.Rows[e.RowIndex].Cells[0].Value = lineaOrdenFila.producto.nombre;
+            dgvOrden.Rows[e.RowIndex].Cells[1].Value = lineaOrdenFila.producto.idProducto;
+            dgvOrden.Rows[e.RowIndex].Cells[2].Value = lineaOrdenFila.cantProducto;
         }
     }
 }
