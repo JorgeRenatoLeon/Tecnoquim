@@ -71,6 +71,12 @@
     <Compile Include="frmGerente\frmGestionarEmpleado.Designer.cs">
       <DependentUpon>frmGestionarEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGerente\frmResumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerente\frmResumen.Designer.cs">
+      <DependentUpon>frmResumen.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGerente\frmRevisarPlanMaestro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -390,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGerente\frmBuscarEmpleado.resx">
       <DependentUpon>frmBuscarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGerente\frmResumen.resx">
+      <DependentUpon>frmResumen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGerente\frmRevisarPlanMaestro.resx">
       <DependentUpon>frmRevisarPlanMaestro.cs</DependentUpon>

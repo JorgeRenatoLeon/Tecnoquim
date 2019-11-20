@@ -321,9 +321,10 @@
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnGuardar.Location = new System.Drawing.Point(308, 876);
+            this.btnGuardar.Location = new System.Drawing.Point(319, 866);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(96, 44);
+            this.btnGuardar.Size = new System.Drawing.Size(146, 44);
             this.btnGuardar.TabIndex = 43;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -335,7 +336,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(842, 741);
+            this.ClientSize = new System.Drawing.Size(842, 768);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.gbOrden);
             this.Controls.Add(this.groupBox1);
