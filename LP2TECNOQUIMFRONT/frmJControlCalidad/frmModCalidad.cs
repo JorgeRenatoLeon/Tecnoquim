@@ -55,18 +55,21 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            //lorden = new Service.lineaOrden();
-
-            //maquinaria.nombre = txtNombre.Text;
-            //maquinaria.tipo = txtTipo.Text;
-            //detalle.maquinaria = maquinaria;
-            //detalle.fechaSpecified = true;
-            //detalle.fecha = DateTime.Today;
-
-            //maquinaria.id = int.Parse(txtNOrden.Text);
-            lorden.estadoCalidad = (Service.estadoMaterial)cbRol.SelectedValue;
-            DBController.actualizarLineaOrden(lorden,lorden.idLineaOrden);
             
+            string dato = cbRol.SelectedValue.ToString();
+
+
+
+            if(dato == "Bueno")
+            {
+                lorden.estadoCalidad = Service.estadoMaterial.Bueno;
+
+            } else 
+            {
+                lorden.estadoCalidad = Service.estadoMaterial.Pendiente;
+            }
+
+            DBController.actualizarLineaOrden(lorden);
             MessageBox.Show("Producto Verificado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             
         }

@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnInsumos = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -46,6 +47,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(58)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.btnReporte);
             this.panel1.Controls.Add(this.btnNotificar);
             this.panel1.Controls.Add(this.btnPerfil);
             this.panel1.Controls.Add(this.button1);
@@ -64,7 +66,7 @@
             this.btnNotificar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotificar.ForeColor = System.Drawing.Color.White;
             this.btnNotificar.Image = ((System.Drawing.Image)(resources.GetObject("btnNotificar.Image")));
-            this.btnNotificar.Location = new System.Drawing.Point(0, 291);
+            this.btnNotificar.Location = new System.Drawing.Point(0, 396);
             this.btnNotificar.Name = "btnNotificar";
             this.btnNotificar.Size = new System.Drawing.Size(163, 92);
             this.btnNotificar.TabIndex = 9;
@@ -174,6 +176,24 @@
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReporte.FlatAppearance.BorderSize = 0;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.ForeColor = System.Drawing.Color.White;
+            this.btnReporte.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.document;
+            this.btnReporte.Location = new System.Drawing.Point(0, 302);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(163, 92);
+            this.btnReporte.TabIndex = 10;
+            this.btnReporte.Text = "Reportes";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // frmControlCalidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,5 +227,6 @@
         private System.Windows.Forms.Button btnInsumos;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnNotificar;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

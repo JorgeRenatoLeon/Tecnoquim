@@ -144,22 +144,6 @@
   <xs:element name="listarUsuariosResponse" type="tns:listarUsuariosResponse" />
   <xs:element name="verificarUsuario" type="tns:verificarUsuario" />
   <xs:element name="verificarUsuarioResponse" type="tns:verificarUsuarioResponse" />
-  <xs:complexType name="actualizarMaquinaria">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="maquinaria" type="tns:maquinaria" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="maquinaria">
-    <xs:sequence>
-      <xs:element name="estado" type="xs:boolean" />
-      <xs:element name="id" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element minOccurs="0" name="tipo" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarMaquinariaResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="listarPMPEstado">
     <xs:sequence>
       <xs:element name="periodo" type="xs:int" />
@@ -185,6 +169,14 @@
       <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
       <xs:element name="idDetalleM" type="xs:int" />
       <xs:element minOccurs="0" name="maquinaria" type="tns:maquinaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="maquinaria">
+    <xs:sequence>
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ordenProduccion">
@@ -261,6 +253,14 @@
       <xs:element minOccurs="0" name="password" type="xs:string" />
       <xs:element minOccurs="0" name="username" type="xs:string" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarMaquinaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="maquinaria" type="tns:maquinaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarMaquinariaResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarAlmacen">
     <xs:sequence>
@@ -383,21 +383,20 @@
   <xs:complexType name="actualizarInsumoResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="actualizarLineaOrden">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="lineaOrden" type="tns:lineaOrden" />
-      <xs:element name="idOrden" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarLineaOrdenResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="actualizarDetalleAlmacenProducto">
     <xs:sequence>
       <xs:element minOccurs="0" name="detalleAlmacenProducto" type="tns:detalleAlmacenProducto" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarDetalleAlmacenProductoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="actualizarLineaOrden">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lineaOrden" type="tns:lineaOrden" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarLineaOrdenResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarOrdenesProduccionFecha">
@@ -497,6 +496,14 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="insertarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarUsuarioResponse">
+    <xs:sequence />
+  </xs:complexType>
   <xs:complexType name="listarDetalleAlmacenProducto">
     <xs:sequence>
       <xs:element minOccurs="0" name="dato" type="xs:string" />
@@ -507,20 +514,20 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:detalleAlmacenProducto" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarUsuario">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarUsuarioResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="eliminarLineaInsumo">
     <xs:sequence>
       <xs:element name="idInstructivo" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarLineaInsumoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="actualizarDetalleMaquinaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detMaquinaria" type="tns:detalleMaquinaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarDetalleMaquinariaResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="insertarDetalleAlmacenInsumo">
@@ -543,13 +550,15 @@
   <xs:complexType name="insertarDetalleAlmacenInsumoResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="actualizarDetalleMaquinaria">
+  <xs:complexType name="insertarPMP">
     <xs:sequence>
-      <xs:element minOccurs="0" name="detMaquinaria" type="tns:detalleMaquinaria" />
+      <xs:element minOccurs="0" name="politicaStock" type="tns:planMaestroProduccion" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarDetalleMaquinariaResponse">
-    <xs:sequence />
+  <xs:complexType name="insertarPMPResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarTrabajadores">
     <xs:sequence>
@@ -559,16 +568,6 @@
   <xs:complexType name="listarTrabajadoresResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:trabajador" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarPMP">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="politicaStock" type="tns:planMaestroProduccion" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarPMPResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarPMP">
@@ -627,6 +626,16 @@
   <xs:complexType name="actualizarProyeccionVentaResponse">
     <xs:sequence />
   </xs:complexType>
+  <xs:complexType name="listarUsuarios">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarInstructivo">
     <xs:sequence>
       <xs:element minOccurs="0" name="instructivo" type="tns:instructivo" />
@@ -636,16 +645,6 @@
   <xs:complexType name="insertarInstructivoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarUsuarios">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="username" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarUsuariosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarDetalleAlmacenInsumo">
@@ -711,20 +710,20 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:instructivo" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarMaquinaria">
-    <xs:sequence>
-      <xs:element name="id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarMaquinariaResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="actualizarAlmacen">
     <xs:sequence>
       <xs:element minOccurs="0" name="almacen" type="tns:almacen" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarAlmacenResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="eliminarMaquinaria">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarMaquinariaResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="leerMensaje">
@@ -745,14 +744,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:proyeccionVenta" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarLineaOrden">
-    <xs:sequence>
-      <xs:element name="idLineaOrden" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarLineaOrdenResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="insertarRol">
     <xs:sequence>
       <xs:element minOccurs="0" name="rol" type="tns:rol" />
@@ -761,12 +752,12 @@
   <xs:complexType name="insertarRolResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="insertarPoliticaStock">
+  <xs:complexType name="eliminarLineaOrden">
     <xs:sequence>
-      <xs:element minOccurs="0" name="politicaStock" type="tns:politicaStock" />
+      <xs:element name="idLineaOrden" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarPoliticaStockResponse">
+  <xs:complexType name="eliminarLineaOrdenResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarLineaOrden">
@@ -779,13 +770,13 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:lineaOrden" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarPoliticaStock">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarPoliticaStockResponse">
+  <xs:complexType name="insertarPoliticaStock">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:politicaStock" />
+      <xs:element minOccurs="0" name="politicaStock" type="tns:politicaStock" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPoliticaStockResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarInsumo">
     <xs:sequence>
@@ -795,6 +786,14 @@
   <xs:complexType name="listarInsumoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:insumo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPoliticaStock">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPoliticaStockResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:politicaStock" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarTrabajador">
@@ -916,15 +915,6 @@
       <xs:element minOccurs="0" name="return" type="tns:trabajador" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarDetalleMaquinaria">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="detMaquinaria" type="tns:detalleMaquinaria" />
-      <xs:element name="idPMP" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarDetalleMaquinariaResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="listarMaquinaria">
     <xs:sequence>
       <xs:element minOccurs="0" name="dato" type="xs:string" />
@@ -934,6 +924,15 @@
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:maquinaria" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarDetalleMaquinaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detMaquinaria" type="tns:detalleMaquinaria" />
+      <xs:element name="idPMP" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarDetalleMaquinariaResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="actualizarDetalleAlmacenInsumo">
     <xs:sequence>
