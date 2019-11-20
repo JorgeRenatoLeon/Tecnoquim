@@ -31,8 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarOrden));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
-            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
+            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.lblCodigoProducto = new System.Windows.Forms.Label();
             this.gbDatosOrden = new System.Windows.Forms.GroupBox();
-            this.btnOrdenes = new System.Windows.Forms.Button();
             this.dtpOrden = new System.Windows.Forms.DateTimePicker();
             this.lblFecha = new System.Windows.Forms.Label();
             this.txtNOrden = new System.Windows.Forms.TextBox();
@@ -67,8 +67,9 @@
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnNuevo,
-            this.btnGuardar,
             this.btnModificar,
+            this.btnGuardar,
+            this.btnBuscar,
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -85,6 +86,15 @@
             this.btnNuevo.Text = "&Nuevo";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(113, 29);
+            this.btnModificar.Text = "&Modificar";
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // btnGuardar
             // 
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
@@ -94,14 +104,14 @@
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
-            // btnModificar
+            // btnBuscar
             // 
-            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(113, 29);
-            this.btnModificar.Text = "&Modificar";
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(88, 29);
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnCancelar
             // 
@@ -178,7 +188,6 @@
             // 
             // gbDatosOrden
             // 
-            this.gbDatosOrden.Controls.Add(this.btnOrdenes);
             this.gbDatosOrden.Controls.Add(this.dtpOrden);
             this.gbDatosOrden.Controls.Add(this.lblFecha);
             this.gbDatosOrden.Controls.Add(this.txtNOrden);
@@ -191,18 +200,6 @@
             this.gbDatosOrden.TabIndex = 27;
             this.gbDatosOrden.TabStop = false;
             this.gbDatosOrden.Text = "Datos de la Orden";
-            // 
-            // btnOrdenes
-            // 
-            this.btnOrdenes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnOrdenes.Location = new System.Drawing.Point(441, 37);
-            this.btnOrdenes.Name = "btnOrdenes";
-            this.btnOrdenes.Size = new System.Drawing.Size(68, 28);
-            this.btnOrdenes.TabIndex = 37;
-            this.btnOrdenes.Text = "...";
-            this.btnOrdenes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnOrdenes.UseVisualStyleBackColor = true;
-            this.btnOrdenes.Click += new System.EventHandler(this.btnOrdenes_Click);
             // 
             // dtpOrden
             // 
@@ -398,6 +395,6 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnOrdenes;
+        private System.Windows.Forms.ToolStripButton btnBuscar;
     }
 }

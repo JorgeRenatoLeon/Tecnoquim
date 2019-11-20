@@ -60,6 +60,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 }
                 dtpOrden.Enabled = false;
             }
+            estadoComponentes(Estado.Inicial);
         }
 
         private void llenarDatos(ordenProduccion orden)
@@ -122,12 +123,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     gbDatosOrden.Enabled = true;
                     txtNOrden.Enabled = false;
                     dtpOrden.Enabled = false;
-                    btnOrdenes.Enabled = true;
-
-                    if (ordenRecivida != null)
-                    {
-                        btnOrdenes.Visible = false;
-                    }
+                    
 
                     //Asignar el estado
                     estadoFormulario = estado;
@@ -162,10 +158,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     gbDetalleOrden.Enabled = true;
                     gbDatosOrden.Enabled = true;
 
-                    if (ordenRecivida != null)
-                    {
-                        btnOrdenes.Visible = false;
-                    }
 
                     //Asignar el estado
                     estadoFormulario = estado;
@@ -200,12 +192,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     gbDatosOrden.Enabled = true;
                     txtNOrden.Enabled = false;
                     dtpOrden.Enabled = false;
-                    btnOrdenes.Enabled = true;
 
-                    if (ordenRecivida != null)
-                    {
-                        btnOrdenes.Visible = false;
-                    }
 
                     //Asignar el estado
                     estadoFormulario = estado;
@@ -240,10 +227,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     gbDetalleOrden.Enabled = true;
                     gbDatosOrden.Enabled = true;
 
-                    if (ordenRecivida != null)
-                    {
-                        btnOrdenes.Visible = false;
-                    }
 
                     break;
                 default:
@@ -422,8 +405,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             estadoFormulario = Estado.Modificar;
             estadoComponentes(estadoFormulario);
         }
+        
 
-        private void btnOrdenes_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             frmOrdenes formOrd = new frmOrdenes();
             if (formOrd.ShowDialog(this) == DialogResult.OK)

@@ -62,6 +62,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 flagHistorial = 1;
                 llenarDatos(pmpSelec);
             }
+            estadoComponentes(Estado.Inicial);
         }
 
         private void llenarDatos(Service.planMaestroProduccion PMPSeleccionado)
@@ -91,12 +92,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     btnEditarOrden.Enabled = false;
                     btnBuscarMaquinaria.Enabled = false;
                     btnAgregarMaquinaria.Enabled = false;
-
                     // Etiquetas
                     lblCodigoMaquinaria.Enabled = false;
                     lblNombreMaquinaria.Enabled = false;
                     lblCodigoPMP.Enabled = false;
-
                     // Texto
                     txtCodigo.Enabled = false;
                     txtNombre.Enabled = false;
@@ -104,7 +103,8 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
                     // Calendario
                     calOrdenProduccion.Enabled = false;
-                    calOrdenProduccion.SetDate(new DateTime(DateTime.Now.AddMonths(1).Year, DateTime.Now.AddMonths(1).Month, 1));
+                    calOrdenProduccion.SetDate(
+                        new DateTime(DateTime.Now.AddMonths(1).Year, DateTime.Now.AddMonths(1).Month, 1));
 
                     // Data Grid View
                     dgvMaquinaria.Enabled = false;
@@ -543,6 +543,12 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void dgvOrden_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmHistorialPMP form = new frmHistorialPMP();
+            form.ShowDialog(this);
         }
     }
 }

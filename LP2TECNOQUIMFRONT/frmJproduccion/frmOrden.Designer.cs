@@ -32,12 +32,12 @@
             this.button7 = new System.Windows.Forms.Button();
             this.btnGestionar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -55,9 +55,9 @@
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.button7.Location = new System.Drawing.Point(430, 311);
+            this.button7.Location = new System.Drawing.Point(320, 272);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(365, 65);
+            this.button7.Size = new System.Drawing.Size(352, 65);
             this.button7.TabIndex = 27;
             this.button7.Text = "Ver Historial";
             this.button7.UseVisualStyleBackColor = false;
@@ -74,9 +74,9 @@
             this.btnGestionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGestionar.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnGestionar.Location = new System.Drawing.Point(430, 184);
+            this.btnGestionar.Location = new System.Drawing.Point(320, 161);
             this.btnGestionar.Name = "btnGestionar";
-            this.btnGestionar.Size = new System.Drawing.Size(365, 65);
+            this.btnGestionar.Size = new System.Drawing.Size(352, 65);
             this.btnGestionar.TabIndex = 25;
             this.btnGestionar.Text = "Gestionar Orden de Produccion";
             this.btnGestionar.UseVisualStyleBackColor = false;
@@ -94,18 +94,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 550);
+            this.panel1.Size = new System.Drawing.Size(166, 505);
             this.panel1.TabIndex = 28;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(150)))), ((int)(((byte)(19)))));
-            this.panel3.Controls.Add(this.pbLogo);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(166, 99);
-            this.panel3.TabIndex = 0;
             // 
             // btnReporte
             // 
@@ -197,6 +187,16 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(150)))), ((int)(((byte)(19)))));
+            this.panel3.Controls.Add(this.pbLogo);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(166, 99);
+            this.panel3.TabIndex = 0;
+            // 
             // pbLogo
             // 
             this.pbLogo.Image = global::LP2TECNOQUIMFRONT.Properties.Resources.logo_web;
@@ -212,7 +212,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.background_11_wide;
-            this.ClientSize = new System.Drawing.Size(1100, 550);
+            this.ClientSize = new System.Drawing.Size(853, 505);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.btnGestionar);

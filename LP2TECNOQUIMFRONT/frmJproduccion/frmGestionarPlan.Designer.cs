@@ -57,6 +57,7 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calOrdenProduccion = new System.Windows.Forms.MonthCalendar();
             this.btnBuscarOrden = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinaria)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -70,8 +71,9 @@
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnNuevo,
-            this.btnGuardar,
             this.btnModificar,
+            this.btnGuardar,
+            this.btnBuscar,
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -174,6 +176,7 @@
             this.txtNOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNOrden.Location = new System.Drawing.Point(138, 30);
             this.txtNOrden.Name = "txtNOrden";
+            this.txtNOrden.ReadOnly = true;
             this.txtNOrden.Size = new System.Drawing.Size(152, 29);
             this.txtNOrden.TabIndex = 20;
             // 
@@ -368,6 +371,15 @@
             this.btnBuscarOrden.UseVisualStyleBackColor = true;
             this.btnBuscarOrden.Click += new System.EventHandler(this.button4_Click);
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(88, 29);
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // frmGestionarPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,5 +437,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ToolStripButton btnBuscar;
     }
 }

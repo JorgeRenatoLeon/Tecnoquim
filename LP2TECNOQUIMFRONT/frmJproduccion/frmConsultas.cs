@@ -1,4 +1,5 @@
 ﻿
+using LP2TECNOQUIMFRONT.frmJAlmacen;
 using System;
 using System.Windows.Forms;
 
@@ -50,14 +51,14 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
-            frmProducto formProducto = new frmProducto();
-            formProducto.ShowDialog(this);
+            frmStocksP form = new frmStocksP();
+            form.ShowDialog(this);
         }
 
         private void btnInsumos_Click(object sender, EventArgs e)
         {
-            frmInsumos formInsumos = new frmInsumos();
-            formInsumos.ShowDialog(this);
+            frmStocksI form = new frmStocksI();
+            form.ShowDialog(this);
         }
 
         private void btnMaquinaria_Click(object sender, EventArgs e)
