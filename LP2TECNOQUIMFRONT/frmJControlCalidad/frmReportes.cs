@@ -54,7 +54,16 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-
+            saveFileDialog1.ShowDialog();
+            byte[] arreglo1 = DBController.generarReporteProductosCalidadPDF();
+            if (arreglo1 == null)
+            {
+                MessageBox.Show("Ups, problema con el server", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                File.WriteAllBytes(saveFileDialog1.FileName + ".pdf", arreglo1);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
