@@ -583,6 +583,9 @@
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.actualizarAlmacenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoEstadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.actualizarDetalleAlmacenInsumoPorOrdenResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

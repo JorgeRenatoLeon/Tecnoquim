@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtLote = new System.Windows.Forms.TextBox();
             this.cbRol = new System.Windows.Forms.ComboBox();
             this.btnProductos = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,8 +43,6 @@
             this.txtNom = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.lblBack = new System.Windows.Forms.LinkLabel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtLote = new System.Windows.Forms.TextBox();
             this.gbDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +81,26 @@
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos ";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(706, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 25);
+            this.label3.TabIndex = 83;
+            this.label3.Text = "Lote:";
+            // 
+            // txtLote
+            // 
+            this.txtLote.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.txtLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtLote.Location = new System.Drawing.Point(780, 100);
+            this.txtLote.Name = "txtLote";
+            this.txtLote.Size = new System.Drawing.Size(99, 30);
+            this.txtLote.TabIndex = 84;
+            // 
             // cbRol
             // 
             this.cbRol.FormattingEnabled = true;
@@ -103,6 +123,7 @@
             this.btnProductos.TabIndex = 81;
             this.btnProductos.Text = "Guardar";
             this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // label2
             // 
@@ -205,26 +226,6 @@
             this.lblBack.Text = "< Regresar";
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(706, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 25);
-            this.label3.TabIndex = 83;
-            this.label3.Text = "Lote:";
-            // 
-            // txtLote
-            // 
-            this.txtLote.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.txtLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtLote.Location = new System.Drawing.Point(780, 100);
-            this.txtLote.Name = "txtLote";
-            this.txtLote.Size = new System.Drawing.Size(99, 30);
-            this.txtLote.TabIndex = 84;
             // 
             // frmModCalidadI
             // 

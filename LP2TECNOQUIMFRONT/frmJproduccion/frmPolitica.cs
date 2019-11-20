@@ -17,7 +17,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         {
             InitializeComponent();
             dgvPolitica.AutoGenerateColumns = false;
-            dgvPolitica.DataSource = DBController.listarPoliticaStock();
+            dgvPolitica.DataSource = DBController.listarPoliticaStock("");
         }
         private void dgvPolitica_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -34,7 +34,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvPolitica.DataSource = DBController.listarPoliticaStock();
+            dgvPolitica.DataSource = DBController.listarPoliticaStock("");
         }
     }
 }
