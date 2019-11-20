@@ -77,6 +77,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             }
             DBController.insertarMensaje(mensaje);
             MessageBox.Show("Se ha actualizado correctamente el plan de maestro de producción", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void dgvMaquinaria_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

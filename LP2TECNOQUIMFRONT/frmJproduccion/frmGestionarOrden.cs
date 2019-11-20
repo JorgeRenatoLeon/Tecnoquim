@@ -61,7 +61,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 }
                 dtpOrden.Enabled = false;
             }
-            estadoComponentes(Estado.Inicial);
         }
 
         private void llenarDatos(ordenProduccion orden)

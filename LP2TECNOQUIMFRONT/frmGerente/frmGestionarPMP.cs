@@ -70,7 +70,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             {
                 pmp = pmps[0];
                 frmRevisarPlanMaestro frmGestionarPlanM = new frmRevisarPlanMaestro(pmp, true);
-                frmGestionarPlanM.Visible = true;
+                frmGestionarPlanM.ShowDialog(this);
             }
         }
 

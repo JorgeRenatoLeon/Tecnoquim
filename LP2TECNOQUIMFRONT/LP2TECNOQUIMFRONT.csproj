@@ -299,12 +299,6 @@
     <Compile Include="frmJproduccion\frmGestionarPlan.Designer.cs">
       <DependentUpon>frmGestionarPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmJproduccion\frmHistorialOrden.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmJproduccion\frmHistorialOrden.Designer.cs">
-      <DependentUpon>frmHistorialOrden.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmJproduccion\frmHistorialPMP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -522,9 +516,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmGestionarPlan.resx">
       <DependentUpon>frmGestionarPlan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmJproduccion\frmHistorialOrden.resx">
-      <DependentUpon>frmHistorialOrden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmHistorialPMP.resx">
       <DependentUpon>frmHistorialPMP.cs</DependentUpon>

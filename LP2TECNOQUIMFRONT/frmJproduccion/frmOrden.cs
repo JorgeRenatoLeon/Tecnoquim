@@ -21,7 +21,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void button7_Click(object sender, EventArgs e)
         {
-            frmHistorialOrden form = new frmHistorialOrden();
+            frmOrdenes form = new frmOrdenes();
             form.ShowDialog(this);
         }
 

@@ -62,14 +62,16 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 flagHistorial = 1;
                 llenarDatos(pmpSelec);
             }
-            estadoComponentes(Estado.Inicial);
         }
 
         private void llenarDatos(Service.planMaestroProduccion PMPSeleccionado)
         {
             PMP = PMPSeleccionado;
-            //maquinarias = new BindingList<maquinaria>(DBController.listarMaquinaria(PMP.id));
-            //if (detMaquinarias != null)
+            detMaquinarias = new BindingList<detalleMaquinaria>(DBController.listarDetalleMaquinaria(PMP.id));
+            if (detMaquinarias != null)
+            {
+                dgvMaquinaria.DataSource = detMaquinarias;
+            }
             txtNOrden.Text = PMP.id.ToString();
             Service.ordenProduccion[] lo = DBController.listarOrdenesProduccionPlan(PMP.id);
             PMP.ordenes = lo.ToArray();

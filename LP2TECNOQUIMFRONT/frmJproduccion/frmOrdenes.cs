@@ -39,7 +39,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             dgvHistorialPlan.Rows[e.RowIndex].Cells["Codigo"].Style.ForeColor = System.Drawing.Color.Black;
             dgvHistorialPlan.Rows[e.RowIndex].Cells["FechaOrden"].Style.ForeColor = System.Drawing.Color.Black;
             dgvHistorialPlan.Rows[e.RowIndex].Cells["Codigo"].Value = OrdenFila.id;
-            dgvHistorialPlan.Rows[e.RowIndex].Cells["FechaOrden"].Value = OrdenFila.fecha;
+            dgvHistorialPlan.Rows[e.RowIndex].Cells["FechaOrden"].Value = OrdenFila.fecha.ToString("dd/MM/yy");
         }
     }
 }
