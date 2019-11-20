@@ -179,6 +179,12 @@
     <Compile Include="frmJControlCalidad\frmControlCalidad.designer.cs">
       <DependentUpon>frmControlCalidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJControlCalidad\frmInstructivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJControlCalidad\frmInstructivo.Designer.cs">
+      <DependentUpon>frmInstructivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJControlCalidad\frmListaInsumo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -456,6 +462,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJControlCalidad\frmControlCalidad.resx">
       <DependentUpon>frmControlCalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJControlCalidad\frmInstructivo.resx">
+      <DependentUpon>frmInstructivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJControlCalidad\frmListaInsumo.resx">
       <DependentUpon>frmListaInsumo.cs</DependentUpon>
