@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2TECNOQUIMFRONT.Service;
 
 namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 {
@@ -14,6 +15,9 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
     {
         Service.ServicioClient DBController = new Service.ServicioClient();
         Service.detalleAlmacenInsumo detalleSeleccionada = new Service.detalleAlmacenInsumo();
+
+        public detalleAlmacenInsumo DetalleSeleccionada { get => detalleSeleccionada; set => detalleSeleccionada = value; }
+
         //Service.ordenProduccion[] lineas;
 
 
@@ -32,6 +36,12 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             dgvListaOrden.Rows[e.RowIndex].Cells["Lote"].Value = detFila.nLote;
             dgvListaOrden.Rows[e.RowIndex].Cells["Periodo"].Value = detFila.periodo;
             dgvListaOrden.Rows[e.RowIndex].Cells["Stock"].Value = detFila.stock;
+        }
+
+        private void btnBuscarInsumo_Click(object sender, EventArgs e)
+        {
+            DetalleSeleccionada = (Service.detalleAlmacenInsumo)dgvListaOrden.CurrentRow.DataBoundItem;
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

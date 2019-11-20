@@ -78,6 +78,7 @@
             this.btnBuscarInsumo.TabIndex = 83;
             this.btnBuscarInsumo.Text = "Seleccionar";
             this.btnBuscarInsumo.UseVisualStyleBackColor = false;
+            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
             // 
             // Insumo
             // 
