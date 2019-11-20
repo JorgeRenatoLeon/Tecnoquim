@@ -61,10 +61,17 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         private void btnRevisarPMP_Click(object sender, EventArgs e)
         {
-            BindingList<Service.planMaestroProduccion> pmps = new BindingList<Service.planMaestroProduccion>(DBController.listarPMPEstado(2));
-            pmp = pmps[0];
-            frmRevisarPlanMaestro frmGestionarPlanM = new frmRevisarPlanMaestro(pmp, true);
-            frmGestionarPlanM.Visible = true;
+            Service.planMaestroProduccion[] pmps = DBController.listarPMPEstado(2);
+            if (pmps == null)
+            {
+                MessageBox.Show("No hay planes pendientes.", "Mensaje Confirmacion", MessageBoxButtons.OK);
+            }
+            else
+            {
+                pmp = pmps[0];
+                frmRevisarPlanMaestro frmGestionarPlanM = new frmRevisarPlanMaestro(pmp, true);
+                frmGestionarPlanM.Visible = true;
+            }
         }
 
         private void btnHistorialPMP_Click(object sender, EventArgs e)
