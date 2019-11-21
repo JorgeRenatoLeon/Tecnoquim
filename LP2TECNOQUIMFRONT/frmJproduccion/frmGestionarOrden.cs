@@ -68,7 +68,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void llenarDatos(ordenProduccion orden)
         {
             txtNOrden.Text = orden.id.ToString();
-            dtpOrden.Value = orden.fecha;
+            dtpOrden.Value = orden.fecha.AddHours(5);
             Service.lineaOrden[] l = DBController.listarLineaOrden(orden.id);
             if (l != null)
             {
@@ -82,6 +82,14 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             }
             estadoFormulario = Estado.Buscar;
             estadoComponentes(Estado.Buscar);
+            if (flagHist == 2)
+            {
+                btnNuevo.Visible = false;
+                btnModificar.Visible = false;
+                btnGuardar.Visible = false;
+                btnCancelar.Visible = false;
+                btnVerificar.Visible = true;
+            }
         }
 
         public frmGestionarOrden(DateTime periodoPlanMaestroProduccion, int idPlanMaestroProduccion)
@@ -133,6 +141,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                         btnModificar.Enabled = false;
                         btnCancelar.Enabled = false;
                     }
+                    btnVerificar.Visible = false;
                     //Asignar el estado
                     estadoFormulario = estado;
 
@@ -174,6 +183,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                         btnModificar.Enabled = false;
                         btnCancelar.Enabled = false;
                     }
+                    btnVerificar.Visible = false;
 
                     //Asignar el estado
                     estadoFormulario = estado;
@@ -217,6 +227,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                         btnModificar.Enabled = false;
                         btnCancelar.Enabled = false;
                     }
+                    btnVerificar.Visible = false;
 
                     //Asignar el estado
                     estadoFormulario = estado;
@@ -260,44 +271,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                         btnModificar.Enabled = false;
                         btnCancelar.Enabled = false;
                     }
+                    btnVerificar.Visible = false;
                     break;
                 default:
                     break;
-            }
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            if ((_periodoPlanMaestroProduccion.Month == dtpOrden.Value.Month) && (_periodoPlanMaestroProduccion.Year == dtpOrden.Value.Year))
-            {
-                _orderProduccion = new Service.ordenProduccion();
-                _orderProduccion.fecha = dtpOrden.Value;
-                _orderProduccion.lineasOrden = (lineaOrden[])dgvOrdenProduccion.DataSource; // No sé si esto funcione
-
-                /* if (estadoFormulario == Estado.Nuevo)
-                {
-                    DBController.insertarOrdenProduccion(_orderProduccion, _idPlanMaestroProduccion);
-
-                    foreach (lineaOrden l in _orderProduccion.lineasOrden)
-                    {
-                        DBController.insertarLineaOrden(l, _orderProduccion.id);
-                    }
-                    MessageBox.Show("Orden de Producción correctamente añadida.", "Mensaje Confirmacion", MessageBoxButtons.OK);
-                }
-                else if (estadoFormulario == Estado.Modificar)
-                {
-                    DBController.actualizarOrdenProduccion(_orderProduccion, _idPlanMaestroProduccion);
-
-                    foreach (lineaOrden l in _orderProduccion.lineasOrden)
-                    {
-                        DBController.actualizarLineaOrden(l, _orderProduccion.id);
-                    }
-                    MessageBox.Show("Orden de Producción correctamente modificada.", "Mensaje Confirmacion", MessageBoxButtons.OK);
-                } */
-            }
-            else
-            {
-                MessageBox.Show("El mes y/o el año de la Orden de Producción no coincide con el del Plan Maestro de Producción.", "Mensaje Error", MessageBoxButtons.OK);
             }
         }
 
@@ -454,6 +431,15 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             {
                 _orderProduccion = formOrd.OrdenSeleccionada;
                 llenarDatos(_orderProduccion);
+            }
+        }
+
+        private void btnVerificar_Click(object sender, EventArgs e)
+        {
+            bool disponible = DBController.verificarDisponibilidadInsumos(_orderProduccion);
+            if (!disponible)
+            {
+                MessageBox.Show("No hay Insumos Suficientes para realizar la Orden. Se notificara a Almacen");
             }
         }
     }

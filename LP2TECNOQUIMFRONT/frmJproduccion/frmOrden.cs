@@ -86,5 +86,12 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             close = 1;
             this.Close();
         }
+
+        private void btnOrdenDiaria_Click(object sender, EventArgs e)
+        {
+            Service.ordenProduccion[] ordens = DBController.listarOrdenesProduccionFecha(DateTime.Now.ToString("yy-MM-dd"));
+            frmGestionarOrden frmGestionarOrden = new frmGestionarOrden(ordens[0],0,2);
+            frmGestionarOrden.ShowDialog(this);
+        }
     }
 }

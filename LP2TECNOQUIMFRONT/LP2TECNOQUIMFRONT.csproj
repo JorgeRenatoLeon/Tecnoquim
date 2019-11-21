@@ -856,6 +856,9 @@
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.verificarDisponibilidadInsumosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.verificarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

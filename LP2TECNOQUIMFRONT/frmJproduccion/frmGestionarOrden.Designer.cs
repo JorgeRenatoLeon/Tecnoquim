@@ -54,6 +54,7 @@
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVerificar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.gbDatosGenerales.SuspendLayout();
             this.gbDatosOrden.SuspendLayout();
@@ -68,7 +69,8 @@
             this.btnNuevo,
             this.btnModificar,
             this.btnGuardar,
-            this.btnCancelar});
+            this.btnCancelar,
+            this.btnVerificar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(730, 32);
@@ -331,6 +333,16 @@
             this.Cantidad.ReadOnly = true;
             this.Cantidad.Width = 175;
             // 
+            // btnVerificar
+            // 
+            this.btnVerificar.Image = ((System.Drawing.Image)(resources.GetObject("btnVerificar.Image")));
+            this.btnVerificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(177, 29);
+            this.btnVerificar.Text = "Verificar Insumos";
+            this.btnVerificar.ToolTipText = "Verificar Insumos";
+            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
+            // 
             // frmGestionarOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,5 +396,6 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ToolStripButton btnVerificar;
     }
 }

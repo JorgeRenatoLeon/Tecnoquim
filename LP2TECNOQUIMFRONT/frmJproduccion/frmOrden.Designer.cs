@@ -39,6 +39,7 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.btnOrdenDiaria = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -55,7 +56,7 @@
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.button7.Location = new System.Drawing.Point(321, 203);
+            this.button7.Location = new System.Drawing.Point(319, 276);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(356, 58);
             this.button7.TabIndex = 27;
@@ -198,6 +199,25 @@
             this.pbLogo.TabIndex = 2;
             this.pbLogo.TabStop = false;
             // 
+            // btnOrdenDiaria
+            // 
+            this.btnOrdenDiaria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOrdenDiaria.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnOrdenDiaria.BackColor = System.Drawing.Color.White;
+            this.btnOrdenDiaria.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
+            this.btnOrdenDiaria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrdenDiaria.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrdenDiaria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnOrdenDiaria.Location = new System.Drawing.Point(319, 152);
+            this.btnOrdenDiaria.Name = "btnOrdenDiaria";
+            this.btnOrdenDiaria.Size = new System.Drawing.Size(356, 70);
+            this.btnOrdenDiaria.TabIndex = 29;
+            this.btnOrdenDiaria.Text = "Verificar Insumos para Orden del día";
+            this.btnOrdenDiaria.UseVisualStyleBackColor = false;
+            this.btnOrdenDiaria.Click += new System.EventHandler(this.btnOrdenDiaria_Click);
+            // 
             // frmOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,6 +225,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.background_11_wide;
             this.ClientSize = new System.Drawing.Size(857, 498);
+            this.Controls.Add(this.btnOrdenDiaria);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button7);
             this.Name = "frmOrden";
@@ -230,5 +251,6 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Label lblCantNotificaciones;
+        private System.Windows.Forms.Button btnOrdenDiaria;
     }
 }
