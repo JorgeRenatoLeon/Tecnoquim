@@ -97,7 +97,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
             Service.proyeccionVenta[] pvs = DBController.listarProyeccionVenta("");
             if (pvs == null)
             {
-                MessageBox.Show("No hay planes pendientes.", "Mensaje Confirmacion", MessageBoxButtons.OK);
+                MessageBox.Show("No hay proyecciones.", "Mensaje Confirmacion", MessageBoxButtons.OK);
             }
             else
             {

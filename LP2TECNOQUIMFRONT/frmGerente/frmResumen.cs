@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -94,7 +95,16 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         private void btnGenRepI_Click(object sender, EventArgs e)
         {
-
+            saveFileDialog1.ShowDialog();
+            byte[] arreglo1 = DBController.generarReporteGeneralPDF(cbMesI.SelectedIndex + 1, int.Parse(cbAnioI.SelectedValue.ToString()));
+            if (arreglo1 == null)
+            {
+                MessageBox.Show("Ups, problema con el server", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                File.WriteAllBytes(saveFileDialog1.FileName + ".pdf", arreglo1);
+            }
         }
     }
 }
