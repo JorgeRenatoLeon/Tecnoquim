@@ -101,6 +101,12 @@
   <message name="insertarProductoResponse">
     <part name="parameters" element="tns:insertarProductoResponse" />
   </message>
+  <message name="generarReporteGeneralPDF">
+    <part name="parameters" element="tns:generarReporteGeneralPDF" />
+  </message>
+  <message name="generarReporteGeneralPDFResponse">
+    <part name="parameters" element="tns:generarReporteGeneralPDFResponse" />
+  </message>
   <message name="actualizarAlmacen">
     <part name="parameters" element="tns:actualizarAlmacen" />
   </message>
@@ -532,6 +538,10 @@
       <input wsam:Action="http://services.lp2tecnoquim/Servicio/insertarProductoRequest" message="tns:insertarProducto" />
       <output wsam:Action="http://services.lp2tecnoquim/Servicio/insertarProductoResponse" message="tns:insertarProductoResponse" />
     </operation>
+    <operation name="generarReporteGeneralPDF">
+      <input wsam:Action="http://services.lp2tecnoquim/Servicio/generarReporteGeneralPDFRequest" message="tns:generarReporteGeneralPDF" />
+      <output wsam:Action="http://services.lp2tecnoquim/Servicio/generarReporteGeneralPDFResponse" message="tns:generarReporteGeneralPDFResponse" />
+    </operation>
     <operation name="actualizarAlmacen">
       <input wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarAlmacenRequest" message="tns:actualizarAlmacen" />
       <output wsam:Action="http://services.lp2tecnoquim/Servicio/actualizarAlmacenResponse" message="tns:actualizarAlmacenResponse" />
@@ -915,6 +925,15 @@
       </output>
     </operation>
     <operation name="insertarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarReporteGeneralPDF">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

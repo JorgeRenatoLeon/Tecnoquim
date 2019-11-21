@@ -58,6 +58,8 @@
   <xs:element name="eliminarTrabajadorResponse" type="tns:eliminarTrabajadorResponse" />
   <xs:element name="enviarMensaje" type="tns:enviarMensaje" />
   <xs:element name="enviarMensajeResponse" type="tns:enviarMensajeResponse" />
+  <xs:element name="generarReporteGeneralPDF" type="tns:generarReporteGeneralPDF" />
+  <xs:element name="generarReporteGeneralPDFResponse" type="tns:generarReporteGeneralPDFResponse" />
   <xs:element name="generarReporteInsumosCalidadPDF" type="tns:generarReporteInsumosCalidadPDF" />
   <xs:element name="generarReporteInsumosCalidadPDFResponse" type="tns:generarReporteInsumosCalidadPDFResponse" />
   <xs:element name="generarReporteInsumosRestringidosPDF" type="tns:generarReporteInsumosRestringidosPDF" />
@@ -595,6 +597,17 @@
   </xs:complexType>
   <xs:complexType name="actualizarPMPResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="generarReporteGeneralPDF">
+    <xs:sequence>
+      <xs:element name="mes" type="xs:int" />
+      <xs:element name="anio" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteGeneralPDFResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPMP">
     <xs:sequence>

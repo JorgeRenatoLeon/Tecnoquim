@@ -153,6 +153,15 @@ namespace LP2TECNOQUIMFRONT.Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/insertarProductoRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/insertarProductoResponse")]
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.insertarProductoResponse> insertarProductoAsync(LP2TECNOQUIMFRONT.Service.insertarProductoRequest request);
         
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/generarReporteGeneralPDFRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/generarReporteGeneralPDFResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFResponse generarReporteGeneralPDF(LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/generarReporteGeneralPDFRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/generarReporteGeneralPDFResponse")]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFResponse> generarReporteGeneralPDFAsync(LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFRequest request);
+        
         // CODEGEN: El parámetro 'almacen' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.lp2tecnoquim/Servicio/actualizarAlmacenRequest", ReplyAction="http://services.lp2tecnoquim/Servicio/actualizarAlmacenResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -2937,6 +2946,47 @@ namespace LP2TECNOQUIMFRONT.Service {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteGeneralPDF", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class generarReporteGeneralPDFRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int mes;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int anio;
+        
+        public generarReporteGeneralPDFRequest() {
+        }
+        
+        public generarReporteGeneralPDFRequest(int mes, int anio) {
+            this.mes = mes;
+            this.anio = anio;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteGeneralPDFResponse", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
+    public partial class generarReporteGeneralPDFResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.lp2tecnoquim/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
+        
+        public generarReporteGeneralPDFResponse() {
+        }
+        
+        public generarReporteGeneralPDFResponse(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarAlmacen", WrapperNamespace="http://services.lp2tecnoquim/", IsWrapped=true)]
     public partial class actualizarAlmacenRequest {
         
@@ -5254,6 +5304,31 @@ namespace LP2TECNOQUIMFRONT.Service {
             LP2TECNOQUIMFRONT.Service.insertarProductoRequest inValue = new LP2TECNOQUIMFRONT.Service.insertarProductoRequest();
             inValue.producto = producto;
             return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).insertarProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFResponse LP2TECNOQUIMFRONT.Service.Servicio.generarReporteGeneralPDF(LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFRequest request) {
+            return base.Channel.generarReporteGeneralPDF(request);
+        }
+        
+        public byte[] generarReporteGeneralPDF(int mes, int anio) {
+            LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFRequest inValue = new LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFRequest();
+            inValue.mes = mes;
+            inValue.anio = anio;
+            LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFResponse retVal = ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).generarReporteGeneralPDF(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFResponse> LP2TECNOQUIMFRONT.Service.Servicio.generarReporteGeneralPDFAsync(LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFRequest request) {
+            return base.Channel.generarReporteGeneralPDFAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFResponse> generarReporteGeneralPDFAsync(int mes, int anio) {
+            LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFRequest inValue = new LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFRequest();
+            inValue.mes = mes;
+            inValue.anio = anio;
+            return ((LP2TECNOQUIMFRONT.Service.Servicio)(this)).generarReporteGeneralPDFAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbMesI = new System.Windows.Forms.ComboBox();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -285,5 +286,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbMesI;
         private System.Windows.Forms.Label lblCantNotificaciones;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
