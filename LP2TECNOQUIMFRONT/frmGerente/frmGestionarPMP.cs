@@ -26,21 +26,26 @@ namespace LP2TECNOQUIMFRONT.frmGerente
                 not = mensajes.Length;
             }
             InitializeComponent();
-            if (cont == 1)
-            {
-                Service.planMaestroProduccion[] pmps = DBController.listarPMPEstado(2);
-                if (pmps != null)
-                {
-                    pmp = pmps[0];
-                    frmRevisarPlanMaestro frmGestionarPlanM = new frmRevisarPlanMaestro(pmp, true);
-                    frmGestionarPlanM.ShowDialog(this);
-                }
-            }
+            this.Visible = true;
             lblCantNotificaciones.Visible = false;
             if (not > 0)
             {
                 lblCantNotificaciones.Visible = true;
                 lblCantNotificaciones.Text = not.ToString();
+            }
+            if (cont == 1)
+            {
+                Service.planMaestroProduccion[] pmps = DBController.listarPMPEstado(2);
+                if (pmps == null)
+                {
+                    MessageBox.Show("No hay planes pendientes.", "Mensaje Confirmacion", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    pmp = pmps[0];
+                    frmRevisarPlanMaestro frmGestionarPlanM = new frmRevisarPlanMaestro(pmp, true, this.trabajador);
+                    frmGestionarPlanM.ShowDialog(this);
+                }
             }
         }
 
@@ -54,7 +59,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             else
             {
                 pmp = pmps[0];
-                frmRevisarPlanMaestro frmGestionarPlanM = new frmRevisarPlanMaestro(pmp, true);
+                frmRevisarPlanMaestro frmGestionarPlanM = new frmRevisarPlanMaestro(pmp, true,this.trabajador);
                 frmGestionarPlanM.ShowDialog(this);
             }
         }

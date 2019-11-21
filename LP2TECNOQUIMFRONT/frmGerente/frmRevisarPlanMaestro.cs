@@ -18,8 +18,9 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         Service.mensaje mensaje = new Service.mensaje();
         //Estado estadoObj;
 
-        public frmRevisarPlanMaestro(Service.planMaestroProduccion firstpmp, bool save)
+        public frmRevisarPlanMaestro(Service.planMaestroProduccion firstpmp, bool save,Service.trabajador trabajadors = null)
         {
+            trabajador = trabajadors;
             InitializeComponent();
             pmp = firstpmp;
             txtCodigo.Text = pmp.id.ToString();
@@ -67,12 +68,14 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
             mensaje.emisor = trabajador;
             mensaje.fechaEnvio = DateTime.Now;
+            mensaje.fechaEnvioSpecified = true;
             Service.trabajador[] trabajadores = DBController.listarTrabajadores("");
             foreach (Service.trabajador tr in trabajadores)
             {
                 if (tr.rol.idRol == 1)
                 {
                     mensaje.receptor = tr;
+                    break;
                 }
             }
             DBController.insertarMensaje(mensaje);
@@ -106,6 +109,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
                             item.lineasOrden = DBController.listarLineaOrden(item.id);
                         }
                         dgvOrden.DataSource = item.lineasOrden;
+                        break;
                     }
                 }
             }

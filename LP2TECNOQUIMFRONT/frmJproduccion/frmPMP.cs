@@ -9,7 +9,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         int close = 0;
         int not = 0;
         Service.ServicioClient DBController = new Service.ServicioClient();
-        public frmPMS(Service.trabajador trabajadors = null)
+        public frmPMS(Service.trabajador trabajadors = null,int noti=0)
         {
             this.trabajador = trabajadors;
             Service.mensaje[] mensajes = DBController.listarMensaje(trabajador.id);
@@ -23,6 +23,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             {
                 lblCantNotificaciones.Visible = true;
                 lblCantNotificaciones.Text = not.ToString();
+            }
+            if (noti == 1)
+            {
+                frmGestionarPlan formGestionarPlan = new frmGestionarPlan(null, trabajador);
+                formGestionarPlan.ShowDialog(this);
             }
         }
 

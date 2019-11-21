@@ -70,6 +70,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         private void dgvNotificaciones_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             Service.mensaje ppFila = (Service.mensaje)dgvNotificaciones.Rows[e.RowIndex].DataBoundItem;
+            dgvNotificaciones.Rows[e.RowIndex].Cells["ID"].Value = ppFila.idMensaje;
             dgvNotificaciones.Rows[e.RowIndex].Cells["NombreEmisor"].Value = ppFila.emisor.nombres + " " + ppFila.emisor.apellidos;
             dgvNotificaciones.Rows[e.RowIndex].Cells["RolEmisor"].Value = ppFila.emisor.rol.descripcion;
             dgvNotificaciones.Rows[e.RowIndex].Cells["Descripcion"].Value = ppFila.descripcion;
@@ -82,6 +83,23 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             formInsR.Visible = true;
             close = 1;
             this.Close();
+        }
+
+        private void dgvNotificaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string str = dgvNotificaciones.Rows[dgvNotificaciones.SelectedRows[0].Index].Cells[3].Value.ToString();
+            int length = str.IndexOf(".");
+            string sub = str.Substring(0, length);
+
+            if (sub == "PLAN MAESTRO RECHAZADO")
+            {
+                DBController.leerMensaje(int.Parse(dgvNotificaciones.Rows[e.RowIndex].Cells["ID"].Value.ToString()));
+                this.Visible = false;
+                frmPMS formPMS = new frmPMS(this.trabajador,1);
+                formPMS.Visible = true;
+                close = 1;
+                this.Close();
+            }
         }
     }
 }

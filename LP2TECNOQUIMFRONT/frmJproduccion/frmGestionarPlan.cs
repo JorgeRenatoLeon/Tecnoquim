@@ -454,6 +454,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                         ordenSeleccionada = item;
                         dgvOrden.DataSource = item.lineasOrden;
                         hubo = 1;
+                        break;
                     }
                 }
             }

@@ -41,6 +41,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.dgvNotificaciones = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreEmisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RolEmisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -211,6 +212,7 @@
             this.dgvNotificaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvNotificaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNotificaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.NombreEmisor,
             this.RolEmisor,
             this.Descripcion,
@@ -221,7 +223,15 @@
             this.dgvNotificaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNotificaciones.Size = new System.Drawing.Size(840, 398);
             this.dgvNotificaciones.TabIndex = 31;
+            this.dgvNotificaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNotificaciones_CellContentClick);
             this.dgvNotificaciones.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvNotificaciones_CellFormatting);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 5;
             // 
             // NombreEmisor
             // 
@@ -286,11 +296,12 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.DataGridView dgvNotificaciones;
+        private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Label lblCantNotificaciones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreEmisor;
         private System.Windows.Forms.DataGridViewTextBoxColumn RolEmisor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.Button btnReporte;
-        private System.Windows.Forms.Label lblCantNotificaciones;
     }
 }
