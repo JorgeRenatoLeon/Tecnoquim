@@ -63,7 +63,6 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             this.txtUsuario.Text = "Usuario";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuarioEnter);
             this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTest_KeyDown);
-            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuarioLeave);
             // 
             // txtContrasena
             // 
