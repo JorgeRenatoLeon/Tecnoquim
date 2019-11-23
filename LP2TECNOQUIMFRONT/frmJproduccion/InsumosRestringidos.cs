@@ -131,6 +131,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void InsumosRestringidos_FormClosed(object sender, FormClosedEventArgs e)
+        {
             if (close == 0) { Environment.Exit(0); }
         }
     }

@@ -15,6 +15,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         Estado estadoObj;
         Service.insumo insumo;
         Service.detalleAlmacenInsumo detalle;
+        Service.almacen almacen;
         Service.detalleAlmacenInsumo almacenI;
         Service.ServicioClient DBController = new Service.ServicioClient();
         public frmStockInsumo()
@@ -53,6 +54,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
+                    btnBuscar.Enabled = false;
                     //Campos de Texto
                     gbDatos.Enabled = true;
                     gbAlmacen.Enabled = true;
@@ -63,21 +65,18 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     btnNuevo.Enabled = false;
                     btnModificar.Enabled = true;
                     btnGuardar.Enabled = false;
+                    btnBuscar.Enabled = false;
                     break;
                 case Estado.Modificar:
                     //Etiquetas
-                    lblCodigo.Enabled = true;
-                    lblNombre.Enabled = true;
-                    lblCant.Enabled = true;
-                    lblUnidad.Enabled = true;
+                    gbDatos.Enabled = true;
+                    gbAlmacen.Enabled = true;
+                    txtCodigo.Enabled = false;
                     //Botones
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
-                    //Campos de Texto
-                    txtCodigo.Enabled = true;
-                    txtNombre.Enabled = true;
-                    txtCant.Enabled = true;
+                    btnBuscar.Enabled = false;
                     break;
             }
         }
@@ -87,58 +86,13 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtCant.Text = "";
+            txtLote.Text = "";
+            txtStock.Text = "";
+            cbAlmacen.Text = "";
+            txtUnidad.Text = "";
         }
 
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            int lote;
-            int cant;
-            if(txtCodigo.Text == "")
-            {
-                MessageBox.Show("No se ha seleccionado un Insumo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if(txtLote.Text == "")
-            {
-                MessageBox.Show("No se ha ingresado el número de Lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (int.TryParse(txtLote.Text, out int loteout))
-            {
-                lote = loteout;
-            }
-            else
-            {
-                MessageBox.Show("No se ha ingresado un número para el Lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (txtStock.Text == "")
-            {
-                MessageBox.Show("No se ha ingresado el stock", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (int.TryParse(txtStock.Text, out int canti))
-            {
-                cant = canti;
-            }
-            else
-            {
-                MessageBox.Show("No se ha ingresado un número para el stock", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            almacenI = new Service.detalleAlmacenInsumo();
-            insumo = new Service.insumo();
-            insumo.id = int.Parse(txtCodigo.Text);
-
-            almacenI.insumo = insumo;
-            almacenI.stock = cant;
-            almacenI.nLote = lote;
-            DBController.actualizarDetalleAlmacenInsumo(almacenI);
-            MessageBox.Show("Se actualizo el stock Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
-
-        }
+        
 
         private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -176,13 +130,17 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 txtLote.Enabled = false;
                 cbAlmacen.Enabled = false;
             }
+            estadoComponentes(Estado.Nuevo);
+            estadoObj = Estado.Buscar;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            limpiarComponentes();
             detalle = new Service.detalleAlmacenInsumo();
             insumo = new Service.insumo();
             estadoComponentes(Estado.Nuevo);
+            estadoObj = Estado.Nuevo;
         }
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
@@ -210,25 +168,43 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             }
             
             insumo = new Service.insumo();
-            insumo.nombre = txtNombre.Text;
-            insumo.cantidad = cant;
+            insumo.id = int.Parse(txtCodigo.Text);
+            almacen = new Service.almacen();
+            almacen.idAlmacen = 1;
 
+            detalle.insumo = insumo;
             detalle.stock = int.Parse(txtStock.Text);
             detalle.nLote = int.Parse(txtLote.Text);
+            detalle.almacen = almacen;
+            detalle.periodoSpecified = true;
+            detalle.periodo = DateTime.Today;
 
             if (estadoObj == Estado.Nuevo)
             {
-                int idInsumo = DBController.insertarInsumo(insumo);
-
+                DBController.insertarDetalleAlmacenInsumo(detalle, int.Parse(txtCodigo.Text));
                 MessageBox.Show("Insumo Registrado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (estadoObj == Estado.Modificar)
             {
                 insumo.id = int.Parse(txtCodigo.Text);
-                DBController.actualizarInsumo(insumo);
+                DBController.actualizarDetalleAlmacenInsumo(detalle);
 
                 MessageBox.Show("Insumo Actualizado exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            limpiarComponentes();
+            estadoComponentes(Estado.Inicial);
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            estadoObj = Estado.Modificar;
+            estadoComponentes(Estado.Modificar);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarComponentes();
+            estadoComponentes(Estado.Inicial);
         }
     }
 }

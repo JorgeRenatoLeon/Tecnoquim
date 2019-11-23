@@ -13,7 +13,6 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
     public partial class frmInsumo : Form
     {
         Service.insumo insumo;
-        Service.detalleAlmacenInsumo detalle;
         Estado estadoObj;
         Service.ServicioClient DBController = new Service.ServicioClient();
 
@@ -21,7 +20,6 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         {
             InitializeComponent();
             insumo = new Service.insumo();
-            detalle = new Service.detalleAlmacenInsumo();
             BindingList<string> unidades = new BindingList<string>();
             unidades.Add("'SELECCIONAR UNA UNIDAD'");
             unidades.Add("GR");
@@ -142,7 +140,6 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             limpiarComponentes();
-            detalle = new Service.detalleAlmacenInsumo();
             insumo = new Service.insumo();
             estadoObj = Estado.Nuevo;
             estadoComponentes(Estado.Nuevo);
@@ -207,8 +204,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             insumo.unidad = cbUnidades.SelectedItem.ToString();
             insumo.granularidad = gran;
             insumo.color = txtColor.Text;
-
-            detalle.stock = 0;
+            
             if (rbSi.Checked == true)
             {
                 insumo.restriccion = true;

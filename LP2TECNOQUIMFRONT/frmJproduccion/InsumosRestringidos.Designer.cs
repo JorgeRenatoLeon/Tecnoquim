@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsumosRestringidos));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
-            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -76,6 +76,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 498);
             this.panel1.TabIndex = 5;
+            // 
+            // lblCantNotificaciones
+            // 
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(130, 416);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 24;
+            this.lblCantNotificaciones.Text = "1";
             // 
             // btnReporte
             // 
@@ -344,16 +354,6 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Productos Restringidos";
             // 
-            // lblCantNotificaciones
-            // 
-            this.lblCantNotificaciones.AutoSize = true;
-            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
-            this.lblCantNotificaciones.Location = new System.Drawing.Point(130, 416);
-            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
-            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
-            this.lblCantNotificaciones.TabIndex = 24;
-            this.lblCantNotificaciones.Text = "1";
-            // 
             // InsumosRestringidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,6 +368,7 @@
             this.Name = "InsumosRestringidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InsumosRestringidos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.InsumosRestringidos_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
