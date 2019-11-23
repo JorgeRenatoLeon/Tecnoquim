@@ -21,6 +21,11 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             BindingList<Service.almacen> almacens = new BindingList<Service.almacen>(DBController.listarAlmacen(""));
             cbAlmacen.DataSource = almacens;
             cbAlmacen.DisplayMember = "Tipo";
+            txtidprod.Enabled = false;
+            txtNomProd.Enabled = false;
+            txtPres.Enabled = false;
+            txtLote.Enabled = false;
+            cbAlmacen.Enabled = false;
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
