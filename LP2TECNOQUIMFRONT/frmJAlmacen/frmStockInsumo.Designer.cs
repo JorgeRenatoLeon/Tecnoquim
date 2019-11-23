@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStockInsumo));
             this.gbDatos = new System.Windows.Forms.GroupBox();
-            this.btnBuscarInsumo = new System.Windows.Forms.Button();
+            this.btnInsumo = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -39,22 +40,28 @@
             this.lblCant = new System.Windows.Forms.Label();
             this.txtCant = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbAlmacen = new System.Windows.Forms.GroupBox();
             this.txtLote = new System.Windows.Forms.TextBox();
             this.lblnlote = new System.Windows.Forms.Label();
             this.cbAlmacen = new System.Windows.Forms.ComboBox();
             this.lblIdInstructivo = new System.Windows.Forms.Label();
             this.lblAct = new System.Windows.Forms.Label();
-            this.txtAct = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtStock = new System.Windows.Forms.TextBox();
             this.lblBack = new System.Windows.Forms.LinkLabel();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
+            this.btnModificar = new System.Windows.Forms.ToolStripButton();
+            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
+            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.gbDatos.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbAlmacen.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatos
             // 
-            this.gbDatos.Controls.Add(this.btnBuscarInsumo);
+            this.gbDatos.Controls.Add(this.btnInsumo);
             this.gbDatos.Controls.Add(this.txtCodigo);
             this.gbDatos.Controls.Add(this.lblCodigo);
             this.gbDatos.Controls.Add(this.txtNombre);
@@ -65,28 +72,28 @@
             this.gbDatos.Controls.Add(this.txtCant);
             this.gbDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gbDatos.Location = new System.Drawing.Point(22, 69);
+            this.gbDatos.Location = new System.Drawing.Point(18, 106);
             this.gbDatos.Name = "gbDatos";
             this.gbDatos.Size = new System.Drawing.Size(624, 212);
             this.gbDatos.TabIndex = 66;
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos Generales";
             // 
-            // btnBuscarInsumo
+            // btnInsumo
             // 
-            this.btnBuscarInsumo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnInsumo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarInsumo.BackColor = System.Drawing.Color.White;
-            this.btnBuscarInsumo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarInsumo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarInsumo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnBuscarInsumo.Location = new System.Drawing.Point(332, 42);
-            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
-            this.btnBuscarInsumo.Size = new System.Drawing.Size(52, 30);
-            this.btnBuscarInsumo.TabIndex = 74;
-            this.btnBuscarInsumo.Text = "...";
-            this.btnBuscarInsumo.UseVisualStyleBackColor = false;
-            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
+            this.btnInsumo.BackColor = System.Drawing.Color.White;
+            this.btnInsumo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInsumo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsumo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnInsumo.Location = new System.Drawing.Point(322, 42);
+            this.btnInsumo.Name = "btnInsumo";
+            this.btnInsumo.Size = new System.Drawing.Size(52, 30);
+            this.btnInsumo.TabIndex = 74;
+            this.btnInsumo.Text = "...";
+            this.btnInsumo.UseVisualStyleBackColor = false;
+            this.btnInsumo.Click += new System.EventHandler(this.btnInsumo_Click);
             // 
             // txtCodigo
             // 
@@ -174,28 +181,28 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 16);
+            this.label1.Location = new System.Drawing.Point(12, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 39);
+            this.label1.Size = new System.Drawing.Size(109, 39);
             this.label1.TabIndex = 65;
-            this.label1.Text = "Stock Insumo";
+            this.label1.Text = "Insumo";
             // 
-            // groupBox2
+            // gbAlmacen
             // 
-            this.groupBox2.Controls.Add(this.txtLote);
-            this.groupBox2.Controls.Add(this.lblnlote);
-            this.groupBox2.Controls.Add(this.cbAlmacen);
-            this.groupBox2.Controls.Add(this.lblIdInstructivo);
-            this.groupBox2.Controls.Add(this.lblAct);
-            this.groupBox2.Controls.Add(this.txtAct);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(22, 298);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(624, 140);
-            this.groupBox2.TabIndex = 71;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Almacen";
+            this.gbAlmacen.Controls.Add(this.txtLote);
+            this.gbAlmacen.Controls.Add(this.lblnlote);
+            this.gbAlmacen.Controls.Add(this.cbAlmacen);
+            this.gbAlmacen.Controls.Add(this.lblIdInstructivo);
+            this.gbAlmacen.Controls.Add(this.lblAct);
+            this.gbAlmacen.Controls.Add(this.txtStock);
+            this.gbAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbAlmacen.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gbAlmacen.Location = new System.Drawing.Point(18, 335);
+            this.gbAlmacen.Name = "gbAlmacen";
+            this.gbAlmacen.Size = new System.Drawing.Size(624, 140);
+            this.gbAlmacen.TabIndex = 71;
+            this.gbAlmacen.TabStop = false;
+            this.gbAlmacen.Text = "Almacen";
             // 
             // txtLote
             // 
@@ -246,36 +253,20 @@
             this.lblAct.TabIndex = 36;
             this.lblAct.Text = "Stock: ";
             // 
-            // txtAct
+            // txtStock
             // 
-            this.txtAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtAct.Location = new System.Drawing.Point(421, 85);
-            this.txtAct.Name = "txtAct";
-            this.txtAct.Size = new System.Drawing.Size(132, 30);
-            this.txtAct.TabIndex = 37;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.White;
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnGuardar.Location = new System.Drawing.Point(558, 25);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(88, 30);
-            this.btnGuardar.TabIndex = 76;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtStock.Location = new System.Drawing.Point(421, 85);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(132, 30);
+            this.txtStock.TabIndex = 37;
             // 
             // lblBack
             // 
             this.lblBack.AutoSize = true;
             this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBack.LinkColor = System.Drawing.Color.AliceBlue;
-            this.lblBack.Location = new System.Drawing.Point(19, 455);
+            this.lblBack.Location = new System.Drawing.Point(563, 67);
             this.lblBack.Name = "lblBack";
             this.lblBack.Size = new System.Drawing.Size(79, 17);
             this.lblBack.TabIndex = 77;
@@ -284,23 +275,87 @@
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
             // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnNuevo,
+            this.btnModificar,
+            this.btnGuardar,
+            this.btnBuscar,
+            this.btnCancelar});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(673, 35);
+            this.toolStrip2.TabIndex = 78;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(90, 32);
+            this.btnNuevo.Text = "&Nuevo";
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(116, 32);
+            this.btnModificar.Text = "Modificar";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(103, 32);
+            this.btnGuardar.Text = "&Guardar";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(88, 32);
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(106, 32);
+            this.btnCancelar.Text = "Cancelar";
+            // 
             // frmStockInsumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(667, 497);
+            this.ClientSize = new System.Drawing.Size(673, 501);
+            this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.lblBack);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbAlmacen);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.label1);
             this.Name = "frmStockInsumo";
             this.Text = "frmStockInsumo";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbAlmacen.ResumeLayout(false);
+            this.gbAlmacen.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,15 +373,20 @@
         private System.Windows.Forms.Label lblCant;
         private System.Windows.Forms.TextBox txtCant;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbAlmacen;
         private System.Windows.Forms.ComboBox cbAlmacen;
         private System.Windows.Forms.Label lblIdInstructivo;
         private System.Windows.Forms.Label lblAct;
-        private System.Windows.Forms.TextBox txtAct;
-        private System.Windows.Forms.Button btnBuscarInsumo;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.LinkLabel lblBack;
         private System.Windows.Forms.Label lblnlote;
         private System.Windows.Forms.TextBox txtLote;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton btnNuevo;
+        private System.Windows.Forms.ToolStripButton btnModificar;
+        private System.Windows.Forms.ToolStripButton btnGuardar;
+        private System.Windows.Forms.ToolStripButton btnBuscar;
+        private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.Button btnInsumo;
     }
 }

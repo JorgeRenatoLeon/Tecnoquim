@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlmacen));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificar = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -61,6 +61,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 455);
             this.panel1.TabIndex = 8;
+            // 
+            // lblCantNotificaciones
+            // 
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(121, 278);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 19;
+            this.lblCantNotificaciones.Text = "1";
             // 
             // btnPerfil
             // 
@@ -211,7 +221,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(311, 39);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Gestionar Stock";
+            this.label2.Text = "Gestionar Lotes";
             // 
             // button1
             // 
@@ -247,16 +257,6 @@
             this.button3.Text = "Insumos";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // lblCantNotificaciones
-            // 
-            this.lblCantNotificaciones.AutoSize = true;
-            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
-            this.lblCantNotificaciones.Location = new System.Drawing.Point(121, 278);
-            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
-            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
-            this.lblCantNotificaciones.TabIndex = 19;
-            this.lblCantNotificaciones.Text = "1";
             // 
             // frmAlmacen
             // 

@@ -185,10 +185,11 @@
             // 
             // cbUnidades
             // 
+            this.cbUnidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbUnidades.FormattingEnabled = true;
             this.cbUnidades.Location = new System.Drawing.Point(349, 156);
             this.cbUnidades.Name = "cbUnidades";
-            this.cbUnidades.Size = new System.Drawing.Size(236, 33);
+            this.cbUnidades.Size = new System.Drawing.Size(65, 28);
             this.cbUnidades.TabIndex = 68;
             // 
             // txtCodigo
@@ -324,7 +325,7 @@
             this.lblBack.AutoSize = true;
             this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBack.LinkColor = System.Drawing.Color.AliceBlue;
-            this.lblBack.Location = new System.Drawing.Point(25, 434);
+            this.lblBack.Location = new System.Drawing.Point(563, 70);
             this.lblBack.Name = "lblBack";
             this.lblBack.Size = new System.Drawing.Size(79, 17);
             this.lblBack.TabIndex = 66;
@@ -338,7 +339,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(667, 470);
+            this.ClientSize = new System.Drawing.Size(667, 442);
             this.Controls.Add(this.lblBack);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.gbDatos);

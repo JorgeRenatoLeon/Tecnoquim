@@ -195,6 +195,11 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 MessageBox.Show("No se ha ingresado la Granularidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            else if (float.Parse(txtGranu.Text)>=0 && float.Parse(txtGranu.Text)<=5.0)
+            {
+                MessageBox.Show("La Granularidad debe ser un número entre 0 y 5", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             else if (float.TryParse(txtGranu.Text, out float granu))
             {
                 gran = granu;
