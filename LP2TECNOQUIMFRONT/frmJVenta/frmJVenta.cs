@@ -94,7 +94,8 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 
         private void btnPMS_Click(object sender, EventArgs e)
         {
-            Service.proyeccionVenta[] pvs = DBController.listarProyeccionVenta("");
+            DateTime today = DateTime.Today;
+            Service.proyeccionVenta[] pvs = DBController.listarProyeccionVenta(today.AddMonths(1).ToString("MM/yyyy"));
             if (pvs == null)
             {
                 MessageBox.Show("No hay proyecciones.", "Mensaje Confirmacion", MessageBoxButtons.OK);
