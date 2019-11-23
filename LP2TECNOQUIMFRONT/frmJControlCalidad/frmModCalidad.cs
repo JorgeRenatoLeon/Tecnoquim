@@ -56,7 +56,6 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            
             if(txtidprod.Text == "")
             {
                 MessageBox.Show("No se ha seleccionado un Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -69,14 +68,17 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             {
                 lorden.estadoCalidad = Service.estadoMaterial.Bueno;
 
-            } else 
+            }
+            else 
             {
                 lorden.estadoCalidad = Service.estadoMaterial.Pendiente;
             }
 
             DBController.actualizarLineaOrden(lorden);
             MessageBox.Show("Producto Verificado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+            txtidprod.Text = "";
+            txtNomProd.Text = "";
+            txtPres.Text = "";
         }
     }
 }

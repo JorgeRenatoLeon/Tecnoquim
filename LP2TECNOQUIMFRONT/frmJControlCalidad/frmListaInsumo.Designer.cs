@@ -35,6 +35,7 @@
             this.Lote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Periodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaOrden)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,8 @@
             this.Insumo,
             this.Lote,
             this.Stock,
-            this.Periodo});
+            this.Periodo,
+            this.Estado});
             this.dgvListaOrden.Location = new System.Drawing.Point(39, 100);
             this.dgvListaOrden.Name = "dgvListaOrden";
             this.dgvListaOrden.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -85,7 +87,7 @@
             // 
             this.Insumo.HeaderText = "Insumo";
             this.Insumo.Name = "Insumo";
-            this.Insumo.Width = 200;
+            this.Insumo.Width = 150;
             // 
             // Lote
             // 
@@ -103,7 +105,12 @@
             // 
             this.Periodo.HeaderText = "Periodo";
             this.Periodo.Name = "Periodo";
-            this.Periodo.Width = 200;
+            this.Periodo.Width = 120;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
             // 
             // frmListaInsumo
             // 
@@ -130,5 +137,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Lote;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Periodo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

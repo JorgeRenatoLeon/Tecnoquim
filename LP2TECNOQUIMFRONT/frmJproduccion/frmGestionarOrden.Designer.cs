@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarOrden));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnVerificar = new System.Windows.Forms.ToolStripButton();
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -54,7 +54,6 @@
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnVerificar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.gbDatosGenerales.SuspendLayout();
             this.gbDatosOrden.SuspendLayout();
@@ -66,7 +65,6 @@
             // 
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnNuevo,
             this.btnModificar,
             this.btnGuardar,
             this.btnCancelar,
@@ -76,15 +74,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(730, 32);
             this.toolStrip1.TabIndex = 25;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(87, 29);
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnModificar
             // 
@@ -112,6 +101,16 @@
             this.btnCancelar.Size = new System.Drawing.Size(106, 29);
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            // 
+            // btnVerificar
+            // 
+            this.btnVerificar.Image = ((System.Drawing.Image)(resources.GetObject("btnVerificar.Image")));
+            this.btnVerificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(177, 29);
+            this.btnVerificar.Text = "Verificar Insumos";
+            this.btnVerificar.ToolTipText = "Verificar Insumos";
+            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
             // 
             // gbDatosGenerales
             // 
@@ -333,16 +332,6 @@
             this.Cantidad.ReadOnly = true;
             this.Cantidad.Width = 175;
             // 
-            // btnVerificar
-            // 
-            this.btnVerificar.Image = ((System.Drawing.Image)(resources.GetObject("btnVerificar.Image")));
-            this.btnVerificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnVerificar.Name = "btnVerificar";
-            this.btnVerificar.Size = new System.Drawing.Size(177, 29);
-            this.btnVerificar.Text = "Verificar Insumos";
-            this.btnVerificar.ToolTipText = "Verificar Insumos";
-            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
-            // 
             // frmGestionarOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,7 +361,6 @@
 
         #endregion
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnNuevo;
         private System.Windows.Forms.ToolStripButton btnGuardar;
         private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.ToolStripButton btnCancelar;

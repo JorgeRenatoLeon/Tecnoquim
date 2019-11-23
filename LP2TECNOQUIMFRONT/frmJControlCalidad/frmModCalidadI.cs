@@ -31,6 +31,10 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 
             cbRol.DataSource = datoE;
 
+            txtid.Enabled = false;
+            txtLote.Enabled = false;
+            txtNom.Enabled = false;
+            txtStock.Enabled = false;
         }
 
 
@@ -49,20 +53,21 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
                 txtNom.Text = detalle.insumo.nombre.ToString();
                 txtLote.Text = detalle.nLote.ToString();
                 txtStock.Text = detalle.stock.ToString();
-
             }
-
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
             string dato = cbRol.SelectedValue.ToString();
 
-
+            if(txtid.Text == "")
+            {
+                MessageBox.Show("No se ha seleccionado un lote de Insumo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (dato == "Bueno")
             {
                 detalle.estado = Service.estadoMaterial.Bueno;
-
             }
             else if (dato== "Pendiente")
             {
@@ -70,11 +75,15 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             }
             else if (dato == "Rechazado")
             {
-                //detalle.estado = Service.estadoMaterial.Rechazado;
+                detalle.estado = Service.estadoMaterial.Rechazado;
             }
 
             DBController.actualizarDetalleAlmacenInsumoEstado(detalle); 
             MessageBox.Show("Insumo Verificado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            txtid.Text = "";
+            txtLote.Text = "";
+            txtNom.Text = "";
+            txtStock.Text = "";
         }
     }
 }
