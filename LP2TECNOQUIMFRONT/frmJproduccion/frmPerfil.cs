@@ -30,6 +30,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             txtApellido.Text = trabajador.apellidos;
             txtDNI.Text = trabajador.dni;
             txtCorreo.Text = trabajador.correo;
+            txtNombre.Enabled = false;
+            txtApellido.Enabled = false;
+            txtDNI.Enabled = false;
             lblCantNotificaciones.Visible = false;
             if (not > 0)
             {

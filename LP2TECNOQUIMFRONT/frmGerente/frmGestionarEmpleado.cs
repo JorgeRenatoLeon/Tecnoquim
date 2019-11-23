@@ -28,6 +28,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             //Indicamos la Propiedad que debería visualizarse
             cbRol.DisplayMember = "Descripcion";
             cbRol.ValueMember = "IdRol";
+            txtCodigo.Enabled = false;
             estadoComponentes(Estado.Inicial);
         }
 
@@ -83,6 +84,26 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if(txtDNI.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado el DNI", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (txtDNI.Text.Length != 8)
+            {
+                MessageBox.Show("El DNI debe tener 8 digitos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if(txtNombres.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado el nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if(txtApellidos.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado los apellidos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             trabajador.nombres = txtNombres.Text;
             trabajador.apellidos = txtApellidos.Text;
             trabajador.dni = txtDNI.Text;

@@ -23,7 +23,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             insumo = new Service.insumo();
             detalle = new Service.detalleAlmacenInsumo();
             BindingList<string> unidades = new BindingList<string>();
-            unidades.Add("");
+            unidades.Add("'SELECCIONAR UNA UNIDAD'");
             unidades.Add("GR");
             unidades.Add("ML");
             unidades.Add("KG");
@@ -78,7 +78,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
-                    btnEliminar.Enabled = true;
+                    btnEliminar.Enabled = false;
                     btnBuscar.Enabled = false;
                     //Campos de Texto
                     txtCodigo.Enabled = true;
@@ -136,7 +136,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             txtColor.Text = "";
             rbSi.Checked = false;
             rbNo.Checked = false;
-            cbUnidades.SelectedText = " ";
+            cbUnidades.SelectedText = "'SELECCIONAR UNA UNIDAD'";
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -156,11 +156,56 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            float gran;
+            int cant;
+            if(txtNombre.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado el Nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtCant.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado la cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (int.TryParse(txtCant.Text, out int canti))
+            {
+                cant = canti;
+            }
+            else
+            {
+                MessageBox.Show("No se ha ingresado un número para la cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtGranu.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado la Granularidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if(float.TryParse(txtGranu.Text,out float granu))
+            {
+                gran = granu;
+            }
+            else
+            {
+                MessageBox.Show("No se ha ingresado un número para la Granularidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtColor.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado el color", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (cbUnidades.SelectedItem.ToString()== "'SELECCIONAR UNA UNIDAD'")
+            {
+                MessageBox.Show("No se ha seleccionado su unidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             insumo = new Service.insumo();
             insumo.nombre = txtNombre.Text;
-            insumo.cantidad = int.Parse(txtCant.Text);
+            insumo.cantidad = cant;
             insumo.unidad = cbUnidades.SelectedItem.ToString();
-            insumo.granularidad = float.Parse(txtGranu.Text);
+            insumo.granularidad = gran;
             insumo.color = txtColor.Text;
 
             detalle.stock = 0;
@@ -168,9 +213,14 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             {
                 insumo.restriccion = true;
             }
-            else
+            else if(rbNo.Checked == true)
             {
                 insumo.restriccion = false;
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado si es Restringido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             if (estadoObj == Estado.Nuevo)
             {
@@ -211,11 +261,19 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     rbNo.Checked = false;
                 }
             }
-            estadoComponentes(Estado.Buscar);
+            if (txtCodigo.Text != "")
+            {
+                estadoComponentes(Estado.Buscar);
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (txtCodigo.Text == "")
+            {
+                MessageBox.Show("No se ha seleccionado ningun Insumo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DBController.eliminarInsumo(int.Parse(txtCodigo.Text));
             limpiarComponentes();
             estadoObj = Estado.Inicial;

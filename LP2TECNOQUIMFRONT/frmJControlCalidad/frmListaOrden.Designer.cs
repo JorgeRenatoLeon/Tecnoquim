@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.dgvListaOrden = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnBuscarInsumo = new System.Windows.Forms.Button();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaOrden)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,8 @@
             this.dgvListaOrden.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Producto,
-            this.Cantidad});
+            this.Cantidad,
+            this.Estado});
             this.dgvListaOrden.Location = new System.Drawing.Point(59, 101);
             this.dgvListaOrden.Name = "dgvListaOrden";
             this.dgvListaOrden.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -51,23 +53,6 @@
             this.dgvListaOrden.TabIndex = 0;
             this.dgvListaOrden.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaOrden_CellContentDoubleClick);
             this.dgvListaOrden.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.Width = 300;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 150;
             // 
             // label1
             // 
@@ -97,6 +82,28 @@
             this.btnBuscarInsumo.UseVisualStyleBackColor = false;
             this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            this.Producto.Width = 200;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.Width = 150;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
             // frmListaOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,10 +124,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvListaOrden;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBuscarInsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnBuscarInsumo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

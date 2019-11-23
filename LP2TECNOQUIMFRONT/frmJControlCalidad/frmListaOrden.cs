@@ -51,22 +51,19 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             dgvListaOrden.Rows[e.RowIndex].Cells["Producto"].Style.ForeColor = System.Drawing.Color.Black;
             dgvListaOrden.Rows[e.RowIndex].Cells["Codigo"].Style.ForeColor = System.Drawing.Color.Black;
             dgvListaOrden.Rows[e.RowIndex].Cells["Cantidad"].Style.ForeColor = System.Drawing.Color.Black;
+            dgvListaOrden.Rows[e.RowIndex].Cells["Estado"].Style.ForeColor = System.Drawing.Color.Black;
             if (lineaOrdenFila == null)
             {
                 dgvListaOrden.Rows[e.RowIndex].Cells["Producto"].Value = '-';
                 dgvListaOrden.Rows[e.RowIndex].Cells["Codigo"].Value = '-';
                 dgvListaOrden.Rows[e.RowIndex].Cells["Cantidad"].Value = '-';
-
-                
-                
-
+                dgvListaOrden.Rows[e.RowIndex].Cells["Estado"].Value = '-';
             }
             else {
                 dgvListaOrden.Rows[e.RowIndex].Cells["Producto"].Value = lineaOrdenFila.producto.nombre;
                 dgvListaOrden.Rows[e.RowIndex].Cells["Codigo"].Value = lineaOrdenFila.producto.idProducto;
                 dgvListaOrden.Rows[e.RowIndex].Cells["Cantidad"].Value = lineaOrdenFila.cantProducto;
-               
-
+                dgvListaOrden.Rows[e.RowIndex].Cells["Estado"].Value = lineaOrdenFila.estadoCalidad;
             }
             
         }

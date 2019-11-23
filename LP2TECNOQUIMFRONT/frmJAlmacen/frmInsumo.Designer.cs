@@ -40,6 +40,7 @@
             this.lblGranu = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.cbUnidades = new System.Windows.Forms.ComboBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.rbNo = new System.Windows.Forms.RadioButton();
@@ -53,7 +54,6 @@
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.lblBack = new System.Windows.Forms.LinkLabel();
-            this.cbUnidades = new System.Windows.Forms.ComboBox();
             this.gbDatos.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -110,7 +110,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.txtNombre.Location = new System.Drawing.Point(139, 98);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(365, 30);
+            this.txtNombre.Size = new System.Drawing.Size(446, 30);
             this.txtNombre.TabIndex = 57;
             // 
             // lblColor
@@ -183,13 +183,21 @@
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos Generales";
             // 
+            // cbUnidades
+            // 
+            this.cbUnidades.FormattingEnabled = true;
+            this.cbUnidades.Location = new System.Drawing.Point(349, 156);
+            this.cbUnidades.Name = "cbUnidades";
+            this.cbUnidades.Size = new System.Drawing.Size(236, 33);
+            this.cbUnidades.TabIndex = 68;
+            // 
             // txtCodigo
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.txtCodigo.Location = new System.Drawing.Point(139, 42);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
-            this.txtCodigo.Size = new System.Drawing.Size(163, 30);
+            this.txtCodigo.Size = new System.Drawing.Size(88, 30);
             this.txtCodigo.TabIndex = 67;
             // 
             // lblCodigo
@@ -324,14 +332,6 @@
             this.lblBack.Text = "< Regresar";
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
-            // 
-            // cbUnidades
-            // 
-            this.cbUnidades.FormattingEnabled = true;
-            this.cbUnidades.Location = new System.Drawing.Point(349, 156);
-            this.cbUnidades.Name = "cbUnidades";
-            this.cbUnidades.Size = new System.Drawing.Size(121, 33);
-            this.cbUnidades.TabIndex = 68;
             // 
             // frmInsumo
             // 

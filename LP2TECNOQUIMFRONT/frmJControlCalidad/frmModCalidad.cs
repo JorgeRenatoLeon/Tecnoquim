@@ -30,9 +30,10 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             datoE.Add("Pendiente");
 
             cbRol.DataSource = datoE;
-                      
-                
 
+            txtidprod.Enabled = false;
+            txtNomProd.Enabled = false;
+            txtPres.Enabled = false;
         }
 
         private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -56,6 +57,11 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         private void btnProductos_Click(object sender, EventArgs e)
         {
             
+            if(txtidprod.Text == "")
+            {
+                MessageBox.Show("No se ha seleccionado un Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string dato = cbRol.SelectedValue.ToString();
             
 

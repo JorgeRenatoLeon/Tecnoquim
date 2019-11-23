@@ -29,6 +29,10 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             InitializeComponent();
             lineas = new BindingList<lineaInsumo>();
             lineasEliminadas = new BindingList<lineaInsumo>();
+            txtidprod.Enabled = false;
+            txtIdInsumo.Enabled = false;
+            txtidinst.Enabled = false;
+            txtNomInsumo.Enabled = false;
             estadoComponentes(Estado.Inicial);
         }
 
@@ -52,18 +56,17 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
                     btnGuardar.Enabled = false;
+                    btnElimina.Enabled = false;
                     btnEliminar.Enabled = false;
+                    btnAgregar.Enabled = false;
+                    btnBuscarInsumo.Enabled = false;
                     btnBuscar.Enabled = true;
                     //Campos de Texto
                     txtIdInsumo.Enabled = false;
-                    txtidprod.Enabled = false;
                     txtNomProd.Enabled = false;
-                    txtidinst.Enabled = false;
                     txtPres.Enabled = false;
                     txtGranu.Enabled = false;
                     txtAct.Enabled = false;
-                    txtIdInsumo.Enabled = false;
-                    txtNomInsumo.Enabled = false;
                     txtCant.Enabled = false;
                     dgvInsumos.Rows.Clear();
                     dgvInsumos.Refresh();
@@ -84,18 +87,16 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
-                    btnEliminar.Enabled = true;
+                    btnElimina.Enabled = false;
                     btnBuscar.Enabled = false;
+                    btnEliminar.Enabled = true;
+                    btnAgregar.Enabled = true;
+                    btnBuscarInsumo.Enabled = true;
                     //Campos de Texto
-                    txtIdInsumo.Enabled = true;
-                    txtidprod.Enabled = true;
                     txtNomProd.Enabled = true;
-                    txtidinst.Enabled = true;
                     txtPres.Enabled = true;
                     txtGranu.Enabled = true;
                     txtAct.Enabled = true;
-                    txtIdInsumo.Enabled = true;
-                    txtNomInsumo.Enabled = true;
                     txtCant.Enabled = true;
                     dgvInsumos.Rows.Clear();
                     dgvInsumos.Refresh();
@@ -105,8 +106,11 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     btnNuevo.Enabled = false;
                     btnModificar.Enabled = true;
                     btnGuardar.Enabled = false;
-                    btnEliminar.Enabled = true;
+                    btnElimina.Enabled = true;
                     btnBuscar.Enabled = false;
+                    btnBuscarInsumo.Enabled = false;
+                    btnAgregar.Enabled = false;
+                    btnEliminar.Enabled = false;
                     break;
                 case Estado.Modificar:
                     //Etiquetas
@@ -124,18 +128,16 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
-                    btnEliminar.Enabled = true;
+                    btnElimina.Enabled = true;
                     btnBuscar.Enabled = false;
+                    btnEliminar.Enabled = true;
+                    btnAgregar.Enabled = true;
+                    btnBuscarInsumo.Enabled = true;
                     //Campos de Texto
-                    txtIdInsumo.Enabled = true;
-                    txtidprod.Enabled = true;
                     txtNomProd.Enabled = true;
-                    txtidinst.Enabled = true;
                     txtPres.Enabled = true;
                     txtGranu.Enabled = true;
                     txtAct.Enabled = true;
-                    txtIdInsumo.Enabled = true;
-                    txtNomInsumo.Enabled = true;
                     txtCant.Enabled = true;
                     dgvInsumos.Enabled = true;
                     break;
@@ -155,6 +157,8 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             txtNomInsumo.Text = "";
             flag = 0;
             flagElim = 0;
+            producto = new producto();
+            insumo = new insumo();
             lineas = new BindingList<lineaInsumo>();
             lineasEliminadas = new BindingList<lineaInsumo>();
             dgvInsumos.DataSource = null;
@@ -180,13 +184,47 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
+            float gran;
+            if (txtNomProd.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado el Nombre del Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtGranu.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado la Granularidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (float.TryParse(txtGranu.Text, out float granu))
+            {
+                gran = granu;
+            }
+            else
+            {
+                MessageBox.Show("No se ha ingresado un número para la Granularidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtPres.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado la presentación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtAct.Text == "")
+            {
+                MessageBox.Show("No se han ingresado las actividades del producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (lineas.Count() == 0)
+            {
+                MessageBox.Show("No se han ingresado insumos que formen el producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (estadoObj == Estado.Nuevo)
             {
                 producto = new Service.producto();
                 producto.nombre = txtNomProd.Text;
                 producto.presentacion = txtPres.Text;
-                producto.granularidad = float.Parse(txtGranu.Text);
+                producto.granularidad = gran;
 
                 instructivo = new Service.instructivo();
                 instructivo.actividades = txtAct.Text;
@@ -258,12 +296,20 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 producto.instructivo.insumos = lineas.ToArray();
                 dgvInsumos.DataSource = lineas;
             }
-            estadoObj = Estado.Buscar;
-            estadoComponentes(Estado.Buscar);
+            if (txtidprod.Text != "")
+            {
+                estadoObj = Estado.Buscar;
+                estadoComponentes(Estado.Buscar);
+            }
         }
 
         private void btnElimina_Click(object sender, EventArgs e)
         {
+            if(txtidprod.Text == "")
+            {
+                MessageBox.Show("No se ha seleccionado ningun Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DBController.eliminarProducto(int.Parse(txtidprod.Text));
             limpiarComponentes();
             estadoObj = Estado.Inicial;
@@ -280,9 +326,29 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            int cant;
+            if (insumo == null || insumo.id == 0)
+            {
+                MessageBox.Show("No se ha seleccionado un insumo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtCant.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado la cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (int.TryParse(txtCant.Text, out int canti))
+            {
+                cant = canti;
+            }
+            else
+            {
+                MessageBox.Show("No se ha ingresado un número para la cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             linea = new Service.lineaInsumo();
             linea.insumo = insumo;
-            linea.cantInsumo = int.Parse(txtCant.Text);
+            linea.cantInsumo = cant;
             BindingList<Service.lineaInsumo> lineasAg = new BindingList<lineaInsumo>();
             foreach (lineaInsumo item in lineas)
             {
