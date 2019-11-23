@@ -38,7 +38,22 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dgvHistorialPlan.DataSource = DBController.listarOrdenesProduccionPlan(Int32.Parse(textBox1.Text));
+            int cant;
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (int.TryParse(textBox1.Text, out int canti))
+            {
+                cant = canti;
+            }
+            else
+            {
+                MessageBox.Show("No se ha ingresado una fecha válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            dgvHistorialPlan.DataSource = DBController.listarOrdenesProduccionPlan(cant);
         }
         private void dgvOrden_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {

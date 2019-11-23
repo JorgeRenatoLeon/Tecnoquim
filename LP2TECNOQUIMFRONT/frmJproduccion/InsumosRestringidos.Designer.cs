@@ -241,6 +241,7 @@
             // 
             // cbAnioI
             // 
+            this.cbAnioI.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAnioI.FormattingEnabled = true;
             this.cbAnioI.Location = new System.Drawing.Point(324, 43);
             this.cbAnioI.Name = "cbAnioI";
@@ -269,6 +270,7 @@
             // 
             // cbMesI
             // 
+            this.cbMesI.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMesI.FormattingEnabled = true;
             this.cbMesI.Location = new System.Drawing.Point(69, 43);
             this.cbMesI.Name = "cbMesI";
@@ -307,6 +309,7 @@
             // 
             // cbAnioP
             // 
+            this.cbAnioP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAnioP.FormattingEnabled = true;
             this.cbAnioP.Location = new System.Drawing.Point(324, 43);
             this.cbAnioP.Name = "cbAnioP";
@@ -335,6 +338,7 @@
             // 
             // cbMesP
             // 
+            this.cbMesP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMesP.FormattingEnabled = true;
             this.cbMesP.Location = new System.Drawing.Point(69, 43);
             this.cbMesP.Name = "cbMesP";

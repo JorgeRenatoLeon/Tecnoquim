@@ -16,11 +16,15 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
     {
         private Service.producto productoSeleccionado;
         Service.ServicioClient DBController = new Service.ServicioClient();
-        public frmProducto()
+        public frmProducto(int cont = 0)
         {
             InitializeComponent();
             dgvProductos.AutoGenerateColumns = false;
             dgvProductos.DataSource = DBController.listarProductos("");
+            if(cont==1)
+            {
+                btnSeleccionar.Visible = false;
+            }
         }
 
         public producto ProductoSeleccionado { get => productoSeleccionado; set => productoSeleccionado = value; }
@@ -43,6 +47,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvProductos.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado un Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             ProductoSeleccionado = (Service.producto)dgvProductos.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }

@@ -241,6 +241,7 @@
             // 
             // cbMesI
             // 
+            this.cbMesI.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMesI.FormattingEnabled = true;
             this.cbMesI.Location = new System.Drawing.Point(69, 43);
             this.cbMesI.Name = "cbMesI";

@@ -225,6 +225,7 @@
             // 
             // cbAlmacen
             // 
+            this.cbAlmacen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAlmacen.FormattingEnabled = true;
             this.cbAlmacen.Location = new System.Drawing.Point(139, 30);
             this.cbAlmacen.Name = "cbAlmacen";
