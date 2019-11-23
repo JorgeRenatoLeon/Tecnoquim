@@ -191,7 +191,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 case Estado.Buscar:
 
                     //Botones
-                    btnNuevo.Enabled = true;
+                    btnNuevo.Enabled = false;
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnCancelar.Enabled = true;

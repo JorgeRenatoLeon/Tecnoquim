@@ -491,7 +491,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnEditarOrden_Click(object sender, EventArgs e)
         {
-            frmGestionarOrden formOrd = new frmGestionarOrden(ordenSeleccionada,PMP.id);
+            frmGestionarOrden formOrd = new frmGestionarOrden(ordenSeleccionada,PMP.id,1);
             if (formOrd.ShowDialog(this) == DialogResult.OK)
             {
                 ordenSeleccionada = formOrd.OrderProduccion;
