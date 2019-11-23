@@ -47,6 +47,11 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvHistorialPlan.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado un Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             productoSeleccionado = (Service.producto)dgvHistorialPlan.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
