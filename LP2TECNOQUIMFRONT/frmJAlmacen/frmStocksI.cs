@@ -32,7 +32,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            if (dgvInsumo.CurrentRow.DataBoundItem == null)
+            if (dgvInsumo.CurrentRow == null)
             {
                 MessageBox.Show("No se ha seleccionado un Lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

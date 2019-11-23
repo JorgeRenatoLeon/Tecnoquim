@@ -26,7 +26,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            if(dgvEmpleados.CurrentRow.DataBoundItem == null)
+            if(dgvEmpleados.CurrentRow == null)
             {
                 MessageBox.Show("No se ha seleccionado un Empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

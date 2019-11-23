@@ -76,7 +76,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 
         private void btnBuscarInsumo_Click(object sender, EventArgs e)
         {
-            if (dgvListaOrden.CurrentRow.DataBoundItem == null)
+            if (dgvListaOrden.CurrentRow == null)
             {
                 MessageBox.Show("No se ha seleccionado un Lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

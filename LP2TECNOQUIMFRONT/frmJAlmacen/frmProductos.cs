@@ -27,7 +27,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         private void btnSeleccionar_Click_1(object sender, EventArgs e)
         {
-            if (dgvProductos.CurrentRow.DataBoundItem == null)
+            if (dgvProductos.CurrentRow == null)
             {
                 MessageBox.Show("No se ha seleccionado un Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

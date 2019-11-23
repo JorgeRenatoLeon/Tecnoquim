@@ -43,6 +43,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnSeleccionar_Click_1(object sender, EventArgs e)
         {
+            if (dgvMaquinaria.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado una Maquinaria", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             MaquinariaSeleccionada = (Service.maquinaria)dgvMaquinaria.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
