@@ -84,7 +84,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             estadoComponentes(Estado.Buscar);
             if (flagHist == 2)
             {
-                btnNuevo.Visible = false;
                 btnModificar.Visible = false;
                 btnGuardar.Visible = false;
                 btnCancelar.Visible = false;
@@ -106,7 +105,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 case Estado.Inicial:
 
                     //Botones
-                    btnNuevo.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = false;
                     btnCancelar.Enabled = false;
@@ -136,7 +134,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     
                     if(flagHist == 0)
                     {
-                        btnNuevo.Enabled = false;
                         btnGuardar.Enabled = false;
                         btnModificar.Enabled = false;
                         btnCancelar.Enabled = false;
@@ -149,7 +146,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 case Estado.Nuevo:
 
                     //Botones
-                    btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
                     btnCancelar.Enabled = true;
@@ -178,7 +174,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
                     if (flagHist == 0)
                     {
-                        btnNuevo.Enabled = false;
                         btnGuardar.Enabled = false;
                         btnModificar.Enabled = false;
                         btnCancelar.Enabled = false;
@@ -191,7 +186,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 case Estado.Buscar:
 
                     //Botones
-                    btnNuevo.Enabled = false;
                     btnGuardar.Enabled = false;
                     btnModificar.Enabled = true;
                     btnCancelar.Enabled = true;
@@ -222,7 +216,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
                     if (flagHist == 0)
                     {
-                        btnNuevo.Enabled = false;
                         btnGuardar.Enabled = false;
                         btnModificar.Enabled = false;
                         btnCancelar.Enabled = false;
@@ -236,7 +229,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 case Estado.Modificar:
 
                     //Botones
-                    btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnModificar.Enabled = false;
                     btnCancelar.Enabled = true;
@@ -266,7 +258,6 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
                     if (flagHist == 0)
                     {
-                        btnNuevo.Enabled = false;
                         btnGuardar.Enabled = false;
                         btnModificar.Enabled = false;
                         btnCancelar.Enabled = false;
@@ -276,6 +267,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 default:
                     break;
             }
+            txtNOrden.Enabled = false;
+            txtCodigoProducto.Enabled = false;
+            txtNombre.Enabled = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -316,12 +310,36 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             limpiarComponentes();
             estadoFormulario = Estado.Inicial;
             estadoComponentes(estadoFormulario);
+            if (ordenRecivida != null)
+            {
+                this.Close();
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            int cant;
+            if (producto == null || producto.idProducto == 0)
+            {
+                MessageBox.Show("No se ha seleccionado un Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtCantidad.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado la cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (int.TryParse(txtCantidad.Text, out int canti))
+            {
+                cant = canti;
+            }
+            else
+            {
+                MessageBox.Show("No se ha ingresado un número para la cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             lineaOrden = new Service.lineaOrden();
-            lineaOrden.cantProducto = int.Parse(txtCantidad.Text);
+            lineaOrden.cantProducto = cant;
             lineaOrden.producto = producto;
             BindingList<Service.lineaOrden> lineasAg = new BindingList<lineaOrden>();
             foreach (lineaOrden item in lineas)
@@ -373,6 +391,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
+            if(lineas.Count() == 0)
+            {
+                MessageBox.Show("No se han ingresado productos para la Orden de Producción", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             _orderProduccion.fecha = dtpOrden.Value;
             if (ordenRecivida != null)
             {

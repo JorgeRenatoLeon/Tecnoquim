@@ -25,6 +25,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvHistorialPlan.CurrentRow.DataBoundItem == null)
+            {
+                MessageBox.Show("No se ha seleccionado un Plan Maestro de Producción", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             this.Visible = false;
             frmGestionarPlan frmGestionarPlan = new frmGestionarPlan((Service.planMaestroProduccion)dgvHistorialPlan.CurrentRow.DataBoundItem);
             frmGestionarPlan.Visible = true;

@@ -32,14 +32,10 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             {
                 MessageBox.Show("No hay Ordenes pendientes por hoy", "Advertencia", MessageBoxButtons.OK);
                 this.DialogResult = DialogResult.OK;
-                
             }
             else
             {
-
                 dgvListaOrden.DataSource = DBController.listarLineaOrden(lineas[0].id);
-                
-
             }
 
         }
@@ -80,6 +76,11 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 
         private void btnBuscarInsumo_Click(object sender, EventArgs e)
         {
+            if (dgvListaOrden.CurrentRow.DataBoundItem == null)
+            {
+                MessageBox.Show("No se ha seleccionado un Lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             LineaOrdenSeleccionada = (Service.lineaOrden)dgvListaOrden.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }

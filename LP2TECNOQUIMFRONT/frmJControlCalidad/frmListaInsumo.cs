@@ -36,10 +36,16 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             dgvListaOrden.Rows[e.RowIndex].Cells["Lote"].Value = detFila.nLote;
             dgvListaOrden.Rows[e.RowIndex].Cells["Periodo"].Value = detFila.periodo;
             dgvListaOrden.Rows[e.RowIndex].Cells["Stock"].Value = detFila.stock;
+            dgvListaOrden.Rows[e.RowIndex].Cells["Estado"].Value = detFila.estado;
         }
 
         private void btnBuscarInsumo_Click(object sender, EventArgs e)
         {
+            if (dgvListaOrden.CurrentRow.DataBoundItem == null)
+            {
+                MessageBox.Show("No se ha seleccionado un Lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DetalleSeleccionada = (Service.detalleAlmacenInsumo)dgvListaOrden.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }

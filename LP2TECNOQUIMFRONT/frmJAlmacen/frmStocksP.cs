@@ -31,6 +31,11 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvProductos.CurrentRow.DataBoundItem == null)
+            {
+                MessageBox.Show("No se ha seleccionado un Lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             ProductoSeleccionado = (Service.detalleAlmacenProducto)dgvProductos.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }

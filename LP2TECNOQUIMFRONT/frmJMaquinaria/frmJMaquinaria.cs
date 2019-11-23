@@ -116,22 +116,37 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
                 {
                     rbInactivo.Checked = true;
                 }
+                estadoComponentes(Estado.Buscar);
             }
-            estadoComponentes(Estado.Buscar);
         }
         
         private void guardarToolStripButton_Click(object sender, EventArgs e)
         {
+            if(txtNombre.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado el nombre de la Maquinaria", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtTipo.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado el tipo de la Maquinaria", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             maquinaria = new Service.maquinaria();
             maquinaria.nombre = txtNombre.Text;
             maquinaria.tipo = txtTipo.Text;
-            if (rbActivo.Enabled == true)
+            if (rbActivo.Checked == true)
             {
                 maquinaria.estado = true;
             }
-            else
+            else if(rbInactivo.Checked == true)
             {
                 maquinaria.estado = false;
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado el estado de la Maquinaria", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             if (estadoObj == Estado.Nuevo)
             {
@@ -141,6 +156,14 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
             else if (estadoObj == Estado.Modificar) 
             {
                 maquinaria.id =int.Parse(txtNOrden.Text);
+                if (rbActivo.Checked == true)
+                {
+                    maquinaria.estado = true;
+                }
+                else
+                {
+                    maquinaria.estado = false;
+                }
                 DBController.actualizarMaquinaria(maquinaria);
                 MessageBox.Show("Maquinaria Actualizada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -227,6 +250,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
                     rbInactivo.Enabled = true;
                     break;
             }
+            txtNOrden.Enabled = false;
         }
 
         public void limpiarComponentes()

@@ -25,6 +25,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvHistorialPlan.CurrentRow.DataBoundItem == null)
+            {
+                MessageBox.Show("No se ha seleccionado una Orden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             this.Visible = false;
             frmGestionarOrden frmGestionarOrden = new frmGestionarOrden((Service.ordenProduccion)dgvHistorialPlan.CurrentRow.DataBoundItem);
             frmGestionarOrden.Visible = true;

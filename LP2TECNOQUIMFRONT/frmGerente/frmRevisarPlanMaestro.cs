@@ -44,6 +44,9 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             }
             DateTime date = pmp.periodo.AddHours(5);
             calOrdenProduccion.SetDate(new DateTime(date.Year, date.Month, 1));
+            txtCodigo.Enabled = false;
+            txtPeriodo.Enabled = false;
+            txtResponsable.Enabled = false;
         }
 
         public frmRevisarPlanMaestro(Service.trabajador gerente)
@@ -63,6 +66,11 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             {
                 pmp.estado = Service.estado.Rechazado;
                 mensaje.descripcion = "PLAN MAESTRO RECHAZADO. " + txtComentario.Text;
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado un estado para el Plan Maestro de Producción", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             DBController.actualizarPMP(pmp);
 

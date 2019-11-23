@@ -25,6 +25,11 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvProyeccion.CurrentRow.DataBoundItem == null)
+            {
+                MessageBox.Show("No se ha seleccionado una Proyección de Venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             ProyeccionSeleccionada = (Service.proyeccionVenta)dgvProyeccion.CurrentRow.DataBoundItem;
             frmGestionarProyeccionVenta frmPv = new frmGestionarProyeccionVenta(ProyeccionSeleccionada, false);
             frmPv.Visible = true;

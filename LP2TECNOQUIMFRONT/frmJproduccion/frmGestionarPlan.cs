@@ -95,6 +95,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     btnEditarOrden.Enabled = false;
                     btnBuscarMaquinaria.Enabled = false;
                     btnAgregarMaquinaria.Enabled = false;
+                    btnEliminar.Enabled = false;
                     // Etiquetas
                     lblCodigoMaquinaria.Enabled = false;
                     lblNombreMaquinaria.Enabled = false;
@@ -135,6 +136,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     btnEditarOrden.Enabled = true;
                     btnBuscarMaquinaria.Enabled = true;
                     btnAgregarMaquinaria.Enabled = true;
+                    btnEliminar.Enabled = true;
 
                     // Etiquetas
                     lblCodigoMaquinaria.Enabled = true;
@@ -176,6 +178,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     btnEditarOrden.Enabled = false;
                     btnBuscarMaquinaria.Enabled = false;
                     btnAgregarMaquinaria.Enabled = false;
+                    btnEliminar.Enabled = false;
 
                     // Etiquetas
                     lblCodigoMaquinaria.Enabled = false;
@@ -219,6 +222,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     btnEditarOrden.Enabled = true;
                     btnBuscarMaquinaria.Enabled = true;
                     btnAgregarMaquinaria.Enabled = true;
+                    btnEliminar.Enabled = true;
 
                     // Etiquetas
                     lblCodigoMaquinaria.Enabled = true;
@@ -264,6 +268,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                     }
                     break;
             }
+            txtNOrden.Enabled = false;
+            txtCodigo.Enabled = false;
+            txtNombre.Enabled = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -294,7 +301,8 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            _pmp = new Service.planMaestroProduccion();
+            PMP = new Service.planMaestroProduccion();
+            PMP.maquinarias = detMaquinarias.ToArray();
             limpiarComponentes();
             estado = Estado.Nuevo;
             estadoComponentes(Estado.Nuevo);
@@ -319,6 +327,16 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if(PMP.maquinarias == null)
+            {
+                MessageBox.Show("No se han asignado Maquinarias al Plan Maestro de Producción", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(new BindingList<detalleMaquinaria>(PMP.maquinarias).Count() == 0)
+            {
+                MessageBox.Show("No se han asignado Maquinarias al Plan Maestro de Producción", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (estado == Estado.Nuevo)
             {
                 PMP.periodo = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
@@ -417,9 +435,9 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             {
                 if(estado == Estado.Nuevo)
                 {
-                    if(calOrdenProduccion.SelectionRange.Start.Month != DateTime.Now.Month )
+                    if(calOrdenProduccion.SelectionRange.Start.Month != DateTime.Now.AddMonths(1).Month )
                     {
-                        calOrdenProduccion.SetDate(new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1));
+                        calOrdenProduccion.SetDate(new DateTime(DateTime.Now.Year, DateTime.Now.AddMonths(1).Month, 1));
                     }
                 }
                 else
@@ -521,9 +539,19 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnAgregarMaquinaria_Click(object sender, EventArgs e)
         {
+            if(det.maquinaria == null)
+            {
+                MessageBox.Show("No se ha seleccionado una Maquinaria", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             BindingList<detalleMaquinaria> lineasAg = new BindingList<detalleMaquinaria>();
             foreach (detalleMaquinaria item in detMaquinarias)
             {
+                if (item.maquinaria.nombre == det.maquinaria.nombre)
+                {
+                    MessageBox.Show("Maquinaria ya asignada anteriormente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 lineasAg.Add(item);
             }
             lineasAg.Add(det);

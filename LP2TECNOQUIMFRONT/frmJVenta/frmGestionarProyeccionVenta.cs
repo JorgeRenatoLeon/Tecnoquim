@@ -43,6 +43,9 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
                 gbDatosP.Enabled = false;
                 btnGuardar.Visible = false;
             }
+            txtCodigoP.Enabled = false;
+            txtNOrden.Enabled = false;
+            txtNombreP.Enabled = false;
         }
         public void limpiarComponentes()
         {
@@ -81,9 +84,29 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 
         private void btnAgregarP_Click(object sender, EventArgs e)
         {
+            int cant;
+            if (producto == null || producto.idProducto == 0)
+            {
+                MessageBox.Show("No se ha seleccionado un Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtCantidadP.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado la cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (int.TryParse(txtCantidadP.Text, out int canti))
+            {
+                cant = canti;
+            }
+            else
+            {
+                MessageBox.Show("No se ha ingresado un número para la cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             Service.lineaProyeccion lp = new Service.lineaProyeccion();
             lp.producto = producto;
-            lp.cantidad = int.Parse(txtCantidadP.Text);
+            lp.cantidad = cant;
             lineas.Add(lp);
         }
 
@@ -140,6 +163,11 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if(lineas.Count() == 0)
+            {
+                MessageBox.Show("No se ha ingresado proyección para ningún producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             proyeccionVenta.proyecciones = lineas.ToArray();
             DBController.actualizarProyeccionVenta(proyeccionVenta);
             MessageBox.Show("Proyección Actualizada Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);

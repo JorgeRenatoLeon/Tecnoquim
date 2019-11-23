@@ -34,6 +34,11 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         private void btnDetalle_Click(object sender, EventArgs e)
         {
+            if (dgvHistorialPlan.CurrentRow.DataBoundItem == null)
+            {
+                MessageBox.Show("No se ha seleccionado un Plan", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             PmpSeleccionado = (Service.planMaestroProduccion)dgvHistorialPlan.CurrentRow.DataBoundItem;
             frmRevisarPlanMaestro frmRevisarPMP = new frmRevisarPlanMaestro(PmpSeleccionado, false);
             frmRevisarPMP.Visible = true;
