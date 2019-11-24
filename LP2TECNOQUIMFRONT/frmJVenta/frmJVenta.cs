@@ -61,7 +61,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
         }
         public void SplashStart()
         {
-            Application.Run(new frmSplash());
+            //Application.Run(new frmSplash());
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -95,17 +95,21 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
         private void btnPMS_Click(object sender, EventArgs e)
         {
             DateTime today = DateTime.Today;
-            Service.proyeccionVenta[] pvs = DBController.listarProyeccionVenta(today.AddMonths(1).ToString("MM/yyyy"));
+            today = today.AddMonths(1);
+            Service.proyeccionVenta[] pvs = DBController.listarProyeccionVenta(today.ToString("yyyy-MM"));
             if (pvs == null)
             {
-                MessageBox.Show("No hay proyecciones.", "Mensaje Confirmacion", MessageBoxButtons.OK);
+                proyeccionVenta.periodo = today;
+                proyeccionVenta.periodoSpecified = true;
+                DBController.insertarProyeccionVenta(proyeccionVenta);
+                Service.proyeccionVenta[] pvs2 = DBController.listarProyeccionVenta(today.ToString("yyyy-MM"));
+                proyeccionVenta = pvs2[pvs2.Length - 1];
             }
-            else
-            {
+            else {
                 proyeccionVenta = pvs[pvs.Length - 1];
-                frmGestionarProyeccionVenta formRegistro = new frmGestionarProyeccionVenta(proyeccionVenta,true);
-                formRegistro.Visible = true;
             }
+            frmGestionarProyeccionVenta formRegistro = new frmGestionarProyeccionVenta(proyeccionVenta, true);
+            formRegistro.Visible = true;
         }
 
         private void btnHistorial_Click(object sender, EventArgs e)
