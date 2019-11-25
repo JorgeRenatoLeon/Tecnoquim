@@ -19,7 +19,7 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
     public partial class frmLogin : Form
     {
         private Service.trabajador trabajador = new Service.trabajador();
-        Service.ServicioClient DBController = new Service.ServicioClient();
+        private Service.ServicioClient DBController = new Service.ServicioClient();
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -38,9 +38,13 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
 
         private void textBoxTest_KeyDown(object sender, KeyEventArgs e)
         {
+            if(txtUsuario.Text != "Usuario") txtUsuario.ForeColor = Color.Black;
+            if (txtContrasena.Text != "Contrasena") txtContrasena.ForeColor = Color.Black;
             if (e.KeyCode == Keys.Enter)
             {
                 button1_Click(this, new EventArgs());
+                txtContrasena.BackColor = Color.White;
+                txtUsuario.BackColor = Color.White;
             }
         }
 
@@ -93,18 +97,23 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
                     }
                     else
                     {
-                        MessageBox.Show("Datos de Ingreso Incorrectos");
+                        txtError.Text = "Datos de Ingreso Incorrectos";
                         this.Visible = true;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Ingresa una contraseña");
+                    txtContrasena.ForeColor = Color.Red;
+                    txtContrasena.BackColor = Color.Orange;
+                    txtError.Text = "Ingrese su contraseña";
                     this.Visible = true;
                 }
             }
-            else {
-                MessageBox.Show("Ingresa tu usuario");
+            else
+            {
+                txtUsuario.ForeColor = Color.Red;
+                txtUsuario.BackColor = Color.Orange;
+                txtError.Text = "Ingresa tu usuario";
                 this.Visible = true;
             }
         }
@@ -114,16 +123,15 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             if (this.txtUsuario.Text == "Usuario")
             {
                 this.txtUsuario.Text = "";
-                this.txtUsuario.ForeColor = Color.Black;
             }
         }
 
         private void txtContrasenaEnter(object sender, EventArgs e)
         {
+            txtError.Text = "";
             if (this.txtContrasena.Text != "")
             {
                 this.txtContrasena.Text = "";
-                this.txtContrasena.ForeColor = Color.Black;
             }
         }
 
@@ -133,6 +141,7 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             {
                 this.txtContrasena.Text = "Contrasena";
                 this.txtContrasena.ForeColor = Color.Silver;
+                this.txtContrasena.BackColor = Color.White;
             }
         }
 
@@ -151,8 +160,19 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
 
         private void lblOlvidoContrasena_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            txtError.Text = "";
             frmRecuperarContrasenha frm = new frmRecuperarContrasenha(this.trabajador);
             frm.ShowDialog(this);
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (this.txtUsuario.Text == "")
+            {
+                this.txtUsuario.Text = "Usuario";
+                this.txtUsuario.ForeColor = Color.Silver;
+                this.txtUsuario.BackColor = Color.White;
+            }
         }
     }
 }

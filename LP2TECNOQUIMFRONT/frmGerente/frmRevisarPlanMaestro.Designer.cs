@@ -324,7 +324,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(319, 866);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(203, 44);
+            this.btnGuardar.Size = new System.Drawing.Size(186, 44);
             this.btnGuardar.TabIndex = 43;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -336,7 +336,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(842, 768);
+            this.ClientSize = new System.Drawing.Size(842, 741);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.gbOrden);
             this.Controls.Add(this.groupBox1);

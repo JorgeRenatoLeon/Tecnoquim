@@ -58,6 +58,7 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
                     lblCantNotificaciones.Text = not.ToString();
                 }
             }
+            btnPerfil.Text = trabajador.nombres + "\n" + trabajador.apellidos;
         }
         public void SplashStart()
         {

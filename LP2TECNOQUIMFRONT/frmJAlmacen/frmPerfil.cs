@@ -39,6 +39,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 lblCantNotificaciones.Visible = true;
                 lblCantNotificaciones.Text = not.ToString();
             }
+            button2.Text = trabajador.nombres + "\n" + trabajador.apellidos;
         }
 
         private void btnInicio_Click(object sender, EventArgs e)

@@ -75,6 +75,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 lblCantNotificaciones.Visible = true;
                 lblCantNotificaciones.Text = not.ToString();
             }
+            btnPerfil.Text = trabajador.nombres + "\n" + trabajador.apellidos;
         }
 
         private void btnGenRepI_Click(object sender, EventArgs e)

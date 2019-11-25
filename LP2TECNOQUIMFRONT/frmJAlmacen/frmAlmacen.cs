@@ -57,6 +57,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     lblCantNotificaciones.Text = not.ToString();
                 }
             }
+            btnPerfil.Text = trabajador.nombres + "\n" + trabajador.apellidos;
         }
         public void SplashStart()
         {

@@ -43,6 +43,7 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             this.pbMinimize = new System.Windows.Forms.PictureBox();
             this.pbCerrar = new System.Windows.Forms.PictureBox();
             this.lblOlvidoContrasena = new System.Windows.Forms.LinkLabel();
+            this.txtError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
@@ -63,6 +64,7 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             this.txtUsuario.Text = "Usuario";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuarioEnter);
             this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTest_KeyDown);
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // txtContrasena
             // 
@@ -142,7 +144,7 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             this.button1.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(338, 309);
+            this.button1.Location = new System.Drawing.Point(337, 335);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 33);
             this.button1.TabIndex = 9;
@@ -190,7 +192,7 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             // 
             this.lblOlvidoContrasena.AutoSize = true;
             this.lblOlvidoContrasena.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(150)))), ((int)(((byte)(19)))));
-            this.lblOlvidoContrasena.Location = new System.Drawing.Point(323, 363);
+            this.lblOlvidoContrasena.Location = new System.Drawing.Point(323, 376);
             this.lblOlvidoContrasena.Name = "lblOlvidoContrasena";
             this.lblOlvidoContrasena.Size = new System.Drawing.Size(114, 13);
             this.lblOlvidoContrasena.TabIndex = 14;
@@ -198,12 +200,22 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
             this.lblOlvidoContrasena.Text = "Recuperar Contraseña";
             this.lblOlvidoContrasena.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblOlvidoContrasena_LinkClicked);
             // 
+            // txtError
+            // 
+            this.txtError.AutoSize = true;
+            this.txtError.ForeColor = System.Drawing.Color.Red;
+            this.txtError.Location = new System.Drawing.Point(336, 305);
+            this.txtError.Name = "txtError";
+            this.txtError.Size = new System.Drawing.Size(0, 13);
+            this.txtError.TabIndex = 15;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtError);
             this.Controls.Add(this.lblOlvidoContrasena);
             this.Controls.Add(this.pbCerrar);
             this.Controls.Add(this.pbMinimize);
@@ -245,5 +257,6 @@ namespace LP2TECNOQUIMFRONT.frmPrincipal
         private System.Windows.Forms.PictureBox pbMinimize;
         private System.Windows.Forms.PictureBox pbCerrar;
         private System.Windows.Forms.LinkLabel lblOlvidoContrasena;
+        private System.Windows.Forms.Label txtError;
     }
 }

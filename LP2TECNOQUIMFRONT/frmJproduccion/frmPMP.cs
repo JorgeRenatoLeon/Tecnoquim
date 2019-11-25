@@ -29,6 +29,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 frmGestionarPlan formGestionarPlan = new frmGestionarPlan(null, trabajador);
                 formGestionarPlan.ShowDialog(this);
             }
+            btnPerfil.Text = trabajador.nombres + "\n" + trabajador.apellidos;
         }
 
         private void pbClose_Click(object sender, EventArgs e)

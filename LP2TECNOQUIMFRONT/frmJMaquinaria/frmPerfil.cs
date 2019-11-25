@@ -39,6 +39,7 @@ namespace LP2TECNOQUIMFRONT.frmJMaquinaria
                 lblCantNotificaciones.Visible = true;
                 lblCantNotificaciones.Text = not.ToString();
             }
+            btnPerfil.Text = trabajador.nombres + "\n" + trabajador.apellidos;
         }
 
         private void btnInicio_Click(object sender, EventArgs e)

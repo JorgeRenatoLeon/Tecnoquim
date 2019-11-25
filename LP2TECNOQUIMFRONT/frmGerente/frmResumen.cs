@@ -27,6 +27,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             {
                 not = mensajes.Length;
             }
+            btnPerfil.Text = trabajador.nombres + "\n" + trabajador.apellidos;
             lblCantNotificaciones.Visible = false;
             if (not > 0)
             {

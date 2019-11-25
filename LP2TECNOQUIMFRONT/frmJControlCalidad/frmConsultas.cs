@@ -31,6 +31,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
                 lblCantNotificaciones.Visible = true;
                 lblCantNotificaciones.Text = not.ToString();
             }
+            btnPerfil.Text = trabajador.nombres + "\n" + trabajador.apellidos;
         }
 
         private void btnProducto_Click(object sender, EventArgs e)
