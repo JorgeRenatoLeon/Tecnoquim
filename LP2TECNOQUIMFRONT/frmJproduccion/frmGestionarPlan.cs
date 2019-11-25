@@ -291,6 +291,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             frmMaquinaria form = new frmMaquinaria();
             if (form.ShowDialog(this) == DialogResult.OK)
             {
+                det = new detalleMaquinaria();
                 det.fecha = DateTime.Now;
                 det.fechaSpecified = true;
                 det.maquinaria = form.MaquinariaSeleccionada;
@@ -339,7 +340,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             }
             if (estado == Estado.Nuevo)
             {
-                PMP.periodo = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+                PMP.periodo = new DateTime(calOrdenProduccion.SelectionRange.Start.Year, calOrdenProduccion.SelectionRange.Start.Month, 1);
+                PMP.periodoSpecified = true;
+                PMP.estado = Service.estado.Pendiente;
+                PMP.estadoSpecified = true;
+                PMP.responsable = this.trabajador;
                 PMP.id = DBController.insertarPMP(PMP);
                 txtNOrden.Text = PMP.id.ToString();
                 foreach (ordenProduccion l in PMP.ordenes)
@@ -545,14 +550,17 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 return;
             }
             BindingList<detalleMaquinaria> lineasAg = new BindingList<detalleMaquinaria>();
-            foreach (detalleMaquinaria item in detMaquinarias)
+            if (PMP.maquinarias != null)
             {
-                if (item.maquinaria.nombre == det.maquinaria.nombre)
+                foreach (detalleMaquinaria item in PMP.maquinarias)
                 {
-                    MessageBox.Show("Maquinaria ya asignada anteriormente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    if (item.maquinaria.nombre == det.maquinaria.nombre)
+                    {
+                        MessageBox.Show("Maquinaria ya asignada anteriormente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    lineasAg.Add(item);
                 }
-                lineasAg.Add(item);
             }
             lineasAg.Add(det);
             detMaquinarias = lineasAg;
