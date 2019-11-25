@@ -464,6 +464,19 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             {
                 MessageBox.Show("No hay Insumos Suficientes para realizar la Orden. Se notificara a Almacen");
             }
+            else
+            {
+                foreach (lineaOrden item in _orderProduccion.lineasOrden)
+                {
+                    detalleAlmacenProducto[] detList = DBController.listarDetalleAlmacenProducto(item.producto.nombre);
+                    detalleAlmacenProducto detAct = detList[detList.Count()-1];
+                    detAct.nLote = detAct.nLote + 1;
+                    detAct.periodo = DateTime.Now;
+                    detAct.stock = item.cantProducto;
+                    DBController.insertarDetalleAlmacenProducto(detAct);
+                }
+                MessageBox.Show("Se procedió a realizar la Orden. Se generarán los productos correspondientes");
+            }
         }
     }
 }
