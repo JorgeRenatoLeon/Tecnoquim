@@ -1,5 +1,6 @@
 ﻿
 using LP2TECNOQUIMFRONT.frmJAlmacen;
+using LP2TECNOQUIMFRONT.frmJVenta;
 using System;
 using System.Windows.Forms;
 
@@ -8,6 +9,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
     public partial class frmConsultas : Form
     {
         Service.trabajador trabajador = new Service.trabajador();
+        Service.proyeccionVenta proyeccionVenta = new Service.proyeccionVenta();
         int close = 0;
         int not = 0;
         Service.ServicioClient DBController = new Service.ServicioClient();
@@ -116,6 +118,23 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             formInsR.Visible = true;
             close = 1;
             this.Close();
+        }
+
+        private void btnProyeccion_Click(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Today;
+            today = today.AddMonths(1);
+            Service.proyeccionVenta[] pvs = DBController.listarProyeccionVenta(today.ToString("yyyy-MM"));
+            if (pvs == null)
+            {
+                MessageBox.Show("No hay una Proyeccion de Venta para el mes siguiente", "Proyeccion de Venta existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                proyeccionVenta = pvs[pvs.Length - 1];
+                frmGestionarProyeccionVenta formVenta = new frmGestionarProyeccionVenta(proyeccionVenta, false);
+                formVenta.ShowDialog(this);
+            }
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultas));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCantNotificaciones = new System.Windows.Forms.Label();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@
             this.btnInsumos = new System.Windows.Forms.Button();
             this.btnProducto = new System.Windows.Forms.Button();
             this.btnMaquinaria = new System.Windows.Forms.Button();
-            this.lblCantNotificaciones = new System.Windows.Forms.Label();
+            this.btnProyeccion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -62,6 +63,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 498);
             this.panel1.TabIndex = 4;
+            // 
+            // lblCantNotificaciones
+            // 
+            this.lblCantNotificaciones.AutoSize = true;
+            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
+            this.lblCantNotificaciones.Location = new System.Drawing.Point(108, 423);
+            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
+            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
+            this.lblCantNotificaciones.TabIndex = 26;
+            this.lblCantNotificaciones.Text = "1";
             // 
             // btnReporte
             // 
@@ -181,7 +192,7 @@
             this.btnPolitica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPolitica.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPolitica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnPolitica.Location = new System.Drawing.Point(338, 371);
+            this.btnPolitica.Location = new System.Drawing.Point(343, 285);
             this.btnPolitica.Name = "btnPolitica";
             this.btnPolitica.Size = new System.Drawing.Size(334, 65);
             this.btnPolitica.TabIndex = 24;
@@ -199,7 +210,7 @@
             this.btnInsumos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInsumos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsumos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnInsumos.Location = new System.Drawing.Point(338, 161);
+            this.btnInsumos.Location = new System.Drawing.Point(343, 113);
             this.btnInsumos.Name = "btnInsumos";
             this.btnInsumos.Size = new System.Drawing.Size(334, 65);
             this.btnInsumos.TabIndex = 23;
@@ -217,7 +228,7 @@
             this.btnProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProducto.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnProducto.Location = new System.Drawing.Point(338, 56);
+            this.btnProducto.Location = new System.Drawing.Point(343, 30);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(334, 65);
             this.btnProducto.TabIndex = 22;
@@ -235,7 +246,7 @@
             this.btnMaquinaria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaquinaria.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaquinaria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnMaquinaria.Location = new System.Drawing.Point(338, 263);
+            this.btnMaquinaria.Location = new System.Drawing.Point(343, 198);
             this.btnMaquinaria.Name = "btnMaquinaria";
             this.btnMaquinaria.Size = new System.Drawing.Size(334, 65);
             this.btnMaquinaria.TabIndex = 25;
@@ -243,15 +254,23 @@
             this.btnMaquinaria.UseVisualStyleBackColor = false;
             this.btnMaquinaria.Click += new System.EventHandler(this.btnMaquinaria_Click);
             // 
-            // lblCantNotificaciones
+            // btnProyeccion
             // 
-            this.lblCantNotificaciones.AutoSize = true;
-            this.lblCantNotificaciones.BackColor = System.Drawing.Color.Red;
-            this.lblCantNotificaciones.Location = new System.Drawing.Point(108, 423);
-            this.lblCantNotificaciones.Name = "lblCantNotificaciones";
-            this.lblCantNotificaciones.Size = new System.Drawing.Size(13, 13);
-            this.lblCantNotificaciones.TabIndex = 26;
-            this.lblCantNotificaciones.Text = "1";
+            this.btnProyeccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProyeccion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnProyeccion.BackColor = System.Drawing.Color.White;
+            this.btnProyeccion.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
+            this.btnProyeccion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProyeccion.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProyeccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnProyeccion.Location = new System.Drawing.Point(343, 371);
+            this.btnProyeccion.Name = "btnProyeccion";
+            this.btnProyeccion.Size = new System.Drawing.Size(334, 65);
+            this.btnProyeccion.TabIndex = 26;
+            this.btnProyeccion.Text = "Proyección Venta";
+            this.btnProyeccion.UseVisualStyleBackColor = false;
+            this.btnProyeccion.Click += new System.EventHandler(this.btnProyeccion_Click);
             // 
             // frmConsultas
             // 
@@ -260,6 +279,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.background_11_wide;
             this.ClientSize = new System.Drawing.Size(857, 498);
+            this.Controls.Add(this.btnProyeccion);
             this.Controls.Add(this.btnMaquinaria);
             this.Controls.Add(this.btnPolitica);
             this.Controls.Add(this.btnInsumos);
@@ -292,5 +312,6 @@
         private System.Windows.Forms.Button btnMaquinaria;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Label lblCantNotificaciones;
+        private System.Windows.Forms.Button btnProyeccion;
     }
 }
