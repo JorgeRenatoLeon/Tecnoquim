@@ -79,7 +79,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     btnEliminar.Enabled = false;
                     btnBuscar.Enabled = false;
                     //Campos de Texto
-                    txtCodigo.Enabled = true;
+                    txtCodigo.Enabled = false;
                     txtNombre.Enabled = true;
                     txtCant.Enabled = true;
                     txtGranu.Enabled = true;
@@ -113,7 +113,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     btnEliminar.Enabled = true;
                     btnBuscar.Enabled = false;
                     //Campos de Texto
-                    txtCodigo.Enabled = true;
+                    txtCodigo.Enabled = false;
                     txtNombre.Enabled = true;
                     txtCant.Enabled = true;
                     txtGranu.Enabled = true;

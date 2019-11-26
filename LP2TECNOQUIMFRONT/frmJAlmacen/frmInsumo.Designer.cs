@@ -190,7 +190,7 @@
             this.cbUnidades.FormattingEnabled = true;
             this.cbUnidades.Location = new System.Drawing.Point(349, 156);
             this.cbUnidades.Name = "cbUnidades";
-            this.cbUnidades.Size = new System.Drawing.Size(65, 28);
+            this.cbUnidades.Size = new System.Drawing.Size(236, 28);
             this.cbUnidades.TabIndex = 68;
             // 
             // txtCodigo
