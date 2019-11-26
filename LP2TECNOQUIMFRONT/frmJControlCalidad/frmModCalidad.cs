@@ -28,7 +28,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             txtPres.Enabled = false;
             datoE.Add("Bueno");
             datoE.Add("Pendiente");
-
+            datoE.Add("Corregido");
             cbRol.DataSource = datoE;
 
             txtidprod.Enabled = false;
@@ -67,14 +67,37 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             if(dato == "Bueno")
             {
                 lorden.estadoCalidad = Service.estadoMaterial.Bueno;
+                //lorden.estadoCalidadSpecified = true;
 
             }
-            else 
+            else if (dato == "Pendiente")
+            {
+                lorden.estadoCalidad = Service.estadoMaterial.Corregido;
+                //lorden.estadoCalidadSpecified = true;
+            }
+            else if (dato == "Corregido")
             {
                 lorden.estadoCalidad = Service.estadoMaterial.Pendiente;
+                //lorden.estadoCalidadSpecified = true;
+            }
+            lorden.estadoCalidadSpecified = true;
+            DBController.actualizarLineaOrden(lorden);
+
+            if(dato=="Bueno")
+            {
+                //Service.detalleAlmacenProducto detalleNuevo = new Service.detalleAlmacenProducto();
+                //detalleNuevo.almacen.idAlmacen = 2; //producto
+                //detalleNuevo.estado = Service.estadoMaterial.Bueno;
+                //detalleNuevo.estadoSpecified = true;
+                //detalleNuevo.periodo = DateTime.Now;
+                //detalleNuevo.periodoSpecified = true;
+                //detalleNuevo.producto = lorden.producto;
+                //detalleNuevo.stock = lorden.cantProducto;
+                //DBController.actualizarDetalleAlmacenProducto(detalleNuevo);
             }
 
-            DBController.actualizarLineaOrden(lorden);
+
+
             MessageBox.Show("Producto Verificado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtidprod.Text = "";
             txtNomProd.Text = "";

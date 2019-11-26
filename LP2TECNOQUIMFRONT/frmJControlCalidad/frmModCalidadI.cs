@@ -27,7 +27,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 
             datoE.Add("Bueno");
             datoE.Add("Pendiente");
-            datoE.Add("Rechazado");
+            datoE.Add("Corregido");
 
             cbRol.DataSource = datoE;
 
@@ -67,15 +67,15 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             }
             if (dato == "Bueno")
             {
-                detalle.estado = Service.estadoMaterial.Bueno;
+                detalle.estado = Service.estadoMaterial.Pendiente;
             }
             else if (dato== "Pendiente")
             {
-                detalle.estado = Service.estadoMaterial.Pendiente;
-            }
-            else if (dato == "Rechazado")
-            {
                 detalle.estado = Service.estadoMaterial.Rechazado;
+            }
+            else if (dato == "Corregido")
+            {
+                detalle.estado = Service.estadoMaterial.Bueno;
             }
 
             DBController.actualizarDetalleAlmacenInsumoEstado(detalle); 
