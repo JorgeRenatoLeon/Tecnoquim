@@ -544,6 +544,14 @@
   <xs:complexType name="eliminarLineaInsumoResponse">
     <xs:sequence />
   </xs:complexType>
+  <xs:complexType name="actualizarDetalleMaquinaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detMaquinaria" type="tns:detalleMaquinaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarDetalleMaquinariaResponse">
+    <xs:sequence />
+  </xs:complexType>
   <xs:complexType name="insertarDetalleAlmacenInsumo">
     <xs:sequence>
       <xs:element minOccurs="0" name="detalleAlmacenInsumo" type="tns:detalleAlmacenInsumo" />
@@ -562,14 +570,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarDetalleAlmacenInsumoResponse">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="actualizarDetalleMaquinaria">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="detMaquinaria" type="tns:detalleMaquinaria" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarDetalleMaquinariaResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarTrabajadores">

@@ -50,6 +50,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHistorialPMP.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnHistorialPMP.BackColor = System.Drawing.Color.White;
+            this.btnHistorialPMP.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
             this.btnHistorialPMP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHistorialPMP.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorialPMP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
@@ -67,6 +68,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRevisarPMP.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRevisarPMP.BackColor = System.Drawing.Color.White;
+            this.btnRevisarPMP.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
             this.btnRevisarPMP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRevisarPMP.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRevisarPMP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));

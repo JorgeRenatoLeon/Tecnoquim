@@ -22,8 +22,13 @@
     <MetadataSource Address="http://localhost:8080/LP2TECNOQUIMSERVICES/Servicio?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+<<<<<<< HEAD
+    <MetadataFile FileName="Servicio1.wsdl" MetadataType="Wsdl" ID="9ba95ea6-6d1d-4b63-bda8-37503df03e75" SourceId="1" SourceUrl="http://localhost:8080/LP2TECNOQUIMSERVICES/Servicio?WSDL" />
+    <MetadataFile FileName="Servicio1.xsd" MetadataType="Schema" ID="879b77a1-04bf-46d7-b9e8-f12cb3c4a98f" SourceId="1" SourceUrl="http://localhost:8080/LP2TECNOQUIMSERVICES/Servicio?xsd=1" />
+=======
     <MetadataFile FileName="Servicio1.wsdl" MetadataType="Wsdl" ID="0ebdce9c-a8da-4c0b-a937-f5eb814801fc" SourceId="1" SourceUrl="http://localhost:8080/LP2TECNOQUIMSERVICES/Servicio?WSDL" />
     <MetadataFile FileName="Servicio1.xsd" MetadataType="Schema" ID="c816d63d-9846-45f9-bba7-92371a5d74ee" SourceId="1" SourceUrl="http://localhost:8080/LP2TECNOQUIMSERVICES/Servicio?xsd=1" />
+>>>>>>> ea51ec5c927d88e5d9885020db6cd63640fd0bd1
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
