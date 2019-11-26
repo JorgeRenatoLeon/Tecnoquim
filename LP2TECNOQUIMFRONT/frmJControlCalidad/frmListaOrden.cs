@@ -18,6 +18,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
         Service.ServicioClient DBController = new Service.ServicioClient();
         Service.lineaOrden lineaOrdenSeleccionada = new Service.lineaOrden();
         Service.ordenProduccion[] lineas;
+        int count = 0;
 
         public lineaOrden LineaOrdenSeleccionada { get => lineaOrdenSeleccionada; set => lineaOrdenSeleccionada = value; }
 
@@ -36,6 +37,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             else
             {
                 Service.lineaOrden[] lineasGen = DBController.listarLineaOrden(lineas[0].id);
+                count = lineasGen.Count();
                 BindingList<Service.lineaOrden> lineasVisualizar = new BindingList<lineaOrden>();
                 foreach (lineaOrden l in lineasGen)
                 {
@@ -44,6 +46,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
                         lineasVisualizar.Add(l);
                     }
                 }
+                count = lineasVisualizar.Count();
                 dgvListaOrden.DataSource = lineasVisualizar;
             }
 
@@ -57,7 +60,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             dgvListaOrden.Rows[e.RowIndex].Cells["Codigo"].Style.ForeColor = System.Drawing.Color.Black;
             dgvListaOrden.Rows[e.RowIndex].Cells["Cantidad"].Style.ForeColor = System.Drawing.Color.Black;
             dgvListaOrden.Rows[e.RowIndex].Cells["Estado"].Style.ForeColor = System.Drawing.Color.Black;
-            if (lineaOrdenFila == null)
+            if (lineaOrdenFila == null && count == 0)
             {
                 dgvListaOrden.Rows[e.RowIndex].Cells["Producto"].Value = '-';
                 dgvListaOrden.Rows[e.RowIndex].Cells["Codigo"].Value = '-';

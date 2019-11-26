@@ -305,12 +305,6 @@
     <Compile Include="frmJproduccion\frmHistorialPMP.Designer.cs">
       <DependentUpon>frmHistorialPMP.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmJproduccion\frmInsumos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmJproduccion\frmInsumos.Designer.cs">
-      <DependentUpon>frmInsumos.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmJproduccion\frmJProduccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -525,9 +519,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmHistorialPMP.resx">
       <DependentUpon>frmHistorialPMP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmJproduccion\frmInsumos.resx">
-      <DependentUpon>frmInsumos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\frmJProduccion.resx">
       <DependentUpon>frmJProduccion.cs</DependentUpon>

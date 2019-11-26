@@ -71,6 +71,44 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             }
             else if (dato == "Corregido")
             {
+                int descontar = 0;
+                lorden.producto.instructivo.insumos = DBController.listarLineaInsumo(lorden.producto.instructivo.id);
+
+                foreach (Service.lineaInsumo ins in lorden.producto.instructivo.insumos)
+                {
+                    descontar = ins.cantInsumo;
+                    Service.detalleAlmacenInsumo[] stocks = DBController.listarDetalleAlmacenInsumo(ins.insumo.nombre);
+                    BindingList<Service.detalleAlmacenInsumo> listaVerificada = new BindingList<Service.detalleAlmacenInsumo>();
+                    foreach (Service.detalleAlmacenInsumo deta in stocks)
+                    {
+                        if (deta.estado == Service.estadoMaterial.Corregido) listaVerificada.Add(deta);
+                    }
+                    int i = 0;
+                    while (descontar > 0)
+                    {
+                        if (i > listaVerificada.Count()-1) break;
+                        if (listaVerificada[i].stock > descontar)
+                        {
+                            listaVerificada[i].stock = stocks[0].stock - descontar;
+                            DBController.actualizarDetalleAlmacenInsumo(stocks[i]);
+                            descontar = 0;
+                        }
+                        else
+                        {
+                            listaVerificada[i].stock = 0;
+                            DBController.actualizarDetalleAlmacenInsumo(stocks[i]);
+                            descontar = descontar - stocks[i].stock;
+                            i = i + 1;
+                        }
+                    }
+                }
+
+                if(descontar >0)
+                {
+                    MessageBox.Show("Insumos Validados Insuficientes", "Mensaje Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
                 lorden.estadoCalidad = Service.estadoMaterial.Corregido;
                 lorden.estadoCalidadSpecified = true;
                 Service.detalleAlmacenProducto detalleNuevo = new Service.detalleAlmacenProducto();
@@ -83,6 +121,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
                 detalleNuevo.producto = lorden.producto;
                 detalleNuevo.stock = lorden.cantProducto;
                 DBController.insertarDetalleAlmacenProducto(detalleNuevo);
+               
             }
             
             DBController.actualizarLineaOrden(lorden);
