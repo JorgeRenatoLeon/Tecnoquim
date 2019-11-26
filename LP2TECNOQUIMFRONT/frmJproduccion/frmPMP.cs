@@ -59,22 +59,31 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            Service.planMaestroProduccion[] listaPMP = DBController.listarPMP(DateTime.Now.AddMonths(1).Month.ToString());
-            if (listaPMP.Length != 0)
-            {
-                if (listaPMP[0].estado == Service.estado.Aprobado)
-                {
-                    MessageBox.Show("Ya existe un Plan Maestro de Producción aprobado para el mes siguiente", "Plan Maestro de Producción Existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Ya existe un Plan Maestro de Producción en estado pendiente para el mes siguiente", "Plan Maestro de Producción Existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            else
+            Service.planMaestroProduccion[] pmpSel = DBController.listarPMPEstado(1);
+            if (pmpSel != null)
             {
                 frmGestionarPlan formGestionarPlan = new frmGestionarPlan(null, trabajador);
                 formGestionarPlan.ShowDialog(this);
+            }
+            else
+            {
+                Service.planMaestroProduccion[] listaPMP = DBController.listarPMP(DateTime.Now.AddMonths(1).Month.ToString());
+                if (listaPMP.Length != 0)
+                {
+                    if (listaPMP[0].estado == Service.estado.Aprobado)
+                    {
+                        MessageBox.Show("Ya existe un Plan Maestro de Producción aprobado para el mes siguiente", "Plan Maestro de Producción Existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ya existe un Plan Maestro de Producción en estado pendiente para el mes siguiente", "Plan Maestro de Producción Existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    frmGestionarPlan formGestionarPlan = new frmGestionarPlan(null, trabajador);
+                    formGestionarPlan.ShowDialog(this);
+                }
             }
         }
 

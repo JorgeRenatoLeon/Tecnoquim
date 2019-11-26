@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/LP2TECNOQUIMSERVICES/Servicio?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://34.193.139.78:8080/LP2TECNOQUIMSERVICES/Servicio?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Servicio1.wsdl" MetadataType="Wsdl" ID="0ebdce9c-a8da-4c0b-a937-f5eb814801fc" SourceId="1" SourceUrl="http://localhost:8080/LP2TECNOQUIMSERVICES/Servicio?WSDL" />
-    <MetadataFile FileName="Servicio1.xsd" MetadataType="Schema" ID="c816d63d-9846-45f9-bba7-92371a5d74ee" SourceId="1" SourceUrl="http://localhost:8080/LP2TECNOQUIMSERVICES/Servicio?xsd=1" />
+    <MetadataFile FileName="Servicio.xsd" MetadataType="Schema" ID="1b14c953-14be-417f-aa5a-dee7a287a65c" SourceId="1" SourceUrl="http://34.193.139.78:8080/LP2TECNOQUIMSERVICES/Servicio?xsd=1" />
+    <MetadataFile FileName="Servicio.wsdl" MetadataType="Wsdl" ID="59acfc8a-8659-4060-9280-1caf63da7f6b" SourceId="1" SourceUrl="http://34.193.139.78:8080/LP2TECNOQUIMSERVICES/Servicio?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
