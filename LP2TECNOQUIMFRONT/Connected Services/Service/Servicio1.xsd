@@ -397,20 +397,20 @@
   <xs:complexType name="actualizarInsumoResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="actualizarDetalleAlmacenProducto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="detalleAlmacenProducto" type="tns:detalleAlmacenProducto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarDetalleAlmacenProductoResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="actualizarLineaOrden">
     <xs:sequence>
       <xs:element minOccurs="0" name="lineaOrden" type="tns:lineaOrden" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarLineaOrdenResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="actualizarDetalleAlmacenProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detalleAlmacenProducto" type="tns:detalleAlmacenProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarDetalleAlmacenProductoResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarOrdenesProduccionFecha">
