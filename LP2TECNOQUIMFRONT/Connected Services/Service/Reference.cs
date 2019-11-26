@@ -703,8 +703,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         System.Threading.Tasks.Task<LP2TECNOQUIMFRONT.Service.listarUsuariosResponse> listarUsuariosAsync(LP2TECNOQUIMFRONT.Service.listarUsuariosRequest request);
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -717,7 +717,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private lineaInsumo[] insumosField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string actividades {
             get {
@@ -729,7 +729,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int id {
             get {
@@ -741,7 +741,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("insumos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         public lineaInsumo[] insumos {
             get {
@@ -763,8 +763,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -779,7 +779,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private insumo insumoField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public int cantInsumo {
             get {
@@ -791,7 +791,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public bool estado {
             get {
@@ -803,7 +803,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public int idLineaI {
             get {
@@ -815,7 +815,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public insumo insumo {
             get {
@@ -837,8 +837,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -859,7 +859,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private string unidadField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public float cantidad {
             get {
@@ -871,7 +871,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string color {
             get {
@@ -883,7 +883,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public float granularidad {
             get {
@@ -895,7 +895,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int id {
             get {
@@ -907,7 +907,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string nombre {
             get {
@@ -919,7 +919,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public bool restriccion {
             get {
@@ -931,7 +931,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public string unidad {
             get {
@@ -953,8 +953,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -977,7 +977,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private trabajador responsableField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public estado estado {
             get {
@@ -989,7 +989,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool estadoSpecified {
             get {
@@ -1001,7 +1001,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int id {
             get {
@@ -1013,7 +1013,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("maquinarias", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         public detalleMaquinaria[] maquinarias {
             get {
@@ -1025,7 +1025,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("ordenes", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
         public ordenProduccion[] ordenes {
             get {
@@ -1037,7 +1037,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public System.DateTime periodo {
             get {
@@ -1049,7 +1049,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool periodoSpecified {
             get {
@@ -1061,7 +1061,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public trabajador responsable {
             get {
@@ -1083,24 +1083,24 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
     public enum estado {
         
-        /// <remarks/>
+        /// <comentarios/>
         Aprobado,
         
-        /// <remarks/>
+        /// <comentarios/>
         Rechazado,
         
-        /// <remarks/>
+        /// <comentarios/>
         Pendiente,
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1115,7 +1115,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private maquinaria maquinariaField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public System.DateTime fecha {
             get {
@@ -1127,7 +1127,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool fechaSpecified {
             get {
@@ -1139,7 +1139,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int idDetalleM {
             get {
@@ -1151,7 +1151,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public maquinaria maquinaria {
             get {
@@ -1173,8 +1173,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1189,7 +1189,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private string tipoField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public bool estado {
             get {
@@ -1201,7 +1201,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int id {
             get {
@@ -1213,7 +1213,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string nombre {
             get {
@@ -1225,7 +1225,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public string tipo {
             get {
@@ -1247,8 +1247,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1263,7 +1263,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private lineaOrden[] lineasOrdenField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public System.DateTime fecha {
             get {
@@ -1275,7 +1275,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool fechaSpecified {
             get {
@@ -1287,7 +1287,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int id {
             get {
@@ -1299,7 +1299,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("lineasOrden", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         public lineaOrden[] lineasOrden {
             get {
@@ -1321,8 +1321,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1339,7 +1339,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private producto productoField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public int cantProducto {
             get {
@@ -1351,7 +1351,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public estadoMaterial estadoCalidad {
             get {
@@ -1363,7 +1363,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool estadoCalidadSpecified {
             get {
@@ -1375,7 +1375,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public int idLineaOrden {
             get {
@@ -1387,7 +1387,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public producto producto {
             get {
@@ -1409,27 +1409,27 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.lp2tecnoquim/")]
     public enum estadoMaterial {
         
-        /// <remarks/>
+        /// <comentarios/>
         Bueno,
         
-        /// <remarks/>
+        /// <comentarios/>
         Pendiente,
         
-        /// <remarks/>
+        /// <comentarios/>
         Corregido,
         
-        /// <remarks/>
+        /// <comentarios/>
         Rechazado,
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1448,7 +1448,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private bool restriccionField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public float granularidad {
             get {
@@ -1460,7 +1460,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int idProducto {
             get {
@@ -1472,7 +1472,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public instructivo instructivo {
             get {
@@ -1484,7 +1484,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public string nombre {
             get {
@@ -1496,7 +1496,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string presentacion {
             get {
@@ -1508,7 +1508,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public bool restriccion {
             get {
@@ -1530,8 +1530,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1552,7 +1552,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private usuario usuarioField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string apellidos {
             get {
@@ -1564,7 +1564,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string correo {
             get {
@@ -1576,7 +1576,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string dni {
             get {
@@ -1588,7 +1588,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int id {
             get {
@@ -1600,7 +1600,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string nombres {
             get {
@@ -1612,7 +1612,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public rol rol {
             get {
@@ -1624,7 +1624,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public usuario usuario {
             get {
@@ -1646,8 +1646,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1658,7 +1658,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private int idRolField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string descripcion {
             get {
@@ -1670,7 +1670,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int idRol {
             get {
@@ -1692,8 +1692,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1706,7 +1706,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private string usernameField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public int idUsuario {
             get {
@@ -1718,7 +1718,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string password {
             get {
@@ -1730,7 +1730,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string username {
             get {
@@ -1752,8 +1752,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1772,7 +1772,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private trabajador receptorField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string descripcion {
             get {
@@ -1784,7 +1784,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public trabajador emisor {
             get {
@@ -1796,7 +1796,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public System.DateTime fechaEnvio {
             get {
@@ -1808,7 +1808,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool fechaEnvioSpecified {
             get {
@@ -1820,7 +1820,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int idMensaje {
             get {
@@ -1832,7 +1832,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public trabajador receptor {
             get {
@@ -1854,8 +1854,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1870,7 +1870,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private lineaProyeccion[] proyeccionesField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public int id {
             get {
@@ -1882,7 +1882,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public System.DateTime periodo {
             get {
@@ -1894,7 +1894,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool periodoSpecified {
             get {
@@ -1906,7 +1906,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute("proyecciones", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         public lineaProyeccion[] proyecciones {
             get {
@@ -1928,8 +1928,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1942,7 +1942,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private producto productoField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public int cantidad {
             get {
@@ -1954,7 +1954,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int id {
             get {
@@ -1966,7 +1966,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public producto producto {
             get {
@@ -1988,8 +1988,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2004,7 +2004,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private producto productoField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public int cantMax {
             get {
@@ -2016,7 +2016,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int cantMin {
             get {
@@ -2028,7 +2028,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public int id {
             get {
@@ -2040,7 +2040,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public producto producto {
             get {
@@ -2062,8 +2062,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2088,7 +2088,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private int nLoteField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public almacen almacen {
             get {
@@ -2100,7 +2100,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public estadoMaterial estado {
             get {
@@ -2112,7 +2112,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool estadoSpecified {
             get {
@@ -2124,7 +2124,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public int id {
             get {
@@ -2136,7 +2136,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public System.DateTime periodo {
             get {
@@ -2148,7 +2148,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool periodoSpecified {
             get {
@@ -2160,7 +2160,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public producto producto {
             get {
@@ -2172,7 +2172,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public int stock {
             get {
@@ -2184,7 +2184,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int nLote {
             get {
@@ -2206,8 +2206,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2222,7 +2222,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private trabajador trabajadorField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string direccion {
             get {
@@ -2234,7 +2234,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int idAlmacen {
             get {
@@ -2246,7 +2246,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string tipo {
             get {
@@ -2258,7 +2258,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public trabajador trabajador {
             get {
@@ -2280,8 +2280,8 @@ namespace LP2TECNOQUIMFRONT.Service {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2306,7 +2306,7 @@ namespace LP2TECNOQUIMFRONT.Service {
         
         private int nLoteField;
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public almacen almacen {
             get {
@@ -2318,7 +2318,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public estadoMaterial estado {
             get {
@@ -2330,7 +2330,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool estadoSpecified {
             get {
@@ -2342,7 +2342,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public int id {
             get {
@@ -2354,7 +2354,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public insumo insumo {
             get {
@@ -2366,7 +2366,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public System.DateTime periodo {
             get {
@@ -2378,7 +2378,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool periodoSpecified {
             get {
@@ -2390,7 +2390,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public int stock {
             get {
@@ -2402,7 +2402,7 @@ namespace LP2TECNOQUIMFRONT.Service {
             }
         }
         
-        /// <remarks/>
+        /// <comentarios/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int nLote {
             get {

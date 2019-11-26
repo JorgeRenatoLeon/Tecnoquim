@@ -65,7 +65,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
-            frmProducto form = new frmProducto(1);
+            frmJAlmacen.frmStocksP form = new frmStocksP(1);
             form.ShowDialog(this);
         }
 

@@ -15,11 +15,15 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
     {
         private Service.detalleAlmacenProducto productoSeleccionado;
         Service.ServicioClient DBController = new Service.ServicioClient();
-        public frmStocksP()
+        public frmStocksP(int cont = 0)
         {
             InitializeComponent();
             dgvProductos.AutoGenerateColumns = false;
             dgvProductos.DataSource = DBController.listarDetalleAlmacenProducto("");
+            if (cont == 1)
+            {
+                btnSeleccionar.Visible = false;
+            }
         }
         public detalleAlmacenProducto ProductoSeleccionado { get => productoSeleccionado; set => productoSeleccionado = value; }
         
