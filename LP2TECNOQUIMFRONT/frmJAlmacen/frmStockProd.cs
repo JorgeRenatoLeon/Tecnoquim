@@ -15,6 +15,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
         Service.producto producto;
         Service.detalleAlmacenProducto almacenP;
         Service.ServicioClient DBController = new Service.ServicioClient();
+
         public frmStockProd()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             txtPres.Enabled = false;
             txtLote.Enabled = false;
             cbAlmacen.Enabled = false;
+            
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
