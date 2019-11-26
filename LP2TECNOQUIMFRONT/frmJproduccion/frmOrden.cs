@@ -90,9 +90,26 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnOrdenDiaria_Click(object sender, EventArgs e)
         {
-            Service.ordenProduccion[] ordens = DBController.listarOrdenesProduccionFecha(DateTime.Now.ToString("yy-MM-dd"));
-            frmGestionarOrden frmGestionarOrden = new frmGestionarOrden(ordens[0],0,2);
-            frmGestionarOrden.ShowDialog(this);
+            int hay = 0;
+            Service.ordenProduccion[] ordens = DBController.listarOrdenesProduccionFecha(DateTime.Now.ToString("yyyy-MM-dd"));
+            ordens[0].lineasOrden = DBController.listarLineaOrden(ordens[0].id);
+            foreach (Service.lineaOrden l in ordens[0].lineasOrden)
+            {
+                if (l.estadoCalidad == Service.estadoMaterial.Bueno)
+                {
+                    hay = 1;
+                    break;
+                }
+            }
+            if(hay == 1)
+            {
+                frmGestionarOrden frmGestionarOrden = new frmGestionarOrden(ordens[0], 0, 2);
+                frmGestionarOrden.ShowDialog(this);
+            }
+            else
+            {
+                MessageBox.Show("No hay líneas pendientes de verificar ", "Orden de Producción Verificada Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

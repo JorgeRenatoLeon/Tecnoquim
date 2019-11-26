@@ -397,20 +397,20 @@
   <xs:complexType name="actualizarInsumoResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="actualizarLineaOrden">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="lineaOrden" type="tns:lineaOrden" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarLineaOrdenResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="actualizarDetalleAlmacenProducto">
     <xs:sequence>
       <xs:element minOccurs="0" name="detalleAlmacenProducto" type="tns:detalleAlmacenProducto" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarDetalleAlmacenProductoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="actualizarLineaOrden">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lineaOrden" type="tns:lineaOrden" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarLineaOrdenResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarOrdenesProduccionFecha">
@@ -544,14 +544,6 @@
   <xs:complexType name="eliminarLineaInsumoResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="actualizarDetalleMaquinaria">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="detMaquinaria" type="tns:detalleMaquinaria" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarDetalleMaquinariaResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="insertarDetalleAlmacenInsumo">
     <xs:sequence>
       <xs:element minOccurs="0" name="detalleAlmacenInsumo" type="tns:detalleAlmacenInsumo" />
@@ -570,6 +562,14 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarDetalleAlmacenInsumoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="actualizarDetalleMaquinaria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="detMaquinaria" type="tns:detalleMaquinaria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarDetalleMaquinariaResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarTrabajadores">

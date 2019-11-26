@@ -468,14 +468,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             {
                 foreach (lineaOrden item in _orderProduccion.lineasOrden)
                 {
-                    detalleAlmacenProducto[] detList = DBController.listarDetalleAlmacenProducto(item.producto.nombre);
-                    detalleAlmacenProducto detAct = detList[detList.Count()-1];
-                    detAct.nLote = detAct.nLote + 1;
-                    detAct.periodo = DateTime.Now;
-                    detAct.stock = item.cantProducto;
-                    DBController.insertarDetalleAlmacenProducto(detAct);
+                    item.estadoCalidad = estadoMaterial.Pendiente;
+                    item.estadoCalidadSpecified = true;
+                    DBController.actualizarLineaOrden(item);
                 }
-                MessageBox.Show("Se procedió a realizar la Orden. Se generarán los productos correspondientes");
+                MessageBox.Show("Se procedió a enviar la Orden a revisión de Calidad. Se revisarán los productos correspondientes","ORDEN ENVIADA",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
     }
