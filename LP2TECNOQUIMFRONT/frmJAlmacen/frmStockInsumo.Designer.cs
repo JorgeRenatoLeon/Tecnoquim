@@ -353,6 +353,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStockInsumo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TECNOQUIM";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();

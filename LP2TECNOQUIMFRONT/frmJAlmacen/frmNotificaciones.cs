@@ -66,5 +66,14 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             dgvNotificaciones.Rows[e.RowIndex].Cells["Descripcion"].Value = ppFila.descripcion;
             dgvNotificaciones.Rows[e.RowIndex].Cells["Fecha"].Value = ppFila.fechaEnvio;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmPerfil formPerfil = new frmPerfil(this.trabajador);
+            formPerfil.Visible = true;
+            close = 1;
+            this.Close();
+        }
     }
 }
