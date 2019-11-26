@@ -153,7 +153,7 @@
             this.btnPMS.Name = "btnPMS";
             this.btnPMS.Size = new System.Drawing.Size(329, 65);
             this.btnPMS.TabIndex = 12;
-            this.btnPMS.Text = "Gestionar Proyección Venta Actual";
+            this.btnPMS.Text = "Gestionar Proyección Venta";
             this.btnPMS.UseVisualStyleBackColor = false;
             this.btnPMS.Click += new System.EventHandler(this.btnPMS_Click);
             // 

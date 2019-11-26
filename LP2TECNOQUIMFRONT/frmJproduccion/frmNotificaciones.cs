@@ -90,7 +90,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
         {
             string str = dgvNotificaciones.Rows[dgvNotificaciones.SelectedRows[0].Index].Cells[3].Value.ToString();
             int length = str.IndexOf(".");
-            string sub = str.Substring(0, length);
+            string sub = "";
+            if (length >= 0)
+            {
+                sub = str.Substring(0, length);
+            }
 
             if (sub == "PLAN MAESTRO RECHAZADO")
             {

@@ -28,6 +28,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             txtComentario.Text = pmp.estado.ToString();
             if (pmp.estado == Service.estado.Rechazado) rbDesaprobado.Checked = true;
             else if (pmp.estado == Service.estado.Aprobado) rbAprobado.Checked = true;
+            //mensaje = DBController.listarMensaje();
             txtResponsable.Text = pmp.responsable.nombres + " " + pmp.responsable.apellidos;
             calOrdenProduccion.MaxSelectionCount = 1;
             dgvOrden.AutoGenerateColumns = false;
@@ -39,7 +40,9 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             dgvMaquinaria.DataSource = pmp.maquinarias;
             //estadoObj = Estado.Inicial;
             if (!save) {
-                gbEstado.Enabled = false;
+                rbAprobado.Enabled = false;
+                rbDesaprobado.Enabled = false;
+                txtComentario.Enabled = false;
                 btnGuardar.Visible = false;
             }
             DateTime date = pmp.periodo.AddHours(5);

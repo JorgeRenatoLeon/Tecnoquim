@@ -40,7 +40,10 @@ namespace LP2TECNOQUIMFRONT.frmJVenta
 
             if (!save)
             {
-                gbDatosP.Enabled = false;
+                btnBuscarProducto.Enabled = false;
+                txtCantidadP.Enabled = false;
+                btnAgregarP.Enabled = false;
+                btnEliminarP.Enabled = false;
                 btnGuardar.Visible = false;
             }
             txtCodigoP.Enabled = false;
