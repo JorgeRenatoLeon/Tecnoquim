@@ -343,8 +343,9 @@
             this.Controls.Add(this.gbDatosOrden);
             this.Controls.Add(this.gbDatosGenerales);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionarOrden";
-            this.Text = "frmCrearOrden";
+            this.Text = "TECNOQUIM";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.gbDatosGenerales.ResumeLayout(false);

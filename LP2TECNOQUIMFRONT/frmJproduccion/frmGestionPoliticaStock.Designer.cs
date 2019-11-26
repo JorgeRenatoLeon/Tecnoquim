@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionPoliticaStock));
             this.lblProducto = new System.Windows.Forms.Label();
             this.gbPoliticaStock = new System.Windows.Forms.GroupBox();
+            this.txtMax = new System.Windows.Forms.TextBox();
+            this.txtMin = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.lblStockMax = new System.Windows.Forms.Label();
+            this.lblStockMin = new System.Windows.Forms.Label();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.lblCodigoPMP = new System.Windows.Forms.Label();
-            this.btnBuscarProducto = new System.Windows.Forms.Button();
-            this.lblStockMin = new System.Windows.Forms.Label();
-            this.lblStockMax = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtMin = new System.Windows.Forms.TextBox();
-            this.txtMax = new System.Windows.Forms.TextBox();
             this.gbPoliticaStock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +72,68 @@
             this.gbPoliticaStock.TabStop = false;
             this.gbPoliticaStock.Text = "Política de Stock";
             // 
+            // txtMax
+            // 
+            this.txtMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMax.Location = new System.Drawing.Point(227, 185);
+            this.txtMax.Name = "txtMax";
+            this.txtMax.Size = new System.Drawing.Size(168, 29);
+            this.txtMax.TabIndex = 42;
+            // 
+            // txtMin
+            // 
+            this.txtMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMin.Location = new System.Drawing.Point(227, 105);
+            this.txtMin.Name = "txtMin";
+            this.txtMin.Size = new System.Drawing.Size(168, 29);
+            this.txtMin.TabIndex = 41;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnGuardar.Location = new System.Drawing.Point(186, 245);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(116, 35);
+            this.btnGuardar.TabIndex = 40;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // lblStockMax
+            // 
+            this.lblStockMax.AutoSize = true;
+            this.lblStockMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStockMax.Location = new System.Drawing.Point(45, 188);
+            this.lblStockMax.Name = "lblStockMax";
+            this.lblStockMax.Size = new System.Drawing.Size(133, 24);
+            this.lblStockMax.TabIndex = 39;
+            this.lblStockMax.Text = "Stock máximo:";
+            // 
+            // lblStockMin
+            // 
+            this.lblStockMin.AutoSize = true;
+            this.lblStockMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStockMin.Location = new System.Drawing.Point(44, 108);
+            this.lblStockMin.Name = "lblStockMin";
+            this.lblStockMin.Size = new System.Drawing.Size(128, 24);
+            this.lblStockMin.TabIndex = 38;
+            this.lblStockMin.Text = "Stock mínimo:";
+            // 
+            // btnBuscarProducto
+            // 
+            this.btnBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarProducto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBuscarProducto.Location = new System.Drawing.Point(625, 38);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.Size = new System.Drawing.Size(32, 26);
+            this.btnBuscarProducto.TabIndex = 37;
+            this.btnBuscarProducto.Text = "...";
+            this.btnBuscarProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
+            // 
             // txtProducto
             // 
             this.txtProducto.Enabled = false;
@@ -90,68 +153,6 @@
             this.lblCodigoPMP.Size = new System.Drawing.Size(0, 24);
             this.lblCodigoPMP.TabIndex = 19;
             // 
-            // btnBuscarProducto
-            // 
-            this.btnBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarProducto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBuscarProducto.Location = new System.Drawing.Point(625, 38);
-            this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(32, 26);
-            this.btnBuscarProducto.TabIndex = 37;
-            this.btnBuscarProducto.Text = "...";
-            this.btnBuscarProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscarProducto.UseVisualStyleBackColor = true;
-            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
-            // 
-            // lblStockMin
-            // 
-            this.lblStockMin.AutoSize = true;
-            this.lblStockMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStockMin.Location = new System.Drawing.Point(44, 108);
-            this.lblStockMin.Name = "lblStockMin";
-            this.lblStockMin.Size = new System.Drawing.Size(128, 24);
-            this.lblStockMin.TabIndex = 38;
-            this.lblStockMin.Text = "Stock mínimo:";
-            // 
-            // lblStockMax
-            // 
-            this.lblStockMax.AutoSize = true;
-            this.lblStockMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStockMax.Location = new System.Drawing.Point(45, 188);
-            this.lblStockMax.Name = "lblStockMax";
-            this.lblStockMax.Size = new System.Drawing.Size(133, 24);
-            this.lblStockMax.TabIndex = 39;
-            this.lblStockMax.Text = "Stock máximo:";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGuardar.Location = new System.Drawing.Point(186, 245);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(116, 35);
-            this.btnGuardar.TabIndex = 40;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // txtMin
-            // 
-            this.txtMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMin.Location = new System.Drawing.Point(227, 105);
-            this.txtMin.Name = "txtMin";
-            this.txtMin.Size = new System.Drawing.Size(168, 29);
-            this.txtMin.TabIndex = 41;
-            // 
-            // txtMax
-            // 
-            this.txtMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMax.Location = new System.Drawing.Point(227, 185);
-            this.txtMax.Name = "txtMax";
-            this.txtMax.Size = new System.Drawing.Size(168, 29);
-            this.txtMax.TabIndex = 42;
-            // 
             // frmGestionPoliticaStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,8 +161,9 @@
             this.ClientSize = new System.Drawing.Size(738, 320);
             this.Controls.Add(this.gbPoliticaStock);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionPoliticaStock";
-            this.Text = "frmGestionPoliticaStock";
+            this.Text = "TECNOQUIM";
             this.gbPoliticaStock.ResumeLayout(false);
             this.gbPoliticaStock.PerformLayout();
             this.ResumeLayout(false);

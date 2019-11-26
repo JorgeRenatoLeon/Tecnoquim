@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStockProd));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtLote = new System.Windows.Forms.TextBox();
             this.lblnlote = new System.Windows.Forms.Label();
@@ -289,8 +290,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStockProd";
-            this.Text = "frmStockProd";
+            this.Text = "TECNOQUIM";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.gbDatos.ResumeLayout(false);

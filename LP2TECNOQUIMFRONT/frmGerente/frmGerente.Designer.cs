@@ -206,9 +206,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnPMS);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGerente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "8";
+            this.Text = "TECNOQUIM";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmGerente_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

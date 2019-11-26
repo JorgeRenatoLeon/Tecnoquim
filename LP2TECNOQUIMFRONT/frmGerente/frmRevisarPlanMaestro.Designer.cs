@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRevisarPlanMaestro));
             this.gbEstado = new System.Windows.Forms.GroupBox();
             this.rbDesaprobado = new System.Windows.Forms.RadioButton();
             this.rbAprobado = new System.Windows.Forms.RadioButton();
@@ -324,7 +325,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(319, 866);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(152, 44);
+            this.btnGuardar.Size = new System.Drawing.Size(135, 44);
             this.btnGuardar.TabIndex = 43;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -342,8 +343,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbMaquinaria);
             this.Controls.Add(this.gbEstado);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRevisarPlanMaestro";
-            this.Text = "frmGestionarPlanMaestro";
+            this.Text = "TECNOQUIM";
             this.gbEstado.ResumeLayout(false);
             this.gbEstado.PerformLayout();
             this.gbOrden.ResumeLayout(false);

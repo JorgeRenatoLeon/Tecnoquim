@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarPlanMaestro));
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnDetalle = new System.Windows.Forms.Button();
             this.dgvHistorialPlan = new System.Windows.Forms.DataGridView();
@@ -149,9 +150,10 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.dgvHistorialPlan);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBuscarPlanMaestro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "TECNOQUIM";
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialPlan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -205,9 +205,10 @@
             this.ClientSize = new System.Drawing.Size(857, 498);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnProducto);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmConsultas";
+            this.Text = "TECNOQUIM";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);

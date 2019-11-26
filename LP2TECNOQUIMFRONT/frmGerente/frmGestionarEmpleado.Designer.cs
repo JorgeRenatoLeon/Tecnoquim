@@ -245,9 +245,10 @@
             this.ClientSize = new System.Drawing.Size(771, 399);
             this.Controls.Add(this.gbDatosGen);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionarEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmGestionarEmpleados";
+            this.Text = "TECNOQUIM";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.gbDatosGen.ResumeLayout(false);

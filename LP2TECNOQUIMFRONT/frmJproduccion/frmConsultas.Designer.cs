@@ -285,9 +285,10 @@
             this.Controls.Add(this.btnInsumos);
             this.Controls.Add(this.btnProducto);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmConsultasJprod";
+            this.Text = "TECNOQUIM";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmConsultas_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -239,9 +239,10 @@
             this.Controls.Add(this.btnInsumos);
             this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmControlCalidad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmControlCalidad";
+            this.Text = "TECNOQUIM";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmControlCalidad_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -228,9 +228,10 @@
             this.Controls.Add(this.btnOrdenDiaria);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button7);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmOrden";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmOrden";
+            this.Text = "TECNOQUIM";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmOrden_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

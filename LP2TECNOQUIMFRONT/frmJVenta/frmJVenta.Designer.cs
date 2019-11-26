@@ -184,6 +184,7 @@
             this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.btnPMS);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmJVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

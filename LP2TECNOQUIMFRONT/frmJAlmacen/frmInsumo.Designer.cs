@@ -345,9 +345,10 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInsumo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmInsumo";
+            this.Text = "TECNOQUIM";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

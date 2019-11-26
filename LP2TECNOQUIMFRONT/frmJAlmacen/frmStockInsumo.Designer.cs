@@ -351,8 +351,9 @@
             this.Controls.Add(this.gbAlmacen);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStockInsumo";
-            this.Text = "frmStockInsumo";
+            this.Text = "TECNOQUIM";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             this.gbAlmacen.ResumeLayout(false);

@@ -207,9 +207,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnHistorialPMP);
             this.Controls.Add(this.btnRevisarPMP);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionarPMP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmGestionarPMP";
+            this.Text = "TECNOQUIM";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmGestionarPMP_FormClosed_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

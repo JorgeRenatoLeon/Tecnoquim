@@ -45,6 +45,12 @@
             this.lblAct = new System.Windows.Forms.Label();
             this.txtAct = new System.Windows.Forms.TextBox();
             this.dgvInsumos = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Presentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Granularidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Restriccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.lblNomInsumo = new System.Windows.Forms.Label();
             this.txtNomInsumo = new System.Windows.Forms.TextBox();
@@ -63,12 +69,6 @@
             this.btnElimina = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.lblBack = new System.Windows.Forms.LinkLabel();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Presentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Granularidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Restriccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbDatos.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
@@ -256,6 +256,40 @@
             this.dgvInsumos.Size = new System.Drawing.Size(838, 140);
             this.dgvInsumos.TabIndex = 70;
             this.dgvInsumos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvInsumos_CellFormatting);
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 150;
+            // 
+            // Presentacion
+            // 
+            this.Presentacion.HeaderText = "Presentacion";
+            this.Presentacion.Name = "Presentacion";
+            this.Presentacion.Width = 150;
+            // 
+            // Granularidad
+            // 
+            this.Granularidad.HeaderText = "Granularidad";
+            this.Granularidad.Name = "Granularidad";
+            this.Granularidad.Width = 150;
+            // 
+            // Color
+            // 
+            this.Color.HeaderText = "Color";
+            this.Color.Name = "Color";
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            // 
+            // Restriccion
+            // 
+            this.Restriccion.HeaderText = "Restriccion";
+            this.Restriccion.Name = "Restriccion";
+            this.Restriccion.Width = 150;
             // 
             // btnBuscarInsumo
             // 
@@ -473,40 +507,6 @@
             this.lblBack.VisitedLinkColor = System.Drawing.Color.SteelBlue;
             this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
             // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 150;
-            // 
-            // Presentacion
-            // 
-            this.Presentacion.HeaderText = "Presentacion";
-            this.Presentacion.Name = "Presentacion";
-            this.Presentacion.Width = 150;
-            // 
-            // Granularidad
-            // 
-            this.Granularidad.HeaderText = "Granularidad";
-            this.Granularidad.Name = "Granularidad";
-            this.Granularidad.Width = 150;
-            // 
-            // Color
-            // 
-            this.Color.HeaderText = "Color";
-            this.Color.Name = "Color";
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            // 
-            // Restriccion
-            // 
-            this.Restriccion.HeaderText = "Restriccion";
-            this.Restriccion.Name = "Restriccion";
-            this.Restriccion.Width = 150;
-            // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -519,9 +519,10 @@
             this.Controls.Add(this.gbInsumos);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmGuardar";
+            this.Text = "TECNOQUIM";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModCalidad));
             this.gbDatos = new System.Windows.Forms.GroupBox();
             this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.cbRol = new System.Windows.Forms.ComboBox();
@@ -214,8 +215,9 @@
             this.Controls.Add(this.lblBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gbDatos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmModCalidad";
-            this.Text = "frmModCalidad";
+            this.Text = "TECNOQUIM";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
             this.ResumeLayout(false);

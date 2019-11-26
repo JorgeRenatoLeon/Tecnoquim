@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaInsumo));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvListaOrden = new System.Windows.Forms.DataGridView();
-            this.btnBuscarInsumo = new System.Windows.Forms.Button();
             this.Insumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Periodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscarInsumo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaOrden)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,23 +67,6 @@
             this.dgvListaOrden.TabIndex = 81;
             this.dgvListaOrden.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvListaOrden_CellFormatting);
             // 
-            // btnBuscarInsumo
-            // 
-            this.btnBuscarInsumo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarInsumo.BackColor = System.Drawing.Color.White;
-            this.btnBuscarInsumo.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
-            this.btnBuscarInsumo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarInsumo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarInsumo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnBuscarInsumo.Location = new System.Drawing.Point(509, 43);
-            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
-            this.btnBuscarInsumo.Size = new System.Drawing.Size(112, 25);
-            this.btnBuscarInsumo.TabIndex = 83;
-            this.btnBuscarInsumo.Text = "Seleccionar";
-            this.btnBuscarInsumo.UseVisualStyleBackColor = false;
-            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
-            // 
             // Insumo
             // 
             this.Insumo.HeaderText = "Insumo";
@@ -112,6 +96,23 @@
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             // 
+            // btnBuscarInsumo
+            // 
+            this.btnBuscarInsumo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscarInsumo.BackColor = System.Drawing.Color.White;
+            this.btnBuscarInsumo.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
+            this.btnBuscarInsumo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarInsumo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarInsumo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnBuscarInsumo.Location = new System.Drawing.Point(509, 43);
+            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
+            this.btnBuscarInsumo.Size = new System.Drawing.Size(112, 25);
+            this.btnBuscarInsumo.TabIndex = 83;
+            this.btnBuscarInsumo.Text = "Seleccionar";
+            this.btnBuscarInsumo.UseVisualStyleBackColor = false;
+            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
+            // 
             // frmListaInsumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,8 +122,9 @@
             this.Controls.Add(this.btnBuscarInsumo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvListaOrden);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaInsumo";
-            this.Text = "frmListaInsumo";
+            this.Text = "TECNOQUIM";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaOrden)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

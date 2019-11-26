@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarProyeccionVenta));
             this.label5 = new System.Windows.Forms.Label();
             this.txtNOrden = new System.Windows.Forms.TextBox();
             this.gbDatosG = new System.Windows.Forms.GroupBox();
+            this.txtPeriodo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtCodigoP = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,8 +49,6 @@
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPeriodo = new System.Windows.Forms.TextBox();
             this.gbDatosG.SuspendLayout();
             this.gbDatosP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
@@ -87,6 +88,25 @@
             this.gbDatosG.TabIndex = 35;
             this.gbDatosG.TabStop = false;
             this.gbDatosG.Text = "Datos Generales";
+            // 
+            // txtPeriodo
+            // 
+            this.txtPeriodo.Enabled = false;
+            this.txtPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPeriodo.Location = new System.Drawing.Point(129, 94);
+            this.txtPeriodo.Name = "txtPeriodo";
+            this.txtPeriodo.Size = new System.Drawing.Size(342, 29);
+            this.txtPeriodo.TabIndex = 39;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(35, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 24);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Periodo:";
             // 
             // lblNombre
             // 
@@ -257,25 +277,6 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 24);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Periodo:";
-            // 
-            // txtPeriodo
-            // 
-            this.txtPeriodo.Enabled = false;
-            this.txtPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeriodo.Location = new System.Drawing.Point(129, 94);
-            this.txtPeriodo.Name = "txtPeriodo";
-            this.txtPeriodo.Size = new System.Drawing.Size(342, 29);
-            this.txtPeriodo.TabIndex = 39;
-            // 
             // frmGestionarProyeccionVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,6 +287,7 @@
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.gbDatosP);
             this.Controls.Add(this.gbDatosG);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionarProyeccionVenta";
             this.Text = "frmRegistrarProyeccionVenta";
             this.gbDatosG.ResumeLayout(false);

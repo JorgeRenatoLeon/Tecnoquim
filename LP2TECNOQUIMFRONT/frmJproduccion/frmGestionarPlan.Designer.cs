@@ -35,6 +35,9 @@
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.dgvMaquinaria = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Maquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNOrden = new System.Windows.Forms.TextBox();
             this.lblCodigoPMP = new System.Windows.Forms.Label();
@@ -54,9 +57,6 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calOrdenProduccion = new System.Windows.Forms.MonthCalendar();
             this.btnBuscarOrden = new System.Windows.Forms.Button();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Maquinaria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinaria)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -132,6 +132,29 @@
             this.dgvMaquinaria.Size = new System.Drawing.Size(801, 162);
             this.dgvMaquinaria.TabIndex = 33;
             this.dgvMaquinaria.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMaquinaria_CellFormatting);
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 150;
+            // 
+            // Maquinaria
+            // 
+            this.Maquinaria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Maquinaria.FillWeight = 150F;
+            this.Maquinaria.HeaderText = "Maquinaria";
+            this.Maquinaria.Name = "Maquinaria";
+            this.Maquinaria.ReadOnly = true;
+            this.Maquinaria.Width = 420;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 175;
             // 
             // groupBox1
             // 
@@ -345,29 +368,6 @@
             this.btnBuscarOrden.UseVisualStyleBackColor = true;
             this.btnBuscarOrden.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 150;
-            // 
-            // Maquinaria
-            // 
-            this.Maquinaria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Maquinaria.FillWeight = 150F;
-            this.Maquinaria.HeaderText = "Maquinaria";
-            this.Maquinaria.Name = "Maquinaria";
-            this.Maquinaria.ReadOnly = true;
-            this.Maquinaria.Width = 420;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 175;
-            // 
             // frmGestionarPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,8 +379,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbDatosGenerales);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionarPlan";
-            this.Text = "°";
+            this.Text = "TECNOQUIM";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinaria)).EndInit();

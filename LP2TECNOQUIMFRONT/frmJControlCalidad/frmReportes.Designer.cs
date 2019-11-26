@@ -227,9 +227,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.btnInsumos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmReportes";
+            this.Text = "TECNOQUIM";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);

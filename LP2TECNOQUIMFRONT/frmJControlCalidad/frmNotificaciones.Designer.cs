@@ -260,9 +260,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvNotificaciones);
             this.Controls.Add(this.lblNombre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNotificaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmNotificaciones";
+            this.Text = "TECNOQUIM";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmNotificaciones_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotificaciones)).EndInit();
             this.panel1.ResumeLayout(false);

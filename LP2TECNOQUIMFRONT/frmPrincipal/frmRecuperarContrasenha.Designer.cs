@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecuperarContrasenha));
             this.btnRC = new System.Windows.Forms.Button();
             this.lblLinea3 = new System.Windows.Forms.Label();
             this.lblLinea1 = new System.Windows.Forms.Label();
@@ -118,9 +119,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRecuperarContrasenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmRecuperarContrasenha";
+            this.Text = "TECNOQUIM";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
