@@ -263,6 +263,12 @@
     <Compile Include="frmGerente\frmBuscarPlanMaestro.Designer.cs">
       <DependentUpon>frmBuscarPlanMaestro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmJproduccion\frmGestionPoliticaStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJproduccion\frmGestionPoliticaStock.Designer.cs">
+      <DependentUpon>frmGestionPoliticaStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJproduccion\InsumosRestringidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -498,6 +504,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGerente\frmBuscarPlanMaestro.resx">
       <DependentUpon>frmBuscarPlanMaestro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJproduccion\frmGestionPoliticaStock.resx">
+      <DependentUpon>frmGestionPoliticaStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJproduccion\InsumosRestringidos.resx">
       <DependentUpon>InsumosRestringidos.cs</DependentUpon>
