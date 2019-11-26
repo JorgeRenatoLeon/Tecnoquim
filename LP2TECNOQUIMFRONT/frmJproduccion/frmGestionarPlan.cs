@@ -349,7 +349,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 txtNOrden.Text = PMP.id.ToString();
                 foreach (ordenProduccion l in PMP.ordenes)
                 {
-                    DBController.insertarOrdenProduccion(l,PMP.id);
+                   l.id = DBController.insertarOrdenProduccion(l,PMP.id);
+                    foreach(lineaOrden lin in l.lineasOrden)
+                    {
+                        DBController.insertarLineaOrden(lin, l.id);
+                    }
                 }
                 foreach (detalleMaquinaria m in PMP.maquinarias)
                 {
