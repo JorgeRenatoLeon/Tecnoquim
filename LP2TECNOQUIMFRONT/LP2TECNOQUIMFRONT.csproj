@@ -682,7 +682,7 @@
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.generarReporteGeneralPDFResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.generarReporteInsumosCalidadPDFResponse1.datasource">
+    <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.generarReporteInsumosCalidadPDFResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.generarReporteInsumosRestringidosPDFResponse.datasource">
@@ -874,8 +874,8 @@
     <None Include="Connected Services\Service\LP2TECNOQUIMFRONT.Service.verificarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Service\Servicio.wsdl" />
-    <None Include="Connected Services\Service\Servicio.xsd">
+    <None Include="Connected Services\Service\Servicio1.wsdl" />
+    <None Include="Connected Services\Service\Servicio1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">

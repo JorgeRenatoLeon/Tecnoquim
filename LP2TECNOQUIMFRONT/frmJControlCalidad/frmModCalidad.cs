@@ -26,8 +26,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             txtidprod.Enabled = false;
             txtNomProd.Enabled = false;
             txtPres.Enabled = false;
-            datoE.Add("Bueno");
-            datoE.Add("Pendiente");
+            datoE.Add("Rechazado");
             datoE.Add("Corregido");
             cbRol.DataSource = datoE;
 
@@ -64,39 +63,31 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             string dato = cbRol.SelectedValue.ToString();
             
 
-            if(dato == "Bueno")
+            if(dato == "Rechazado")
             {
-                lorden.estadoCalidad = Service.estadoMaterial.Bueno;
-                //lorden.estadoCalidadSpecified = true;
+                lorden.estadoCalidad = Service.estadoMaterial.Rechazado;
+                lorden.estadoCalidadSpecified = true;
 
-            }
-            else if (dato == "Pendiente")
-            {
-                lorden.estadoCalidad = Service.estadoMaterial.Corregido;
-                //lorden.estadoCalidadSpecified = true;
             }
             else if (dato == "Corregido")
             {
-                lorden.estadoCalidad = Service.estadoMaterial.Pendiente;
-                //lorden.estadoCalidadSpecified = true;
+                lorden.estadoCalidad = Service.estadoMaterial.Corregido;
+                lorden.estadoCalidadSpecified = true;
+                Service.detalleAlmacenProducto detalleNuevo = new Service.detalleAlmacenProducto();
+                detalleNuevo.almacen = new Service.almacen();
+                detalleNuevo.almacen.idAlmacen = 2; //producto
+                detalleNuevo.estado = Service.estadoMaterial.Bueno;
+                detalleNuevo.estadoSpecified = true;
+                detalleNuevo.periodo = DateTime.Now;
+                detalleNuevo.periodoSpecified = true;
+                detalleNuevo.producto = lorden.producto;
+                detalleNuevo.stock = lorden.cantProducto;
+                DBController.insertarDetalleAlmacenProducto(detalleNuevo);
             }
-            lorden.estadoCalidadSpecified = true;
+            
             DBController.actualizarLineaOrden(lorden);
 
-            if(dato=="Bueno")
-            {
-                //Service.detalleAlmacenProducto detalleNuevo = new Service.detalleAlmacenProducto();
-                //detalleNuevo.almacen.idAlmacen = 2; //producto
-                //detalleNuevo.estado = Service.estadoMaterial.Bueno;
-                //detalleNuevo.estadoSpecified = true;
-                //detalleNuevo.periodo = DateTime.Now;
-                //detalleNuevo.periodoSpecified = true;
-                //detalleNuevo.producto = lorden.producto;
-                //detalleNuevo.stock = lorden.cantProducto;
-                //DBController.actualizarDetalleAlmacenProducto(detalleNuevo);
-            }
-
-
+            
 
             MessageBox.Show("Producto Verificado Satisfactoriamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtidprod.Text = "";

@@ -35,7 +35,16 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             }
             else
             {
-                dgvListaOrden.DataSource = DBController.listarLineaOrden(lineas[0].id);
+                Service.lineaOrden[] lineasGen = DBController.listarLineaOrden(lineas[0].id);
+                BindingList<Service.lineaOrden> lineasVisualizar = new BindingList<lineaOrden>();
+                foreach (lineaOrden l in lineasGen)
+                {
+                    if(l.estadoCalidad == estadoMaterial.Pendiente)
+                    {
+                        lineasVisualizar.Add(l);
+                    }
+                }
+                dgvListaOrden.DataSource = lineasVisualizar;
             }
 
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="01Y5ggI3cuJuKgVknat0WY/RL08=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="owN1Kp2uMa5kmbTdLeQU2XNDNuM=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="ServicioPortBinding1">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ServicioPort1" contract="Service.Servicio" bindingType="basicHttpBinding" address="http://34.193.139.78:8080/LP2TECNOQUIMSERVICES/Servicio" bindingConfiguration="ServicioPortBinding1">
+    <endpoint name="ServicioPort" contract="Service.Servicio" bindingType="basicHttpBinding" address="http://34.193.139.78:8080/LP2TECNOQUIMSERVICES/Servicio" bindingConfiguration="ServicioPortBinding1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://34.193.139.78:8080/LP2TECNOQUIMSERVICES/Servicio</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ServicioPort1</serializedValue>
+          <serializedValue>ServicioPort</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

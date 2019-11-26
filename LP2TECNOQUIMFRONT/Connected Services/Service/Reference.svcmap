@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="58b64352-05cc-474f-ac64-2563893f3fd4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d8451dad-7f6f-475e-b0e7-8fb179ddf39d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://34.193.139.78:8080/LP2TECNOQUIMSERVICES/Servicio?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Servicio.xsd" MetadataType="Schema" ID="8943457b-ec3b-4c77-ab59-1b7264c9e043" SourceId="1" SourceUrl="http://34.193.139.78:8080/LP2TECNOQUIMSERVICES/Servicio?xsd=1" />
-    <MetadataFile FileName="Servicio.wsdl" MetadataType="Wsdl" ID="ebcc02ce-e641-4198-b955-a165187517f8" SourceId="1" SourceUrl="http://34.193.139.78:8080/LP2TECNOQUIMSERVICES/Servicio?WSDL" />
+    <MetadataFile FileName="Servicio.xsd" MetadataType="Schema" ID="bdb97263-6605-4111-b7be-b32212ce97f5" SourceId="1" SourceUrl="http://34.193.139.78:8080/LP2TECNOQUIMSERVICES/Servicio?xsd=1" />
+    <MetadataFile FileName="Servicio.wsdl" MetadataType="Wsdl" ID="21c97628-16d8-48c3-a7f1-3f3ce7b798e5" SourceId="1" SourceUrl="http://34.193.139.78:8080/LP2TECNOQUIMSERVICES/Servicio?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
