@@ -28,6 +28,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             txtCant.Enabled = false;
             txtNombre.Enabled = false;
             txtUnidad.Enabled = false;
+            txtLote.Enabled = false;
             estadoComponentes(Estado.Inicial);
         }
 
@@ -40,6 +41,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     //Etiquetas
                     gbDatos.Enabled = false;
                     gbAlmacen.Enabled = false;
+                    txtLote.Enabled = false;
                     //Botones
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
@@ -50,6 +52,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     //Etiquetas
                     gbDatos.Enabled = true;
                     gbAlmacen.Enabled = true;
+                    txtLote.Enabled = false;
                     //Botones
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
@@ -66,12 +69,14 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                     btnModificar.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnBuscar.Enabled = false;
+                    txtLote.Enabled = false;
                     break;
                 case Estado.Modificar:
                     //Etiquetas
                     gbDatos.Enabled = true;
                     gbAlmacen.Enabled = true;
                     txtCodigo.Enabled = false;
+                    txtLote.Enabled = false;
                     //Botones
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
@@ -174,7 +179,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
 
             detalle.insumo = insumo;
             detalle.stock = int.Parse(txtStock.Text);
-            detalle.nLote = int.Parse(txtLote.Text);
+            //detalle.nLote = int.Parse(txtLote.Text);
             detalle.almacen = almacen;
             detalle.periodoSpecified = true;
             detalle.periodo = DateTime.Today;
