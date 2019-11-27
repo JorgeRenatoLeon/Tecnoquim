@@ -179,13 +179,13 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 MessageBox.Show("No se ha ingresado la Granularidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if(float.TryParse(txtGranu.Text,out float granu))
+            else if(float.TryParse(txtGranu.Text,out float granu) && float.Parse(txtGranu.Text) >= 0 && float.Parse(txtGranu.Text) <= 5.0)
             {
                 gran = granu;
             }
             else
             {
-                MessageBox.Show("No se ha ingresado un número para la Granularidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se ha ingresado un número del 0 al 5 para la Granularidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (txtColor.Text == "")
