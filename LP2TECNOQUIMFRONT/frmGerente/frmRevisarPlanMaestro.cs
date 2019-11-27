@@ -145,8 +145,8 @@ namespace LP2TECNOQUIMFRONT.frmGerente
             dgvOrden.Rows[e.RowIndex].Cells[0].Style.ForeColor = System.Drawing.Color.Black;
             dgvOrden.Rows[e.RowIndex].Cells[1].Style.ForeColor = System.Drawing.Color.Black;
             dgvOrden.Rows[e.RowIndex].Cells[2].Style.ForeColor = System.Drawing.Color.Black;
-            dgvOrden.Rows[e.RowIndex].Cells[0].Value = lineaOrdenFila.producto.nombre;
-            dgvOrden.Rows[e.RowIndex].Cells[1].Value = lineaOrdenFila.producto.idProducto;
+            dgvOrden.Rows[e.RowIndex].Cells[0].Value = lineaOrdenFila.producto.idProducto;
+            dgvOrden.Rows[e.RowIndex].Cells[1].Value = lineaOrdenFila.producto.nombre;
             dgvOrden.Rows[e.RowIndex].Cells[2].Value = lineaOrdenFila.cantProducto;
         }
     }

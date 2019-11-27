@@ -68,7 +68,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             else
             {
                 Service.planMaestroProduccion[] listaPMP = DBController.listarPMP(DateTime.Now.AddMonths(1).Month.ToString());
-                if (listaPMP.Length != 0)
+                if (listaPMP != null)
                 {
                     if (listaPMP[0].estado == Service.estado.Aprobado)
                     {

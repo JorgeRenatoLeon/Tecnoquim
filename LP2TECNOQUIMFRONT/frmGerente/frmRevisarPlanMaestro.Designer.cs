@@ -325,7 +325,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(319, 866);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(220, 44);
+            this.btnGuardar.Size = new System.Drawing.Size(186, 44);
             this.btnGuardar.TabIndex = 43;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -343,7 +343,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbMaquinaria);
             this.Controls.Add(this.gbEstado);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRevisarPlanMaestro";
             this.Text = "TECNOQUIM";
