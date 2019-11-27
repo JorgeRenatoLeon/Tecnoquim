@@ -113,5 +113,11 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             close = 1;
             this.Close();
         }
+
+        private void btnPoliticaSotck_Click(object sender, EventArgs e)
+        {
+            frmGestionPoliticaStock frmPolStock = new frmGestionPoliticaStock();
+            frmPolStock.ShowDialog(this);
+        }
     }
 }

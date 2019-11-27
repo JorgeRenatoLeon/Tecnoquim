@@ -41,6 +41,7 @@
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnOrden = new System.Windows.Forms.Button();
             this.btnPMS = new System.Windows.Forms.Button();
+            this.btnPoliticaSotck = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -203,7 +204,7 @@
             this.btnOrden.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOrden.Font = new System.Drawing.Font("Century Gothic", 15.25F, System.Drawing.FontStyle.Bold);
             this.btnOrden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnOrden.Location = new System.Drawing.Point(345, 314);
+            this.btnOrden.Location = new System.Drawing.Point(345, 252);
             this.btnOrden.Name = "btnOrden";
             this.btnOrden.Size = new System.Drawing.Size(359, 62);
             this.btnOrden.TabIndex = 11;
@@ -221,13 +222,31 @@
             this.btnPMS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPMS.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPMS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnPMS.Location = new System.Drawing.Point(345, 213);
+            this.btnPMS.Location = new System.Drawing.Point(345, 171);
             this.btnPMS.Name = "btnPMS";
             this.btnPMS.Size = new System.Drawing.Size(359, 65);
             this.btnPMS.TabIndex = 10;
             this.btnPMS.Text = "Plan Maestro de Produccion";
             this.btnPMS.UseVisualStyleBackColor = false;
             this.btnPMS.Click += new System.EventHandler(this.btnPMS_Click);
+            // 
+            // btnPoliticaSotck
+            // 
+            this.btnPoliticaSotck.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPoliticaSotck.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnPoliticaSotck.BackColor = System.Drawing.Color.White;
+            this.btnPoliticaSotck.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
+            this.btnPoliticaSotck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPoliticaSotck.Font = new System.Drawing.Font("Century Gothic", 15.25F, System.Drawing.FontStyle.Bold);
+            this.btnPoliticaSotck.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
+            this.btnPoliticaSotck.Location = new System.Drawing.Point(345, 330);
+            this.btnPoliticaSotck.Name = "btnPoliticaSotck";
+            this.btnPoliticaSotck.Size = new System.Drawing.Size(359, 62);
+            this.btnPoliticaSotck.TabIndex = 14;
+            this.btnPoliticaSotck.Text = "Politica de Stock";
+            this.btnPoliticaSotck.UseVisualStyleBackColor = false;
+            this.btnPoliticaSotck.Click += new System.EventHandler(this.btnPoliticaSotck_Click);
             // 
             // frmJProduccion
             // 
@@ -236,6 +255,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
             this.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.background_11_wide;
             this.ClientSize = new System.Drawing.Size(857, 495);
+            this.Controls.Add(this.btnPoliticaSotck);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOrden);
@@ -267,5 +287,6 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Label lblCantNotificaciones;
+        private System.Windows.Forms.Button btnPoliticaSotck;
     }
 }

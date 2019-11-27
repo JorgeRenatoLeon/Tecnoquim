@@ -46,7 +46,7 @@
             // 
             this.lblProducto.AutoSize = true;
             this.lblProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProducto.Location = new System.Drawing.Point(45, 41);
+            this.lblProducto.Location = new System.Drawing.Point(45, 60);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(91, 24);
             this.lblProducto.TabIndex = 0;
@@ -75,7 +75,7 @@
             // txtMax
             // 
             this.txtMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMax.Location = new System.Drawing.Point(227, 185);
+            this.txtMax.Location = new System.Drawing.Point(227, 165);
             this.txtMax.Name = "txtMax";
             this.txtMax.Size = new System.Drawing.Size(168, 29);
             this.txtMax.TabIndex = 42;
@@ -83,7 +83,7 @@
             // txtMin
             // 
             this.txtMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMin.Location = new System.Drawing.Point(227, 105);
+            this.txtMin.Location = new System.Drawing.Point(227, 111);
             this.txtMin.Name = "txtMin";
             this.txtMin.Size = new System.Drawing.Size(168, 29);
             this.txtMin.TabIndex = 41;
@@ -92,7 +92,7 @@
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGuardar.Location = new System.Drawing.Point(186, 245);
+            this.btnGuardar.Location = new System.Drawing.Point(227, 227);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(116, 35);
             this.btnGuardar.TabIndex = 40;
@@ -105,7 +105,7 @@
             // 
             this.lblStockMax.AutoSize = true;
             this.lblStockMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStockMax.Location = new System.Drawing.Point(45, 188);
+            this.lblStockMax.Location = new System.Drawing.Point(45, 168);
             this.lblStockMax.Name = "lblStockMax";
             this.lblStockMax.Size = new System.Drawing.Size(133, 24);
             this.lblStockMax.TabIndex = 39;
@@ -115,7 +115,7 @@
             // 
             this.lblStockMin.AutoSize = true;
             this.lblStockMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStockMin.Location = new System.Drawing.Point(44, 108);
+            this.lblStockMin.Location = new System.Drawing.Point(44, 114);
             this.lblStockMin.Name = "lblStockMin";
             this.lblStockMin.Size = new System.Drawing.Size(128, 24);
             this.lblStockMin.TabIndex = 38;
@@ -125,9 +125,9 @@
             // 
             this.btnBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarProducto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBuscarProducto.Location = new System.Drawing.Point(625, 38);
+            this.btnBuscarProducto.Location = new System.Drawing.Point(625, 55);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
-            this.btnBuscarProducto.Size = new System.Drawing.Size(32, 26);
+            this.btnBuscarProducto.Size = new System.Drawing.Size(49, 29);
             this.btnBuscarProducto.TabIndex = 37;
             this.btnBuscarProducto.Text = "...";
             this.btnBuscarProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -138,7 +138,7 @@
             // 
             this.txtProducto.Enabled = false;
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.Location = new System.Drawing.Point(227, 36);
+            this.txtProducto.Location = new System.Drawing.Point(227, 55);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.ReadOnly = true;
             this.txtProducto.Size = new System.Drawing.Size(374, 29);
@@ -148,7 +148,7 @@
             // 
             this.lblCodigoPMP.AutoSize = true;
             this.lblCodigoPMP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoPMP.Location = new System.Drawing.Point(39, 36);
+            this.lblCodigoPMP.Location = new System.Drawing.Point(39, 55);
             this.lblCodigoPMP.Name = "lblCodigoPMP";
             this.lblCodigoPMP.Size = new System.Drawing.Size(0, 24);
             this.lblCodigoPMP.TabIndex = 19;
@@ -164,6 +164,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionPoliticaStock";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TECNOQUIM";
             this.gbPoliticaStock.ResumeLayout(false);
             this.gbPoliticaStock.PerformLayout();
