@@ -15,12 +15,13 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
     {
         private Service.maquinaria maquinariaSeleccionada;
         Service.ServicioClient DBController = new Service.ServicioClient();
-
+        int conta = 0;
         public frmMaquinaria(int cont = 0)
         {
             InitializeComponent();
             dgvMaquinaria.AutoGenerateColumns = false;
             dgvMaquinaria.DataSource = DBController.listarMaquinaria("");
+            conta = cont;
         }
 
         public maquinaria MaquinariaSeleccionada { get => maquinariaSeleccionada; set => maquinariaSeleccionada = value; }
@@ -38,6 +39,10 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
             else
             {
                 dgvMaquinaria.Rows[e.RowIndex].Cells["Estado"].Value = "INACTIVO";
+            }
+            if (conta == 1)
+            {
+                btnSeleccionar.Visible = false;
             }
         }
 

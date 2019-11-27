@@ -132,6 +132,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvProyeccion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBuscarProyeccionVenta";
             this.Text = "frmBuscarProyeccionVenta";

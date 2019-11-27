@@ -215,8 +215,10 @@
             this.Controls.Add(this.lblBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gbDatos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmModCalidad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TECNOQUIM";
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();

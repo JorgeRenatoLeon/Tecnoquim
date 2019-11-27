@@ -52,9 +52,19 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
 
         }
 
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (dgvListaOrden.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado un Lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            LineaOrdenSeleccionada = (Service.lineaOrden)dgvListaOrden.CurrentRow.DataBoundItem;
+            this.DialogResult = DialogResult.OK;
+        }
 
+        private void dgvListaOrden_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
             Service.lineaOrden lineaOrdenFila = (Service.lineaOrden)dgvListaOrden.Rows[e.RowIndex].DataBoundItem;
             dgvListaOrden.Rows[e.RowIndex].Cells["Producto"].Style.ForeColor = System.Drawing.Color.Black;
             dgvListaOrden.Rows[e.RowIndex].Cells["Codigo"].Style.ForeColor = System.Drawing.Color.Black;
@@ -67,34 +77,23 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
                 dgvListaOrden.Rows[e.RowIndex].Cells["Cantidad"].Value = '-';
                 dgvListaOrden.Rows[e.RowIndex].Cells["Estado"].Value = '-';
             }
-            else {
+            else
+            {
                 dgvListaOrden.Rows[e.RowIndex].Cells["Producto"].Value = lineaOrdenFila.producto.nombre;
                 dgvListaOrden.Rows[e.RowIndex].Cells["Codigo"].Value = lineaOrdenFila.producto.idProducto;
                 dgvListaOrden.Rows[e.RowIndex].Cells["Cantidad"].Value = lineaOrdenFila.cantProducto;
                 dgvListaOrden.Rows[e.RowIndex].Cells["Estado"].Value = lineaOrdenFila.estadoCalidad;
             }
-            
         }
 
-
-        private void dgvListaOrden_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvListaOrden_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
             this.Visible = false;
-            
+
             frmModCalidad formModCalidad = new frmModCalidad();
             formModCalidad.ShowDialog();
             this.Show();
-        }
 
-        private void btnBuscarInsumo_Click(object sender, EventArgs e)
-        {
-            if (dgvListaOrden.CurrentRow == null)
-            {
-                MessageBox.Show("No se ha seleccionado un Lote", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            LineaOrdenSeleccionada = (Service.lineaOrden)dgvListaOrden.CurrentRow.DataBoundItem;
-            this.DialogResult = DialogResult.OK;
         }
     }
 }

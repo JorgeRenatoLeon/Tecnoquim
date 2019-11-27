@@ -220,6 +220,7 @@
             this.Controls.Add(this.dgvNotificaciones);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmNotificaciones";

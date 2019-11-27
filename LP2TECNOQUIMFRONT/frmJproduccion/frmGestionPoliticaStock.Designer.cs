@@ -161,6 +161,7 @@
             this.ClientSize = new System.Drawing.Size(738, 320);
             this.Controls.Add(this.gbPoliticaStock);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionPoliticaStock";
             this.Text = "TECNOQUIM";

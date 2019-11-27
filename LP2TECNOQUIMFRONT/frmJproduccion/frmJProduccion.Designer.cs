@@ -240,6 +240,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOrden);
             this.Controls.Add(this.btnPMS);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmJProduccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

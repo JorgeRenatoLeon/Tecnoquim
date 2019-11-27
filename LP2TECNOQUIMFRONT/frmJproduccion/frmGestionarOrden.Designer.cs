@@ -343,6 +343,7 @@
             this.Controls.Add(this.gbDatosOrden);
             this.Controls.Add(this.gbDatosGenerales);
             this.Controls.Add(this.toolStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionarOrden";
             this.Text = "TECNOQUIM";

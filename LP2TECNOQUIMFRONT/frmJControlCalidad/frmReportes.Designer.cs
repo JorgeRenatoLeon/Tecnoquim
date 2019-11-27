@@ -227,6 +227,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.btnInsumos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -73,13 +73,13 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
 
         private void btnInsumos_Click(object sender, EventArgs e)
         {
-            frmStocksI form = new frmStocksI();
+            frmStocksI form = new frmStocksI(1);
             form.ShowDialog(this);
         }
 
         private void btnMaquinaria_Click(object sender, EventArgs e)
         {
-            frmMaquinaria formMaquinaria = new frmMaquinaria();
+            frmMaquinaria formMaquinaria = new frmMaquinaria(1);
             formMaquinaria.ShowDialog(this);
         }
 

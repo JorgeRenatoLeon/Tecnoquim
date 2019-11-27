@@ -150,6 +150,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.dgvHistorialPlan);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBuscarPlanMaestro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

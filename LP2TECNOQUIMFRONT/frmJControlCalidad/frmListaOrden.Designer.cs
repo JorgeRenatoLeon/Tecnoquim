@@ -28,92 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaOrden));
+            this.label1 = new System.Windows.Forms.Label();
             this.dgvListaOrden = new System.Windows.Forms.DataGridView();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnBuscarInsumo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaOrden)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvListaOrden
-            // 
-            this.dgvListaOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaOrden.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Producto,
-            this.Cantidad,
-            this.Estado});
-            this.dgvListaOrden.Location = new System.Drawing.Point(59, 101);
-            this.dgvListaOrden.Name = "dgvListaOrden";
-            this.dgvListaOrden.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaOrden.Size = new System.Drawing.Size(582, 275);
-            this.dgvListaOrden.TabIndex = 0;
-            this.dgvListaOrden.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaOrden_CellContentDoubleClick);
-            this.dgvListaOrden.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.Width = 200;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 150;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(54, 41);
+            this.label1.Location = new System.Drawing.Point(30, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Linea de Orden";
             // 
-            // btnBuscarInsumo
+            // dgvListaOrden
             // 
-            this.btnBuscarInsumo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarInsumo.BackColor = System.Drawing.Color.White;
-            this.btnBuscarInsumo.BackgroundImage = global::LP2TECNOQUIMFRONT.Properties.Resources.istockphoto_940818100_1024x1024;
-            this.btnBuscarInsumo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarInsumo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarInsumo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.btnBuscarInsumo.Location = new System.Drawing.Point(529, 44);
-            this.btnBuscarInsumo.Name = "btnBuscarInsumo";
-            this.btnBuscarInsumo.Size = new System.Drawing.Size(112, 25);
-            this.btnBuscarInsumo.TabIndex = 80;
-            this.btnBuscarInsumo.Text = "Seleccionar";
-            this.btnBuscarInsumo.UseVisualStyleBackColor = false;
-            this.btnBuscarInsumo.Click += new System.EventHandler(this.btnBuscarInsumo_Click);
+            this.dgvListaOrden.AllowUserToAddRows = false;
+            this.dgvListaOrden.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListaOrden.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvListaOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaOrden.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Producto,
+            this.Cantidad,
+            this.Estado});
+            this.dgvListaOrden.Location = new System.Drawing.Point(35, 99);
+            this.dgvListaOrden.Name = "dgvListaOrden";
+            this.dgvListaOrden.ReadOnly = true;
+            this.dgvListaOrden.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListaOrden.Size = new System.Drawing.Size(847, 390);
+            this.dgvListaOrden.TabIndex = 86;
+            this.dgvListaOrden.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaOrden_CellContentDoubleClick_1);
+            this.dgvListaOrden.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvListaOrden_CellFormatting);
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.Location = new System.Drawing.Point(756, 44);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(126, 33);
+            this.btnSeleccionar.TabIndex = 87;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
+            this.Producto.Width = 300;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 200;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 200;
             // 
             // frmListaOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(58)))), ((int)(((byte)(103)))));
-            this.ClientSize = new System.Drawing.Size(704, 425);
-            this.Controls.Add(this.btnBuscarInsumo);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(911, 523);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvListaOrden);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaOrden";
             this.Text = "TECNOQUIM";
@@ -124,10 +137,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvListaOrden;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnBuscarInsumo;
+        private System.Windows.Forms.DataGridView dgvListaOrden;
+        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;

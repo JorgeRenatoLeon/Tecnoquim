@@ -287,6 +287,7 @@
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.gbDatosP);
             this.Controls.Add(this.gbDatosG);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionarProyeccionVenta";
             this.Text = "frmRegistrarProyeccionVenta";

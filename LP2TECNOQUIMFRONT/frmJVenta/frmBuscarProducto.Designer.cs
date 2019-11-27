@@ -150,6 +150,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.dgvHistorialPlan);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBuscarProducto";
             this.Text = "frmBuscarProducto";

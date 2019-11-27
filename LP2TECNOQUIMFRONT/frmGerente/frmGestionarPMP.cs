@@ -68,7 +68,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
         private void btnHistorialPMP_Click(object sender, EventArgs e)
         {
             frmBuscarPlanMaestro frmBuscarPMP = new frmBuscarPlanMaestro();
-            frmBuscarPMP.Visible = true;
+            frmBuscarPMP.ShowDialog(this);
         }
 
         private void frmGestionarPMP_FormClosed_1(object sender, FormClosedEventArgs e)

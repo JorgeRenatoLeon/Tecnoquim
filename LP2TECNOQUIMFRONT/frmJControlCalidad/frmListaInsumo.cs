@@ -29,17 +29,7 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             dgvListaOrden.DataSource= DBController.listarDetalleAlmacenInsumo("");
         }
 
-        private void dgvListaOrden_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            Service.detalleAlmacenInsumo detFila = (Service.detalleAlmacenInsumo)dgvListaOrden.Rows[e.RowIndex].DataBoundItem;
-            dgvListaOrden.Rows[e.RowIndex].Cells["Insumo"].Value = detFila.insumo.nombre;
-            dgvListaOrden.Rows[e.RowIndex].Cells["Lote"].Value = detFila.nLote;
-            dgvListaOrden.Rows[e.RowIndex].Cells["Periodo"].Value = detFila.periodo;
-            dgvListaOrden.Rows[e.RowIndex].Cells["Stock"].Value = detFila.stock;
-            dgvListaOrden.Rows[e.RowIndex].Cells["Estado"].Value = detFila.estado;
-        }
-
-        private void btnBuscarInsumo_Click(object sender, EventArgs e)
+        private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             if (dgvListaOrden.CurrentRow == null)
             {
@@ -48,6 +38,17 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             }
             DetalleSeleccionada = (Service.detalleAlmacenInsumo)dgvListaOrden.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void dgvListaOrden_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            Service.detalleAlmacenInsumo detFila = (Service.detalleAlmacenInsumo)dgvListaOrden.Rows[e.RowIndex].DataBoundItem;
+            dgvListaOrden.Rows[e.RowIndex].Cells["Insumo"].Value = detFila.insumo.nombre;
+            dgvListaOrden.Rows[e.RowIndex].Cells["Lote"].Value = detFila.nLote;
+            dgvListaOrden.Rows[e.RowIndex].Cells["Periodo"].Value = detFila.periodo;
+            dgvListaOrden.Rows[e.RowIndex].Cells["Stock"].Value = detFila.stock;
+            dgvListaOrden.Rows[e.RowIndex].Cells["Estado"].Value = detFila.estado;
+
         }
     }
 }

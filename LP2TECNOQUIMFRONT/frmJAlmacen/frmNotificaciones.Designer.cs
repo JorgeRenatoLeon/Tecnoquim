@@ -220,6 +220,7 @@
             this.Controls.Add(this.dgvNotificaciones);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnNotificaciones);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNotificaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

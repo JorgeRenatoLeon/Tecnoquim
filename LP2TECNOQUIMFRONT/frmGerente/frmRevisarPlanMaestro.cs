@@ -107,6 +107,7 @@ namespace LP2TECNOQUIMFRONT.frmGerente
 
         private void setOrden()
         {
+            dgvOrden.DataSource = null;
             if (pmp.ordenes != null)
             {
                 foreach (Service.ordenProduccion item in pmp.ordenes)

@@ -15,11 +15,13 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
     {
         private Service.detalleAlmacenProducto productoSeleccionado;
         Service.ServicioClient DBController = new Service.ServicioClient();
+        int conta = 0;
         public frmStocksP(int cont = 0)
         {
             InitializeComponent();
             dgvProductos.AutoGenerateColumns = false;
             dgvProductos.DataSource = DBController.listarDetalleAlmacenProducto("");
+            conta = cont;
             if (cont == 1)
             {
                 btnSeleccionar.Visible = false;
@@ -61,7 +63,10 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 dgvProductos.Rows[e.RowIndex].Cells["Restriccion"].Value = "No";
             }
             dgvProductos.Rows[e.RowIndex].Cells["Stock"].Value = productoFila.stock;
-
+            if(conta == 1)
+            {
+                btnSeleccionar.Visible = false;
+            }
         }
     }
 }

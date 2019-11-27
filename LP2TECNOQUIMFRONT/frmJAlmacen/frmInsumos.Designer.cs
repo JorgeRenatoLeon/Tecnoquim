@@ -165,6 +165,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dgvInsumo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInsumos";
             this.Text = "TECNOQUIM";
