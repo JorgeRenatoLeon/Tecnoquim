@@ -62,7 +62,7 @@ namespace LP2TECNOQUIMFRONT.frmJproduccion
                 }
 
                 Service.politicaStock[] politicaPrevia = DBController.listarPoliticaStock(productoSeleccionado.nombre);
-                if (politicaPrevia.Length == 0)
+                if (politicaPrevia == null)
                     DBController.insertarPoliticaStock(politicaStock);
                 else
                 {

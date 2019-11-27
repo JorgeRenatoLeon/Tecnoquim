@@ -182,6 +182,16 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
             estadoComponentes(Estado.Modificar);
         }
 
+        private bool isNumeric(string cadena)
+        {
+            foreach (char c in cadena)
+            {
+                if (!char.IsDigit(c))
+                    return false;
+            }
+            return true;
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             float gran;
@@ -195,7 +205,7 @@ namespace LP2TECNOQUIMFRONT.frmJAlmacen
                 MessageBox.Show("No se ha ingresado la Granularidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (float.Parse(txtGranu.Text)>=0 && float.Parse(txtGranu.Text)<=5.0)
+            else if (isNumeric(txtGranu.Text) == false || float.Parse(txtGranu.Text) < 0 || float.Parse(txtGranu.Text) > 5.0)
             {
                 MessageBox.Show("La Granularidad debe ser un número entre 0 y 5", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
