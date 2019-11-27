@@ -26,7 +26,21 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             InitializeComponent();
             dgvListaOrden.AutoGenerateColumns = false;
             dgvListaOrden.ReadOnly = true;
-            dgvListaOrden.DataSource= DBController.listarDetalleAlmacenInsumo("");
+
+            Service.detalleAlmacenInsumo[] lineasGen = DBController.listarDetalleAlmacenInsumo("");
+
+            BindingList<Service.detalleAlmacenInsumo> lineasVisualizar = new BindingList<detalleAlmacenInsumo>();
+            foreach (detalleAlmacenInsumo l in lineasGen)
+            {
+                if (l.estado == estadoMaterial.Pendiente)
+                {
+                    lineasVisualizar.Add(l);
+                }
+            }
+
+
+            dgvListaOrden.DataSource= lineasVisualizar;
+            //dgvListaOrden.DataSource = DBController.listarDetalleAlmacenInsumo("");
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

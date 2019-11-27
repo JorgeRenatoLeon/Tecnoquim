@@ -66,11 +66,13 @@ namespace LP2TECNOQUIMFRONT.frmJControlCalidad
             }
             if (dato == "Rechazado")
             {
-                detalle.estado = Service.estadoMaterial.Rechazado;
+                detalle.estado = Service.estadoMaterial.Bueno;
+                detalle.estadoSpecified = true;
             }
             else if (dato == "Corregido")
             {
-                detalle.estado = Service.estadoMaterial.Corregido;
+                detalle.estado = Service.estadoMaterial.Rechazado;
+                detalle.estadoSpecified = true;
             }
 
             DBController.actualizarDetalleAlmacenInsumoEstado(detalle); 
