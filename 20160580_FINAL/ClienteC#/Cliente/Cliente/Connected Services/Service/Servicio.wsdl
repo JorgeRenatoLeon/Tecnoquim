@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.gamesoft.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Servicio" targetNamespace="http://services.gamesoft.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/GameSoftWebServer/Servicio?xsd=1" namespace="http://services.gamesoft.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="modificarPokemon">
+    <part name="parameters" element="tns:modificarPokemon" />
+  </message>
+  <message name="modificarPokemonResponse">
+    <part name="parameters" element="tns:modificarPokemonResponse" />
+  </message>
+  <message name="listarTodosTipos">
+    <part name="parameters" element="tns:listarTodosTipos" />
+  </message>
+  <message name="listarTodosTiposResponse">
+    <part name="parameters" element="tns:listarTodosTiposResponse" />
+  </message>
+  <message name="insertarPokemon">
+    <part name="parameters" element="tns:insertarPokemon" />
+  </message>
+  <message name="insertarPokemonResponse">
+    <part name="parameters" element="tns:insertarPokemonResponse" />
+  </message>
+  <message name="listarPokemons">
+    <part name="parameters" element="tns:listarPokemons" />
+  </message>
+  <message name="listarPokemonsResponse">
+    <part name="parameters" element="tns:listarPokemonsResponse" />
+  </message>
+  <message name="eliminarPokemon">
+    <part name="parameters" element="tns:eliminarPokemon" />
+  </message>
+  <message name="eliminarPokemonResponse">
+    <part name="parameters" element="tns:eliminarPokemonResponse" />
+  </message>
+  <message name="hello">
+    <part name="parameters" element="tns:hello" />
+  </message>
+  <message name="helloResponse">
+    <part name="parameters" element="tns:helloResponse" />
+  </message>
+  <message name="listarTodasCategorias">
+    <part name="parameters" element="tns:listarTodasCategorias" />
+  </message>
+  <message name="listarTodasCategoriasResponse">
+    <part name="parameters" element="tns:listarTodasCategoriasResponse" />
+  </message>
+  <message name="listarTodosRangos">
+    <part name="parameters" element="tns:listarTodosRangos" />
+  </message>
+  <message name="listarTodosRangosResponse">
+    <part name="parameters" element="tns:listarTodosRangosResponse" />
+  </message>
+  <portType name="Servicio">
+    <operation name="modificarPokemon">
+      <input wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/modificarPokemonRequest" message="tns:modificarPokemon" />
+      <output wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/modificarPokemonResponse" message="tns:modificarPokemonResponse" />
+    </operation>
+    <operation name="listarTodosTipos">
+      <input wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/listarTodosTiposRequest" message="tns:listarTodosTipos" />
+      <output wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/listarTodosTiposResponse" message="tns:listarTodosTiposResponse" />
+    </operation>
+    <operation name="insertarPokemon">
+      <input wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/insertarPokemonRequest" message="tns:insertarPokemon" />
+      <output wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/insertarPokemonResponse" message="tns:insertarPokemonResponse" />
+    </operation>
+    <operation name="listarPokemons">
+      <input wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/listarPokemonsRequest" message="tns:listarPokemons" />
+      <output wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/listarPokemonsResponse" message="tns:listarPokemonsResponse" />
+    </operation>
+    <operation name="eliminarPokemon">
+      <input wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/eliminarPokemonRequest" message="tns:eliminarPokemon" />
+      <output wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/eliminarPokemonResponse" message="tns:eliminarPokemonResponse" />
+    </operation>
+    <operation name="hello">
+      <input wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/helloRequest" message="tns:hello" />
+      <output wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/helloResponse" message="tns:helloResponse" />
+    </operation>
+    <operation name="listarTodasCategorias">
+      <input wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/listarTodasCategoriasRequest" message="tns:listarTodasCategorias" />
+      <output wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/listarTodasCategoriasResponse" message="tns:listarTodasCategoriasResponse" />
+    </operation>
+    <operation name="listarTodosRangos">
+      <input wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/listarTodosRangosRequest" message="tns:listarTodosRangos" />
+      <output wsam:Action="http://services.gamesoft.pucp.edu.pe/Servicio/listarTodosRangosResponse" message="tns:listarTodosRangosResponse" />
+    </operation>
+  </portType>
+  <binding name="ServicioPortBinding" type="tns:Servicio">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="modificarPokemon">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosTipos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPokemon">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPokemons">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPokemon">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hello">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodasCategorias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosRangos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Servicio">
+    <port name="ServicioPort" binding="tns:ServicioPortBinding">
+      <soap:address location="http://localhost:8080/GameSoftWebServer/Servicio" />
+    </port>
+  </service>
+</definitions>
